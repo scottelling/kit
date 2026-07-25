@@ -75,33 +75,10 @@ export function DemoComparison() {
         </div>
       </section>
 
-      <section className="install-manifest" aria-labelledby="install-title">
-        <div className="install-manifest__heading">
-          <div>
-            <span className="eyebrow">Purple Rain install manifest</span>
-            <h2 id="install-title">Copy any item.</h2>
-          </div>
-          <p>Every component pulls tokens through its registry dependency.</p>
-        </div>
-        <div className="install-manifest__grid">
-          {installItems.map((item) => (
-            <CopyCommand
-              compact
-              key={item}
-              label={item}
-              command={`npx shadcn add ${registryBase}/${item}.json`}
-            />
-          ))}
-        </div>
-      </section>
-
       <section className="comparison-grid" aria-label="Purple Rain and Origin UI comparison">
         <article className={`comparison-panel purple-panel${dark ? " dark" : ""}`}>
           <header className="panel-heading">
-            <div>
-              <span className="eyebrow">This registry</span>
-              <h2>Purple Rain</h2>
-            </div>
+            <h2>Purple Rain</h2>
             <Badge variant="positive">Tokens attached</Badge>
           </header>
 
@@ -137,7 +114,10 @@ export function DemoComparison() {
                 <DialogTrigger asChild>
                   <Button type="button">Review invite</Button>
                 </DialogTrigger>
-                <DialogContent className={`purple-dialog-shell${dark ? " dark" : ""}`}>
+                <DialogContent
+                  className={`purple-dialog-shell${dark ? " dark" : ""}`}
+                  overlayClassName={dark ? "dark" : undefined}
+                >
                   <DialogHeader>
                     <DialogTitle>Send this invitation?</DialogTitle>
                     <DialogDescription>
@@ -160,10 +140,7 @@ export function DemoComparison() {
 
         <article className={`comparison-panel origin-panel${dark ? " dark" : ""}`}>
           <header className="panel-heading">
-            <div>
-              <span className="eyebrow">Community reference</span>
-              <h2>Origin UI</h2>
-            </div>
+            <h2>Origin UI</h2>
             <OriginBadge variant="secondary">@originui</OriginBadge>
           </header>
 
@@ -219,10 +196,30 @@ export function DemoComparison() {
         </article>
       </section>
 
+      <section className="install-manifest" aria-labelledby="install-title">
+        <div className="install-manifest__heading">
+          <div>
+            <span className="eyebrow">Purple Rain install manifest</span>
+            <h2 id="install-title">Copy any item.</h2>
+          </div>
+          <p>Every component pulls tokens through its registry dependency.</p>
+        </div>
+        <div className="install-manifest__grid">
+          {installItems.map((item) => (
+            <CopyCommand
+              compact
+              key={item}
+              label={item}
+              command={`npx shadcn add ${registryBase}/${item}.json`}
+            />
+          ))}
+        </div>
+      </section>
+
       <section className="comparison-notes" aria-label="Comparison provenance">
         <p>
-          Origin UI components are installed from the maintained <code>@originui</code> source
-          registry. The namespace was verified against the current shadcn directory before use.
+          The live shadcn directory no longer lists Origin UI. Its established <code>@originui</code>
+          namespace and maintained upstream source were verified before installation.
         </p>
         <a href="https://github.com/shadcn/originui">Inspect Origin UI source</a>
       </section>

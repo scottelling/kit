@@ -69,8 +69,8 @@ export default function Home() {
 
         <section className="principle" aria-labelledby="principle-title">
           <div className="principle__statement">
-            <span className="eyebrow">Instant Legibility</span>
             <h2 id="principle-title">Decision stays visible.</h2>
+            <p className="principle__copy">That is the Instant Legibility rule.</p>
           </div>
           <Card className="principle__card">
             <CardHeader>

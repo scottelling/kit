@@ -30,6 +30,7 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+  --color-overlay: var(--overlay);
   --color-plane-1: var(--plane-1);
   --color-plane-2: var(--plane-2);
   --color-plane-3: var(--plane-3);
@@ -63,12 +64,14 @@
 
   html {
     min-width: 20rem;
+    overflow-x: clip;
     scroll-behavior: smooth;
   }
 
   body {
     min-height: 100dvh;
     margin: 0;
+    overflow-x: clip;
     background: var(--background);
     color: var(--foreground);
     font-family: var(--font-relay-sans);
@@ -84,13 +87,34 @@
     outline-color: var(--ring);
   }
 
+  h1,
+  h2,
+  h3 {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
   a {
     color: inherit;
+  }
+
+  a:focus-visible {
+    border-radius: var(--radius-control);
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

@@ -1,4 +1,4 @@
-/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V4 · genre: modern-minimal · macrostructure: Workbench · theme: Purple Rain 2.0 · enrichment: none · nav: N9 · footer: Ft5 */
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 · genre: modern-minimal · macrostructure: Workbench + Component Playground · theme: Purple Rain 2.0 · enrichment: none · nav: N9 · footer: Ft5 · contrast: pass (40–41) · slop: pass (42–45) · honest: pass (46) · chrome: pass (47) · tokens: pass (48) · responsive: pass (49) · icons: pass (30) · mobile: pass (34, 49, 50–57) */
 @font-face {
   font-family: "Relay Sans";
   src: url("/fonts/relay-sans/RelaySans-Regular.woff2") format("woff2");
@@ -98,7 +98,7 @@
   --plane-2: oklch(0.925 0.024 310);
   --plane-3: oklch(0.885 0.034 308);
   --plane-pressed: oklch(0.9 0.025 309);
-  --ink-faint: oklch(0.57 0.03 314);
+  --ink-faint: oklch(0.55 0.03 314);
   --chart-1: oklch(0.5 0.17 305);
   --chart-2: oklch(0.52 0.09 160);
   --chart-3: oklch(0.62 0.15 7);

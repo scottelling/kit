@@ -18,25 +18,44 @@ export function CopyCommand({ command, compact = false, label }: CopyCommandProp
   }, [])
 
   async function copy() {
-    await navigator.clipboard.writeText(command)
+    let copiedToClipboard = false
+
+    try {
+      await navigator.clipboard.writeText(command)
+      copiedToClipboard = true
+    } catch {
+      const field = document.createElement("textarea")
+      field.value = command
+      field.setAttribute("readonly", "")
+      field.style.position = "fixed"
+      field.style.inset = "0 auto auto -9999px"
+      document.body.appendChild(field)
+      field.select()
+      copiedToClipboard = document.execCommand("copy")
+      field.remove()
+    }
+
+    if (!copiedToClipboard) return
+
     setCopied(true)
     if (timeoutRef.current) clearTimeout(timeoutRef.current)
     timeoutRef.current = setTimeout(() => setCopied(false), 1600)
   }
 
   return (
-    <button
-      type="button"
-      className={compact ? "copy-command copy-command--compact" : "copy-command"}
-      onClick={copy}
-      aria-label={`${copied ? "Copied" : "Copy"} ${label ?? command}`}
-    >
+    <div className={compact ? "copy-command copy-command--compact" : "copy-command"}>
       {label ? <span className="copy-command__label">{label}</span> : null}
       <code>{command}</code>
-      <span className="copy-command__action" aria-live="polite">
+      <button
+        type="button"
+        className="copy-command__action"
+        onClick={copy}
+        aria-label={`${copied ? "Copied" : "Copy"} ${label ?? command}`}
+        aria-live="polite"
+      >
         {copied ? <Check aria-hidden="true" /> : <Copy aria-hidden="true" />}
         <span>{copied ? "Copied" : "Copy"}</span>
-      </span>
-    </button>
+      </button>
+    </div>
   )
 }
