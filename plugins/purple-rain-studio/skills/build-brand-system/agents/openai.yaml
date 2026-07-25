@@ -1,0 +1,7 @@
+interface:
+  display_name: "Brand System"
+  short_description: "Build a complete, durable brand foundation"
+  brand_color: "#6B3FA0"
+  default_prompt: "Use $build-brand-system to create the brand foundation for this project."
+policy:
+  allow_implicit_invocation: true

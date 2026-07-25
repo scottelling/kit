@@ -1,0 +1,7 @@
+interface:
+  display_name: "Interface System"
+  short_description: "Create a complete production interface system"
+  brand_color: "#6B3FA0"
+  default_prompt: "Use $design-ui-system to turn this product into a complete design engineering system."
+policy:
+  allow_implicit_invocation: true

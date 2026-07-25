@@ -12,14 +12,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://kit.scottelling.com"),
   title: {
-    default: "Purple Rain — a hands-on UI kit",
+    default: "Purple Rain — the complete design studio",
     template: "%s — Purple Rain",
   },
   description:
-    "See, touch, and compare every piece in the Purple Rain interface kit.",
+    "Describe a project in plain English, shape its complete design system, and take it all the way live.",
   openGraph: {
-    title: "Purple Rain — a hands-on UI kit",
-    description: "See, touch, and compare every piece in Purple Rain.",
+    title: "Purple Rain — the complete design studio",
+    description: "From an English brief to a complete, proven live product.",
     type: "website",
     url: "/",
   },

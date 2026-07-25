@@ -1,0 +1,29 @@
+{
+  "name": "purple-rain-studio",
+  "version": "1.0.0",
+  "description": "End-to-end brand, product, interface, and release design engineering.",
+  "author": {
+    "name": "Scott E. Telling",
+    "url": "https://scottelling.com"
+  },
+  "homepage": "https://kit.scottelling.com/studio",
+  "repository": "https://github.com/scottelling/kit",
+  "license": "MIT",
+  "keywords": ["design-system", "design-engineering", "brand", "frontend", "deployment"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Purple Rain Studio",
+    "shortDescription": "From English brief to proven live product.",
+    "longDescription": "A complete design engineering studio for brand systems, product interfaces, reusable components, visual quality, and deployment proof.",
+    "developerName": "Scott E. Telling",
+    "category": "Developer Tools",
+    "capabilities": ["Design", "Build", "Audit", "Deploy"],
+    "websiteURL": "https://kit.scottelling.com/studio",
+    "defaultPrompt": [
+      "Turn my idea into a complete live product.",
+      "Build a complete brand and interface system.",
+      "Audit, finish, and deploy this product."
+    ],
+    "brandColor": "#6B3FA0"
+  }
+}

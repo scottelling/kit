@@ -11,7 +11,8 @@
     "registry:build": "npm run library:generate && shadcn build",
     "registry:validate": "shadcn registry validate",
     "verify:registry": "node scripts/verify-registry.mjs",
-    "check": "npm run registry:validate && npm run registry:build && npm run verify:registry && npm run lint && next build"
+    "studio:validate": "node scripts/verify-studio.mjs",
+    "check": "npm run registry:validate && npm run registry:build && npm run verify:registry && npm run studio:validate && npm run lint && next build"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",

@@ -2,7 +2,8 @@
 
 ## Mission
 
-Make Purple Rain installable behind the scenes and effortless to see, touch, and judge in public.
+Make Purple Rain a complete design engineering studio: effortless to shape in plain English,
+visible and tactile in public, reusable by agents, and installable behind the scenes.
 
 ## Canonical decisions
 
@@ -20,6 +21,10 @@ Make Purple Rain installable behind the scenes and effortless to see, touch, and
 - `lib/purple-rain-library.json` is the counted public inventory; `scripts/generate-library.mjs` regenerates the matching registry source and entries so the showroom and delivery system cannot drift apart.
 - The global finder accepts ordinary phrases and takes visitors directly to any matching family or individual piece.
 - `/demo` keeps Purple Rain and Origin on the same task, but asks visitors to judge the felt decision path rather than implementation details.
+- `/studio` is the canonical project workspace. It joins a brief, direction, type, color, motion, text treatment, brand tools, template, skills, agents, and release standard into one plain-English handoff.
+- `lib/studio-library.ts` is the counted Studio inventory: 106 tools across fonts (12), palettes (12), motion (16), text (12), brand (12), templates (16), prompts (16), skills (4), and agents (6).
+- `plugins/purple-rain-studio` packages the reusable Studio method as four validated skills: Design & Ship, Brand System, Interface System, and Release Proof.
+- The public experience never pretends to execute an AI job. “Copy the complete project” creates the full instruction for a user’s preferred AI workspace; the reusable plugin supplies the execution behavior.
 
 ## Product truth
 

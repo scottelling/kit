@@ -14,17 +14,17 @@ export default function Home() {
       <main>
         <section className="home-opening" aria-labelledby="home-title">
           <div className="home-opening__copy">
-            <p className="home-opening__plain">No setup lessons. No code to copy.</p>
-            <h1 id="home-title">Point at what feels right.</h1>
+            <p className="home-opening__plain">One brief. One system. All the way to live.</p>
+            <h1 id="home-title">Describe what you want to make.</h1>
             <p className="home-opening__lede">
-              Browse the pieces, touch everything, then tell me in plain English what you want.
-              I’ll handle the machinery behind it.
+              Shape the brand, product, interface, motion, content, and working team in plain English.
+              Purple Rain keeps every decision joined up through release.
             </p>
             <div className="home-opening__actions">
-              <Link className="primary-link" href="/kit">
-                Explore every piece <ArrowRight aria-hidden="true" />
+              <Link className="primary-link" href="/studio">
+                Open the Studio <ArrowRight aria-hidden="true" />
               </Link>
-              <Link className="secondary-link" href="/demo">Compare two styles</Link>
+              <Link className="secondary-link" href="/kit">Explore the UI kit</Link>
             </div>
           </div>
           <HomePreview />
@@ -32,26 +32,32 @@ export default function Home() {
 
         <section className="home-choices" aria-labelledby="choose-title">
           <div className="home-choices__heading">
-            <h2 id="choose-title">Start with your eyes.</h2>
-            <p>You only need to decide what feels clear. The rest is my job.</p>
+            <h2 id="choose-title">Start wherever the project is.</h2>
+            <p>A loose idea, a visual decision, or a nearly finished product can all enter the same complete system.</p>
           </div>
           <div className="home-choice-list">
+            <Link href="/studio">
+              <span className="home-choice-list__number">English brief</span>
+              <strong>Shape the whole project</strong>
+              <span>Brand, type, color, motion, templates, skills, team, and release.</span>
+              <ArrowRight aria-hidden="true" />
+            </Link>
             <Link href="/kit">
-              <span className="home-choice-list__number">All pieces</span>
-              <strong>See the whole kit</strong>
-              <span>Colors, words, buttons, cards, fields, labels, and dialogs.</span>
+              <span className="home-choice-list__number">128 live pieces</span>
+              <strong>Touch the interface kit</strong>
+              <span>Every foundation, control, state, data view, and product pattern.</span>
               <ArrowRight aria-hidden="true" />
             </Link>
             <Link href="/demo">
               <span className="home-choice-list__number">Side by side</span>
-              <strong>Compare the same task</strong>
+              <strong>Pressure-test the style</strong>
               <span>Try Purple Rain beside another polished style.</span>
               <ArrowRight aria-hidden="true" />
             </Link>
           </div>
         </section>
       </main>
-      <SiteFooter note="You describe it. I take care of the rest." />
+      <SiteFooter note="From plain English to a proven live product." />
     </div>
   )
 }

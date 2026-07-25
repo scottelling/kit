@@ -1,8 +1,8 @@
 # Design — Purple Rain
 
-A locked visual system for the public Purple Rain showroom. Every public page reads this before
-changing its layout or interaction language. The public site is for visual, tactile evaluation;
-the delivery machinery stays working but does not appear in the human-facing experience.
+A locked visual system for the public Purple Rain Studio and showroom. Every public page reads this
+before changing its layout or interaction language. The public site is for visual, tactile creation
+and evaluation; the delivery machinery stays working but does not appear in the human-facing experience.
 
 ## Genre
 
@@ -12,6 +12,7 @@ over catalogue theme defaults.
 ## Macrostructure family
 
 - Public pages: Catalogue — an even-handed visual inventory with hairline row divisions.
+- Studio page: Narrative Workflow — Brief → Direction → System → Library → Team → Ship.
 - Showroom page: Ecosystem Index — 128 live specimens grouped into eight searchable families.
 - Comparison page: Catalogue — two equal task specimens followed by a plain choice.
 
@@ -66,6 +67,7 @@ Named 4-point-derived scale from `--space-3xs` through `--space-4xl`. Pages use 
 ## Per-page allowances
 
 - The home page may show one live, contained sample.
+- The Studio contains all 106 Studio tools, a live project recipe, and a complete plain-English handoff.
 - The showroom contains all 128 live components and foundation specimens, with no hidden remainder.
 - The comparison page must show the same task and copy in both systems.
 - The public pages do not show commands, source links, formats, package names, or machine terms.
@@ -79,6 +81,7 @@ Named 4-point-derived scale from `--space-3xs` through `--space-4xl`. Pages use 
 - Hairline inventory divisions and left-biased headings.
 - The visible “What are you looking for?” finder.
 - The one-line footer.
+- The Studio, showroom, and comparison page remain reachable in one step from the main navigation.
 
 ## What pages MAY differ on
 
@@ -86,6 +89,7 @@ Named 4-point-derived scale from `--space-3xs` through `--space-4xl`. Pages use 
 - Grid collapse according to the content on that page.
 - The amount of explanatory copy, while keeping labels plain.
 - The showroom may use an Ecosystem Index while the home and comparison pages retain Catalogue structure.
+- The Studio may use a Narrative Workflow and a sticky stage rail because its content is genuinely sequential.
 
 ## Exports
 

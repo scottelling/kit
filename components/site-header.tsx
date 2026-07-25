@@ -6,6 +6,7 @@ import { usePathname, useRouter } from "next/navigation"
 import { KeyboardEvent, useEffect, useMemo, useRef, useState } from "react"
 
 import library from "@/lib/purple-rain-library.json"
+import { studioAssets, studioCategories } from "@/lib/studio-library"
 
 const familyPlaces = [
   ["Foundations", "Colors, type, spacing, shape, and depth"],
@@ -19,6 +20,19 @@ const familyPlaces = [
 ].map(([label, hint]) => ({ label, hint, href: `/kit#family-${label.toLowerCase()}`, words: label.toLowerCase() }))
 
 const places = [
+  { label: "Purple Rain Studio", hint: "Shape a complete project in plain English", href: "/studio", words: "brief brand fonts colors motion templates prompts skills agents ship deploy" },
+  ...studioCategories.map((item) => ({
+    label: item.plain,
+    hint: `${item.name} in the complete Studio library`,
+    href: `/studio#studio-${item.name.toLowerCase()}`,
+    words: `${item.name} ${item.plain}`.toLowerCase(),
+  })),
+  ...studioAssets.map((item) => ({
+    label: item.name,
+    hint: item.summary,
+    href: `/studio#library`,
+    words: `${item.category} ${item.bestFor} ${item.detail}`.toLowerCase(),
+  })),
   ...familyPlaces,
   { label: "Compare styles", hint: "Try Purple Rain beside Origin", href: "/demo", words: "origin side by side" },
   ...library.map((item) => ({
@@ -103,7 +117,7 @@ export function SiteHeader() {
           <span>What are you looking for?</span>
         </button>
         <nav aria-label="Main pages">
-          <Link aria-current={pathname === "/" ? "page" : undefined} href="/">Home</Link>
+          <Link aria-current={pathname === "/studio" ? "page" : undefined} href="/studio">Studio</Link>
           <Link aria-current={pathname === "/kit" ? "page" : undefined} href="/kit">Explore</Link>
           <Link aria-current={pathname === "/demo" ? "page" : undefined} href="/demo">Compare</Link>
         </nav>

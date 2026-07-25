@@ -1,0 +1,7 @@
+interface:
+  display_name: "Design & Ship"
+  short_description: "Take an English brief to a proven live product"
+  brand_color: "#6B3FA0"
+  default_prompt: "Use $design-and-ship-project to turn my project idea into a complete, tested, deployed product."
+policy:
+  allow_implicit_invocation: true

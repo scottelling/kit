@@ -1,6 +1,21 @@
 [
   {
     "date": "2026-07-25",
+    "macrostructure": "Narrative Workflow",
+    "theme": "Purple Rain 2.0",
+    "enrichment": "none",
+    "brief": "Complete design engineering Studio from English brief to release handoff",
+    "scope": "app",
+    "nav": "N13",
+    "footer": "Ft2",
+    "preEmit": "P5 H5 E5 S5 R5 V5",
+    "slopTest": "pass 58/58",
+    "contrast": "pass",
+    "mobile": "pass: 320, 375, 414, 768",
+    "knobDelta": "Ecosystem Index became a six-stage brief-to-ship workflow with a living project receipt"
+  },
+  {
+    "date": "2026-07-25",
     "macrostructure": "Ecosystem Index",
     "theme": "Purple Rain 2.0",
     "enrichment": "none",
