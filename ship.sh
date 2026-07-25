@@ -13,8 +13,7 @@ fi
 
 git push origin main
 
-DEPLOYMENT_URL="$(npx --yes vercel --prod --yes)"
-npx --yes vercel alias set "$DEPLOYMENT_URL" kit.scottelling.com
+npx --yes vercel --prod --yes
 
 curl --fail --silent --show-error "https://kit.scottelling.com/r/button.json" >/dev/null
-echo "Shipped $DEPLOYMENT_URL to https://kit.scottelling.com"
+echo "Shipped https://kit.scottelling.com"

@@ -34,6 +34,22 @@ if (!tokenItem) {
   if (tokenItem.css?.[".dark"]?.["--primary"] !== tokenItem.cssVars?.dark?.primary) {
     failures.push("tokens CSS fallback does not override the consumer dark primary variable")
   }
+  const canonicalFoundations = {
+    "pr-compact-size": "12px",
+    "pr-body-size": "15px",
+    "pr-control-size": "14px",
+    "pr-heading-size": "38px",
+    "pr-space-base": "12px",
+    "pr-space-section": "32px",
+    "pr-control-height": "44px",
+    "pr-fast": "120ms",
+    "pr-standard": "180ms",
+  }
+  for (const [name, value] of Object.entries(canonicalFoundations)) {
+    if (tokenItem.cssVars?.theme?.[name] !== value) {
+      failures.push(`tokens canonical foundation ${name} is missing or incorrect`)
+    }
+  }
 }
 
 for (const item of source.items.filter((item) => item.type === "registry:ui")) {
