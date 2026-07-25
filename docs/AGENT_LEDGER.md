@@ -1,5 +1,21 @@
 # Agent Ledger
 
+## 2026-07-25 — Purple Rain Studio
+
+- Agent: Codex
+- Scope: expand Purple Rain from a component registry into an end-to-end design engineering Studio
+- Delivered: `/studio`, a six-stage Brief → Direction → System → Library → Team → Ship workspace that turns plain-English choices into one complete project handoff
+- Studio inventory: 106 substantive tools across font pairings (12), OKLCH palettes (12), motion recipes (16), text treatments (12), brand tools (12), project templates (16), plain-English prompts (16), reusable skills (4), and specialist agents (6)
+- Existing system preserved: all 128 live interface pieces, eight component families, light/dark showroom, Origin comparison, and public shadcn registry remain intact
+- Reusable team: repository-local `purple-rain-studio` plugin with validated Design & Ship, Brand System, Interface System, and Release Proof skills plus agent-facing metadata
+- Interaction proof: project type and tone choices, three distinct directions, live preview tabs, light/dark, library search and category filtering, tool details and application, motion playback, team composition, global finder, native-dialog backdrop and Escape close, and complete handoff copy all passed
+- Responsive proof: browser-checked at 320, 375, 414, 768, and 1280×800; no horizontal overflow, clipped controls, or touch targets below 44px; console reported no errors or warnings
+- Build proof: 129 registry items validated; 128 components regenerated and verified; four Studio skills and plugin manifest validated; ESLint, TypeScript, and Next production build passed locally and on Vercel
+- Live proof: `/`, `/studio`, `/kit`, `/demo`, `/r/registry.json`, `/r/button.json`, and `/r/calendar.json` return `200`; the live project handoff preserves brief, direction, team, release standard, and correct plain-language grammar
+- Hallmark: Narrative Workflow macrostructure; N13 finder; Ft2 footer; P5 H5 E5 S5 R5 V5; 58/58 slop gates passed
+- Deployment: Vercel production deployment `dpl_Hn6GMqpNHHqLckCmAofux94eBuQ2`; product commits `b460b2f` and `9df49cc` pushed to `scottelling/kit`
+- Open loops: none for this release
+
 ## 2026-07-25 — Complete 128-piece Purple Rain library
 
 - Agent: Codex
