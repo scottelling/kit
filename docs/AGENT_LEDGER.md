@@ -1,5 +1,19 @@
 # Agent Ledger
 
+## 2026-07-25 — Plain-language visual showroom
+
+- Agent: Codex
+- Scope: replace the developer-facing public experience with a visual, tactile, plain-language Purple Rain showroom while preserving the working registry behind it
+- Delivered: new `/kit` gallery with live light/dark colors, type, buttons, cards, fields, labels, and dialogs; plain-language global finder; simplified home; simplified Purple Rain vs Origin comparison with a visible preference choice
+- Removed from public pages: commands, registry terminology, source links, package namespaces, file formats, and install language
+- Interaction proof: finder search and section landing; shared light/dark mood; button loading/success; card selection; form error/success; typed email carried into both comparison dialogs; every dialog action closes cleanly
+- Browser QA: local and production checked at 320/375/414/768 and 1280×800; no page-level horizontal overflow, no undersized touch targets, no console errors
+- Build proof: registry schema valid; six items rebuilt and verified; ESLint, TypeScript, and Next production build passed
+- Live proof: home, `/kit`, `/demo`, and `/r/button.json` return `200`; critical interactions repeated on `kit.scottelling.com`
+- Hallmark: Catalogue macrostructure; N13 plain-language finder; Ft2 one-line footer; 58/58 slop gates passed
+- Deployment: Vercel production deployment `dpl_HAaF5K1qm97DVoMWwDt96Zjo58dh`; GitHub `main` pushed to `scottelling/kit`
+- Open loops: none
+
 ## 2026-07-25 — Project birth
 
 - Agent: Codex
