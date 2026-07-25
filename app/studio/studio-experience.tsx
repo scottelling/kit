@@ -189,8 +189,9 @@ export function StudioExperience({ assets, categories, counts }: StudioExperienc
   async function copyProject() {
     const team = teamIds.map((id) => assetById(assets, id).name).join(", ")
     const skills = skillIds.map((id) => assetById(assets, id).name).join(", ")
+    const article = projectType === "Online store" ? "an" : "a"
     const handoff = [
-      `Create and deploy a ${projectType.toLowerCase()} with a ${tone.toLowerCase()} tone.`,
+      `Create and deploy ${article} ${projectType.toLowerCase()} with a ${tone.toLowerCase()} tone.`,
       "",
       `Project brief: ${brief}`,
       "",
