@@ -13,5 +13,5 @@
 - Registry hardening: verified shadcn v4’s transitive-theme merge behavior in a clean consumer; added schema-native CSS-variable fallbacks so semantic palette values override correctly when `tokens` arrives automatically through a component dependency
 - Browser QA: production checked at 320/375/414/768 and 1280×800/1440 desktop; no horizontal overflow, no undersized controls, no console errors; shared theme toggle, copy controls, and both dialogs passed
 - Downstream proof: live button install changed only `components/ui/button.tsx` and `app/globals.css`; payload match, light/dark variable merge, and consumer production build passed; full receipt in `docs/INSTALL_PROOF.md`
-- Deployment: Vercel production deployment `dpl_6Pv22ZEgYq34P2XR2KZLC2nfxnc5`; GitHub `main` pushed to `scottelling/kit`
+- Deployment: Vercel production deployment `dpl_4LA4pK7nYAqT9SYCe84zbcJSNWc1`; GitHub `main` pushed to `scottelling/kit`
 - Open loops: none
