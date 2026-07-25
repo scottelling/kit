@@ -1,0 +1,21 @@
+{
+  "date": "2026-07-25",
+  "framework": "Next.js 16 App Router with Tailwind v4",
+  "fontStack": "Relay Sans with Geist Mono as a restricted outlier",
+  "palette": "Purple Rain 2.0 OKLCH variables in tokens.css",
+  "motion": "CSS-only, motion-cut, no motion library",
+  "spacing": "Named 4-point-derived scale in tokens.css",
+  "preserve": [
+    "Purple Rain light and dark palette",
+    "Relay Sans typography",
+    "44px controls",
+    "tonal depth and directional shadows",
+    "working public registry endpoints"
+  ],
+  "introduce": [
+    "Catalogue showroom",
+    "plain-English finder",
+    "live component states",
+    "plain-language public copy"
+  ]
+}

@@ -1,16 +1,146 @@
+"use client"
+
+import { Search } from "lucide-react"
 import Link from "next/link"
+import { usePathname, useRouter } from "next/navigation"
+import { KeyboardEvent, useEffect, useMemo, useRef, useState } from "react"
+
+const places = [
+  { label: "Colors", hint: "See every Purple Rain color", href: "/kit#colors", words: "palette mood light dark" },
+  { label: "Type", hint: "See headings, labels, and body text", href: "/kit#type", words: "font words typography" },
+  { label: "Buttons", hint: "Press every kind of action", href: "/kit#buttons", words: "action click primary secondary" },
+  { label: "Cards", hint: "Choose between card styles", href: "/kit#cards", words: "surface panel choice" },
+  { label: "Fields", hint: "Type, focus, and check a form", href: "/kit#fields", words: "input form email text" },
+  { label: "Labels", hint: "See status and category labels", href: "/kit#labels", words: "badge status tag" },
+  { label: "Dialogs", hint: "Open and close a focused choice", href: "/kit#dialogs", words: "modal window confirm" },
+  { label: "Compare styles", hint: "Try Purple Rain beside Origin", href: "/demo", words: "origin side by side" },
+]
 
 export function SiteHeader() {
+  const pathname = usePathname()
+  const router = useRouter()
+  const dialogRef = useRef<HTMLDialogElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
+  const [query, setQuery] = useState("")
+  const [active, setActive] = useState(0)
+
+  const results = useMemo(() => {
+    const needle = query.trim().toLowerCase()
+    if (!needle) return places
+    return places.filter((place) => `${place.label} ${place.hint} ${place.words}`.toLowerCase().includes(needle))
+  }, [query])
+
+  function openFinder() {
+    setQuery("")
+    setActive(0)
+    dialogRef.current?.showModal()
+    window.requestAnimationFrame(() => inputRef.current?.focus())
+  }
+
+  function closeFinder() {
+    dialogRef.current?.close()
+  }
+
+  function visit(href: string) {
+    closeFinder()
+    router.push(href)
+  }
+
+  function handleFinderKeys(event: KeyboardEvent<HTMLInputElement>) {
+    if (!results.length) return
+    if (event.key === "ArrowDown") {
+      event.preventDefault()
+      setActive((current) => (current + 1) % results.length)
+    }
+    if (event.key === "ArrowUp") {
+      event.preventDefault()
+      setActive((current) => (current - 1 + results.length) % results.length)
+    }
+    if (event.key === "Enter") {
+      event.preventDefault()
+      visit(results[active]?.href ?? results[0].href)
+    }
+  }
+
+  useEffect(() => {
+    function handleShortcut(event: globalThis.KeyboardEvent) {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
+        event.preventDefault()
+        openFinder()
+      }
+    }
+    window.addEventListener("keydown", handleShortcut)
+    return () => window.removeEventListener("keydown", handleShortcut)
+  }, [])
+
   return (
-    <header className="site-header">
-      <Link className="wordmark" href="/" aria-label="kit home">
-        kit<span aria-hidden="true">.</span>
-      </Link>
-      <nav aria-label="Primary navigation">
-        <Link href="/demo">Compare</Link>
-        <a href="/r/registry.json">Registry</a>
-        <a href="https://github.com/scottelling/kit">GitHub</a>
-      </nav>
-    </header>
+    <>
+      <header className="site-header">
+        <Link className="wordmark" href="/" aria-label="Purple Rain home">
+          purple rain<span aria-hidden="true">.</span>
+        </Link>
+        <button className="find-button" type="button" onClick={openFinder}>
+          <Search aria-hidden="true" />
+          <span>What are you looking for?</span>
+        </button>
+        <nav aria-label="Main pages">
+          <Link aria-current={pathname === "/" ? "page" : undefined} href="/">Home</Link>
+          <Link aria-current={pathname === "/kit" ? "page" : undefined} href="/kit">Explore</Link>
+          <Link aria-current={pathname === "/demo" ? "page" : undefined} href="/demo">Compare</Link>
+        </nav>
+      </header>
+
+      <dialog
+        className="finder-dialog"
+        ref={dialogRef}
+        onClick={(event) => {
+          if (event.target === event.currentTarget) closeFinder()
+        }}
+      >
+        <div className="finder-panel">
+          <div className="finder-heading">
+            <div>
+              <h2>Find a piece</h2>
+              <p>Type what you want to see.</p>
+            </div>
+            <button type="button" onClick={closeFinder}>Close</button>
+          </div>
+          <label className="finder-field">
+            <span className="sr-only">Find a piece</span>
+            <Search aria-hidden="true" />
+            <input
+              ref={inputRef}
+              value={query}
+              onChange={(event) => {
+                setQuery(event.target.value)
+                setActive(0)
+              }}
+              onKeyDown={handleFinderKeys}
+              placeholder="Try “buttons” or “colors”"
+              autoComplete="off"
+            />
+          </label>
+          <div className="finder-results" role="listbox" aria-label="Matching pieces">
+            {results.map((place, index) => (
+              <button
+                className={index === active ? "is-active" : undefined}
+                type="button"
+                role="option"
+                aria-selected={index === active}
+                key={place.href}
+                onMouseEnter={() => setActive(index)}
+                onClick={() => visit(place.href)}
+              >
+                <strong>{place.label}</strong>
+                <span>{place.hint}</span>
+              </button>
+            ))}
+            {results.length === 0 ? (
+              <p className="finder-empty">Nothing matched that phrase. Try “buttons,” “colors,” or “compare.”</p>
+            ) : null}
+          </div>
+        </div>
+      </dialog>
+    </>
   )
 }

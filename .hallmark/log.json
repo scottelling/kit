@@ -1,6 +1,16 @@
 [
   {
     "date": "2026-07-25",
+    "macrostructure": "Catalogue",
+    "theme": "Purple Rain 2.0",
+    "enrichment": "none",
+    "brief": "Plain-language, hands-on Purple Rain component showroom",
+    "scope": "app",
+    "nav": "N13",
+    "footer": "Ft2"
+  },
+  {
+    "date": "2026-07-25",
     "macrostructure": "Workbench + Component Playground",
     "theme": "Purple Rain 2.0",
     "enrichment": "none",

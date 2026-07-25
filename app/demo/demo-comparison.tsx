@@ -3,11 +3,11 @@
 import { Moon, Sun } from "lucide-react"
 import { FormEvent, useState } from "react"
 
-import { CopyCommand } from "@/components/copy-command"
 import { Badge as OriginBadge } from "@/components/ui/badge"
 import { Button as OriginButton } from "@/components/ui/button"
 import {
   Dialog as OriginDialog,
+  DialogClose as OriginDialogClose,
   DialogContent as OriginDialogContent,
   DialogDescription as OriginDialogDescription,
   DialogFooter as OriginDialogFooter,
@@ -28,6 +28,7 @@ import {
 } from "@/registry/purple-rain/card"
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -37,9 +38,6 @@ import {
 } from "@/registry/purple-rain/dialog"
 import { Input } from "@/registry/purple-rain/input"
 
-const registryBase = "https://kit.scottelling.com/r"
-const installItems = ["tokens", "button", "card", "input", "badge", "dialog"]
-
 type Theme = "light" | "dark"
 
 function stopSubmit(event: FormEvent<HTMLFormElement>) {
@@ -48,14 +46,17 @@ function stopSubmit(event: FormEvent<HTMLFormElement>) {
 
 export function DemoComparison() {
   const [theme, setTheme] = useState<Theme>("light")
+  const [preference, setPreference] = useState<"purple" | "origin" | null>(null)
+  const [purpleEmail, setPurpleEmail] = useState("")
+  const [originEmail, setOriginEmail] = useState("")
   const dark = theme === "dark"
 
   return (
     <>
       <section className="demo-toolbar" aria-label="Comparison controls">
         <div>
-          <span className="eyebrow">Shared display mode</span>
-          <strong>{dark ? "Dark surfaces" : "Light surfaces"}</strong>
+          <span>Change the mood</span>
+          <strong>{dark ? "Dark" : "Light"}</strong>
         </div>
         <div className="theme-toggle" role="group" aria-label="Display mode">
           <button
@@ -79,7 +80,7 @@ export function DemoComparison() {
         <article className={`comparison-panel purple-panel${dark ? " dark" : ""}`}>
           <header className="panel-heading">
             <h2>Purple Rain</h2>
-            <Badge variant="positive">Tokens attached</Badge>
+            <Badge variant="positive">Clear next step</Badge>
           </header>
 
           <Card className="task-card">
@@ -96,7 +97,13 @@ export function DemoComparison() {
             <CardContent>
               <form className="invite-form" onSubmit={stopSubmit}>
                 <label htmlFor="purple-email">Work email</label>
-                <Input id="purple-email" type="email" placeholder="teammate@company.com" />
+                <Input
+                  id="purple-email"
+                  type="email"
+                  value={purpleEmail}
+                  onChange={(event) => setPurpleEmail(event.target.value)}
+                  placeholder="teammate@company.com"
+                />
                 <label htmlFor="purple-role">Role</label>
                 <Input id="purple-role" defaultValue="Editor" readOnly />
               </form>
@@ -125,12 +132,16 @@ export function DemoComparison() {
                     </DialogDescription>
                   </DialogHeader>
                   <div className="dialog-review-row">
-                    <span>teammate@company.com</span>
+                    <span>{purpleEmail || "No email entered"}</span>
                     <Badge variant="positive">Editor</Badge>
                   </div>
                   <DialogFooter>
-                    <Button type="button" variant="secondary">Keep editing</Button>
-                    <Button type="button">Send invitation</Button>
+                    <DialogClose asChild>
+                      <Button type="button" variant="secondary">Keep editing</Button>
+                    </DialogClose>
+                    <DialogClose asChild>
+                      <Button type="button">Send invitation</Button>
+                    </DialogClose>
                   </DialogFooter>
                 </DialogContent>
               </Dialog>
@@ -140,8 +151,8 @@ export function DemoComparison() {
 
         <article className={`comparison-panel origin-panel${dark ? " dark" : ""}`}>
           <header className="panel-heading">
-            <h2>Origin UI</h2>
-            <OriginBadge variant="secondary">@originui</OriginBadge>
+            <h2>Origin</h2>
+            <OriginBadge variant="secondary">Reference</OriginBadge>
           </header>
 
           <div className="origin-task-card task-card">
@@ -156,7 +167,14 @@ export function DemoComparison() {
             <div className="origin-card-content">
               <form className="invite-form" onSubmit={stopSubmit}>
                 <label htmlFor="origin-email">Work email</label>
-                <OriginInput className="h-11" id="origin-email" type="email" placeholder="teammate@company.com" />
+                <OriginInput
+                  className="h-11"
+                  id="origin-email"
+                  type="email"
+                  value={originEmail}
+                  onChange={(event) => setOriginEmail(event.target.value)}
+                  placeholder="teammate@company.com"
+                />
                 <label htmlFor="origin-role">Role</label>
                 <OriginInput className="h-11" id="origin-role" defaultValue="Editor" readOnly />
               </form>
@@ -182,12 +200,16 @@ export function DemoComparison() {
                     </OriginDialogDescription>
                   </OriginDialogHeader>
                   <div className="dialog-review-row">
-                    <span>teammate@company.com</span>
+                    <span>{originEmail || "No email entered"}</span>
                     <OriginBadge variant="secondary">Editor</OriginBadge>
                   </div>
                   <OriginDialogFooter>
-                    <OriginButton className="h-11" type="button" variant="outline">Keep editing</OriginButton>
-                    <OriginButton className="h-11" type="button">Send invitation</OriginButton>
+                    <OriginDialogClose asChild>
+                      <OriginButton className="h-11" type="button" variant="outline">Keep editing</OriginButton>
+                    </OriginDialogClose>
+                    <OriginDialogClose asChild>
+                      <OriginButton className="h-11" type="button">Send invitation</OriginButton>
+                    </OriginDialogClose>
                   </OriginDialogFooter>
                 </OriginDialogContent>
               </OriginDialog>
@@ -196,32 +218,40 @@ export function DemoComparison() {
         </article>
       </section>
 
-      <section className="install-manifest" aria-labelledby="install-title">
-        <div className="install-manifest__heading">
-          <div>
-            <span className="eyebrow">Purple Rain install manifest</span>
-            <h2 id="install-title">Copy any item.</h2>
-          </div>
-          <p>Every component pulls tokens through its registry dependency.</p>
+      <section className="comparison-choice" aria-labelledby="choice-title">
+        <div>
+          <h2 id="choice-title">Which one felt clearer?</h2>
+          <p>Choose with your gut. You can change your mind.</p>
         </div>
-        <div className="install-manifest__grid">
-          {installItems.map((item) => (
-            <CopyCommand
-              compact
-              key={item}
-              label={item}
-              command={`npx shadcn add ${registryBase}/${item}.json`}
-            />
-          ))}
+        <div className="preference-buttons" role="group" aria-label="Choose the clearer style">
+          <button
+            type="button"
+            aria-pressed={preference === "purple"}
+            onClick={() => setPreference("purple")}
+          >
+            Purple Rain
+          </button>
+          <button
+            type="button"
+            aria-pressed={preference === "origin"}
+            onClick={() => setPreference("origin")}
+          >
+            Origin
+          </button>
         </div>
+        <p className="preference-result" aria-live="polite">
+          {preference === null
+            ? "Try both before choosing."
+            : preference === "purple"
+              ? "Purple Rain is your current choice."
+              : "Origin is your current choice."}
+        </p>
       </section>
 
-      <section className="comparison-notes" aria-label="Comparison provenance">
-        <p>
-          The live shadcn directory no longer lists Origin UI. Its established <code>@originui</code>
-          namespace and maintained upstream source were verified before installation.
-        </p>
-        <a href="https://github.com/shadcn/originui">Inspect Origin UI source</a>
+      <section className="comparison-notes" aria-label="What to notice">
+        <div><strong>The next step</strong><span>Could you spot it without hunting?</span></div>
+        <div><strong>What changed</strong><span>Did every press make its result clear?</span></div>
+        <div><strong>What mattered</strong><span>Did the page stay calm around the decision?</span></div>
       </section>
     </>
   )

@@ -1,99 +1,57 @@
+import { ArrowRight } from "lucide-react"
 import Link from "next/link"
-import { ArrowRight, Check } from "lucide-react"
 
-import { CopyCommand } from "@/components/copy-command"
+import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
-import { Badge } from "@/registry/purple-rain/badge"
-import { Button } from "@/registry/purple-rain/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/purple-rain/card"
 
+import { HomePreview } from "./home-preview"
 import "./home.css"
-
-const items = ["tokens", "button", "card", "input", "badge", "dialog"]
 
 export default function Home() {
   return (
     <div className="site-shell">
       <SiteHeader />
       <main>
-        <section className="hero" aria-labelledby="hero-title">
-          <div className="hero__copy">
-            <Badge variant="outline">Public shadcn registry</Badge>
-            <h1 id="hero-title">Purple Rain, installed.</h1>
-            <p>
-              The tactile, task-first design system—packaged to move into any shadcn project
-              with its tokens attached.
+        <section className="home-opening" aria-labelledby="home-title">
+          <div className="home-opening__copy">
+            <p className="home-opening__plain">No setup lessons. No code to copy.</p>
+            <h1 id="home-title">Point at what feels right.</h1>
+            <p className="home-opening__lede">
+              Browse the pieces, touch everything, then tell me in plain English what you want.
+              I’ll handle the machinery behind it.
             </p>
-            <div className="hero__actions">
-              <Link className="primary-link" href="/demo">
-                Compare the system <ArrowRight aria-hidden="true" />
+            <div className="home-opening__actions">
+              <Link className="primary-link" href="/kit">
+                Explore every piece <ArrowRight aria-hidden="true" />
               </Link>
-              <a className="secondary-link" href="/r/registry.json">
-                Inspect the registry
-              </a>
+              <Link className="secondary-link" href="/demo">Compare two styles</Link>
             </div>
           </div>
-          <div className="hero__command" aria-label="Install Purple Rain button">
-            <span className="eyebrow">Start with one component</span>
-            <CopyCommand command="npx shadcn add https://kit.scottelling.com/r/button.json" />
-            <p>Tokens install automatically with every component.</p>
-          </div>
+          <HomePreview />
         </section>
 
-        <section className="workbench" aria-labelledby="registry-title">
-          <div className="section-heading">
-            <div>
-              <span className="eyebrow">Registry inventory</span>
-              <h2 id="registry-title">Six useful starting points.</h2>
-            </div>
-            <p>Canonical dark values. Maintained light values. One dependency chain.</p>
+        <section className="home-choices" aria-labelledby="choose-title">
+          <div className="home-choices__heading">
+            <h2 id="choose-title">Start with your eyes.</h2>
+            <p>You only need to decide what feels clear. The rest is my job.</p>
           </div>
-          <div className="registry-grid">
-            {items.map((item, index) => (
-              <a className="registry-item" href={`/r/${item}.json`} key={item}>
-                <span className="registry-item__index">0{index + 1}</span>
-                <span className="registry-item__name">{item}</span>
-                <span className="registry-item__status">
-                  <Check aria-hidden="true" /> JSON
-                </span>
-              </a>
-            ))}
+          <div className="home-choice-list">
+            <Link href="/kit">
+              <span className="home-choice-list__number">All pieces</span>
+              <strong>See the whole kit</strong>
+              <span>Colors, words, buttons, cards, fields, labels, and dialogs.</span>
+              <ArrowRight aria-hidden="true" />
+            </Link>
+            <Link href="/demo">
+              <span className="home-choice-list__number">Side by side</span>
+              <strong>Compare the same task</strong>
+              <span>Try Purple Rain beside another polished style.</span>
+              <ArrowRight aria-hidden="true" />
+            </Link>
           </div>
-        </section>
-
-        <section className="principle" aria-labelledby="principle-title">
-          <div className="principle__statement">
-            <h2 id="principle-title">Decision stays visible.</h2>
-            <p className="principle__copy">That is the Instant Legibility rule.</p>
-          </div>
-          <Card className="principle__card">
-            <CardHeader>
-              <Badge variant="positive">Ready to install</Badge>
-              <CardTitle>Tokens travel with the component.</CardTitle>
-              <CardDescription>
-                No separate theme step. Registry dependencies merge the Purple Rain variables
-                into your project when the component lands.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <Button type="button">Primary action</Button>
-              <Button type="button" variant="secondary">
-                Secondary action
-              </Button>
-            </CardContent>
-          </Card>
         </section>
       </main>
-      <footer className="site-footer">
-        <p>Purple Rain is built for clarity under pressure.</p>
-        <p>kit · public v1</p>
-      </footer>
+      <SiteFooter note="You describe it. I take care of the rest." />
     </div>
   )
 }

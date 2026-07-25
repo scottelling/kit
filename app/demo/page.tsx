@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 
+import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 
 import { DemoComparison } from "./demo-comparison"
@@ -17,19 +18,16 @@ export default function DemoPage() {
       <SiteHeader />
       <main className="demo-main">
         <div className="demo-intro">
-          <span className="eyebrow">Component playground</span>
-          <h1>Same task. Different systems.</h1>
+          <p className="demo-intro__plain">Same task. Two styles.</p>
+          <h1>Which one feels clearer?</h1>
           <p>
-            Purple Rain and Origin UI render the same invitation workflow. Flip both surfaces
-            together, open both dialogs, and judge the hierarchy—not a component dump.
+            Type in the fields, switch the mood, and open both dialogs. The content stays the
+            same so you can judge the feeling, not the words.
           </p>
         </div>
         <DemoComparison />
       </main>
-      <footer className="site-footer">
-        <p>Compare the decision path, not the decoration.</p>
-        <p>Purple Rain × Origin UI</p>
-      </footer>
+      <SiteFooter note="Compare the decision path, not the decoration." />
     </div>
   )
 }

@@ -12,14 +12,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://kit.scottelling.com"),
   title: {
-    default: "kit — Purple Rain registry",
-    template: "%s — kit",
+    default: "Purple Rain — a hands-on UI kit",
+    template: "%s — Purple Rain",
   },
   description:
-    "Install the Purple Rain design system into any shadcn project from a public component registry.",
+    "See, touch, and compare every piece in the Purple Rain interface kit.",
   openGraph: {
-    title: "kit — Purple Rain registry",
-    description: "A public shadcn registry for the Purple Rain design system.",
+    title: "Purple Rain — a hands-on UI kit",
+    description: "See, touch, and compare every piece in Purple Rain.",
     type: "website",
     url: "/",
   },

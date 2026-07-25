@@ -2,7 +2,7 @@
 
 ## Mission
 
-Make Purple Rain installable, inspectable, and easy to judge against a polished third-party shadcn system.
+Make Purple Rain installable behind the scenes and effortless to see, touch, and judge in public.
 
 ## Canonical decisions
 
@@ -15,6 +15,10 @@ Make Purple Rain installable, inspectable, and easy to judge against a polished 
 - The tokens item includes both schema-native `cssVars` and equivalent trailing CSS rules. This is intentional: shadcn v4 overwrites variables for a directly installed theme, but preserves existing semantic variables when that theme arrives as a transitive registry dependency. The trailing rules make automatic token delivery complete in both paths.
 - Origin UI comparison uses the verified legacy namespace `@originui` mapped to its maintained source registry because it is no longer present in the current built-in directory index.
 - The public registry is unauthenticated in v1.
+- The human-facing site is a plain-language showroom. Commands, source links, file formats, and registry language stay off the public pages.
+- `/kit` is the canonical visual inventory: colors, type, buttons, cards, fields, labels, and dialogs, all live in light and dark.
+- The global finder accepts ordinary phrases and takes visitors directly to the matching visual group.
+- `/demo` keeps Purple Rain and Origin on the same task, but asks visitors to judge the felt decision path rather than implementation details.
 
 ## Product truth
 
