@@ -25,5 +25,6 @@ The script runs the complete local check, pushes the already-committed `main` br
 ```bash
 curl -fsS https://kit.scottelling.com/r/registry.json
 curl -fsS https://kit.scottelling.com/r/button.json
+curl -fsS https://kit.scottelling.com/r/calendar.json
 curl -fsS https://kit.scottelling.com/demo
 ```

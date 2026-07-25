@@ -1,5 +1,20 @@
 # Agent Ledger
 
+## 2026-07-25 — Complete 128-piece Purple Rain library
+
+- Agent: Codex
+- Scope: expand the six-item starter registry into a complete, visible, installable component system
+- Delivered: 128 components plus the automatic Purple Rain foundation theme across Foundations (10), Actions (14), Forms (24), Navigation (16), Overlays (12), Feedback (14), Data (20), and Patterns (18)
+- Showroom: `/kit` now has the honest total, eight family filters, instant search, 128 live specimens, large interactive previews, and shared light/dark control; no commands or implementation language are shown
+- Delivery integrity: one counted inventory regenerates all matching component sources and registry entries; verification rejects missing, duplicate, unbuilt, tokenless, or effect-violating items
+- Local proof: registry schema validated 129 items; all 128 component files built; automated registry verification, ESLint, TypeScript, and Next production build passed
+- Browser QA: local and production checked at 320/375/414/768 and 1280×800; no horizontal overflow; finder, family filtering, component landing, preview interaction, and light/dark response passed; production console reported no errors
+- Live proof: `/kit`, `/r/registry.json`, `/r/button.json`, and `/r/calendar.json` return `200`; the live index contains 128 UI components and one theme
+- Downstream proof: live calendar installation into `/tmp/purple-rain-live-proof-5gwrb` created `components/ui/calendar.tsx`, merged Purple Rain light/dark foundations into `app/globals.css`, changed no package or configuration file, matched the live payload exactly, and passed a clean consumer production build
+- Hallmark: Ecosystem Index macrostructure; N13 finder; Ft2 footer; P5 H5 E5 S5 R5 V5; 58/58 slop gates passed
+- Deployment: Vercel production deployment `dpl_5GWRbLeABcM2RSJKUb62qcGjjtTS`; product commit `ec01d51` pushed to `scottelling/kit`
+- Open loops: none
+
 ## 2026-07-25 — Plain-language visual showroom
 
 - Agent: Codex

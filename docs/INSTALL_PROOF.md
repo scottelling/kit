@@ -2,6 +2,21 @@
 
 Verified against production on 2026-07-25.
 
+## Expanded-library proof
+
+- Throwaway app: `/tmp/purple-rain-live-proof-5gwrb`
+- Baseline: clean Next.js App Router, TypeScript, Tailwind v4, and current shadcn defaults
+- Installed from: `https://kit.scottelling.com/r/calendar.json`
+
+Exactly two files changed from the initialized-app baseline:
+
+- `components/ui/calendar.tsx`: created from the live Purple Rain calendar payload; the installed file matched the public payload exactly at 700 bytes.
+- `app/globals.css`: Purple Rain’s automatic token dependency merged into the consumer; 106 lines were added and 37 removed, replacing the semantic light/dark palette and adding the Purple Rain type, spacing, control, plane, radius, motion, and shadow foundations.
+
+No package or configuration file changed during the component installation. The throwaway app passed its own production build after installation.
+
+The live index reported 129 public items: 128 installable components and one automatic foundation theme.
+
 ## Consumer
 
 - Throwaway app: `/tmp/kit-consumer-final-proof`
