@@ -26,7 +26,13 @@ if (!tokenItem) {
     const values = Object.values(tokenItem.cssVars?.[mode] ?? {})
     if (values.length === 0) failures.push(`tokens ${mode} variables are missing`)
     const colorValues = values.filter((value) => typeof value === "string" && value.startsWith("oklch("))
-    if (colorValues.length < 10) failures.push(`tokens ${mode} does not contain the expected OKLCH palette`)
+      if (colorValues.length < 10) failures.push(`tokens ${mode} does not contain the expected OKLCH palette`)
+  }
+  if (tokenItem.css?.[":root"]?.["--primary"] !== tokenItem.cssVars?.light?.primary) {
+    failures.push("tokens CSS fallback does not override the consumer light primary variable")
+  }
+  if (tokenItem.css?.[".dark"]?.["--primary"] !== tokenItem.cssVars?.dark?.primary) {
+    failures.push("tokens CSS fallback does not override the consumer dark primary variable")
   }
 }
 

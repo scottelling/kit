@@ -11,6 +11,7 @@ Make Purple Rain installable, inspectable, and easy to judge against a polished 
 - Light mode preserves the same plum/orchid hue relationships while reversing lightness; it is a maintained registry extension because Studio 2.0 did not define light tokens.
 - Registry tokens are published as OKLCH CSS variables.
 - Components are source-owned shadcn components, not package wrappers.
+- The tokens item includes both schema-native `cssVars` and equivalent trailing CSS rules. This is intentional: shadcn v4 overwrites variables for a directly installed theme, but preserves existing semantic variables when that theme arrives as a transitive registry dependency. The trailing rules make automatic token delivery complete in both paths.
 - Origin UI comparison uses the verified legacy namespace `@originui` mapped to its maintained source registry because it is no longer present in the current built-in directory index.
 - The public registry is unauthenticated in v1.
 

@@ -10,4 +10,5 @@
 - Live check: pending
 - Delivered locally: public registry source/build, responsive home, matched-task Purple Rain vs Origin UI demo, shared light/dark control, copyable install commands, project birth certificate, deployment script
 - Security: production dependency audit reports zero vulnerabilities; patched current transitive PostCSS, Sharp, and Hono releases with npm overrides
-- Open loops: browser QA, deployment, downstream live install proof
+- Registry hardening: verified shadcn v4’s transitive-theme merge behavior in a clean consumer; added schema-native CSS-variable fallbacks so semantic palette values override correctly when `tokens` arrives automatically through a component dependency
+- Open loops: browser QA, production redeploy, downstream live install proof
