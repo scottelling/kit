@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "container",
+  "title": "Purple Rain Container",
+  "description": "See how Container shapes every screen.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/container.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type ContainerProps = React.ComponentPropsWithoutRef<\"div\">\n\nexport function Container({ className, ...props }: ContainerProps) {\n  return (\n    <div data-slot=\"container\" className={cn(\"border border-dashed border-border p-4\", className)} {...props}><div className=\"min-h-20 rounded-[var(--radius-control)] bg-muted\" /></div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

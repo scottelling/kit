@@ -1,6 +1,21 @@
 [
   {
     "date": "2026-07-25",
+    "macrostructure": "Ecosystem Index",
+    "theme": "Purple Rain 2.0",
+    "enrichment": "none",
+    "brief": "Complete 128-piece Purple Rain library and hands-on showroom",
+    "scope": "app",
+    "nav": "N13",
+    "footer": "Ft2",
+    "preEmit": "P5 H5 E5 S5 R5 V5",
+    "slopTest": "pass 58/58",
+    "contrast": "pass",
+    "mobile": "pass: 320, 375, 414, 768",
+    "knobDelta": "Catalogue groups became a searchable eight-family ecosystem index with varied specimen widths"
+  },
+  {
+    "date": "2026-07-25",
     "macrostructure": "Catalogue",
     "theme": "Purple Rain 2.0",
     "enrichment": "none",

@@ -1,24 +1,39 @@
-import { readFile, stat } from "node:fs/promises"
+import { readFile, readdir, stat } from "node:fs/promises"
 import path from "node:path"
 
 const root = process.cwd()
-const items = ["tokens", "button", "card", "input", "badge", "dialog"]
 const tokenUrl = "https://kit.scottelling.com/r/tokens.json"
 const failures = []
+const library = JSON.parse(await readFile(path.join(root, "lib", "purple-rain-library.json"), "utf8"))
+const source = JSON.parse(await readFile(path.join(root, "registry.json"), "utf8"))
+const registryItems = source.items.filter((item) => item.type === "registry:ui")
+const libraryNames = new Set(library.map((item) => item.name))
+const registryNames = new Set(registryItems.map((item) => item.name))
 
-for (const item of ["registry", ...items]) {
-  const file = path.join(root, "public", "r", `${item}.json`)
+if (library.length !== 128) failures.push(`library contains ${library.length} components instead of 128`)
+if (libraryNames.size !== 128) failures.push("library component names are not unique")
+if (new Set(library.map((item) => item.category)).size !== 8) failures.push("library does not contain exactly 8 families")
+if (registryItems.length !== 128) failures.push(`registry contains ${registryItems.length} UI items instead of 128`)
+
+for (const name of libraryNames) {
+  if (!registryNames.has(name)) failures.push(`${name} is missing from registry.json`)
+}
+for (const name of registryNames) {
+  if (!libraryNames.has(name)) failures.push(`${name} is not present in the library source of truth`)
+}
+
+const emittedNames = ["registry", "tokens", ...library.map((item) => item.name)]
+for (const name of emittedNames) {
+  const file = path.join(root, "public", "r", `${name}.json`)
   try {
     const data = JSON.parse(await readFile(file, "utf8"))
-    if (!data.$schema) failures.push(`${item}.json is missing $schema`)
+    if (!data.$schema) failures.push(`${name}.json is missing $schema`)
   } catch (error) {
-    failures.push(`${item}.json is missing or invalid: ${error.message}`)
+    failures.push(`${name}.json is missing or invalid: ${error.message}`)
   }
 }
 
-const source = JSON.parse(await readFile(path.join(root, "registry.json"), "utf8"))
 const tokenItem = source.items.find((item) => item.name === "tokens")
-
 if (!tokenItem) {
   failures.push("tokens item is missing")
 } else {
@@ -26,14 +41,10 @@ if (!tokenItem) {
     const values = Object.values(tokenItem.cssVars?.[mode] ?? {})
     if (values.length === 0) failures.push(`tokens ${mode} variables are missing`)
     const colorValues = values.filter((value) => typeof value === "string" && value.startsWith("oklch("))
-      if (colorValues.length < 10) failures.push(`tokens ${mode} does not contain the expected OKLCH palette`)
+    if (colorValues.length < 10) failures.push(`tokens ${mode} does not contain the expected OKLCH palette`)
   }
-  if (tokenItem.css?.[":root"]?.["--primary"] !== tokenItem.cssVars?.light?.primary) {
-    failures.push("tokens CSS fallback does not override the consumer light primary variable")
-  }
-  if (tokenItem.css?.[".dark"]?.["--primary"] !== tokenItem.cssVars?.dark?.primary) {
-    failures.push("tokens CSS fallback does not override the consumer dark primary variable")
-  }
+  if (tokenItem.css?.[":root"]?.["--primary"] !== tokenItem.cssVars?.light?.primary) failures.push("tokens CSS fallback does not override the consumer light primary variable")
+  if (tokenItem.css?.[".dark"]?.["--primary"] !== tokenItem.cssVars?.dark?.primary) failures.push("tokens CSS fallback does not override the consumer dark primary variable")
   const canonicalFoundations = {
     "pr-compact-size": "12px",
     "pr-body-size": "15px",
@@ -46,23 +57,47 @@ if (!tokenItem) {
     "pr-standard": "180ms",
   }
   for (const [name, value] of Object.entries(canonicalFoundations)) {
-    if (tokenItem.cssVars?.theme?.[name] !== value) {
-      failures.push(`tokens canonical foundation ${name} is missing or incorrect`)
+    if (tokenItem.cssVars?.theme?.[name] !== value) failures.push(`tokens canonical foundation ${name} is missing or incorrect`)
+  }
+}
+
+const sourcePaths = new Set()
+for (const item of registryItems) {
+  if (!item.registryDependencies?.includes(tokenUrl)) failures.push(`${item.name} does not depend on the live tokens item`)
+  if (!item.files?.length) failures.push(`${item.name} has no source file`)
+  for (const file of item.files ?? []) {
+    if (sourcePaths.has(file.path)) failures.push(`${file.path} is shared by more than one registry item`)
+    sourcePaths.add(file.path)
+    try {
+      await stat(path.join(root, file.path))
+    } catch {
+      failures.push(`${item.name} source file is missing: ${file.path}`)
     }
   }
 }
 
-for (const item of source.items.filter((item) => item.type === "registry:ui")) {
-  if (!item.registryDependencies?.includes(tokenUrl)) {
-    failures.push(`${item.name} does not depend on the live tokens item`)
+async function sourceFiles(directory) {
+  const entries = await readdir(directory, { withFileTypes: true })
+  const files = []
+  for (const entry of entries) {
+    const absolute = path.join(directory, entry.name)
+    if (entry.isDirectory()) files.push(...await sourceFiles(absolute))
+    else if (/\.(css|tsx)$/.test(entry.name)) files.push(absolute)
   }
+  return files
 }
 
-const banned = ["backdrop-filter", "backdrop-blur", "transition-all", "bg-gradient", "text-transparent"]
-for (const relative of ["tokens.css", ...items.filter((item) => item !== "tokens").map((item) => `registry/purple-rain/${item}.tsx`)]) {
-  const file = path.join(root, relative)
-  await stat(file)
+const banned = ["backdrop-filter", "backdrop-blur", "transition-all", "bg-gradient", "text-transparent", "linear-gradient", "radial-gradient", "conic-gradient", "text-shadow"]
+const effectFiles = [
+  path.join(root, "tokens.css"),
+  ...await sourceFiles(path.join(root, "registry", "purple-rain")),
+  ...await sourceFiles(path.join(root, "app", "kit")),
+  ...await sourceFiles(path.join(root, "app", "demo")),
+]
+
+for (const file of effectFiles) {
   const contents = await readFile(file, "utf8")
+  const relative = path.relative(root, file)
   for (const term of banned) {
     if (contents.includes(term)) failures.push(`${relative} contains banned effect: ${term}`)
   }
@@ -73,4 +108,4 @@ if (failures.length) {
   process.exit(1)
 }
 
-console.log(`Verified ${items.length} Purple Rain items, dependency chaining, OKLCH themes, and effect constraints.`)
+console.log("Verified 128 Purple Rain components, 8 families, automatic tokens, public files, OKLCH themes, and effect constraints.")

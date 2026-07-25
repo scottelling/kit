@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "description-list",
+  "title": "Purple Rain Description List",
+  "description": "Description List turns information into a readable, useful object.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/description-list.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type DescriptionListProps = React.ComponentPropsWithoutRef<\"dl\">\n\nexport function DescriptionList({ className, ...props }: DescriptionListProps) {\n  return (\n    <dl data-slot=\"description-list\" className={cn(\"divide-y divide-border text-sm\", className)} {...props}>{[[\"Owner\", \"Mara Rivera\"], [\"State\", \"Ready\"], [\"Due\", \"Friday\"]].map(([term, detail]) => <div key={term} className=\"grid grid-cols-2 gap-3 py-3\"><dt className=\"text-muted-foreground\">{term}</dt><dd className=\"font-semibold\">{detail}</dd></div>)}</dl>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

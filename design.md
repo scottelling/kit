@@ -12,7 +12,7 @@ over catalogue theme defaults.
 ## Macrostructure family
 
 - Public pages: Catalogue — an even-handed visual inventory with hairline row divisions.
-- Showroom page: Catalogue — live specimens grouped by kind.
+- Showroom page: Ecosystem Index — 128 live specimens grouped into eight searchable families.
 - Comparison page: Catalogue — two equal task specimens followed by a plain choice.
 
 ## Theme
@@ -66,7 +66,7 @@ Named 4-point-derived scale from `--space-3xs` through `--space-4xl`. Pages use 
 ## Per-page allowances
 
 - The home page may show one live, contained sample.
-- The showroom contains all live components and foundation specimens.
+- The showroom contains all 128 live components and foundation specimens, with no hidden remainder.
 - The comparison page must show the same task and copy in both systems.
 - The public pages do not show commands, source links, formats, package names, or machine terms.
 
@@ -76,7 +76,7 @@ Named 4-point-derived scale from `--space-3xs` through `--space-4xl`. Pages use 
 - The exact light and dark palette.
 - Relay Sans, with Geist Mono restricted to the wordmark.
 - Button shape, 44 px control height, focus treatment, and press response.
-- Hairline catalogue divisions and left-biased headings.
+- Hairline inventory divisions and left-biased headings.
 - The visible “What are you looking for?” finder.
 - The one-line footer.
 
@@ -85,6 +85,7 @@ Named 4-point-derived scale from `--space-3xs` through `--space-4xl`. Pages use 
 - Which live specimen carries the first interaction.
 - Grid collapse according to the content on that page.
 - The amount of explanatory copy, while keeping labels plain.
+- The showroom may use an Ecosystem Index while the home and comparison pages retain Catalogue structure.
 
 ## Exports
 

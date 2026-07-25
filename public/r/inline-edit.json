@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "inline-edit",
+  "title": "Purple Rain Inline Edit",
+  "description": "Inline Edit collects a choice without hiding its state.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/inline-edit.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type InlineEditProps = React.ComponentPropsWithoutRef<\"label\">\n\nexport function InlineEdit({ className, ...props }: InlineEditProps) {\n  return (\n    <label data-slot=\"inline-edit\" className={cn(\"grid gap-2 text-sm font-semibold\", className)} {...props}>Inline Edit<input type=\"text\" defaultValue={\"Purple Rain\"} placeholder=\"Type here\" className=\"rounded-[var(--radius-control)] border border-border bg-card text-card-foreground shadow-[var(--shadow-control)] outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background h-11 px-3 font-normal\" /></label>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

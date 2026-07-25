@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar",
+  "title": "Purple Rain Calendar",
+  "description": "Calendar turns information into a readable, useful object.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/calendar.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type CalendarProps = React.ComponentPropsWithoutRef<\"section\">\n\nexport function Calendar({ className, ...props }: CalendarProps) {\n  return (\n    <section data-slot=\"calendar\" className={cn(\"grid gap-3\", className)} {...props}><header className=\"flex items-center justify-between\"><button className=\"size-11\" type=\"button\">‹</button><strong>July</strong><button className=\"size-11\" type=\"button\">›</button></header><div className=\"grid grid-cols-4\">{[20,21,22,23,24,25,26,27].map((day) => <button key={day} type=\"button\" className=\"size-11 rounded-[var(--radius-control)] hover:bg-muted\">{day}</button>)}</div></section>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

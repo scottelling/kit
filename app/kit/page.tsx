@@ -1,5 +1,8 @@
 import type { Metadata } from "next"
 
+import library from "@/lib/purple-rain-library.json"
+
+import { type LibraryItem } from "./component-preview"
 import { KitExperience } from "./kit-experience"
 import "./kit.css"
 
@@ -9,5 +12,5 @@ export const metadata: Metadata = {
 }
 
 export default function KitPage() {
-  return <KitExperience />
+  return <KitExperience library={library as LibraryItem[]} />
 }

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton",
+  "title": "Purple Rain Skeleton",
+  "description": "Skeleton makes the current state visible at a glance.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/skeleton.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type SkeletonProps = React.ComponentPropsWithoutRef<\"div\">\n\nexport function Skeleton({ className, ...props }: SkeletonProps) {\n  return (\n    <div data-slot=\"skeleton\" role=\"status\" aria-label=\"Loading\" className={cn(\"flex min-h-20 items-center gap-3\", className)} {...props}><span className=\"size-5 animate-pulse rounded-full bg-primary\" /><span className=\"h-3 w-28 animate-pulse rounded-full bg-muted\" /></div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

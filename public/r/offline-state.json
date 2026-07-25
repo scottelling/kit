@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "offline-state",
+  "title": "Purple Rain Offline State",
+  "description": "Offline State makes the current state visible at a glance.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/offline-state.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type OfflineStateProps = React.ComponentPropsWithoutRef<\"section\">\n\nexport function OfflineState({ className, ...props }: OfflineStateProps) {\n  return (\n    <section data-slot=\"offline-state\" role=\"status\" className={cn(\"grid justify-items-start gap-2\", className)} {...props}><strong>You’re offline</strong><p className=\"text-sm text-muted-foreground\">Work will sync when you reconnect.</p></section>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

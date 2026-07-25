@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox",
+  "title": "Purple Rain Checkbox",
+  "description": "Checkbox collects a choice without hiding its state.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/checkbox.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type CheckboxProps = React.ComponentPropsWithoutRef<\"fieldset\">\n\nexport function Checkbox({ className, ...props }: CheckboxProps) {\n  return (\n    <fieldset data-slot=\"checkbox\" className={cn(\"grid gap-3 text-sm\", className)} {...props}><legend className=\"mb-2 font-semibold\">Checkbox</legend>{[\"Keep me posted\", \"Send a copy\"].map((label, index) => <label key={label} className=\"flex min-h-11 items-center gap-3\"><input type=\"checkbox\" name=\"checkbox\" defaultChecked={index === 0} className=\"size-5 accent-primary\" />{label}</label>)}</fieldset>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

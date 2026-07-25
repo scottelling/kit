@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "app-shell",
+  "title": "Purple Rain App Shell",
+  "description": "App Shell assembles related pieces into a complete task.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/app-shell.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type AppShellProps = React.ComponentPropsWithoutRef<\"section\">\n\nexport function AppShell({ className, ...props }: AppShellProps) {\n  return (\n    <section data-slot=\"app-shell\" className={cn(\"grid min-h-56 grid-cols-[4rem_1fr] grid-rows-[3rem_1fr] overflow-hidden rounded-[var(--radius-card)] bg-card shadow-[var(--shadow-panel)]\", className)} {...props}><aside className=\"row-span-2 grid place-items-start justify-center bg-primary pt-4 font-bold text-primary-foreground\">PR</aside><header className=\"flex items-center border-b border-border px-4 text-sm font-bold\">Release</header><main className=\"grid content-center gap-2 p-5\"><strong>Today</strong><span className=\"text-sm text-muted-foreground\">Three things need you.</span></main></section>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -7,7 +7,8 @@
     "build": "npm run registry:build && next build",
     "start": "next start",
     "lint": "eslint",
-    "registry:build": "shadcn build",
+    "library:generate": "node scripts/generate-library.mjs",
+    "registry:build": "npm run library:generate && shadcn build",
     "registry:validate": "shadcn registry validate",
     "verify:registry": "node scripts/verify-registry.mjs",
     "check": "npm run registry:validate && npm run registry:build && npm run verify:registry && npm run lint && next build"

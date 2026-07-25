@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "app-switcher",
+  "title": "Purple Rain App Switcher",
+  "description": "App Switcher keeps place and direction easy to scan.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/app-switcher.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type AppSwitcherProps = React.ComponentPropsWithoutRef<\"nav\">\n\nexport function AppSwitcher({ className, ...props }: AppSwitcherProps) {\n  return (\n    <nav data-slot=\"app-switcher\" aria-label=\"App Switcher\" className={cn(\"flex flex-wrap items-center gap-2 text-sm\", className)} {...props}><a className=\"min-h-11 rounded-[var(--radius-control)] px-3 py-3 font-semibold hover:bg-muted\" href=\"#\">Home</a><span aria-hidden=\"true\">/</span><a className=\"min-h-11 rounded-[var(--radius-control)] px-3 py-3 font-semibold hover:bg-muted\" href=\"#\">Library</a><span aria-current=\"page\" className=\"px-3 text-muted-foreground\">App Switcher</span></nav>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

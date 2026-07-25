@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "segmented-control",
+  "title": "Purple Rain Segmented Control",
+  "description": "Segmented Control keeps the next move clear and touchable.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/segmented-control.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type SegmentedControlProps = React.ComponentPropsWithoutRef<\"div\">\n\nexport function SegmentedControl({ className, ...props }: SegmentedControlProps) {\n  const [active, setActive] = React.useState(\"Overview\")\n  return (\n    <div data-slot=\"segmented-control\" role=\"group\" aria-label=\"Segmented Control\" className={cn(\"inline-flex flex-wrap gap-1 rounded-[var(--radius-card)] bg-muted p-1\", className)} {...props}>{[\"One\", \"Two\", \"Three\"].map((label) => <button key={label} type=\"button\" onClick={() => setActive(label)} aria-pressed={active === label} className=\"min-h-11 rounded-[var(--radius-control)] px-3 text-sm font-semibold aria-pressed:bg-primary aria-pressed:text-primary-foreground\">{label}</button>)}</div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

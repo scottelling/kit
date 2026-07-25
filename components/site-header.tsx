@@ -5,15 +5,28 @@ import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import { KeyboardEvent, useEffect, useMemo, useRef, useState } from "react"
 
+import library from "@/lib/purple-rain-library.json"
+
+const familyPlaces = [
+  ["Foundations", "Colors, type, spacing, shape, and depth"],
+  ["Actions", "Buttons, toggles, toolbars, and choices"],
+  ["Forms", "Fields, pickers, switches, and uploads"],
+  ["Navigation", "Ways to move, filter, and know your place"],
+  ["Overlays", "Dialogs, menus, sheets, and focused surfaces"],
+  ["Feedback", "Status, loading, success, and recovery"],
+  ["Data", "Cards, lists, tables, charts, and calendars"],
+  ["Patterns", "Complete forms, settings, checkout, and search"],
+].map(([label, hint]) => ({ label, hint, href: `/kit#family-${label.toLowerCase()}`, words: label.toLowerCase() }))
+
 const places = [
-  { label: "Colors", hint: "See every Purple Rain color", href: "/kit#colors", words: "palette mood light dark" },
-  { label: "Type", hint: "See headings, labels, and body text", href: "/kit#type", words: "font words typography" },
-  { label: "Buttons", hint: "Press every kind of action", href: "/kit#buttons", words: "action click primary secondary" },
-  { label: "Cards", hint: "Choose between card styles", href: "/kit#cards", words: "surface panel choice" },
-  { label: "Fields", hint: "Type, focus, and check a form", href: "/kit#fields", words: "input form email text" },
-  { label: "Labels", hint: "See status and category labels", href: "/kit#labels", words: "badge status tag" },
-  { label: "Dialogs", hint: "Open and close a focused choice", href: "/kit#dialogs", words: "modal window confirm" },
+  ...familyPlaces,
   { label: "Compare styles", hint: "Try Purple Rain beside Origin", href: "/demo", words: "origin side by side" },
+  ...library.map((item) => ({
+    label: item.title,
+    hint: item.description,
+    href: `/kit#${item.name}`,
+    words: `${item.category} ${item.preview}`,
+  })),
 ]
 
 export function SiteHeader() {
@@ -26,8 +39,8 @@ export function SiteHeader() {
 
   const results = useMemo(() => {
     const needle = query.trim().toLowerCase()
-    if (!needle) return places
-    return places.filter((place) => `${place.label} ${place.hint} ${place.words}`.toLowerCase().includes(needle))
+    if (!needle) return places.slice(0, 9)
+    return places.filter((place) => `${place.label} ${place.hint} ${place.words}`.toLowerCase().includes(needle)).slice(0, 12)
   }, [query])
 
   function openFinder() {
@@ -43,6 +56,12 @@ export function SiteHeader() {
 
   function visit(href: string) {
     closeFinder()
+    if (pathname === "/kit" && href.startsWith("/kit#")) {
+      const hash = href.slice(4)
+      window.history.pushState(null, "", hash)
+      window.dispatchEvent(new CustomEvent("kit-reveal", { detail: hash.slice(1) }))
+      return
+    }
     router.push(href)
   }
 
@@ -116,7 +135,7 @@ export function SiteHeader() {
                 setActive(0)
               }}
               onKeyDown={handleFinderKeys}
-              placeholder="Try “buttons” or “colors”"
+              placeholder="Try “calendar” or “checkout”"
               autoComplete="off"
             />
           </label>
@@ -136,7 +155,7 @@ export function SiteHeader() {
               </button>
             ))}
             {results.length === 0 ? (
-              <p className="finder-empty">Nothing matched that phrase. Try “buttons,” “colors,” or “compare.”</p>
+              <p className="finder-empty">Nothing matched that phrase. Try “calendar,” “forms,” or “compare.”</p>
             ) : null}
           </div>
         </div>

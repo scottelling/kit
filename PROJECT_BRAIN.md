@@ -16,8 +16,9 @@ Make Purple Rain installable behind the scenes and effortless to see, touch, and
 - Origin UI comparison uses the verified legacy namespace `@originui` mapped to its maintained source registry because it is no longer present in the current built-in directory index.
 - The public registry is unauthenticated in v1.
 - The human-facing site is a plain-language showroom. Commands, source links, file formats, and registry language stay off the public pages.
-- `/kit` is the canonical visual inventory: colors, type, buttons, cards, fields, labels, and dialogs, all live in light and dark.
-- The global finder accepts ordinary phrases and takes visitors directly to the matching visual group.
+- `/kit` is the canonical visual inventory: 128 installable pieces across Foundations, Actions, Forms, Navigation, Overlays, Feedback, Data, and Patterns, all live in light and dark.
+- `lib/purple-rain-library.json` is the counted public inventory; `scripts/generate-library.mjs` regenerates the matching registry source and entries so the showroom and delivery system cannot drift apart.
+- The global finder accepts ordinary phrases and takes visitors directly to any matching family or individual piece.
 - `/demo` keeps Purple Rain and Origin on the same task, but asks visitors to judge the felt decision path rather than implementation details.
 
 ## Product truth

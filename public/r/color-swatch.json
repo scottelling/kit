@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "color-swatch",
+  "title": "Purple Rain Color Swatch",
+  "description": "See how Color Swatch shapes every screen.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/color-swatch.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type ColorSwatchProps = React.ComponentPropsWithoutRef<\"div\">\n\nexport function ColorSwatch({ className, ...props }: ColorSwatchProps) {\n  return (\n    <div data-slot=\"color-swatch\" className={cn(\"grid grid-cols-5 gap-2\", className)} {...props}>{[\"bg-background\", \"bg-card\", \"bg-primary\", \"bg-positive\", \"bg-destructive\"].map((tone) => <span key={tone} className={cn(\"min-h-20 rounded-[var(--radius-control)]\", tone)} />)}</div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
