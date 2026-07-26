@@ -1,0 +1,7 @@
+interface:
+  display_name: "Studio Director"
+  short_description: "Run the full brief-to-live Purple Rain workflow"
+  default_prompt: "Use $operate-purple-rain-studio to take this project from English brief to approved live product."
+  brand_color: "#6B3FA0"
+policy:
+  allow_implicit_invocation: true

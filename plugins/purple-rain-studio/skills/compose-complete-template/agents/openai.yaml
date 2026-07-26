@@ -1,0 +1,7 @@
+interface:
+  display_name: "Template Foundry"
+  short_description: "Compose a complete connected product template"
+  default_prompt: "Use $compose-complete-template to create the complete template system for this project."
+  brand_color: "#6B3FA0"
+policy:
+  allow_implicit_invocation: true

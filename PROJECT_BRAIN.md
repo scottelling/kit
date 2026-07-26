@@ -21,10 +21,16 @@ visible and tactile in public, reusable by agents, and installable behind the sc
 - `lib/purple-rain-library.json` is the counted public inventory; `scripts/generate-library.mjs` regenerates the matching registry source and entries so the showroom and delivery system cannot drift apart.
 - The global finder accepts ordinary phrases and takes visitors directly to any matching family or individual piece.
 - `/demo` keeps Purple Rain and Origin on the same task, but asks visitors to judge the felt decision path rather than implementation details.
-- `/studio` is the canonical project workspace. It joins a brief, direction, type, color, motion, text treatment, brand tools, template, skills, agents, and release standard into one plain-English handoff.
-- `lib/studio-library.ts` is the counted Studio inventory: 106 tools across fonts (12), palettes (12), motion (16), text (12), brand (12), templates (16), prompts (16), skills (4), and agents (6).
-- `plugins/purple-rain-studio` packages the reusable Studio method as four validated skills: Design & Ship, Brand System, Interface System, and Release Proof.
-- The public experience never pretends to execute an AI job. “Copy the complete project” creates the full instruction for a user’s preferred AI workspace; the reusable plugin supplies the execution behavior.
+- `/studio` is the complete system configurator. It joins a brief, direction, type, color, motion, text treatment, brand tools, template, skills, and specialist team, then opens the result directly in saved Build Mode.
+- `/build` is the canonical project workspace. It turns an ordinary-English brief into a saved five-screen project, keeps all visual choices live, and publishes a shareable preview.
+- `/projects` keeps draft, built, approved, and archived work together. The newest fifty complete project records persist on the device; older oversized records are normalized automatically, with a private-session fallback when normal browser storage is restricted.
+- `/templates` carries eight complete project families and forty connected screens: launch, product, commerce, publication, portfolio, documentation, marketplace, and campaign.
+- `/labs` applies brand, type, color, text, and motion choices to the current saved project.
+- `/quality` exposes eighteen actual or inherited release checks and applies the approval mark automatically only when all eighteen pass.
+- `lib/studio-library.ts` is the counted Studio inventory: 109 tools across fonts (12), palettes (12), motion (16), text (12), brand (12), templates (16), prompts (16), skills (7), and agents (6).
+- `plugins/purple-rain-studio` packages seven validated abilities: Studio Director, Template Foundry, Creative Labs, Design & Ship, Brand System, Interface System, and Release Proof.
+- The personal `purple-rain-studio` Codex plugin is installed by default from the personal marketplace, so English requests can carry the same workflow outside this repository.
+- The public experience never claims to generate an arbitrary product in the browser. Build Mode assembles and preserves complete Purple Rain project systems; the reusable Codex plugin performs open-ended project execution.
 
 ## Product truth
 

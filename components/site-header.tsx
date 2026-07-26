@@ -20,6 +20,11 @@ const familyPlaces = [
 ].map(([label, hint]) => ({ label, hint, href: `/kit#family-${label.toLowerCase()}`, words: label.toLowerCase() }))
 
 const places = [
+  { label: "Build a project", hint: "Turn an English brief into a working five-page system", href: "/build", words: "make create start execute project plain english" },
+  { label: "Saved projects", hint: "Return to drafts, built work, and approvals", href: "/projects", words: "saved history drafts archive approved" },
+  { label: "Complete templates", hint: "Choose from eight complete project systems", href: "/templates", words: "landing app ecommerce publication portfolio docs marketplace campaign screens" },
+  { label: "Creative Labs", hint: "Tune brand, type, color, text, and motion", href: "/labs", words: "brand fonts palettes text effects animation movement" },
+  { label: "Quality approval", hint: "See every release check and approval state", href: "/quality", words: "audit accessibility approve release check standards" },
   { label: "Purple Rain Studio", hint: "Shape a complete project in plain English", href: "/studio", words: "brief brand fonts colors motion templates prompts skills agents ship deploy" },
   ...studioCategories.map((item) => ({
     label: item.plain,
@@ -50,6 +55,7 @@ export function SiteHeader() {
   const inputRef = useRef<HTMLInputElement>(null)
   const [query, setQuery] = useState("")
   const [active, setActive] = useState(0)
+  const buildPages = ["/build", "/projects", "/templates", "/labs", "/quality", "/preview"]
 
   const results = useMemo(() => {
     const needle = query.trim().toLowerCase()
@@ -117,9 +123,9 @@ export function SiteHeader() {
           <span>What are you looking for?</span>
         </button>
         <nav aria-label="Main pages">
+          <Link aria-current={buildPages.includes(pathname) ? "page" : undefined} href="/build">Build</Link>
           <Link aria-current={pathname === "/studio" ? "page" : undefined} href="/studio">Studio</Link>
           <Link aria-current={pathname === "/kit" ? "page" : undefined} href="/kit">Explore</Link>
-          <Link aria-current={pathname === "/demo" ? "page" : undefined} href="/demo">Compare</Link>
         </nav>
       </header>
 
@@ -160,7 +166,7 @@ export function SiteHeader() {
                 type="button"
                 role="option"
                 aria-selected={index === active}
-                key={place.href}
+                key={`${place.href}-${place.label}`}
                 onMouseEnter={() => setActive(index)}
                 onClick={() => visit(place.href)}
               >

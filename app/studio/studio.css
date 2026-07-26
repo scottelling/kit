@@ -91,6 +91,7 @@
   font-weight: 700;
 }
 
+.brief-workbench input,
 .brief-workbench textarea {
   width: 100%;
   min-height: 10rem;
@@ -107,6 +108,11 @@
   line-height: 1.55;
 }
 
+.brief-workbench input {
+  min-height: 3rem;
+}
+
+.brief-workbench input:focus-visible,
 .brief-workbench textarea:focus-visible {
   border-color: var(--input);
   outline-color: var(--ring);

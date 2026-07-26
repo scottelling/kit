@@ -13,6 +13,11 @@ over catalogue theme defaults.
 
 - Public pages: Catalogue — an even-handed visual inventory with hairline row divisions.
 - Studio page: Narrative Workflow — Brief → Direction → System → Library → Team → Ship.
+- Build Mode: Split Studio — plain-English controls and a live five-screen project canvas.
+- Saved Projects: Index-First — drafts, built work, approvals, and archives in one ledger.
+- Template Foundry: Portfolio Grid — eight connected project systems and forty working screens.
+- Creative Labs: Type Specimen — brand, type, color, text, and motion applied to the current project.
+- Quality: Stat-Led — eighteen visible checks with automatic approval only after every pass.
 - Showroom page: Ecosystem Index — 128 live specimens grouped into eight searchable families.
 - Comparison page: Catalogue — two equal task specimens followed by a plain choice.
 
@@ -67,7 +72,10 @@ Named 4-point-derived scale from `--space-3xs` through `--space-4xl`. Pages use 
 ## Per-page allowances
 
 - The home page may show one live, contained sample.
-- The Studio contains all 106 Studio tools, a live project recipe, and a complete plain-English handoff.
+- The Studio contains all 109 Studio tools, a live project recipe, and a direct path into saved Build Mode.
+- Build Mode keeps complete projects on the device, publishes a shareable five-screen preview, and returns every Lab choice to the same project.
+- The Template Foundry contains eight complete project families and forty connected screens.
+- Quality exposes all eighteen checks and applies the approval mark automatically.
 - The showroom contains all 128 live components and foundation specimens, with no hidden remainder.
 - The comparison page must show the same task and copy in both systems.
 - The public pages do not show commands, source links, formats, package names, or machine terms.
@@ -81,7 +89,7 @@ Named 4-point-derived scale from `--space-3xs` through `--space-4xl`. Pages use 
 - Hairline inventory divisions and left-biased headings.
 - The visible “What are you looking for?” finder.
 - The one-line footer.
-- The Studio, showroom, and comparison page remain reachable in one step from the main navigation.
+- Build Mode, the Studio, and the showroom remain reachable in one step from the main navigation; comparison remains one step away through the finder.
 
 ## What pages MAY differ on
 
@@ -90,6 +98,7 @@ Named 4-point-derived scale from `--space-3xs` through `--space-4xl`. Pages use 
 - The amount of explanatory copy, while keeping labels plain.
 - The showroom may use an Ecosystem Index while the home and comparison pages retain Catalogue structure.
 - The Studio may use a Narrative Workflow and a sticky stage rail because its content is genuinely sequential.
+- Build Mode, Projects, Templates, Labs, and Quality may use their named Studio-room macrostructures while preserving the shared system and visible room navigation.
 
 ## Exports
 

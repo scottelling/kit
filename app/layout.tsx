@@ -3,6 +3,7 @@ import { Geist_Mono } from "next/font/google"
 
 import "./globals.css"
 import "./shared.css"
+import "./suite.css"
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={geistMono.variable}>
+    <html lang="en" className={geistMono.variable} data-scroll-behavior="smooth">
       <body>{children}</body>
     </html>
   )

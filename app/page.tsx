@@ -21,10 +21,10 @@ export default function Home() {
               Purple Rain keeps every decision joined up through release.
             </p>
             <div className="home-opening__actions">
-              <Link className="primary-link" href="/studio">
-                Open the Studio <ArrowRight aria-hidden="true" />
+              <Link className="primary-link" href="/build">
+                Build a project <ArrowRight aria-hidden="true" />
               </Link>
-              <Link className="secondary-link" href="/kit">Explore the UI kit</Link>
+              <Link className="secondary-link" href="/studio">Shape the system</Link>
             </div>
           </div>
           <HomePreview />
@@ -36,22 +36,22 @@ export default function Home() {
             <p>A loose idea, a visual decision, or a nearly finished product can all enter the same complete system.</p>
           </div>
           <div className="home-choice-list">
-            <Link href="/studio">
+            <Link href="/build">
               <span className="home-choice-list__number">English brief</span>
-              <strong>Shape the whole project</strong>
-              <span>Brand, type, color, motion, templates, skills, team, and release.</span>
+              <strong>Build the whole project</strong>
+              <span>Describe the outcome and work through five connected screens.</span>
+              <ArrowRight aria-hidden="true" />
+            </Link>
+            <Link href="/studio">
+              <span className="home-choice-list__number">109 studio tools</span>
+              <strong>Shape the design system</strong>
+              <span>Brand, type, color, motion, templates, prompts, skills, and team.</span>
               <ArrowRight aria-hidden="true" />
             </Link>
             <Link href="/kit">
               <span className="home-choice-list__number">128 live pieces</span>
               <strong>Touch the interface kit</strong>
               <span>Every foundation, control, state, data view, and product pattern.</span>
-              <ArrowRight aria-hidden="true" />
-            </Link>
-            <Link href="/demo">
-              <span className="home-choice-list__number">Side by side</span>
-              <strong>Pressure-test the style</strong>
-              <span>Try Purple Rain beside another polished style.</span>
               <ArrowRight aria-hidden="true" />
             </Link>
           </div>

@@ -4,19 +4,21 @@ import {
   ArrowRight,
   Check,
   ChevronRight,
-  Copy,
   Moon,
   Play,
   Search,
   Sun,
   X,
 } from "lucide-react"
+import { useRouter } from "next/navigation"
 import type { CSSProperties } from "react"
 import { useMemo, useRef, useState } from "react"
 
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
+import { createStudioProject, templateFamilies, type ProjectTone, type ProjectType } from "@/lib/project-studio"
 import type { StudioAsset, StudioCategory } from "@/lib/studio-library"
+import { useStudioProjects } from "@/lib/use-studio-projects"
 
 type StudioExperienceProps = {
   assets: StudioAsset[]
@@ -75,7 +77,10 @@ function projectCopy(type: string) {
 }
 
 export function StudioExperience({ assets, categories, counts }: StudioExperienceProps) {
+  const router = useRouter()
+  const { createProject } = useStudioProjects()
   const [dark, setDark] = useState(false)
+  const [projectName, setProjectName] = useState("")
   const [brief, setBrief] = useState(defaultBrief)
   const [projectType, setProjectType] = useState("Product app")
   const [tone, setTone] = useState("Precise")
@@ -94,7 +99,6 @@ export function StudioExperience({ assets, categories, counts }: StudioExperienc
   const [previewTab, setPreviewTab] = useState("Overview")
   const [previewAction, setPreviewAction] = useState(false)
   const [motionRun, setMotionRun] = useState(0)
-  const [copied, setCopied] = useState(false)
   const detailRef = useRef<HTMLDialogElement>(null)
 
   const palette = assetById(assets, paletteId)
@@ -186,29 +190,25 @@ export function StudioExperience({ assets, categories, counts }: StudioExperienc
     return `Use this ${asset.category.toLowerCase().replace(/s$/, "")}`
   }
 
-  async function copyProject() {
-    const team = teamIds.map((id) => assetById(assets, id).name).join(", ")
-    const skills = skillIds.map((id) => assetById(assets, id).name).join(", ")
-    const article = projectType === "Online store" ? "an" : "a"
-    const handoff = [
-      `Create and deploy ${article} ${projectType.toLowerCase()} with a ${tone.toLowerCase()} tone.`,
-      "",
-      `Project brief: ${brief}`,
-      "",
-      `Visual direction: ${directions[direction].name}.`,
-      `Type: ${font.name} — ${font.summary}.`,
-      `Color: ${palette.name} — ${palette.summary}.`,
-      `Motion: ${motion.name} — ${motion.summary}.`,
-      `Text: ${text.name} — ${text.summary}.`,
-      `Starting point: ${template.name}.`,
-      `Working team: ${team}.`,
-      `Required abilities: ${skills}.`,
-      "",
-      "Use Purple Rain’s accessibility, responsive, interaction-state, and release standards. Finish the complete product, test it in a real browser, deploy it, and report the live proof in plain language.",
-    ].join("\n")
-    await navigator.clipboard.writeText(handoff)
-    setCopied(true)
-    window.setTimeout(() => setCopied(false), 2500)
+  function buildProject() {
+    const type = projectType as ProjectType
+    const family = templateFamilies.find((item) => item.type === type) ?? templateFamilies[1]
+    const created = createProject(createStudioProject({
+      name: projectName.trim() || `${projectType} project`,
+      brief,
+      type,
+      tone: tone as ProjectTone,
+      direction: directions[direction].name,
+      fontId,
+      paletteId,
+      motionId,
+      textId,
+      templateId: family.id,
+      brandToolIds: brandIds,
+      skillIds,
+      agentIds: teamIds,
+    }))
+    router.push(`/build?project=${created.id}`)
   }
 
   return (
@@ -221,13 +221,15 @@ export function StudioExperience({ assets, categories, counts }: StudioExperienc
             <h1 id="studio-title">The whole design studio, in one place.</h1>
             <p>Start in plain English. Purple Rain turns the idea into a coherent direction, complete interface system, working team, and release plan.</p>
             <div className="studio-proof" aria-label="Studio inventory">
-              <span><strong>106</strong> studio tools</span>
+              <span><strong>{assets.length}</strong> studio tools</span>
               <span><strong>128</strong> interface pieces</span>
               <span><strong>1</strong> joined-up system</span>
             </div>
           </div>
 
           <div className="brief-workbench">
+            <label htmlFor="project-name">Project name</label>
+            <input id="project-name" value={projectName} onChange={(event) => setProjectName(event.target.value)} placeholder={`${projectType} project`} />
             <label htmlFor="project-brief">What are you making?</label>
             <textarea id="project-brief" value={brief} onChange={(event) => setBrief(event.target.value)} />
             <div className="brief-choice">
@@ -351,7 +353,7 @@ export function StudioExperience({ assets, categories, counts }: StudioExperienc
                 </div>
               </section>
             ))}
-            {visibleAssets.length === 0 ? <div className="studio-empty"><strong>No tools matched “{query}”.</strong><p>Try a shorter phrase, or return to the complete studio.</p><button type="button" onClick={() => { setQuery(""); setCategory("All") }}>Show all 106 tools</button></div> : null}
+            {visibleAssets.length === 0 ? <div className="studio-empty"><strong>No tools matched “{query}”.</strong><p>Try a shorter phrase, or return to the complete studio.</p><button type="button" onClick={() => { setQuery(""); setCategory("All") }}>Show all {assets.length} tools</button></div> : null}
           </div>
         </section>
 
@@ -376,9 +378,9 @@ export function StudioExperience({ assets, categories, counts }: StudioExperienc
         <section className="studio-stage studio-stage--ship" id="ship" aria-labelledby="ship-title">
           <div className="ship-copy">
             <span>06 · Ship</span>
-            <h2 id="ship-title">The project is ready to hand over.</h2>
-            <p>Your brief, direction, system, starting point, skills, and team are now one complete instruction. Copy it, paste it into your preferred AI workspace, and the Studio takes the work from there.</p>
-            <button className="studio-primary" type="button" onClick={copyProject}>{copied ? <><Check aria-hidden="true" /> Project brief copied</> : <><Copy aria-hidden="true" /> Copy the complete project</>}</button>
+            <h2 id="ship-title">Take this system straight into Build Mode.</h2>
+            <p>Your brief, direction, system, starting point, skills, and team stay together as a saved project. Open it, see all five screens, and keep working visually.</p>
+            <button className="studio-primary" type="button" onClick={buildProject}>Build this project <ArrowRight aria-hidden="true" /></button>
           </div>
           <div className="project-receipt" aria-label="Complete project receipt">
             <header><strong>{projectType}</strong><span>{tone}</span></header>

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Creative Labs"
+  short_description: "Tune brand, type, color, text, and motion together"
+  default_prompt: "Use $direct-creative-labs to create and apply the complete creative direction for this project."
+  brand_color: "#6B3FA0"
+policy:
+  allow_implicit_invocation: true
