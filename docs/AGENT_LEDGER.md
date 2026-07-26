@@ -1,5 +1,25 @@
 # Agent Ledger
 
+## 2026-07-25 — Complete Purple Rain Project Studio
+
+- Agent: Codex
+- Scope: turn the Purple Rain library into a complete visual project studio that can move from ordinary English to saved, adjustable, approved work without requiring technical handoffs
+- Delivered: `/build`, `/projects`, `/templates`, `/labs`, `/quality`, and `/preview`, joined by a shared Studio-room navigation and the plain-language global finder
+- Build Mode: a real split workspace with project name and brief, eight project types, eight tones, twelve color systems, three directions, five connected live screens, saved history, and shareable light/dark preview
+- Saved work: newest fifty project records survive navigation and refresh, support draft/built/approved/archived states, duplicate and restore, normalize oversized legacy records, and fall back to private-session storage when normal browser storage is restricted
+- Template Foundry: eight complete systems and forty working screens across launch, product, commerce, publication, portfolio, documentation, marketplace, and campaign
+- Creative Labs: the current project can be tuned across brand traits, voice, signature, twelve font pairings, twelve palettes, twelve text treatments, and sixteen motion recipes; every choice returns to the same project
+- Automatic approval: eighteen visible checks across brief, direction, system, product, Studio team, accessibility, effects, and release; the approval mark is applied automatically only at 18/18
+- Direct Studio handoff: all 109 Studio tools now feed saved Build Mode directly; no copy-and-paste handoff is required
+- Reusable Codex Studio: seven validated abilities—Studio Director, Template Foundry, Creative Labs, Design & Ship, Brand System, Interface System, and Release Proof—installed and enabled as `purple-rain-studio@personal`
+- Interaction proof: fresh project build, saved reopen, template selection, Lab choice persistence, five-screen navigation, light/dark preview, direct Studio-to-Build handoff, live preview publication, and automatic approval all passed locally and on production
+- Responsive proof: Build, Templates, Labs, Quality, and Preview checked at 320, 375, 414, and 768 pixels; zero horizontal overflow and zero visible interactive targets below 44 pixels; active Studio room remains visible on narrow screens
+- Build proof: 129 registry items validated; 128 Purple Rain components regenerated and verified; seven Studio abilities and plugin manifest validated; ESLint, TypeScript, local production build, and Vercel production build passed
+- Live proof: `/`, `/studio`, `/build`, `/projects`, `/templates`, `/labs`, `/quality`, `/preview`, `/kit`, `/demo`, and `/r/button.json` return `200`; fresh production project `Purple Rain Live Proof` earned the automatic 18/18 mark; clean live tab reported no console warnings or errors
+- Hallmark: Split Studio, Index-First, Portfolio Grid, Type Specimen, and Stat-Led macrostructures; N13 finder; Ft2 footer; P5 H5 E5 S5 R5 V5; 58/58 slop gates passed
+- Deployment: Vercel production deployment `dpl_EbHGxT8i52ahY628okY77QCy2brm`; product commit `616caf3` pushed to `scottelling/kit`
+- Open loops: none
+
 ## 2026-07-25 — Purple Rain Studio
 
 - Agent: Codex
