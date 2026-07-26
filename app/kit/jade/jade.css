@@ -1158,13 +1158,14 @@
   }
 
   .pilot-choice > div {
+    gap: var(--space-2xs);
     overflow-x: auto;
   }
 
   .pilot-choice button {
     min-width: max-content;
     flex: 1 1 0;
-    padding-inline: var(--space-xs);
+    padding-inline: 0;
   }
 
   .pilot-detail__actions,
