@@ -1,5 +1,21 @@
 # Agent Ledger
 
+## 2026-07-25 — JADE clean-room intake pilot
+
+- Agent: Codex
+- Scope: prove that an old Studio kit can be recovered as a distinct visual system without importing Studio's broken ownership, implementation, or governance
+- Source boundary: inspected JADE's owned specification, foundations, and reference captures read-only; copied no Studio component or showcase implementation into Kit
+- Delivered: `/kit/jade`, a tactile visual pilot with JADE's three material planes, restrained mint signal, Relay typography, exact 44px geometry, short seated press behavior, and maintained light and dark foundations
+- Honest comparison: one working launch-review interface rendered in synchronized JADE and Purple Rain views with shared search, filters, task selection, decision controls, review notes, completion state, and approval flow
+- System integration: added a visible visual-system switcher to `/kit`, made JADE discoverable through the plain-language finder, and preserved Kit's existing navigation, showroom structure, registry, and Purple Rain authority
+- Interaction proof: shared light/dark, synchronized search, error guidance, loading, approval success, native dialog focus, Escape close, and focus return passed locally and on production
+- Responsive proof: 320, 375, 414, and 768 pixels checked locally and live; zero page overflow, zero clipped affordances, zero visible targets below 44px, and task-first phone composition passed
+- Quality proof: inherited faint metadata and error colors were retained for material/state boundaries while readable neutral ink carries small text; contrast and the 58/58 visual-quality gates passed
+- Build proof: registry schema valid at 129 items; all 128 Purple Rain components regenerated and verified; seven Studio abilities validated; ESLint, TypeScript, and production build passed repeatedly
+- Live proof: `/kit/jade`, `/kit`, `/r/registry.json`, and `/r/button.json` return `200`; production browser console is clean; live mobile decision control fits all three choices without internal overflow
+- Deployment: Vercel production deployment `dpl_AEgZWgTprX886jcm9YKPor1EHZG2`; product commits `c49655c` and `c48d67d` pushed to `scottelling/kit`
+- Open loop: JADE remains an intentionally bounded pilot; no additional Studio kit is promoted until this live test is judged worth expanding
+
 ## 2026-07-25 — Complete Purple Rain Project Studio
 
 - Agent: Codex
