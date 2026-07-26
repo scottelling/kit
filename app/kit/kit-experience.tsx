@@ -1,6 +1,7 @@
 "use client"
 
 import { Moon, Search, Sun, X } from "lucide-react"
+import Link from "next/link"
 import { useEffect, useMemo, useRef, useState } from "react"
 
 import { SiteFooter } from "@/components/site-footer"
@@ -73,6 +74,13 @@ export function KitExperience({ library }: KitExperienceProps) {
     <div className={`kit-shell${dark ? " dark" : ""}`}>
       <SiteHeader />
       <main className="kit-main">
+        <nav className="kit-worlds" aria-label="Choose a visual system">
+          <span>Visual systems</span>
+          <div>
+            <Link aria-current="page" href="/kit">Purple Rain <small>128 pieces</small></Link>
+            <Link href="/kit/jade">JADE <small>Pilot</small></Link>
+          </div>
+        </nav>
         <section className="kit-index-intro" aria-labelledby="kit-title">
           <div className="kit-index-intro__copy">
             <h1 id="kit-title">The whole Purple Rain kit.</h1>

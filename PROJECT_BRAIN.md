@@ -18,6 +18,7 @@ visible and tactile in public, reusable by agents, and installable behind the sc
 - The public registry is unauthenticated in v1.
 - The human-facing site is a plain-language showroom. Commands, source links, file formats, and registry language stay off the public pages.
 - `/kit` is the canonical visual inventory: 128 installable pieces across Foundations, Actions, Forms, Navigation, Overlays, Feedback, Data, and Patterns, all live in light and dark.
+- `/kit/jade` is the first clean-room visual-system intake pilot. It preserves JADE's owned tactile DNA while using Kit's product structure, accessibility, responsive rules, and proof standards; Studio's implementation and governance do not travel with it.
 - `lib/purple-rain-library.json` is the counted public inventory; `scripts/generate-library.mjs` regenerates the matching registry source and entries so the showroom and delivery system cannot drift apart.
 - The global finder accepts ordinary phrases and takes visitors directly to any matching family or individual piece.
 - `/demo` keeps Purple Rain and Origin on the same task, but asks visitors to judge the felt decision path rather than implementation details.

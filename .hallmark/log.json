@@ -1,6 +1,21 @@
 [
   {
     "date": "2026-07-25",
+    "macrostructure": "Workbench",
+    "theme": "studied-DNA",
+    "enrichment": "none",
+    "brief": "Clean-room JADE pilot with a synchronized Purple Rain product comparison",
+    "scope": "app",
+    "nav": "N13 preserved",
+    "footer": "Ft2 preserved",
+    "preEmit": "P5 H5 E5 S5 R5 V5",
+    "slopTest": "pass 58/58",
+    "contrast": "pass",
+    "mobile": "pass: 320, 375, 414, 768",
+    "knobDelta": "The earlier catalogue became a real shared decision workspace with task-first mobile composition"
+  },
+  {
+    "date": "2026-07-25",
     "macrostructure": "Split Studio",
     "theme": "Purple Rain 2.0",
     "enrichment": "none",

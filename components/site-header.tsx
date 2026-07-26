@@ -20,6 +20,7 @@ const familyPlaces = [
 ].map(([label, hint]) => ({ label, hint, href: `/kit#family-${label.toLowerCase()}`, words: label.toLowerCase() }))
 
 const places = [
+  { label: "Explore JADE", hint: "Try the tactile JADE pilot beside Purple Rain", href: "/kit/jade", words: "jade kit tactile mint comparison pilot" },
   { label: "Build a project", hint: "Turn an English brief into a working five-page system", href: "/build", words: "make create start execute project plain english" },
   { label: "Saved projects", hint: "Return to drafts, built work, and approvals", href: "/projects", words: "saved history drafts archive approved" },
   { label: "Complete templates", hint: "Choose from eight complete project systems", href: "/templates", words: "landing app ecommerce publication portfolio docs marketplace campaign screens" },
@@ -125,7 +126,7 @@ export function SiteHeader() {
         <nav aria-label="Main pages">
           <Link aria-current={buildPages.includes(pathname) ? "page" : undefined} href="/build">Build</Link>
           <Link aria-current={pathname === "/studio" ? "page" : undefined} href="/studio">Studio</Link>
-          <Link aria-current={pathname === "/kit" ? "page" : undefined} href="/kit">Explore</Link>
+          <Link aria-current={pathname.startsWith("/kit") ? "page" : undefined} href="/kit">Explore</Link>
         </nav>
       </header>
 

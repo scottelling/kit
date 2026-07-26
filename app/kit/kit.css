@@ -11,6 +11,89 @@
   padding: clamp(var(--space-xl), 6vw, var(--space-3xl)) clamp(var(--space-md), 4vw, var(--space-2xl)) var(--space-4xl);
 }
 
+.kit-worlds {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  padding-block: var(--space-md);
+  border-bottom: var(--rule-hair) solid var(--border);
+}
+
+.kit-worlds > span {
+  color: var(--muted-foreground);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.kit-worlds > div {
+  display: flex;
+  gap: var(--space-xs);
+  scrollbar-width: none;
+}
+
+.kit-worlds > div::-webkit-scrollbar {
+  display: none;
+}
+
+.kit-worlds a {
+  min-height: var(--pr-control-height);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding-inline: var(--space-md);
+  border: var(--rule-hair) solid var(--border);
+  border-radius: var(--radius-round);
+  color: var(--muted-foreground);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.kit-worlds a small {
+  color: inherit;
+  font-size: var(--text-xs);
+  font-weight: 500;
+}
+
+.kit-worlds a[aria-current="page"] {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .kit-worlds a:hover {
+    border-color: var(--primary);
+    color: var(--foreground);
+  }
+
+  .kit-worlds a[aria-current="page"]:hover {
+    color: var(--primary-foreground);
+  }
+}
+
+@media (max-width: 39.99rem) {
+  .kit-worlds {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .kit-worlds > div {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .kit-worlds a {
+    flex: 0 0 auto;
+  }
+
+  .kit-worlds a small {
+    display: none;
+  }
+}
+
 .kit-index-intro {
   display: grid;
   gap: var(--space-xl);
