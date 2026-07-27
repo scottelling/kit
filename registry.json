@@ -32,6 +32,17 @@
           "pr-fast": "120ms",
           "pr-standard": "180ms",
           "pr-ease": "cubic-bezier(0.23, 1, 0.32, 1)",
+          "kit-control-height": "44px",
+          "kit-compact-size": "12px",
+          "kit-body-size": "15px",
+          "kit-heading-size": "38px",
+          "kit-reading-measure": "72ch",
+          "kit-leading": "1.5",
+          "kit-space-base": "12px",
+          "kit-space-section": "32px",
+          "kit-fast": "120ms",
+          "kit-standard": "180ms",
+          "kit-ease": "cubic-bezier(0.23, 1, 0.32, 1)",
           "color-positive": "var(--positive)",
           "color-positive-foreground": "var(--positive-foreground)",
           "radius-control": "var(--radius-control)",
@@ -76,7 +87,8 @@
           "dur-long": "300ms",
           "ease-standard": "cubic-bezier(0.23, 1, 0.32, 1)",
           "shadow-panel": "0 16px 32px -26px oklch(0.12 0.02 309 / 0.34), inset 0 1px 0 oklch(1 0.006 313 / 0.78)",
-          "shadow-control": "0 5px 12px -10px oklch(0.12 0.02 309 / 0.3), inset 0 1px 0 oklch(1 0.006 313 / 0.72)"
+          "shadow-control": "0 5px 12px -10px oklch(0.12 0.02 309 / 0.3), inset 0 1px 0 oklch(1 0.006 313 / 0.72)",
+          "shadow-inset": "inset 0 2px 5px oklch(0.12 0.02 309 / 0.16), inset 0 -1px 0 oklch(1 0.006 313 / 0.62)"
         },
         "dark": {
           "background": "oklch(0.1513 0.0205 309.47)",
@@ -107,7 +119,8 @@
           "plane-pressed": "oklch(0.1706 0.0218 307.03)",
           "ink-faint": "oklch(0.5747 0.0288 313.83)",
           "shadow-panel": "0 16px 32px -26px oklch(0.04 0.01 309 / 0.96), inset 0 1px 0 oklch(0.98 0.01 313 / 0.06)",
-          "shadow-control": "0 5px 12px -10px oklch(0.04 0.01 309 / 0.96), inset 0 1px 0 oklch(0.98 0.01 313 / 0.07)"
+          "shadow-control": "0 5px 12px -10px oklch(0.04 0.01 309 / 0.96), inset 0 1px 0 oklch(0.98 0.01 313 / 0.07)",
+          "shadow-inset": "inset 0 2px 5px oklch(0.04 0.01 309 / 0.9), inset 0 -1px 0 oklch(0.98 0.01 313 / 0.05)"
         }
       },
       "css": {
@@ -148,7 +161,8 @@
           "--dur-long": "300ms",
           "--ease-standard": "cubic-bezier(0.23, 1, 0.32, 1)",
           "--shadow-panel": "0 16px 32px -26px oklch(0.12 0.02 309 / 0.34), inset 0 1px 0 oklch(1 0.006 313 / 0.78)",
-          "--shadow-control": "0 5px 12px -10px oklch(0.12 0.02 309 / 0.3), inset 0 1px 0 oklch(1 0.006 313 / 0.72)"
+          "--shadow-control": "0 5px 12px -10px oklch(0.12 0.02 309 / 0.3), inset 0 1px 0 oklch(1 0.006 313 / 0.72)",
+          "--shadow-inset": "inset 0 2px 5px oklch(0.12 0.02 309 / 0.16), inset 0 -1px 0 oklch(1 0.006 313 / 0.62)"
         },
         ".dark": {
           "--background": "oklch(0.1513 0.0205 309.47)",
@@ -179,7 +193,8 @@
           "--plane-pressed": "oklch(0.1706 0.0218 307.03)",
           "--ink-faint": "oklch(0.5747 0.0288 313.83)",
           "--shadow-panel": "0 16px 32px -26px oklch(0.04 0.01 309 / 0.96), inset 0 1px 0 oklch(0.98 0.01 313 / 0.06)",
-          "--shadow-control": "0 5px 12px -10px oklch(0.04 0.01 309 / 0.96), inset 0 1px 0 oklch(0.98 0.01 313 / 0.07)"
+          "--shadow-control": "0 5px 12px -10px oklch(0.04 0.01 309 / 0.96), inset 0 1px 0 oklch(0.98 0.01 313 / 0.07)",
+          "--shadow-inset": "inset 0 2px 5px oklch(0.04 0.01 309 / 0.9), inset 0 -1px 0 oklch(0.98 0.01 313 / 0.05)"
         }
       }
     },
@@ -2108,6 +2123,156 @@
       "files": [
         {
           "path": "registry/purple-rain/library/notification-center.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "application-shell",
+      "type": "registry:ui",
+      "title": "Purple Rain Application Shell",
+      "description": "Application Shell assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/application/application-shell.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "workspace-tree",
+      "type": "registry:ui",
+      "title": "Purple Rain Workspace Tree",
+      "description": "Workspace Tree assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/application/workspace-tree.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "viewer-shell",
+      "type": "registry:ui",
+      "title": "Purple Rain Viewer Shell",
+      "description": "Viewer Shell assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/application/viewer-shell.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "editor-toolbar",
+      "type": "registry:ui",
+      "title": "Purple Rain Editor Toolbar",
+      "description": "Editor Toolbar assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/application/editor-toolbar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "task-board",
+      "type": "registry:ui",
+      "title": "Purple Rain Task Board",
+      "description": "Task Board assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/application/task-board.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "task-rail",
+      "type": "registry:ui",
+      "title": "Purple Rain Task Rail",
+      "description": "Task Rail assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/application/task-rail.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "status-bar",
+      "type": "registry:ui",
+      "title": "Purple Rain Status Bar",
+      "description": "Status Bar assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/application/status-bar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "mobile-app-nav",
+      "type": "registry:ui",
+      "title": "Purple Rain Mobile App Nav",
+      "description": "Mobile App Nav assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/application/mobile-app-nav.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "terminal-surface",
+      "type": "registry:ui",
+      "title": "Purple Rain Terminal Surface",
+      "description": "Terminal Surface assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/application/terminal-surface.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-surface",
+      "type": "registry:ui",
+      "title": "Purple Rain Document Surface",
+      "description": "Document Surface assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/application/document-surface.tsx",
           "type": "registry:ui"
         }
       ]
