@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "purpose": "One production contract for every visual system distributed by Kit.",
+  "systems": ["purple-rain", "jade"],
+  "foundations": [
+    "semantic color roles in OKLCH",
+    "light and dark modes",
+    "type roles and readable measure",
+    "spacing, density, radius, border, and depth scales",
+    "visible focus and reduced motion",
+    "solid surfaces without glass, glow, or decorative gradients"
+  ],
+  "states": ["default", "hover", "focus", "active", "selected", "disabled", "loading", "empty", "error", "success"],
+  "application_patterns": [
+    "application-shell",
+    "workspace-tree",
+    "viewer-shell",
+    "editor-toolbar",
+    "task-board",
+    "task-rail",
+    "status-bar",
+    "mobile-app-nav",
+    "terminal-surface",
+    "document-surface"
+  ],
+  "viewports": [320, 375, 414, 768, 1280, 1440],
+  "requirements": {
+    "minimum_control_height": "44px",
+    "keyboard_operable": true,
+    "rtl_ready": true,
+    "public_registry": true,
+    "downstream_install_proof": true,
+    "plain_language_showroom": true
+  }
+}

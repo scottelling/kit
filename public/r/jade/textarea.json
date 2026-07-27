@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea",
+  "title": "JADE Textarea",
+  "description": "Textarea collects a choice without hiding its state.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/jade/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/textarea.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type TextareaProps = React.ComponentPropsWithoutRef<\"label\">\n\nexport function Textarea({ children, className, ...props }: TextareaProps) {\n  if (children !== undefined) {\n    return (<label data-slot=\"textarea\" className={cn(\"grid min-w-0 gap-2\", className)} {...props}>{children}</label>)\n  }\n\n  return (\n    <label data-slot=\"textarea\" className={cn(\"grid gap-2 text-sm font-semibold\", className)} {...props}>Message<textarea className=\"rounded-[var(--radius-control)] border border-border bg-card text-card-foreground shadow-[var(--shadow-control)] outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background min-h-28 resize-y px-3 py-3 font-normal\" defaultValue=\"A clear next step.\" /></label>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

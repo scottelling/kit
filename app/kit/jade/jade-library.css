@@ -1,0 +1,87 @@
+.kit-shell.jade-library {
+  --background: oklch(0.95859 0.00345 174.48);
+  --foreground: oklch(0.18455 0.00945 184.05);
+  --card: oklch(0.997 0.001 178);
+  --card-foreground: oklch(0.18455 0.00945 184.05);
+  --popover: oklch(0.997 0.001 178);
+  --popover-foreground: oklch(0.18455 0.00945 184.05);
+  --primary: oklch(0.8063 0.14727 177.61);
+  --primary-foreground: oklch(0.26113 0.04314 179.94);
+  --secondary: oklch(0.99031 0.00106 197.14);
+  --secondary-foreground: oklch(0.38154 0.01225 180.77);
+  --muted: oklch(0.93674 0.00448 179.73);
+  --muted-foreground: oklch(0.5349 0.01409 177.61);
+  --accent: oklch(0.95261 0.03679 179.7);
+  --accent-foreground: oklch(0.26113 0.04314 179.94);
+  --destructive: oklch(0.59554 0.19038 22.77);
+  --destructive-foreground: oklch(0.997 0.001 178);
+  --positive: oklch(0.65094 0.14028 161.1);
+  --positive-foreground: oklch(0.18455 0.00945 184.05);
+  --border: oklch(0.18455 0.00945 184.05 / 0.08);
+  --input: oklch(0.91476 0.00554 183.02);
+  --ring: oklch(0.38154 0.01225 180.77);
+  --overlay: oklch(0.18455 0.00945 184.05);
+  --plane-1: oklch(0.95859 0.00345 174.48);
+  --plane-2: oklch(0.93674 0.00448 179.73);
+  --plane-3: oklch(0.91476 0.00554 183.02);
+  --plane-pressed: oklch(0.91476 0.00554 183.02);
+  --ink-faint: oklch(0.68376 0.01225 176.13);
+  --radius-control: 1rem;
+  --radius-card: 1.25rem;
+  --radius-sheet: 1.5rem;
+  --shadow-control: inset 0 1px 0 oklch(0.997 0.001 178 / 0.86), inset 0 -1px 0 var(--border), 0 1px 2px oklch(0.18455 0.00945 184.05 / 0.07), 0 3px 8px oklch(0.18455 0.00945 184.05 / 0.07);
+  --shadow-panel: inset 0 1px 0 oklch(0.997 0.001 178 / 0.86), inset 0 -1px 0 var(--border), 0 2px 4px oklch(0.18455 0.00945 184.05 / 0.07), 0 8px 20px oklch(0.18455 0.00945 184.05 / 0.14);
+  --shadow-inset: inset 0 2px 4px oklch(0.18455 0.00945 184.05 / 0.14), inset 0 4px 10px oklch(0.18455 0.00945 184.05 / 0.07), inset 0 -1px 0 oklch(0.997 0.001 178 / 0.6);
+}
+
+.kit-shell.jade-library.dark {
+  --background: oklch(0.18905 0.0094 184.09);
+  --foreground: oklch(0.95379 0.00594 170.44);
+  --card: oklch(0.24331 0.01213 178.37);
+  --card-foreground: oklch(0.95379 0.00594 170.44);
+  --popover: oklch(0.26744 0.01318 180.25);
+  --popover-foreground: oklch(0.95379 0.00594 170.44);
+  --secondary: oklch(0.26744 0.01318 180.25);
+  --secondary-foreground: oklch(0.77386 0.0119 176.2);
+  --muted: oklch(0.16721 0.00817 181.79);
+  --muted-foreground: oklch(0.61006 0.01367 177.73);
+  --accent: oklch(0.32342 0.04351 178.87);
+  --accent-foreground: oklch(0.95379 0.00594 170.44);
+  --destructive: oklch(0.68 0.17 22.77);
+  --destructive-foreground: oklch(0.95379 0.00594 170.44);
+  --positive: oklch(0.72 0.14 161.1);
+  --positive-foreground: oklch(0.14052 0.00596 174.67);
+  --border: oklch(0.95379 0.00594 170.44 / 0.07);
+  --input: oklch(0.14052 0.00596 174.67);
+  --ring: oklch(0.8063 0.14727 177.61);
+  --overlay: oklch(0.14052 0.00596 174.67);
+  --plane-1: oklch(0.18905 0.0094 184.09);
+  --plane-2: oklch(0.16721 0.00817 181.79);
+  --plane-3: oklch(0.14052 0.00596 174.67);
+  --plane-pressed: oklch(0.14052 0.00596 174.67);
+  --ink-faint: oklch(0.47582 0.01332 175.82);
+  --shadow-control: inset 0 1px 0 oklch(0.95379 0.00594 170.44 / 0.07), inset 0 -1px 0 var(--border), 0 1px 2px oklch(0.08 0.006 178 / 0.34), 0 3px 8px oklch(0.08 0.006 178 / 0.34);
+  --shadow-panel: inset 0 1px 0 oklch(0.95379 0.00594 170.44 / 0.07), inset 0 -1px 0 var(--border), 0 2px 4px oklch(0.08 0.006 178 / 0.34), 0 8px 20px oklch(0.08 0.006 178 / 0.58);
+  --shadow-inset: inset 0 2px 4px oklch(0.08 0.006 178 / 0.58), inset 0 4px 10px oklch(0.08 0.006 178 / 0.34), inset 0 -1px 0 oklch(0.95379 0.00594 170.44 / 0.05);
+}
+
+.jade-library .kit-index-intro h1 {
+  max-width: 12ch;
+}
+
+.jade-library .kit-tile,
+.jade-library .kit-preview-panel,
+.jade-library .kit-search,
+.jade-library .family-rail,
+.jade-library .mood-picker {
+  box-shadow: var(--shadow-panel);
+}
+
+.jade-library .kit-tile__sample,
+.jade-library .mini-search,
+.jade-library .mini-field input,
+.jade-library .mini-field textarea,
+.jade-library .mini-field select {
+  background: var(--plane-2);
+  box-shadow: var(--shadow-inset);
+}

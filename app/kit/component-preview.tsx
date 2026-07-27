@@ -29,6 +29,7 @@ export type LibraryItem = {
 type ComponentPreviewProps = {
   item: LibraryItem
   expanded?: boolean
+  system?: "purple-rain" | "jade"
 }
 
 const samplePeople = ["MR", "ST", "EO"]
@@ -38,12 +39,13 @@ const sampleRows = [
   ["Email copy", "Elena", "Draft"],
 ]
 
-export function ComponentPreview({ item, expanded = false }: ComponentPreviewProps) {
+export function ComponentPreview({ item, expanded = false, system = "purple-rain" }: ComponentPreviewProps) {
   const [active, setActive] = useState(0)
   const [on, setOn] = useState(true)
   const [open, setOpen] = useState(false)
   const [copied, setCopied] = useState(false)
-  const [text, setText] = useState("Purple Rain")
+  const systemName = system === "jade" ? "JADE" : "Purple Rain"
+  const [text, setText] = useState(systemName)
   const [amount, setAmount] = useState(64)
   const { name, preview, title } = item
   const sizeClass = expanded ? " mini-preview--expanded" : ""
@@ -62,7 +64,7 @@ export function ComponentPreview({ item, expanded = false }: ComponentPreviewPro
 
   switch (preview) {
     case "color":
-      sample = <div className="mini-swatches" aria-label="Purple Rain colors"><i aria-hidden="true" /><i aria-hidden="true" /><i aria-hidden="true" /><i aria-hidden="true" /><i aria-hidden="true" /></div>
+      sample = <div className="mini-swatches" aria-label={`${systemName} colors`}><i aria-hidden="true" /><i aria-hidden="true" /><i aria-hidden="true" /><i aria-hidden="true" /><i aria-hidden="true" /></div>
       break
     case "type":
       sample = <div className="mini-type"><strong>Aa</strong><span>Clear first. Beautiful second.</span></div>
@@ -224,7 +226,7 @@ export function ComponentPreview({ item, expanded = false }: ComponentPreviewPro
       sample = <nav className="mini-anchor">{["Overview", "Details", "Notes"].map((label, index) => <a key={label} aria-current={active === index ? "location" : undefined} href={`#${name}`} onClick={() => setActive(index)}>{label}</a>)}</nav>
       break
     case "app-switcher":
-      sample = <div className="mini-app-switcher"><button type="button" onClick={() => setOpen((value) => !value)}>Purple Rain <ChevronDown /></button>{open ? <div>Workshop<br />Archive</div> : null}</div>
+      sample = <div className="mini-app-switcher"><button type="button" onClick={() => setOpen((value) => !value)}>{systemName} <ChevronDown /></button>{open ? <div>Workshop<br />Archive</div> : null}</div>
       break
 
     case "dialog":
@@ -322,7 +324,7 @@ export function ComponentPreview({ item, expanded = false }: ComponentPreviewPro
       break
 
     case "app-shell":
-      sample = <div className="mini-app-shell"><aside>PR</aside><header>Release</header><main><strong>Today</strong><span>Three things need you.</span></main></div>
+      sample = <div className="mini-app-shell"><aside>{system === "jade" ? "J" : "PR"}</aside><header>Release</header><main><strong>Today</strong><span>Three things need you.</span></main></div>
       break
     case "auth":
     case "sign-in":
@@ -354,6 +356,36 @@ export function ComponentPreview({ item, expanded = false }: ComponentPreviewPro
       break
     case "notifications":
       sample = <div className="mini-notifications"><header><strong>Notifications</strong><span>3 new</span></header>{["Mara approved the page", "Sam left a note", "Elena shared a file"].map((label, index) => <button type="button" key={label} onClick={() => setActive(index)} aria-current={active === index ? "true" : undefined}><i aria-hidden="true" />{label}</button>)}</div>
+      break
+    case "application-shell":
+      sample = <div className="mini-application-system"><aside><b>{system === "jade" ? "J" : "PR"}</b>{["Home", "Work", "People"].map((label, index) => <button key={label} type="button" aria-current={active === index ? "page" : undefined} onClick={() => setActive(index)}>{label}</button>)}</aside><section><header><strong>Launch room</strong><button type="button">Share</button></header><main><span>Current decision</span><strong>{["Home direction", "Release checklist", "Review team"][active]}</strong><p>The same product structure stays clear in every visual system.</p></main><footer><span>All changes saved</span><b>3 online</b></footer></section></div>
+      break
+    case "workspace-tree":
+      sample = <div className="mini-workspace-tree"><button type="button" onClick={() => setOpen((value) => !value)} aria-expanded={open}><ChevronDown />Product</button>{open ? <div>{["Brief", "Research", "Release"].map((label, index) => <button key={label} type="button" aria-current={active === index ? "true" : undefined} onClick={() => setActive(index)}>{label}</button>)}</div> : null}</div>
+      break
+    case "viewer-shell":
+      sample = <div className="mini-viewer-shell"><header><span>← Launch / brief.md</span><div><button type="button">Copy</button><button type="button">Focus</button></div></header><article><span>PROJECT BRIEF</span><strong>Make the next decision obvious.</strong><p>Content stays in front while the tools remain close and quiet.</p></article></div>
+      break
+    case "editor-toolbar":
+      sample = <div className="mini-editor-system" role="toolbar" aria-label="Text formatting">{["B", "I", "H1", "Link"].map((label, index) => <button key={label} type="button" aria-pressed={active === index} onClick={() => setActive(index)}>{label}</button>)}</div>
+      break
+    case "task-board":
+      sample = <div className="mini-task-system">{[["Ready", "Review the brief"], ["Doing", "Check mobile"], ["Done", "Approve type"]].map(([column, task], index) => <section key={column}><header><strong>{column}</strong><span>{index + 1}</span></header><button type="button" aria-pressed={active === index} onClick={() => setActive(index)}><b>{task}</b><span>Launch</span></button></section>)}</div>
+      break
+    case "task-rail":
+      sample = <aside className="mini-task-rail"><strong>Active work</strong>{["Launch review", "Mobile pass", "Copy approval"].map((label, index) => <button key={label} type="button" aria-current={active === index ? "true" : undefined} onClick={() => setActive(index)}>{label}<span>{index + 1}</span></button>)}</aside>
+      break
+    case "status-bar":
+      sample = <footer className="mini-status-bar"><span><i aria-hidden="true" />Synced</span><span>Line 24</span><button type="button" onClick={() => setOn((value) => !value)}>{on ? "Focus" : "Editing"}</button></footer>
+      break
+    case "mobile-app-nav":
+      sample = <nav className="mini-mobile-system" aria-label="Mobile navigation">{["Home", "Work", "Search", "You"].map((label, index) => <button key={label} type="button" aria-current={active === index ? "page" : undefined} onClick={() => setActive(index)}>{label}</button>)}</nav>
+      break
+    case "terminal-surface":
+      sample = <div className="mini-terminal-system" role="region" aria-label="Terminal"><p><b>studio</b><span>$</span> verify release</p><p><i>✓</i> content clear</p><p><i>✓</i> mobile ready</p><p><i>✓</i> keyboard complete</p></div>
+      break
+    case "document-surface":
+      sample = <article className="mini-document-system"><header><span>DESIGN STANDARD</span><strong>Instant legibility</strong><p>The current object and next action remain obvious.</p></header><section><b>01</b><p>Use solid surfaces and clear hierarchy. Keep motion purposeful.</p></section></article>
       break
     default:
       sample = <div className="mini-fallback">{title}</div>

@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "registry/purple-rain/library/donut-chart.tsx",
-      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type DonutChartProps = React.ComponentPropsWithoutRef<\"figure\">\n\nexport function DonutChart({ className, ...props }: DonutChartProps) {\n  return (\n    <figure data-slot=\"donut-chart\" className={cn(\"flex h-40 items-end justify-center gap-3\", className)} {...props}>{[\"h-1/3\", \"h-3/4\", \"h-1/2\", \"h-full\"].map((height) => <span key={height} className={cn(\"w-10 rounded-t-[var(--radius-control)] bg-primary\", height)} />)}<figcaption className=\"sr-only\">Donut Chart</figcaption></figure>\n  )\n}\n",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type DonutChartProps = React.ComponentPropsWithoutRef<\"figure\">\n\nexport function DonutChart({ children, className, ...props }: DonutChartProps) {\n  if (children !== undefined) {\n    return (<figure data-slot=\"donut-chart\" className={cn(\"min-w-0\", className)} {...props}>{children}</figure>)\n  }\n\n  return (\n    <figure data-slot=\"donut-chart\" className={cn(\"flex h-40 items-end justify-center gap-3\", className)} {...props}>{[\"h-1/3\", \"h-3/4\", \"h-1/2\", \"h-full\"].map((height) => <span key={height} className={cn(\"w-10 rounded-t-[var(--radius-control)] bg-primary\", height)} />)}<figcaption className=\"sr-only\">Donut Chart</figcaption></figure>\n  )\n}\n",
       "type": "registry:ui"
     }
   ],

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "terminal-surface",
+  "title": "Purple Rain Terminal Surface",
+  "description": "Terminal Surface assembles related pieces into a complete task.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/application/terminal-surface.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction TerminalSurface({ className, ...props }: React.ComponentProps<\"section\">) {\n  return <section data-slot=\"terminal-surface\" className={cn(\"min-h-48 overflow-auto rounded-[var(--radius-card)] bg-[var(--plane-pressed)] p-4 font-mono text-sm leading-6 text-foreground shadow-[var(--shadow-inset,var(--shadow-control))]\", className)} {...props} />\n}\n\nfunction TerminalPrompt({ className, ...props }: React.ComponentProps<\"p\">) {\n  return <p data-slot=\"terminal-prompt\" className={cn(\"m-0 flex min-w-0 gap-2\", className)} {...props} />\n}\n\nexport { TerminalPrompt, TerminalSurface }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -20,7 +20,8 @@ const familyPlaces = [
 ].map(([label, hint]) => ({ label, hint, href: `/kit#family-${label.toLowerCase()}`, words: label.toLowerCase() }))
 
 const places = [
-  { label: "Explore JADE", hint: "Try the tactile JADE pilot beside Purple Rain", href: "/kit/jade", words: "jade kit tactile mint comparison pilot" },
+  { label: "Explore JADE", hint: "Touch every raised, seated, and sunken JADE piece", href: "/kit/jade", words: "jade complete kit tactile mint components" },
+  { label: "Compare the systems", hint: "Use the same working interface in JADE and Purple Rain", href: "/kit/jade/compare", words: "jade purple rain comparison live working interface" },
   { label: "Build a project", hint: "Turn an English brief into a working five-page system", href: "/build", words: "make create start execute project plain english" },
   { label: "Saved projects", hint: "Return to drafts, built work, and approvals", href: "/projects", words: "saved history drafts archive approved" },
   { label: "Complete templates", hint: "Choose from eight complete project systems", href: "/templates", words: "landing app ecommerce publication portfolio docs marketplace campaign screens" },

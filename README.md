@@ -1,12 +1,14 @@
 # kit
 
-The public shadcn registry for Purple Rain 2.0.
+The public design-engineering registry for Purple Rain and JADE.
 
 ```bash
 npx shadcn add https://kit.scottelling.com/r/button.json
 ```
 
 Every component carries the `tokens` registry dependency, so Purple Rain’s OKLCH light and dark variables merge automatically.
+
+JADE exposes the same production component contract with its own tactile light and dark foundations under `https://kit.scottelling.com/r/jade/`.
 
 ## Local work
 
@@ -18,17 +20,12 @@ npm run check
 
 - Registry source: `registry/purple-rain/`
 - Registry manifest: `registry.json`
-- Built JSON: `public/r/`
+- JADE registry manifest: `registry/jade/registry.json`
+- Built JSON: `public/r/` and `public/r/jade/`
+- Complete showrooms: `/kit` and `/kit/jade`
+- Same-product comparison: `/kit/jade/compare`
 - Side-by-side demo: `/demo`
 - Production: `https://kit.scottelling.com`
-
-The public Purple Rain component registry.
-
-## Install
-
-```bash
-npx shadcn@latest add https://kit.scottelling.com/r/button.json
-```
 
 ## Develop
 
@@ -38,7 +35,7 @@ npm run registry:build
 npm run dev
 ```
 
-Open `http://localhost:3000` for the registry product page and `http://localhost:3000/demo` for the Purple Rain versus Origin UI comparison.
+Open `http://localhost:3000/kit` for Purple Rain, `http://localhost:3000/kit/jade` for JADE, and `http://localhost:3000/kit/jade/compare` for the matched-product comparison.
 
 ## Verify
 
@@ -46,4 +43,4 @@ Open `http://localhost:3000` for the registry product page and `http://localhost
 npm run check
 ```
 
-The registry source lives in `registry/purple-rain/`; generated install payloads live in `public/r/`.
+The counted inventory and shared capability contract keep both visual systems aligned while their palettes, shapes, depth, and motion remain distinct.

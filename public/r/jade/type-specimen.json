@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "type-specimen",
+  "title": "JADE Type Specimen",
+  "description": "See how Type Specimen shapes every screen.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/jade/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/type-specimen.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type TypeSpecimenProps = React.ComponentPropsWithoutRef<\"div\">\n\nexport function TypeSpecimen({ children, className, ...props }: TypeSpecimenProps) {\n  if (children !== undefined) {\n    return (<div data-slot=\"type-specimen\" className={cn(\"min-w-0\", className)} {...props}>{children}</div>)\n  }\n\n  return (\n    <div data-slot=\"type-specimen\" className={cn(\"grid gap-2\", className)} {...props}><strong className=\"text-6xl font-bold tracking-[-0.06em]\">Aa</strong><span className=\"text-sm text-muted-foreground\">Clear first. Beautiful second.</span></div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

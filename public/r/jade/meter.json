@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "meter",
+  "title": "JADE Meter",
+  "description": "Meter collects a choice without hiding its state.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/jade/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/meter.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type MeterProps = React.ComponentPropsWithoutRef<\"label\">\n\nexport function Meter({ children, className, ...props }: MeterProps) {\n  if (children !== undefined) {\n    return (<label data-slot=\"meter\" className={cn(\"grid min-w-0 gap-2\", className)} {...props}>{children}</label>)\n  }\n\n  return (\n    <label data-slot=\"meter\" className={cn(\"grid gap-3 text-sm font-semibold\", className)} {...props}>Meter<input type=\"range\" min=\"0\" max=\"100\" defaultValue=\"64\" className=\"h-11 w-full accent-primary\" /><span className=\"font-normal text-muted-foreground\">64 of 100</span></label>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

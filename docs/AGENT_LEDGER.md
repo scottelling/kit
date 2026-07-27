@@ -1,5 +1,19 @@
 # Agent Ledger
 
+## 2026-07-26 — Purple Rain and JADE production parity foundation
+
+- Agent: Codex
+- Scope: turn the first real site-swap test into a shared production standard instead of tailoring either kit to one product
+- Shared contract: added one enforced capability definition covering semantic OKLCH foundations, complete interaction states, 44px controls, light/dark, RTL, reduced motion, responsive proof, public distribution, and downstream installation
+- Production patterns: added ten composable application pieces for the shell, workspace tree, viewer, editor toolbar, task board, task rail, status bar, mobile navigation, terminal, and document surface
+- Purple Rain: expanded from 128 to 138 installable pieces while preserving its Studio 2.0 visual authority and automatic token delivery
+- JADE: promoted from a bounded visual pilot to an equal 138-piece public registry with its own schema-valid token item, exact tactile light/dark planes, solid overlays, mint decision signal, and shared production component behavior
+- Showrooms: `/kit` and `/kit/jade` now expose the same complete tactile inventory; the original synchronized comparison moved intact to `/kit/jade/compare`
+- Distribution proof: both registries validated and built; fresh outside apps received the same application shell plus the correct Purple Rain or JADE foundations automatically; both consumer production builds passed
+- Quality proof: shared contract verifier, dual registry verifier, ESLint, TypeScript, and the complete Next production build pass
+- Cabinet boundary: no Cabinet product source changed during this kit upgrade; its protected preparation remains a separate approval batch
+- Open loop: deploy both public registries, repeat JADE from its live URL, then begin the approved Cabinet compatibility layer
+
 ## 2026-07-25 — JADE clean-room intake pilot
 
 - Agent: Codex

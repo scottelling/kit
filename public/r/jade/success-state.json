@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "success-state",
+  "title": "JADE Success State",
+  "description": "Success State makes the current state visible at a glance.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/jade/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/success-state.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type SuccessStateProps = React.ComponentPropsWithoutRef<\"section\">\n\nexport function SuccessState({ children, className, ...props }: SuccessStateProps) {\n  if (children !== undefined) {\n    return (<section data-slot=\"success-state\" className={cn(\"min-w-0 rounded-[var(--radius-card)] bg-card text-card-foreground\", className)} {...props}>{children}</section>)\n  }\n\n  return (\n    <section data-slot=\"success-state\" role=\"status\" className={cn(\"grid justify-items-start gap-2\", className)} {...props}><strong>Changes saved</strong><p className=\"text-sm text-muted-foreground\">Everything is up to date.</p></section>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

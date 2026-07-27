@@ -11,16 +11,19 @@ import { ComponentPreview, type LibraryItem } from "./component-preview"
 
 type KitExperienceProps = {
   library: LibraryItem[]
+  system?: "purple-rain" | "jade"
 }
 
 const familyOrder = ["Foundations", "Actions", "Forms", "Navigation", "Overlays", "Feedback", "Data", "Patterns"]
 
-export function KitExperience({ library }: KitExperienceProps) {
+export function KitExperience({ library, system = "purple-rain" }: KitExperienceProps) {
   const [dark, setDark] = useState(false)
   const [query, setQuery] = useState("")
   const [family, setFamily] = useState("All")
   const [selected, setSelected] = useState<LibraryItem | null>(null)
   const dialogRef = useRef<HTMLDialogElement>(null)
+  const isJade = system === "jade"
+  const systemName = isJade ? "JADE" : "Purple Rain"
 
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase()
@@ -71,23 +74,24 @@ export function KitExperience({ library }: KitExperienceProps) {
   }, [])
 
   return (
-    <div className={`kit-shell${dark ? " dark" : ""}`}>
+    <div className={`kit-shell${isJade ? " jade-library" : ""}${dark ? " dark" : ""}`}>
       <SiteHeader />
       <main className="kit-main">
         <nav className="kit-worlds" aria-label="Choose a visual system">
           <span>Visual systems</span>
           <div>
-            <Link aria-current="page" href="/kit">Purple Rain <small>128 pieces</small></Link>
-            <Link href="/kit/jade">JADE <small>Pilot</small></Link>
+            <Link aria-current={!isJade ? "page" : undefined} href="/kit">Purple Rain <small>{library.length} pieces</small></Link>
+            <Link aria-current={isJade ? "page" : undefined} href="/kit/jade">JADE <small>{library.length} pieces</small></Link>
           </div>
         </nav>
         <section className="kit-index-intro" aria-labelledby="kit-title">
           <div className="kit-index-intro__copy">
-            <h1 id="kit-title">The whole Purple Rain kit.</h1>
-            <p>Every piece is here. Find one by name, choose a family, then touch it before you use it.</p>
+            <h1 id="kit-title">The whole {systemName} kit.</h1>
+            <p>{isJade ? "Raised, seated, and sunken surfaces now cover the whole product—not only a visual pilot." : "Every piece is here. Find one by name, choose a family, then touch it before you use it."}</p>
+            {isJade ? <Link className="kit-compare-link" href="/kit/jade/compare">See JADE beside Purple Rain</Link> : null}
           </div>
-          <div className="kit-count" aria-label="128 pieces in 8 families">
-            <strong>128</strong>
+          <div className="kit-count" aria-label={`${library.length} pieces in 8 families`}>
+            <strong>{library.length}</strong>
             <span>pieces</span>
             <i aria-hidden="true" />
             <b>8 families</b>
@@ -127,7 +131,7 @@ export function KitExperience({ library }: KitExperienceProps) {
                   const wide = item.category === "Patterns" || (item.category === "Data" && index % 5 === 0) || (item.category === "Overlays" && index % 4 === 0)
                   return (
                     <article className={`kit-tile${wide ? " kit-tile--wide" : ""}`} id={item.name} key={item.name}>
-                      <div className="kit-tile__sample"><ComponentPreview item={item} /></div>
+                      <div className="kit-tile__sample"><ComponentPreview item={item} system={system} /></div>
                       <div className="kit-tile__caption">
                         <div><h3>{item.title}</h3><p>{item.description}</p></div>
                         <button type="button" onClick={() => openPreview(item)}>Open preview</button>
@@ -142,7 +146,7 @@ export function KitExperience({ library }: KitExperienceProps) {
             <section className="kit-no-results">
               <strong>No pieces matched “{query}”.</strong>
               <p>Try a shorter name, or return to the full kit.</p>
-              <button type="button" onClick={() => { setQuery(""); setFamily("All") }}>Show all 128 pieces</button>
+              <button type="button" onClick={() => { setQuery(""); setFamily("All") }}>Show all {library.length} pieces</button>
             </section>
           ) : null}
         </div>
@@ -160,7 +164,7 @@ export function KitExperience({ library }: KitExperienceProps) {
               <div><span>{selected.category}</span><h2>{selected.title}</h2><p>{selected.description}</p></div>
               <button type="button" onClick={closePreview}>Close</button>
             </header>
-            <div className="kit-preview-stage"><ComponentPreview item={selected} expanded /></div>
+            <div className="kit-preview-stage"><ComponentPreview item={selected} expanded system={system} /></div>
             <footer><span>Light and dark ready</span><button type="button" onClick={() => setDark((value) => !value)}>Switch to {dark ? "light" : "dark"}</button></footer>
           </div>
         ) : null}

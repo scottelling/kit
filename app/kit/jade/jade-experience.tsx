@@ -319,8 +319,9 @@ export function JadeExperience() {
         <nav className="kit-worlds jade-worlds" aria-label="Choose a visual system">
           <span>Visual systems</span>
           <div>
-            <Link href="/kit">Purple Rain <small>128 pieces</small></Link>
-            <Link aria-current="page" href="/kit/jade">JADE <small>Pilot</small></Link>
+            <Link href="/kit">Purple Rain <small>138 pieces</small></Link>
+            <Link href="/kit/jade">JADE <small>138 pieces</small></Link>
+            <Link aria-current="page" href="/kit/jade/compare">Comparison <small>Live</small></Link>
           </div>
         </nav>
 

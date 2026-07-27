@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs",
+  "title": "JADE Tabs",
+  "description": "Tabs keeps place and direction easy to scan.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/jade/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/tabs.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type TabsProps = React.ComponentPropsWithoutRef<\"nav\">\n\nexport function Tabs({ children, className, ...props }: TabsProps) {\n  const [active, setActive] = React.useState(\"Overview\")\n  if (children !== undefined) {\n    return (<nav data-slot=\"tabs\" className={cn(\"flex min-w-0 flex-wrap items-center gap-2\", className)} {...props}>{children}</nav>)\n  }\n\n  return (\n    <nav data-slot=\"tabs\" aria-label=\"Tabs\" className={cn(\"flex flex-wrap gap-1\", className)} {...props}>{[\"Overview\", \"Details\", \"Notes\"].map((label) => <button key={label} type=\"button\" onClick={() => setActive(label)} aria-current={active === label ? \"page\" : undefined} className=\"min-h-11 rounded-[var(--radius-control)] px-3 text-sm font-semibold aria-[current=page]:bg-primary aria-[current=page]:text-primary-foreground\">{label}</button>)}</nav>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -17,9 +17,12 @@ visible and tactile in public, reusable by agents, and installable behind the sc
 - Origin UI comparison uses the verified legacy namespace `@originui` mapped to its maintained source registry because it is no longer present in the current built-in directory index.
 - The public registry is unauthenticated in v1.
 - The human-facing site is a plain-language showroom. Commands, source links, file formats, and registry language stay off the public pages.
-- `/kit` is the canonical visual inventory: 128 installable pieces across Foundations, Actions, Forms, Navigation, Overlays, Feedback, Data, and Patterns, all live in light and dark.
-- `/kit/jade` is the first clean-room visual-system intake pilot. It preserves JADE's owned tactile DNA while using Kit's product structure, accessibility, responsive rules, and proof standards; Studio's implementation and governance do not travel with it.
-- `lib/purple-rain-library.json` is the counted public inventory; `scripts/generate-library.mjs` regenerates the matching registry source and entries so the showroom and delivery system cannot drift apart.
+- `/kit` is the canonical Purple Rain visual inventory: 138 installable pieces across Foundations, Actions, Forms, Navigation, Overlays, Feedback, Data, and Patterns, all live in light and dark.
+- `/kit/jade` is the complete JADE visual inventory with the same 138-piece production contract and its own OKLCH light/dark foundations. It preserves JADE's owned tactile DNA while using Kit's product structure, accessibility, responsive rules, and proof standards; Studio's implementation and governance do not travel with it.
+- `/kit/jade/compare` preserves the original synchronized JADE and Purple Rain launch-review test.
+- `lib/kit-capability-contract.json` is the shared release contract. Both systems must carry the same state coverage, responsive range, accessibility requirements, and production application patterns before either can claim broader capability.
+- `registry.json` publishes Purple Rain under `/r/`; `registry/jade/registry.json` publishes JADE under `/r/jade/`. Both carry their own tokens automatically with every installed piece.
+- `lib/purple-rain-library.json` is the counted shared inventory; `scripts/generate-library.mjs` and `scripts/generate-jade-registry.mjs` regenerate both registries so the showrooms and delivery systems cannot drift apart.
 - The global finder accepts ordinary phrases and takes visitors directly to any matching family or individual piece.
 - `/demo` keeps Purple Rain and Origin on the same task, but asks visitors to judge the felt decision path rather than implementation details.
 - `/studio` is the complete system configurator. It joins a brief, direction, type, color, motion, text treatment, brand tools, template, skills, and specialist team, then opens the result directly in saved Build Mode.

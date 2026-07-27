@@ -58,6 +58,18 @@
   --pr-standard: 180ms;
   --pr-ease: cubic-bezier(0.23, 1, 0.32, 1);
 
+  --kit-control-height: 44px;
+  --kit-compact-size: 12px;
+  --kit-body-size: 15px;
+  --kit-heading-size: 38px;
+  --kit-reading-measure: 72ch;
+  --kit-leading: 1.5;
+  --kit-space-base: 12px;
+  --kit-space-section: 32px;
+  --kit-fast: 120ms;
+  --kit-standard: 180ms;
+  --kit-ease: cubic-bezier(0.23, 1, 0.32, 1);
+
   --space-3xs: 0.125rem;
   --space-2xs: 0.25rem;
   --space-xs: 0.5rem;
@@ -150,6 +162,7 @@
 
   --shadow-panel: 0 16px 32px -26px oklch(0.12 0.02 309 / 0.34), inset 0 1px 0 oklch(1 0.006 313 / 0.78);
   --shadow-control: 0 5px 12px -10px oklch(0.12 0.02 309 / 0.3), inset 0 1px 0 oklch(1 0.006 313 / 0.72);
+  --shadow-inset: inset 0 2px 5px oklch(0.12 0.02 309 / 0.16), inset 0 -1px 0 oklch(1 0.006 313 / 0.62);
 }
 
 .dark {
@@ -195,4 +208,5 @@
   --sidebar-ring: oklch(0.7756 0.1104 304.73);
   --shadow-panel: 0 16px 32px -26px oklch(0.04 0.01 309 / 0.96), inset 0 1px 0 oklch(0.98 0.01 313 / 0.06);
   --shadow-control: 0 5px 12px -10px oklch(0.04 0.01 309 / 0.96), inset 0 1px 0 oklch(0.98 0.01 313 / 0.07);
+  --shadow-inset: inset 0 2px 5px oklch(0.04 0.01 309 / 0.9), inset 0 -1px 0 oklch(0.98 0.01 313 / 0.05);
 }

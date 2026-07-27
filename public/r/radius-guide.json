@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "registry/purple-rain/library/radius-guide.tsx",
-      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type RadiusGuideProps = React.ComponentPropsWithoutRef<\"div\">\n\nexport function RadiusGuide({ className, ...props }: RadiusGuideProps) {\n  return (\n    <div data-slot=\"radius-guide\" className={cn(\"flex flex-wrap gap-4\", className)} {...props}><span className=\"size-16 rounded-[var(--radius-control)] bg-muted\" /><span className=\"size-16 rounded-[var(--radius-card)] bg-muted\" /><span className=\"size-16 rounded-[var(--radius-sheet)] bg-muted\" /></div>\n  )\n}\n",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type RadiusGuideProps = React.ComponentPropsWithoutRef<\"div\">\n\nexport function RadiusGuide({ children, className, ...props }: RadiusGuideProps) {\n  if (children !== undefined) {\n    return (<div data-slot=\"radius-guide\" className={cn(\"min-w-0\", className)} {...props}>{children}</div>)\n  }\n\n  return (\n    <div data-slot=\"radius-guide\" className={cn(\"flex flex-wrap gap-4\", className)} {...props}><span className=\"size-16 rounded-[var(--radius-control)] bg-muted\" /><span className=\"size-16 rounded-[var(--radius-card)] bg-muted\" /><span className=\"size-16 rounded-[var(--radius-sheet)] bg-muted\" /></div>\n  )\n}\n",
       "type": "registry:ui"
     }
   ],

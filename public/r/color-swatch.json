@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "registry/purple-rain/library/color-swatch.tsx",
-      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type ColorSwatchProps = React.ComponentPropsWithoutRef<\"div\">\n\nexport function ColorSwatch({ className, ...props }: ColorSwatchProps) {\n  return (\n    <div data-slot=\"color-swatch\" className={cn(\"grid grid-cols-5 gap-2\", className)} {...props}>{[\"bg-background\", \"bg-card\", \"bg-primary\", \"bg-positive\", \"bg-destructive\"].map((tone) => <span key={tone} className={cn(\"min-h-20 rounded-[var(--radius-control)]\", tone)} />)}</div>\n  )\n}\n",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type ColorSwatchProps = React.ComponentPropsWithoutRef<\"div\">\n\nexport function ColorSwatch({ children, className, ...props }: ColorSwatchProps) {\n  if (children !== undefined) {\n    return (<div data-slot=\"color-swatch\" className={cn(\"min-w-0\", className)} {...props}>{children}</div>)\n  }\n\n  return (\n    <div data-slot=\"color-swatch\" className={cn(\"grid grid-cols-5 gap-2\", className)} {...props}>{[\"bg-background\", \"bg-card\", \"bg-primary\", \"bg-positive\", \"bg-destructive\"].map((tone) => <span key={tone} className={cn(\"min-h-20 rounded-[var(--radius-control)]\", tone)} />)}</div>\n  )\n}\n",
       "type": "registry:ui"
     }
   ],

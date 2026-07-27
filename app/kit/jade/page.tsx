@@ -1,13 +1,17 @@
 import type { Metadata } from "next"
 
-import { JadeExperience } from "./jade-experience"
-import "./jade.css"
+import library from "@/lib/purple-rain-library.json"
+
+import { type LibraryItem } from "../component-preview"
+import { KitExperience } from "../kit-experience"
+import "../kit.css"
+import "./jade-library.css"
 
 export const metadata: Metadata = {
-  title: "Explore JADE",
-  description: "A hands-on pilot of JADE, rebuilt inside the Purple Rain design studio.",
+  title: "Explore the complete JADE kit",
+  description: "A hands-on showroom for every production piece in the JADE interface system.",
 }
 
 export default function JadePage() {
-  return <JadeExperience />
+  return <KitExperience library={library as LibraryItem[]} system="jade" />
 }

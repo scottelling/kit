@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar",
+  "title": "JADE Avatar",
+  "description": "Avatar turns information into a readable, useful object.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/jade/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/avatar.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type AvatarProps = React.ComponentPropsWithoutRef<\"div\">\n\nexport function Avatar({ children, className, ...props }: AvatarProps) {\n  if (children !== undefined) {\n    return (<div data-slot=\"avatar\" className={cn(\"min-w-0\", className)} {...props}>{children}</div>)\n  }\n\n  return (\n    <div data-slot=\"avatar\" className={cn(\"flex -space-x-3\", className)} {...props}>{[\"MR\", \"ST\", \"EO\"].slice(0, 1).map((person) => <span key={person} className=\"grid size-12 place-items-center rounded-full border-2 border-background bg-primary text-sm font-bold text-primary-foreground\">{person}</span>)}</div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

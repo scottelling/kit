@@ -4,7 +4,19 @@ import { fileURLToPath } from "node:url"
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..")
 const tokenUrl = "https://kit.scottelling.com/r/tokens.json"
-const coreNames = new Set(["button", "card", "input", "badge", "dialog"])
+const applicationItems = new Map([
+  ["application-shell", "registry/purple-rain/application/application-shell.tsx"],
+  ["workspace-tree", "registry/purple-rain/application/workspace-tree.tsx"],
+  ["viewer-shell", "registry/purple-rain/application/viewer-shell.tsx"],
+  ["editor-toolbar", "registry/purple-rain/application/editor-toolbar.tsx"],
+  ["task-board", "registry/purple-rain/application/task-board.tsx"],
+  ["task-rail", "registry/purple-rain/application/task-rail.tsx"],
+  ["status-bar", "registry/purple-rain/application/status-bar.tsx"],
+  ["mobile-app-nav", "registry/purple-rain/application/mobile-app-nav.tsx"],
+  ["terminal-surface", "registry/purple-rain/application/terminal-surface.tsx"],
+  ["document-surface", "registry/purple-rain/application/document-surface.tsx"],
+])
+const coreNames = new Set(["button", "card", "input", "badge", "dialog", ...applicationItems.keys()])
 
 const families = [
   {
@@ -94,6 +106,11 @@ const families = [
       ["feedback-form", "feedback-form"], ["checkout-form", "checkout"], ["cart-summary", "cart"],
       ["order-summary", "order"], ["pricing-card", "pricing-card"], ["pricing-table", "pricing-table"],
       ["filter-bar", "filter-bar"], ["search-results", "results"], ["notification-center", "notifications"],
+      ["application-shell", "application-shell"], ["workspace-tree", "workspace-tree"],
+      ["viewer-shell", "viewer-shell"], ["editor-toolbar", "editor-toolbar"],
+      ["task-board", "task-board"], ["task-rail", "task-rail"],
+      ["status-bar", "status-bar"], ["mobile-app-nav", "mobile-app-nav"],
+      ["terminal-surface", "terminal-surface"], ["document-surface", "document-surface"],
     ],
   },
 ]
@@ -117,7 +134,7 @@ const library = families.flatMap((family) => family.items.map(([name, preview]) 
   return { name, title, category: family.name, description: descriptionFor(family, title), preview }
 }))
 
-if (library.length !== 128) throw new Error(`Expected 128 components, found ${library.length}.`)
+if (library.length !== 138) throw new Error(`Expected 138 components, found ${library.length}.`)
 if (new Set(library.map((item) => item.name)).size !== library.length) throw new Error("Component names must be unique.")
 
 const base = "rounded-[var(--radius-control)] border border-border bg-card text-card-foreground shadow-[var(--shadow-control)]"
@@ -222,12 +239,28 @@ function sourceFor(item) {
     else element = "section"
   }
   if (item.category === "Patterns") element = "section"
+  const composableClass = item.category === "Actions"
+    ? "inline-flex min-h-11 items-center justify-center rounded-[var(--radius-control)] px-4 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-ring"
+    : item.category === "Forms"
+      ? "grid min-w-0 gap-2"
+      : item.category === "Navigation"
+        ? "flex min-w-0 flex-wrap items-center gap-2"
+        : item.category === "Overlays"
+          ? "rounded-[var(--radius-card)] bg-popover text-popover-foreground shadow-[var(--shadow-panel)]"
+          : item.category === "Feedback"
+            ? "min-w-0 rounded-[var(--radius-card)] bg-card text-card-foreground"
+            : item.category === "Data"
+              ? "min-w-0"
+              : item.category === "Patterns"
+                ? "min-w-0 rounded-[var(--radius-card)] bg-card text-card-foreground"
+                : "min-w-0"
+  const childElement = `<${element}${element === "button" ? ' type="button"' : ""} data-slot="${item.name}" className={cn("${composableClass}", className)} {...props}>{children}</${element}>`
   const hooks = [
     usesPressed ? '  const [pressed, setPressed] = React.useState(false)' : "",
     usesActive ? '  const [active, setActive] = React.useState("Overview")' : "",
     usesValue ? '  const [value, setValue] = React.useState("3")' : "",
   ].filter(Boolean).join("\n")
-  return `${interactive ? '"use client"\n\n' : ""}import * as React from "react"\n\nimport { cn } from "@/lib/utils"\n\nexport type ${component}Props = React.ComponentPropsWithoutRef<"${element}">\n\nexport function ${component}({ className, ...props }: ${component}Props) {${hooks ? `\n${hooks}` : ""}\n  return (\n    ${sourceBody(item)}\n  )\n}\n`
+  return `${interactive ? '"use client"\n\n' : ""}import * as React from "react"\n\nimport { cn } from "@/lib/utils"\n\nexport type ${component}Props = React.ComponentPropsWithoutRef<"${element}">\n\nexport function ${component}({ children, className, ...props }: ${component}Props) {${hooks ? `\n${hooks}` : ""}\n  if (children !== undefined) {\n    return (${childElement})\n  }\n\n  return (\n    ${sourceBody(item)}\n  )\n}\n`
 }
 
 await mkdir(path.join(root, "lib"), { recursive: true })
@@ -247,6 +280,17 @@ const coreItems = new Map(registry.items.filter((item) => coreNames.has(item.nam
 registry.items = [tokenItem, ...library.map((item) => {
   const existing = coreItems.get(item.name)
   if (existing) return { ...existing, title: `Purple Rain ${item.title}` }
+  const applicationPath = applicationItems.get(item.name)
+  if (applicationPath) {
+    return {
+      name: item.name,
+      type: "registry:ui",
+      title: `Purple Rain ${item.title}`,
+      description: item.description,
+      registryDependencies: [tokenUrl],
+      files: [{ path: applicationPath, type: "registry:ui" }],
+    }
+  }
   return {
     name: item.name,
     type: "registry:ui",
@@ -258,4 +302,4 @@ registry.items = [tokenItem, ...library.map((item) => {
 })]
 
 await writeFile(registryPath, `${JSON.stringify(registry, null, 2)}\n`)
-console.log(`Generated ${library.length} Purple Rain components across ${families.length} families.`)
+console.log(`Generated ${library.length} shared Kit components across ${families.length} families.`)

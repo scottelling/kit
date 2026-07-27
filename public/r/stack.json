@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "registry/purple-rain/library/stack.tsx",
-      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type StackProps = React.ComponentPropsWithoutRef<\"div\">\n\nexport function Stack({ className, ...props }: StackProps) {\n  return (\n    <div data-slot=\"stack\" className={cn(\"grid gap-3\", className)} {...props}>{[1,2,3].map((row) => <span key={row} className=\"h-10 rounded-[var(--radius-control)] bg-muted\" />)}</div>\n  )\n}\n",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type StackProps = React.ComponentPropsWithoutRef<\"div\">\n\nexport function Stack({ children, className, ...props }: StackProps) {\n  if (children !== undefined) {\n    return (<div data-slot=\"stack\" className={cn(\"min-w-0\", className)} {...props}>{children}</div>)\n  }\n\n  return (\n    <div data-slot=\"stack\" className={cn(\"grid gap-3\", className)} {...props}>{[1,2,3].map((row) => <span key={row} className=\"h-10 rounded-[var(--radius-control)] bg-muted\" />)}</div>\n  )\n}\n",
       "type": "registry:ui"
     }
   ],

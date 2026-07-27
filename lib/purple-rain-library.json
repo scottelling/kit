@@ -894,5 +894,75 @@
     "category": "Patterns",
     "description": "Notification Center assembles related pieces into a complete task.",
     "preview": "notifications"
+  },
+  {
+    "name": "application-shell",
+    "title": "Application Shell",
+    "category": "Patterns",
+    "description": "Application Shell assembles related pieces into a complete task.",
+    "preview": "application-shell"
+  },
+  {
+    "name": "workspace-tree",
+    "title": "Workspace Tree",
+    "category": "Patterns",
+    "description": "Workspace Tree assembles related pieces into a complete task.",
+    "preview": "workspace-tree"
+  },
+  {
+    "name": "viewer-shell",
+    "title": "Viewer Shell",
+    "category": "Patterns",
+    "description": "Viewer Shell assembles related pieces into a complete task.",
+    "preview": "viewer-shell"
+  },
+  {
+    "name": "editor-toolbar",
+    "title": "Editor Toolbar",
+    "category": "Patterns",
+    "description": "Editor Toolbar assembles related pieces into a complete task.",
+    "preview": "editor-toolbar"
+  },
+  {
+    "name": "task-board",
+    "title": "Task Board",
+    "category": "Patterns",
+    "description": "Task Board assembles related pieces into a complete task.",
+    "preview": "task-board"
+  },
+  {
+    "name": "task-rail",
+    "title": "Task Rail",
+    "category": "Patterns",
+    "description": "Task Rail assembles related pieces into a complete task.",
+    "preview": "task-rail"
+  },
+  {
+    "name": "status-bar",
+    "title": "Status Bar",
+    "category": "Patterns",
+    "description": "Status Bar assembles related pieces into a complete task.",
+    "preview": "status-bar"
+  },
+  {
+    "name": "mobile-app-nav",
+    "title": "Mobile App Nav",
+    "category": "Patterns",
+    "description": "Mobile App Nav assembles related pieces into a complete task.",
+    "preview": "mobile-app-nav"
+  },
+  {
+    "name": "terminal-surface",
+    "title": "Terminal Surface",
+    "category": "Patterns",
+    "description": "Terminal Surface assembles related pieces into a complete task.",
+    "preview": "terminal-surface"
+  },
+  {
+    "name": "document-surface",
+    "title": "Document Surface",
+    "category": "Patterns",
+    "description": "Document Surface assembles related pieces into a complete task.",
+    "preview": "document-surface"
   }
 ]

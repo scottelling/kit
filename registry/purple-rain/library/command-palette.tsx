@@ -4,7 +4,11 @@ import { cn } from "@/lib/utils"
 
 export type CommandPaletteProps = React.ComponentPropsWithoutRef<"details">
 
-export function CommandPalette({ className, ...props }: CommandPaletteProps) {
+export function CommandPalette({ children, className, ...props }: CommandPaletteProps) {
+  if (children !== undefined) {
+    return (<details data-slot="command-palette" className={cn("rounded-[var(--radius-card)] bg-popover text-popover-foreground shadow-[var(--shadow-panel)]", className)} {...props}>{children}</details>)
+  }
+
   return (
     <details data-slot="command-palette" className={cn("relative inline-block", className)} {...props}><summary className="rounded-[var(--radius-control)] border border-border bg-card text-card-foreground shadow-[var(--shadow-control)] min-h-11 px-4 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background cursor-pointer list-none">Open Command Palette</summary><div className="absolute left-0 top-full z-10 mt-2 min-w-56 rounded-[var(--radius-card)] border border-border bg-popover p-4 text-sm text-popover-foreground shadow-[var(--shadow-panel)]"><strong>Command Palette</strong><p className="mt-2 text-muted-foreground">A focused surface that keeps the current task clear.</p></div></details>
   )
