@@ -12,7 +12,10 @@
 - Distribution proof: both registries validated and built; fresh outside apps received the same application shell plus the correct Purple Rain or JADE foundations automatically; both consumer production builds passed
 - Quality proof: shared contract verifier, dual registry verifier, ESLint, TypeScript, and the complete Next production build pass
 - Cabinet boundary: no Cabinet product source changed during this kit upgrade; its protected preparation remains a separate approval batch
-- Open loop: deploy both public registries, repeat JADE from its live URL, then begin the approved Cabinet compatibility layer
+- Live proof: `/kit`, `/kit/jade`, `/kit/jade/compare`, `/r/application-shell.json`, `/r/jade/application-shell.json`, `/r/jade/tokens.json`, and `/r/jade/registry.json` return `200`
+- Live downstream proof: a fresh outside Next app installed JADE `application-shell` from `https://kit.scottelling.com/r/jade/application-shell.json`; the component landed, JADE light/dark foundations and shared control/depth variables merged into `globals.css`, and the consumer production build passed
+- Deployment: Vercel production `kit-ncza1f0j1-scottelling-1903s-projects.vercel.app`, aliased to `kit.scottelling.com`; product commits `62df3a2` and `d29c28f` pushed to `scottelling/kit`
+- Open loop: begin the protected Cabinet compatibility layer after its exact preparation batch is approved
 
 ## 2026-07-25 — JADE clean-room intake pilot
 
