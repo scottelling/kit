@@ -1,5 +1,21 @@
 # Agent Ledger
 
+## 2026-08-01 — Shadow elevation foundation
+
+- Agent: Codex
+- Scope: inspect Smooth Shadow at its live source, recover the useful foundation without importing its demo or application structure, and add it to Kit as a compatible elevation layer
+- Source boundary: rebuilt from the MIT-licensed source at `flornkm/shadow-plugin` commit `fa08d31819aac37b044564ffc77dfe9c91a435ec`; preserved the six inspected stacks, exact light/dark hairlines, independent shadow and edge tinting, author attribution, and license delivery
+- Product shape: Shadow is explicitly a focused foundation kit with twelve elevation recipes, not a third 138-component visual identity; Purple Rain and JADE keep ownership of color, type, spacing, shape, and interaction behavior
+- Showroom: `/kit/shadow` provides light/dark, six depths, edge on/off, separate shadow and edge colors, a double-edge comparison, a full depth ladder, and working card, menu, dialog, toast, Purple Rain, and JADE surfaces
+- Distribution: schema-valid public `smooth-shadow` style under `/r/shadow/`; one install carries all six depths, ringless and integrated-edge forms, automatic light/dark hairlines, tint controls, usage guidance, and the MIT notice with zero new project dependencies
+- Studio ability: added the independently forward-tested Smooth Elevation skill; it preserves focus and semantic state boundaries, uses the smallest justified depth, and removes only redundant persistent double edges
+- Responsive and interaction proof: local and live checks at 320, 375, 414, 768, and 1280 pixels produced zero horizontal overflow; theme, depth, edge, color, menu, dialog, and notice behavior passed; live browser console is clean
+- Build proof: all 279 visual-system registry items plus Shadow validate and build; shared system, Shadow, and eight-skill Studio verifiers, ESLint, TypeScript, local production build, Vercel production build, and endpoint checks pass
+- Live downstream proof: a fresh outside Next app installed Shadow from `https://kit.scottelling.com/r/shadow/smooth-shadow.json`; installation created `LICENSE-smooth-shadow.txt`, added 96 lines to `app/globals.css`, changed no package or lock file, compiled a tinted integrated edge, and passed a clean production build
+- Live proof: `/kit/shadow`, `/r/shadow/smooth-shadow.json`, `/kit`, `/kit/jade`, and `/r/button.json` return `200`
+- Deployment: Vercel production `dpl_3jjot7Q18eGykJd5BGH14pWKuycU`, aliased to `kit.scottelling.com`; product commit `ca995e8` pushed to `scottelling/kit`
+- Open loops: none
+
 ## 2026-07-26 — Purple Rain and JADE production parity foundation
 
 - Agent: Codex
