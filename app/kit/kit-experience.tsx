@@ -77,11 +77,12 @@ export function KitExperience({ library, system = "purple-rain" }: KitExperience
     <div className={`kit-shell${isJade ? " jade-library" : ""}${dark ? " dark" : ""}`}>
       <SiteHeader />
       <main className="kit-main">
-        <nav className="kit-worlds" aria-label="Choose a visual system">
-          <span>Visual systems</span>
+        <nav className="kit-worlds" aria-label="Choose a kit">
+          <span>Kits</span>
           <div>
             <Link aria-current={!isJade ? "page" : undefined} href="/kit">Purple Rain <small>{library.length} pieces</small></Link>
             <Link aria-current={isJade ? "page" : undefined} href="/kit/jade">JADE <small>{library.length} pieces</small></Link>
+            <Link href="/kit/shadow">Shadow <small>12 elevations</small></Link>
           </div>
         </nav>
         <section className="kit-index-intro" aria-labelledby="kit-title">

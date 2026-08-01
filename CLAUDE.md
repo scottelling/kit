@@ -22,6 +22,7 @@ A public shadcn registry and comparison site that distributes Purple Rain tokens
 ## What Ships
 
 - Registry items: `tokens`, `button`, `card`, `input`, `badge`, `dialog`
+- Foundation kits: Shadow (`smooth-shadow`) under `/r/shadow/`
 - Static registry output: `public/r/*.json`
 - Product page: `/`
 - Side-by-side comparison: `/demo`
@@ -29,6 +30,8 @@ A public shadcn registry and comparison site that distributes Purple Rain tokens
 ## Design System
 
 Purple Rain is a focused product system: plum canvas, stepped aubergine surfaces, restrained orchid decision signals, seated controls, 44px targets, visible focus, and short property-specific motion. No glass, translucency, glow, or ethereal decoration.
+
+Shadow is a compatible elevation foundation, not a replacement visual identity. It supplies six stacked depths in ringless and integrated-hairline forms while preserving the active kit's color, type, spacing, and shape.
 
 ## Deploy
 

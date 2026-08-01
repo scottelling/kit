@@ -20,6 +20,8 @@ visible and tactile in public, reusable by agents, and installable behind the sc
 - `/kit` is the canonical Purple Rain visual inventory: 138 installable pieces across Foundations, Actions, Forms, Navigation, Overlays, Feedback, Data, and Patterns, all live in light and dark.
 - `/kit/jade` is the complete JADE visual inventory with the same 138-piece production contract and its own OKLCH light/dark foundations. It preserves JADE's owned tactile DNA while using Kit's product structure, accessibility, responsive rules, and proof standards; Studio's implementation and governance do not travel with it.
 - `/kit/jade/compare` preserves the original synchronized JADE and Purple Rain launch-review test.
+- `/kit/shadow` is the focused Shadow elevation kit: six inspected stacked depths, ringless and integrated-hairline treatments, independent shadow and edge tinting, automatic light/dark hairlines, real-surface touch tests, and an MIT-carrying public registry item under `/r/shadow/`.
+- Shadow is a foundation kit, not a third visual identity. It may strengthen Purple Rain, JADE, or another compatible system without replacing that system's palette, type, spacing, shape, or interaction rules.
 - `lib/kit-capability-contract.json` is the shared release contract. Both systems must carry the same state coverage, responsive range, accessibility requirements, and production application patterns before either can claim broader capability.
 - `registry.json` publishes Purple Rain under `/r/`; `registry/jade/registry.json` publishes JADE under `/r/jade/`. Both carry their own tokens automatically with every installed piece.
 - `lib/purple-rain-library.json` is the counted shared inventory; `scripts/generate-library.mjs` and `scripts/generate-jade-registry.mjs` regenerate both registries so the showrooms and delivery systems cannot drift apart.
@@ -31,8 +33,8 @@ visible and tactile in public, reusable by agents, and installable behind the sc
 - `/templates` carries eight complete project families and forty connected screens: launch, product, commerce, publication, portfolio, documentation, marketplace, and campaign.
 - `/labs` applies brand, type, color, text, and motion choices to the current saved project.
 - `/quality` exposes eighteen actual or inherited release checks and applies the approval mark automatically only when all eighteen pass.
-- `lib/studio-library.ts` is the counted Studio inventory: 109 tools across fonts (12), palettes (12), motion (16), text (12), brand (12), templates (16), prompts (16), skills (7), and agents (6).
-- `plugins/purple-rain-studio` packages seven validated abilities: Studio Director, Template Foundry, Creative Labs, Design & Ship, Brand System, Interface System, and Release Proof.
+- `lib/studio-library.ts` is the counted Studio inventory: 110 tools across fonts (12), palettes (12), motion (16), text (12), brand (12), templates (16), prompts (16), skills (8), and agents (6).
+- `plugins/purple-rain-studio` packages eight validated abilities: Studio Director, Template Foundry, Creative Labs, Design & Ship, Brand System, Interface System, Release Proof, and Smooth Elevation.
 - The personal `purple-rain-studio` Codex plugin is installed by default from the personal marketplace, so English requests can carry the same workflow outside this repository.
 - The public experience never claims to generate an arbitrary product in the browser. Build Mode assembles and preserves complete Purple Rain project systems; the reusable Codex plugin performs open-ended project execution.
 

@@ -316,11 +316,12 @@ export function JadeExperience() {
     <div className={`jade-pilot${dark ? " jade-pilot--dark" : ""}`}>
       <SiteHeader />
       <main className="jade-main">
-        <nav className="kit-worlds jade-worlds" aria-label="Choose a visual system">
-          <span>Visual systems</span>
+        <nav className="kit-worlds jade-worlds" aria-label="Choose a kit">
+          <span>Kits</span>
           <div>
             <Link href="/kit">Purple Rain <small>138 pieces</small></Link>
             <Link href="/kit/jade">JADE <small>138 pieces</small></Link>
+            <Link href="/kit/shadow">Shadow <small>12 elevations</small></Link>
             <Link aria-current="page" href="/kit/jade/compare">Comparison <small>Live</small></Link>
           </div>
         </nav>

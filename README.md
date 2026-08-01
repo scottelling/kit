@@ -1,6 +1,6 @@
 # kit
 
-The public design-engineering registry for Purple Rain and JADE.
+The public design-engineering registry for Purple Rain, JADE, and focused foundation kits.
 
 ```bash
 npx shadcn add https://kit.scottelling.com/r/button.json
@@ -9,6 +9,8 @@ npx shadcn add https://kit.scottelling.com/r/button.json
 Every component carries the `tokens` registry dependency, so Purple Rain’s OKLCH light and dark variables merge automatically.
 
 JADE exposes the same production component contract with its own tactile light and dark foundations under `https://kit.scottelling.com/r/jade/`.
+
+Shadow adds six exact stacked depths, integrated hairline edges, independent tinting, and an agent rule for elevated surfaces under `https://kit.scottelling.com/r/shadow/`. It is a foundation kit that strengthens Purple Rain or JADE without replacing either system.
 
 ## Local work
 
@@ -21,8 +23,9 @@ npm run check
 - Registry source: `registry/purple-rain/`
 - Registry manifest: `registry.json`
 - JADE registry manifest: `registry/jade/registry.json`
-- Built JSON: `public/r/` and `public/r/jade/`
-- Complete showrooms: `/kit` and `/kit/jade`
+- Shadow registry manifest: `registry/shadow/registry.json`
+- Built JSON: `public/r/`, `public/r/jade/`, and `public/r/shadow/`
+- Complete showrooms: `/kit`, `/kit/jade`, and `/kit/shadow`
 - Same-product comparison: `/kit/jade/compare`
 - Side-by-side demo: `/demo`
 - Production: `https://kit.scottelling.com`
@@ -35,7 +38,7 @@ npm run registry:build
 npm run dev
 ```
 
-Open `http://localhost:3000/kit` for Purple Rain, `http://localhost:3000/kit/jade` for JADE, and `http://localhost:3000/kit/jade/compare` for the matched-product comparison.
+Open `http://localhost:3000/kit` for Purple Rain, `http://localhost:3000/kit/jade` for JADE, `http://localhost:3000/kit/shadow` for Shadow, and `http://localhost:3000/kit/jade/compare` for the matched-product comparison.
 
 ## Verify
 

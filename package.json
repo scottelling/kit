@@ -8,12 +8,13 @@
     "start": "next start",
     "lint": "eslint",
     "library:generate": "node scripts/generate-library.mjs && node scripts/generate-jade-registry.mjs",
-    "registry:build": "npm run library:generate && shadcn build && shadcn build registry/jade/registry.json -o public/r/jade",
-    "registry:validate": "shadcn registry validate && shadcn registry validate registry/jade/registry.json",
+    "registry:build": "npm run library:generate && shadcn build && shadcn build registry/jade/registry.json -o public/r/jade && shadcn build registry/shadow/registry.json -o public/r/shadow",
+    "registry:validate": "shadcn registry validate && shadcn registry validate registry/jade/registry.json && shadcn registry validate registry/shadow/registry.json",
     "verify:registry": "node scripts/verify-registry.mjs",
+    "verify:shadow": "node scripts/verify-shadow.mjs",
     "systems:validate": "node scripts/verify-system-contract.mjs",
     "studio:validate": "node scripts/verify-studio.mjs",
-    "check": "npm run registry:validate && npm run registry:build && npm run verify:registry && npm run systems:validate && npm run studio:validate && npm run lint && next build"
+    "check": "npm run registry:validate && npm run registry:build && npm run verify:registry && npm run verify:shadow && npm run systems:validate && npm run studio:validate && npm run lint && next build"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",

@@ -2,6 +2,7 @@
   "version": "1.0.0",
   "purpose": "One production contract for every visual system distributed by Kit.",
   "systems": ["purple-rain", "jade"],
+  "foundation_kits": ["shadow"],
   "foundations": [
     "semantic color roles in OKLCH",
     "light and dark modes",

@@ -1,0 +1,990 @@
+/* Shadow intake · clean-room showroom · source values: flornkm/shadow-plugin @ fa08d318 · MIT */
+.shadow-shell {
+  --shadow-ring-default: rgba(0, 0, 0, 0.05);
+  --shadow-ink: oklch(0.16 0.018 305);
+  --shadow-ring-choice: var(--shadow-ring-default);
+  min-height: 100dvh;
+  overflow-x: clip;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.shadow-shell.dark {
+  --shadow-ring-default: rgba(255, 255, 255, 0.18);
+}
+
+.shadow-main {
+  width: min(100%, 106rem);
+  margin-inline: auto;
+  padding: clamp(var(--space-xl), 6vw, var(--space-3xl)) clamp(var(--space-md), 4vw, var(--space-2xl)) var(--space-4xl);
+}
+
+.shadow-worlds {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  padding-block: var(--space-md);
+  border-bottom: var(--rule-hair) solid var(--border);
+}
+
+.shadow-worlds > span {
+  color: var(--muted-foreground);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.shadow-worlds > div {
+  display: flex;
+  gap: var(--space-xs);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.shadow-worlds > div::-webkit-scrollbar {
+  display: none;
+}
+
+.shadow-worlds a {
+  min-height: var(--pr-control-height);
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: var(--space-xs);
+  padding-inline: var(--space-md);
+  border: var(--rule-hair) solid var(--border);
+  border-radius: var(--radius-round);
+  color: var(--muted-foreground);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.shadow-worlds a small {
+  color: inherit;
+  font-size: var(--text-xs);
+  font-weight: 500;
+}
+
+.shadow-worlds a[aria-current="page"] {
+  border-color: var(--foreground);
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.shadow-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: var(--space-2xl);
+  padding-block: clamp(var(--space-2xl), 8vw, 7rem);
+  border-bottom: var(--rule-hair) solid var(--border);
+}
+
+.shadow-hero__copy {
+  max-width: 70rem;
+}
+
+.shadow-hero__copy > span,
+.shadow-lab header span,
+.shadow-ladder > header span,
+.shadow-patterns > header span,
+.shadow-pairing > header span,
+.shadow-rule span,
+.shadow-dialog__panel > span {
+  color: var(--muted-foreground);
+  font-size: var(--text-xs);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.shadow-hero h1 {
+  max-width: 9ch;
+  margin: var(--space-md) 0 0;
+  font-size: clamp(3.8rem, 10vw, 9rem);
+  font-weight: 700;
+  line-height: 0.84;
+  letter-spacing: -0.075em;
+}
+
+.shadow-hero__copy > p {
+  max-width: 54rem;
+  margin: var(--space-xl) 0 0;
+  color: var(--muted-foreground);
+  font-size: clamp(var(--text-base), 1.8vw, var(--text-lg));
+  line-height: 1.6;
+}
+
+.shadow-hero__facts {
+  display: grid;
+  grid-template-columns: repeat(3, auto 1fr);
+  align-items: baseline;
+  gap: var(--space-xs) var(--space-sm);
+  width: fit-content;
+  margin-block-start: var(--space-2xl);
+  padding-block-start: var(--space-lg);
+  border-top: var(--rule-hair) solid var(--border);
+}
+
+.shadow-hero__facts strong {
+  font-size: var(--text-xl);
+  font-variant-numeric: tabular-nums;
+}
+
+.shadow-hero__facts span {
+  padding-inline-end: var(--space-lg);
+  color: var(--muted-foreground);
+  font-size: var(--text-sm);
+}
+
+.shadow-theme {
+  display: inline-flex;
+  gap: var(--space-2xs);
+  padding: var(--space-2xs);
+  border-radius: var(--radius-card);
+  background: var(--plane-2);
+}
+
+.shadow-theme button,
+.shadow-segments button,
+.shadow-switch,
+.shadow-swatches button,
+.shadow-ladder button,
+.shadow-patterns button,
+.shadow-pairing button,
+.shadow-dialog button {
+  min-height: var(--pr-control-height);
+  border: 0;
+  border-radius: var(--radius-control);
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.shadow-theme button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding-inline: var(--space-md);
+  background: transparent;
+  color: var(--muted-foreground);
+}
+
+.shadow-theme button[aria-pressed="true"] {
+  background: var(--card);
+  color: var(--card-foreground);
+  box-shadow: var(--shadow-control);
+}
+
+.shadow-theme svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.shadow-lab,
+.shadow-ladder,
+.shadow-patterns,
+.shadow-pairing {
+  padding-block: clamp(var(--space-2xl), 8vw, 7rem);
+  border-bottom: var(--rule-hair) solid var(--border);
+}
+
+.shadow-lab > header,
+.shadow-ladder > header,
+.shadow-patterns > header,
+.shadow-pairing > header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 34rem);
+  align-items: end;
+  gap: var(--space-xl);
+  margin-block-end: clamp(var(--space-2xl), 6vw, var(--space-4xl));
+}
+
+.shadow-lab h2,
+.shadow-ladder h2,
+.shadow-patterns h2,
+.shadow-pairing h2,
+.shadow-rule h2 {
+  max-width: 14ch;
+  margin: var(--space-sm) 0 0;
+  font-size: clamp(var(--text-2xl), 5vw, var(--text-display));
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.shadow-lab header p,
+.shadow-ladder header p,
+.shadow-pairing header p {
+  margin: 0;
+  color: var(--muted-foreground);
+  line-height: 1.6;
+}
+
+.shadow-lab__stage {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(var(--space-lg), 4vw, var(--space-3xl));
+  align-items: center;
+  min-height: 34rem;
+  padding: clamp(var(--space-xl), 6vw, var(--space-4xl));
+  border-radius: var(--radius-sheet);
+  background: var(--plane-1);
+}
+
+.shadow-before,
+.shadow-after {
+  display: grid;
+  width: min(100%, 25rem);
+  min-height: 18rem;
+  margin-inline: auto;
+  align-content: end;
+  gap: var(--space-xs);
+  padding: var(--space-xl);
+  border-radius: var(--radius-card);
+  background: var(--card);
+  color: var(--card-foreground);
+}
+
+.shadow-before {
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-stack);
+}
+
+.shadow-before > svg,
+.shadow-after > svg {
+  width: 2rem;
+  height: 2rem;
+  margin-block-end: auto;
+  color: var(--muted-foreground);
+}
+
+.shadow-after > svg {
+  color: var(--primary);
+}
+
+.shadow-before strong,
+.shadow-after strong {
+  font-size: var(--text-lg);
+}
+
+.shadow-before span,
+.shadow-after span {
+  color: var(--muted-foreground);
+  font-size: var(--text-sm);
+}
+
+.shadow-object {
+  --shadow-edge: 0 0 0 0 transparent;
+  background: var(--card);
+  color: var(--card-foreground);
+  box-shadow: var(--shadow-stack), var(--shadow-edge);
+}
+
+.shadow-object.has-ring {
+  --shadow-edge: 0 0 0 1px var(--shadow-ring-choice);
+}
+
+.shadow-depth-xs {
+  --shadow-stack: 0 0 4px 0 color-mix(in srgb, var(--shadow-ink) 4%, transparent);
+}
+
+.shadow-depth-sm {
+  --shadow-stack: 0 18px 47px 0 color-mix(in srgb, var(--shadow-ink) 3%, transparent), 0 7.5px 19px 0 color-mix(in srgb, var(--shadow-ink) 2%, transparent), 0 4px 10.5px 0 color-mix(in srgb, var(--shadow-ink) 2%, transparent), 0 2.3px 5.8px 0 color-mix(in srgb, var(--shadow-ink) 1%, transparent), 0 1.2px 3.1px 0 color-mix(in srgb, var(--shadow-ink) 1%, transparent), 0 0.5px 1.3px 0 color-mix(in srgb, var(--shadow-ink) 1%, transparent);
+}
+
+.shadow-depth-md {
+  --shadow-stack: 0 17.54px 23.39px 0 color-mix(in srgb, var(--shadow-ink) 4%, transparent), 0 9.4px 12.5px 0 color-mix(in srgb, var(--shadow-ink) 3%, transparent), 0 5.25px 7px 0 color-mix(in srgb, var(--shadow-ink) 2%, transparent), 0 2.79px 3.72px -2px color-mix(in srgb, var(--shadow-ink) 1%, transparent), 0 1.16px 1.5px 0 color-mix(in srgb, var(--shadow-ink) 1%, transparent);
+}
+
+.shadow-depth-lg {
+  --shadow-stack: 0 25px 50px 0 color-mix(in srgb, var(--shadow-ink) 5%, transparent), 0 12px 24px 0 color-mix(in srgb, var(--shadow-ink) 4%, transparent), 0 6px 12px 0 color-mix(in srgb, var(--shadow-ink) 3%, transparent), 0 3px 6px 0 color-mix(in srgb, var(--shadow-ink) 2%, transparent), 0 1.5px 3px 0 color-mix(in srgb, var(--shadow-ink) 2%, transparent);
+}
+
+.shadow-depth-xl {
+  --shadow-stack: 0 40px 80px 0 color-mix(in srgb, var(--shadow-ink) 6%, transparent), 0 20px 40px 0 color-mix(in srgb, var(--shadow-ink) 5%, transparent), 0 10px 20px 0 color-mix(in srgb, var(--shadow-ink) 4%, transparent), 0 5px 10px 0 color-mix(in srgb, var(--shadow-ink) 3%, transparent), 0 2px 4px 0 color-mix(in srgb, var(--shadow-ink) 2%, transparent);
+}
+
+.shadow-depth-2xl {
+  --shadow-stack: 0 60px 120px 0 color-mix(in srgb, var(--shadow-ink) 7%, transparent), 0 30px 60px 0 color-mix(in srgb, var(--shadow-ink) 6%, transparent), 0 15px 30px 0 color-mix(in srgb, var(--shadow-ink) 5%, transparent), 0 7.5px 15px 0 color-mix(in srgb, var(--shadow-ink) 4%, transparent), 0 3px 6px 0 color-mix(in srgb, var(--shadow-ink) 3%, transparent);
+}
+
+.shadow-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) repeat(3, minmax(9rem, 1fr));
+  gap: var(--space-lg);
+  margin-block-start: var(--space-xl);
+  padding: var(--space-lg);
+  border: var(--rule-hair) solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--card);
+}
+
+.shadow-controls fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.shadow-controls legend {
+  margin-block-end: var(--space-sm);
+  color: var(--muted-foreground);
+  font-size: var(--text-xs);
+  font-weight: 700;
+}
+
+.shadow-segments {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(2.75rem, 1fr));
+  gap: var(--space-2xs);
+}
+
+.shadow-segments button {
+  min-width: 0;
+  padding-inline: var(--space-xs);
+  background: var(--muted);
+  color: var(--muted-foreground);
+  font-size: var(--text-xs);
+}
+
+.shadow-segments button[aria-pressed="true"] {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.shadow-switch {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-sm);
+  padding-inline: var(--space-sm);
+  background: var(--muted);
+  color: var(--foreground);
+  white-space: nowrap;
+}
+
+.shadow-switch i {
+  position: relative;
+  width: 2.5rem;
+  height: 1.5rem;
+  flex: 0 0 auto;
+  border-radius: var(--radius-round);
+  background: var(--plane-3);
+}
+
+.shadow-switch i::after {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--foreground);
+  content: "";
+  transition: transform var(--pr-fast) var(--pr-ease);
+}
+
+.shadow-switch[aria-checked="true"] i {
+  background: var(--primary);
+}
+
+.shadow-switch[aria-checked="true"] i::after {
+  transform: translateX(1rem);
+  background: var(--primary-foreground);
+}
+
+.shadow-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.shadow-swatches button {
+  position: relative;
+  width: var(--pr-control-height);
+  padding: 0;
+  border: 3px solid var(--card);
+  background: var(--swatch);
+  box-shadow: 0 0 0 1px var(--border);
+}
+
+.shadow-swatches button[aria-pressed="true"]::after {
+  position: absolute;
+  inset: 0.35rem;
+  border: 2px solid var(--card);
+  border-radius: calc(var(--radius-control) * 0.62);
+  content: "";
+}
+
+.shadow-swatches--ring button {
+  background: var(--card);
+}
+
+.shadow-swatches--ring button::before {
+  position: absolute;
+  inset: 0.55rem;
+  border: 3px solid var(--swatch);
+  border-radius: calc(var(--radius-control) * 0.5);
+  content: "";
+}
+
+.shadow-ladder > div {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+.shadow-ladder > div > button {
+  display: grid;
+  min-width: 0;
+  min-height: 20rem;
+  grid-template-rows: 1fr auto auto auto;
+  align-items: end;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  border: var(--rule-hair) solid var(--border);
+  background: var(--plane-1);
+  color: var(--foreground);
+  text-align: left;
+}
+
+.shadow-ladder > div > button[aria-pressed="true"] {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.shadow-ladder .shadow-object {
+  display: grid;
+  width: 5.5rem;
+  height: 5.5rem;
+  place-items: center;
+  align-self: center;
+  justify-self: center;
+  border-radius: var(--radius-card);
+}
+
+.shadow-ladder .shadow-object i {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.shadow-ladder b {
+  font-size: var(--text-base);
+}
+
+.shadow-ladder span {
+  min-height: 3.8em;
+  color: var(--muted-foreground);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.shadow-ladder small {
+  color: var(--muted-foreground);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+}
+
+.shadow-pattern-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-xl);
+}
+
+.shadow-pattern-grid > article {
+  position: relative;
+  min-height: 24rem;
+  padding: clamp(var(--space-lg), 4vw, var(--space-2xl));
+  border-radius: var(--radius-sheet);
+  background: var(--plane-1);
+}
+
+.shadow-pattern-card {
+  display: grid;
+  place-items: center;
+}
+
+.shadow-pattern-card .shadow-object {
+  display: grid;
+  width: min(100%, 28rem);
+  gap: var(--space-sm);
+  padding: var(--space-xl);
+  border-radius: var(--radius-card);
+}
+
+.shadow-pattern-card span,
+.shadow-pairing-card span {
+  color: var(--muted-foreground);
+  font-size: var(--text-xs);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.shadow-pattern-card strong,
+.shadow-pairing-card strong {
+  font-size: var(--text-xl);
+}
+
+.shadow-pattern-card p,
+.shadow-pairing-card p {
+  margin: 0;
+  color: var(--muted-foreground);
+}
+
+.shadow-pattern-card button,
+.shadow-pattern-dialog > button,
+.shadow-pairing-card button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  width: fit-content;
+  margin-block-start: var(--space-sm);
+  padding-inline: var(--space-md);
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.shadow-pattern-card button svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.shadow-pattern-menu {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: var(--space-md);
+}
+
+.shadow-pattern-menu > button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding-inline: var(--space-md);
+  background: var(--card);
+  color: var(--card-foreground);
+  box-shadow: var(--shadow-control);
+}
+
+.shadow-pattern-menu > button svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.shadow-pattern-menu > p {
+  max-width: 18rem;
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: var(--text-sm);
+}
+
+.shadow-pattern-menu .shadow-object {
+  display: grid;
+  width: min(100%, 17rem);
+  padding: var(--space-xs);
+  border-radius: var(--radius-card);
+}
+
+.shadow-pattern-menu .shadow-object button {
+  width: 100%;
+  padding-inline: var(--space-md);
+  background: transparent;
+  color: var(--foreground);
+  text-align: left;
+}
+
+.shadow-pattern-menu .shadow-object button:hover {
+  background: var(--muted);
+}
+
+.shadow-pattern-dialog {
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: var(--space-sm);
+}
+
+.shadow-pattern-dialog > svg {
+  width: 2rem;
+  height: 2rem;
+  color: var(--primary);
+}
+
+.shadow-pattern-dialog > strong {
+  font-size: var(--text-xl);
+}
+
+.shadow-pattern-dialog > p {
+  max-width: 30rem;
+  margin: 0;
+  color: var(--muted-foreground);
+  line-height: 1.55;
+}
+
+.shadow-pattern-toast {
+  display: grid;
+  align-content: end;
+}
+
+.shadow-pattern-toast > .shadow-object {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  border-radius: var(--radius-card);
+}
+
+.shadow-pattern-toast > .shadow-object > svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--primary);
+}
+
+.shadow-pattern-toast .shadow-object div {
+  display: grid;
+  gap: var(--space-2xs);
+}
+
+.shadow-pattern-toast .shadow-object span {
+  color: var(--muted-foreground);
+  font-size: var(--text-xs);
+}
+
+.shadow-pattern-toast .shadow-object button {
+  width: var(--pr-control-height);
+  padding: 0;
+  background: var(--muted);
+  color: var(--foreground);
+}
+
+.shadow-pattern-toast > button {
+  justify-self: start;
+  padding-inline: var(--space-md);
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.shadow-pairing > div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-xl);
+}
+
+.shadow-pairing-card {
+  display: grid;
+  min-height: 27rem;
+  place-items: center;
+  padding: clamp(var(--space-lg), 4vw, var(--space-3xl));
+  border-radius: var(--radius-sheet);
+}
+
+.shadow-pairing-card .shadow-object {
+  display: grid;
+  width: min(100%, 30rem);
+  gap: var(--space-sm);
+  padding: var(--space-xl);
+  border-radius: 1.25rem;
+}
+
+.shadow-pairing-card--purple {
+  background: oklch(0.925 0.024 310);
+}
+
+.shadow-pairing-card--purple .shadow-object {
+  background: oklch(0.992 0.006 313);
+  color: oklch(0.2 0.03 308);
+}
+
+.shadow-pairing-card--purple button {
+  background: oklch(0.5 0.17 305);
+  color: oklch(0.985 0.008 313);
+}
+
+.shadow-pairing-card--jade {
+  background: oklch(0.91 0.022 158);
+}
+
+.shadow-pairing-card--jade .shadow-object {
+  background: oklch(0.98 0.009 155);
+  color: oklch(0.2 0.025 158);
+}
+
+.shadow-pairing-card--jade button {
+  background: oklch(0.45 0.095 163);
+  color: oklch(0.985 0.006 158);
+}
+
+.shadow-rule {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 34rem);
+  gap: var(--space-2xl);
+  padding-block: clamp(var(--space-2xl), 8vw, 7rem);
+  border-bottom: var(--rule-hair) solid var(--border);
+}
+
+.shadow-rule p {
+  align-self: end;
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: var(--text-lg);
+  line-height: 1.6;
+}
+
+.shadow-credit {
+  max-width: 70ch;
+  margin: var(--space-xl) 0 0;
+  color: var(--muted-foreground);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+.shadow-credit a {
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+.shadow-dialog {
+  width: min(calc(100% - 2rem), 36rem);
+  max-width: none;
+  padding: 0;
+  border: 0;
+  overflow: visible;
+  background: transparent;
+  color: var(--foreground);
+}
+
+.shadow-dialog::backdrop {
+  background: oklch(0.13 0.018 309 / 0.82);
+}
+
+.shadow-dialog__panel {
+  position: relative;
+  display: grid;
+  gap: var(--space-sm);
+  padding: clamp(var(--space-xl), 5vw, var(--space-2xl));
+  border-radius: var(--radius-sheet);
+}
+
+.shadow-dialog__panel > button:first-child {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  width: var(--pr-control-height);
+  padding: 0;
+  background: var(--muted);
+  color: var(--foreground);
+}
+
+.shadow-dialog__panel > span {
+  padding-inline-end: 3rem;
+}
+
+.shadow-dialog__panel h2 {
+  max-width: 12ch;
+  margin: var(--space-sm) 0 0;
+  font-size: var(--text-2xl);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.shadow-dialog__panel p {
+  margin: var(--space-sm) 0 var(--space-md);
+  color: var(--muted-foreground);
+  line-height: 1.55;
+}
+
+.shadow-dialog__panel > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-xs);
+}
+
+.shadow-dialog__panel > div button {
+  padding-inline: var(--space-md);
+  background: var(--muted);
+  color: var(--foreground);
+}
+
+.shadow-dialog__panel > div button:last-child {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.shadow-shell button:focus-visible,
+.shadow-shell a:focus-visible,
+.shadow-dialog button:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+.shadow-shell button:active,
+.shadow-shell a:active,
+.shadow-dialog button:active {
+  transform: translateY(1px);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .shadow-worlds a:hover {
+    border-color: var(--foreground);
+    color: var(--foreground);
+  }
+
+  .shadow-worlds a[aria-current="page"]:hover {
+    color: var(--background);
+  }
+}
+
+@media (max-width: 79.99rem) {
+  .shadow-controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .shadow-ladder > div {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 55.99rem) {
+  .shadow-hero,
+  .shadow-lab > header,
+  .shadow-ladder > header,
+  .shadow-patterns > header,
+  .shadow-pairing > header,
+  .shadow-rule {
+    grid-template-columns: 1fr;
+  }
+
+  .shadow-theme {
+    justify-self: start;
+  }
+
+  .shadow-lab__stage,
+  .shadow-pattern-grid,
+  .shadow-pairing > div {
+    grid-template-columns: 1fr;
+  }
+
+  .shadow-lab__stage {
+    min-height: 0;
+  }
+
+  .shadow-before,
+  .shadow-after {
+    min-height: 14rem;
+  }
+
+  .shadow-hero__facts {
+    grid-template-columns: repeat(3, auto);
+  }
+
+  .shadow-hero__facts span {
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 39.99rem) {
+  .shadow-main {
+    padding-inline: var(--space-md);
+  }
+
+  .shadow-worlds {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .shadow-worlds > div {
+    width: 100%;
+  }
+
+  .shadow-worlds a small {
+    display: none;
+  }
+
+  .shadow-hero h1 {
+    font-size: clamp(3.5rem, 20vw, 6rem);
+  }
+
+  .shadow-hero__facts {
+    width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-xs);
+  }
+
+  .shadow-hero__facts strong,
+  .shadow-hero__facts span {
+    padding: 0;
+    text-align: center;
+  }
+
+  .shadow-controls,
+  .shadow-ladder > div {
+    grid-template-columns: 1fr;
+  }
+
+  .shadow-segments {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .shadow-ladder > div > button {
+    min-height: 12rem;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: var(--space-md);
+  }
+
+  .shadow-ladder .shadow-object {
+    grid-row: 1 / 3;
+  }
+
+  .shadow-ladder b {
+    align-self: end;
+  }
+
+  .shadow-ladder span {
+    min-height: 0;
+    align-self: start;
+  }
+
+  .shadow-ladder small {
+    grid-column: 3;
+    grid-row: 1 / 3;
+  }
+
+  .shadow-pattern-grid > article,
+  .shadow-pairing-card {
+    min-height: 20rem;
+  }
+
+  .shadow-dialog__panel > div {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .shadow-dialog__panel > div button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shadow-shell *,
+  .shadow-shell *::before,
+  .shadow-shell *::after,
+  .shadow-dialog *,
+  .shadow-dialog *::before,
+  .shadow-dialog *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

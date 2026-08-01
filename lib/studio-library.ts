@@ -162,6 +162,7 @@ const skills: StudioAsset[] = [
   { id: "skill-template-foundry", category: "Skills", name: "Template Foundry", summary: "Compose complete connected project systems", bestFor: "Reusable launch, app, shop, content, and service foundations", detail: "Creates the real pages, hierarchy, journeys, states, and responsive behavior that make a template useful before customization." },
   { id: "skill-creative-labs", category: "Skills", name: "Creative Labs", summary: "Tune brand, type, color, text, and motion together", bestFor: "Distinctive and coherent creative direction", detail: "Builds a joined-up visual language, applies it to real product surfaces, and tests it across states and screens." },
   { id: "skill-release-audit", category: "Skills", name: "Release Audit", summary: "Prove the experience before it ships", bestFor: "Every production handoff", detail: "Runs quality, accessibility, responsive, interaction, registry, build, and live-deployment checks." },
+  { id: "skill-smooth-elevation", category: "Skills", name: "Smooth Elevation", summary: "Give every raised surface one continuous edge", bestFor: "Cards, menus, sheets, dialogs, and toasts", detail: "Chooses the smallest useful depth, replaces border-plus-shadow double edges with one integrated hairline, and proves the result in light and dark." },
 ]
 
 const agents: StudioAsset[] = [
