@@ -1,5 +1,20 @@
 # Agent Ledger
 
+## 2026-08-01 — Knight Rider Elements Library
+
+- Agent: Codex
+- Scope: turn Scott's Knight Rider experiment into the first complete, reusable Kit element without importing the original demo structure or weakening Purple Rain's visual rules
+- Product shape: added `/elements`, a tactile Elements Library where the real behavior is playable first, exact source stays behind a deliberate action, and a plain-English project prompt is the primary handoff
+- Element: Knight Rider ships as an isolated Signature Effect with six patterns, custom touch-safe lamp paths, four color presets plus custom color, five tuning controls, three optional voices, direction, pause, and one-step reset
+- Motion and sound: one canvas replaces per-frame interface repainting; pattern changes bridge in 180ms, offscreen work pauses, reduced motion freezes every time-based signal, and sound begins muted behind an explicit control
+- Distribution: public zero-dependency `larson-scanner` registry item delivers the exact React behavior and isolated styling from `/r/elements/larson-scanner.json`; its purpose light cannot leak into Purple Rain product chrome
+- Responsive and interaction proof: live pattern switching, custom lamp programming, keyboard tuning, prompt handoff, source handoff, and reset passed; 320, 375, 414, 768, and 1280 pixel checks produced zero horizontal page overflow and every effective touch target is at least 44px
+- Build proof: both 139-item Purple Rain and JADE registries, Shadow, Elements, Theme Workshop, shared system and Studio validation, ESLint, TypeScript, local production build, and Vercel production build pass
+- Live downstream proof: an outside blank Next project installed the live element as exactly `components/ui/larson-scanner.tsx` and `components/ui/larson-scanner.css`; no dependency, package, lock, or configuration file changed, both files matched the public payload exactly, and the consumer production build passed
+- Live proof: `/elements`, `/r/elements/registry.json`, `/r/elements/larson-scanner.json`, `/kit`, `/labs`, and `/r/button.json` return `200`; the clean production browser console reports no warnings or errors
+- Deployment: Vercel production `dpl_4jyQHgQAXQgbfuqronJm596G1eu5`, aliased to `kit.scottelling.com`; product commit `856b61d` pushed to `scottelling/kit`
+- Open loops: none
+
 ## 2026-08-01 — Reversible Theme Workshop
 
 - Agent: Codex
