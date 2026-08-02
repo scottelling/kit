@@ -1,5 +1,21 @@
 # Agent Ledger
 
+## 2026-08-01 — Reversible Theme Workshop
+
+- Agent: Codex
+- Scope: build Kit's native alternative to importing TweakCN, preserving Kit's product language, visual direction, proof standards, and immutable ownership of Purple Rain and JADE
+- Safe-copy model: `/labs` opens directly into Theme Workshop; selecting Purple Rain or JADE always creates a separate saved copy, while Restore Original returns the live project proof to the exact source kit without deleting the copy
+- Shaping: plain-English directions and direct color, radius, density, depth, and type controls update a real working project interface in light and dark; undo and redo cover the editable copy
+- Proof and release: six automatic reading/action checks gate publishing; minimum 44px controls, visible focus, solid surfaces, reduced motion, and the existing no-glass/no-glow constraints remain locked
+- Project loop: applied copies follow Build and shared Preview surfaces; published copies expose a preview link and a public dynamic theme handoff at `/r/workshop/theme.json`
+- Interaction proof: Purple Rain and JADE clean-copy starts, English direction, keyboard sliders, light/dark, undo/redo, exact restore, reapply, publish, task navigation, action menu, invite form, and native approval dialog passed locally and on production
+- Responsive proof: live `/labs` checks at 320, 375, 414, 768, and 1280 pixels produced zero horizontal overflow and zero visible interactive targets below 44px
+- Build proof: all 279 Purple Rain/JADE items plus Shadow validate and build; Theme Workshop verifier, shared system and Studio verifiers, ESLint, TypeScript, local production build, and Vercel production build pass
+- Live downstream proof: a clean outside Next project installed a shaped JADE copy from the live Workshop handoff; only `app/globals.css` changed, both light and dark foundations merged, its 3px shape, compact spacing, technical type, and JADE action color arrived exactly, no dependency changed, and the consumer production build passed
+- Live proof: `/labs`, `/preview`, `/r/workshop/theme.json`, `/kit`, and `/r/button.json` return `200`; a custom live JADE handoff returns the expected name, type, light/dark decision color, radius, spacing, and portable font stack
+- Deployment: Vercel production `dpl_4F81sRkKy9K3FdjuXVtZGitbekzw`, aliased to `kit.scottelling.com`; product commit `bc79db8` pushed to `scottelling/kit`
+- Open loops: none
+
 ## 2026-08-01 — Shadow elevation foundation
 
 - Agent: Codex
