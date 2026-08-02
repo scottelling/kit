@@ -6,7 +6,7 @@ Modules: ScottAI workspace conventions, deployment source of truth
 
 ## What It Is
 
-A public shadcn registry and comparison site that distributes Purple Rain tokens and components through `npx shadcn add`.
+A public design-engineering studio and shadcn registry that distributes complete Purple Rain and JADE systems, focused foundation kits, and reversible project-specific themes.
 
 ## Origin
 
@@ -21,8 +21,9 @@ A public shadcn registry and comparison site that distributes Purple Rain tokens
 
 ## What Ships
 
-- Registry items: `tokens`, `button`, `card`, `input`, `badge`, `dialog`
+- Registry items: complete Purple Rain and JADE component systems with automatic foundations
 - Foundation kits: Shadow (`smooth-shadow`) under `/r/shadow/`
+- Theme Workshop: safe Purple Rain/JADE copies, live proof, exact restore, preview sharing, and public handoff under `/labs`
 - Static registry output: `public/r/*.json`
 - Product page: `/`
 - Side-by-side comparison: `/demo`

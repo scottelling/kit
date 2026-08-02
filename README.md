@@ -12,6 +12,8 @@ JADE exposes the same production component contract with its own tactile light a
 
 Shadow adds six exact stacked depths, integrated hairline edges, independent tinting, and an agent rule for elevated surfaces under `https://kit.scottelling.com/r/shadow/`. It is a foundation kit that strengthens Purple Rain or JADE without replacing either system.
 
+Theme Workshop at `https://kit.scottelling.com/labs` creates a safe copy of Purple Rain or JADE, lets the copy be shaped in plain English or by touch, proves it on a working interface, and publishes a portable theme without changing the source kit.
+
 ## Local work
 
 ```bash
@@ -28,6 +30,8 @@ npm run check
 - Complete showrooms: `/kit`, `/kit/jade`, and `/kit/shadow`
 - Same-product comparison: `/kit/jade/compare`
 - Side-by-side demo: `/demo`
+- Theme Workshop: `/labs`
+- Public theme handoff: `/r/workshop/theme.json`
 - Production: `https://kit.scottelling.com`
 
 ## Develop

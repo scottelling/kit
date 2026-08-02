@@ -16,6 +16,8 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - Registry catalog: `https://kit.scottelling.com/r/registry.json`
 - Shadow showroom: `https://kit.scottelling.com/kit/shadow`
 - Shadow registry: `https://kit.scottelling.com/r/shadow/smooth-shadow.json`
+- Theme Workshop: `https://kit.scottelling.com/labs`
+- Public theme handoff: `https://kit.scottelling.com/r/workshop/theme.json`
 - Stack: Next.js App Router, TypeScript, Tailwind CSS v4, shadcn
 
 ## Product contract
@@ -28,6 +30,8 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - Purple Rain uses tonal depth, directional dark shadows, restrained orchid, and visible focus. No glass, translucency, glow, ambient blobs, or decorative looping motion.
 - `/demo` compares the same task interface in Purple Rain and Origin UI.
 - `/kit/shadow` is the tactile elevation showroom. Shadow supplements complete visual systems; it does not claim 138-component parity.
+- `/labs` creates immutable-source theme copies. Apply and publish the copy, or restore the exact Purple Rain/JADE source without losing the work.
+- Published Theme Workshop copies must install cleanly into an unrelated shadcn project and merge both light and dark foundations.
 
 ## Working rules
 

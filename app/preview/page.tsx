@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 
 import { createStudioProject, projectTones, projectTypes, templateFamilies, type ProjectTone, type ProjectType } from "@/lib/project-studio"
 import { studioAssets } from "@/lib/studio-library"
+import { parseThemeVariant } from "@/lib/theme-workshop"
 
 import { PreviewExperience } from "./preview-experience"
 
@@ -32,6 +33,7 @@ export default async function PreviewPage({ searchParams }: PreviewPageProps) {
     textId: typeof query.text === "string" ? query.text : "solid-display",
     templateId: family.id,
     signature: typeof query.signature === "string" ? query.signature : "Project receipt",
+    themeVariant: typeof query.theme === "string" ? parseThemeVariant(query.theme) : null,
     status: "built",
     previewPublished: true,
   })

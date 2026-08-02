@@ -26,6 +26,7 @@ const places = [
   { label: "Build a project", hint: "Turn an English brief into a working five-page system", href: "/build", words: "make create start execute project plain english" },
   { label: "Saved projects", hint: "Return to drafts, built work, and approvals", href: "/projects", words: "saved history drafts archive approved" },
   { label: "Complete templates", hint: "Choose from eight complete project systems", href: "/templates", words: "landing app ecommerce publication portfolio docs marketplace campaign screens" },
+  { label: "Shape a kit copy", hint: "Change a safe copy in plain English and prove it on a real interface", href: "/labs", words: "theme workshop copy colors type shape depth light dark apply publish restore" },
   { label: "Creative Labs", hint: "Tune brand, type, color, text, and motion", href: "/labs", words: "brand fonts palettes text effects animation movement" },
   { label: "Quality approval", hint: "See every release check and approval state", href: "/quality", words: "audit accessibility approve release check standards" },
   { label: "Purple Rain Studio", hint: "Shape a complete project in plain English", href: "/studio", words: "brief brand fonts colors motion templates prompts skills agents ship deploy" },

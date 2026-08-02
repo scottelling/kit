@@ -27,7 +27,9 @@ curl -fsS https://kit.scottelling.com/r/registry.json
 curl -fsS https://kit.scottelling.com/r/button.json
 curl -fsS https://kit.scottelling.com/r/calendar.json
 curl -fsS https://kit.scottelling.com/r/shadow/smooth-shadow.json
+curl -fsS https://kit.scottelling.com/r/workshop/theme.json
 curl -fsS https://kit.scottelling.com/demo
+curl -fsS https://kit.scottelling.com/labs
 curl -fsS https://kit.scottelling.com/studio
 curl -fsS https://kit.scottelling.com/kit/shadow
 ```

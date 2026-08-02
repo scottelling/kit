@@ -31,7 +31,7 @@ visible and tactile in public, reusable by agents, and installable behind the sc
 - `/build` is the canonical project workspace. It turns an ordinary-English brief into a saved five-screen project, keeps all visual choices live, and publishes a shareable preview.
 - `/projects` keeps draft, built, approved, and archived work together. The newest fifty complete project records persist on the device; older oversized records are normalized automatically, with a private-session fallback when normal browser storage is restricted.
 - `/templates` carries eight complete project families and forty connected screens: launch, product, commerce, publication, portfolio, documentation, marketplace, and campaign.
-- `/labs` applies brand, type, color, text, and motion choices to the current saved project.
+- `/labs` opens directly into Theme Workshop, where Purple Rain or JADE is copied rather than edited. A saved copy can be shaped in plain English or with direct controls, proved on a working interface in light and dark, checked automatically, applied to the project, published as a portable public handoff, and restored to the exact source kit without deleting the copy. Brand, type, color, text, and motion labs remain alongside it.
 - `/quality` exposes eighteen actual or inherited release checks and applies the approval mark automatically only when all eighteen pass.
 - `lib/studio-library.ts` is the counted Studio inventory: 110 tools across fonts (12), palettes (12), motion (16), text (12), brand (12), templates (16), prompts (16), skills (8), and agents (6).
 - `plugins/purple-rain-studio` packages eight validated abilities: Studio Director, Template Foundry, Creative Labs, Design & Ship, Brand System, Interface System, Release Proof, and Smooth Elevation.

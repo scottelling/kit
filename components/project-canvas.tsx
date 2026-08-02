@@ -6,6 +6,7 @@ import { useState } from "react"
 
 import { getPalette, getTemplateFamily, projectPreviewCopy, type StudioProject } from "@/lib/project-studio"
 import type { StudioAsset } from "@/lib/studio-library"
+import { themeColorString, themeDepthShadow, themeFontStack, type WorkshopMode } from "@/lib/theme-workshop"
 
 type ProjectCanvasProps = {
   project: StudioProject
@@ -13,24 +14,32 @@ type ProjectCanvasProps = {
   page: string
   onPageChange?: (page: string) => void
   compact?: boolean
+  mode?: WorkshopMode
 }
 
-export function ProjectCanvas({ project, assets, page, onPageChange, compact = false }: ProjectCanvasProps) {
+export function ProjectCanvas({ project, assets, page, onPageChange, compact = false, mode = "light" }: ProjectCanvasProps) {
   const [acted, setActed] = useState(false)
   const family = getTemplateFamily(project.templateId)
   const palette = getPalette(assets, project.paletteId)
   const copy = projectPreviewCopy(project, page)
+  const variant = project.themeVariant?.applied ? project.themeVariant : null
+  const theme = variant?.[mode]
   const style = {
-    "--canvas-paper": palette?.colors?.[0] ?? "var(--background)",
-    "--canvas-plane": palette?.colors?.[1] ?? "var(--plane-1)",
-    "--canvas-accent": palette?.colors?.[2] ?? "var(--primary)",
-    "--canvas-muted": palette?.colors?.[3] ?? "var(--muted-foreground)",
-    "--canvas-ink": palette?.colors?.[4] ?? "var(--foreground)",
-    "--canvas-accent-ink": palette?.accentInk ?? palette?.colors?.[0] ?? "var(--primary-foreground)",
+    "--canvas-paper": theme ? themeColorString(theme.canvas) : palette?.colors?.[0] ?? "var(--background)",
+    "--canvas-plane": theme ? themeColorString(theme.raised) : palette?.colors?.[1] ?? "var(--plane-1)",
+    "--canvas-accent": theme ? themeColorString(theme.action) : palette?.colors?.[2] ?? "var(--primary)",
+    "--canvas-muted": theme ? themeColorString(theme.mutedInk) : palette?.colors?.[3] ?? "var(--muted-foreground)",
+    "--canvas-ink": theme ? themeColorString(theme.ink) : palette?.colors?.[4] ?? "var(--foreground)",
+    "--canvas-accent-ink": theme ? themeColorString(theme.actionInk) : palette?.accentInk ?? palette?.colors?.[0] ?? "var(--primary-foreground)",
+    "--canvas-border": theme ? themeColorString(theme.line) : palette?.colors?.[3] ?? "var(--border)",
+    "--canvas-radius": variant ? `${variant.radius + 6}px` : "var(--radius-card)",
+    "--canvas-density": variant?.density ?? 1,
+    "--canvas-shadow": variant ? themeDepthShadow(variant, mode) : "var(--shadow-panel)",
+    "--canvas-font": variant ? themeFontStack(variant.typeStyle) : "var(--font-relay-sans)",
   } as CSSProperties
 
   return (
-    <section className={`project-canvas${compact ? " project-canvas--compact" : ""}`} data-family={family.id} style={style} aria-label={`${project.name} preview`}>
+    <section className={`project-canvas${compact ? " project-canvas--compact" : ""}`} data-family={family.id} data-theme-copy={variant ? "applied" : "original"} style={style} aria-label={`${project.name} preview`}>
       <header className="project-canvas__header">
         <strong>{project.name || "Untitled project"}</strong>
         <span>{project.tone} · {project.direction}</span>

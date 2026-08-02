@@ -1,4 +1,5 @@
 import type { StudioAsset } from "@/lib/studio-library"
+import { normalizeThemeVariant, type ThemeVariant } from "@/lib/theme-workshop"
 
 export type ProjectType = "Landing page" | "Product app" | "Online store" | "Publication" | "Portfolio" | "Documentation" | "Marketplace" | "Campaign"
 export type ProjectTone = "Precise" | "Warm" | "Bold" | "Quiet" | "Playful" | "Editorial" | "Technical" | "Luxurious"
@@ -23,6 +24,7 @@ export type StudioProject = {
   agentIds: string[]
   voiceLevel: number
   signature: string
+  themeVariant: ThemeVariant | null
   status: ProjectStatus
   previewPublished: boolean
   createdAt: string
@@ -168,6 +170,7 @@ export function createStudioProject(overrides: Partial<StudioProject> = {}): Stu
     agentIds: overrides.agentIds ?? ["agent-director", "agent-product", "agent-engineer", "agent-qa"],
     voiceLevel: overrides.voiceLevel ?? 35,
     signature: overrides.signature ?? "Project receipt",
+    themeVariant: normalizeThemeVariant(overrides.themeVariant),
     status: overrides.status ?? "draft",
     previewPublished: overrides.previewPublished ?? false,
     createdAt: overrides.createdAt ?? now,
@@ -267,5 +270,6 @@ export function projectShareQuery(project: StudioProject) {
     template: project.templateId,
     signature: project.signature,
   })
+  if (project.themeVariant?.publishedAt) params.set("theme", JSON.stringify(project.themeVariant))
   return params.toString()
 }

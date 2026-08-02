@@ -25,6 +25,14 @@
     "document-surface"
   ],
   "viewports": [320, 375, 414, 768, 1280, 1440],
+  "theme_workshop": {
+    "source_kits_are_immutable": true,
+    "saved_working_copies": true,
+    "plain_language_and_direct_controls": true,
+    "light_and_dark_proof": true,
+    "exact_restore": true,
+    "public_handoff": true
+  },
   "requirements": {
     "minimum_control_height": "44px",
     "keyboard_operable": true,
