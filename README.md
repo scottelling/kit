@@ -14,6 +14,8 @@ Shadow adds six exact stacked depths, integrated hairline edges, independent tin
 
 Theme Workshop at `https://kit.scottelling.com/labs` creates a safe copy of Purple Rain or JADE, lets the copy be shaped in plain English or by touch, proves it on a working interface, and publishes a portable theme without changing the source kit.
 
+Elements at `https://kit.scottelling.com/elements` is the live behavior library. Knight Rider / Larson Scanner is the first isolated Signature Effect, with a tactile playground, exact visible source, an English project prompt, and an independent public handoff.
+
 ## Local work
 
 ```bash
@@ -26,12 +28,15 @@ npm run check
 - Registry manifest: `registry.json`
 - JADE registry manifest: `registry/jade/registry.json`
 - Shadow registry manifest: `registry/shadow/registry.json`
-- Built JSON: `public/r/`, `public/r/jade/`, and `public/r/shadow/`
+- Elements registry manifest: `registry/elements/registry.json`
+- Built JSON: `public/r/`, `public/r/jade/`, `public/r/shadow/`, and `public/r/elements/`
 - Complete showrooms: `/kit`, `/kit/jade`, and `/kit/shadow`
 - Same-product comparison: `/kit/jade/compare`
 - Side-by-side demo: `/demo`
 - Theme Workshop: `/labs`
 - Public theme handoff: `/r/workshop/theme.json`
+- Elements Library: `/elements`
+- Knight Rider handoff: `/r/elements/larson-scanner.json`
 - Production: `https://kit.scottelling.com`
 
 ## Develop

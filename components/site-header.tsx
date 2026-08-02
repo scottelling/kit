@@ -20,6 +20,7 @@ const familyPlaces = [
 ].map(([label, hint]) => ({ label, hint, href: `/kit#family-${label.toLowerCase()}`, words: label.toLowerCase() }))
 
 const places = [
+  { label: "Open Elements", hint: "Touch complete behaviors and carry them into a project", href: "/elements", words: "elements knight rider larson scanner signature effects motion code interactive" },
   { label: "Explore Shadow", hint: "Test smooth depth and one continuous edge on real surfaces", href: "/kit/shadow", words: "shadow elevation depth ring cards dialogs menus smooth" },
   { label: "Explore JADE", hint: "Touch every raised, seated, and sunken JADE piece", href: "/kit/jade", words: "jade complete kit tactile mint components" },
   { label: "Compare the systems", hint: "Use the same working interface in JADE and Purple Rain", href: "/kit/jade/compare", words: "jade purple rain comparison live working interface" },
@@ -129,6 +130,7 @@ export function SiteHeader() {
         <nav aria-label="Main pages">
           <Link aria-current={buildPages.includes(pathname) ? "page" : undefined} href="/build">Build</Link>
           <Link aria-current={pathname === "/studio" ? "page" : undefined} href="/studio">Studio</Link>
+          <Link aria-current={pathname === "/elements" ? "page" : undefined} href="/elements">Elements</Link>
           <Link aria-current={pathname.startsWith("/kit") ? "page" : undefined} href="/kit">Explore</Link>
         </nav>
       </header>

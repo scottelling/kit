@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "kit-elements",
+  "homepage": "https://kit.scottelling.com/elements",
+  "items": [
+    {
+      "name": "larson-scanner",
+      "type": "registry:ui",
+      "title": "Knight Rider — Larson Scanner",
+      "description": "A programmable sci-fi light scanner with six motion patterns, custom paths, color and voice controls, complete reduced-motion behavior, and touch-safe programming.",
+      "author": "Scott E. Telling",
+      "categories": ["Signature Effects", "Motion", "Interactive"],
+      "files": [
+        {
+          "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/larson-scanner.tsx"
+        },
+        {
+          "path": "registry/elements/larson-scanner/larson-scanner.css",
+          "type": "registry:file",
+          "target": "components/ui/larson-scanner.css"
+        }
+      ],
+      "docs": "Import LarsonScanner from your components/ui folder. Sound starts muted. The canvas freezes every time-based effect for reduced motion and pauses when the element is offscreen. The purpose-built light belongs inside the scanner frame; do not spread its glow into surrounding product chrome."
+    }
+  ]
+}

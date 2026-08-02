@@ -1,0 +1,12 @@
+[
+  {
+    "id": "larson-scanner",
+    "title": "Knight Rider",
+    "technicalName": "Larson Scanner",
+    "category": "Signature Effects",
+    "description": "A programmable sci-fi light scanner with six patterns, custom paths, color, voice, complete reduced-motion behavior, and touch-safe programming.",
+    "registryUrl": "https://kit.scottelling.com/r/elements/larson-scanner.json",
+    "states": ["running", "paused", "muted", "sound", "custom", "reduced-motion", "offscreen"],
+    "controls": ["pattern", "speed", "fade", "ribbon", "brightness", "nodes", "color", "voice", "direction"]
+  }
+]

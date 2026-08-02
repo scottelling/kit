@@ -1,0 +1,754 @@
+.larson-scanner {
+  --larson-bg: #070806;
+  --larson-surface: #11120f;
+  --larson-surface-high: #181a16;
+  --larson-metal: #252721;
+  --larson-line: #34372f;
+  --larson-line-bright: #51544a;
+  --larson-text: #f2f0e9;
+  --larson-muted: #9a9d93;
+  --larson-dim: #6f7269;
+  --larson-acid: #c9ff3d;
+  --larson-signal: #ff2a1a;
+  --larson-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--larson-line-bright);
+  border-radius: 6px;
+  background: var(--larson-surface);
+  color: var(--larson-text);
+  font-family: "Avenir Next", "Helvetica Neue", ui-sans-serif, sans-serif;
+  box-shadow: 0 26px 70px -42px #000;
+}
+
+.larson-scanner *,
+.larson-scanner *::before,
+.larson-scanner *::after {
+  box-sizing: border-box;
+}
+
+.larson-scanner button,
+.larson-scanner input {
+  font: inherit;
+}
+
+.larson-scanner button {
+  color: inherit;
+}
+
+.larson-scanner button:focus-visible,
+.larson-scanner input:focus-visible {
+  outline: 2px solid var(--larson-acid);
+  outline-offset: 3px;
+}
+
+.larson-scanner__header {
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--larson-line);
+  background: var(--larson-bg);
+}
+
+.larson-scanner__header > div:first-child,
+.larson-scanner__status,
+.larson-scanner__readout > div,
+.larson-scanner__section-heading > div,
+.larson-scanner__patterns button > span,
+.larson-scanner__commands button > span,
+.larson-scanner__colors button > span,
+.larson-scanner__custom-color > span {
+  display: grid;
+  gap: 4px;
+}
+
+.larson-scanner__header span,
+.larson-scanner__label,
+.larson-scanner__readout span,
+.larson-scanner__section-heading small,
+.larson-scanner__footer,
+.larson-scanner__voices legend {
+  color: var(--larson-dim);
+  font-family: "SFMono-Regular", "Roboto Mono", ui-monospace, monospace;
+  font-size: 0.61rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.larson-scanner__header strong {
+  font-family: "SFMono-Regular", "Roboto Mono", ui-monospace, monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.larson-scanner__status {
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.larson-scanner__status i,
+.larson-scanner__assurance i {
+  width: 7px;
+  height: 7px;
+  display: block;
+  border-radius: 50%;
+  background: var(--larson-acid);
+}
+
+.larson-scanner__bay {
+  padding: clamp(16px, 3vw, 30px);
+  background: #0d0e0c;
+  border-bottom: 1px solid var(--larson-line-bright);
+}
+
+.larson-scanner__label {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 12px;
+}
+
+.larson-scanner__viewport {
+  position: relative;
+  min-height: 152px;
+  background: #020302;
+}
+
+.larson-scanner__viewport canvas {
+  width: 100%;
+  height: 152px;
+  display: block;
+}
+
+.larson-scanner__viewport > button {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: crosshair;
+}
+
+.larson-scanner__readout {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid var(--larson-line);
+  border-top: 0;
+}
+
+.larson-scanner__readout > div {
+  min-height: 70px;
+  align-content: center;
+  padding: 12px 16px;
+  border-right: 1px solid var(--larson-line);
+}
+
+.larson-scanner__readout > div:last-child {
+  border-right: 0;
+}
+
+.larson-scanner__readout strong {
+  overflow: hidden;
+  color: var(--larson-signal);
+  font-family: "SFMono-Regular", "Roboto Mono", ui-monospace, monospace;
+  font-size: 0.72rem;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.larson-scanner__readout > div:first-child strong {
+  color: var(--larson-acid);
+}
+
+.larson-scanner__commands {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-bottom: 1px solid var(--larson-line-bright);
+}
+
+.larson-scanner__commands button {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border: 0;
+  border-right: 1px solid var(--larson-line-bright);
+  background: var(--larson-metal);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 140ms ease, transform 160ms var(--larson-ease-out);
+}
+
+.larson-scanner__commands button:first-child {
+  background: var(--larson-signal);
+}
+
+.larson-scanner__commands button:last-child {
+  border-right: 0;
+}
+
+.larson-scanner__commands button:active,
+.larson-scanner__patterns button:active,
+.larson-scanner__colors button:active,
+.larson-scanner__custom-path button:active {
+  transform: scale(0.97);
+}
+
+.larson-scanner__commands strong,
+.larson-scanner__patterns strong,
+.larson-scanner__colors strong,
+.larson-scanner__custom-color strong {
+  font-family: "SFMono-Regular", "Roboto Mono", ui-monospace, monospace;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+}
+
+.larson-scanner__commands small,
+.larson-scanner__patterns small,
+.larson-scanner__colors small,
+.larson-scanner__custom-color small {
+  color: var(--larson-muted);
+  font-size: 0.61rem;
+}
+
+.larson-scanner__commands button:first-child small {
+  color: rgb(255 255 255 / 0.7);
+}
+
+.larson-scanner__command-icon {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.larson-scanner__command-icon[data-icon="pause"]::before,
+.larson-scanner__command-icon[data-icon="pause"]::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  width: 4px;
+  background: currentColor;
+}
+
+.larson-scanner__command-icon[data-icon="pause"]::before { left: 3px; }
+.larson-scanner__command-icon[data-icon="pause"]::after { right: 3px; }
+
+.larson-scanner__command-icon[data-icon="play"] {
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 14px solid currentColor;
+}
+
+.larson-scanner__reverse,
+.larson-scanner__sound {
+  min-width: 24px;
+  font-family: "SFMono-Regular", "Roboto Mono", ui-monospace, monospace;
+  font-size: 1rem;
+  font-style: normal;
+}
+
+.larson-scanner__controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.larson-scanner__controls > section {
+  min-width: 0;
+  padding: clamp(22px, 3.5vw, 38px);
+  border-bottom: 1px solid var(--larson-line);
+}
+
+.larson-scanner__controls > section:nth-child(odd) {
+  border-right: 1px solid var(--larson-line);
+}
+
+.larson-scanner__section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.larson-scanner__section-heading > span {
+  padding-top: 4px;
+  color: var(--larson-signal);
+  font-family: "SFMono-Regular", "Roboto Mono", ui-monospace, monospace;
+  font-size: 0.61rem;
+  font-weight: 800;
+}
+
+.larson-scanner__section-heading h3 {
+  margin: 0;
+  font-family: "Arial Narrow", "Avenir Next Condensed", "Helvetica Neue", sans-serif;
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.larson-scanner__patterns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border: 1px solid var(--larson-line);
+}
+
+.larson-scanner__patterns button {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 12px;
+  border: 0;
+  border-right: 1px solid var(--larson-line);
+  border-bottom: 1px solid var(--larson-line);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 140ms ease, color 140ms ease, transform 160ms var(--larson-ease-out);
+}
+
+.larson-scanner__patterns button:nth-child(even) { border-right: 0; }
+.larson-scanner__patterns button:nth-last-child(-n + 2) { border-bottom: 0; }
+
+.larson-scanner__patterns button[aria-checked="true"] {
+  background: var(--larson-acid);
+  color: #080a06;
+}
+
+.larson-scanner__patterns button[aria-checked="true"] small {
+  color: rgb(8 10 6 / 0.64);
+}
+
+.larson-scanner__patterns button > i {
+  width: 38px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  flex: 0 0 auto;
+  font-style: normal;
+}
+
+.larson-scanner__patterns button > i span {
+  width: 5px;
+  height: 10px;
+  display: block;
+  background: currentColor;
+  opacity: 0.2;
+}
+
+.larson-scanner__patterns [data-pattern="classic"] span:nth-child(2),
+.larson-scanner__patterns [data-pattern="dual"] span:first-child,
+.larson-scanner__patterns [data-pattern="dual"] span:last-child,
+.larson-scanner__patterns [data-pattern="comet"] span:last-child,
+.larson-scanner__patterns [data-pattern="glitch"] span:nth-child(2),
+.larson-scanner__patterns [data-pattern="glitch"] span:nth-child(4) {
+  height: 21px;
+  opacity: 0.78;
+}
+
+.larson-scanner__patterns [data-pattern="pulse"] span:nth-child(3) { height: 23px; opacity: 0.84; }
+.larson-scanner__patterns [data-pattern="pulse"] span:nth-child(2),
+.larson-scanner__patterns [data-pattern="pulse"] span:nth-child(4) { height: 17px; opacity: 0.54; }
+.larson-scanner__patterns [data-pattern="custom"] span { height: 16px; opacity: 0.58; }
+
+.larson-scanner__custom-path {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.larson-scanner__custom-path > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.72rem;
+}
+
+.larson-scanner__custom-path > div:first-child button {
+  min-height: 44px;
+  padding-inline: 10px;
+  border: 1px solid var(--larson-line-bright);
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 140ms ease, transform 160ms var(--larson-ease-out);
+}
+
+.larson-scanner__custom-path > div:last-child {
+  display: flex;
+  gap: 6px;
+  padding: 2px 2px 8px;
+  overflow-x: auto;
+  scrollbar-color: var(--larson-line-bright) transparent;
+}
+
+.larson-scanner__custom-path > div:last-child button {
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--larson-line-bright);
+  background: #0a0b09;
+  color: var(--larson-muted);
+  font-family: "SFMono-Regular", "Roboto Mono", ui-monospace, monospace;
+  font-size: 0.62rem;
+  cursor: pointer;
+  transition: background-color 140ms ease, color 140ms ease, transform 160ms var(--larson-ease-out);
+}
+
+.larson-scanner__custom-path > div:last-child button[aria-pressed="true"] {
+  border-color: var(--larson-signal);
+  background: var(--larson-signal);
+  color: #fff;
+}
+
+.larson-scanner__ranges {
+  display: grid;
+  gap: 14px;
+}
+
+.larson-scanner__range {
+  min-height: 60px;
+  display: grid;
+  align-content: center;
+  gap: 4px;
+}
+
+.larson-scanner__range > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.larson-scanner__range strong {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.larson-scanner__range output {
+  color: var(--larson-muted);
+  font-family: "SFMono-Regular", "Roboto Mono", ui-monospace, monospace;
+  font-size: 0.62rem;
+}
+
+.larson-scanner__range input {
+  width: 100%;
+  height: 44px;
+  margin: 0;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.larson-scanner__range input::-webkit-slider-runnable-track {
+  height: 3px;
+  background: linear-gradient(90deg, var(--larson-signal) 0 var(--larson-fill), var(--larson-line-bright) var(--larson-fill));
+}
+
+.larson-scanner__range input::-moz-range-track { height: 3px; background: var(--larson-line-bright); }
+.larson-scanner__range input::-moz-range-progress { height: 3px; background: var(--larson-signal); }
+
+.larson-scanner__range input::-webkit-slider-thumb {
+  width: 18px;
+  height: 26px;
+  margin-top: -12px;
+  border: 1px solid #85897a;
+  border-radius: 1px;
+  appearance: none;
+  background: var(--larson-text);
+  box-shadow: 0 2px 5px #000;
+}
+
+.larson-scanner__range input::-moz-range-thumb {
+  width: 18px;
+  height: 26px;
+  border: 1px solid #85897a;
+  border-radius: 1px;
+  background: var(--larson-text);
+  box-shadow: 0 2px 5px #000;
+}
+
+.larson-scanner__colors {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.larson-scanner__colors button,
+.larson-scanner__custom-color {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border: 1px solid var(--larson-line);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.larson-scanner__colors button {
+  transition: background-color 140ms ease, border-color 140ms ease, transform 160ms var(--larson-ease-out);
+}
+
+.larson-scanner__colors button[aria-checked="true"] {
+  border-color: var(--larson-signal);
+  box-shadow: inset 2px 0 var(--larson-signal);
+}
+
+.larson-scanner__colors button > i,
+.larson-scanner__custom-color input {
+  width: 28px;
+  height: 36px;
+  flex: 0 0 auto;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 1px;
+}
+
+.larson-scanner__custom-color {
+  margin-top: 8px;
+}
+
+.larson-scanner__custom-color input {
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+
+.larson-scanner__custom-color input::-webkit-color-swatch-wrapper { padding: 0; }
+.larson-scanner__custom-color input::-webkit-color-swatch { border: 0; }
+
+.larson-scanner__voices {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.larson-scanner__voices legend {
+  margin-bottom: 10px;
+}
+
+.larson-scanner__voices > div {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.larson-scanner__voices label {
+  position: relative;
+}
+
+.larson-scanner__voices input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.larson-scanner__voices span {
+  min-height: 44px;
+  display: grid;
+  place-items: center;
+  padding: 6px;
+  border: 1px solid var(--larson-line);
+  border-right: 0;
+  color: var(--larson-muted);
+  font-family: "SFMono-Regular", "Roboto Mono", ui-monospace, monospace;
+  font-size: 0.61rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.larson-scanner__voices label:last-child span { border-right: 1px solid var(--larson-line); }
+.larson-scanner__voices input:checked + span { border-color: var(--larson-text); background: var(--larson-text); color: #0c0d0b; }
+.larson-scanner__voices input:focus-visible + span { position: relative; z-index: 2; outline: 2px solid var(--larson-acid); outline-offset: 3px; }
+
+.larson-scanner__assurance {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 14px;
+  border: 1px solid var(--larson-line);
+  background: #0d0e0c;
+}
+
+.larson-scanner__assurance span {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 9px;
+  color: var(--larson-muted);
+  font-size: 0.68rem;
+  line-height: 1.4;
+}
+
+.larson-scanner__assurance i {
+  background: var(--larson-acid);
+}
+
+.larson-scanner__footer {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 20px;
+  background: var(--larson-bg);
+}
+
+.larson-scanner__footer > div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.larson-scanner__footer button {
+  min-height: 44px;
+  padding-inline: 10px;
+  border: 0;
+  border-bottom: 1px solid var(--larson-line-bright);
+  background: transparent;
+  color: var(--larson-muted);
+  font-family: "SFMono-Regular", "Roboto Mono", ui-monospace, monospace;
+  font-size: 0.61rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 140ms ease, border-color 140ms ease, transform 160ms var(--larson-ease-out);
+}
+
+.larson-scanner[data-reduced-motion="true"] .larson-scanner__status i {
+  background: var(--larson-muted);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .larson-scanner__commands button:hover,
+  .larson-scanner__patterns button:hover,
+  .larson-scanner__colors button:hover,
+  .larson-scanner__custom-path button:hover {
+    background-color: var(--larson-surface-high);
+  }
+
+  .larson-scanner__commands button:first-child:hover {
+    background-color: color-mix(in srgb, var(--larson-signal), white 10%);
+  }
+
+  .larson-scanner__patterns button[aria-checked="true"]:hover {
+    background-color: var(--larson-acid);
+  }
+}
+
+@media (max-width: 52rem) {
+  .larson-scanner__controls {
+    grid-template-columns: 1fr;
+  }
+
+  .larson-scanner__controls > section:nth-child(odd) {
+    border-right: 0;
+  }
+}
+
+@media (max-width: 38rem) {
+  .larson-scanner__header {
+    min-height: 66px;
+    padding-inline: 14px;
+  }
+
+  .larson-scanner__header > div:first-child > span {
+    display: none;
+  }
+
+  .larson-scanner__bay {
+    padding: 14px;
+  }
+
+  .larson-scanner__viewport,
+  .larson-scanner__viewport canvas {
+    min-height: 126px;
+    height: 126px;
+  }
+
+  .larson-scanner__readout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .larson-scanner__readout > div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .larson-scanner__readout > div:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--larson-line);
+  }
+
+  .larson-scanner__commands {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .larson-scanner__commands button {
+    min-height: 66px;
+    padding-inline: 13px;
+  }
+
+  .larson-scanner__commands button:nth-child(2) {
+    border-right: 0;
+  }
+
+  .larson-scanner__commands button:last-child {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--larson-line-bright);
+  }
+
+  .larson-scanner__controls > section {
+    padding: 24px 16px;
+  }
+
+  .larson-scanner__patterns,
+  .larson-scanner__colors {
+    grid-template-columns: 1fr;
+  }
+
+  .larson-scanner__patterns button {
+    border-right: 0;
+  }
+
+  .larson-scanner__patterns button:nth-last-child(2) {
+    border-bottom: 1px solid var(--larson-line);
+  }
+
+  .larson-scanner__footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .larson-scanner__footer > div {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .larson-scanner *,
+  .larson-scanner *::before,
+  .larson-scanner *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

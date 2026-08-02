@@ -43,15 +43,21 @@ export default function Home() {
               <ArrowRight aria-hidden="true" />
             </Link>
             <Link href="/studio">
-              <span className="home-choice-list__number">109 studio tools</span>
+              <span className="home-choice-list__number">110 studio tools</span>
               <strong>Shape the design system</strong>
               <span>Brand, type, color, motion, templates, prompts, skills, and team.</span>
               <ArrowRight aria-hidden="true" />
             </Link>
             <Link href="/kit">
-              <span className="home-choice-list__number">128 live pieces</span>
+              <span className="home-choice-list__number">138 live pieces</span>
               <strong>Touch the interface kit</strong>
               <span>Every foundation, control, state, data view, and product pattern.</span>
+              <ArrowRight aria-hidden="true" />
+            </Link>
+            <Link href="/elements">
+              <span className="home-choice-list__number">Signature effects</span>
+              <strong>Touch complete behaviors</strong>
+              <span>Play with distinctive ideas, open their exact source, or carry them into a project.</span>
               <ArrowRight aria-hidden="true" />
             </Link>
           </div>

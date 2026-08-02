@@ -33,6 +33,15 @@
     "exact_restore": true,
     "public_handoff": true
   },
+  "signature_effects": {
+    "isolated_from_visual_systems": true,
+    "live_playground": true,
+    "exact_source_handoff": true,
+    "sound_opt_in": true,
+    "offscreen_motion_pauses": true,
+    "reduced_motion_is_static": true,
+    "purpose_bound_effects_only": true
+  },
   "requirements": {
     "minimum_control_height": "44px",
     "keyboard_operable": true,

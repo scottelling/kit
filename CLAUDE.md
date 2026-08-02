@@ -24,6 +24,7 @@ A public design-engineering studio and shadcn registry that distributes complete
 - Registry items: complete Purple Rain and JADE component systems with automatic foundations
 - Foundation kits: Shadow (`smooth-shadow`) under `/r/shadow/`
 - Theme Workshop: safe Purple Rain/JADE copies, live proof, exact restore, preview sharing, and public handoff under `/labs`
+- Elements Library: live, copyable, independently installable behaviors under `/elements`; Knight Rider opens Signature Effects
 - Static registry output: `public/r/*.json`
 - Product page: `/`
 - Side-by-side comparison: `/demo`
@@ -33,6 +34,8 @@ A public design-engineering studio and shadcn registry that distributes complete
 Purple Rain is a focused product system: plum canvas, stepped aubergine surfaces, restrained orchid decision signals, seated controls, 44px targets, visible focus, and short property-specific motion. No glass, translucency, glow, or ethereal decoration.
 
 Shadow is a compatible elevation foundation, not a replacement visual identity. It supplies six stacked depths in ringless and integrated-hairline forms while preserving the active kit's color, type, spacing, and shape.
+
+Signature Effects are isolated behaviors rather than Purple Rain components. Their purpose-built visuals stay inside the effect frame; the site chrome remains Purple Rain, and motion/audio accessibility is mandatory.
 
 ## Deploy
 

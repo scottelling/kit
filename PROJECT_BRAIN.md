@@ -16,7 +16,7 @@ visible and tactile in public, reusable by agents, and installable behind the sc
 - The tokens item includes both schema-native `cssVars` and equivalent trailing CSS rules. This is intentional: shadcn v4 overwrites variables for a directly installed theme, but preserves existing semantic variables when that theme arrives as a transitive registry dependency. The trailing rules make automatic token delivery complete in both paths.
 - Origin UI comparison uses the verified legacy namespace `@originui` mapped to its maintained source registry because it is no longer present in the current built-in directory index.
 - The public registry is unauthenticated in v1.
-- The human-facing site is a plain-language showroom. Commands, source links, file formats, and registry language stay off the public pages.
+- The human-facing site is a plain-language showroom. Commands, source, file formats, and registry language stay behind explicit “Get the code” or technical handoff actions rather than occupying the primary experience.
 - `/kit` is the canonical Purple Rain visual inventory: 138 installable pieces across Foundations, Actions, Forms, Navigation, Overlays, Feedback, Data, and Patterns, all live in light and dark.
 - `/kit/jade` is the complete JADE visual inventory with the same 138-piece production contract and its own OKLCH light/dark foundations. It preserves JADE's owned tactile DNA while using Kit's product structure, accessibility, responsive rules, and proof standards; Studio's implementation and governance do not travel with it.
 - `/kit/jade/compare` preserves the original synchronized JADE and Purple Rain launch-review test.
@@ -32,6 +32,8 @@ visible and tactile in public, reusable by agents, and installable behind the sc
 - `/projects` keeps draft, built, approved, and archived work together. The newest fifty complete project records persist on the device; older oversized records are normalized automatically, with a private-session fallback when normal browser storage is restricted.
 - `/templates` carries eight complete project families and forty connected screens: launch, product, commerce, publication, portfolio, documentation, marketplace, and campaign.
 - `/labs` opens directly into Theme Workshop, where Purple Rain or JADE is copied rather than edited. A saved copy can be shaped in plain English or with direct controls, proved on a working interface in light and dark, checked automatically, applied to the project, published as a portable public handoff, and restored to the exact source kit without deleting the copy. Brand, type, color, text, and motion labs remain alongside it.
+- `/elements` is the tactile behavior library. Its counted inventory, live playground, exact source viewer, English project prompt, and isolated public registry travel together. Knight Rider / Larson Scanner is the first item under Signature Effects.
+- Signature Effects are not Purple Rain components or new visual systems. Their purpose-bound behavior may use a locally isolated effect that would be forbidden in product chrome; the surrounding site remains Purple Rain, and every effect must pause offscreen, become static for reduced motion, start audio muted, preserve 44px controls, and install independently.
 - `/quality` exposes eighteen actual or inherited release checks and applies the approval mark automatically only when all eighteen pass.
 - `lib/studio-library.ts` is the counted Studio inventory: 110 tools across fonts (12), palettes (12), motion (16), text (12), brand (12), templates (16), prompts (16), skills (8), and agents (6).
 - `plugins/purple-rain-studio` packages eight validated abilities: Studio Director, Template Foundry, Creative Labs, Design & Ship, Brand System, Interface System, Release Proof, and Smooth Elevation.
@@ -46,8 +48,8 @@ Purple Rain is not violet wallpaper. Accent marks selection, focus, progress, an
 
 - Glass or backdrop blur
 - Translucent decorative surfaces
-- Glow or shadow blooms
+- Glow or shadow blooms in Purple Rain, JADE, foundation kits, or showroom chrome; a Signature Effect may own purpose-built light only inside its isolated effect frame
 - Decorative gradients or ambient blobs
 - Floating-card hover lift
-- Looping resting motion
+- Looping resting motion in product UI; Signature Effects must be pausable, offscreen-paused, and static under reduced motion
 - Tiny touch targets
