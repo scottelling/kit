@@ -7,7 +7,7 @@ import "./theme-workshop.css"
 
 export const metadata: Metadata = {
   title: "Theme Workshop",
-  description: "Shape a safe copy of Purple Rain or JADE in plain language, prove it on a real project, publish it, and restore the source kit exactly.",
+  description: "Shape a safe copy of Purple Rain, JADE, or OS in plain language, prove it on a real project, publish it, and restore the source kit exactly.",
 }
 
 export default function LabsPage() {

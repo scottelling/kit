@@ -321,6 +321,7 @@ export function JadeExperience() {
           <div>
             <Link href="/kit">Purple Rain <small>138 pieces</small></Link>
             <Link href="/kit/jade">JADE <small>138 pieces</small></Link>
+            <Link href="/kit/os">OS <small>147 pieces</small></Link>
             <Link href="/kit/shadow">Shadow <small>12 elevations</small></Link>
             <Link aria-current="page" href="/kit/jade/compare">Comparison <small>Live</small></Link>
           </div>

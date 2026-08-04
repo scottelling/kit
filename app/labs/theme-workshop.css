@@ -211,6 +211,11 @@
   box-shadow: inset 0 0 0 0.7rem oklch(0.24331 0.01213 178.37);
 }
 
+.theme-kit-choice button > i[data-kit="os"] {
+  background: oklch(0.60713 0.19791 259.58);
+  box-shadow: inset 0 0 0 0.7rem oklch(0.29007 0.00917 276.8);
+}
+
 .theme-kit-choice button > span {
   min-width: 0;
   display: grid;

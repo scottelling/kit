@@ -676,7 +676,7 @@
 
 .shadow-pairing > div {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-xl);
 }
 
@@ -722,6 +722,20 @@
 .shadow-pairing-card--jade button {
   background: oklch(0.45 0.095 163);
   color: oklch(0.985 0.006 158);
+}
+
+.shadow-pairing-card--os {
+  background: oklch(0.96229 0.00532 286.3);
+}
+
+.shadow-pairing-card--os .shadow-object {
+  background: oklch(1 0 0);
+  color: oklch(0.24415 0.00772 274.63);
+}
+
+.shadow-pairing-card--os button {
+  background: oklch(0.52272 0.1807 258.51);
+  color: oklch(1 0 0);
 }
 
 .shadow-rule {

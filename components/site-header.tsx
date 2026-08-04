@@ -6,6 +6,7 @@ import { usePathname, useRouter } from "next/navigation"
 import { KeyboardEvent, useEffect, useMemo, useRef, useState } from "react"
 
 import library from "@/lib/purple-rain-library.json"
+import osLibrary from "@/lib/os-library.json"
 import { studioAssets, studioCategories } from "@/lib/studio-library"
 
 const familyPlaces = [
@@ -22,6 +23,7 @@ const familyPlaces = [
 const places = [
   { label: "Open Elements", hint: "Touch complete behaviors and carry them into a project", href: "/elements", words: "elements knight rider larson scanner signature effects motion code interactive" },
   { label: "Explore Shadow", hint: "Test smooth depth and one continuous edge on real surfaces", href: "/kit/shadow", words: "shadow elevation depth ring cards dialogs menus smooth" },
+  { label: "Explore OS", hint: "Use the complete solid-surface system for desktop, phone, and widget products", href: "/kit/os", words: "os complete kit desktop phone widget window dock command themes components" },
   { label: "Explore JADE", hint: "Touch every raised, seated, and sunken JADE piece", href: "/kit/jade", words: "jade complete kit tactile mint components" },
   { label: "Compare the systems", hint: "Use the same working interface in JADE and Purple Rain", href: "/kit/jade/compare", words: "jade purple rain comparison live working interface" },
   { label: "Build a project", hint: "Turn an English brief into a working five-page system", href: "/build", words: "make create start execute project plain english" },
@@ -50,6 +52,12 @@ const places = [
     hint: item.description,
     href: `/kit#${item.name}`,
     words: `${item.category} ${item.preview}`,
+  })),
+  ...osLibrary.filter((item) => item.category === "OS Patterns").map((item) => ({
+    label: item.title,
+    hint: item.description,
+    href: `/kit/os#${item.name}`,
+    words: `os ${item.category} ${item.preview}`,
   })),
 ]
 

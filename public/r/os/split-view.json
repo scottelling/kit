@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "split-view",
+  "title": "OS Split View",
+  "description": "A sturdy multi-panel workspace that collapses by priority instead of squeezing content.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/os/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/os/patterns/split-view.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction SplitView({ className, ...props }: React.ComponentProps<\"section\">) {\n  return <section data-slot=\"split-view\" className={cn(\"grid min-h-80 min-w-0 overflow-hidden rounded-[var(--radius-sheet)] border border-border bg-background md:grid-cols-[minmax(12rem,0.7fr)_minmax(0,1.3fr)] xl:grid-cols-[minmax(12rem,0.65fr)_minmax(0,1.35fr)_minmax(14rem,0.75fr)]\", className)} {...props} />\n}\n\nfunction SplitNavigation({ className, ...props }: React.ComponentProps<\"aside\">) {\n  return <aside data-slot=\"split-navigation\" className={cn(\"min-w-0 border-b border-border bg-[var(--plane-2)] p-3 md:border-b-0 md:border-r\", className)} {...props} />\n}\n\nfunction SplitPrimary({ className, ...props }: React.ComponentProps<\"main\">) {\n  return <main data-slot=\"split-primary\" className={cn(\"min-h-0 min-w-0 overflow-auto p-4\", className)} {...props} />\n}\n\nfunction SplitInspector({ className, ...props }: React.ComponentProps<\"aside\">) {\n  return <aside data-slot=\"split-inspector\" className={cn(\"min-w-0 border-t border-border bg-[var(--plane-3)] p-3 xl:border-l xl:border-t-0\", className)} {...props} />\n}\n\nexport { SplitInspector, SplitNavigation, SplitPrimary, SplitView }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

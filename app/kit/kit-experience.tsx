@@ -2,28 +2,52 @@
 
 import { Moon, Search, Sun, X } from "lucide-react"
 import Link from "next/link"
-import { useEffect, useMemo, useRef, useState } from "react"
+import { type CSSProperties, useEffect, useMemo, useRef, useState } from "react"
 
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
+import fullOsLibrary from "@/lib/os-library.json"
+import osTokens from "@/lib/os-tokens.json"
 
 import { ComponentPreview, type LibraryItem } from "./component-preview"
+import { OsWorkbench } from "./os/os-workbench"
 
 type KitExperienceProps = {
   library: LibraryItem[]
-  system?: "purple-rain" | "jade"
+  system?: "purple-rain" | "jade" | "os"
 }
 
-const familyOrder = ["Foundations", "Actions", "Forms", "Navigation", "Overlays", "Feedback", "Data", "Patterns"]
+const familyOrder = ["Foundations", "Actions", "Forms", "Navigation", "Overlays", "Feedback", "Data", "Patterns", "OS Patterns"]
+const osThemes = [
+  { id: "default", label: "Default", source: "dark" },
+  { id: "daylight", label: "Daylight", source: "light" },
+  { id: "hacker", label: "Hacker", source: "hacker" },
+  { id: "ethereal", label: "Ethereal", source: "ethereal" },
+  { id: "paper", label: "Paper", source: "paper" },
+] as const
 
 export function KitExperience({ library, system = "purple-rain" }: KitExperienceProps) {
   const [dark, setDark] = useState(false)
+  const [osTheme, setOsTheme] = useState<(typeof osThemes)[number]["id"]>("default")
   const [query, setQuery] = useState("")
   const [family, setFamily] = useState("All")
   const [selected, setSelected] = useState<LibraryItem | null>(null)
   const dialogRef = useRef<HTMLDialogElement>(null)
   const isJade = system === "jade"
-  const systemName = isJade ? "JADE" : "Purple Rain"
+  const isOs = system === "os"
+  const systemName = isJade ? "JADE" : isOs ? "OS" : "Purple Rain"
+  const familyCount = new Set(library.map((item) => item.category)).size
+  const sharedCount = library.filter((item) => item.category !== "OS Patterns").length
+  const osCount = fullOsLibrary.length
+  const selectedOsTheme = osThemes.find((theme) => theme.id === osTheme) ?? osThemes[0]
+  const osThemeValues = selectedOsTheme.source === "light"
+    ? osTokens.light
+    : selectedOsTheme.source === "dark"
+      ? osTokens.dark
+      : osTokens.presets[selectedOsTheme.source]
+  const osStyle = isOs
+    ? Object.fromEntries(Object.entries({ ...osTokens.theme, ...osThemeValues }).map(([name, value]) => [`--${name}`, value])) as CSSProperties
+    : undefined
 
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase()
@@ -74,34 +98,43 @@ export function KitExperience({ library, system = "purple-rain" }: KitExperience
   }, [])
 
   return (
-    <div className={`kit-shell${isJade ? " jade-library" : ""}${dark ? " dark" : ""}`}>
+    <div style={osStyle} className={`kit-shell${isJade ? " jade-library" : ""}${isOs ? ` os-library os-theme-${osTheme}` : ""}${dark || (isOs && selectedOsTheme.source !== "light" && selectedOsTheme.source !== "paper") ? " dark" : ""}`}>
       <SiteHeader />
       <main className="kit-main">
         <nav className="kit-worlds" aria-label="Choose a kit">
           <span>Kits</span>
           <div>
-            <Link aria-current={!isJade ? "page" : undefined} href="/kit">Purple Rain <small>{library.length} pieces</small></Link>
-            <Link aria-current={isJade ? "page" : undefined} href="/kit/jade">JADE <small>{library.length} pieces</small></Link>
+            <Link aria-current={!isJade && !isOs ? "page" : undefined} href="/kit">Purple Rain <small>{sharedCount} pieces</small></Link>
+            <Link aria-current={isJade ? "page" : undefined} href="/kit/jade">JADE <small>{sharedCount} pieces</small></Link>
+            <Link aria-current={isOs ? "page" : undefined} href="/kit/os">OS <small>{osCount} pieces</small></Link>
             <Link href="/kit/shadow">Shadow <small>12 elevations</small></Link>
           </div>
         </nav>
         <section className="kit-index-intro" aria-labelledby="kit-title">
           <div className="kit-index-intro__copy">
             <h1 id="kit-title">The whole {systemName} kit.</h1>
-            <p>{isJade ? "Raised, seated, and sunken surfaces now cover the whole product—not only a visual pilot." : "Every piece is here. Find one by name, choose a family, then touch it before you use it."}</p>
+            <p>{isJade ? "Raised, seated, and sunken surfaces now cover the whole product—not only a visual pilot." : isOs ? "The useful OS identity now covers complete products: solid theme-wide surfaces, full-size controls, every state, and real desktop, phone, and widget structures." : "Every piece is here. Find one by name, choose a family, then touch it before you use it."}</p>
             {isJade ? <Link className="kit-compare-link" href="/kit/jade/compare">See JADE beside Purple Rain</Link> : null}
           </div>
-          <div className="kit-count" aria-label={`${library.length} pieces in 8 families`}>
+          <div className="kit-count" aria-label={`${library.length} pieces in ${familyCount} families`}>
             <strong>{library.length}</strong>
             <span>pieces</span>
             <i aria-hidden="true" />
-            <b>8 families</b>
+            <b>{familyCount} families</b>
           </div>
-          <div className="mood-picker" role="group" aria-label="Choose light or dark">
-            <button type="button" aria-pressed={!dark} onClick={() => setDark(false)}><Sun aria-hidden="true" /> Light</button>
-            <button type="button" aria-pressed={dark} onClick={() => setDark(true)}><Moon aria-hidden="true" /> Dark</button>
-          </div>
+          {isOs ? (
+            <div className="mood-picker os-theme-picker" role="group" aria-label="Choose an OS theme">
+              {osThemes.map((theme) => <button key={theme.id} type="button" aria-pressed={osTheme === theme.id} onClick={() => setOsTheme(theme.id)}>{theme.label}</button>)}
+            </div>
+          ) : (
+            <div className="mood-picker" role="group" aria-label="Choose light or dark">
+              <button type="button" aria-pressed={!dark} onClick={() => setDark(false)}><Sun aria-hidden="true" /> Light</button>
+              <button type="button" aria-pressed={dark} onClick={() => setDark(true)}><Moon aria-hidden="true" /> Dark</button>
+            </div>
+          )}
         </section>
+
+        {isOs ? <OsWorkbench /> : null}
 
         <section className="kit-finder" aria-label="Find a component">
           <label className="kit-search">
@@ -166,7 +199,7 @@ export function KitExperience({ library, system = "purple-rain" }: KitExperience
               <button type="button" onClick={closePreview}>Close</button>
             </header>
             <div className="kit-preview-stage"><ComponentPreview item={selected} expanded system={system} /></div>
-            <footer><span>Light and dark ready</span><button type="button" onClick={() => setDark((value) => !value)}>Switch to {dark ? "light" : "dark"}</button></footer>
+            <footer><span>{isOs ? "Five solid theme moods ready" : "Light and dark ready"}</span><button type="button" onClick={() => isOs ? setOsTheme(osThemes[(osThemes.findIndex((theme) => theme.id === osTheme) + 1) % osThemes.length].id) : setDark((value) => !value)}>{isOs ? "Try the next theme" : `Switch to ${dark ? "light" : "dark"}`}</button></footer>
           </div>
         ) : null}
       </dialog>

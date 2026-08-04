@@ -24,6 +24,9 @@ const lockedFoundationFragments = [
   "canvas: color(0.95859, 0.00345, 174.48)",
   "action: color(0.8063, 0.14727, 177.61)",
   "canvas: color(0.18905, 0.0094, 184.09)",
+  "canvas: color(0.96229, 0.00532, 286.3)",
+  "action: color(0.52272, 0.1807, 258.51)",
+  "canvas: color(0.26092, 0.00759, 274.66)",
 ]
 
 for (const fragment of lockedFoundationFragments) {
@@ -61,6 +64,8 @@ for (const phrase of [
 for (const marker of ["showModal()", "type=\"color\"", "type=\"range\"", "aria-live=\"polite\"", "data-share-url"]) {
   if (!workshop.includes(marker)) failures.push(`Workshop interaction proof is missing ${marker}`)
 }
+
+if (!workshop.includes('["purple-rain", "jade", "os"]')) failures.push("Theme Workshop does not offer OS as a safe source copy")
 
 for (const term of ["backdrop-filter", "backdrop-blur", "linear-gradient", "radial-gradient", "conic-gradient", "text-shadow", "filter:", "transition: all"]) {
   if (workshopCss.includes(term)) failures.push(`Theme Workshop contains banned effect: ${term}`)

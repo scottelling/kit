@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress",
+  "title": "OS Progress",
+  "description": "Progress collects a choice without hiding its state.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/os/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/progress.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type ProgressProps = React.ComponentPropsWithoutRef<\"label\">\n\nexport function Progress({ children, className, ...props }: ProgressProps) {\n  if (children !== undefined) {\n    return (<label data-slot=\"progress\" className={cn(\"grid min-w-0 gap-2\", className)} {...props}>{children}</label>)\n  }\n\n  return (\n    <label data-slot=\"progress\" className={cn(\"grid gap-3 text-sm font-semibold\", className)} {...props}>Progress<input type=\"range\" min=\"0\" max=\"100\" defaultValue=\"64\" className=\"h-11 w-full accent-primary\" /><span className=\"font-normal text-muted-foreground\">64 of 100</span></label>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

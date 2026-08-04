@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "purpose": "One production contract for every visual system distributed by Kit.",
-  "systems": ["purple-rain", "jade"],
+  "systems": ["purple-rain", "jade", "os-kit"],
   "foundation_kits": ["shadow"],
   "foundations": [
     "semantic color roles in OKLCH",
@@ -23,6 +23,17 @@
     "mobile-app-nav",
     "terminal-surface",
     "document-surface"
+  ],
+  "os_patterns": [
+    "desktop-shell",
+    "window-shell",
+    "menu-bar",
+    "dock",
+    "widget-shell",
+    "master-detail",
+    "split-view",
+    "command-bar",
+    "settings-sheet"
   ],
   "viewports": [320, 375, 414, 768, 1280, 1440],
   "theme_workshop": {

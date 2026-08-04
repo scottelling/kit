@@ -206,7 +206,7 @@ export function ThemeWorkshop({ project, update }: ThemeWorkshopProps) {
           <section className="theme-control-section">
             <div className="theme-control-section__heading"><span>Source kit</span><strong>Choose what to copy</strong></div>
             <div className="theme-kit-choice" role="group" aria-label="Choose the source kit">
-              {(["purple-rain", "jade"] as ThemeKitId[]).map((kit) => (
+              {(["purple-rain", "jade", "os"] as ThemeKitId[]).map((kit) => (
                 <button key={kit} type="button" aria-pressed={variant.baseKit === kit} onClick={() => startFrom(kit)}>
                   <i data-kit={kit} aria-hidden="true" />
                   <span><strong>{themeKitNames[kit]}</strong><small>Start a clean copy</small></span>

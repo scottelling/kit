@@ -30,9 +30,13 @@ curl -fsS https://kit.scottelling.com/r/shadow/smooth-shadow.json
 curl -fsS https://kit.scottelling.com/r/workshop/theme.json
 curl -fsS https://kit.scottelling.com/r/elements/registry.json
 curl -fsS https://kit.scottelling.com/r/elements/larson-scanner.json
+curl -fsS https://kit.scottelling.com/r/os/registry.json
+curl -fsS https://kit.scottelling.com/r/os/tokens.json
+curl -fsS https://kit.scottelling.com/r/os/window-shell.json
 curl -fsS https://kit.scottelling.com/demo
 curl -fsS https://kit.scottelling.com/labs
 curl -fsS https://kit.scottelling.com/elements
+curl -fsS https://kit.scottelling.com/kit/os
 curl -fsS https://kit.scottelling.com/studio
 curl -fsS https://kit.scottelling.com/kit/shadow
 ```

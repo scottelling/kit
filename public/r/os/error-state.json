@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "error-state",
+  "title": "OS Error State",
+  "description": "Error State makes the current state visible at a glance.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/os/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/error-state.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type ErrorStateProps = React.ComponentPropsWithoutRef<\"section\">\n\nexport function ErrorState({ children, className, ...props }: ErrorStateProps) {\n  if (children !== undefined) {\n    return (<section data-slot=\"error-state\" className={cn(\"min-w-0 rounded-[var(--radius-card)] bg-card text-card-foreground\", className)} {...props}>{children}</section>)\n  }\n\n  return (\n    <section data-slot=\"error-state\" role=\"status\" className={cn(\"grid justify-items-start gap-2\", className)} {...props}><strong>Couldn’t save</strong><p className=\"text-sm text-muted-foreground\">Try again when you’re ready.</p></section>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

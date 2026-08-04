@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dock",
+  "title": "OS Dock",
+  "description": "A reachable app launcher with an unmistakable current destination and 44-pixel targets.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/os/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/os/patterns/dock.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type DockItem = { id: string; label: string; shortLabel?: string }\n\ntype DockProps = Omit<React.ComponentProps<\"nav\">, \"onChange\"> & {\n  items?: DockItem[]\n  value?: string\n  defaultValue?: string\n  onValueChange?: (value: string) => void\n}\n\nconst defaultItems: DockItem[] = [\n  { id: \"home\", label: \"Home\", shortLabel: \"H\" },\n  { id: \"work\", label: \"Work\", shortLabel: \"W\" },\n  { id: \"search\", label: \"Search\", shortLabel: \"S\" },\n]\n\nfunction Dock({ items = defaultItems, value, defaultValue = items[0]?.id ?? \"\", onValueChange, className, ...props }: DockProps) {\n  const [internal, setInternal] = React.useState(defaultValue)\n  const selected = value ?? internal\n\n  function select(next: string) {\n    if (value === undefined) setInternal(next)\n    onValueChange?.(next)\n  }\n\n  return (\n    <nav data-slot=\"dock\" aria-label=\"Applications\" className={cn(\"flex w-fit max-w-full items-center gap-2 overflow-x-auto rounded-[var(--radius-card)] border border-border bg-card p-2 shadow-[var(--shadow-panel)]\", className)} {...props}>\n      {items.map((item) => (\n        <button key={item.id} type=\"button\" aria-current={selected === item.id ? \"page\" : undefined} onClick={() => select(item.id)} className=\"grid size-11 shrink-0 place-items-center rounded-[var(--radius-control)] border border-border bg-secondary text-sm font-bold text-secondary-foreground transition-[background-color,color,transform] duration-[var(--dur-micro)] ease-[var(--ease-standard)] hover:bg-muted active:translate-y-px aria-[current=page]:bg-primary aria-[current=page]:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring\" aria-label={item.label}>\n          {item.shortLabel ?? item.label.slice(0, 1)}\n        </button>\n      ))}\n    </nav>\n  )\n}\n\nexport { Dock }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

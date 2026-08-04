@@ -63,6 +63,7 @@ export function ShadowExperience() {
   const [ringColor, setRingColor] = useState(0)
   const [menuOpen, setMenuOpen] = useState(false)
   const [noticeVisible, setNoticeVisible] = useState(true)
+  const [pairingApproval, setPairingApproval] = useState("")
   const dialogRef = useRef<HTMLDialogElement>(null)
 
   const style: ShadowStyle = {
@@ -79,6 +80,7 @@ export function ShadowExperience() {
           <div>
             <Link href="/kit">Purple Rain <small>138 pieces</small></Link>
             <Link href="/kit/jade">JADE <small>138 pieces</small></Link>
+            <Link href="/kit/os">OS <small>147 pieces</small></Link>
             <Link aria-current="page" href="/kit/shadow">Shadow <small>{shadowRecipeCount} elevations</small></Link>
           </div>
         </nav>
@@ -190,10 +192,11 @@ export function ShadowExperience() {
         </section>
 
         <section className="shadow-pairing" aria-labelledby="shadow-pairing-title">
-          <header><span>Works across kits</span><h2 id="shadow-pairing-title">Depth travels. Identity stays put.</h2><p>Shadow strengthens elevation without replacing Purple Rain or JADE color, type, shape, or interaction rules.</p></header>
+          <header><span>Works across kits</span><h2 id="shadow-pairing-title">Depth travels. Identity stays put.</h2><p>Shadow strengthens elevation without replacing Purple Rain, JADE, or OS color, type, shape, or interaction rules.</p></header>
           <div>
-            <article className="shadow-pairing-card shadow-pairing-card--purple"><ElevatedSurface depth="md" ring><span>Purple Rain</span><strong>Decision card</strong><p>Orchid still marks the action.</p><button type="button">Approve direction</button></ElevatedSurface></article>
-            <article className="shadow-pairing-card shadow-pairing-card--jade"><ElevatedSurface depth="md" ring><span>JADE</span><strong>Decision card</strong><p>Mint still marks the action.</p><button type="button">Approve direction</button></ElevatedSurface></article>
+            <article className="shadow-pairing-card shadow-pairing-card--purple"><ElevatedSurface depth="md" ring><span>Purple Rain</span><strong>Decision card</strong><p>Orchid still marks the action.</p><button type="button" aria-pressed={pairingApproval === "Purple Rain"} onClick={() => setPairingApproval("Purple Rain")}>{pairingApproval === "Purple Rain" ? "Direction approved" : "Approve direction"}</button></ElevatedSurface></article>
+            <article className="shadow-pairing-card shadow-pairing-card--jade"><ElevatedSurface depth="md" ring><span>JADE</span><strong>Decision card</strong><p>Mint still marks the action.</p><button type="button" aria-pressed={pairingApproval === "JADE"} onClick={() => setPairingApproval("JADE")}>{pairingApproval === "JADE" ? "Direction approved" : "Approve direction"}</button></ElevatedSurface></article>
+            <article className="shadow-pairing-card shadow-pairing-card--os"><ElevatedSurface depth="md" ring><span>OS</span><strong>Decision card</strong><p>Blue still marks the action.</p><button type="button" aria-pressed={pairingApproval === "OS"} onClick={() => setPairingApproval("OS")}>{pairingApproval === "OS" ? "Direction approved" : "Approve direction"}</button></ElevatedSurface></article>
           </div>
         </section>
 

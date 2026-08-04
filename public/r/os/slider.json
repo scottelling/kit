@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider",
+  "title": "OS Slider",
+  "description": "Slider collects a choice without hiding its state.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/os/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/slider.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type SliderProps = React.ComponentPropsWithoutRef<\"label\">\n\nexport function Slider({ children, className, ...props }: SliderProps) {\n  if (children !== undefined) {\n    return (<label data-slot=\"slider\" className={cn(\"grid min-w-0 gap-2\", className)} {...props}>{children}</label>)\n  }\n\n  return (\n    <label data-slot=\"slider\" className={cn(\"grid gap-3 text-sm font-semibold\", className)} {...props}>Slider<input type=\"range\" min=\"0\" max=\"100\" defaultValue=\"64\" className=\"h-11 w-full accent-primary\" /><span className=\"font-normal text-muted-foreground\">64 of 100</span></label>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

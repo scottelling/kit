@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "shadow-guide",
+  "title": "OS Shadow Guide",
+  "description": "See how Shadow Guide shapes every screen.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/os/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/shadow-guide.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type ShadowGuideProps = React.ComponentPropsWithoutRef<\"div\">\n\nexport function ShadowGuide({ children, className, ...props }: ShadowGuideProps) {\n  if (children !== undefined) {\n    return (<div data-slot=\"shadow-guide\" className={cn(\"min-w-0\", className)} {...props}>{children}</div>)\n  }\n\n  return (\n    <div data-slot=\"shadow-guide\" className={cn(\"flex flex-wrap gap-5\", className)} {...props}><span className=\"size-24 rounded-[var(--radius-card)] bg-card shadow-[var(--shadow-control)]\" /><span className=\"size-24 rounded-[var(--radius-card)] bg-card shadow-[var(--shadow-panel)]\" /></div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

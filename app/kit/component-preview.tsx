@@ -18,6 +18,16 @@ import {
 import type { ReactNode } from "react"
 import { useState } from "react"
 
+import { CommandBar } from "@/registry/os/patterns/command-bar"
+import { DesktopDockArea, DesktopMenuArea, DesktopShell, DesktopWorkspace } from "@/registry/os/patterns/desktop-shell"
+import { Dock } from "@/registry/os/patterns/dock"
+import { MasterDetail } from "@/registry/os/patterns/master-detail"
+import { MenuBar } from "@/registry/os/patterns/menu-bar"
+import { SettingsSheet } from "@/registry/os/patterns/settings-sheet"
+import { SplitInspector, SplitNavigation, SplitPrimary, SplitView } from "@/registry/os/patterns/split-view"
+import { WidgetShell } from "@/registry/os/patterns/widget-shell"
+import { WindowContent, WindowShell, WindowStatus, WindowTitleBar } from "@/registry/os/patterns/window-shell"
+
 export type LibraryItem = {
   name: string
   title: string
@@ -29,7 +39,7 @@ export type LibraryItem = {
 type ComponentPreviewProps = {
   item: LibraryItem
   expanded?: boolean
-  system?: "purple-rain" | "jade"
+  system?: "purple-rain" | "jade" | "os"
 }
 
 const samplePeople = ["MR", "ST", "EO"]
@@ -44,7 +54,7 @@ export function ComponentPreview({ item, expanded = false, system = "purple-rain
   const [on, setOn] = useState(true)
   const [open, setOpen] = useState(false)
   const [copied, setCopied] = useState(false)
-  const systemName = system === "jade" ? "JADE" : "Purple Rain"
+  const systemName = system === "jade" ? "JADE" : system === "os" ? "OS" : "Purple Rain"
   const [text, setText] = useState(systemName)
   const [amount, setAmount] = useState(64)
   const { name, preview, title } = item
@@ -324,7 +334,7 @@ export function ComponentPreview({ item, expanded = false, system = "purple-rain
       break
 
     case "app-shell":
-      sample = <div className="mini-app-shell"><aside>{system === "jade" ? "J" : "PR"}</aside><header>Release</header><main><strong>Today</strong><span>Three things need you.</span></main></div>
+      sample = <div className="mini-app-shell"><aside>{system === "jade" ? "J" : system === "os" ? "OS" : "PR"}</aside><header>Release</header><main><strong>Today</strong><span>Three things need you.</span></main></div>
       break
     case "auth":
     case "sign-in":
@@ -358,7 +368,7 @@ export function ComponentPreview({ item, expanded = false, system = "purple-rain
       sample = <div className="mini-notifications"><header><strong>Notifications</strong><span>3 new</span></header>{["Mara approved the page", "Sam left a note", "Elena shared a file"].map((label, index) => <button type="button" key={label} onClick={() => setActive(index)} aria-current={active === index ? "true" : undefined}><i aria-hidden="true" />{label}</button>)}</div>
       break
     case "application-shell":
-      sample = <div className="mini-application-system"><aside><b>{system === "jade" ? "J" : "PR"}</b>{["Home", "Work", "People"].map((label, index) => <button key={label} type="button" aria-current={active === index ? "page" : undefined} onClick={() => setActive(index)}>{label}</button>)}</aside><section><header><strong>Launch room</strong><button type="button">Share</button></header><main><span>Current decision</span><strong>{["Home direction", "Release checklist", "Review team"][active]}</strong><p>The same product structure stays clear in every visual system.</p></main><footer><span>All changes saved</span><b>3 online</b></footer></section></div>
+      sample = <div className="mini-application-system"><aside><b>{system === "jade" ? "J" : system === "os" ? "OS" : "PR"}</b>{["Home", "Work", "People"].map((label, index) => <button key={label} type="button" aria-current={active === index ? "page" : undefined} onClick={() => setActive(index)}>{label}</button>)}</aside><section><header><strong>Launch room</strong><button type="button">Share</button></header><main><span>Current decision</span><strong>{["Home direction", "Release checklist", "Review team"][active]}</strong><p>The same product structure stays clear in every visual system.</p></main><footer><span>All changes saved</span><b>3 online</b></footer></section></div>
       break
     case "workspace-tree":
       sample = <div className="mini-workspace-tree"><button type="button" onClick={() => setOpen((value) => !value)} aria-expanded={open}><ChevronDown />Product</button>{open ? <div>{["Brief", "Research", "Release"].map((label, index) => <button key={label} type="button" aria-current={active === index ? "true" : undefined} onClick={() => setActive(index)}>{label}</button>)}</div> : null}</div>
@@ -386,6 +396,33 @@ export function ComponentPreview({ item, expanded = false, system = "purple-rain
       break
     case "document-surface":
       sample = <article className="mini-document-system"><header><span>DESIGN STANDARD</span><strong>Instant legibility</strong><p>The current object and next action remain obvious.</p></header><section><b>01</b><p>Use solid surfaces and clear hierarchy. Keep motion purposeful.</p></section></article>
+      break
+    case "desktop-shell":
+      sample = <DesktopShell className="min-h-64"><DesktopMenuArea><strong>Workspace</strong><span className="text-xs text-muted-foreground">Saved</span></DesktopMenuArea><DesktopWorkspace><WindowShell className="min-h-44"><WindowTitleBar title="Launch room" /><WindowContent><strong>Current decision</strong><p className="mt-2 text-sm text-muted-foreground">Approve the release direction.</p></WindowContent><WindowStatus><span>Ready</span><span>3 online</span></WindowStatus></WindowShell></DesktopWorkspace><DesktopDockArea><Dock /></DesktopDockArea></DesktopShell>
+      break
+    case "window-shell":
+      sample = <WindowShell className="min-h-56"><WindowTitleBar title="Project window"><button type="button" onClick={() => setOpen((value) => !value)} aria-pressed={open} className="size-11 rounded-[var(--radius-control)] hover:bg-muted" aria-label="Window menu">•••</button></WindowTitleBar><WindowContent><strong>Useful work stays in front.</strong><p className="mt-2 text-sm text-muted-foreground">{open ? "The window menu is ready." : "Window chrome is quiet, solid, and reachable."}</p></WindowContent><WindowStatus><span>All changes saved</span><span>Ready</span></WindowStatus></WindowShell>
+      break
+    case "menu-bar":
+      sample = <MenuBar />
+      break
+    case "dock":
+      sample = <Dock />
+      break
+    case "widget-shell":
+      sample = <WidgetShell title="Release" meta="One decision needs you" action={<button type="button" onClick={() => setCopied((value) => !value)} className="size-11 rounded-[var(--radius-control)] bg-primary font-bold text-primary-foreground" aria-label="Open release">→</button>}><strong className="block text-2xl">{copied ? "100%" : "84%"}</strong><span className="text-sm text-muted-foreground">{copied ? "Release opened" : "Ready to approve"}</span></WidgetShell>
+      break
+    case "master-detail":
+      sample = <MasterDetail className="min-h-72" />
+      break
+    case "split-view":
+      sample = <SplitView className="min-h-60"><SplitNavigation><strong>Projects</strong><p className="mt-2 text-sm text-muted-foreground">Launch<br />Website<br />Archive</p></SplitNavigation><SplitPrimary><strong>Launch room</strong><p className="mt-2 text-sm text-muted-foreground">The primary work gets the most space.</p></SplitPrimary><SplitInspector><strong>Details</strong><p className="mt-2 text-sm text-muted-foreground">Owner · Scott</p></SplitInspector></SplitView>
+      break
+    case "command-bar":
+      sample = <CommandBar />
+      break
+    case "settings-sheet":
+      sample = <SettingsSheet />
       break
     default:
       sample = <div className="mini-fallback">{title}</div>

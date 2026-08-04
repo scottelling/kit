@@ -54,6 +54,12 @@ export default function Home() {
               <span>Every foundation, control, state, data view, and product pattern.</span>
               <ArrowRight aria-hidden="true" />
             </Link>
+            <Link href="/kit/os">
+              <span className="home-choice-list__number">OS system</span>
+              <strong>Build for desktop and phone</strong>
+              <span>Solid themes, windows, widgets, workspaces, commands, and the full shared library.</span>
+              <ArrowRight aria-hidden="true" />
+            </Link>
             <Link href="/elements">
               <span className="home-choice-list__number">Signature effects</span>
               <strong>Touch complete behaviors</strong>

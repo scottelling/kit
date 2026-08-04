@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "floating-action-button",
+  "title": "OS Floating Action Button",
+  "description": "Floating Action Button keeps the next move clear and touchable.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/os/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/floating-action-button.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type FloatingActionButtonProps = React.ComponentPropsWithoutRef<\"button\">\n\nexport function FloatingActionButton({ children, className, ...props }: FloatingActionButtonProps) {\n  const [pressed, setPressed] = React.useState(false)\n  if (children !== undefined) {\n    return (<button type=\"button\" data-slot=\"floating-action-button\" className={cn(\"inline-flex min-h-11 items-center justify-center rounded-[var(--radius-control)] px-4 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-ring\", className)} {...props}>{children}</button>)\n  }\n\n  return (\n    <button data-slot=\"floating-action-button\" type=\"button\" onClick={() => setPressed((value) => !value)} className={cn(\"rounded-[var(--radius-control)] border border-border bg-card text-card-foreground shadow-[var(--shadow-control)] min-h-11 px-4 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background active:translate-y-px\", className)} {...props}>{pressed ? \"Pressed\" : \"Floating Action Button\"}</button>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

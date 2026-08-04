@@ -1,4 +1,4 @@
-export type ThemeKitId = "purple-rain" | "jade"
+export type ThemeKitId = "purple-rain" | "jade" | "os"
 export type WorkshopMode = "light" | "dark"
 export type ThemeDepth = "quiet" | "tactile" | "frontmost"
 export type ThemeTypeStyle = "product" | "editorial" | "technical"
@@ -49,6 +49,7 @@ const color = (l: number, c: number, h: number, a?: number): OklchColor => ({ l,
 export const themeKitNames: Record<ThemeKitId, string> = {
   "purple-rain": "Purple Rain",
   jade: "JADE",
+  os: "OS",
 }
 
 export const themeBases: Record<ThemeKitId, { light: ThemeModeTokens; dark: ThemeModeTokens; radius: number; depth: ThemeDepth; typeStyle: ThemeTypeStyle }> = {
@@ -126,6 +127,43 @@ export const themeBases: Record<ThemeKitId, { light: ThemeModeTokens; dark: Them
     depth: "tactile",
     typeStyle: "product",
   },
+  os: {
+    light: {
+      canvas: color(0.96229, 0.00532, 286.3),
+      ink: color(0.24415, 0.00772, 274.63),
+      surface: color(1, 0, 0),
+      raised: color(0.95628, 0.00532, 286.3),
+      action: color(0.52272, 0.1807, 258.51),
+      actionInk: color(1, 0, 0),
+      mutedInk: color(0.48, 0.012, 278),
+      line: color(0.82, 0.009, 278),
+      input: color(0.9206, 0.00807, 286.24),
+      focus: color(0.52272, 0.1807, 258.51),
+      positive: color(0.53434, 0.10204, 147.98),
+      positiveInk: color(1, 0, 0),
+      danger: color(0.53098, 0.15508, 32.8),
+      dangerInk: color(1, 0, 0),
+    },
+    dark: {
+      canvas: color(0.26092, 0.00759, 274.66),
+      ink: color(0.94, 0.008, 275),
+      surface: color(0.29007, 0.00917, 276.8),
+      raised: color(0.32204, 0.00893, 276.86),
+      action: color(0.60713, 0.19791, 259.58),
+      actionInk: color(0.16, 0.03, 258),
+      mutedInk: color(0.7, 0.01, 276),
+      line: color(0.48, 0.01, 276),
+      input: color(0.24415, 0.00772, 274.63),
+      focus: color(0.72, 0.15, 259),
+      positive: color(0.71859, 0.183, 148.48),
+      positiveInk: color(0.18, 0.035, 148),
+      danger: color(0.69345, 0.19653, 26.69),
+      dangerInk: color(0.2, 0.03, 27),
+    },
+    radius: 9,
+    depth: "quiet",
+    typeStyle: "product",
+  },
 }
 
 const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value))
@@ -185,7 +223,7 @@ function safeMode(value: unknown, fallback: ThemeModeTokens): ThemeModeTokens {
 export function normalizeThemeVariant(value: unknown): ThemeVariant | null {
   if (!value || typeof value !== "object") return null
   const input = value as Partial<ThemeVariant>
-  const baseKit: ThemeKitId = input.baseKit === "jade" ? "jade" : "purple-rain"
+  const baseKit: ThemeKitId = input.baseKit === "jade" || input.baseKit === "os" ? input.baseKit : "purple-rain"
   const base = themeBases[baseKit]
   const now = new Date().toISOString()
   return {
