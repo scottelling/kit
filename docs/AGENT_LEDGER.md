@@ -1,5 +1,20 @@
 # Agent Ledger
 
+## 2026-08-04 — Complete OS Kit system
+
+- Agent: Codex
+- Scope: recover the useful OS design language from `os.scottelling.com/ui-kit.md` and the local OS source without importing its partial demo structure, undersized controls, glass, glow, or hardcoded styling
+- Source boundary: preserved OS's semantic theme roles, three text levels, user accent, honest state model, desktop/phone/widget relationship, and Default, Daylight, Hacker, Ethereal, and Paper moods; rebuilt every color role in OKLCH, interpreted Ethereal as solid indigo, raised every effective touch target to at least 44px, and documented the exact source commit in `docs/OS-KIT-INTAKE.md`
+- Complete system: OS now carries the same 138 production pieces as Purple Rain and JADE plus nine OS-native structures for desktops, windows, menus, docks, widgets, master-detail work, split workspaces, commands, and settings; 147 installable pieces proves complete shared coverage plus the OS structures, not that every piece should be visually unique
+- Product proof: `/kit/os` shows all 147 pieces as working specimens and includes one shared task rendered as desktop, phone, and widget; selection and completion performed in one view update the other two immediately
+- Themes and customization: all five OS moods are visible and switchable; OS is also a safe source in Theme Workshop, where all six reading and action checks pass before a copy can be published
+- Responsive and interaction proof: the live page passed 320, 375, 414, 768, and 1280 pixel checks with zero page overflow and zero effective touch targets below 44px; theme switching and connected desktop/phone/widget task completion passed; the clean production kit and Workshop browser consoles report no warnings or errors
+- Build proof: Purple Rain, JADE, OS, Shadow, and Elements registries validate and build; OS source/public parity, automatic theme delivery, OKLCH-only color roles, readable contrast, banned-effect checks, the shared three-system contract, Theme Workshop, ESLint, TypeScript, local production build, and Vercel production build pass
+- Live downstream proof: a clean outside Next project installed `window-shell` from `https://kit.scottelling.com/r/os/window-shell.json`; installation created exactly `components/ui/window-shell.tsx` and merged the complete light, dark, Default, Daylight, Hacker, Ethereal, and Paper foundations into `app/globals.css`; no package, lock, or configuration file changed, the component matches the public payload, and the consumer production build passed
+- Live proof: `/kit/os`, `/r/os/registry.json`, `/r/os/tokens.json`, `/r/os/window-shell.json`, `/labs`, `/kit`, `/kit/jade`, `/kit/shadow`, `/elements`, and `/r/button.json` return `200`
+- Deployment: Vercel production `dpl_8w3AoTL1heGudSeDWSFUCEF1hixS`, aliased to `kit.scottelling.com`; product commit `f0f37ae` pushed to `scottelling/kit`
+- Open loops: none
+
 ## 2026-08-01 — Knight Rider Elements Library
 
 - Agent: Codex
