@@ -4,6 +4,7 @@ import path from "node:path"
 const root = process.cwd()
 const registry = JSON.parse(await readFile(path.join(root, "registry", "os", "registry.json"), "utf8"))
 const library = JSON.parse(await readFile(path.join(root, "lib", "os-library.json"), "utf8"))
+const universal = JSON.parse(await readFile(path.join(root, "lib", "universal-library.json"), "utf8"))
 const tokens = JSON.parse(await readFile(path.join(root, "lib", "os-tokens.json"), "utf8"))
 const failures = []
 const tokenUrl = "https://kit.scottelling.com/r/os/tokens.json"
@@ -44,7 +45,7 @@ function contrast(first, second) {
 if (library.length !== 147) failures.push(`OS library has ${library.length} pieces instead of 147`)
 if (new Set(library.map((item) => item.name)).size !== library.length) failures.push("OS library names are not unique")
 if (new Set(library.map((item) => item.category)).size !== 9) failures.push("OS library does not contain exactly nine families")
-if (uiItems.length !== library.length) failures.push(`OS registry has ${uiItems.length} UI items; expected ${library.length}`)
+if (uiItems.length !== universal.length) failures.push(`OS registry has ${uiItems.length} UI items; expected ${universal.length}`)
 
 for (const name of nativeNames) {
   if (!library.some((item) => item.name === name && item.category === "OS Patterns")) failures.push(`${name} is missing from the counted OS patterns`)
@@ -91,7 +92,7 @@ for (const item of uiItems) {
   }
 }
 
-for (const name of ["registry", "tokens", ...library.map((item) => item.name)]) {
+for (const name of ["registry", "tokens", ...universal.map((item) => item.name)]) {
   try {
     const emitted = JSON.parse(await readFile(path.join(root, "public", "r", "os", `${name}.json`), "utf8"))
     if (!emitted.$schema) failures.push(`os/${name}.json is missing its registry schema`)
@@ -116,7 +117,7 @@ for (const file of inspectedFiles) {
 const page = await readFile(path.join(root, "app", "kit", "os", "page.tsx"), "utf8")
 const experience = await readFile(path.join(root, "app", "kit", "kit-experience.tsx"), "utf8")
 const header = await readFile(path.join(root, "components", "site-header.tsx"), "utf8")
-if (!page.includes("os-library.json")) failures.push("OS showroom is not driven by its counted inventory")
+if (!page.includes("universal-library.json")) failures.push("OS showroom is not driven by the universal inventory")
 if (!experience.includes("<OsWorkbench")) failures.push("OS showroom is missing the shared desktop, phone, and widget proof")
 if (!experience.includes("osThemes.map")) failures.push("OS showroom does not expose every theme mood")
 if (!header.includes('item.category === "OS Patterns"')) failures.push("OS-native patterns are missing from the plain-language finder")
@@ -126,4 +127,4 @@ if (failures.length) {
   process.exit(1)
 }
 
-console.log("Verified OS: complete shared library, nine OS-native structures, five solid theme moods, 44-pixel controls, OKLCH foundations, zero unapproved dependencies, public output, and one shared desktop/phone/widget proof.")
+console.log("Verified OS: complete universal library, nine owned OS structures, opt-in creative patterns, five solid theme moods, 44-pixel controls, OKLCH foundations, zero unapproved dependencies, and public output.")

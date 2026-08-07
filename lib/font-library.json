@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "families": [
+    { "id": "relay", "name": "Relay Sans", "kind": "Sans", "variable": "--font-library-relay", "source": "Bundled · OFL", "bestFor": "Purple Rain products, studios, and systems", "voice": "Direct, warm, and immediately readable", "weights": [400, 500, 600, 700] },
+    { "id": "outfit", "name": "Outfit", "kind": "Sans", "variable": "--font-library-outfit", "source": "Google Fonts · OFL", "bestFor": "Creative tools and compact workspaces", "voice": "Geometric, calm, and friendly", "weights": [300, 400, 500, 600, 700, 800] },
+    { "id": "inter", "name": "Inter", "kind": "Sans", "variable": "--font-library-inter", "source": "Google Fonts · OFL", "bestFor": "Dense products and dependable controls", "voice": "Neutral, efficient, and highly legible", "weights": [400, 500, 600, 700] },
+    { "id": "space-grotesk", "name": "Space Grotesk", "kind": "Sans", "variable": "--font-library-space-grotesk", "source": "Google Fonts · OFL", "bestFor": "Technical products with character", "voice": "Structured, distinctive, and compact", "weights": [400, 500, 600, 700] },
+    { "id": "bricolage", "name": "Bricolage Grotesque", "kind": "Sans", "variable": "--font-library-bricolage", "source": "Google Fonts · OFL", "bestFor": "Learning, community, and expressive products", "voice": "Confident, useful, and human", "weights": [400, 500, 600, 700, 800] },
+    { "id": "ibm-plex", "name": "IBM Plex Sans", "kind": "Sans", "variable": "--font-library-ibm-plex", "source": "Google Fonts · OFL", "bestFor": "Research, systems, and technical information", "voice": "Engineered, open, and credible", "weights": [400, 500, 600, 700] },
+    { "id": "instrument-serif", "name": "Instrument Serif", "kind": "Serif", "variable": "--font-library-instrument-serif", "source": "Google Fonts · OFL", "bestFor": "Campaign statements and cultural work", "voice": "Quiet, sharp, and editorial", "weights": [400] },
+    { "id": "source-serif", "name": "Source Serif 4", "kind": "Serif", "variable": "--font-library-source-serif", "source": "Google Fonts · OFL", "bestFor": "Long reading and trusted services", "voice": "Measured, sturdy, and accessible", "weights": [400, 500, 600, 700] },
+    { "id": "newsreader", "name": "Newsreader", "kind": "Serif", "variable": "--font-library-newsreader", "source": "Google Fonts · OFL", "bestFor": "Publications and content-rich products", "voice": "Contemporary, literary, and screen-aware", "weights": [400, 500, 600, 700] },
+    { "id": "fraunces", "name": "Fraunces", "kind": "Serif", "variable": "--font-library-fraunces", "source": "Google Fonts · OFL", "bestFor": "Hospitality, food, and expressive publishing", "voice": "Warm, memorable, and tactile", "weights": [400, 500, 600, 700] },
+    { "id": "jetbrains-mono", "name": "JetBrains Mono", "kind": "Mono", "variable": "--font-library-jetbrains", "source": "Google Fonts · OFL", "bestFor": "Code, timing, measurements, and machine-readable facts", "voice": "Precise, compact, and technical", "weights": [400, 500, 600, 700] }
+  ],
+  "pairings": [
+    { "id": "purple-rain-core", "name": "Purple Rain Core", "heading": "relay", "body": "relay", "mono": "jetbrains-mono", "bestFor": "Complete product systems" },
+    { "id": "animation-studio", "name": "Animation Studio", "heading": "outfit", "body": "outfit", "mono": "jetbrains-mono", "bestFor": "Creative workspaces" },
+    { "id": "product-editorial", "name": "Product Editorial", "heading": "newsreader", "body": "relay", "mono": "jetbrains-mono", "bestFor": "Content-rich products" },
+    { "id": "quiet-campaign", "name": "Quiet Campaign", "heading": "instrument-serif", "body": "relay", "mono": "jetbrains-mono", "bestFor": "Campaigns and cultural work" },
+    { "id": "technical-character", "name": "Technical Character", "heading": "space-grotesk", "body": "inter", "mono": "jetbrains-mono", "bestFor": "Developer and AI products" },
+    { "id": "modern-journal", "name": "Modern Journal", "heading": "newsreader", "body": "ibm-plex", "mono": "jetbrains-mono", "bestFor": "Research and publications" },
+    { "id": "warm-authority", "name": "Warm Authority", "heading": "fraunces", "body": "inter", "mono": "jetbrains-mono", "bestFor": "Hospitality and considered commerce" },
+    { "id": "trusted-service", "name": "Trusted Service", "heading": "source-serif", "body": "inter", "mono": "jetbrains-mono", "bestFor": "Civic, finance, and healthcare" }
+  ],
+  "rules": [
+    "Choose one reading family, one display family only when it adds a real voice, and one mono family only when the product contains machine-readable facts.",
+    "Load only the selected families and weights in a finished project.",
+    "Test headings, paragraphs, buttons, fields, tables, long labels, numbers, and phone layouts before approval.",
+    "Do not choose a typeface from one oversized headline alone."
+  ]
+}

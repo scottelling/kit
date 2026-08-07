@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "window-shell",
+  "title": "Animation Studio Window Shell",
+  "description": "A solid, resizable-window frame with clear title, actions, content, and status regions.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/animation/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/os/patterns/window-shell.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction WindowShell({ className, ...props }: React.ComponentProps<\"section\">) {\n  return <section data-slot=\"window-shell\" className={cn(\"grid min-h-80 grid-rows-[auto_minmax(0,1fr)_auto] overflow-hidden rounded-[var(--radius-sheet)] border border-border bg-card text-card-foreground shadow-[var(--shadow-panel)]\", className)} {...props} />\n}\n\nfunction WindowTitleBar({ title, children, className, ...props }: React.ComponentProps<\"header\"> & { title: string }) {\n  return (\n    <header data-slot=\"window-title-bar\" className={cn(\"grid min-h-11 grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-2 border-b border-border bg-[var(--plane-2)] px-2\", className)} {...props}>\n      <span aria-hidden=\"true\" />\n      <strong className=\"truncate text-sm\">{title}</strong>\n      <div className=\"flex min-w-0 justify-end gap-2\">{children}</div>\n    </header>\n  )\n}\n\nfunction WindowContent({ className, ...props }: React.ComponentProps<\"div\">) {\n  return <div data-slot=\"window-content\" className={cn(\"min-h-0 min-w-0 overflow-auto p-4\", className)} {...props} />\n}\n\nfunction WindowStatus({ className, ...props }: React.ComponentProps<\"footer\">) {\n  return <footer data-slot=\"window-status\" className={cn(\"flex min-h-11 items-center justify-between gap-3 border-t border-border px-3 text-xs text-muted-foreground\", className)} {...props} />\n}\n\nexport { WindowContent, WindowShell, WindowStatus, WindowTitleBar }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -1158,6 +1158,51 @@
   border-top: var(--rule-hair) solid var(--border);
 }
 
+.studio-resource-shelf {
+  display: grid;
+  gap: var(--rule-hair);
+  overflow: hidden;
+  border: var(--rule-hair) solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--border);
+}
+
+.studio-resource-shelf > a {
+  min-width: 0;
+  min-height: 6.5rem;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--card);
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.studio-resource-shelf > a > svg:first-child {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--primary);
+}
+
+.studio-resource-shelf > a > svg:last-child {
+  width: 1rem;
+  height: 1rem;
+  color: var(--muted-foreground);
+}
+
+.studio-resource-shelf span {
+  min-width: 0;
+  display: grid;
+  gap: var(--space-xs);
+}
+
+.studio-resource-shelf small {
+  color: var(--muted-foreground);
+  line-height: 1.45;
+}
+
 .direction-list > button:active,
 .system-receipt > button:active,
 .asset-ledger section button:active,
@@ -1174,6 +1219,10 @@
   .asset-ledger section button:hover,
   .team-card:hover,
   .stage-rail a:hover {
+    background: var(--plane-1);
+  }
+
+  .studio-resource-shelf > a:hover {
     background: var(--plane-1);
   }
 
@@ -1203,6 +1252,10 @@
   .asset-ledger {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: var(--space-xl);
+  }
+
+  .studio-resource-shelf {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .asset-ledger > section:nth-child(3n + 1) {

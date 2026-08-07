@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel",
+  "title": "Animation Studio Carousel",
+  "description": "Carousel turns information into a readable, useful object.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/animation/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/carousel.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type CarouselProps = React.ComponentPropsWithoutRef<\"section\">\n\nexport function Carousel({ children, className, ...props }: CarouselProps) {\n  if (children !== undefined) {\n    return (<section data-slot=\"carousel\" className={cn(\"min-w-0\", className)} {...props}>{children}</section>)\n  }\n\n  return (\n    <section data-slot=\"carousel\" className={cn(\"grid grid-cols-[auto_1fr_auto] items-stretch gap-2\", className)} {...props}><button className=\"w-11 rounded-[var(--radius-control)] bg-muted\" type=\"button\">‹</button><div className=\"rounded-[var(--radius-control)] border border-border bg-card text-card-foreground shadow-[var(--shadow-control)] grid min-h-28 place-items-center p-4\"><strong>First idea</strong></div><button className=\"w-11 rounded-[var(--radius-control)] bg-muted\" type=\"button\">›</button></section>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

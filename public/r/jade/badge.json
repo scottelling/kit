@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "badge",
   "title": "JADE Badge",
-  "description": "A restrained status badge that keeps semantic meaning visible without decorative pills.",
+  "description": "Badge makes the current state visible at a glance.",
   "dependencies": [
     "class-variance-authority"
   ],

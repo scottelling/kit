@@ -1,0 +1,4061 @@
+{
+  "schema_version": "1.0",
+  "project_root": "/Users/scott/ScottAI/01_Active_Projects/kit",
+  "generated_at": "2026-08-04T20:16:41Z",
+  "scope": {
+    "source_extensions": [
+      ".cjs",
+      ".css",
+      ".js",
+      ".jsx",
+      ".less",
+      ".mjs",
+      ".py",
+      ".sass",
+      ".scss",
+      ".ts",
+      ".tsx"
+    ],
+    "excluded_directories": [
+      ".git",
+      ".hg",
+      ".mypy_cache",
+      ".next",
+      ".nuxt",
+      ".output",
+      ".pytest_cache",
+      ".ruff_cache",
+      ".svelte-kit",
+      ".svn",
+      ".turbo",
+      ".venv",
+      ".vercel",
+      ".wrangler",
+      "__pycache__",
+      "build",
+      "coverage",
+      "dist",
+      "node_modules",
+      "out",
+      "outputs",
+      "target",
+      "vendor",
+      "venv"
+    ],
+    "source_files": 224,
+    "source_loc": 21033,
+    "source_bytes": 817790
+  },
+  "summary": {
+    "candidates": 193,
+    "proof_eligible": 1,
+    "potential_removable_loc": 5631,
+    "potential_removable_bytes": 320824,
+    "by_category": {
+      "orphan-file": 166,
+      "unused-dependency": 6,
+      "unused-export": 21,
+      "duplicate-file": 0,
+      "commented-code": 0
+    }
+  },
+  "candidates": [
+    {
+      "category": "orphan-file",
+      "subject": "app/labs/theme-workshop.tsx",
+      "path": "app/labs/theme-workshop.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 330,
+      "bytes": 20596,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: app/labs/theme-workshop, app/labs/theme-workshop.tsx, theme-workshop, theme-workshop.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-001"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "components/copy-command.tsx",
+      "path": "components/copy-command.tsx",
+      "confidence": "high",
+      "initial_status": "REVIEW",
+      "risk": "low",
+      "proof_eligible": true,
+      "loc": 61,
+      "bytes": 1773,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability."
+      ],
+      "id": "ROT-002"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "components/project-canvas.tsx",
+      "path": "components/project-canvas.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 64,
+      "bytes": 3311,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: components/project-canvas, components/project-canvas.tsx, project-canvas, project-canvas.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-003"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "components/site-footer.tsx",
+      "path": "components/site-footer.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 8,
+      "bytes": 215,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: components/site-footer, site-footer."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-004"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "components/site-header.tsx",
+      "path": "components/site-header.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 199,
+      "bytes": 9006,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: components/site-header, components/site-header.tsx, site-header, site-header.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-005"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "components/studio-nav.tsx",
+      "path": "components/studio-nav.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 25,
+      "bytes": 593,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: components/studio-nav, studio-nav."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-006"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "components/ui/badge.tsx",
+      "path": "components/ui/badge.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 46,
+      "bytes": 1496,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: badge, badge.tsx, components/ui/badge."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-007"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "components/ui/button.tsx",
+      "path": "components/ui/button.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 58,
+      "bytes": 1867,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: button, button.tsx, components/ui/button, components/ui/button.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-008"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "components/ui/card.tsx",
+      "path": "components/ui/card.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 103,
+      "bytes": 2630,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: card, card.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-009"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "components/ui/dialog.tsx",
+      "path": "components/ui/dialog.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 141,
+      "bytes": 3873,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: components/ui/dialog, dialog, dialog.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-010"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "components/ui/input.tsx",
+      "path": "components/ui/input.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 25,
+      "bytes": 1394,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: components/ui/input, input, input.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-011"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "lib/project-studio.ts",
+      "path": "lib/project-studio.ts",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 275,
+      "bytes": 18728,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: lib/project-studio, lib/project-studio.ts, project-studio, project-studio.ts."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-012"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "lib/shadow-system.ts",
+      "path": "lib/shadow-system.ts",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 21,
+      "bytes": 880,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: lib/shadow-system, shadow-system."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-013"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "lib/studio-library.ts",
+      "path": "lib/studio-library.ts",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 191,
+      "bytes": 37500,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: lib/studio-library, lib/studio-library.ts, studio-library, studio-library.ts."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-014"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "lib/theme-workshop.ts",
+      "path": "lib/theme-workshop.ts",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 561,
+      "bytes": 23748,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: lib/theme-workshop, lib/theme-workshop.ts, theme-workshop, theme-workshop.ts."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-015"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "lib/use-studio-projects.ts",
+      "path": "lib/use-studio-projects.ts",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 145,
+      "bytes": 4627,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: lib/use-studio-projects, use-studio-projects."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-016"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "lib/utils.ts",
+      "path": "lib/utils.ts",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 6,
+      "bytes": 166,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: lib/utils, utils."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-017"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "next-env.d.ts",
+      "path": "next-env.d.ts",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 6,
+      "bytes": 247,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: next-env.d, next-env.d.ts."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-018"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 601,
+      "bytes": 27381,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: larson-scanner, larson-scanner.tsx, registry/elements/larson-scanner/larson-scanner, registry/elements/larson-scanner/larson-scanner.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-019"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/os/patterns/command-bar.tsx",
+      "path": "registry/os/patterns/command-bar.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 50,
+      "bytes": 3250,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: command-bar, command-bar.tsx, registry/os/patterns/command-bar, registry/os/patterns/command-bar.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-020"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/os/patterns/desktop-shell.tsx",
+      "path": "registry/os/patterns/desktop-shell.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 27,
+      "bytes": 1306,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: desktop-shell, desktop-shell.tsx, registry/os/patterns/desktop-shell, registry/os/patterns/desktop-shell.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-021"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/os/patterns/dock.tsx",
+      "path": "registry/os/patterns/dock.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 42,
+      "bytes": 1869,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: dock, dock.tsx, registry/os/patterns/dock, registry/os/patterns/dock.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-022"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/os/patterns/master-detail.tsx",
+      "path": "registry/os/patterns/master-detail.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 47,
+      "bytes": 3553,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: master-detail, master-detail.tsx, registry/os/patterns/master-detail, registry/os/patterns/master-detail.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-023"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/os/patterns/menu-bar.tsx",
+      "path": "registry/os/patterns/menu-bar.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 33,
+      "bytes": 1493,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: menu-bar, menu-bar.tsx, registry/os/patterns/menu-bar, registry/os/patterns/menu-bar.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-024"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/os/patterns/settings-sheet.tsx",
+      "path": "registry/os/patterns/settings-sheet.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 33,
+      "bytes": 4092,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/os/patterns/settings-sheet, registry/os/patterns/settings-sheet.tsx, settings-sheet, settings-sheet.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-025"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/os/patterns/split-view.tsx",
+      "path": "registry/os/patterns/split-view.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 21,
+      "bytes": 1236,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/os/patterns/split-view, registry/os/patterns/split-view.tsx, split-view, split-view.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-026"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/os/patterns/widget-shell.tsx",
+      "path": "registry/os/patterns/widget-shell.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 23,
+      "bytes": 916,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/os/patterns/widget-shell, registry/os/patterns/widget-shell.tsx, widget-shell, widget-shell.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-027"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/os/patterns/window-shell.tsx",
+      "path": "registry/os/patterns/window-shell.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 27,
+      "bytes": 1481,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/os/patterns/window-shell, registry/os/patterns/window-shell.tsx, window-shell, window-shell.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-028"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/application/application-shell.tsx",
+      "path": "registry/purple-rain/application/application-shell.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 58,
+      "bytes": 1764,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: application-shell, application-shell.tsx, registry/purple-rain/application/application-shell, registry/purple-rain/application/application-shell.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-029"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/application/document-surface.tsx",
+      "path": "registry/purple-rain/application/document-surface.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 17,
+      "bytes": 914,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: document-surface, document-surface.tsx, registry/purple-rain/application/document-surface, registry/purple-rain/application/document-surface.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-030"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/application/editor-toolbar.tsx",
+      "path": "registry/purple-rain/application/editor-toolbar.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 26,
+      "bytes": 1237,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: editor-toolbar, editor-toolbar.tsx, registry/purple-rain/application/editor-toolbar, registry/purple-rain/application/editor-toolbar.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-031"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/application/mobile-app-nav.tsx",
+      "path": "registry/purple-rain/application/mobile-app-nav.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 13,
+      "bytes": 918,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: mobile-app-nav, mobile-app-nav.tsx, registry/purple-rain/application/mobile-app-nav, registry/purple-rain/application/mobile-app-nav.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-032"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/application/status-bar.tsx",
+      "path": "registry/purple-rain/application/status-bar.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 13,
+      "bytes": 611,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/application/status-bar, registry/purple-rain/application/status-bar.tsx, status-bar, status-bar.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-033"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/application/task-board.tsx",
+      "path": "registry/purple-rain/application/task-board.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 21,
+      "bytes": 1154,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/application/task-board, registry/purple-rain/application/task-board.tsx, task-board, task-board.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-034"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/application/task-rail.tsx",
+      "path": "registry/purple-rain/application/task-rail.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 13,
+      "bytes": 863,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/application/task-rail, registry/purple-rain/application/task-rail.tsx, task-rail, task-rail.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-035"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/application/terminal-surface.tsx",
+      "path": "registry/purple-rain/application/terminal-surface.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 13,
+      "bytes": 651,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/application/terminal-surface, registry/purple-rain/application/terminal-surface.tsx, terminal-surface, terminal-surface.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-036"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/application/viewer-shell.tsx",
+      "path": "registry/purple-rain/application/viewer-shell.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 17,
+      "bytes": 868,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/application/viewer-shell, registry/purple-rain/application/viewer-shell.tsx, viewer-shell, viewer-shell.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-037"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/application/workspace-tree.tsx",
+      "path": "registry/purple-rain/application/workspace-tree.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 85,
+      "bytes": 3258,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/application/workspace-tree, registry/purple-rain/application/workspace-tree.tsx, workspace-tree, workspace-tree.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-038"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/badge.tsx",
+      "path": "registry/purple-rain/badge.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 32,
+      "bytes": 1063,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: badge, badge.tsx, registry/purple-rain/badge, registry/purple-rain/badge.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-039"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/button.tsx",
+      "path": "registry/purple-rain/button.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 65,
+      "bytes": 2702,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: button, button.tsx, registry/purple-rain/button, registry/purple-rain/button.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-040"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/card.tsx",
+      "path": "registry/purple-rain/card.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 50,
+      "bytes": 1474,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: card, card.tsx, registry/purple-rain/card, registry/purple-rain/card.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-041"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/dialog.tsx",
+      "path": "registry/purple-rain/dialog.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 117,
+      "bytes": 3912,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: dialog, dialog.tsx, registry/purple-rain/dialog, registry/purple-rain/dialog.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-042"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/input.tsx",
+      "path": "registry/purple-rain/input.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 26,
+      "bytes": 1270,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: input, input.tsx, registry/purple-rain/input, registry/purple-rain/input.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-043"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/accordion.tsx",
+      "path": "registry/purple-rain/library/accordion.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 693,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: accordion, accordion.tsx, registry/purple-rain/library/accordion, registry/purple-rain/library/accordion.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-044"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/action-menu.tsx",
+      "path": "registry/purple-rain/library/action-menu.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1247,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: action-menu, action-menu.tsx, registry/purple-rain/library/action-menu, registry/purple-rain/library/action-menu.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-045"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/activity-feed.tsx",
+      "path": "registry/purple-rain/library/activity-feed.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 701,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: activity-feed, activity-feed.tsx, registry/purple-rain/library/activity-feed, registry/purple-rain/library/activity-feed.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-046"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/agenda.tsx",
+      "path": "registry/purple-rain/library/agenda.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 669,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: agenda, agenda.tsx, registry/purple-rain/library/agenda, registry/purple-rain/library/agenda.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-047"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/alert-dialog.tsx",
+      "path": "registry/purple-rain/library/alert-dialog.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1254,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: alert-dialog, alert-dialog.tsx, registry/purple-rain/library/alert-dialog, registry/purple-rain/library/alert-dialog.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-048"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/alert.tsx",
+      "path": "registry/purple-rain/library/alert.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 867,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: alert, alert.tsx, registry/purple-rain/library/alert, registry/purple-rain/library/alert.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-049"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/anchor-nav.tsx",
+      "path": "registry/purple-rain/library/anchor-nav.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 894,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: anchor-nav, anchor-nav.tsx, registry/purple-rain/library/anchor-nav, registry/purple-rain/library/anchor-nav.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-050"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/app-shell.tsx",
+      "path": "registry/purple-rain/library/app-shell.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1045,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: app-shell, app-shell.tsx, registry/purple-rain/library/app-shell, registry/purple-rain/library/app-shell.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-051"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/app-switcher.tsx",
+      "path": "registry/purple-rain/library/app-switcher.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 908,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: app-switcher, app-switcher.tsx, registry/purple-rain/library/app-switcher, registry/purple-rain/library/app-switcher.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-052"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/auth-card.tsx",
+      "path": "registry/purple-rain/library/auth-card.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1576,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: auth-card, auth-card.tsx, registry/purple-rain/library/auth-card, registry/purple-rain/library/auth-card.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-053"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/avatar-group.tsx",
+      "path": "registry/purple-rain/library/avatar-group.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 699,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: avatar-group, avatar-group.tsx, registry/purple-rain/library/avatar-group, registry/purple-rain/library/avatar-group.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-054"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/avatar.tsx",
+      "path": "registry/purple-rain/library/avatar.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 672,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: avatar, avatar.tsx, registry/purple-rain/library/avatar, registry/purple-rain/library/avatar.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-055"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/back-link.tsx",
+      "path": "registry/purple-rain/library/back-link.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 887,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: back-link, back-link.tsx, registry/purple-rain/library/back-link, registry/purple-rain/library/back-link.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-056"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/banner.tsx",
+      "path": "registry/purple-rain/library/banner.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 873,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: banner, banner.tsx, registry/purple-rain/library/banner, registry/purple-rain/library/banner.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-057"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/bar-chart.tsx",
+      "path": "registry/purple-rain/library/bar-chart.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 711,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: bar-chart, bar-chart.tsx, registry/purple-rain/library/bar-chart, registry/purple-rain/library/bar-chart.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-058"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/bottom-nav.tsx",
+      "path": "registry/purple-rain/library/bottom-nav.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 894,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: bottom-nav, bottom-nav.tsx, registry/purple-rain/library/bottom-nav, registry/purple-rain/library/bottom-nav.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-059"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/breadcrumb.tsx",
+      "path": "registry/purple-rain/library/breadcrumb.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 897,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: breadcrumb, breadcrumb.tsx, registry/purple-rain/library/breadcrumb, registry/purple-rain/library/breadcrumb.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-060"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/bulk-action-bar.tsx",
+      "path": "registry/purple-rain/library/bulk-action-bar.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 18,
+      "bytes": 1113,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: bulk-action-bar, bulk-action-bar.tsx, registry/purple-rain/library/bulk-action-bar, registry/purple-rain/library/bulk-action-bar.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-061"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/button-group.tsx",
+      "path": "registry/purple-rain/library/button-group.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 18,
+      "bytes": 1098,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: button-group, button-group.tsx, registry/purple-rain/library/button-group, registry/purple-rain/library/button-group.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-062"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/calendar.tsx",
+      "path": "registry/purple-rain/library/calendar.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 863,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: calendar, calendar.tsx, registry/purple-rain/library/calendar, registry/purple-rain/library/calendar.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-063"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/carousel.tsx",
+      "path": "registry/purple-rain/library/carousel.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 900,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: carousel, carousel.tsx, registry/purple-rain/library/carousel, registry/purple-rain/library/carousel.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-064"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/cart-summary.tsx",
+      "path": "registry/purple-rain/library/cart-summary.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1303,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: cart-summary, cart-summary.tsx, registry/purple-rain/library/cart-summary, registry/purple-rain/library/cart-summary.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-065"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/checkbox-group.tsx",
+      "path": "registry/purple-rain/library/checkbox-group.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 837,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: checkbox-group, checkbox-group.tsx, registry/purple-rain/library/checkbox-group, registry/purple-rain/library/checkbox-group.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-066"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/checkbox.tsx",
+      "path": "registry/purple-rain/library/checkbox.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 798,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: checkbox, checkbox.tsx, registry/purple-rain/library/checkbox, registry/purple-rain/library/checkbox.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-067"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/checkout-form.tsx",
+      "path": "registry/purple-rain/library/checkout-form.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1600,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: checkout-form, checkout-form.tsx, registry/purple-rain/library/checkout-form, registry/purple-rain/library/checkout-form.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-068"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/collapsible.tsx",
+      "path": "registry/purple-rain/library/collapsible.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 705,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: collapsible, collapsible.tsx, registry/purple-rain/library/collapsible, registry/purple-rain/library/collapsible.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-069"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/color-input.tsx",
+      "path": "registry/purple-rain/library/color-input.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 863,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: color-input, color-input.tsx, registry/purple-rain/library/color-input, registry/purple-rain/library/color-input.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-070"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/color-swatch.tsx",
+      "path": "registry/purple-rain/library/color-swatch.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 662,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: color-swatch, color-swatch.tsx, registry/purple-rain/library/color-swatch, registry/purple-rain/library/color-swatch.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-071"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/combobox.tsx",
+      "path": "registry/purple-rain/library/combobox.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 851,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: combobox, combobox.tsx, registry/purple-rain/library/combobox, registry/purple-rain/library/combobox.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-072"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/command-menu.tsx",
+      "path": "registry/purple-rain/library/command-menu.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 908,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: command-menu, command-menu.tsx, registry/purple-rain/library/command-menu, registry/purple-rain/library/command-menu.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-073"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/command-palette.tsx",
+      "path": "registry/purple-rain/library/command-palette.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1275,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: command-palette, command-palette.tsx, registry/purple-rain/library/command-palette, registry/purple-rain/library/command-palette.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-074"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/contact-form.tsx",
+      "path": "registry/purple-rain/library/contact-form.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1594,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: contact-form, contact-form.tsx, registry/purple-rain/library/contact-form, registry/purple-rain/library/contact-form.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-075"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/container.tsx",
+      "path": "registry/purple-rain/library/container.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 558,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: container, container.tsx, registry/purple-rain/library/container, registry/purple-rain/library/container.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-076"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/context-menu.tsx",
+      "path": "registry/purple-rain/library/context-menu.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1254,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: context-menu, context-menu.tsx, registry/purple-rain/library/context-menu, registry/purple-rain/library/context-menu.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-077"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/copy-button.tsx",
+      "path": "registry/purple-rain/library/copy-button.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 18,
+      "bytes": 1102,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: copy-button, copy-button.tsx, registry/purple-rain/library/copy-button, registry/purple-rain/library/copy-button.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-078"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/data-table.tsx",
+      "path": "registry/purple-rain/library/data-table.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 798,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: data-table, data-table.tsx, registry/purple-rain/library/data-table, registry/purple-rain/library/data-table.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-079"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/date-picker.tsx",
+      "path": "registry/purple-rain/library/date-picker.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 862,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: date-picker, date-picker.tsx, registry/purple-rain/library/date-picker, registry/purple-rain/library/date-picker.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-080"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/description-list.tsx",
+      "path": "registry/purple-rain/library/description-list.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 755,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: description-list, description-list.tsx, registry/purple-rain/library/description-list, registry/purple-rain/library/description-list.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-081"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/donut-chart.tsx",
+      "path": "registry/purple-rain/library/donut-chart.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 723,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: donut-chart, donut-chart.tsx, registry/purple-rain/library/donut-chart, registry/purple-rain/library/donut-chart.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-082"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/drawer.tsx",
+      "path": "registry/purple-rain/library/drawer.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1215,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: drawer, drawer.tsx, registry/purple-rain/library/drawer, registry/purple-rain/library/drawer.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-083"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/dropdown-menu.tsx",
+      "path": "registry/purple-rain/library/dropdown-menu.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1261,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: dropdown-menu, dropdown-menu.tsx, registry/purple-rain/library/dropdown-menu, registry/purple-rain/library/dropdown-menu.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-084"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/dropzone.tsx",
+      "path": "registry/purple-rain/library/dropzone.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 746,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: dropzone, dropzone.tsx, registry/purple-rain/library/dropzone, registry/purple-rain/library/dropzone.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-085"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/empty-state.tsx",
+      "path": "registry/purple-rain/library/empty-state.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1101,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: empty-state, empty-state.tsx, registry/purple-rain/library/empty-state, registry/purple-rain/library/empty-state.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-086"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/error-state.tsx",
+      "path": "registry/purple-rain/library/error-state.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 691,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: error-state, error-state.tsx, registry/purple-rain/library/error-state, registry/purple-rain/library/error-state.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-087"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/favorite-button.tsx",
+      "path": "registry/purple-rain/library/favorite-button.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 18,
+      "bytes": 1178,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: favorite-button, favorite-button.tsx, registry/purple-rain/library/favorite-button, registry/purple-rain/library/favorite-button.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-088"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/feedback-form.tsx",
+      "path": "registry/purple-rain/library/feedback-form.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1600,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: feedback-form, feedback-form.tsx, registry/purple-rain/library/feedback-form, registry/purple-rain/library/feedback-form.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-089"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/field.tsx",
+      "path": "registry/purple-rain/library/field.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 833,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: field, field.tsx, registry/purple-rain/library/field, registry/purple-rain/library/field.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-090"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/file-upload.tsx",
+      "path": "registry/purple-rain/library/file-upload.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 758,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: file-upload, file-upload.tsx, registry/purple-rain/library/file-upload, registry/purple-rain/library/file-upload.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-091"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/filter-bar.tsx",
+      "path": "registry/purple-rain/library/filter-bar.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1259,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: filter-bar, filter-bar.tsx, registry/purple-rain/library/filter-bar, registry/purple-rain/library/filter-bar.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-092"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/filter-tabs.tsx",
+      "path": "registry/purple-rain/library/filter-tabs.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 18,
+      "bytes": 950,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: filter-tabs, filter-tabs.tsx, registry/purple-rain/library/filter-tabs, registry/purple-rain/library/filter-tabs.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-093"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/floating-action-button.tsx",
+      "path": "registry/purple-rain/library/floating-action-button.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 18,
+      "bytes": 1166,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: floating-action-button, floating-action-button.tsx, registry/purple-rain/library/floating-action-button, registry/purple-rain/library/floating-action-button.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-094"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/focus-ring.tsx",
+      "path": "registry/purple-rain/library/focus-ring.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 811,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: focus-ring, focus-ring.tsx, registry/purple-rain/library/focus-ring, registry/purple-rain/library/focus-ring.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-095"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/forgot-password-form.tsx",
+      "path": "registry/purple-rain/library/forgot-password-form.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1639,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: forgot-password-form, forgot-password-form.tsx, registry/purple-rain/library/forgot-password-form, registry/purple-rain/library/forgot-password-form.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-096"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/hover-card.tsx",
+      "path": "registry/purple-rain/library/hover-card.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1240,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: hover-card, hover-card.tsx, registry/purple-rain/library/hover-card, registry/purple-rain/library/hover-card.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-097"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/icon-button.tsx",
+      "path": "registry/purple-rain/library/icon-button.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 18,
+      "bytes": 1103,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: icon-button, icon-button.tsx, registry/purple-rain/library/icon-button, registry/purple-rain/library/icon-button.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-098"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/inline-edit.tsx",
+      "path": "registry/purple-rain/library/inline-edit.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 866,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: inline-edit, inline-edit.tsx, registry/purple-rain/library/inline-edit, registry/purple-rain/library/inline-edit.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-099"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/invite-form.tsx",
+      "path": "registry/purple-rain/library/invite-form.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1588,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: invite-form, invite-form.tsx, registry/purple-rain/library/invite-form, registry/purple-rain/library/invite-form.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-100"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/lightbox.tsx",
+      "path": "registry/purple-rain/library/lightbox.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1229,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: lightbox, lightbox.tsx, registry/purple-rain/library/lightbox, registry/purple-rain/library/lightbox.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-101"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/link-button.tsx",
+      "path": "registry/purple-rain/library/link-button.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 18,
+      "bytes": 1103,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: link-button, link-button.tsx, registry/purple-rain/library/link-button, registry/purple-rain/library/link-button.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-102"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/list-item.tsx",
+      "path": "registry/purple-rain/library/list-item.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 703,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: list-item, list-item.tsx, registry/purple-rain/library/list-item, registry/purple-rain/library/list-item.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-103"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/list.tsx",
+      "path": "registry/purple-rain/library/list.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 681,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: list, list.tsx, registry/purple-rain/library/list, registry/purple-rain/library/list.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-104"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/loading-dots.tsx",
+      "path": "registry/purple-rain/library/loading-dots.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 718,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: loading-dots, loading-dots.tsx, registry/purple-rain/library/loading-dots, registry/purple-rain/library/loading-dots.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-105"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/menu-button.tsx",
+      "path": "registry/purple-rain/library/menu-button.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1480,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: menu-button, menu-button.tsx, registry/purple-rain/library/menu-button, registry/purple-rain/library/menu-button.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-106"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/meter.tsx",
+      "path": "registry/purple-rain/library/meter.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 654,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: meter, meter.tsx, registry/purple-rain/library/meter, registry/purple-rain/library/meter.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-107"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/navigation-menu.tsx",
+      "path": "registry/purple-rain/library/navigation-menu.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 929,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: navigation-menu, navigation-menu.tsx, registry/purple-rain/library/navigation-menu, registry/purple-rain/library/navigation-menu.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-108"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/notification-center.tsx",
+      "path": "registry/purple-rain/library/notification-center.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1039,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: notification-center, notification-center.tsx, registry/purple-rain/library/notification-center, registry/purple-rain/library/notification-center.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-109"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/number-input.tsx",
+      "path": "registry/purple-rain/library/number-input.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 865,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: number-input, number-input.tsx, registry/purple-rain/library/number-input, registry/purple-rain/library/number-input.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-110"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/offline-state.tsx",
+      "path": "registry/purple-rain/library/offline-state.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 706,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: offline-state, offline-state.tsx, registry/purple-rain/library/offline-state, registry/purple-rain/library/offline-state.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-111"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/order-summary.tsx",
+      "path": "registry/purple-rain/library/order-summary.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1309,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: order-summary, order-summary.tsx, registry/purple-rain/library/order-summary, registry/purple-rain/library/order-summary.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-112"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/otp-input.tsx",
+      "path": "registry/purple-rain/library/otp-input.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 854,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: otp-input, otp-input.tsx, registry/purple-rain/library/otp-input, registry/purple-rain/library/otp-input.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-113"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/page-header.tsx",
+      "path": "registry/purple-rain/library/page-header.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 901,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: page-header, page-header.tsx, registry/purple-rain/library/page-header, registry/purple-rain/library/page-header.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-114"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/pagination.tsx",
+      "path": "registry/purple-rain/library/pagination.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 18,
+      "bytes": 947,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: pagination, pagination.tsx, registry/purple-rain/library/pagination, registry/purple-rain/library/pagination.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-115"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/password-input.tsx",
+      "path": "registry/purple-rain/library/password-input.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 884,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: password-input, password-input.tsx, registry/purple-rain/library/password-input, registry/purple-rain/library/password-input.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-116"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/popover.tsx",
+      "path": "registry/purple-rain/library/popover.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1222,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: popover, popover.tsx, registry/purple-rain/library/popover, registry/purple-rain/library/popover.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-117"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/pricing-card.tsx",
+      "path": "registry/purple-rain/library/pricing-card.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1216,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: pricing-card, pricing-card.tsx, registry/purple-rain/library/pricing-card, registry/purple-rain/library/pricing-card.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-118"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/pricing-table.tsx",
+      "path": "registry/purple-rain/library/pricing-table.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1221,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: pricing-table, pricing-table.tsx, registry/purple-rain/library/pricing-table, registry/purple-rain/library/pricing-table.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-119"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/profile-form.tsx",
+      "path": "registry/purple-rain/library/profile-form.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1594,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: profile-form, profile-form.tsx, registry/purple-rain/library/profile-form, registry/purple-rain/library/profile-form.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-120"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/progress-card.tsx",
+      "path": "registry/purple-rain/library/progress-card.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 912,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: progress-card, progress-card.tsx, registry/purple-rain/library/progress-card, registry/purple-rain/library/progress-card.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-121"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/progress.tsx",
+      "path": "registry/purple-rain/library/progress.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 672,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: progress, progress.tsx, registry/purple-rain/library/progress, registry/purple-rain/library/progress.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-122"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/radio-group.tsx",
+      "path": "registry/purple-rain/library/radio-group.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 813,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: radio-group, radio-group.tsx, registry/purple-rain/library/radio-group, registry/purple-rain/library/radio-group.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-123"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/radius-guide.tsx",
+      "path": "registry/purple-rain/library/radius-guide.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 685,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: radius-guide, radius-guide.tsx, registry/purple-rain/library/radius-guide, registry/purple-rain/library/radius-guide.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-124"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/range-slider.tsx",
+      "path": "registry/purple-rain/library/range-slider.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 693,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: range-slider, range-slider.tsx, registry/purple-rain/library/range-slider, registry/purple-rain/library/range-slider.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-125"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/rating.tsx",
+      "path": "registry/purple-rain/library/rating.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 18,
+      "bytes": 821,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: rating, rating.tsx, registry/purple-rain/library/rating, registry/purple-rain/library/rating.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-126"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/search-field.tsx",
+      "path": "registry/purple-rain/library/search-field.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 872,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/search-field, registry/purple-rain/library/search-field.tsx, search-field, search-field.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-127"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/search-results.tsx",
+      "path": "registry/purple-rain/library/search-results.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1279,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/search-results, registry/purple-rain/library/search-results.tsx, search-results, search-results.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-128"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/segmented-control.tsx",
+      "path": "registry/purple-rain/library/segmented-control.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 18,
+      "bytes": 1128,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/segmented-control, registry/purple-rain/library/segmented-control.tsx, segmented-control, segmented-control.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-129"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/select.tsx",
+      "path": "registry/purple-rain/library/select.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 852,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/select, registry/purple-rain/library/select.tsx, select, select.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-130"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/separator.tsx",
+      "path": "registry/purple-rain/library/separator.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 560,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/separator, registry/purple-rain/library/separator.tsx, separator, separator.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-131"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/settings-panel.tsx",
+      "path": "registry/purple-rain/library/settings-panel.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1606,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/settings-panel, registry/purple-rain/library/settings-panel.tsx, settings-panel, settings-panel.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-132"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/shadow-guide.tsx",
+      "path": "registry/purple-rain/library/shadow-guide.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 673,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/shadow-guide, registry/purple-rain/library/shadow-guide.tsx, shadow-guide, shadow-guide.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-133"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/sheet.tsx",
+      "path": "registry/purple-rain/library/sheet.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1208,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/sheet, registry/purple-rain/library/sheet.tsx, sheet, sheet.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-134"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/sidebar.tsx",
+      "path": "registry/purple-rain/library/sidebar.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 876,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/sidebar, registry/purple-rain/library/sidebar.tsx, sidebar, sidebar.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-135"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/sign-in-form.tsx",
+      "path": "registry/purple-rain/library/sign-in-form.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1591,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/sign-in-form, registry/purple-rain/library/sign-in-form.tsx, sign-in-form, sign-in-form.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-136"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/sign-up-form.tsx",
+      "path": "registry/purple-rain/library/sign-up-form.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1591,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/sign-up-form, registry/purple-rain/library/sign-up-form.tsx, sign-up-form, sign-up-form.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-137"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/skeleton.tsx",
+      "path": "registry/purple-rain/library/skeleton.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 701,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/skeleton, registry/purple-rain/library/skeleton.tsx, skeleton, skeleton.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-138"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/slider.tsx",
+      "path": "registry/purple-rain/library/slider.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 660,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/slider, registry/purple-rain/library/slider.tsx, slider, slider.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-139"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/snackbar.tsx",
+      "path": "registry/purple-rain/library/snackbar.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 885,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/snackbar, registry/purple-rain/library/snackbar.tsx, snackbar, snackbar.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-140"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/spacing-guide.tsx",
+      "path": "registry/purple-rain/library/spacing-guide.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 607,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/spacing-guide, registry/purple-rain/library/spacing-guide.tsx, spacing-guide, spacing-guide.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-141"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/spinner.tsx",
+      "path": "registry/purple-rain/library/spinner.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 696,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/spinner, registry/purple-rain/library/spinner.tsx, spinner, spinner.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-142"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/split-button.tsx",
+      "path": "registry/purple-rain/library/split-button.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1486,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/split-button, registry/purple-rain/library/split-button.tsx, split-button, split-button.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-143"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/stack.tsx",
+      "path": "registry/purple-rain/library/stack.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 541,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/stack, registry/purple-rain/library/stack.tsx, stack, stack.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-144"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/stat-group.tsx",
+      "path": "registry/purple-rain/library/stat-group.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 857,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/stat-group, registry/purple-rain/library/stat-group.tsx, stat-group, stat-group.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-145"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/stat.tsx",
+      "path": "registry/purple-rain/library/stat.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 830,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/stat, registry/purple-rain/library/stat.tsx, stat, stat.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-146"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/status-dot.tsx",
+      "path": "registry/purple-rain/library/status-dot.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 894,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/status-dot, registry/purple-rain/library/status-dot.tsx, status-dot, status-dot.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-147"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/stepper.tsx",
+      "path": "registry/purple-rain/library/stepper.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 18,
+      "bytes": 929,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/stepper, registry/purple-rain/library/stepper.tsx, stepper, stepper.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-148"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/success-state.tsx",
+      "path": "registry/purple-rain/library/success-state.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 694,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/success-state, registry/purple-rain/library/success-state.tsx, success-state, success-state.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-149"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/surface.tsx",
+      "path": "registry/purple-rain/library/surface.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 794,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/surface, registry/purple-rain/library/surface.tsx, surface, surface.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-150"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/switch.tsx",
+      "path": "registry/purple-rain/library/switch.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 784,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/switch, registry/purple-rain/library/switch.tsx, switch, switch.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-151"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/table-of-contents.tsx",
+      "path": "registry/purple-rain/library/table-of-contents.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 940,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/table-of-contents, registry/purple-rain/library/table-of-contents.tsx, table-of-contents, table-of-contents.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-152"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/table.tsx",
+      "path": "registry/purple-rain/library/table.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 776,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/table, registry/purple-rain/library/table.tsx, table, table.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-153"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/tabs.tsx",
+      "path": "registry/purple-rain/library/tabs.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 18,
+      "bytes": 911,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/tabs, registry/purple-rain/library/tabs.tsx, tabs, tabs.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-154"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/textarea.tsx",
+      "path": "registry/purple-rain/library/textarea.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 840,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/textarea, registry/purple-rain/library/textarea.tsx, textarea, textarea.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-155"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/time-input.tsx",
+      "path": "registry/purple-rain/library/time-input.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 856,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/time-input, registry/purple-rain/library/time-input.tsx, time-input, time-input.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-156"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/timeline.tsx",
+      "path": "registry/purple-rain/library/timeline.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 679,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/timeline, registry/purple-rain/library/timeline.tsx, timeline, timeline.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-157"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/toast.tsx",
+      "path": "registry/purple-rain/library/toast.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 867,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/toast, registry/purple-rain/library/toast.tsx, toast, toast.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-158"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/toggle-button.tsx",
+      "path": "registry/purple-rain/library/toggle-button.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 18,
+      "bytes": 1166,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/toggle-button, registry/purple-rain/library/toggle-button.tsx, toggle-button, toggle-button.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-159"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/toggle-group.tsx",
+      "path": "registry/purple-rain/library/toggle-group.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 18,
+      "bytes": 1098,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/toggle-group, registry/purple-rain/library/toggle-group.tsx, toggle-group, toggle-group.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-160"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/toolbar.tsx",
+      "path": "registry/purple-rain/library/toolbar.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 18,
+      "bytes": 1071,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/toolbar, registry/purple-rain/library/toolbar.tsx, toolbar, toolbar.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-161"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/tooltip.tsx",
+      "path": "registry/purple-rain/library/tooltip.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 1222,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/tooltip, registry/purple-rain/library/tooltip.tsx, tooltip, tooltip.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-162"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/topbar.tsx",
+      "path": "registry/purple-rain/library/topbar.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 869,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/topbar, registry/purple-rain/library/topbar.tsx, topbar, topbar.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-163"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/tree-view.tsx",
+      "path": "registry/purple-rain/library/tree-view.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 690,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/tree-view, registry/purple-rain/library/tree-view.tsx, tree-view, tree-view.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-164"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/type-specimen.tsx",
+      "path": "registry/purple-rain/library/type-specimen.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 15,
+      "bytes": 632,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/type-specimen, registry/purple-rain/library/type-specimen.tsx, type-specimen, type-specimen.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-165"
+    },
+    {
+      "category": "orphan-file",
+      "subject": "registry/purple-rain/library/view-switcher.tsx",
+      "path": "registry/purple-rain/library/view-switcher.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 18,
+      "bytes": 962,
+      "evidence": [
+        "No resolved static inbound import was found.",
+        "The file is not a detected package or conventional entry point.",
+        "Repository text contains possible references: registry/purple-rain/library/view-switcher, registry/purple-rain/library/view-switcher.tsx, view-switcher, view-switcher.tsx."
+      ],
+      "caveats": [
+        "Dynamic loading, aliases, reflection, external consumers, and incomplete framework detection can hide reachability.",
+        "Possible string reachability prevents high-confidence deletion."
+      ],
+      "id": "ROT-166"
+    },
+    {
+      "category": "unused-dependency",
+      "subject": "@base-ui/react (dependencies)",
+      "path": "package.json",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No static import or repository text reference was found."
+      ],
+      "caveats": [
+        "CLIs, loaders, presets, peers, scripts, hooks, and runtime configuration may use this package."
+      ],
+      "id": "ROT-167"
+    },
+    {
+      "category": "unused-dependency",
+      "subject": "@types/node (devDependencies)",
+      "path": "package.json",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No static import or repository text reference was found."
+      ],
+      "caveats": [
+        "CLIs, loaders, presets, peers, scripts, hooks, and runtime configuration may use this package."
+      ],
+      "id": "ROT-168"
+    },
+    {
+      "category": "unused-dependency",
+      "subject": "@types/react (devDependencies)",
+      "path": "package.json",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No static import or repository text reference was found."
+      ],
+      "caveats": [
+        "CLIs, loaders, presets, peers, scripts, hooks, and runtime configuration may use this package."
+      ],
+      "id": "ROT-169"
+    },
+    {
+      "category": "unused-dependency",
+      "subject": "@types/react-dom (devDependencies)",
+      "path": "package.json",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No static import or repository text reference was found."
+      ],
+      "caveats": [
+        "CLIs, loaders, presets, peers, scripts, hooks, and runtime configuration may use this package."
+      ],
+      "id": "ROT-170"
+    },
+    {
+      "category": "unused-dependency",
+      "subject": "react-dom (dependencies)",
+      "path": "package.json",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No static import or repository text reference was found."
+      ],
+      "caveats": [
+        "CLIs, loaders, presets, peers, scripts, hooks, and runtime configuration may use this package."
+      ],
+      "id": "ROT-171"
+    },
+    {
+      "category": "unused-dependency",
+      "subject": "typescript (devDependencies)",
+      "path": "package.json",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No static import or repository text reference was found."
+      ],
+      "caveats": [
+        "CLIs, loaders, presets, peers, scripts, hooks, and runtime configuration may use this package."
+      ],
+      "id": "ROT-172"
+    },
+    {
+      "category": "unused-export",
+      "subject": "DemoPage from app/demo/page.tsx",
+      "path": "app/demo/page.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No reference to the exported symbol was found outside its defining file."
+      ],
+      "caveats": [
+        "Public APIs, re-exports, declaration generation, templates, or external consumers may use it."
+      ],
+      "line": 15,
+      "id": "ROT-173"
+    },
+    {
+      "category": "unused-export",
+      "subject": "ElementsPage from app/elements/page.tsx",
+      "path": "app/elements/page.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No reference to the exported symbol was found outside its defining file."
+      ],
+      "caveats": [
+        "Public APIs, re-exports, declaration generation, templates, or external consumers may use it."
+      ],
+      "line": 15,
+      "id": "ROT-174"
+    },
+    {
+      "category": "unused-export",
+      "subject": "JadeComparePage from app/kit/jade/compare/page.tsx",
+      "path": "app/kit/jade/compare/page.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No reference to the exported symbol was found outside its defining file."
+      ],
+      "caveats": [
+        "Public APIs, re-exports, declaration generation, templates, or external consumers may use it."
+      ],
+      "line": 11,
+      "id": "ROT-175"
+    },
+    {
+      "category": "unused-export",
+      "subject": "JadePage from app/kit/jade/page.tsx",
+      "path": "app/kit/jade/page.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No reference to the exported symbol was found outside its defining file."
+      ],
+      "caveats": [
+        "Public APIs, re-exports, declaration generation, templates, or external consumers may use it."
+      ],
+      "line": 15,
+      "id": "ROT-176"
+    },
+    {
+      "category": "unused-export",
+      "subject": "OsKitPage from app/kit/os/page.tsx",
+      "path": "app/kit/os/page.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No reference to the exported symbol was found outside its defining file."
+      ],
+      "caveats": [
+        "Public APIs, re-exports, declaration generation, templates, or external consumers may use it."
+      ],
+      "line": 15,
+      "id": "ROT-177"
+    },
+    {
+      "category": "unused-export",
+      "subject": "KitPage from app/kit/page.tsx",
+      "path": "app/kit/page.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No reference to the exported symbol was found outside its defining file."
+      ],
+      "caveats": [
+        "Public APIs, re-exports, declaration generation, templates, or external consumers may use it."
+      ],
+      "line": 14,
+      "id": "ROT-178"
+    },
+    {
+      "category": "unused-export",
+      "subject": "ShadowPage from app/kit/shadow/page.tsx",
+      "path": "app/kit/shadow/page.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No reference to the exported symbol was found outside its defining file."
+      ],
+      "caveats": [
+        "Public APIs, re-exports, declaration generation, templates, or external consumers may use it."
+      ],
+      "line": 11,
+      "id": "ROT-179"
+    },
+    {
+      "category": "unused-export",
+      "subject": "LabsPage from app/labs/page.tsx",
+      "path": "app/labs/page.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No reference to the exported symbol was found outside its defining file."
+      ],
+      "caveats": [
+        "Public APIs, re-exports, declaration generation, templates, or external consumers may use it."
+      ],
+      "line": 13,
+      "id": "ROT-180"
+    },
+    {
+      "category": "unused-export",
+      "subject": "RootLayout from app/layout.tsx",
+      "path": "app/layout.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No reference to the exported symbol was found outside its defining file."
+      ],
+      "caveats": [
+        "Public APIs, re-exports, declaration generation, templates, or external consumers may use it."
+      ],
+      "line": 29,
+      "id": "ROT-181"
+    },
+    {
+      "category": "unused-export",
+      "subject": "PreviewPage from app/preview/page.tsx",
+      "path": "app/preview/page.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No reference to the exported symbol was found outside its defining file."
+      ],
+      "caveats": [
+        "Public APIs, re-exports, declaration generation, templates, or external consumers may use it."
+      ],
+      "line": 18,
+      "id": "ROT-182"
+    },
+    {
+      "category": "unused-export",
+      "subject": "ProjectsPage from app/projects/page.tsx",
+      "path": "app/projects/page.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No reference to the exported symbol was found outside its defining file."
+      ],
+      "caveats": [
+        "Public APIs, re-exports, declaration generation, templates, or external consumers may use it."
+      ],
+      "line": 10,
+      "id": "ROT-183"
+    },
+    {
+      "category": "unused-export",
+      "subject": "QualityPage from app/quality/page.tsx",
+      "path": "app/quality/page.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No reference to the exported symbol was found outside its defining file."
+      ],
+      "caveats": [
+        "Public APIs, re-exports, declaration generation, templates, or external consumers may use it."
+      ],
+      "line": 10,
+      "id": "ROT-184"
+    },
+    {
+      "category": "unused-export",
+      "subject": "StudioPage from app/studio/page.tsx",
+      "path": "app/studio/page.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No reference to the exported symbol was found outside its defining file."
+      ],
+      "caveats": [
+        "Public APIs, re-exports, declaration generation, templates, or external consumers may use it."
+      ],
+      "line": 13,
+      "id": "ROT-185"
+    },
+    {
+      "category": "unused-export",
+      "subject": "TemplatesPage from app/templates/page.tsx",
+      "path": "app/templates/page.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No reference to the exported symbol was found outside its defining file."
+      ],
+      "caveats": [
+        "Public APIs, re-exports, declaration generation, templates, or external consumers may use it."
+      ],
+      "line": 12,
+      "id": "ROT-186"
+    },
+    {
+      "category": "unused-export",
+      "subject": "CopyCommand from components/copy-command.tsx",
+      "path": "components/copy-command.tsx",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No reference to the exported symbol was found outside its defining file."
+      ],
+      "caveats": [
+        "Public APIs, re-exports, declaration generation, templates, or external consumers may use it."
+      ],
+      "line": 12,
+      "id": "ROT-187"
+    },
+    {
+      "category": "unused-export",
+      "subject": "TemplateFamily from lib/project-studio.ts",
+      "path": "lib/project-studio.ts",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No reference to the exported symbol was found outside its defining file."
+      ],
+      "caveats": [
+        "Public APIs, re-exports, declaration generation, templates, or external consumers may use it."
+      ],
+      "line": 34,
+      "id": "ROT-188"
+    },
+    {
+      "category": "unused-export",
+      "subject": "defaultBriefs from lib/project-studio.ts",
+      "path": "lib/project-studio.ts",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No reference to the exported symbol was found outside its defining file."
+      ],
+      "caveats": [
+        "Public APIs, re-exports, declaration generation, templates, or external consumers may use it."
+      ],
+      "line": 131,
+      "id": "ROT-189"
+    },
+    {
+      "category": "unused-export",
+      "subject": "OklchColor from lib/theme-workshop.ts",
+      "path": "lib/theme-workshop.ts",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No reference to the exported symbol was found outside its defining file."
+      ],
+      "caveats": [
+        "Public APIs, re-exports, declaration generation, templates, or external consumers may use it."
+      ],
+      "line": 6,
+      "id": "ROT-190"
+    },
+    {
+      "category": "unused-export",
+      "subject": "contrastRatio from lib/theme-workshop.ts",
+      "path": "lib/theme-workshop.ts",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No reference to the exported symbol was found outside its defining file."
+      ],
+      "caveats": [
+        "Public APIs, re-exports, declaration generation, templates, or external consumers may use it."
+      ],
+      "line": 317,
+      "id": "ROT-191"
+    },
+    {
+      "category": "unused-export",
+      "subject": "themeBases from lib/theme-workshop.ts",
+      "path": "lib/theme-workshop.ts",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No reference to the exported symbol was found outside its defining file."
+      ],
+      "caveats": [
+        "Public APIs, re-exports, declaration generation, templates, or external consumers may use it."
+      ],
+      "line": 55,
+      "id": "ROT-192"
+    },
+    {
+      "category": "unused-export",
+      "subject": "workshopCssVars from lib/theme-workshop.ts",
+      "path": "lib/theme-workshop.ts",
+      "confidence": "medium",
+      "initial_status": "REVIEW",
+      "risk": "medium",
+      "proof_eligible": false,
+      "loc": 0,
+      "bytes": 0,
+      "evidence": [
+        "No reference to the exported symbol was found outside its defining file."
+      ],
+      "caveats": [
+        "Public APIs, re-exports, declaration generation, templates, or external consumers may use it."
+      ],
+      "line": 496,
+      "id": "ROT-193"
+    }
+  ],
+  "limitations": [
+    "Static analysis cannot prove absence of dynamic, reflective, operational, platform-specific, or external use.",
+    "Import resolution is intentionally conservative and does not implement every alias, package export, or framework convention.",
+    "Unused dependencies and exports remain leads until project-native tooling and focused proof support removal.",
+    "No target-project command, package binary, or application code was executed."
+  ]
+}

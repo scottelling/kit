@@ -28,6 +28,8 @@ import { SplitInspector, SplitNavigation, SplitPrimary, SplitView } from "@/regi
 import { WidgetShell } from "@/registry/os/patterns/widget-shell"
 import { WindowContent, WindowShell, WindowStatus, WindowTitleBar } from "@/registry/os/patterns/window-shell"
 
+import { AnimationPatternPreview } from "./animation/animation-pattern-preview"
+
 export type LibraryItem = {
   name: string
   title: string
@@ -39,7 +41,7 @@ export type LibraryItem = {
 type ComponentPreviewProps = {
   item: LibraryItem
   expanded?: boolean
-  system?: "purple-rain" | "jade" | "os"
+  system?: "purple-rain" | "jade" | "os" | "animation"
 }
 
 const samplePeople = ["MR", "ST", "EO"]
@@ -54,7 +56,7 @@ export function ComponentPreview({ item, expanded = false, system = "purple-rain
   const [on, setOn] = useState(true)
   const [open, setOpen] = useState(false)
   const [copied, setCopied] = useState(false)
-  const systemName = system === "jade" ? "JADE" : system === "os" ? "OS" : "Purple Rain"
+  const systemName = system === "jade" ? "JADE" : system === "os" ? "OS" : system === "animation" ? "Animation Studio" : "Purple Rain"
   const [text, setText] = useState(systemName)
   const [amount, setAmount] = useState(64)
   const { name, preview, title } = item
@@ -69,6 +71,10 @@ export function ComponentPreview({ item, expanded = false, system = "purple-rain
       ))}
     </div>
   )
+
+  if (item.category === "Animation Patterns") {
+    return <div className={`mini-preview${sizeClass}`}><AnimationPatternPreview item={item} expanded={expanded} /></div>
+  }
 
   let sample: ReactNode
 
@@ -334,7 +340,7 @@ export function ComponentPreview({ item, expanded = false, system = "purple-rain
       break
 
     case "app-shell":
-      sample = <div className="mini-app-shell"><aside>{system === "jade" ? "J" : system === "os" ? "OS" : "PR"}</aside><header>Release</header><main><strong>Today</strong><span>Three things need you.</span></main></div>
+      sample = <div className="mini-app-shell"><aside>{system === "jade" ? "J" : system === "os" ? "OS" : system === "animation" ? "A" : "PR"}</aside><header>Release</header><main><strong>Today</strong><span>Three things need you.</span></main></div>
       break
     case "auth":
     case "sign-in":
@@ -368,7 +374,7 @@ export function ComponentPreview({ item, expanded = false, system = "purple-rain
       sample = <div className="mini-notifications"><header><strong>Notifications</strong><span>3 new</span></header>{["Mara approved the page", "Sam left a note", "Elena shared a file"].map((label, index) => <button type="button" key={label} onClick={() => setActive(index)} aria-current={active === index ? "true" : undefined}><i aria-hidden="true" />{label}</button>)}</div>
       break
     case "application-shell":
-      sample = <div className="mini-application-system"><aside><b>{system === "jade" ? "J" : system === "os" ? "OS" : "PR"}</b>{["Home", "Work", "People"].map((label, index) => <button key={label} type="button" aria-current={active === index ? "page" : undefined} onClick={() => setActive(index)}>{label}</button>)}</aside><section><header><strong>Launch room</strong><button type="button">Share</button></header><main><span>Current decision</span><strong>{["Home direction", "Release checklist", "Review team"][active]}</strong><p>The same product structure stays clear in every visual system.</p></main><footer><span>All changes saved</span><b>3 online</b></footer></section></div>
+      sample = <div className="mini-application-system"><aside><b>{system === "jade" ? "J" : system === "os" ? "OS" : system === "animation" ? "A" : "PR"}</b>{["Home", "Work", "People"].map((label, index) => <button key={label} type="button" aria-current={active === index ? "page" : undefined} onClick={() => setActive(index)}>{label}</button>)}</aside><section><header><strong>Launch room</strong><button type="button">Share</button></header><main><span>Current decision</span><strong>{["Home direction", "Release checklist", "Review team"][active]}</strong><p>The same product structure stays clear in every visual system.</p></main><footer><span>All changes saved</span><b>3 online</b></footer></section></div>
       break
     case "workspace-tree":
       sample = <div className="mini-workspace-tree"><button type="button" onClick={() => setOpen((value) => !value)} aria-expanded={open}><ChevronDown />Product</button>{open ? <div>{["Brief", "Research", "Release"].map((label, index) => <button key={label} type="button" aria-current={active === index ? "true" : undefined} onClick={() => setActive(index)}>{label}</button>)}</div> : null}</div>

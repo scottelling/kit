@@ -33,10 +33,22 @@ curl -fsS https://kit.scottelling.com/r/elements/larson-scanner.json
 curl -fsS https://kit.scottelling.com/r/os/registry.json
 curl -fsS https://kit.scottelling.com/r/os/tokens.json
 curl -fsS https://kit.scottelling.com/r/os/window-shell.json
+curl -fsS https://kit.scottelling.com/r/animation/registry.json
+curl -fsS https://kit.scottelling.com/r/animation/tokens.json
+curl -fsS https://kit.scottelling.com/r/animation/studio-shell.json
+curl -fsS https://kit.scottelling.com/r/jade/motion-timeline.json
+curl -fsS https://kit.scottelling.com/r/animation/window-shell.json
+curl -fsS https://kit.scottelling.com/r/system-catalog.json
+curl -fsS https://kit.scottelling.com/r/icon-catalog.json
+curl -fsS https://kit.scottelling.com/r/adoption-contract.json
 curl -fsS https://kit.scottelling.com/demo
 curl -fsS https://kit.scottelling.com/labs
 curl -fsS https://kit.scottelling.com/elements
 curl -fsS https://kit.scottelling.com/kit/os
+curl -fsS https://kit.scottelling.com/kit/animation
 curl -fsS https://kit.scottelling.com/studio
+curl -fsS https://kit.scottelling.com/studio/icons
+curl -fsS https://kit.scottelling.com/studio/fonts
+curl -fsS https://kit.scottelling.com/studio/swap
 curl -fsS https://kit.scottelling.com/kit/shadow
 ```

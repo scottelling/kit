@@ -384,7 +384,7 @@
       "name": "button",
       "type": "registry:ui",
       "title": "JADE Button",
-      "description": "A 44px tactile button with seated depth, visible focus, and complete loading, error, and success states.",
+      "description": "Button keeps the next move clear and touchable.",
       "registryDependencies": [
         "https://kit.scottelling.com/r/jade/tokens.json"
       ],
@@ -597,7 +597,7 @@
       "name": "input",
       "type": "registry:ui",
       "title": "JADE Input",
-      "description": "A 44px input with stable geometry and visible focus, loading, error, success, and disabled states.",
+      "description": "Input collects a choice without hiding its state.",
       "registryDependencies": [
         "https://kit.scottelling.com/r/jade/tokens.json"
       ],
@@ -1197,7 +1197,7 @@
       "name": "dialog",
       "type": "registry:ui",
       "title": "JADE Dialog",
-      "description": "An accessible Radix dialog with an opaque task-preserving overlay and directional tonal depth.",
+      "description": "Dialog brings a focused task forward without losing context.",
       "registryDependencies": [
         "https://kit.scottelling.com/r/jade/tokens.json"
       ],
@@ -1380,7 +1380,7 @@
       "name": "badge",
       "type": "registry:ui",
       "title": "JADE Badge",
-      "description": "A restrained status badge that keeps semantic meaning visible without decorative pills.",
+      "description": "Badge makes the current state visible at a glance.",
       "registryDependencies": [
         "https://kit.scottelling.com/r/jade/tokens.json"
       ],
@@ -1593,7 +1593,7 @@
       "name": "card",
       "type": "registry:ui",
       "title": "JADE Card",
-      "description": "A borderless tonal card with directional depth and task-first composition slots.",
+      "description": "Card turns information into a readable, useful object.",
       "registryDependencies": [
         "https://kit.scottelling.com/r/jade/tokens.json"
       ],
@@ -2305,6 +2305,561 @@
       "files": [
         {
           "path": "registry/purple-rain/application/document-surface.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "desktop-shell",
+      "type": "registry:ui",
+      "title": "JADE Desktop Shell",
+      "description": "A complete desktop work surface with regions for the menu bar, working windows, widgets, and dock.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/os/patterns/desktop-shell.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "window-shell",
+      "type": "registry:ui",
+      "title": "JADE Window Shell",
+      "description": "A solid, resizable-window frame with clear title, actions, content, and status regions.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/os/patterns/window-shell.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "menu-bar",
+      "type": "registry:ui",
+      "title": "JADE Menu Bar",
+      "description": "A calm global bar that keeps the current place and useful system status visible.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/os/patterns/menu-bar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dock",
+      "type": "registry:ui",
+      "title": "JADE Dock",
+      "description": "A reachable app launcher with an unmistakable current destination and 44-pixel targets.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/os/patterns/dock.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "widget-shell",
+      "type": "registry:ui",
+      "title": "JADE Widget Shell",
+      "description": "A measured small surface that shows the most useful state without clipping or decorative motion.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/os/patterns/widget-shell.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "master-detail",
+      "type": "registry:ui",
+      "title": "JADE Master Detail",
+      "description": "A shared-state list and detail pattern that becomes a real back-driven phone flow.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/os/patterns/master-detail.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "split-view",
+      "type": "registry:ui",
+      "title": "JADE Split View",
+      "description": "A sturdy multi-panel workspace that collapses by priority instead of squeezing content.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/os/patterns/split-view.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "command-bar",
+      "type": "registry:ui",
+      "title": "JADE Command Bar",
+      "description": "A plain-language action entry with honest results, keyboard control, and recovery.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/os/patterns/command-bar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "settings-sheet",
+      "type": "registry:ui",
+      "title": "JADE Settings Sheet",
+      "description": "A focused settings surface with tabs, stable fields, visible state, and a full-screen phone form.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/os/patterns/settings-sheet.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "studio-shell",
+      "type": "registry:ui",
+      "title": "JADE Studio Shell",
+      "description": "A complete creative workspace with one clear canvas, supporting rails, and an anchored timeline.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/studio-shell.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "studio-header",
+      "type": "registry:ui",
+      "title": "JADE Studio Header",
+      "description": "A compact global bar for project identity, mode, device, and high-value actions.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/studio-header.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "workspace-switcher",
+      "type": "registry:ui",
+      "title": "JADE Workspace Switcher",
+      "description": "A touch-safe Story, Preview, Code, and Inspect switcher for narrow workspaces.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/workspace-switcher.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "project-switcher",
+      "type": "registry:ui",
+      "title": "JADE Project Switcher",
+      "description": "A focused project chooser with honest saved and local states.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/project-switcher.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "storyboard-rail",
+      "type": "registry:ui",
+      "title": "JADE Storyboard Rail",
+      "description": "A scroll-owned scene sequence that keeps order, timing, and selection obvious.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/storyboard-rail.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scene-list-item",
+      "type": "registry:ui",
+      "title": "JADE Scene List Item",
+      "description": "A scene row with thumbnail, name, timing, purpose, and unmistakable selection.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/scene-list-item.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stage-viewport",
+      "type": "registry:ui",
+      "title": "JADE Stage Viewport",
+      "description": "A quiet work surface that gives the current composition visual priority.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/stage-viewport.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "device-frame",
+      "type": "registry:ui",
+      "title": "JADE Device Frame",
+      "description": "A solid phone, desktop, browser, or canvas frame that does not compete with authored work.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/device-frame.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "preview-toolbar",
+      "type": "registry:ui",
+      "title": "JADE Preview Toolbar",
+      "description": "A close-at-hand view, scale, and fit control for the stage.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/preview-toolbar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ai-director",
+      "type": "registry:ui",
+      "title": "JADE AI Director",
+      "description": "A plain-language motion command that applies changes with visible, recoverable feedback.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/ai-director.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "command-suggestion-list",
+      "type": "registry:ui",
+      "title": "JADE Command Suggestions",
+      "description": "Keyboard-ready example directions and recent commands without hidden magic.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/command-suggestion-list.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "inspector-panel",
+      "type": "registry:ui",
+      "title": "JADE Inspector Panel",
+      "description": "A single scroll-owned place for scene, layer, and motion properties.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/inspector-panel.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "layer-list",
+      "type": "registry:ui",
+      "title": "JADE Layer List",
+      "description": "A readable layer stack with visibility, type, and current selection.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/layer-list.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "style-inspector",
+      "type": "registry:ui",
+      "title": "JADE Style Inspector",
+      "description": "Direct position, size, scale, radius, and content controls for one layer.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/style-inspector.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "motion-inspector",
+      "type": "registry:ui",
+      "title": "JADE Motion Inspector",
+      "description": "Purpose, easing, duration, and transition controls with safe defaults.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/motion-inspector.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "motion-preset-picker",
+      "type": "registry:ui",
+      "title": "JADE Motion Preset Picker",
+      "description": "Purposeful Rise, Pop, Fade, directional, and Exit choices with exact timing.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/motion-preset-picker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "transport",
+      "type": "registry:ui",
+      "title": "JADE Transport",
+      "description": "Reachable start, previous, play, next, and end controls with visible time.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/transport.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "motion-timeline",
+      "type": "registry:ui",
+      "title": "JADE Motion Timeline",
+      "description": "A horizontally scrollable time ruler with separate scene, motion, and layer lanes.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/motion-timeline.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "timeline-segment",
+      "type": "registry:ui",
+      "title": "JADE Timeline Segment",
+      "description": "A selectable time block that exposes name, duration, and current state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/timeline-segment.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "playhead",
+      "type": "registry:ui",
+      "title": "JADE Playhead",
+      "description": "A keyboard-operable current-time control that stays visible across timeline lanes.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/playhead.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "delivery-workspace",
+      "type": "registry:ui",
+      "title": "JADE Delivery Workspace",
+      "description": "A final work surface for output choice, checks, rendering, and handoff.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/delivery-workspace.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "delivery-action",
+      "type": "registry:ui",
+      "title": "JADE Delivery Action",
+      "description": "An output action with idle, working, complete, and failed states.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/delivery-action.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "render-status",
+      "type": "registry:ui",
+      "title": "JADE Render Status",
+      "description": "Honest queued, rendering, complete, and failed progress with useful next actions.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/render-status.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "motion-check",
+      "type": "registry:ui",
+      "title": "JADE Motion Check",
+      "description": "A review list for purpose, easing, duration, travel, scale, and reduced motion.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/motion-check.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "code-panel",
+      "type": "registry:ui",
+      "title": "JADE Code Panel",
+      "description": "A readable, selectable source surface with copy and export actions.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/code-panel.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "template-gallery",
+      "type": "registry:ui",
+      "title": "JADE Template Gallery",
+      "description": "A responsive set of starting compositions with clear device and duration context.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/template-gallery.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "guided-tour",
+      "type": "registry:ui",
+      "title": "JADE Guided Tour",
+      "description": "A solid, focusable callout that explains one useful region at a time.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/guided-tour.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "workspace-error-boundary",
+      "type": "registry:ui",
+      "title": "JADE Workspace Error Boundary",
+      "description": "A real recovery boundary that protects the rest of the creative workspace.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/workspace-error-boundary.tsx",
           "type": "registry:ui"
         }
       ]

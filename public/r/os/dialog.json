@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "dialog",
   "title": "OS Dialog",
-  "description": "An accessible Radix dialog with an opaque task-preserving overlay and directional tonal depth.",
+  "description": "Dialog brings a focused task forward without losing context.",
   "dependencies": [
     "radix-ui"
   ],

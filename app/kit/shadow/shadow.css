@@ -763,6 +763,12 @@
 }
 
 .shadow-credit a {
+  min-height: var(--pr-control-height);
+  display: inline-flex;
+  align-items: center;
+  margin-inline: calc(var(--space-2xs) * -1);
+  padding-inline: var(--space-2xs);
+  border-radius: var(--radius-control);
   color: var(--foreground);
   font-weight: 700;
 }

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "template-gallery",
+  "title": "Animation Studio Template Gallery",
+  "description": "A responsive set of starting compositions with clear device and duration context.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/animation/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/animation/patterns/template-gallery.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type TemplateGalleryProps = React.ComponentPropsWithoutRef<\"div\">\n\nexport function TemplateGallery({ children, className, ...props }: TemplateGalleryProps) {\n  return (\n    <div data-slot=\"template-gallery\" className={cn(\"grid gap-3 sm:grid-cols-2 lg:grid-cols-3\", className)} {...props}>\n      {children ?? ([[\"Product reveal\", \"Desktop · 8s\"], [\"Feature tour\", \"Phone · 12s\"], [\"Launch statement\", \"Canvas · 6s\"]].map(([title, meta], index) => <button key={title} type=\"button\" aria-pressed={index === 0} className=\"grid min-h-36 content-end gap-1 rounded-[var(--radius-card)] border border-border bg-card p-3 text-left aria-pressed:border-primary\"><span className=\"mb-auto h-14 rounded-md bg-plane-pressed\" /><strong>{title}</strong><small className=\"font-mono text-[10px] text-muted-foreground\">{meta}</small></button>))}\n    </div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

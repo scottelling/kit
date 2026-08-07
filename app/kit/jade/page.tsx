@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 
-import library from "@/lib/purple-rain-library.json"
+import library from "@/lib/universal-library.json"
 
 import { type LibraryItem } from "../component-preview"
 import { KitExperience } from "../kit-experience"

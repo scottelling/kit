@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 
-import osLibrary from "@/lib/os-library.json"
+import osLibrary from "@/lib/universal-library.json"
 
 import { type LibraryItem } from "../component-preview"
 import { KitExperience } from "../kit-experience"

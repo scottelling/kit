@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0",
+  "project_root": "/Users/scott/ScottAI/01_Active_Projects/kit",
+  "generated_at": "2026-08-04T20:00:00Z",
+  "routes_reviewed": [
+    "/kit",
+    "/kit/jade",
+    "/kit/os",
+    "/kit/shadow"
+  ],
+  "viewports_reviewed": [
+    "390x844",
+    "430x932",
+    "768x1024",
+    "1440x900"
+  ],
+  "findings": [
+    {
+      "id": "UI-001",
+      "status": "REVIEW",
+      "category": "spacing-rhythm",
+      "route": "/kit, /kit/jade, /kit/os",
+      "viewport": "all reviewed sizes",
+      "state": "initial",
+      "path": "app/kit/kit.css",
+      "line": 97,
+      "risk": "medium",
+      "observation": "The shared hero has only bottom padding. Its heading line box begins zero pixels below the kit-navigation divider at every reviewed viewport, making the headline appear attached to the rule.",
+      "expected": "Give the hero a deliberate top inset so the navigation, divider, and headline read as separate hierarchy levels without changing the kits' type scale.",
+      "evidence": [
+        "User screenshot: Pasted Image 1.jpg",
+        "Live browser geometry: headlineLineboxGap=0 at 390, 430, 768, and 1440 pixels on Purple Rain, JADE, and OS"
+      ]
+    },
+    {
+      "id": "UI-002",
+      "status": "FIX",
+      "category": "responsive-overflow",
+      "route": "/kit/os",
+      "viewport": "390x844 and 430x932",
+      "state": "initial",
+      "path": "app/kit/os/os.css",
+      "line": 49,
+      "risk": "high",
+      "observation": "The five-theme selector is 126 pixels wider than its visible container at 390 pixels and 88 pixels wider at 430 pixels. Ethereal is clipped and Paper is not visible, while page-level overflow is suppressed.",
+      "expected": "All five themes wrap into a complete, balanced phone layout with every choice visible and reachable.",
+      "evidence": [
+        "Live 390-pixel screenshot",
+        "Live browser geometry: pickerInternalOverflow=126 at 390 pixels and 88 at 430 pixels"
+      ]
+    },
+    {
+      "id": "UI-003",
+      "status": "FIX",
+      "category": "touch-target",
+      "route": "/kit/shadow",
+      "viewport": "all reviewed sizes",
+      "state": "populated",
+      "path": "app/kit/shadow/shadow.css",
+      "line": 765,
+      "risk": "low",
+      "observation": "The Smooth Shadow attribution link is only 18 pixels tall and has no larger effective label target, violating the shared 44-pixel interaction floor.",
+      "expected": "Keep the attribution visually quiet while expanding its effective tap and focus area to at least 44 pixels.",
+      "evidence": [
+        "Live browser geometry: Smooth Shadow link=110x18 pixels at the compact-phone viewport"
+      ]
+    },
+    {
+      "id": "UI-004",
+      "status": "KEEP",
+      "category": "responsive-layout",
+      "route": "/kit, /kit/jade, /kit/os, /kit/shadow",
+      "viewport": "all reviewed sizes",
+      "state": "initial and populated",
+      "path": "app/kit",
+      "line": null,
+      "risk": "low",
+      "observation": "No reviewed kit produces page-level horizontal overflow from compact phone through desktop.",
+      "expected": "Preserve the current page-width containment while correcting the OS selector itself.",
+      "evidence": [
+        "Live browser geometry: pageOverflow=0 for all sixteen route/viewport combinations"
+      ]
+    },
+    {
+      "id": "UI-005",
+      "status": "KEEP",
+      "category": "overlay-layout",
+      "route": "/kit/os",
+      "viewport": "390x844",
+      "state": "Window Shell preview open",
+      "path": "app/kit/kit.css",
+      "line": 1550,
+      "risk": "low",
+      "observation": "The component preview remains fully contained at 358 by 711 pixels, has no internal sideways overflow, and keeps both actions reachable.",
+      "expected": "Preserve the current phone preview behavior.",
+      "evidence": [
+        "Live phone preview screenshot and geometry"
+      ]
+    }
+  ],
+  "limitations": [
+    "This report reviews the four public kit showrooms, their shared entrance layout, representative populated content, and one phone preview. It does not claim exhaustive visual review of every state of all 147 OS pieces.",
+    "Static code-rot and numeric scanner results are discovery leads only. No target-project commands, removal experiments, builds, source edits, commits, or deployment were performed."
+  ]
+}

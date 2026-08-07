@@ -1,0 +1,95 @@
+.font-studio-shell { --font-library-relay: var(--font-relay-sans); min-height: 100dvh; background: var(--background); color: var(--foreground); }
+.font-studio-main { width: min(100% - 2rem, 82rem); margin-inline: auto; }
+.font-studio-opening { display: grid; gap: var(--space-xl); padding-block: clamp(var(--space-2xl), 7vw, var(--space-4xl)); border-bottom: var(--rule-hair) solid var(--border); }
+.font-studio-opening > div:first-child { display: grid; justify-items: start; gap: var(--space-md); }
+.font-studio-opening a { min-height: 2.75rem; display: inline-flex; align-items: center; border-bottom: var(--rule-hair) solid var(--foreground); font-size: var(--text-sm); font-weight: 700; text-decoration: none; }
+.font-studio-opening h1 { max-width: 14ch; margin: 0; font-size: clamp(var(--text-2xl), 6vw, var(--text-display)); line-height: 0.98; letter-spacing: -0.058em; }
+.font-studio-opening p { max-width: 62ch; margin: 0; color: var(--muted-foreground); font-size: var(--text-md); line-height: 1.55; }
+.font-opening-actions { display: grid; align-content: end; justify-items: start; gap: var(--space-lg); }
+.font-opening-actions > p { display: grid; gap: var(--space-xs); color: var(--foreground); font-size: var(--text-sm); }
+.font-opening-actions > p span { color: var(--muted-foreground); }
+.font-opening-actions .mood-picker { display: grid; grid-template-columns: 1fr 1fr; gap: var(--rule-hair); overflow: hidden; border: var(--rule-hair) solid var(--border); border-radius: var(--radius-round); background: var(--border); }
+.font-opening-actions .mood-picker button { min-width: 6rem; min-height: 2.75rem; display: inline-flex; align-items: center; justify-content: center; gap: var(--space-xs); border: 0; background: var(--background); color: var(--muted-foreground); font: inherit; font-size: var(--text-sm); font-weight: 700; cursor: pointer; }
+.font-opening-actions .mood-picker button[aria-pressed="true"] { background: var(--primary); color: var(--primary-foreground); }
+.font-opening-actions .mood-picker svg { width: 1rem; height: 1rem; }
+.font-rules { display: grid; gap: var(--rule-hair); margin-block: var(--space-2xl); overflow: hidden; border: var(--rule-hair) solid var(--border); border-radius: var(--radius-card); background: var(--border); }
+.font-rules > div { min-width: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--space-md); padding: var(--space-lg); background: var(--plane-1); }
+.font-rules span { color: var(--primary); font-family: var(--font-mono); font-size: var(--text-xs); font-weight: 700; }
+.font-rules p { margin: 0; font-size: var(--text-sm); line-height: 1.5; }
+.font-catalog, .font-pairings { display: grid; gap: var(--space-xl); padding-block: var(--space-2xl); }
+.font-catalog > header, .font-pairings > header { display: grid; gap: var(--space-lg); align-items: end; }
+.font-catalog > header span, .font-pairings > header span { color: var(--primary); font-size: var(--text-sm); font-weight: 700; }
+.font-catalog h2, .font-pairings h2 { margin: var(--space-xs) 0 0; font-size: clamp(var(--text-xl), 4vw, var(--text-3xl)); letter-spacing: -0.05em; }
+.font-pairings > header p { max-width: 62ch; margin: var(--space-sm) 0 0; color: var(--muted-foreground); line-height: 1.55; }
+.font-kind-rail { display: flex; gap: var(--space-xs); overflow-x: auto; }
+.font-kind-rail button { min-height: 2.75rem; flex: 0 0 auto; padding-inline: var(--space-md); border: var(--rule-hair) solid var(--border); border-radius: var(--radius-round); background: var(--background); color: var(--muted-foreground); font: inherit; font-size: var(--text-sm); font-weight: 700; cursor: pointer; }
+.font-kind-rail button[aria-pressed="true"] { border-color: var(--primary); background: var(--primary); color: var(--primary-foreground); }
+.font-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--rule-hair); overflow: hidden; border: var(--rule-hair) solid var(--border); border-radius: var(--radius-card); background: var(--border); }
+.font-grid > button { min-width: 0; min-height: 18rem; position: relative; display: grid; align-content: start; gap: var(--space-xs); padding: var(--space-lg); border: 0; background: var(--card); color: var(--foreground); font: inherit; text-align: start; cursor: pointer; }
+.font-grid > button[aria-pressed="true"] { box-shadow: inset 0 0 0 2px var(--primary); background: var(--secondary); color: var(--secondary-foreground); }
+.font-grid > button > span { color: var(--primary); font-family: var(--font-mono); font-size: var(--text-xs); font-weight: 700; }
+.font-grid > button > strong { margin-block: auto var(--space-sm); font-family: var(--font-preview); font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 600; line-height: 0.9; letter-spacing: -0.06em; }
+.font-grid h3, .font-grid p { margin: 0; }
+.font-grid h3 { font-family: var(--font-preview); font-size: var(--text-md); }
+.font-grid p, .font-grid small { color: var(--muted-foreground); font-size: var(--text-xs); line-height: 1.4; }
+.font-grid small { margin-top: var(--space-sm); }
+.font-grid .is-saved { width: 1rem; height: 1rem; position: absolute; inset-block-start: var(--space-lg); inset-inline-end: var(--space-lg); fill: currentColor; color: var(--primary); }
+.font-playground { display: grid; gap: var(--space-lg); margin-block: var(--space-2xl); padding: var(--space-lg); border: var(--rule-hair) solid var(--border); border-radius: var(--radius-sheet); background: var(--card); box-shadow: var(--shadow-panel); }
+.font-playground > header { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-lg); padding-bottom: var(--space-lg); border-bottom: var(--rule-hair) solid var(--border); }
+.font-playground > header span { color: var(--primary); font-size: var(--text-xs); font-weight: 700; }
+.font-playground > header h2, .font-playground > header p { margin: var(--space-xs) 0 0; }
+.font-playground > header h2 { font-family: var(--font-preview); font-size: var(--text-xl); }
+.font-playground > header p { color: var(--muted-foreground); font-size: var(--text-sm); }
+.font-playground > header button { min-height: 2.75rem; display: flex; align-items: center; gap: var(--space-xs); padding-inline: var(--space-md); border: var(--rule-hair) solid var(--border); border-radius: var(--radius-control); background: var(--background); color: var(--foreground); font: inherit; font-size: var(--text-sm); font-weight: 700; cursor: pointer; }
+.font-playground > header button svg { width: 1rem; height: 1rem; }
+.font-controls { display: grid; gap: var(--space-md); }
+.font-controls label { min-width: 0; display: grid; grid-template-columns: 1fr auto; gap: var(--space-xs); color: var(--muted-foreground); font-size: var(--text-sm); font-weight: 700; }
+.font-controls input, .font-controls select { grid-column: 1 / -1; min-width: 0; min-height: 2.75rem; width: 100%; border: var(--rule-hair) solid var(--input); border-radius: var(--radius-control); background: var(--background); color: var(--foreground); font: inherit; padding-inline: var(--space-md); }
+.font-controls input[type="range"] { padding: 0; accent-color: var(--primary); }
+.font-controls output { color: var(--foreground); font-family: var(--font-mono); font-size: var(--text-xs); }
+.font-specimen { min-width: 0; overflow: hidden; border-radius: var(--radius-card); background: var(--plane-1); font-family: var(--font-preview); }
+.font-specimen > h3, .font-specimen > p, .font-specimen > div { padding-inline: clamp(var(--space-lg), 5vw, var(--space-3xl)); }
+.font-specimen > h3 { max-width: 16ch; margin: 0; padding-block: clamp(var(--space-xl), 6vw, var(--space-3xl)); line-height: 0.98; letter-spacing: -0.055em; overflow-wrap: anywhere; }
+.font-specimen > p { max-width: 66ch; margin: 0; padding-bottom: var(--space-xl); font-size: var(--text-base); line-height: 1.7; }
+.font-specimen > div { display: grid; gap: var(--space-md); padding-block: var(--space-lg); border-top: var(--rule-hair) solid var(--border); }
+.font-specimen button { min-height: 2.75rem; border: 0; border-radius: var(--radius-control); background: var(--primary); color: var(--primary-foreground); font: inherit; font-weight: 700; cursor: pointer; }
+.font-specimen label { display: grid; gap: var(--space-xs); font-size: var(--text-sm); font-weight: 700; }
+.font-specimen label input { min-height: 2.75rem; border: var(--rule-hair) solid var(--input); border-radius: var(--radius-control); background: var(--background); color: var(--foreground); font: inherit; padding-inline: var(--space-md); }
+.font-specimen dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--rule-hair); margin: 0; background: var(--border); }
+.font-specimen dl div { min-width: 0; display: grid; gap: var(--space-xs); padding: var(--space-md); background: var(--card); }
+.font-specimen dt { color: var(--muted-foreground); font-size: var(--text-xs); }
+.font-specimen dd { margin: 0; font-size: var(--text-lg); font-variant-numeric: tabular-nums; }
+.font-pairings { padding-bottom: var(--space-4xl); }
+.font-pairings > div { display: grid; gap: var(--space-md); }
+.font-pairings article { min-width: 0; display: grid; align-content: start; gap: var(--space-md); padding: clamp(var(--space-lg), 4vw, var(--space-xl)); border: var(--rule-hair) solid var(--border); border-radius: var(--radius-card); background: var(--card); }
+.font-pairings article > span { color: var(--primary); font-family: var(--font-pair-mono); font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; }
+.font-pairings article h3 { max-width: 14ch; margin: var(--space-xl) 0 0; font-family: var(--font-pair-heading); font-size: clamp(var(--text-xl), 5vw, var(--text-3xl)); line-height: 1; letter-spacing: -0.045em; }
+.font-pairings article p { max-width: 52ch; margin: 0; font-family: var(--font-pair-body); line-height: 1.6; }
+.font-pairings article footer { display: grid; gap: var(--space-xs); margin-top: var(--space-lg); padding-top: var(--space-md); border-top: var(--rule-hair) solid var(--border); font-family: var(--font-pair-body); }
+.font-pairings article footer small { color: var(--muted-foreground); font-family: var(--font-pair-mono); }
+
+@media (hover: hover) and (pointer: fine) {
+  .font-grid > button:hover, .font-kind-rail button:hover, .font-playground > header button:hover { background: var(--plane-1); }
+}
+
+@media (min-width: 48rem) {
+  .font-studio-opening { grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.7fr); align-items: end; }
+  .font-rules { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .font-catalog > header { grid-template-columns: minmax(0, 1fr) auto; }
+  .font-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .font-controls { grid-template-columns: minmax(0, 1.4fr) minmax(12rem, 0.8fr) minmax(8rem, 0.5fr); }
+  .font-specimen > div { grid-template-columns: auto minmax(14rem, 0.8fr) minmax(20rem, 1fr); align-items: end; }
+  .font-pairings > div { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 70rem) {
+  .font-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (max-width: 38rem) {
+  .font-grid { grid-template-columns: 1fr; }
+  .font-grid > button { min-height: 15rem; }
+  .font-playground > header { align-items: stretch; flex-direction: column; }
+  .font-playground > header button { justify-content: center; }
+  .font-specimen dl { grid-template-columns: 1fr; }
+}

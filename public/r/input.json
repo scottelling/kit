@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input",
   "title": "Purple Rain Input",
-  "description": "A 44px input with stable geometry and visible focus, loading, error, success, and disabled states.",
+  "description": "Input collects a choice without hiding its state.",
   "registryDependencies": [
     "https://kit.scottelling.com/r/tokens.json"
   ],

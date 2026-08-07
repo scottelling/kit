@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "delivery-action",
+  "title": "JADE Delivery Action",
+  "description": "An output action with idle, working, complete, and failed states.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/jade/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/animation/patterns/delivery-action.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type DeliveryActionProps = React.ComponentPropsWithoutRef<\"button\"> & { state?: \"idle\" | \"working\" | \"complete\" | \"failed\" }\n\nexport function DeliveryAction({ state = \"idle\", className, ...props }: DeliveryActionProps) {\n  const labels = { idle: \"Render MP4\", working: \"Rendering 48%\", complete: \"Download MP4\", failed: \"Try render again\" }\n  return <button data-slot=\"delivery-action\" type=\"button\" data-state={state} className={cn(\"min-h-11 rounded-[var(--radius-control)] bg-primary px-4 font-bold text-primary-foreground data-[state=failed]:bg-destructive data-[state=complete]:bg-positive\", className)} {...props}>{labels[state]}</button>\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

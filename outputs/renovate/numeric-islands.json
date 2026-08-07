@@ -1,0 +1,3623 @@
+{
+  "schema_version": "1.0",
+  "project_root": "/Users/scott/ScottAI/01_Active_Projects/kit",
+  "generated_at": "2026-08-04T20:16:43Z",
+  "scope": {
+    "source_extensions": [
+      ".cjs",
+      ".js",
+      ".jsx",
+      ".mjs",
+      ".ts",
+      ".tsx"
+    ],
+    "excluded_directories": [
+      ".cache",
+      ".git",
+      ".hg",
+      ".next",
+      ".nuxt",
+      ".output",
+      ".svelte-kit",
+      ".svn",
+      ".turbo",
+      ".vercel",
+      ".wrangler",
+      "__pycache__",
+      "build",
+      "coverage",
+      "dist",
+      "node_modules",
+      "out",
+      "outputs",
+      "target",
+      "vendor"
+    ],
+    "source_files": 209,
+    "max_findings": 2000,
+    "truncated": false,
+    "discovered_before_limit": 163
+  },
+  "summary": {
+    "candidates": 163,
+    "by_category": {
+      "potential-index-boundary": 46,
+      "potential-zero-divisor": 55,
+      "range-sensitive-math": 52,
+      "ui-geometry": 10
+    },
+    "wrapper_contexts": {
+      "async": 1,
+      "jsx": 6,
+      "destructured": 11,
+      "unknown_function_context": 38
+    }
+  },
+  "candidates": [
+    {
+      "category": "potential-index-boundary",
+      "path": "app/elements/element-showroom.tsx",
+      "line": 32,
+      "column": 89,
+      "subject": "potential-index-boundary at app/elements/element-showroom.tsx:32",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const activeFile = files.find((file) => (file.target ?? file.path) === activePath) ?? files[0]",
+      "function": null,
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-001"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/elements/element-showroom.tsx",
+      "line": 52,
+      "column": 21,
+      "subject": "potential-index-boundary at app/elements/element-showroom.tsx:52",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "setActivePath(nextFiles[0]?.target ?? nextFiles[0]?.path ?? \"\")",
+      "function": {
+        "name": "openCode",
+        "async_function": true,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-002"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/elements/page.tsx",
+      "line": 16,
+      "column": 23,
+      "subject": "potential-index-boundary at app/elements/page.tsx:16",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const knightRider = elementLibrary[0]",
+      "function": {
+        "name": "ElementsPage",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": true
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-003"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "app/kit/component-preview.tsx",
+      "line": 211,
+      "column": 96,
+      "subject": "range-sensitive-math at app/kit/component-preview.tsx:211",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "sample = <div className=\"mini-pagination\"><button type=\"button\" onClick={() => setActive(Math.max(0, active - 1))}>Back</button><span>Page {active + 1}</span><button type=\"button\" onClick={() => setActive(active + 1)}>Next</button></div>",
+      "function": null,
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-004"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/kit/component-preview.tsx",
+      "line": 298,
+      "column": 152,
+      "subject": "potential-index-boundary at app/kit/component-preview.tsx:298",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "sample = <div className=\"mini-table\"><div><b>Item</b><b>Owner</b><b>State</b></div>{sampleRows.slice(0, expanded ? 3 : 2).map((row) => <div key={row[0]}>{row.map((cell) => <span key={cell}>{cell}</span>)}</div>)}</div>",
+      "function": null,
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-005"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "app/kit/component-preview.tsx",
+      "line": 324,
+      "column": 129,
+      "subject": "potential-zero-divisor at app/kit/component-preview.tsx:324",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "sample = <div className=\"mini-carousel\"><button type=\"button\" aria-label=\"Previous\" onClick={() => setActive((active + 2) % 3)}>\u2039</button><div><i aria-hidden=\"true\">{active + 1}</i><strong>{[\"First idea\", \"Second idea\", \"Third idea\"][active",
+      "function": null,
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-006"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/kit/jade/jade-experience.tsx",
+      "line": 94,
+      "column": 68,
+      "subject": "potential-index-boundary at app/kit/jade/jade-experience.tsx:94",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const selected = tasks.find((task) => task.id === selectedId) ?? tasks[0]",
+      "function": null,
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-007"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/kit/jade/jade-experience.tsx",
+      "line": 241,
+      "column": 48,
+      "subject": "potential-index-boundary at app/kit/jade/jade-experience.tsx:241",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const [selectedId, setSelectedId] = useState(tasks[0].id)",
+      "function": {
+        "name": "JadeExperience",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": true
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-008"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/kit/kit-experience.tsx",
+      "line": 42,
+      "column": 77,
+      "subject": "potential-index-boundary at app/kit/kit-experience.tsx:42",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const selectedOsTheme = osThemes.find((theme) => theme.id === osTheme) ?? osThemes[0]",
+      "function": null,
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-009"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "app/kit/kit-experience.tsx",
+      "line": 165,
+      "column": 99,
+      "subject": "potential-zero-divisor at app/kit/kit-experience.tsx:165",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const wide = item.category === \"Patterns\" || (item.category === \"Data\" && index % 5 === 0) || (item.category === \"Overlays\" && index % 4 === 0)",
+      "function": null,
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-010"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/kit/kit-experience.tsx",
+      "line": 202,
+      "column": 153,
+      "subject": "potential-index-boundary at app/kit/kit-experience.tsx:202",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "<footer><span>{isOs ? \"Five solid theme moods ready\" : \"Light and dark ready\"}</span><button type=\"button\" onClick={() => isOs ? setOsTheme(osThemes[(osThemes.findIndex((theme) => theme.id === osTheme) + 1) % osThemes.length].id) : setDark(",
+      "function": null,
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-011"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "app/kit/kit-experience.tsx",
+      "line": 202,
+      "column": 220,
+      "subject": "potential-zero-divisor at app/kit/kit-experience.tsx:202",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "<footer><span>{isOs ? \"Five solid theme moods ready\" : \"Light and dark ready\"}</span><button type=\"button\" onClick={() => isOs ? setOsTheme(osThemes[(osThemes.findIndex((theme) => theme.id === osTheme) + 1) % osThemes.length].id) : setDark(",
+      "function": null,
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-012"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/kit/os/os-workbench.tsx",
+      "line": 13,
+      "column": 48,
+      "subject": "potential-index-boundary at app/kit/os/os-workbench.tsx:13",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const [selectedId, setSelectedId] = useState(tasks[0].id)",
+      "function": {
+        "name": "OsWorkbench",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": true
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-013"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/kit/os/os-workbench.tsx",
+      "line": 18,
+      "column": 68,
+      "subject": "potential-index-boundary at app/kit/os/os-workbench.tsx:18",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const selected = tasks.find((task) => task.id === selectedId) ?? tasks[0]",
+      "function": {
+        "name": "OsWorkbench",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": true
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-014"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/labs/creative-labs.tsx",
+      "line": 28,
+      "column": 64,
+      "subject": "potential-index-boundary at app/labs/creative-labs.tsx:28",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const page = project ? getTemplateFamily(project.templateId).pages[0] : \"Overview\"",
+      "function": null,
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-015"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/labs/theme-workshop.tsx",
+      "line": 141,
+      "column": 18,
+      "subject": "potential-index-boundary at app/labs/theme-workshop.tsx:141",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const next = future[0]",
+      "function": {
+        "name": "redo",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-016"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "app/labs/theme-workshop.tsx",
+      "line": 256,
+      "column": 95,
+      "subject": "range-sensitive-math at app/labs/theme-workshop.tsx:256",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "<label className=\"theme-range-control\"><span><strong>Corner shape</strong><small>{Math.round(variant.radius)} px</small></span><input type=\"range\" min=\"0\" max=\"32\" step=\"1\" value={variant.radius} onChange={(event) => writeVariant({ ...varia",
+      "function": null,
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-017"
+    },
+    {
+      "category": "ui-geometry",
+      "path": "app/labs/theme-workshop.tsx",
+      "line": 297,
+      "column": 57,
+      "subject": "ui-geometry at app/labs/theme-workshop.tsx:297",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "<div className=\"theme-quality__meter\"><i style={{ width: `${(quality.passed / quality.total) * 100}%` }} /></div>",
+      "function": null,
+      "evidence": [
+        "A geometry-related value participates in rendered layout or motion."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-018"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/preview/page.tsx",
+      "line": 22,
+      "column": 136,
+      "subject": "potential-index-boundary at app/preview/page.tsx:22",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const family = templateFamilies.find((item) => item.id === query.template) ?? templateFamilies.find((item) => item.type === type) ?? templateFamilies[1]",
+      "function": null,
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-019"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/preview/preview-experience.tsx",
+      "line": 13,
+      "column": 36,
+      "subject": "potential-index-boundary at app/preview/preview-experience.tsx:13",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const [page, setPage] = useState(family.pages[0])",
+      "function": null,
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-020"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/projects/projects-room.tsx",
+      "line": 45,
+      "column": 160,
+      "subject": "potential-index-boundary at app/projects/projects-room.tsx:45",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "{filters.map((item) => <button key={item} type=\"button\" aria-pressed={filter === item} onClick={() => setFilter(item)}>{item === \"all\" ? \"Current\" : item[0].toUpperCase() + item.slice(1)} <span>{item === \"all\" ? projects.filter((project) =>",
+      "function": {
+        "name": "ProjectsRoom",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": true
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-021"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/quality/quality-room.tsx",
+      "line": 43,
+      "column": 77,
+      "subject": "potential-index-boundary at app/quality/quality-room.tsx:43",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const project = currentProjects.find((item) => item.id === selectedId) ?? currentProjects[0] ?? null",
+      "function": {
+        "name": "QualityRoom",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": true
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-022"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/studio/studio-experience.tsx",
+      "line": 62,
+      "column": 53,
+      "subject": "potential-index-boundary at app/studio/studio-experience.tsx:62",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "return assets.find((asset) => asset.id === id) ?? assets[0]",
+      "function": {
+        "name": "assetById",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-023"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/studio/studio-experience.tsx",
+      "line": 88,
+      "column": 40,
+      "subject": "potential-index-boundary at app/studio/studio-experience.tsx:88",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const [fontId, setFontId] = useState(directions[0].font)",
+      "function": null,
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-024"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/studio/studio-experience.tsx",
+      "line": 89,
+      "column": 46,
+      "subject": "potential-index-boundary at app/studio/studio-experience.tsx:89",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const [paletteId, setPaletteId] = useState(directions[0].palette)",
+      "function": null,
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-025"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/studio/studio-experience.tsx",
+      "line": 90,
+      "column": 44,
+      "subject": "potential-index-boundary at app/studio/studio-experience.tsx:90",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const [motionId, setMotionId] = useState(directions[0].motion)",
+      "function": null,
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-026"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/studio/studio-experience.tsx",
+      "line": 91,
+      "column": 40,
+      "subject": "potential-index-boundary at app/studio/studio-experience.tsx:91",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const [textId, setTextId] = useState(directions[0].text)",
+      "function": null,
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-027"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/studio/studio-experience.tsx",
+      "line": 135,
+      "column": 20,
+      "subject": "potential-index-boundary at app/studio/studio-experience.tsx:135",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const choice = directions[index]",
+      "function": {
+        "name": "chooseDirection",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-028"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/studio/studio-experience.tsx",
+      "line": 195,
+      "column": 75,
+      "subject": "potential-index-boundary at app/studio/studio-experience.tsx:195",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const family = templateFamilies.find((item) => item.type === type) ?? templateFamilies[1]",
+      "function": {
+        "name": "buildProject",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-029"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/templates/template-foundry.tsx",
+      "line": 22,
+      "column": 71,
+      "subject": "potential-index-boundary at app/templates/template-foundry.tsx:22",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const family = templateFamilies.find((item) => item.id === id) ?? templateFamilies[1]",
+      "function": {
+        "name": "startFromTemplate",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-030"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "app/templates/template-foundry.tsx",
+      "line": 58,
+      "column": 41,
+      "subject": "potential-zero-divisor at app/templates/template-foundry.tsx:58",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "<article className={index % 3 === 0 ? \"template-card template-card--wide\" : \"template-card\"} key={family.id}>",
+      "function": null,
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-031"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "app/templates/template-foundry.tsx",
+      "line": 59,
+      "column": 73,
+      "subject": "potential-index-boundary at app/templates/template-foundry.tsx:59",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "<ProjectCanvas project={specimen} assets={assets} page={family.pages[0]} compact />",
+      "function": null,
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-032"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "components/site-header.tsx",
+      "line": 113,
+      "column": 38,
+      "subject": "potential-index-boundary at components/site-header.tsx:113",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "visit(results[active]?.href ?? results[0].href)",
+      "function": {
+        "name": "handleFinderKeys",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-033"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "lib/project-studio.ts",
+      "line": 182,
+      "column": 65,
+      "subject": "potential-index-boundary at lib/project-studio.ts:182",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "return templateFamilies.find((family) => family.id === id) ?? templateFamilies[1]",
+      "function": {
+        "name": "getTemplateFamily",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-034"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "lib/project-studio.ts",
+      "line": 255,
+      "column": 10,
+      "subject": "potential-index-boundary at lib/project-studio.ts:255",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "return pageSet[page] ?? pageSet[family.pages[0]]",
+      "function": {
+        "name": "projectPreviewCopy",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-035"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "lib/theme-workshop.ts",
+      "line": 169,
+      "column": 60,
+      "subject": "range-sensitive-math at lib/theme-workshop.ts:169",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value))",
+      "function": null,
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-036"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "lib/theme-workshop.ts",
+      "line": 211,
+      "column": 50,
+      "subject": "potential-zero-divisor at lib/theme-workshop.ts:211",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "h: round(((finiteNumber(input.h, fallback.h) % 360) + 360) % 360, 2),",
+      "function": {
+        "name": "safeColor",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-037"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "lib/theme-workshop.ts",
+      "line": 262,
+      "column": 37,
+      "subject": "potential-zero-divisor at lib/theme-workshop.ts:262",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const angle = (value.h * Math.PI) / 180",
+      "function": {
+        "name": "oklchToLinearRgb",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-038"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "lib/theme-workshop.ts",
+      "line": 280,
+      "column": 73,
+      "subject": "potential-zero-divisor at lib/theme-workshop.ts:280",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "return channel <= 0.0031308 ? 12.92 * channel : 1.055 * channel ** (1 / 2.4) - 0.055",
+      "function": {
+        "name": "linearToSrgb",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-039"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "lib/theme-workshop.ts",
+      "line": 285,
+      "column": 39,
+      "subject": "range-sensitive-math at lib/theme-workshop.ts:285",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const channel = (number: number) => Math.round(linearToSrgb(number) * 255).toString(16).padStart(2, \"0\")",
+      "function": {
+        "name": "oklchToHex",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-040"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "lib/theme-workshop.ts",
+      "line": 290,
+      "column": 25,
+      "subject": "potential-zero-divisor at lib/theme-workshop.ts:290",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const channel = value / 255",
+      "function": {
+        "name": "srgbToLinear",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-041"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "lib/theme-workshop.ts",
+      "line": 291,
+      "column": 39,
+      "subject": "potential-zero-divisor at lib/theme-workshop.ts:291",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "return channel <= 0.04045 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4",
+      "function": {
+        "name": "srgbToLinear",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-042"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "lib/theme-workshop.ts",
+      "line": 297,
+      "column": 15,
+      "subject": "potential-index-boundary at lib/theme-workshop.ts:297",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const raw = match[1]",
+      "function": {
+        "name": "hexToOklch",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-043"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "lib/theme-workshop.ts",
+      "line": 307,
+      "column": 13,
+      "subject": "range-sensitive-math at lib/theme-workshop.ts:307",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const c = Math.sqrt(a * a + bValue * bValue)",
+      "function": {
+        "name": "hexToOklch",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-044"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "lib/theme-workshop.ts",
+      "line": 308,
+      "column": 44,
+      "subject": "potential-zero-divisor at lib/theme-workshop.ts:308",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const h = ((Math.atan2(bValue, a) * 180) / Math.PI + 360) % 360",
+      "function": {
+        "name": "hexToOklch",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-045"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "lib/theme-workshop.ts",
+      "line": 320,
+      "column": 17,
+      "subject": "range-sensitive-math at lib/theme-workshop.ts:320",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "return round((Math.max(first, second) + 0.05) / (Math.min(first, second) + 0.05), 2)",
+      "function": {
+        "name": "contrastRatio",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-046"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "lib/theme-workshop.ts",
+      "line": 320,
+      "column": 49,
+      "subject": "potential-zero-divisor at lib/theme-workshop.ts:320",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "return round((Math.max(first, second) + 0.05) / (Math.min(first, second) + 0.05), 2)",
+      "function": {
+        "name": "contrastRatio",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-047"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "lib/theme-workshop.ts",
+      "line": 353,
+      "column": 43,
+      "subject": "potential-zero-divisor at lib/theme-workshop.ts:353",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const delta = ((target - current + 540) % 360) - 180",
+      "function": {
+        "name": "moveHue",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-048"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "lib/theme-workshop.ts",
+      "line": 354,
+      "column": 43,
+      "subject": "potential-zero-divisor at lib/theme-workshop.ts:354",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "return (current + delta * amount + 360) % 360",
+      "function": {
+        "name": "moveHue",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-049"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "lib/theme-workshop.ts",
+      "line": 375,
+      "column": 56,
+      "subject": "range-sensitive-math at lib/theme-workshop.ts:375",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "mode.action = { ...mode.action, h: hue, c: clamp(Math.max(mode.action.c, 0.12), 0, 0.24) }",
+      "function": {
+        "name": "applyThemeDirection",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-050"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "lib/theme-workshop.ts",
+      "line": 377,
+      "column": 56,
+      "subject": "range-sensitive-math at lib/theme-workshop.ts:377",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "mode.raised = { ...mode.raised, h: hue, c: clamp(Math.max(mode.raised.c, 0.015), 0, 0.05) }",
+      "function": {
+        "name": "applyThemeDirection",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-051"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "lib/theme-workshop.ts",
+      "line": 523,
+      "column": 79,
+      "subject": "potential-zero-divisor at lib/theme-workshop.ts:523",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "\"chart-4\": themeColorString({ ...tokens.action, h: (tokens.action.h + 55) % 360 }),",
+      "function": {
+        "name": "workshopCssVars",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-052"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "lib/theme-workshop.ts",
+      "line": 524,
+      "column": 80,
+      "subject": "potential-zero-divisor at lib/theme-workshop.ts:524",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "\"chart-5\": themeColorString({ ...tokens.action, h: (tokens.action.h + 110) % 360 }),",
+      "function": {
+        "name": "workshopCssVars",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-053"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 57,
+      "column": 10,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:57",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "return Math.min(max, Math.max(min, value))",
+      "function": {
+        "name": "clamp",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-054"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 70,
+      "column": 25,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:70",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const channels = [red / 255, green / 255, blue / 255]",
+      "function": {
+        "name": "rgbToHue",
+        "async_function": false,
+        "destructured_parameters": true,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-055"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 71,
+      "column": 15,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:71",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const max = Math.max(...channels)",
+      "function": {
+        "name": "rgbToHue",
+        "async_function": false,
+        "destructured_parameters": true,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-056"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 72,
+      "column": 15,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:72",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const min = Math.min(...channels)",
+      "function": {
+        "name": "rgbToHue",
+        "async_function": false,
+        "destructured_parameters": true,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-057"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 76,
+      "column": 15,
+      "subject": "potential-index-boundary at registry/elements/larson-scanner/larson-scanner.tsx:76",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "if (max === channels[0]) hue = ((channels[1] - channels[2]) / delta) % 6",
+      "function": {
+        "name": "rgbToHue",
+        "async_function": false,
+        "destructured_parameters": true,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-058"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 76,
+      "column": 63,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:76",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "if (max === channels[0]) hue = ((channels[1] - channels[2]) / delta) % 6",
+      "function": {
+        "name": "rgbToHue",
+        "async_function": false,
+        "destructured_parameters": true,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-059"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 77,
+      "column": 20,
+      "subject": "potential-index-boundary at registry/elements/larson-scanner/larson-scanner.tsx:77",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "else if (max === channels[1]) hue = (channels[2] - channels[0]) / delta + 2",
+      "function": {
+        "name": "rgbToHue",
+        "async_function": false,
+        "destructured_parameters": true,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-060"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 77,
+      "column": 67,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:77",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "else if (max === channels[1]) hue = (channels[2] - channels[0]) / delta + 2",
+      "function": {
+        "name": "rgbToHue",
+        "async_function": false,
+        "destructured_parameters": true,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-061"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 78,
+      "column": 15,
+      "subject": "potential-index-boundary at registry/elements/larson-scanner/larson-scanner.tsx:78",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "else hue = (channels[0] - channels[1]) / delta + 4",
+      "function": {
+        "name": "rgbToHue",
+        "async_function": false,
+        "destructured_parameters": true,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-062"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 78,
+      "column": 42,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:78",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "else hue = (channels[0] - channels[1]) / delta + 4",
+      "function": {
+        "name": "rgbToHue",
+        "async_function": false,
+        "destructured_parameters": true,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-063"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 79,
+      "column": 27,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:79",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "return (hue * 60 + 360) % 360",
+      "function": {
+        "name": "rgbToHue",
+        "async_function": false,
+        "destructured_parameters": true,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-064"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 97,
+      "column": 16,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:97",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const last = Math.max(1, settings.nodes - 1)",
+      "function": {
+        "name": "scannerHeads",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-065"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 98,
+      "column": 37,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:98",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const normalized = clamp(position / last, 0, 1)",
+      "function": {
+        "name": "scannerHeads",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-066"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 101,
+      "column": 20,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:101",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const radius = Math.abs(Math.sin(elapsed * settings.speed * Math.PI * 0.42)) * 0.5",
+      "function": {
+        "name": "scannerHeads",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-067"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 105,
+      "column": 38,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:105",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const brightest = levels.indexOf(Math.max(...levels))",
+      "function": {
+        "name": "scannerHeads",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-068"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 106,
+      "column": 23,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:106",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "return [brightest / last]",
+      "function": {
+        "name": "scannerHeads",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-069"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 109,
+      "column": 73,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:109",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const path = settings.customPath.length ? settings.customPath : [0, Math.floor(settings.nodes / 2), settings.nodes - 1]",
+      "function": {
+        "name": "scannerHeads",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-070"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 109,
+      "column": 99,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:109",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const path = settings.customPath.length ? settings.customPath : [0, Math.floor(settings.nodes / 2), settings.nodes - 1]",
+      "function": {
+        "name": "scannerHeads",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-071"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 110,
+      "column": 5,
+      "subject": "potential-index-boundary at registry/elements/larson-scanner/larson-scanner.tsx:110",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "return [path[Math.abs(Math.floor(position)) % path.length] / last]",
+      "function": {
+        "name": "scannerHeads",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-072"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 110,
+      "column": 18,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:110",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "return [path[Math.abs(Math.floor(position)) % path.length] / last]",
+      "function": {
+        "name": "scannerHeads",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-073"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 110,
+      "column": 49,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:110",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "return [path[Math.abs(Math.floor(position)) % path.length] / last]",
+      "function": {
+        "name": "scannerHeads",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-074"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 117,
+      "column": 51,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:117",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const tailPower = 1.25 + ((100 - settings.fade) / 100) * 4.2",
+      "function": {
+        "name": "patternLevels",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-075"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 120,
+      "column": 22,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:120",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "let distance = Math.abs(index - head)",
+      "function": {
+        "name": "addTrail",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-076"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 121,
+      "column": 28,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:121",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "if (wrap) distance = Math.min(distance, settings.nodes - distance)",
+      "function": {
+        "name": "addTrail",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-077"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 122,
+      "column": 20,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:122",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const glow = Math.pow(Math.max(0, 1 - distance / (2.2 + settings.fade / 13)), tailPower)",
+      "function": {
+        "name": "addTrail",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-078"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 122,
+      "column": 54,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:122",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const glow = Math.pow(Math.max(0, 1 - distance / (2.2 + settings.fade / 13)), tailPower)",
+      "function": {
+        "name": "addTrail",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-079"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 123,
+      "column": 7,
+      "subject": "potential-index-boundary at registry/elements/larson-scanner/larson-scanner.tsx:123",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "levels[index] = Math.max(levels[index], glow)",
+      "function": {
+        "name": "addTrail",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-080"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 123,
+      "column": 23,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:123",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "levels[index] = Math.max(levels[index], glow)",
+      "function": {
+        "name": "addTrail",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-081"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 132,
+      "column": 48,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:132",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "if (pattern === \"comet\") addTrail(((position % settings.nodes) + settings.nodes) % settings.nodes, true)",
+      "function": {
+        "name": "patternLevels",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-082"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 134,
+      "column": 41,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:134",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const center = (settings.nodes - 1) / 2",
+      "function": {
+        "name": "patternLevels",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-083"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 135,
+      "column": 20,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:135",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const radius = Math.abs(Math.sin(elapsed * settings.speed * Math.PI * 0.42)) * center",
+      "function": {
+        "name": "patternLevels",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-084"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 137,
+      "column": 24,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:137",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const distance = Math.abs(Math.abs(index - center) - radius)",
+      "function": {
+        "name": "patternLevels",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-085"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 138,
+      "column": 7,
+      "subject": "potential-index-boundary at registry/elements/larson-scanner/larson-scanner.tsx:138",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "levels[index] = Math.pow(Math.max(0, 1 - distance / (2.4 + settings.fade / 55)), tailPower)",
+      "function": {
+        "name": "patternLevels",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-086"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 138,
+      "column": 23,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:138",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "levels[index] = Math.pow(Math.max(0, 1 - distance / (2.4 + settings.fade / 55)), tailPower)",
+      "function": {
+        "name": "patternLevels",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-087"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 138,
+      "column": 57,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:138",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "levels[index] = Math.pow(Math.max(0, 1 - distance / (2.4 + settings.fade / 55)), tailPower)",
+      "function": {
+        "name": "patternLevels",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-088"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 140,
+      "column": 12,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:140",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "levels[Math.round(center)] = Math.max(levels[Math.round(center)], 0.28)",
+      "function": {
+        "name": "patternLevels",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-089"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 143,
+      "column": 18,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:143",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const step = Math.floor(elapsed * settings.speed * 2.4)",
+      "function": {
+        "name": "patternLevels",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-090"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 145,
+      "column": 22,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:145",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const seeded = Math.abs(Math.sin((index + 1) * 12.9898 + step * 78.233) * 43758.5453) % 1",
+      "function": {
+        "name": "patternLevels",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-091"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 145,
+      "column": 93,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:145",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const seeded = Math.abs(Math.sin((index + 1) * 12.9898 + step * 78.233) * 43758.5453) % 1",
+      "function": {
+        "name": "patternLevels",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-092"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 146,
+      "column": 7,
+      "subject": "potential-index-boundary at registry/elements/larson-scanner/larson-scanner.tsx:146",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "levels[index] = seeded > 0.82 ? seeded : seeded * 0.07",
+      "function": {
+        "name": "patternLevels",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-093"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 150,
+      "column": 73,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:150",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const path = settings.customPath.length ? settings.customPath : [0, Math.floor(settings.nodes / 2), settings.nodes - 1]",
+      "function": {
+        "name": "patternLevels",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-094"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 150,
+      "column": 99,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:150",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const path = settings.customPath.length ? settings.customPath : [0, Math.floor(settings.nodes / 2), settings.nodes - 1]",
+      "function": {
+        "name": "patternLevels",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-095"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 151,
+      "column": 14,
+      "subject": "potential-index-boundary at registry/elements/larson-scanner/larson-scanner.tsx:151",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "addTrail(path[Math.abs(Math.floor(position)) % path.length])",
+      "function": {
+        "name": "patternLevels",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-096"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 151,
+      "column": 19,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:151",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "addTrail(path[Math.abs(Math.floor(position)) % path.length])",
+      "function": {
+        "name": "patternLevels",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-097"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 151,
+      "column": 50,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:151",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "addTrail(path[Math.abs(Math.floor(position)) % path.length])",
+      "function": {
+        "name": "patternLevels",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-098"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 158,
+      "column": 36,
+      "subject": "potential-index-boundary at registry/elements/larson-scanner/larson-scanner.tsx:158",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "return to.map((value, index) => (from[index] ?? 0) * (1 - amount) + value * amount)",
+      "function": {
+        "name": "blendLevels",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-099"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 162,
+      "column": 14,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:162",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "return 1 - Math.pow(1 - value, 3)",
+      "function": {
+        "name": "easeOutCubic",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-100"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 177,
+      "column": 21,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:177",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const trackLeft = Math.max(18, width * 0.04)",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-101"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 182,
+      "column": 42,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:182",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const centerY = trackTop + trackHeight / 2",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-102"
+    },
+    {
+      "category": "ui-geometry",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 183,
+      "column": 9,
+      "subject": "ui-geometry at registry/elements/larson-scanner/larson-scanner.tsx:183",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const gap = clamp(width / 210, 2, 7)",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "A geometry-related value participates in rendered layout or motion."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-103"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 183,
+      "column": 27,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:183",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const gap = clamp(width / 210, 2, 7)",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-104"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 184,
+      "column": 21,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:184",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const nodeWidth = Math.max(2, (trackWidth - gap * (settings.nodes - 1)) / settings.nodes)",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-105"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 184,
+      "column": 75,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:184",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const nodeWidth = Math.max(2, (trackWidth - gap * (settings.nodes - 1)) / settings.nodes)",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-106"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 202,
+      "column": 39,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:202",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const intensity = settings.ribbon / 100",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-107"
+    },
+    {
+      "category": "ui-geometry",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 204,
+      "column": 53,
+      "subject": "ui-geometry at registry/elements/larson-scanner/larson-scanner.tsx:204",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "{ hue: hue - 32, phase: 0.4, amplitude: 0.13, width: 1.7 },",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "A geometry-related value participates in rendered layout or motion."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-108"
+    },
+    {
+      "category": "ui-geometry",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 205,
+      "column": 43,
+      "subject": "ui-geometry at registry/elements/larson-scanner/larson-scanner.tsx:205",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "{ hue, phase: 2.1, amplitude: 0.19, width: 2.8 },",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "A geometry-related value participates in rendered layout or motion."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-109"
+    },
+    {
+      "category": "ui-geometry",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 206,
+      "column": 54,
+      "subject": "ui-geometry at registry/elements/larson-scanner/larson-scanner.tsx:206",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "{ hue: hue + 36, phase: 4.15, amplitude: 0.11, width: 1.4 },",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "A geometry-related value participates in rendered layout or motion."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-110"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 217,
+      "column": 53,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:217",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "for (let x = trackLeft; x <= trackRight; x += Math.max(5, trackWidth / 140)) {",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-111"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 217,
+      "column": 76,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:217",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "for (let x = trackLeft; x <= trackRight; x += Math.max(5, trackWidth / 140)) {",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-112"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 218,
+      "column": 45,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:218",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const normalizedX = (x - trackLeft) / trackWidth",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-113"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 219,
+      "column": 23,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:219",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const focus = Math.max(...heads.map((head) => Math.exp(-Math.pow(normalizedX - head, 2) / 0.035)))",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-114"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 236,
+      "column": 19,
+      "subject": "potential-index-boundary at registry/elements/larson-scanner/larson-scanner.tsx:236",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const level = levels[index] * (settings.brightness / 100)",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-115"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 236,
+      "column": 56,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:236",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const level = levels[index] * (settings.brightness / 100)",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-116"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 243,
+      "column": 49,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:243",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "context.strokeRect(x + 0.5, trackTop + 0.5, Math.max(0, nodeWidth - 1), Math.max(0, trackHeight - 1))",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-117"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 248,
+      "column": 20,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:248",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const radius = Math.max(trackHeight * 1.2, trackWidth * 0.075)",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-118"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 262,
+      "column": 22,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:262",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const meterWidth = Math.min(width * 0.3, 230)",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-119"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 266,
+      "column": 55,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:266",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const barWidth = (meterWidth - barGap * (bars - 1)) / bars",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-120"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 268,
+      "column": 26,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:268",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const level = levels[Math.floor((index / bars) * settings.nodes)] ?? 0",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-121"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 268,
+      "column": 44,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:268",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const level = levels[Math.floor((index / bars) * settings.nodes)] ?? 0",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-122"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 269,
+      "column": 80,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:269",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const wave = (Math.sin(index * 0.78 + elapsed * settings.speed * 2.1) + 1) / 2",
+      "function": {
+        "name": "drawScanner",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-123"
+    },
+    {
+      "category": "ui-geometry",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 289,
+      "column": 62,
+      "subject": "ui-geometry at registry/elements/larson-scanner/larson-scanner.tsx:289",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const [canvasSize, setCanvasSize] = useState<CanvasSize>({ width: 1, height: 1, dpr: 1 })",
+      "function": null,
+      "evidence": [
+        "A geometry-related value participates in rendered layout or motion."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-124"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 321,
+      "column": 55,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:321",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "oscillator.frequency.exponentialRampToValueAtTime(Math.max(24, profile.base * 0.72), now + profile.duration)",
+      "function": null,
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-125"
+    },
+    {
+      "category": "ui-geometry",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 347,
+      "column": 13,
+      "subject": "ui-geometry at registry/elements/larson-scanner/larson-scanner.tsx:347",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const width = Math.max(1, Math.round(entry.contentRect.width))",
+      "function": null,
+      "evidence": [
+        "A geometry-related value participates in rendered layout or motion."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-126"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 347,
+      "column": 21,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:347",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const width = Math.max(1, Math.round(entry.contentRect.width))",
+      "function": null,
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-127"
+    },
+    {
+      "category": "ui-geometry",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 348,
+      "column": 13,
+      "subject": "ui-geometry at registry/elements/larson-scanner/larson-scanner.tsx:348",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const height = Math.max(1, Math.round(entry.contentRect.height))",
+      "function": null,
+      "evidence": [
+        "A geometry-related value participates in rendered layout or motion."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-128"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 348,
+      "column": 22,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:348",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const height = Math.max(1, Math.round(entry.contentRect.height))",
+      "function": null,
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-129"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 349,
+      "column": 19,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:349",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const dpr = Math.min(window.devicePixelRatio || 1, 2)",
+      "function": null,
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-130"
+    },
+    {
+      "category": "ui-geometry",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 350,
+      "column": 14,
+      "subject": "ui-geometry at registry/elements/larson-scanner/larson-scanner.tsx:350",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "canvas.width = Math.round(width * dpr)",
+      "function": null,
+      "evidence": [
+        "A geometry-related value participates in rendered layout or motion."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-131"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 350,
+      "column": 22,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:350",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "canvas.width = Math.round(width * dpr)",
+      "function": null,
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-132"
+    },
+    {
+      "category": "ui-geometry",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 351,
+      "column": 14,
+      "subject": "ui-geometry at registry/elements/larson-scanner/larson-scanner.tsx:351",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "canvas.height = Math.round(height * dpr)",
+      "function": null,
+      "evidence": [
+        "A geometry-related value participates in rendered layout or motion."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-133"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 351,
+      "column": 23,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:351",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "canvas.height = Math.round(height * dpr)",
+      "function": null,
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-134"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 369,
+      "column": 21,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:369",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const delta = Math.min((now - last) / 1000, 0.05)",
+      "function": {
+        "name": "render",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-135"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 369,
+      "column": 43,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:369",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const delta = Math.min((now - last) / 1000, 0.05)",
+      "function": {
+        "name": "render",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-136"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 371,
+      "column": 50,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:371",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const staticTime = reducedMotion ? 0 : now / 1000",
+      "function": {
+        "name": "render",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-137"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 374,
+      "column": 47,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:374",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const travel = delta * speed * (nodes / 7.8)",
+      "function": {
+        "name": "render",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-138"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 376,
+      "column": 89,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:376",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "phaseRef.current = (phaseRef.current + travel * directionRef.current + nodes) % nodes",
+      "function": {
+        "name": "render",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-139"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 391,
+      "column": 57,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:391",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "if (reducedMotion) phaseRef.current = (nodes - 1) / 2",
+      "function": {
+        "name": "render",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-140"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 397,
+      "column": 59,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:397",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const progress = clamp((now - transition.started) / 180, 0, 1)",
+      "function": {
+        "name": "render",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-141"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 404,
+      "column": 20,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:404",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const head = Math.round(phaseRef.current)",
+      "function": {
+        "name": "render",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-142"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 407,
+      "column": 18,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:407",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "if (head % Math.max(2, Math.floor(nodes / 8)) === 0) playTone(head)",
+      "function": {
+        "name": "render",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-143"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 407,
+      "column": 20,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:407",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "if (head % Math.max(2, Math.floor(nodes / 8)) === 0) playTone(head)",
+      "function": {
+        "name": "render",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-144"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 437,
+      "column": 9,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:437",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "? Math.round(phaseRef.current)",
+      "function": {
+        "name": "samplePosition",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-145"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 438,
+      "column": 15,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:438",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": ": clamp(Math.round(((event.clientX - rect.left) / rect.width) * (nodes - 1)), 0, nodes - 1)",
+      "function": {
+        "name": "samplePosition",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-146"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 438,
+      "column": 55,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:438",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": ": clamp(Math.round(((event.clientX - rect.left) / rect.width) * (nodes - 1)), 0, nodes - 1)",
+      "function": {
+        "name": "samplePosition",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-147"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 450,
+      "column": 24,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:450",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "if (next) playTone(Math.round(phaseRef.current), true)",
+      "function": {
+        "name": "toggleSound",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-148"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 573,
+      "column": 172,
+      "subject": "range-sensitive-math at registry/elements/larson-scanner/larson-scanner.tsx:573",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "<label key={choice}><input type=\"radio\" name={voiceName} value={choice} checked={voice === choice} onChange={() => { setVoice(choice); if (sound) playTone(Math.round(phaseRef.current), true) }} /><span>{choice === \"sub\" ? \"Sub pulse\" : choi",
+      "function": null,
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-149"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/elements/larson-scanner/larson-scanner.tsx",
+      "line": 594,
+      "column": 31,
+      "subject": "potential-zero-divisor at registry/elements/larson-scanner/larson-scanner.tsx:594",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const fill = ((value - min) / (max - min)) * 100",
+      "function": null,
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-150"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/os/patterns/command-bar.tsx",
+      "line": 33,
+      "column": 95,
+      "subject": "potential-zero-divisor at registry/os/patterns/command-bar.tsx:33",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "if (event.key === \"ArrowDown\") { event.preventDefault(); setActive((value) => (value + 1) % matches.length) }",
+      "function": {
+        "name": "handleKeyDown",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-151"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "registry/os/patterns/command-bar.tsx",
+      "line": 34,
+      "column": 110,
+      "subject": "potential-zero-divisor at registry/os/patterns/command-bar.tsx:34",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "if (event.key === \"ArrowUp\") { event.preventDefault(); setActive((value) => (value - 1 + matches.length) % matches.length) }",
+      "function": {
+        "name": "handleKeyDown",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-152"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "registry/os/patterns/command-bar.tsx",
+      "line": 35,
+      "column": 81,
+      "subject": "potential-index-boundary at registry/os/patterns/command-bar.tsx:35",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "if (event.key === \"Enter\") { event.preventDefault(); run(matches[active] ?? matches[0]) }",
+      "function": {
+        "name": "handleKeyDown",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-153"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "registry/os/patterns/dock.tsx",
+      "line": 22,
+      "column": 61,
+      "subject": "potential-index-boundary at registry/os/patterns/dock.tsx:22",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "function Dock({ items = defaultItems, value, defaultValue = items[0]?.id ?? \"\", onValueChange, className, ...props }: DockProps) {",
+      "function": {
+        "name": "Dock",
+        "async_function": false,
+        "destructured_parameters": true,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-154"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "registry/os/patterns/master-detail.tsx",
+      "line": 21,
+      "column": 67,
+      "subject": "potential-index-boundary at registry/os/patterns/master-detail.tsx:21",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const [selectedId, setSelectedId] = React.useState(initialId ?? items[0]?.id ?? \"\")",
+      "function": null,
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-155"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "registry/os/patterns/master-detail.tsx",
+      "line": 24,
+      "column": 68,
+      "subject": "potential-index-boundary at registry/os/patterns/master-detail.tsx:24",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const selected = items.find((item) => item.id === selectedId) ?? items[0]",
+      "function": null,
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-156"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "registry/os/patterns/settings-sheet.tsx",
+      "line": 11,
+      "column": 40,
+      "subject": "potential-index-boundary at registry/os/patterns/settings-sheet.tsx:11",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const [tab, setTab] = React.useState(tabs[0])",
+      "function": null,
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-157"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "scripts/verify-elements.mjs",
+      "line": 21,
+      "column": 5,
+      "subject": "potential-index-boundary at scripts/verify-elements.mjs:21",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "if (library[0]?.id !== item?.name) failures.push(\"Elements inventory and registry identity have drifted\")",
+      "function": null,
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-158"
+    },
+    {
+      "category": "potential-index-boundary",
+      "path": "scripts/verify-os.mjs",
+      "line": 15,
+      "column": 30,
+      "subject": "potential-index-boundary at scripts/verify-os.mjs:15",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "return match ? { l: Number(match[1]), c: Number(match[2]), h: Number(match[3]) } : null",
+      "function": {
+        "name": "parseOklch",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "An indexed read or write may need integer and bounds evidence."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-159"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "scripts/verify-os.mjs",
+      "line": 19,
+      "column": 35,
+      "subject": "potential-zero-divisor at scripts/verify-os.mjs:19",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "const angle = value.h * Math.PI / 180",
+      "function": {
+        "name": "luminance",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-160"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "scripts/verify-os.mjs",
+      "line": 28,
+      "column": 30,
+      "subject": "range-sensitive-math at scripts/verify-os.mjs:28",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "const clamp = (channel) => Math.max(0, Math.min(1, channel))",
+      "function": {
+        "name": "luminance",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-161"
+    },
+    {
+      "category": "range-sensitive-math",
+      "path": "scripts/verify-os.mjs",
+      "line": 41,
+      "column": 11,
+      "subject": "range-sensitive-math at scripts/verify-os.mjs:41",
+      "initial_status": "UNPROVEN",
+      "risk": "low",
+      "snippet": "return (Math.max(firstLuminance, secondLuminance) + 0.05) / (Math.min(firstLuminance, secondLuminance) + 0.05)",
+      "function": {
+        "name": "contrast",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Rounding or range-sensitive math participates in a numeric island."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-162"
+    },
+    {
+      "category": "potential-zero-divisor",
+      "path": "scripts/verify-os.mjs",
+      "line": 41,
+      "column": 61,
+      "subject": "potential-zero-divisor at scripts/verify-os.mjs:41",
+      "initial_status": "UNPROVEN",
+      "risk": "medium",
+      "snippet": "return (Math.max(firstLuminance, secondLuminance) + 0.05) / (Math.min(firstLuminance, secondLuminance) + 0.05)",
+      "function": {
+        "name": "contrast",
+        "async_function": false,
+        "destructured_parameters": false,
+        "contains_jsx": false
+      },
+      "evidence": [
+        "Division or remainder depends on a value whose zero/non-finite range should be established."
+      ],
+      "caveats": [
+        "This dependency-free scan locates syntax, not runtime ranges or a demonstrated defect."
+      ],
+      "id": "NUM-163"
+    }
+  ],
+  "limitations": [
+    "Every candidate is UNPROVEN; syntax discovery is neither a bug report nor a safety proof.",
+    "The dependency-free parser is heuristic and can miss or misclassify complex TypeScript, JSX, templates, regexes, generated syntax, aliases, and minified code.",
+    "UI geometry relevance requires rendered-state review; numeric relevance requires Freerange, tests, assertions, or manual reasoning.",
+    "No target-project command, package binary, or application code was executed."
+  ]
+}

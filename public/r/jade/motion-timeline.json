@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "motion-timeline",
+  "title": "JADE Motion Timeline",
+  "description": "A horizontally scrollable time ruler with separate scene, motion, and layer lanes.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/jade/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/animation/patterns/motion-timeline.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type MotionTimelineProps = React.ComponentPropsWithoutRef<\"section\">\n\nexport function MotionTimeline({ children, className, ...props }: MotionTimelineProps) {\n  return (\n    <section data-slot=\"motion-timeline\" className={cn(\"min-w-0 overflow-x-auto border-t border-border bg-sidebar\", className)} {...props}>\n      {children ?? (<div className=\"grid min-w-[42rem] grid-cols-[5rem_1fr] text-[10px]\"><div className=\"grid border-r border-border font-mono text-muted-foreground\"><span className=\"min-h-8 border-b border-border p-2\">Time</span><span className=\"min-h-11 border-b border-border p-2\">Scenes</span><span className=\"min-h-11 border-b border-border p-2\">Motion</span><span className=\"min-h-11 p-2\">Layers</span></div><div><div className=\"grid min-h-8 grid-cols-4 border-b border-border font-mono text-muted-foreground\">{[\"0s\", \"1s\", \"2s\", \"3s\"].map((time) => <span key={time} className=\"border-r border-border p-2\">{time}</span>)}</div><div className=\"flex min-h-11 border-b border-border\"><button type=\"button\" className=\"min-h-11 w-1/4 border-r border-border text-left\">Set</button><button type=\"button\" className=\"min-h-11 w-2/4 border border-primary bg-secondary text-left\">Reveal</button><button type=\"button\" className=\"min-h-11 w-1/4 text-left\">Emphasize</button></div><div className=\"min-h-11 border-b border-border bg-chart-3\" /><div className=\"min-h-11 bg-chart-2\" /></div></div>)}\n    </section>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

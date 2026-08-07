@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "motion-inspector",
+  "title": "JADE Motion Inspector",
+  "description": "Purpose, easing, duration, and transition controls with safe defaults.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/jade/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/animation/patterns/motion-inspector.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type MotionInspectorProps = React.ComponentPropsWithoutRef<\"fieldset\">\n\nexport function MotionInspector({ children, className, ...props }: MotionInspectorProps) {\n  return (\n    <fieldset data-slot=\"motion-inspector\" className={cn(\"grid gap-3 border-0 p-0\", className)} {...props}>\n      {children ?? (<><legend className=\"mb-2 text-xs font-bold uppercase tracking-[0.08em]\">Motion</legend><label className=\"grid gap-1 text-xs font-bold text-muted-foreground\">Purpose<select defaultValue=\"explanation\" className=\"min-h-11 rounded-[var(--radius-control)] border border-border bg-input px-3 text-sm text-foreground\"><option value=\"explanation\">Explanation</option><option value=\"focus\">Focus</option><option value=\"continuity\">Continuity</option><option value=\"feedback\">Feedback</option><option value=\"delight\">Delight</option></select></label><label className=\"grid gap-1 text-xs font-bold text-muted-foreground\">Easing<select defaultValue=\"easeOut\" className=\"min-h-11 rounded-[var(--radius-control)] border border-border bg-input px-3 text-sm text-foreground\"><option>easeOut</option><option>easeInOut</option><option>linear</option><option>spring</option></select></label><label className=\"grid gap-1 text-xs font-bold text-muted-foreground\">Transition · 420ms<input type=\"range\" min=\"120\" max=\"1800\" defaultValue=\"420\" className=\"min-h-11 accent-primary\" /></label></>)}\n    </fieldset>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

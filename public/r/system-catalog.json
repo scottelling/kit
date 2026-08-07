@@ -1,0 +1,2718 @@
+{
+  "version": "1.0.0",
+  "purpose": "One complete interface catalog that every visual kit can style without forcing unused layouts into a project.",
+  "installPolicy": {
+    "shared": "Available in every kit and used whenever the target product already needs the component.",
+    "specialty": "Available in every kit but installed only when the target product needs the pattern.",
+    "productLayout": "Owned by the product and never replaced automatically during a kit swap."
+  },
+  "systems": [
+    {
+      "id": "purple-rain",
+      "label": "Purple Rain",
+      "homepage": "https://kit.scottelling.com/kit",
+      "tokenUrl": "https://kit.scottelling.com/r/tokens.json",
+      "componentCount": 175
+    },
+    {
+      "id": "jade",
+      "label": "JADE",
+      "homepage": "https://kit.scottelling.com/kit/jade",
+      "tokenUrl": "https://kit.scottelling.com/r/jade/tokens.json",
+      "componentCount": 175
+    },
+    {
+      "id": "os-kit",
+      "label": "OS",
+      "homepage": "https://kit.scottelling.com/kit/os",
+      "tokenUrl": "https://kit.scottelling.com/r/os/tokens.json",
+      "componentCount": 175
+    },
+    {
+      "id": "animation-studio",
+      "label": "Animation Studio",
+      "homepage": "https://kit.scottelling.com/kit/animation",
+      "tokenUrl": "https://kit.scottelling.com/r/animation/tokens.json",
+      "componentCount": 175
+    }
+  ],
+  "layers": [
+    {
+      "id": "shared",
+      "label": "Everyday interface pieces",
+      "count": 138,
+      "categories": [
+        "Foundations",
+        "Actions",
+        "Forms",
+        "Navigation",
+        "Overlays",
+        "Feedback",
+        "Data",
+        "Patterns"
+      ],
+      "items": [
+        "color-swatch",
+        "type-specimen",
+        "spacing-guide",
+        "radius-guide",
+        "shadow-guide",
+        "focus-ring",
+        "separator",
+        "surface",
+        "container",
+        "stack",
+        "button",
+        "button-group",
+        "icon-button",
+        "split-button",
+        "menu-button",
+        "toggle-button",
+        "toggle-group",
+        "segmented-control",
+        "floating-action-button",
+        "link-button",
+        "copy-button",
+        "favorite-button",
+        "toolbar",
+        "bulk-action-bar",
+        "input",
+        "textarea",
+        "select",
+        "checkbox",
+        "checkbox-group",
+        "radio-group",
+        "switch",
+        "slider",
+        "range-slider",
+        "progress",
+        "meter",
+        "file-upload",
+        "dropzone",
+        "otp-input",
+        "search-field",
+        "combobox",
+        "date-picker",
+        "time-input",
+        "number-input",
+        "password-input",
+        "color-input",
+        "rating",
+        "field",
+        "inline-edit",
+        "tabs",
+        "breadcrumb",
+        "pagination",
+        "stepper",
+        "sidebar",
+        "topbar",
+        "bottom-nav",
+        "navigation-menu",
+        "command-menu",
+        "filter-tabs",
+        "view-switcher",
+        "page-header",
+        "back-link",
+        "anchor-nav",
+        "table-of-contents",
+        "app-switcher",
+        "dialog",
+        "alert-dialog",
+        "sheet",
+        "drawer",
+        "popover",
+        "tooltip",
+        "dropdown-menu",
+        "context-menu",
+        "hover-card",
+        "command-palette",
+        "lightbox",
+        "action-menu",
+        "badge",
+        "alert",
+        "banner",
+        "toast",
+        "snackbar",
+        "empty-state",
+        "skeleton",
+        "loading-dots",
+        "spinner",
+        "status-dot",
+        "progress-card",
+        "error-state",
+        "success-state",
+        "offline-state",
+        "card",
+        "avatar",
+        "avatar-group",
+        "table",
+        "data-table",
+        "description-list",
+        "list",
+        "list-item",
+        "stat",
+        "stat-group",
+        "timeline",
+        "activity-feed",
+        "calendar",
+        "agenda",
+        "accordion",
+        "collapsible",
+        "carousel",
+        "bar-chart",
+        "donut-chart",
+        "tree-view",
+        "app-shell",
+        "auth-card",
+        "sign-in-form",
+        "sign-up-form",
+        "forgot-password-form",
+        "profile-form",
+        "settings-panel",
+        "invite-form",
+        "contact-form",
+        "feedback-form",
+        "checkout-form",
+        "cart-summary",
+        "order-summary",
+        "pricing-card",
+        "pricing-table",
+        "filter-bar",
+        "search-results",
+        "notification-center",
+        "application-shell",
+        "workspace-tree",
+        "viewer-shell",
+        "editor-toolbar",
+        "task-board",
+        "task-rail",
+        "status-bar",
+        "mobile-app-nav",
+        "terminal-surface",
+        "document-surface"
+      ]
+    },
+    {
+      "id": "specialty",
+      "label": "Optional specialist patterns",
+      "count": 37,
+      "collections": [
+        {
+          "owner": "os-kit",
+          "label": "OS workspaces",
+          "items": [
+            "desktop-shell",
+            "window-shell",
+            "menu-bar",
+            "dock",
+            "widget-shell",
+            "master-detail",
+            "split-view",
+            "command-bar",
+            "settings-sheet"
+          ]
+        },
+        {
+          "owner": "animation-studio",
+          "label": "Creative workspaces",
+          "items": [
+            "studio-shell",
+            "studio-header",
+            "workspace-switcher",
+            "project-switcher",
+            "storyboard-rail",
+            "scene-list-item",
+            "stage-viewport",
+            "device-frame",
+            "preview-toolbar",
+            "ai-director",
+            "command-suggestion-list",
+            "inspector-panel",
+            "layer-list",
+            "style-inspector",
+            "motion-inspector",
+            "motion-preset-picker",
+            "transport",
+            "motion-timeline",
+            "timeline-segment",
+            "playhead",
+            "delivery-workspace",
+            "delivery-action",
+            "render-status",
+            "motion-check",
+            "code-panel",
+            "template-gallery",
+            "guided-tour",
+            "workspace-error-boundary"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "product-layout",
+      "label": "Product-owned screens and journeys",
+      "count": 0,
+      "items": [],
+      "note": "These remain in the target product. A visual kit may style them but never silently replaces them."
+    }
+  ],
+  "promotionRule": [
+    "Promote a new piece to the everyday catalog when its purpose is useful beyond one product.",
+    "Keep product data, routes, and business behavior outside the component.",
+    "Use semantic visual roles so every kit can style the same behavior.",
+    "Complete keyboard, touch, responsive, loading, empty, error, success, disabled, and reduced-motion states before release.",
+    "Reject any unclassified component so nothing becomes an accidental one-off."
+  ],
+  "items": [
+    {
+      "name": "color-swatch",
+      "title": "Color Swatch",
+      "category": "Foundations",
+      "description": "See how Color Swatch shapes every screen.",
+      "preview": "color",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "type-specimen",
+      "title": "Type Specimen",
+      "category": "Foundations",
+      "description": "See how Type Specimen shapes every screen.",
+      "preview": "type",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "spacing-guide",
+      "title": "Spacing Guide",
+      "category": "Foundations",
+      "description": "See how Spacing Guide shapes every screen.",
+      "preview": "spacing",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "radius-guide",
+      "title": "Radius Guide",
+      "category": "Foundations",
+      "description": "See how Radius Guide shapes every screen.",
+      "preview": "radius",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "shadow-guide",
+      "title": "Shadow Guide",
+      "category": "Foundations",
+      "description": "See how Shadow Guide shapes every screen.",
+      "preview": "shadow",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "focus-ring",
+      "title": "Focus Ring",
+      "category": "Foundations",
+      "description": "See how Focus Ring shapes every screen.",
+      "preview": "focus",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "separator",
+      "title": "Separator",
+      "category": "Foundations",
+      "description": "See how Separator shapes every screen.",
+      "preview": "separator",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "surface",
+      "title": "Surface",
+      "category": "Foundations",
+      "description": "See how Surface shapes every screen.",
+      "preview": "surface",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "container",
+      "title": "Container",
+      "category": "Foundations",
+      "description": "See how Container shapes every screen.",
+      "preview": "layout",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "stack",
+      "title": "Stack",
+      "category": "Foundations",
+      "description": "See how Stack shapes every screen.",
+      "preview": "layout",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "button",
+      "title": "Button",
+      "category": "Actions",
+      "description": "Button keeps the next move clear and touchable.",
+      "preview": "button",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "button-group",
+      "title": "Button Group",
+      "category": "Actions",
+      "description": "Button Group keeps the next move clear and touchable.",
+      "preview": "button-group",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "icon-button",
+      "title": "Icon Button",
+      "category": "Actions",
+      "description": "Icon Button keeps the next move clear and touchable.",
+      "preview": "icon-button",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "split-button",
+      "title": "Split Button",
+      "category": "Actions",
+      "description": "Split Button keeps the next move clear and touchable.",
+      "preview": "split-button",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "menu-button",
+      "title": "Menu Button",
+      "category": "Actions",
+      "description": "Menu Button keeps the next move clear and touchable.",
+      "preview": "menu",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "toggle-button",
+      "title": "Toggle Button",
+      "category": "Actions",
+      "description": "Toggle Button keeps the next move clear and touchable.",
+      "preview": "toggle",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "toggle-group",
+      "title": "Toggle Group",
+      "category": "Actions",
+      "description": "Toggle Group keeps the next move clear and touchable.",
+      "preview": "toggle-group",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "segmented-control",
+      "title": "Segmented Control",
+      "category": "Actions",
+      "description": "Segmented Control keeps the next move clear and touchable.",
+      "preview": "segments",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "floating-action-button",
+      "title": "Floating Action Button",
+      "category": "Actions",
+      "description": "Floating Action Button keeps the next move clear and touchable.",
+      "preview": "floating",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "link-button",
+      "title": "Link Button",
+      "category": "Actions",
+      "description": "Link Button keeps the next move clear and touchable.",
+      "preview": "link",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "copy-button",
+      "title": "Copy Button",
+      "category": "Actions",
+      "description": "Copy Button keeps the next move clear and touchable.",
+      "preview": "copy",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "favorite-button",
+      "title": "Favorite Button",
+      "category": "Actions",
+      "description": "Favorite Button keeps the next move clear and touchable.",
+      "preview": "favorite",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "toolbar",
+      "title": "Toolbar",
+      "category": "Actions",
+      "description": "Toolbar keeps the next move clear and touchable.",
+      "preview": "toolbar",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "bulk-action-bar",
+      "title": "Bulk Action Bar",
+      "category": "Actions",
+      "description": "Bulk Action Bar keeps the next move clear and touchable.",
+      "preview": "bulk",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "input",
+      "title": "Input",
+      "category": "Forms",
+      "description": "Input collects a choice without hiding its state.",
+      "preview": "input",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "textarea",
+      "title": "Textarea",
+      "category": "Forms",
+      "description": "Textarea collects a choice without hiding its state.",
+      "preview": "textarea",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "select",
+      "title": "Select",
+      "category": "Forms",
+      "description": "Select collects a choice without hiding its state.",
+      "preview": "select",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "checkbox",
+      "title": "Checkbox",
+      "category": "Forms",
+      "description": "Checkbox collects a choice without hiding its state.",
+      "preview": "checkbox",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "checkbox-group",
+      "title": "Checkbox Group",
+      "category": "Forms",
+      "description": "Checkbox Group collects a choice without hiding its state.",
+      "preview": "checkbox-group",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "radio-group",
+      "title": "Radio Group",
+      "category": "Forms",
+      "description": "Radio Group collects a choice without hiding its state.",
+      "preview": "radio",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "switch",
+      "title": "Switch",
+      "category": "Forms",
+      "description": "Switch collects a choice without hiding its state.",
+      "preview": "switch",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "slider",
+      "title": "Slider",
+      "category": "Forms",
+      "description": "Slider collects a choice without hiding its state.",
+      "preview": "slider",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "range-slider",
+      "title": "Range Slider",
+      "category": "Forms",
+      "description": "Range Slider collects a choice without hiding its state.",
+      "preview": "range",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "progress",
+      "title": "Progress",
+      "category": "Forms",
+      "description": "Progress collects a choice without hiding its state.",
+      "preview": "progress",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "meter",
+      "title": "Meter",
+      "category": "Forms",
+      "description": "Meter collects a choice without hiding its state.",
+      "preview": "meter",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "file-upload",
+      "title": "File Upload",
+      "category": "Forms",
+      "description": "File Upload collects a choice without hiding its state.",
+      "preview": "file",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "dropzone",
+      "title": "Dropzone",
+      "category": "Forms",
+      "description": "Dropzone collects a choice without hiding its state.",
+      "preview": "dropzone",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "otp-input",
+      "title": "OTP Input",
+      "category": "Forms",
+      "description": "OTP Input collects a choice without hiding its state.",
+      "preview": "otp",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "search-field",
+      "title": "Search Field",
+      "category": "Forms",
+      "description": "Search Field collects a choice without hiding its state.",
+      "preview": "search",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "combobox",
+      "title": "Combobox",
+      "category": "Forms",
+      "description": "Combobox collects a choice without hiding its state.",
+      "preview": "combobox",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "date-picker",
+      "title": "Date Picker",
+      "category": "Forms",
+      "description": "Date Picker collects a choice without hiding its state.",
+      "preview": "date",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "time-input",
+      "title": "Time Input",
+      "category": "Forms",
+      "description": "Time Input collects a choice without hiding its state.",
+      "preview": "time",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "number-input",
+      "title": "Number Input",
+      "category": "Forms",
+      "description": "Number Input collects a choice without hiding its state.",
+      "preview": "number",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "password-input",
+      "title": "Password Input",
+      "category": "Forms",
+      "description": "Password Input collects a choice without hiding its state.",
+      "preview": "password",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "color-input",
+      "title": "Color Input",
+      "category": "Forms",
+      "description": "Color Input collects a choice without hiding its state.",
+      "preview": "color-input",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "rating",
+      "title": "Rating",
+      "category": "Forms",
+      "description": "Rating collects a choice without hiding its state.",
+      "preview": "rating",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "field",
+      "title": "Field",
+      "category": "Forms",
+      "description": "Field collects a choice without hiding its state.",
+      "preview": "field",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "inline-edit",
+      "title": "Inline Edit",
+      "category": "Forms",
+      "description": "Inline Edit collects a choice without hiding its state.",
+      "preview": "edit",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "tabs",
+      "title": "Tabs",
+      "category": "Navigation",
+      "description": "Tabs keeps place and direction easy to scan.",
+      "preview": "tabs",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "breadcrumb",
+      "title": "Breadcrumb",
+      "category": "Navigation",
+      "description": "Breadcrumb keeps place and direction easy to scan.",
+      "preview": "breadcrumb",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "pagination",
+      "title": "Pagination",
+      "category": "Navigation",
+      "description": "Pagination keeps place and direction easy to scan.",
+      "preview": "pagination",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "stepper",
+      "title": "Stepper",
+      "category": "Navigation",
+      "description": "Stepper keeps place and direction easy to scan.",
+      "preview": "stepper",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "sidebar",
+      "title": "Sidebar",
+      "category": "Navigation",
+      "description": "Sidebar keeps place and direction easy to scan.",
+      "preview": "sidebar",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "topbar",
+      "title": "Topbar",
+      "category": "Navigation",
+      "description": "Topbar keeps place and direction easy to scan.",
+      "preview": "topbar",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "bottom-nav",
+      "title": "Bottom Nav",
+      "category": "Navigation",
+      "description": "Bottom Nav keeps place and direction easy to scan.",
+      "preview": "bottom-nav",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "navigation-menu",
+      "title": "Navigation Menu",
+      "category": "Navigation",
+      "description": "Navigation Menu keeps place and direction easy to scan.",
+      "preview": "nav-menu",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "command-menu",
+      "title": "Command Menu",
+      "category": "Navigation",
+      "description": "Command Menu keeps place and direction easy to scan.",
+      "preview": "command",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "filter-tabs",
+      "title": "Filter Tabs",
+      "category": "Navigation",
+      "description": "Filter Tabs keeps place and direction easy to scan.",
+      "preview": "filter-tabs",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "view-switcher",
+      "title": "View Switcher",
+      "category": "Navigation",
+      "description": "View Switcher keeps place and direction easy to scan.",
+      "preview": "view",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "page-header",
+      "title": "Page Header",
+      "category": "Navigation",
+      "description": "Page Header keeps place and direction easy to scan.",
+      "preview": "page-header",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "back-link",
+      "title": "Back Link",
+      "category": "Navigation",
+      "description": "Back Link keeps place and direction easy to scan.",
+      "preview": "back",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "anchor-nav",
+      "title": "Anchor Nav",
+      "category": "Navigation",
+      "description": "Anchor Nav keeps place and direction easy to scan.",
+      "preview": "anchor",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "table-of-contents",
+      "title": "Table Of Contents",
+      "category": "Navigation",
+      "description": "Table Of Contents keeps place and direction easy to scan.",
+      "preview": "toc",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "app-switcher",
+      "title": "App Switcher",
+      "category": "Navigation",
+      "description": "App Switcher keeps place and direction easy to scan.",
+      "preview": "app-switcher",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "dialog",
+      "title": "Dialog",
+      "category": "Overlays",
+      "description": "Dialog brings a focused task forward without losing context.",
+      "preview": "dialog",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "alert-dialog",
+      "title": "Alert Dialog",
+      "category": "Overlays",
+      "description": "Alert Dialog brings a focused task forward without losing context.",
+      "preview": "alert-dialog",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "sheet",
+      "title": "Sheet",
+      "category": "Overlays",
+      "description": "Sheet brings a focused task forward without losing context.",
+      "preview": "sheet",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "drawer",
+      "title": "Drawer",
+      "category": "Overlays",
+      "description": "Drawer brings a focused task forward without losing context.",
+      "preview": "drawer",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "popover",
+      "title": "Popover",
+      "category": "Overlays",
+      "description": "Popover brings a focused task forward without losing context.",
+      "preview": "popover",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "tooltip",
+      "title": "Tooltip",
+      "category": "Overlays",
+      "description": "Tooltip brings a focused task forward without losing context.",
+      "preview": "tooltip",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "dropdown-menu",
+      "title": "Dropdown Menu",
+      "category": "Overlays",
+      "description": "Dropdown Menu brings a focused task forward without losing context.",
+      "preview": "dropdown",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "context-menu",
+      "title": "Context Menu",
+      "category": "Overlays",
+      "description": "Context Menu brings a focused task forward without losing context.",
+      "preview": "context",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "hover-card",
+      "title": "Hover Card",
+      "category": "Overlays",
+      "description": "Hover Card brings a focused task forward without losing context.",
+      "preview": "hover",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "command-palette",
+      "title": "Command Palette",
+      "category": "Overlays",
+      "description": "Command Palette brings a focused task forward without losing context.",
+      "preview": "palette",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "lightbox",
+      "title": "Lightbox",
+      "category": "Overlays",
+      "description": "Lightbox brings a focused task forward without losing context.",
+      "preview": "lightbox",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "action-menu",
+      "title": "Action Menu",
+      "category": "Overlays",
+      "description": "Action Menu brings a focused task forward without losing context.",
+      "preview": "action-menu",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "badge",
+      "title": "Badge",
+      "category": "Feedback",
+      "description": "Badge makes the current state visible at a glance.",
+      "preview": "badge",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "alert",
+      "title": "Alert",
+      "category": "Feedback",
+      "description": "Alert makes the current state visible at a glance.",
+      "preview": "alert",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "banner",
+      "title": "Banner",
+      "category": "Feedback",
+      "description": "Banner makes the current state visible at a glance.",
+      "preview": "banner",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "toast",
+      "title": "Toast",
+      "category": "Feedback",
+      "description": "Toast makes the current state visible at a glance.",
+      "preview": "toast",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "snackbar",
+      "title": "Snackbar",
+      "category": "Feedback",
+      "description": "Snackbar makes the current state visible at a glance.",
+      "preview": "snackbar",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "empty-state",
+      "title": "Empty State",
+      "category": "Feedback",
+      "description": "Empty State makes the current state visible at a glance.",
+      "preview": "empty",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "skeleton",
+      "title": "Skeleton",
+      "category": "Feedback",
+      "description": "Skeleton makes the current state visible at a glance.",
+      "preview": "skeleton",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "loading-dots",
+      "title": "Loading Dots",
+      "category": "Feedback",
+      "description": "Loading Dots makes the current state visible at a glance.",
+      "preview": "dots",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "spinner",
+      "title": "Spinner",
+      "category": "Feedback",
+      "description": "Spinner makes the current state visible at a glance.",
+      "preview": "spinner",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "status-dot",
+      "title": "Status Dot",
+      "category": "Feedback",
+      "description": "Status Dot makes the current state visible at a glance.",
+      "preview": "status",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "progress-card",
+      "title": "Progress Card",
+      "category": "Feedback",
+      "description": "Progress Card makes the current state visible at a glance.",
+      "preview": "progress-card",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "error-state",
+      "title": "Error State",
+      "category": "Feedback",
+      "description": "Error State makes the current state visible at a glance.",
+      "preview": "error",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "success-state",
+      "title": "Success State",
+      "category": "Feedback",
+      "description": "Success State makes the current state visible at a glance.",
+      "preview": "success",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "offline-state",
+      "title": "Offline State",
+      "category": "Feedback",
+      "description": "Offline State makes the current state visible at a glance.",
+      "preview": "offline",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "card",
+      "title": "Card",
+      "category": "Data",
+      "description": "Card turns information into a readable, useful object.",
+      "preview": "card",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "avatar",
+      "title": "Avatar",
+      "category": "Data",
+      "description": "Avatar turns information into a readable, useful object.",
+      "preview": "avatar",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "avatar-group",
+      "title": "Avatar Group",
+      "category": "Data",
+      "description": "Avatar Group turns information into a readable, useful object.",
+      "preview": "avatar-group",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "table",
+      "title": "Table",
+      "category": "Data",
+      "description": "Table turns information into a readable, useful object.",
+      "preview": "table",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "data-table",
+      "title": "Data Table",
+      "category": "Data",
+      "description": "Data Table turns information into a readable, useful object.",
+      "preview": "data-table",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "description-list",
+      "title": "Description List",
+      "category": "Data",
+      "description": "Description List turns information into a readable, useful object.",
+      "preview": "description",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "list",
+      "title": "List",
+      "category": "Data",
+      "description": "List turns information into a readable, useful object.",
+      "preview": "list",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "list-item",
+      "title": "List Item",
+      "category": "Data",
+      "description": "List Item turns information into a readable, useful object.",
+      "preview": "list-item",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "stat",
+      "title": "Stat",
+      "category": "Data",
+      "description": "Stat turns information into a readable, useful object.",
+      "preview": "stat",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "stat-group",
+      "title": "Stat Group",
+      "category": "Data",
+      "description": "Stat Group turns information into a readable, useful object.",
+      "preview": "stat-group",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "timeline",
+      "title": "Timeline",
+      "category": "Data",
+      "description": "Timeline turns information into a readable, useful object.",
+      "preview": "timeline",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "activity-feed",
+      "title": "Activity Feed",
+      "category": "Data",
+      "description": "Activity Feed turns information into a readable, useful object.",
+      "preview": "activity",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "calendar",
+      "title": "Calendar",
+      "category": "Data",
+      "description": "Calendar turns information into a readable, useful object.",
+      "preview": "calendar",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "agenda",
+      "title": "Agenda",
+      "category": "Data",
+      "description": "Agenda turns information into a readable, useful object.",
+      "preview": "agenda",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "accordion",
+      "title": "Accordion",
+      "category": "Data",
+      "description": "Accordion turns information into a readable, useful object.",
+      "preview": "accordion",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "collapsible",
+      "title": "Collapsible",
+      "category": "Data",
+      "description": "Collapsible turns information into a readable, useful object.",
+      "preview": "collapsible",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "carousel",
+      "title": "Carousel",
+      "category": "Data",
+      "description": "Carousel turns information into a readable, useful object.",
+      "preview": "carousel",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "bar-chart",
+      "title": "Bar Chart",
+      "category": "Data",
+      "description": "Bar Chart turns information into a readable, useful object.",
+      "preview": "bar-chart",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "donut-chart",
+      "title": "Donut Chart",
+      "category": "Data",
+      "description": "Donut Chart turns information into a readable, useful object.",
+      "preview": "donut",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "tree-view",
+      "title": "Tree View",
+      "category": "Data",
+      "description": "Tree View turns information into a readable, useful object.",
+      "preview": "tree",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "app-shell",
+      "title": "App Shell",
+      "category": "Patterns",
+      "description": "App Shell assembles related pieces into a complete task.",
+      "preview": "app-shell",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "auth-card",
+      "title": "Auth Card",
+      "category": "Patterns",
+      "description": "Auth Card assembles related pieces into a complete task.",
+      "preview": "auth",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "sign-in-form",
+      "title": "Sign In Form",
+      "category": "Patterns",
+      "description": "Sign In Form assembles related pieces into a complete task.",
+      "preview": "sign-in",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "sign-up-form",
+      "title": "Sign Up Form",
+      "category": "Patterns",
+      "description": "Sign Up Form assembles related pieces into a complete task.",
+      "preview": "sign-up",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "forgot-password-form",
+      "title": "Forgot Password Form",
+      "category": "Patterns",
+      "description": "Forgot Password Form assembles related pieces into a complete task.",
+      "preview": "forgot",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "profile-form",
+      "title": "Profile Form",
+      "category": "Patterns",
+      "description": "Profile Form assembles related pieces into a complete task.",
+      "preview": "profile",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "settings-panel",
+      "title": "Settings Panel",
+      "category": "Patterns",
+      "description": "Settings Panel assembles related pieces into a complete task.",
+      "preview": "settings",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "invite-form",
+      "title": "Invite Form",
+      "category": "Patterns",
+      "description": "Invite Form assembles related pieces into a complete task.",
+      "preview": "invite",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "contact-form",
+      "title": "Contact Form",
+      "category": "Patterns",
+      "description": "Contact Form assembles related pieces into a complete task.",
+      "preview": "contact",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "feedback-form",
+      "title": "Feedback Form",
+      "category": "Patterns",
+      "description": "Feedback Form assembles related pieces into a complete task.",
+      "preview": "feedback-form",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "checkout-form",
+      "title": "Checkout Form",
+      "category": "Patterns",
+      "description": "Checkout Form assembles related pieces into a complete task.",
+      "preview": "checkout",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "cart-summary",
+      "title": "Cart Summary",
+      "category": "Patterns",
+      "description": "Cart Summary assembles related pieces into a complete task.",
+      "preview": "cart",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "order-summary",
+      "title": "Order Summary",
+      "category": "Patterns",
+      "description": "Order Summary assembles related pieces into a complete task.",
+      "preview": "order",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "pricing-card",
+      "title": "Pricing Card",
+      "category": "Patterns",
+      "description": "Pricing Card assembles related pieces into a complete task.",
+      "preview": "pricing-card",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "pricing-table",
+      "title": "Pricing Table",
+      "category": "Patterns",
+      "description": "Pricing Table assembles related pieces into a complete task.",
+      "preview": "pricing-table",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "filter-bar",
+      "title": "Filter Bar",
+      "category": "Patterns",
+      "description": "Filter Bar assembles related pieces into a complete task.",
+      "preview": "filter-bar",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "search-results",
+      "title": "Search Results",
+      "category": "Patterns",
+      "description": "Search Results assembles related pieces into a complete task.",
+      "preview": "results",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "notification-center",
+      "title": "Notification Center",
+      "category": "Patterns",
+      "description": "Notification Center assembles related pieces into a complete task.",
+      "preview": "notifications",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "application-shell",
+      "title": "Application Shell",
+      "category": "Patterns",
+      "description": "Application Shell assembles related pieces into a complete task.",
+      "preview": "application-shell",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "workspace-tree",
+      "title": "Workspace Tree",
+      "category": "Patterns",
+      "description": "Workspace Tree assembles related pieces into a complete task.",
+      "preview": "workspace-tree",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "viewer-shell",
+      "title": "Viewer Shell",
+      "category": "Patterns",
+      "description": "Viewer Shell assembles related pieces into a complete task.",
+      "preview": "viewer-shell",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "editor-toolbar",
+      "title": "Editor Toolbar",
+      "category": "Patterns",
+      "description": "Editor Toolbar assembles related pieces into a complete task.",
+      "preview": "editor-toolbar",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "task-board",
+      "title": "Task Board",
+      "category": "Patterns",
+      "description": "Task Board assembles related pieces into a complete task.",
+      "preview": "task-board",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "task-rail",
+      "title": "Task Rail",
+      "category": "Patterns",
+      "description": "Task Rail assembles related pieces into a complete task.",
+      "preview": "task-rail",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "status-bar",
+      "title": "Status Bar",
+      "category": "Patterns",
+      "description": "Status Bar assembles related pieces into a complete task.",
+      "preview": "status-bar",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "mobile-app-nav",
+      "title": "Mobile App Nav",
+      "category": "Patterns",
+      "description": "Mobile App Nav assembles related pieces into a complete task.",
+      "preview": "mobile-app-nav",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "terminal-surface",
+      "title": "Terminal Surface",
+      "category": "Patterns",
+      "description": "Terminal Surface assembles related pieces into a complete task.",
+      "preview": "terminal-surface",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "document-surface",
+      "title": "Document Surface",
+      "category": "Patterns",
+      "description": "Document Surface assembles related pieces into a complete task.",
+      "preview": "document-surface",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "desktop-shell",
+      "title": "Desktop Shell",
+      "category": "OS Patterns",
+      "description": "A complete desktop work surface with regions for the menu bar, working windows, widgets, and dock.",
+      "preview": "desktop-shell",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "window-shell",
+      "title": "Window Shell",
+      "category": "OS Patterns",
+      "description": "A solid, resizable-window frame with clear title, actions, content, and status regions.",
+      "preview": "window-shell",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "menu-bar",
+      "title": "Menu Bar",
+      "category": "OS Patterns",
+      "description": "A calm global bar that keeps the current place and useful system status visible.",
+      "preview": "menu-bar",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "dock",
+      "title": "Dock",
+      "category": "OS Patterns",
+      "description": "A reachable app launcher with an unmistakable current destination and 44-pixel targets.",
+      "preview": "dock",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "widget-shell",
+      "title": "Widget Shell",
+      "category": "OS Patterns",
+      "description": "A measured small surface that shows the most useful state without clipping or decorative motion.",
+      "preview": "widget-shell",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "master-detail",
+      "title": "Master Detail",
+      "category": "OS Patterns",
+      "description": "A shared-state list and detail pattern that becomes a real back-driven phone flow.",
+      "preview": "master-detail",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "split-view",
+      "title": "Split View",
+      "category": "OS Patterns",
+      "description": "A sturdy multi-panel workspace that collapses by priority instead of squeezing content.",
+      "preview": "split-view",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "command-bar",
+      "title": "Command Bar",
+      "category": "OS Patterns",
+      "description": "A plain-language action entry with honest results, keyboard control, and recovery.",
+      "preview": "command-bar",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "settings-sheet",
+      "title": "Settings Sheet",
+      "category": "OS Patterns",
+      "description": "A focused settings surface with tabs, stable fields, visible state, and a full-screen phone form.",
+      "preview": "settings-sheet",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "studio-shell",
+      "title": "Studio Shell",
+      "description": "A complete creative workspace with one clear canvas, supporting rails, and an anchored timeline.",
+      "category": "Animation Patterns",
+      "preview": "studio-shell",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "studio-header",
+      "title": "Studio Header",
+      "description": "A compact global bar for project identity, mode, device, and high-value actions.",
+      "category": "Animation Patterns",
+      "preview": "studio-header",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "workspace-switcher",
+      "title": "Workspace Switcher",
+      "description": "A touch-safe Story, Preview, Code, and Inspect switcher for narrow workspaces.",
+      "category": "Animation Patterns",
+      "preview": "workspace-switcher",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "project-switcher",
+      "title": "Project Switcher",
+      "description": "A focused project chooser with honest saved and local states.",
+      "category": "Animation Patterns",
+      "preview": "project-switcher",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "storyboard-rail",
+      "title": "Storyboard Rail",
+      "description": "A scroll-owned scene sequence that keeps order, timing, and selection obvious.",
+      "category": "Animation Patterns",
+      "preview": "storyboard-rail",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "scene-list-item",
+      "title": "Scene List Item",
+      "description": "A scene row with thumbnail, name, timing, purpose, and unmistakable selection.",
+      "category": "Animation Patterns",
+      "preview": "scene-list-item",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "stage-viewport",
+      "title": "Stage Viewport",
+      "description": "A quiet work surface that gives the current composition visual priority.",
+      "category": "Animation Patterns",
+      "preview": "stage-viewport",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "device-frame",
+      "title": "Device Frame",
+      "description": "A solid phone, desktop, browser, or canvas frame that does not compete with authored work.",
+      "category": "Animation Patterns",
+      "preview": "device-frame",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "preview-toolbar",
+      "title": "Preview Toolbar",
+      "description": "A close-at-hand view, scale, and fit control for the stage.",
+      "category": "Animation Patterns",
+      "preview": "preview-toolbar",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "ai-director",
+      "title": "AI Director",
+      "description": "A plain-language motion command that applies changes with visible, recoverable feedback.",
+      "category": "Animation Patterns",
+      "preview": "ai-director",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "command-suggestion-list",
+      "title": "Command Suggestions",
+      "description": "Keyboard-ready example directions and recent commands without hidden magic.",
+      "category": "Animation Patterns",
+      "preview": "command-suggestion-list",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "inspector-panel",
+      "title": "Inspector Panel",
+      "description": "A single scroll-owned place for scene, layer, and motion properties.",
+      "category": "Animation Patterns",
+      "preview": "inspector-panel",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "layer-list",
+      "title": "Layer List",
+      "description": "A readable layer stack with visibility, type, and current selection.",
+      "category": "Animation Patterns",
+      "preview": "layer-list",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "style-inspector",
+      "title": "Style Inspector",
+      "description": "Direct position, size, scale, radius, and content controls for one layer.",
+      "category": "Animation Patterns",
+      "preview": "style-inspector",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "motion-inspector",
+      "title": "Motion Inspector",
+      "description": "Purpose, easing, duration, and transition controls with safe defaults.",
+      "category": "Animation Patterns",
+      "preview": "motion-inspector",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "motion-preset-picker",
+      "title": "Motion Preset Picker",
+      "description": "Purposeful Rise, Pop, Fade, directional, and Exit choices with exact timing.",
+      "category": "Animation Patterns",
+      "preview": "motion-preset-picker",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "transport",
+      "title": "Transport",
+      "description": "Reachable start, previous, play, next, and end controls with visible time.",
+      "category": "Animation Patterns",
+      "preview": "transport",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "motion-timeline",
+      "title": "Motion Timeline",
+      "description": "A horizontally scrollable time ruler with separate scene, motion, and layer lanes.",
+      "category": "Animation Patterns",
+      "preview": "motion-timeline",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "timeline-segment",
+      "title": "Timeline Segment",
+      "description": "A selectable time block that exposes name, duration, and current state.",
+      "category": "Animation Patterns",
+      "preview": "timeline-segment",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "playhead",
+      "title": "Playhead",
+      "description": "A keyboard-operable current-time control that stays visible across timeline lanes.",
+      "category": "Animation Patterns",
+      "preview": "playhead",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "delivery-workspace",
+      "title": "Delivery Workspace",
+      "description": "A final work surface for output choice, checks, rendering, and handoff.",
+      "category": "Animation Patterns",
+      "preview": "delivery-workspace",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "delivery-action",
+      "title": "Delivery Action",
+      "description": "An output action with idle, working, complete, and failed states.",
+      "category": "Animation Patterns",
+      "preview": "delivery-action",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "render-status",
+      "title": "Render Status",
+      "description": "Honest queued, rendering, complete, and failed progress with useful next actions.",
+      "category": "Animation Patterns",
+      "preview": "render-status",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "motion-check",
+      "title": "Motion Check",
+      "description": "A review list for purpose, easing, duration, travel, scale, and reduced motion.",
+      "category": "Animation Patterns",
+      "preview": "motion-check",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "code-panel",
+      "title": "Code Panel",
+      "description": "A readable, selectable source surface with copy and export actions.",
+      "category": "Animation Patterns",
+      "preview": "code-panel",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "template-gallery",
+      "title": "Template Gallery",
+      "description": "A responsive set of starting compositions with clear device and duration context.",
+      "category": "Animation Patterns",
+      "preview": "template-gallery",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "guided-tour",
+      "title": "Guided Tour",
+      "description": "A solid, focusable callout that explains one useful region at a time.",
+      "category": "Animation Patterns",
+      "preview": "guided-tour",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    },
+    {
+      "name": "workspace-error-boundary",
+      "title": "Workspace Error Boundary",
+      "description": "A real recovery boundary that protects the rest of the creative workspace.",
+      "category": "Animation Patterns",
+      "preview": "workspace-error-boundary",
+      "scope": "specialty",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio"
+      ]
+    }
+  ]
+}

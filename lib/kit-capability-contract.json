@@ -1,11 +1,23 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "purpose": "One production contract for every visual system distributed by Kit.",
-  "systems": ["purple-rain", "jade", "os-kit"],
+  "systems": ["purple-rain", "jade", "os-kit", "animation-studio"],
+  "system_modes": {
+    "purple-rain": ["light", "dark"],
+    "jade": ["light", "dark"],
+    "os-kit": ["light", "dark", "hacker", "ethereal", "paper"],
+    "animation-studio": ["dark"]
+  },
   "foundation_kits": ["shadow"],
+  "catalog_layers": {
+    "shared": "Everyday pieces available in every visual kit.",
+    "specialty": "Specialist patterns available in every visual kit but installed only when the target product needs them.",
+    "product_layout": "Product-owned screens and journeys that a kit may style but never silently replaces."
+  },
+  "specialty_install_policy": "opt-in",
   "foundations": [
     "semantic color roles in OKLCH",
-    "light and dark modes",
+    "declared color modes without inventing unsupported directions",
     "type roles and readable measure",
     "spacing, density, radius, border, and depth scales",
     "visible focus and reduced motion",
@@ -34,6 +46,36 @@
     "split-view",
     "command-bar",
     "settings-sheet"
+  ],
+  "animation_patterns": [
+    "studio-shell",
+    "studio-header",
+    "workspace-switcher",
+    "project-switcher",
+    "storyboard-rail",
+    "scene-list-item",
+    "stage-viewport",
+    "device-frame",
+    "preview-toolbar",
+    "ai-director",
+    "command-suggestion-list",
+    "inspector-panel",
+    "layer-list",
+    "style-inspector",
+    "motion-inspector",
+    "motion-preset-picker",
+    "transport",
+    "motion-timeline",
+    "timeline-segment",
+    "playhead",
+    "delivery-workspace",
+    "delivery-action",
+    "render-status",
+    "motion-check",
+    "code-panel",
+    "template-gallery",
+    "guided-tour",
+    "workspace-error-boundary"
   ],
   "viewports": [320, 375, 414, 768, 1280, 1440],
   "theme_workshop": {

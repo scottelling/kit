@@ -1,5 +1,19 @@
 # Agent Ledger
 
+## 2026-08-06 — Animation Studio Kit release candidate
+
+- Agent: Codex
+- Scope: recover the useful CUE Animation Studio design language from Scott's portable handoff, the clean source at commit `f5e9efc19859b82f64d03ea97dee81ec06f5d7ed`, and the live product without importing CUE project data, persistence, AI parsing, rendering, Remotion, legacy Operations, or application governance
+- Source boundary: preserved the canonical dark palette, Outfit and JetBrains Mono roles, dense 2–22 pixel spacing, 6–18 pixel shape range, canvas-first hierarchy, single-region scrolling, semantic state colors, and explanation/focus/continuity/feedback/delight motion language; translated all distributed roles to OKLCH and intentionally repeated the inspected dark foundation for default and dark install contexts instead of inventing a light system
+- Complete system: Animation Studio now carries the same 138 shared production pieces as Purple Rain and JADE plus 28 studio-native structures for the shell, header, workspaces, project choice, storyboards, scenes, stage, device frames, preview, plain-language direction, inspectors, layers, style, motion, transport, timeline, delivery, rendering, code, templates, guidance, and recovery; 166 installable pieces proves complete shared coverage plus the creative-workspace structures, not that every everyday piece should be unique
+- Product proof: `/kit/animation` includes one connected motion project where scene selection, message, purpose, preset, timing, device, plain-language direction, playback, code, templates, delivery, and final render status share the same visible state
+- Corrections: every effective studio control is at least 44 pixels; the missing small depth is supplied; fonts are centralized; the reusable system is typed; active kit navigation centers itself on phones; phone device choice, templates, code, inspection, and export are reachable; unsupported light-based treatments and legacy RGB values do not travel
+- Responsive and interaction proof: local checks at 320, 375, 390, 414, 768, and 1280 pixels produced no page-level horizontal overflow and no effective workbench controls below 44 pixels; Story, Preview, Code, Inspect, device choice, plain-language motion change, playback, timeline selection, layer visibility, templates, guided tour, delivery, and render completion passed; the local browser console reports no warnings or errors
+- Build proof: Purple Rain, JADE, OS, Animation Studio, Shadow, and Elements registries validate and build; Animation source/public parity, automatic foundation delivery, exact dark authority, OKLCH-only roles, readable contrast, forbidden-effect checks, the shared four-system contract, Theme Workshop, ESLint, TypeScript, and the local production build pass
+- Downstream proof: a clean outside Next project installed `studio-shell`; installation created exactly `components/ui/studio-shell.tsx` and merged the complete Animation foundation into `app/globals.css`; no package, lock, shadcn configuration, or other file changed; the component matches the canonical payload and the consumer production build passed
+- Deployment: not committed, pushed, or deployed; publication requires explicit approval and the live downstream install proof still remains
+- Open loop: approve publication, then run the live URL install and endpoint proof
+
 ## 2026-08-04 — Complete OS Kit system
 
 - Agent: Codex

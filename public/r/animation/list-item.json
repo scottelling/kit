@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "list-item",
+  "title": "Animation Studio List Item",
+  "description": "List Item turns information into a readable, useful object.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/animation/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/list-item.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type ListItemProps = React.ComponentPropsWithoutRef<\"ul\">\n\nexport function ListItem({ children, className, ...props }: ListItemProps) {\n  if (children !== undefined) {\n    return (<ul data-slot=\"list-item\" className={cn(\"min-w-0\", className)} {...props}>{children}</ul>)\n  }\n\n  return (\n    <ul data-slot=\"list-item\" className={cn(\"divide-y divide-border\", className)} {...props}>{[\"Approve the release\", \"Check the notes\", \"Invite reviewers\"].slice(0, 1).map((label) => <li key={label} className=\"flex min-h-11 items-center justify-between gap-3 text-sm\"><span>{label}</span><span aria-hidden=\"true\">→</span></li>)}</ul>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

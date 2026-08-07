@@ -78,9 +78,10 @@ export function ShadowExperience() {
         <nav className="shadow-worlds" aria-label="Choose a kit">
           <span>Kits</span>
           <div>
-            <Link href="/kit">Purple Rain <small>138 pieces</small></Link>
-            <Link href="/kit/jade">JADE <small>138 pieces</small></Link>
-            <Link href="/kit/os">OS <small>147 pieces</small></Link>
+            <Link href="/kit">Purple Rain <small>175 pieces</small></Link>
+            <Link href="/kit/jade">JADE <small>175 pieces</small></Link>
+            <Link href="/kit/os">OS <small>175 pieces</small></Link>
+            <Link href="/kit/animation">Animation <small>175 pieces</small></Link>
             <Link aria-current="page" href="/kit/shadow">Shadow <small>{shadowRecipeCount} elevations</small></Link>
           </div>
         </nav>

@@ -5,6 +5,7 @@ import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import { KeyboardEvent, useEffect, useMemo, useRef, useState } from "react"
 
+import animationLibrary from "@/lib/animation-library.json"
 import library from "@/lib/purple-rain-library.json"
 import osLibrary from "@/lib/os-library.json"
 import { studioAssets, studioCategories } from "@/lib/studio-library"
@@ -21,7 +22,11 @@ const familyPlaces = [
 ].map(([label, hint]) => ({ label, hint, href: `/kit#family-${label.toLowerCase()}`, words: label.toLowerCase() }))
 
 const places = [
+  { label: "Browse icons", hint: "Search every approved Lucide and Material Symbols Rounded icon", href: "/studio/icons", words: "icons symbols lucide material rounded search gallery" },
+  { label: "Browse fonts", hint: "Test approved fonts in headings, reading, controls, and pairings", href: "/studio/fonts", words: "fonts typography type pairings outfit jetbrains inter serif" },
+  { label: "Prepare a kit swap", hint: "Keep the product, repair the experience, and change the visual system", href: "/studio/swap", words: "swap adopt migrate theme product repair rollback cabinet" },
   { label: "Open Elements", hint: "Touch complete behaviors and carry them into a project", href: "/elements", words: "elements knight rider larson scanner signature effects motion code interactive" },
+  { label: "Explore Animation Studio", hint: "Shape scenes, motion, timelines, code, and delivery in one complete creative workspace", href: "/kit/animation", words: "animation studio cue storyboard canvas inspector motion timeline code delivery components kit" },
   { label: "Explore Shadow", hint: "Test smooth depth and one continuous edge on real surfaces", href: "/kit/shadow", words: "shadow elevation depth ring cards dialogs menus smooth" },
   { label: "Explore OS", hint: "Use the complete solid-surface system for desktop, phone, and widget products", href: "/kit/os", words: "os complete kit desktop phone widget window dock command themes components" },
   { label: "Explore JADE", hint: "Touch every raised, seated, and sunken JADE piece", href: "/kit/jade", words: "jade complete kit tactile mint components" },
@@ -58,6 +63,12 @@ const places = [
     hint: item.description,
     href: `/kit/os#${item.name}`,
     words: `os ${item.category} ${item.preview}`,
+  })),
+  ...animationLibrary.filter((item) => item.category === "Animation Patterns").map((item) => ({
+    label: item.title,
+    hint: item.description,
+    href: `/kit/animation#${item.name}`,
+    words: `animation studio ${item.category} ${item.preview}`,
   })),
 ]
 
@@ -137,7 +148,7 @@ export function SiteHeader() {
         </button>
         <nav aria-label="Main pages">
           <Link aria-current={buildPages.includes(pathname) ? "page" : undefined} href="/build">Build</Link>
-          <Link aria-current={pathname === "/studio" ? "page" : undefined} href="/studio">Studio</Link>
+          <Link aria-current={pathname.startsWith("/studio") ? "page" : undefined} href="/studio">Studio</Link>
           <Link aria-current={pathname === "/elements" ? "page" : undefined} href="/elements">Elements</Link>
           <Link aria-current={pathname.startsWith("/kit") ? "page" : undefined} href="/kit">Explore</Link>
         </nav>

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "data-table",
+  "title": "Animation Studio Data Table",
+  "description": "Data Table turns information into a readable, useful object.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/animation/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/data-table.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type DataTableProps = React.ComponentPropsWithoutRef<\"div\">\n\nexport function DataTable({ children, className, ...props }: DataTableProps) {\n  if (children !== undefined) {\n    return (<div data-slot=\"data-table\" className={cn(\"min-w-0\", className)} {...props}>{children}</div>)\n  }\n\n  return (\n    <div data-slot=\"data-table\" className={cn(\"overflow-x-auto\", className)} {...props}><table className=\"w-full min-w-80 text-left text-sm\"><thead><tr className=\"border-b border-border\"><th className=\"p-3\">Item</th><th className=\"p-3\">Owner</th><th className=\"p-3\">State</th></tr></thead><tbody><tr><td className=\"p-3\">Release notes</td><td className=\"p-3\">Mara</td><td className=\"p-3\">Ready</td></tr></tbody></table></div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

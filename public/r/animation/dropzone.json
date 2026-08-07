@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropzone",
+  "title": "Animation Studio Dropzone",
+  "description": "Dropzone collects a choice without hiding its state.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/animation/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/dropzone.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type DropzoneProps = React.ComponentPropsWithoutRef<\"label\">\n\nexport function Dropzone({ children, className, ...props }: DropzoneProps) {\n  if (children !== undefined) {\n    return (<label data-slot=\"dropzone\" className={cn(\"grid min-w-0 gap-2\", className)} {...props}>{children}</label>)\n  }\n\n  return (\n    <label data-slot=\"dropzone\" className={cn(\"rounded-[var(--radius-control)] border border-border bg-card text-card-foreground shadow-[var(--shadow-control)] grid min-h-28 cursor-pointer place-items-center border-dashed p-5 text-center text-sm font-semibold\", className)} {...props}><span>Choose a file</span><input type=\"file\" className=\"sr-only\" /></label>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

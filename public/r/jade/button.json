@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "button",
   "title": "JADE Button",
-  "description": "A 44px tactile button with seated depth, visible focus, and complete loading, error, and success states.",
+  "description": "Button keeps the next move clear and touchable.",
   "dependencies": [
     "class-variance-authority"
   ],

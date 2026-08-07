@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "card",
   "title": "Purple Rain Card",
-  "description": "A borderless tonal card with directional depth and task-first composition slots.",
+  "description": "Card turns information into a readable, useful object.",
   "registryDependencies": [
     "https://kit.scottelling.com/r/tokens.json"
   ],

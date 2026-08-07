@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "motion-check",
+  "title": "OS Motion Check",
+  "description": "A review list for purpose, easing, duration, travel, scale, and reduced motion.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/os/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/animation/patterns/motion-check.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type MotionCheckProps = React.ComponentPropsWithoutRef<\"ul\">\n\nexport function MotionCheck({ children, className, ...props }: MotionCheckProps) {\n  return (\n    <ul data-slot=\"motion-check\" className={cn(\"grid gap-1\", className)} {...props}>\n      {children ?? ([[\"Purpose\", \"Pass\"], [\"Easing\", \"Pass\"], [\"Duration\", \"Pass\"], [\"Reduced motion\", \"Pass\"]].map(([check, result]) => <li key={check} className=\"flex min-h-11 items-center justify-between gap-3 border-b border-border text-sm\"><span>{check}</span><strong className=\"text-positive\">{result}</strong></li>))}\n    </ul>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

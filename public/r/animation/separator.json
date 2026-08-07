@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator",
+  "title": "Animation Studio Separator",
+  "description": "See how Separator shapes every screen.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/animation/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/separator.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type SeparatorProps = React.ComponentPropsWithoutRef<\"div\">\n\nexport function Separator({ children, className, ...props }: SeparatorProps) {\n  if (children !== undefined) {\n    return (<div data-slot=\"separator\" className={cn(\"min-w-0\", className)} {...props}>{children}</div>)\n  }\n\n  return (\n    <div data-slot=\"separator\" className={cn(\"grid gap-4 text-sm text-muted-foreground\", className)} {...props}><span>Before</span><hr className=\"border-border\" /><span>After</span></div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

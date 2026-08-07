@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "project_root": "/Users/scott/ScottAI/01_Active_Projects/kit",
+  "generated_at": "2026-08-04T21:00:00Z",
+  "routes_reviewed": [
+    "/kit",
+    "/kit/jade",
+    "/kit/os",
+    "/kit/shadow"
+  ],
+  "viewports_reviewed": [
+    "390x844",
+    "430x932",
+    "768x1024",
+    "1440x900"
+  ],
+  "findings": [
+    {
+      "id": "UI-001",
+      "status": "KEEP",
+      "category": "spacing-rhythm",
+      "route": "/kit, /kit/jade, /kit/os",
+      "viewport": "all reviewed sizes",
+      "state": "corrected production build",
+      "path": "app/kit/kit.css",
+      "line": 97,
+      "risk": "low",
+      "observation": "The navigation divider and headline now have a 40-pixel line-box gap on compact phone, large phone, and tablet, growing to 64 pixels on desktop. Visual review confirms the navigation and hero read as separate hierarchy levels.",
+      "expected": "Preserve this deliberate top inset across the three shared kit showrooms.",
+      "evidence": [
+        "Corrected phone screenshots for Purple Rain, JADE, and OS",
+        "Corrected desktop OS screenshot",
+        "Production-build browser geometry across all reviewed sizes"
+      ]
+    },
+    {
+      "id": "UI-002",
+      "status": "KEEP",
+      "category": "responsive-overflow",
+      "route": "/kit/os",
+      "viewport": "all reviewed sizes",
+      "state": "corrected production build",
+      "path": "app/kit/os/os.css",
+      "line": 49,
+      "risk": "low",
+      "observation": "The five-theme selector has zero internal overflow at every reviewed size. On a compact phone, Default, Daylight, and Hacker occupy the first row while Ethereal and Paper are centered below; all five are fully inside the viewport, and Paper can be selected.",
+      "expected": "Preserve the balanced phone layout and one-row desktop layout.",
+      "evidence": [
+        "Corrected OS phone and desktop screenshots",
+        "Production-build browser geometry: pickerOverflow=0 at 390, 430, 768, and 1440 pixels",
+        "Paper selection proof: exactly one visible Paper control became pressed"
+      ]
+    },
+    {
+      "id": "UI-003",
+      "status": "KEEP",
+      "category": "touch-target",
+      "route": "/kit/shadow",
+      "viewport": "all reviewed sizes",
+      "state": "corrected production build",
+      "path": "app/kit/shadow/shadow.css",
+      "line": 765,
+      "risk": "low",
+      "observation": "The Smooth Shadow attribution remains visually quiet while its effective link height is now 44 pixels at every reviewed size.",
+      "expected": "Preserve the full tap and focus area.",
+      "evidence": [
+        "Production-build browser geometry: creditHeight=44 at 390, 430, 768, and 1440 pixels"
+      ]
+    },
+    {
+      "id": "UI-004",
+      "status": "KEEP",
+      "category": "responsive-layout",
+      "route": "/kit, /kit/jade, /kit/os, /kit/shadow",
+      "viewport": "all reviewed sizes",
+      "state": "corrected production build",
+      "path": "app/kit",
+      "line": null,
+      "risk": "low",
+      "observation": "All sixteen route-and-viewport combinations have zero page-level horizontal overflow and zero effective interaction targets below 44 pixels.",
+      "expected": "Preserve current containment and interaction sizing.",
+      "evidence": [
+        "Production-build browser geometry: sixteen checked combinations, zero failures"
+      ]
+    },
+    {
+      "id": "UI-005",
+      "status": "KEEP",
+      "category": "runtime-quality",
+      "route": "/kit/os",
+      "viewport": "390x844",
+      "state": "corrected production build",
+      "path": "app/kit",
+      "line": null,
+      "risk": "low",
+      "observation": "The corrected OS page reports no browser warnings or errors after theme interaction.",
+      "expected": "Preserve the clean runtime state.",
+      "evidence": [
+        "Production-build browser console: no warnings or errors"
+      ]
+    }
+  ],
+  "limitations": [
+    "The corrected review covers the four public kit showrooms at four meaningful sizes and the changed interaction states. It does not claim exhaustive visual review of every state of every component.",
+    "Deployment, publication, committing, and pushing were not included in the approved correction batch and were not performed."
+  ]
+}

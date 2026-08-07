@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0",
+  "purpose": "Change a product's visual system without replacing its product, content, workflows, data, or specialist layout.",
+  "preserve": [
+    "pages and navigation",
+    "content and data",
+    "product workflows",
+    "business behavior",
+    "specialist layouts that still serve the product"
+  ],
+  "change": [
+    "color roles",
+    "type roles",
+    "spacing and control density",
+    "shape, borders, and depth",
+    "focus, state, and purposeful motion",
+    "icons and selected fonts"
+  ],
+  "repairBeforeSwap": [
+    "overlap and clipped content",
+    "page-level horizontal overflow",
+    "unclear scroll ownership",
+    "controls smaller than 44 pixels",
+    "unreachable keyboard actions",
+    "fixed panels that do not fit phones"
+  ],
+  "defaultProofWidths": [320, 375, 414, 768, 1280, 1440],
+  "proof": [
+    "capture the same populated screens before and after",
+    "exercise every changed control with pointer and keyboard",
+    "check light and dark only when the selected kit owns both",
+    "check loading, empty, error, success, disabled, and recovery states",
+    "confirm there is no page-level overflow or hidden action",
+    "keep one reversible appearance switch and one clean rollback point"
+  ],
+  "representativeScreens": {
+    "product-app": ["home", "primary workspace", "settings", "one dense data screen"],
+    "creative-tool": ["project home", "main canvas", "inspector", "delivery or export"],
+    "commerce": ["storefront", "product detail", "cart", "checkout"],
+    "content": ["home", "article", "search", "account or subscription"]
+  },
+  "iconPolicy": {
+    "primary": "Lucide for everyday controls, navigation, and actions.",
+    "secondary": "Material Symbols Rounded when the broader object or concept is not available in Lucide.",
+    "brands": "Use verified brand marks only for companies and products; never substitute a general interface icon.",
+    "custom": "Create a new icon only when neither approved family communicates the concept and the mark is not a brand asset."
+  },
+  "fontPolicy": {
+    "selection": "Choose only the families required by the product's reading, display, and technical roles.",
+    "loading": "Load only the chosen families and weights in the final product.",
+    "proof": "Test real headings, paragraphs, controls, tables, long labels, and phone layouts before approval."
+  },
+  "rollback": "The visual swap remains isolated from product behavior so the previous appearance can be restored without undoing product work."
+}

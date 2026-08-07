@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spacing-guide",
+  "title": "Animation Studio Spacing Guide",
+  "description": "See how Spacing Guide shapes every screen.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/animation/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/spacing-guide.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type SpacingGuideProps = React.ComponentPropsWithoutRef<\"div\">\n\nexport function SpacingGuide({ children, className, ...props }: SpacingGuideProps) {\n  if (children !== undefined) {\n    return (<div data-slot=\"spacing-guide\" className={cn(\"min-w-0\", className)} {...props}>{children}</div>)\n  }\n\n  return (\n    <div data-slot=\"spacing-guide\" className={cn(\"grid gap-2\", className)} {...props}>{[\"w-1/4\", \"w-1/2\", \"w-3/4\", \"w-full\"].map((width) => <span key={width} className={cn(\"h-3 rounded-full bg-primary\", width)} />)}</div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

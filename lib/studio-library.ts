@@ -1,5 +1,6 @@
 export type StudioCategory =
   | "Fonts"
+  | "Icons"
   | "Palettes"
   | "Motion"
   | "Text"
@@ -27,6 +28,7 @@ export type StudioAsset = {
 
 export const studioCategories: { name: StudioCategory; plain: string }[] = [
   { name: "Fonts", plain: "Type pairings" },
+  { name: "Icons", plain: "Icon library" },
   { name: "Palettes", plain: "Color systems" },
   { name: "Motion", plain: "Movement recipes" },
   { name: "Text", plain: "Text treatments" },
@@ -50,6 +52,12 @@ const fonts: StudioAsset[] = [
   { id: "source-relay", category: "Fonts", name: "Trusted Service", summary: "Source Serif 4 with Relay Sans", bestFor: "Civic, finance, and healthcare", detail: "A broad, dependable serif family for explanation with clear action labels and dense interface support.", sample: "Understand the next step.", source: "Google Fonts · OFL", status: "Ready to add" },
   { id: "relay-jetbrains", category: "Fonts", name: "Maker Console", summary: "Relay Sans with JetBrains Mono", bestFor: "Dashboards and developer workflows", detail: "Human interface copy sits beside data and commands that align cleanly and scan at speed.", sample: "23 tasks · 4 ready", source: "Google Fonts · OFL", status: "Ready to add" },
   { id: "satoshi-space", category: "Fonts", name: "Consumer Utility", summary: "Satoshi with Space Mono", bestFor: "Social and personal tools", detail: "A friendly geometric voice with one quirky mono accent for labels, streaks, and compact data moments.", sample: "Keep the good things close.", source: "Fontshare + Google Fonts", status: "Ready to add" },
+  { id: "animation-outfit", category: "Fonts", name: "Animation Studio", summary: "Outfit with JetBrains Mono", bestFor: "Creative tools and compact workspaces", detail: "A calm geometric interface voice paired with exact timing, dimensions, code, and machine-readable facts.", sample: "Shape the current scene.", source: "Google Fonts · OFL", status: "Ready to add" },
+]
+
+const icons: StudioAsset[] = [
+  { id: "lucide-icons", category: "Icons", name: "Lucide", summary: "Everyday controls, actions, and navigation", bestFor: "The primary interface icon language", detail: "Use Lucide first for familiar actions and navigation. Its consistent outline keeps controls clear without inventing a new symbol.", source: "Lucide · ISC", status: "Included" },
+  { id: "material-symbols-rounded", category: "Icons", name: "Material Symbols Rounded", summary: "A broad vocabulary for objects and specialist concepts", bestFor: "Concepts Lucide does not cover", detail: "Use Material Symbols Rounded when a product needs a specific object, domain, device, or place that the primary family cannot express.", source: "Google · Apache 2.0", status: "Included" },
 ]
 
 const palettes: StudioAsset[] = [
@@ -92,7 +100,7 @@ const textTreatments: StudioAsset[] = [
   { id: "boxed-word", category: "Text", name: "Boxed Word", summary: "A hairline frame names the operative word", bestFor: "Campaigns and labels", detail: "One short word receives a tactile frame; it is meaning, not decoration.", sample: "Ready to ship." },
   { id: "ink-reversal", category: "Text", name: "Ink Reversal", summary: "Paper text on a compact ink block", bestFor: "Short calls and status", detail: "The surface flips together with its text token. Keep it to a short phrase, never a whole paragraph.", sample: "MAKE IT CLEAR" },
   { id: "quiet-caps", category: "Text", name: "Quiet Caps", summary: "Tracked capitals for compact labels", bestFor: "Metadata and controls", detail: "Small caps identify a type of information; they never replace body copy or become section decoration.", sample: "PROJECT DIRECTION" },
-  { id: "tabular-statement", category: "Text", name: "Tabular Statement", summary: "Aligned figures carry the message", bestFor: "Totals and product proof", detail: "Tabular numbers let values compare cleanly without inventing dramatic stat treatments.", sample: "138 pieces · 109 tools" },
+  { id: "tabular-statement", category: "Text", name: "Tabular Statement", summary: "Aligned figures carry the message", bestFor: "Totals and product proof", detail: "Tabular numbers let values compare cleanly without inventing dramatic stat treatments.", sample: "175 pieces · 113 tools" },
   { id: "editorial-lead", category: "Text", name: "Editorial Lead", summary: "A measured opening line with generous leading", bestFor: "Stories and content pages", detail: "A serif-ready recipe uses measure and breathing room to invite reading, not ornamental styling.", sample: "A useful system starts with what must be understood." },
   { id: "mono-receipt", category: "Text", name: "Project Receipt", summary: "Mono type records a decision", bestFor: "Specs, versions, and handoffs", detail: "A restrained mono note makes system decisions feel recorded and repeatable.", sample: "landing · precise · purple-rain" },
   { id: "offset-shadow", category: "Text", name: "Print Offset", summary: "A hard one-pixel print echo", bestFor: "One campaign word", detail: "A solid, hard offset can give one word physical character. Never blur it into glow.", sample: "PUBLISHED" },
@@ -176,6 +184,7 @@ const agents: StudioAsset[] = [
 
 export const studioAssets: StudioAsset[] = [
   ...fonts,
+  ...icons,
   ...palettes,
   ...motions,
   ...textTreatments,

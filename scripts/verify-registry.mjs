@@ -6,25 +6,28 @@ const tokenUrl = "https://kit.scottelling.com/r/tokens.json"
 const jadeTokenUrl = "https://kit.scottelling.com/r/jade/tokens.json"
 const failures = []
 const library = JSON.parse(await readFile(path.join(root, "lib", "purple-rain-library.json"), "utf8"))
+const universal = JSON.parse(await readFile(path.join(root, "lib", "universal-library.json"), "utf8"))
 const source = JSON.parse(await readFile(path.join(root, "registry.json"), "utf8"))
 const jadeSource = JSON.parse(await readFile(path.join(root, "registry", "jade", "registry.json"), "utf8"))
 const registryItems = source.items.filter((item) => item.type === "registry:ui")
 const libraryNames = new Set(library.map((item) => item.name))
+const universalNames = new Set(universal.map((item) => item.name))
 const registryNames = new Set(registryItems.map((item) => item.name))
 
 if (library.length !== 138) failures.push(`library contains ${library.length} components instead of 138`)
 if (libraryNames.size !== 138) failures.push("library component names are not unique")
 if (new Set(library.map((item) => item.category)).size !== 8) failures.push("library does not contain exactly 8 families")
-if (registryItems.length !== 138) failures.push(`registry contains ${registryItems.length} UI items instead of 138`)
+if (universalNames.size !== universal.length) failures.push("universal component names are not unique")
+if (registryItems.length !== universal.length) failures.push(`registry contains ${registryItems.length} UI items instead of ${universal.length}`)
 
-for (const name of libraryNames) {
+for (const name of universalNames) {
   if (!registryNames.has(name)) failures.push(`${name} is missing from registry.json`)
 }
 for (const name of registryNames) {
-  if (!libraryNames.has(name)) failures.push(`${name} is not present in the library source of truth`)
+  if (!universalNames.has(name)) failures.push(`${name} is not present in the universal library source of truth`)
 }
 
-const emittedNames = ["registry", "tokens", ...library.map((item) => item.name)]
+const emittedNames = ["registry", "tokens", ...universal.map((item) => item.name)]
 for (const name of emittedNames) {
   const file = path.join(root, "public", "r", `${name}.json`)
   try {
@@ -36,9 +39,9 @@ for (const name of emittedNames) {
 }
 
 const jadeRegistryItems = jadeSource.items.filter((item) => item.type === "registry:ui")
-if (jadeRegistryItems.length !== library.length) failures.push(`JADE registry contains ${jadeRegistryItems.length} UI items instead of ${library.length}`)
+if (jadeRegistryItems.length !== universal.length) failures.push(`JADE registry contains ${jadeRegistryItems.length} UI items instead of ${universal.length}`)
 for (const item of jadeRegistryItems) {
-  if (!libraryNames.has(item.name)) failures.push(`${item.name} is not present in the shared library source of truth`)
+  if (!universalNames.has(item.name)) failures.push(`${item.name} is not present in the universal library source of truth`)
   if (!item.registryDependencies?.includes(jadeTokenUrl)) failures.push(`JADE ${item.name} does not depend on the live JADE tokens item`)
 }
 for (const name of emittedNames) {
@@ -103,7 +106,7 @@ for (const item of registryItems) {
     sourcePaths.add(file.path)
     try {
       await stat(path.join(root, file.path))
-      if (!handOwnedNames.has(item.name)) {
+      if (libraryNames.has(item.name) && !handOwnedNames.has(item.name)) {
         const contents = await readFile(path.join(root, file.path), "utf8")
         if (!contents.includes("children !== undefined")) failures.push(`${item.name} is still a fixed specimen instead of a composable component`)
       }
@@ -145,4 +148,4 @@ if (failures.length) {
   process.exit(1)
 }
 
-console.log(`Verified ${library.length} shared components across Purple Rain and JADE, 8 families, automatic tokens, public files, OKLCH themes, and effect constraints.`)
+console.log(`Verified ${universal.length} components across Purple Rain and JADE: ${library.length} everyday pieces plus ${universal.length - library.length} opt-in specialist patterns, automatic tokens, public files, OKLCH themes, and effect constraints.`)

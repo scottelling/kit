@@ -4,12 +4,16 @@ import {
   ArrowRight,
   Check,
   ChevronRight,
+  Combine,
   Moon,
   Play,
   Search,
+  Shapes,
   Sun,
+  Type,
   X,
 } from "lucide-react"
+import Link from "next/link"
 import { useRouter } from "next/navigation"
 import type { CSSProperties } from "react"
 import { useMemo, useRef, useState } from "react"
@@ -156,6 +160,11 @@ export function StudioExperience({ assets, categories, counts }: StudioExperienc
   }
 
   function applyAsset(asset: StudioAsset) {
+    if (asset.category === "Icons") {
+      closeAsset()
+      router.push(`/studio/icons?family=${asset.id === "lucide-icons" ? "lucide" : "material"}`)
+      return
+    }
     if (asset.category === "Fonts") setFontId(asset.id)
     if (asset.category === "Palettes") setPaletteId(asset.id)
     if (asset.category === "Motion") setMotionId(asset.id)
@@ -182,6 +191,7 @@ export function StudioExperience({ assets, categories, counts }: StudioExperienc
   }
 
   function assetAction(asset: StudioAsset) {
+    if (asset.category === "Icons") return "Open the icon library"
     if (asset.category === "Prompts") return "Start with this prompt"
     if (asset.category === "Agents") return teamIds.includes(asset.id) ? "Remove from team" : "Add to team"
     if (asset.category === "Skills") return skillIds.includes(asset.id) ? "Remove skill" : "Add skill"
@@ -335,6 +345,11 @@ export function StudioExperience({ assets, categories, counts }: StudioExperienc
               {query ? <button type="button" aria-label="Clear search" onClick={() => setQuery("")}><X aria-hidden="true" /></button> : null}
             </label>
           </header>
+          <div className="studio-resource-shelf" aria-label="Open the complete visual libraries">
+            <Link href="/studio/icons"><Shapes aria-hidden="true" /><span><strong>Browse every icon</strong><small>Search Lucide and Material Symbols Rounded together.</small></span><ChevronRight aria-hidden="true" /></Link>
+            <Link href="/studio/fonts"><Type aria-hidden="true" /><span><strong>Test every font</strong><small>Judge real headings, reading, controls, and pairings.</small></span><ChevronRight aria-hidden="true" /></Link>
+            <Link href="/studio/swap"><Combine aria-hidden="true" /><span><strong>Prepare a kit swap</strong><small>Keep the product, repair the experience, change the visual system.</small></span><ChevronRight aria-hidden="true" /></Link>
+          </div>
           <div className="studio-category-rail" role="group" aria-label="Choose a studio area">
             <button type="button" aria-pressed={category === "All"} onClick={() => { setCategory("All"); setQuery("") }}>Everything <span>{assets.length}</span></button>
             {categories.map((item) => <button key={item.name} type="button" aria-pressed={category === item.name} onClick={() => { setCategory(item.name); setQuery("") }}>{item.plain} <span>{counts[item.name]}</span></button>)}

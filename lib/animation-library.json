@@ -1,0 +1,1164 @@
+[
+  {
+    "name": "color-swatch",
+    "title": "Color Swatch",
+    "category": "Foundations",
+    "description": "See how Color Swatch shapes every screen.",
+    "preview": "color"
+  },
+  {
+    "name": "type-specimen",
+    "title": "Type Specimen",
+    "category": "Foundations",
+    "description": "See how Type Specimen shapes every screen.",
+    "preview": "type"
+  },
+  {
+    "name": "spacing-guide",
+    "title": "Spacing Guide",
+    "category": "Foundations",
+    "description": "See how Spacing Guide shapes every screen.",
+    "preview": "spacing"
+  },
+  {
+    "name": "radius-guide",
+    "title": "Radius Guide",
+    "category": "Foundations",
+    "description": "See how Radius Guide shapes every screen.",
+    "preview": "radius"
+  },
+  {
+    "name": "shadow-guide",
+    "title": "Shadow Guide",
+    "category": "Foundations",
+    "description": "See how Shadow Guide shapes every screen.",
+    "preview": "shadow"
+  },
+  {
+    "name": "focus-ring",
+    "title": "Focus Ring",
+    "category": "Foundations",
+    "description": "See how Focus Ring shapes every screen.",
+    "preview": "focus"
+  },
+  {
+    "name": "separator",
+    "title": "Separator",
+    "category": "Foundations",
+    "description": "See how Separator shapes every screen.",
+    "preview": "separator"
+  },
+  {
+    "name": "surface",
+    "title": "Surface",
+    "category": "Foundations",
+    "description": "See how Surface shapes every screen.",
+    "preview": "surface"
+  },
+  {
+    "name": "container",
+    "title": "Container",
+    "category": "Foundations",
+    "description": "See how Container shapes every screen.",
+    "preview": "layout"
+  },
+  {
+    "name": "stack",
+    "title": "Stack",
+    "category": "Foundations",
+    "description": "See how Stack shapes every screen.",
+    "preview": "layout"
+  },
+  {
+    "name": "button",
+    "title": "Button",
+    "category": "Actions",
+    "description": "Button keeps the next move clear and touchable.",
+    "preview": "button"
+  },
+  {
+    "name": "button-group",
+    "title": "Button Group",
+    "category": "Actions",
+    "description": "Button Group keeps the next move clear and touchable.",
+    "preview": "button-group"
+  },
+  {
+    "name": "icon-button",
+    "title": "Icon Button",
+    "category": "Actions",
+    "description": "Icon Button keeps the next move clear and touchable.",
+    "preview": "icon-button"
+  },
+  {
+    "name": "split-button",
+    "title": "Split Button",
+    "category": "Actions",
+    "description": "Split Button keeps the next move clear and touchable.",
+    "preview": "split-button"
+  },
+  {
+    "name": "menu-button",
+    "title": "Menu Button",
+    "category": "Actions",
+    "description": "Menu Button keeps the next move clear and touchable.",
+    "preview": "menu"
+  },
+  {
+    "name": "toggle-button",
+    "title": "Toggle Button",
+    "category": "Actions",
+    "description": "Toggle Button keeps the next move clear and touchable.",
+    "preview": "toggle"
+  },
+  {
+    "name": "toggle-group",
+    "title": "Toggle Group",
+    "category": "Actions",
+    "description": "Toggle Group keeps the next move clear and touchable.",
+    "preview": "toggle-group"
+  },
+  {
+    "name": "segmented-control",
+    "title": "Segmented Control",
+    "category": "Actions",
+    "description": "Segmented Control keeps the next move clear and touchable.",
+    "preview": "segments"
+  },
+  {
+    "name": "floating-action-button",
+    "title": "Floating Action Button",
+    "category": "Actions",
+    "description": "Floating Action Button keeps the next move clear and touchable.",
+    "preview": "floating"
+  },
+  {
+    "name": "link-button",
+    "title": "Link Button",
+    "category": "Actions",
+    "description": "Link Button keeps the next move clear and touchable.",
+    "preview": "link"
+  },
+  {
+    "name": "copy-button",
+    "title": "Copy Button",
+    "category": "Actions",
+    "description": "Copy Button keeps the next move clear and touchable.",
+    "preview": "copy"
+  },
+  {
+    "name": "favorite-button",
+    "title": "Favorite Button",
+    "category": "Actions",
+    "description": "Favorite Button keeps the next move clear and touchable.",
+    "preview": "favorite"
+  },
+  {
+    "name": "toolbar",
+    "title": "Toolbar",
+    "category": "Actions",
+    "description": "Toolbar keeps the next move clear and touchable.",
+    "preview": "toolbar"
+  },
+  {
+    "name": "bulk-action-bar",
+    "title": "Bulk Action Bar",
+    "category": "Actions",
+    "description": "Bulk Action Bar keeps the next move clear and touchable.",
+    "preview": "bulk"
+  },
+  {
+    "name": "input",
+    "title": "Input",
+    "category": "Forms",
+    "description": "Input collects a choice without hiding its state.",
+    "preview": "input"
+  },
+  {
+    "name": "textarea",
+    "title": "Textarea",
+    "category": "Forms",
+    "description": "Textarea collects a choice without hiding its state.",
+    "preview": "textarea"
+  },
+  {
+    "name": "select",
+    "title": "Select",
+    "category": "Forms",
+    "description": "Select collects a choice without hiding its state.",
+    "preview": "select"
+  },
+  {
+    "name": "checkbox",
+    "title": "Checkbox",
+    "category": "Forms",
+    "description": "Checkbox collects a choice without hiding its state.",
+    "preview": "checkbox"
+  },
+  {
+    "name": "checkbox-group",
+    "title": "Checkbox Group",
+    "category": "Forms",
+    "description": "Checkbox Group collects a choice without hiding its state.",
+    "preview": "checkbox-group"
+  },
+  {
+    "name": "radio-group",
+    "title": "Radio Group",
+    "category": "Forms",
+    "description": "Radio Group collects a choice without hiding its state.",
+    "preview": "radio"
+  },
+  {
+    "name": "switch",
+    "title": "Switch",
+    "category": "Forms",
+    "description": "Switch collects a choice without hiding its state.",
+    "preview": "switch"
+  },
+  {
+    "name": "slider",
+    "title": "Slider",
+    "category": "Forms",
+    "description": "Slider collects a choice without hiding its state.",
+    "preview": "slider"
+  },
+  {
+    "name": "range-slider",
+    "title": "Range Slider",
+    "category": "Forms",
+    "description": "Range Slider collects a choice without hiding its state.",
+    "preview": "range"
+  },
+  {
+    "name": "progress",
+    "title": "Progress",
+    "category": "Forms",
+    "description": "Progress collects a choice without hiding its state.",
+    "preview": "progress"
+  },
+  {
+    "name": "meter",
+    "title": "Meter",
+    "category": "Forms",
+    "description": "Meter collects a choice without hiding its state.",
+    "preview": "meter"
+  },
+  {
+    "name": "file-upload",
+    "title": "File Upload",
+    "category": "Forms",
+    "description": "File Upload collects a choice without hiding its state.",
+    "preview": "file"
+  },
+  {
+    "name": "dropzone",
+    "title": "Dropzone",
+    "category": "Forms",
+    "description": "Dropzone collects a choice without hiding its state.",
+    "preview": "dropzone"
+  },
+  {
+    "name": "otp-input",
+    "title": "OTP Input",
+    "category": "Forms",
+    "description": "OTP Input collects a choice without hiding its state.",
+    "preview": "otp"
+  },
+  {
+    "name": "search-field",
+    "title": "Search Field",
+    "category": "Forms",
+    "description": "Search Field collects a choice without hiding its state.",
+    "preview": "search"
+  },
+  {
+    "name": "combobox",
+    "title": "Combobox",
+    "category": "Forms",
+    "description": "Combobox collects a choice without hiding its state.",
+    "preview": "combobox"
+  },
+  {
+    "name": "date-picker",
+    "title": "Date Picker",
+    "category": "Forms",
+    "description": "Date Picker collects a choice without hiding its state.",
+    "preview": "date"
+  },
+  {
+    "name": "time-input",
+    "title": "Time Input",
+    "category": "Forms",
+    "description": "Time Input collects a choice without hiding its state.",
+    "preview": "time"
+  },
+  {
+    "name": "number-input",
+    "title": "Number Input",
+    "category": "Forms",
+    "description": "Number Input collects a choice without hiding its state.",
+    "preview": "number"
+  },
+  {
+    "name": "password-input",
+    "title": "Password Input",
+    "category": "Forms",
+    "description": "Password Input collects a choice without hiding its state.",
+    "preview": "password"
+  },
+  {
+    "name": "color-input",
+    "title": "Color Input",
+    "category": "Forms",
+    "description": "Color Input collects a choice without hiding its state.",
+    "preview": "color-input"
+  },
+  {
+    "name": "rating",
+    "title": "Rating",
+    "category": "Forms",
+    "description": "Rating collects a choice without hiding its state.",
+    "preview": "rating"
+  },
+  {
+    "name": "field",
+    "title": "Field",
+    "category": "Forms",
+    "description": "Field collects a choice without hiding its state.",
+    "preview": "field"
+  },
+  {
+    "name": "inline-edit",
+    "title": "Inline Edit",
+    "category": "Forms",
+    "description": "Inline Edit collects a choice without hiding its state.",
+    "preview": "edit"
+  },
+  {
+    "name": "tabs",
+    "title": "Tabs",
+    "category": "Navigation",
+    "description": "Tabs keeps place and direction easy to scan.",
+    "preview": "tabs"
+  },
+  {
+    "name": "breadcrumb",
+    "title": "Breadcrumb",
+    "category": "Navigation",
+    "description": "Breadcrumb keeps place and direction easy to scan.",
+    "preview": "breadcrumb"
+  },
+  {
+    "name": "pagination",
+    "title": "Pagination",
+    "category": "Navigation",
+    "description": "Pagination keeps place and direction easy to scan.",
+    "preview": "pagination"
+  },
+  {
+    "name": "stepper",
+    "title": "Stepper",
+    "category": "Navigation",
+    "description": "Stepper keeps place and direction easy to scan.",
+    "preview": "stepper"
+  },
+  {
+    "name": "sidebar",
+    "title": "Sidebar",
+    "category": "Navigation",
+    "description": "Sidebar keeps place and direction easy to scan.",
+    "preview": "sidebar"
+  },
+  {
+    "name": "topbar",
+    "title": "Topbar",
+    "category": "Navigation",
+    "description": "Topbar keeps place and direction easy to scan.",
+    "preview": "topbar"
+  },
+  {
+    "name": "bottom-nav",
+    "title": "Bottom Nav",
+    "category": "Navigation",
+    "description": "Bottom Nav keeps place and direction easy to scan.",
+    "preview": "bottom-nav"
+  },
+  {
+    "name": "navigation-menu",
+    "title": "Navigation Menu",
+    "category": "Navigation",
+    "description": "Navigation Menu keeps place and direction easy to scan.",
+    "preview": "nav-menu"
+  },
+  {
+    "name": "command-menu",
+    "title": "Command Menu",
+    "category": "Navigation",
+    "description": "Command Menu keeps place and direction easy to scan.",
+    "preview": "command"
+  },
+  {
+    "name": "filter-tabs",
+    "title": "Filter Tabs",
+    "category": "Navigation",
+    "description": "Filter Tabs keeps place and direction easy to scan.",
+    "preview": "filter-tabs"
+  },
+  {
+    "name": "view-switcher",
+    "title": "View Switcher",
+    "category": "Navigation",
+    "description": "View Switcher keeps place and direction easy to scan.",
+    "preview": "view"
+  },
+  {
+    "name": "page-header",
+    "title": "Page Header",
+    "category": "Navigation",
+    "description": "Page Header keeps place and direction easy to scan.",
+    "preview": "page-header"
+  },
+  {
+    "name": "back-link",
+    "title": "Back Link",
+    "category": "Navigation",
+    "description": "Back Link keeps place and direction easy to scan.",
+    "preview": "back"
+  },
+  {
+    "name": "anchor-nav",
+    "title": "Anchor Nav",
+    "category": "Navigation",
+    "description": "Anchor Nav keeps place and direction easy to scan.",
+    "preview": "anchor"
+  },
+  {
+    "name": "table-of-contents",
+    "title": "Table Of Contents",
+    "category": "Navigation",
+    "description": "Table Of Contents keeps place and direction easy to scan.",
+    "preview": "toc"
+  },
+  {
+    "name": "app-switcher",
+    "title": "App Switcher",
+    "category": "Navigation",
+    "description": "App Switcher keeps place and direction easy to scan.",
+    "preview": "app-switcher"
+  },
+  {
+    "name": "dialog",
+    "title": "Dialog",
+    "category": "Overlays",
+    "description": "Dialog brings a focused task forward without losing context.",
+    "preview": "dialog"
+  },
+  {
+    "name": "alert-dialog",
+    "title": "Alert Dialog",
+    "category": "Overlays",
+    "description": "Alert Dialog brings a focused task forward without losing context.",
+    "preview": "alert-dialog"
+  },
+  {
+    "name": "sheet",
+    "title": "Sheet",
+    "category": "Overlays",
+    "description": "Sheet brings a focused task forward without losing context.",
+    "preview": "sheet"
+  },
+  {
+    "name": "drawer",
+    "title": "Drawer",
+    "category": "Overlays",
+    "description": "Drawer brings a focused task forward without losing context.",
+    "preview": "drawer"
+  },
+  {
+    "name": "popover",
+    "title": "Popover",
+    "category": "Overlays",
+    "description": "Popover brings a focused task forward without losing context.",
+    "preview": "popover"
+  },
+  {
+    "name": "tooltip",
+    "title": "Tooltip",
+    "category": "Overlays",
+    "description": "Tooltip brings a focused task forward without losing context.",
+    "preview": "tooltip"
+  },
+  {
+    "name": "dropdown-menu",
+    "title": "Dropdown Menu",
+    "category": "Overlays",
+    "description": "Dropdown Menu brings a focused task forward without losing context.",
+    "preview": "dropdown"
+  },
+  {
+    "name": "context-menu",
+    "title": "Context Menu",
+    "category": "Overlays",
+    "description": "Context Menu brings a focused task forward without losing context.",
+    "preview": "context"
+  },
+  {
+    "name": "hover-card",
+    "title": "Hover Card",
+    "category": "Overlays",
+    "description": "Hover Card brings a focused task forward without losing context.",
+    "preview": "hover"
+  },
+  {
+    "name": "command-palette",
+    "title": "Command Palette",
+    "category": "Overlays",
+    "description": "Command Palette brings a focused task forward without losing context.",
+    "preview": "palette"
+  },
+  {
+    "name": "lightbox",
+    "title": "Lightbox",
+    "category": "Overlays",
+    "description": "Lightbox brings a focused task forward without losing context.",
+    "preview": "lightbox"
+  },
+  {
+    "name": "action-menu",
+    "title": "Action Menu",
+    "category": "Overlays",
+    "description": "Action Menu brings a focused task forward without losing context.",
+    "preview": "action-menu"
+  },
+  {
+    "name": "badge",
+    "title": "Badge",
+    "category": "Feedback",
+    "description": "Badge makes the current state visible at a glance.",
+    "preview": "badge"
+  },
+  {
+    "name": "alert",
+    "title": "Alert",
+    "category": "Feedback",
+    "description": "Alert makes the current state visible at a glance.",
+    "preview": "alert"
+  },
+  {
+    "name": "banner",
+    "title": "Banner",
+    "category": "Feedback",
+    "description": "Banner makes the current state visible at a glance.",
+    "preview": "banner"
+  },
+  {
+    "name": "toast",
+    "title": "Toast",
+    "category": "Feedback",
+    "description": "Toast makes the current state visible at a glance.",
+    "preview": "toast"
+  },
+  {
+    "name": "snackbar",
+    "title": "Snackbar",
+    "category": "Feedback",
+    "description": "Snackbar makes the current state visible at a glance.",
+    "preview": "snackbar"
+  },
+  {
+    "name": "empty-state",
+    "title": "Empty State",
+    "category": "Feedback",
+    "description": "Empty State makes the current state visible at a glance.",
+    "preview": "empty"
+  },
+  {
+    "name": "skeleton",
+    "title": "Skeleton",
+    "category": "Feedback",
+    "description": "Skeleton makes the current state visible at a glance.",
+    "preview": "skeleton"
+  },
+  {
+    "name": "loading-dots",
+    "title": "Loading Dots",
+    "category": "Feedback",
+    "description": "Loading Dots makes the current state visible at a glance.",
+    "preview": "dots"
+  },
+  {
+    "name": "spinner",
+    "title": "Spinner",
+    "category": "Feedback",
+    "description": "Spinner makes the current state visible at a glance.",
+    "preview": "spinner"
+  },
+  {
+    "name": "status-dot",
+    "title": "Status Dot",
+    "category": "Feedback",
+    "description": "Status Dot makes the current state visible at a glance.",
+    "preview": "status"
+  },
+  {
+    "name": "progress-card",
+    "title": "Progress Card",
+    "category": "Feedback",
+    "description": "Progress Card makes the current state visible at a glance.",
+    "preview": "progress-card"
+  },
+  {
+    "name": "error-state",
+    "title": "Error State",
+    "category": "Feedback",
+    "description": "Error State makes the current state visible at a glance.",
+    "preview": "error"
+  },
+  {
+    "name": "success-state",
+    "title": "Success State",
+    "category": "Feedback",
+    "description": "Success State makes the current state visible at a glance.",
+    "preview": "success"
+  },
+  {
+    "name": "offline-state",
+    "title": "Offline State",
+    "category": "Feedback",
+    "description": "Offline State makes the current state visible at a glance.",
+    "preview": "offline"
+  },
+  {
+    "name": "card",
+    "title": "Card",
+    "category": "Data",
+    "description": "Card turns information into a readable, useful object.",
+    "preview": "card"
+  },
+  {
+    "name": "avatar",
+    "title": "Avatar",
+    "category": "Data",
+    "description": "Avatar turns information into a readable, useful object.",
+    "preview": "avatar"
+  },
+  {
+    "name": "avatar-group",
+    "title": "Avatar Group",
+    "category": "Data",
+    "description": "Avatar Group turns information into a readable, useful object.",
+    "preview": "avatar-group"
+  },
+  {
+    "name": "table",
+    "title": "Table",
+    "category": "Data",
+    "description": "Table turns information into a readable, useful object.",
+    "preview": "table"
+  },
+  {
+    "name": "data-table",
+    "title": "Data Table",
+    "category": "Data",
+    "description": "Data Table turns information into a readable, useful object.",
+    "preview": "data-table"
+  },
+  {
+    "name": "description-list",
+    "title": "Description List",
+    "category": "Data",
+    "description": "Description List turns information into a readable, useful object.",
+    "preview": "description"
+  },
+  {
+    "name": "list",
+    "title": "List",
+    "category": "Data",
+    "description": "List turns information into a readable, useful object.",
+    "preview": "list"
+  },
+  {
+    "name": "list-item",
+    "title": "List Item",
+    "category": "Data",
+    "description": "List Item turns information into a readable, useful object.",
+    "preview": "list-item"
+  },
+  {
+    "name": "stat",
+    "title": "Stat",
+    "category": "Data",
+    "description": "Stat turns information into a readable, useful object.",
+    "preview": "stat"
+  },
+  {
+    "name": "stat-group",
+    "title": "Stat Group",
+    "category": "Data",
+    "description": "Stat Group turns information into a readable, useful object.",
+    "preview": "stat-group"
+  },
+  {
+    "name": "timeline",
+    "title": "Timeline",
+    "category": "Data",
+    "description": "Timeline turns information into a readable, useful object.",
+    "preview": "timeline"
+  },
+  {
+    "name": "activity-feed",
+    "title": "Activity Feed",
+    "category": "Data",
+    "description": "Activity Feed turns information into a readable, useful object.",
+    "preview": "activity"
+  },
+  {
+    "name": "calendar",
+    "title": "Calendar",
+    "category": "Data",
+    "description": "Calendar turns information into a readable, useful object.",
+    "preview": "calendar"
+  },
+  {
+    "name": "agenda",
+    "title": "Agenda",
+    "category": "Data",
+    "description": "Agenda turns information into a readable, useful object.",
+    "preview": "agenda"
+  },
+  {
+    "name": "accordion",
+    "title": "Accordion",
+    "category": "Data",
+    "description": "Accordion turns information into a readable, useful object.",
+    "preview": "accordion"
+  },
+  {
+    "name": "collapsible",
+    "title": "Collapsible",
+    "category": "Data",
+    "description": "Collapsible turns information into a readable, useful object.",
+    "preview": "collapsible"
+  },
+  {
+    "name": "carousel",
+    "title": "Carousel",
+    "category": "Data",
+    "description": "Carousel turns information into a readable, useful object.",
+    "preview": "carousel"
+  },
+  {
+    "name": "bar-chart",
+    "title": "Bar Chart",
+    "category": "Data",
+    "description": "Bar Chart turns information into a readable, useful object.",
+    "preview": "bar-chart"
+  },
+  {
+    "name": "donut-chart",
+    "title": "Donut Chart",
+    "category": "Data",
+    "description": "Donut Chart turns information into a readable, useful object.",
+    "preview": "donut"
+  },
+  {
+    "name": "tree-view",
+    "title": "Tree View",
+    "category": "Data",
+    "description": "Tree View turns information into a readable, useful object.",
+    "preview": "tree"
+  },
+  {
+    "name": "app-shell",
+    "title": "App Shell",
+    "category": "Patterns",
+    "description": "App Shell assembles related pieces into a complete task.",
+    "preview": "app-shell"
+  },
+  {
+    "name": "auth-card",
+    "title": "Auth Card",
+    "category": "Patterns",
+    "description": "Auth Card assembles related pieces into a complete task.",
+    "preview": "auth"
+  },
+  {
+    "name": "sign-in-form",
+    "title": "Sign In Form",
+    "category": "Patterns",
+    "description": "Sign In Form assembles related pieces into a complete task.",
+    "preview": "sign-in"
+  },
+  {
+    "name": "sign-up-form",
+    "title": "Sign Up Form",
+    "category": "Patterns",
+    "description": "Sign Up Form assembles related pieces into a complete task.",
+    "preview": "sign-up"
+  },
+  {
+    "name": "forgot-password-form",
+    "title": "Forgot Password Form",
+    "category": "Patterns",
+    "description": "Forgot Password Form assembles related pieces into a complete task.",
+    "preview": "forgot"
+  },
+  {
+    "name": "profile-form",
+    "title": "Profile Form",
+    "category": "Patterns",
+    "description": "Profile Form assembles related pieces into a complete task.",
+    "preview": "profile"
+  },
+  {
+    "name": "settings-panel",
+    "title": "Settings Panel",
+    "category": "Patterns",
+    "description": "Settings Panel assembles related pieces into a complete task.",
+    "preview": "settings"
+  },
+  {
+    "name": "invite-form",
+    "title": "Invite Form",
+    "category": "Patterns",
+    "description": "Invite Form assembles related pieces into a complete task.",
+    "preview": "invite"
+  },
+  {
+    "name": "contact-form",
+    "title": "Contact Form",
+    "category": "Patterns",
+    "description": "Contact Form assembles related pieces into a complete task.",
+    "preview": "contact"
+  },
+  {
+    "name": "feedback-form",
+    "title": "Feedback Form",
+    "category": "Patterns",
+    "description": "Feedback Form assembles related pieces into a complete task.",
+    "preview": "feedback-form"
+  },
+  {
+    "name": "checkout-form",
+    "title": "Checkout Form",
+    "category": "Patterns",
+    "description": "Checkout Form assembles related pieces into a complete task.",
+    "preview": "checkout"
+  },
+  {
+    "name": "cart-summary",
+    "title": "Cart Summary",
+    "category": "Patterns",
+    "description": "Cart Summary assembles related pieces into a complete task.",
+    "preview": "cart"
+  },
+  {
+    "name": "order-summary",
+    "title": "Order Summary",
+    "category": "Patterns",
+    "description": "Order Summary assembles related pieces into a complete task.",
+    "preview": "order"
+  },
+  {
+    "name": "pricing-card",
+    "title": "Pricing Card",
+    "category": "Patterns",
+    "description": "Pricing Card assembles related pieces into a complete task.",
+    "preview": "pricing-card"
+  },
+  {
+    "name": "pricing-table",
+    "title": "Pricing Table",
+    "category": "Patterns",
+    "description": "Pricing Table assembles related pieces into a complete task.",
+    "preview": "pricing-table"
+  },
+  {
+    "name": "filter-bar",
+    "title": "Filter Bar",
+    "category": "Patterns",
+    "description": "Filter Bar assembles related pieces into a complete task.",
+    "preview": "filter-bar"
+  },
+  {
+    "name": "search-results",
+    "title": "Search Results",
+    "category": "Patterns",
+    "description": "Search Results assembles related pieces into a complete task.",
+    "preview": "results"
+  },
+  {
+    "name": "notification-center",
+    "title": "Notification Center",
+    "category": "Patterns",
+    "description": "Notification Center assembles related pieces into a complete task.",
+    "preview": "notifications"
+  },
+  {
+    "name": "application-shell",
+    "title": "Application Shell",
+    "category": "Patterns",
+    "description": "Application Shell assembles related pieces into a complete task.",
+    "preview": "application-shell"
+  },
+  {
+    "name": "workspace-tree",
+    "title": "Workspace Tree",
+    "category": "Patterns",
+    "description": "Workspace Tree assembles related pieces into a complete task.",
+    "preview": "workspace-tree"
+  },
+  {
+    "name": "viewer-shell",
+    "title": "Viewer Shell",
+    "category": "Patterns",
+    "description": "Viewer Shell assembles related pieces into a complete task.",
+    "preview": "viewer-shell"
+  },
+  {
+    "name": "editor-toolbar",
+    "title": "Editor Toolbar",
+    "category": "Patterns",
+    "description": "Editor Toolbar assembles related pieces into a complete task.",
+    "preview": "editor-toolbar"
+  },
+  {
+    "name": "task-board",
+    "title": "Task Board",
+    "category": "Patterns",
+    "description": "Task Board assembles related pieces into a complete task.",
+    "preview": "task-board"
+  },
+  {
+    "name": "task-rail",
+    "title": "Task Rail",
+    "category": "Patterns",
+    "description": "Task Rail assembles related pieces into a complete task.",
+    "preview": "task-rail"
+  },
+  {
+    "name": "status-bar",
+    "title": "Status Bar",
+    "category": "Patterns",
+    "description": "Status Bar assembles related pieces into a complete task.",
+    "preview": "status-bar"
+  },
+  {
+    "name": "mobile-app-nav",
+    "title": "Mobile App Nav",
+    "category": "Patterns",
+    "description": "Mobile App Nav assembles related pieces into a complete task.",
+    "preview": "mobile-app-nav"
+  },
+  {
+    "name": "terminal-surface",
+    "title": "Terminal Surface",
+    "category": "Patterns",
+    "description": "Terminal Surface assembles related pieces into a complete task.",
+    "preview": "terminal-surface"
+  },
+  {
+    "name": "document-surface",
+    "title": "Document Surface",
+    "category": "Patterns",
+    "description": "Document Surface assembles related pieces into a complete task.",
+    "preview": "document-surface"
+  },
+  {
+    "name": "studio-shell",
+    "title": "Studio Shell",
+    "description": "A complete creative workspace with one clear canvas, supporting rails, and an anchored timeline.",
+    "category": "Animation Patterns",
+    "preview": "studio-shell"
+  },
+  {
+    "name": "studio-header",
+    "title": "Studio Header",
+    "description": "A compact global bar for project identity, mode, device, and high-value actions.",
+    "category": "Animation Patterns",
+    "preview": "studio-header"
+  },
+  {
+    "name": "workspace-switcher",
+    "title": "Workspace Switcher",
+    "description": "A touch-safe Story, Preview, Code, and Inspect switcher for narrow workspaces.",
+    "category": "Animation Patterns",
+    "preview": "workspace-switcher"
+  },
+  {
+    "name": "project-switcher",
+    "title": "Project Switcher",
+    "description": "A focused project chooser with honest saved and local states.",
+    "category": "Animation Patterns",
+    "preview": "project-switcher"
+  },
+  {
+    "name": "storyboard-rail",
+    "title": "Storyboard Rail",
+    "description": "A scroll-owned scene sequence that keeps order, timing, and selection obvious.",
+    "category": "Animation Patterns",
+    "preview": "storyboard-rail"
+  },
+  {
+    "name": "scene-list-item",
+    "title": "Scene List Item",
+    "description": "A scene row with thumbnail, name, timing, purpose, and unmistakable selection.",
+    "category": "Animation Patterns",
+    "preview": "scene-list-item"
+  },
+  {
+    "name": "stage-viewport",
+    "title": "Stage Viewport",
+    "description": "A quiet work surface that gives the current composition visual priority.",
+    "category": "Animation Patterns",
+    "preview": "stage-viewport"
+  },
+  {
+    "name": "device-frame",
+    "title": "Device Frame",
+    "description": "A solid phone, desktop, browser, or canvas frame that does not compete with authored work.",
+    "category": "Animation Patterns",
+    "preview": "device-frame"
+  },
+  {
+    "name": "preview-toolbar",
+    "title": "Preview Toolbar",
+    "description": "A close-at-hand view, scale, and fit control for the stage.",
+    "category": "Animation Patterns",
+    "preview": "preview-toolbar"
+  },
+  {
+    "name": "ai-director",
+    "title": "AI Director",
+    "description": "A plain-language motion command that applies changes with visible, recoverable feedback.",
+    "category": "Animation Patterns",
+    "preview": "ai-director"
+  },
+  {
+    "name": "command-suggestion-list",
+    "title": "Command Suggestions",
+    "description": "Keyboard-ready example directions and recent commands without hidden magic.",
+    "category": "Animation Patterns",
+    "preview": "command-suggestion-list"
+  },
+  {
+    "name": "inspector-panel",
+    "title": "Inspector Panel",
+    "description": "A single scroll-owned place for scene, layer, and motion properties.",
+    "category": "Animation Patterns",
+    "preview": "inspector-panel"
+  },
+  {
+    "name": "layer-list",
+    "title": "Layer List",
+    "description": "A readable layer stack with visibility, type, and current selection.",
+    "category": "Animation Patterns",
+    "preview": "layer-list"
+  },
+  {
+    "name": "style-inspector",
+    "title": "Style Inspector",
+    "description": "Direct position, size, scale, radius, and content controls for one layer.",
+    "category": "Animation Patterns",
+    "preview": "style-inspector"
+  },
+  {
+    "name": "motion-inspector",
+    "title": "Motion Inspector",
+    "description": "Purpose, easing, duration, and transition controls with safe defaults.",
+    "category": "Animation Patterns",
+    "preview": "motion-inspector"
+  },
+  {
+    "name": "motion-preset-picker",
+    "title": "Motion Preset Picker",
+    "description": "Purposeful Rise, Pop, Fade, directional, and Exit choices with exact timing.",
+    "category": "Animation Patterns",
+    "preview": "motion-preset-picker"
+  },
+  {
+    "name": "transport",
+    "title": "Transport",
+    "description": "Reachable start, previous, play, next, and end controls with visible time.",
+    "category": "Animation Patterns",
+    "preview": "transport"
+  },
+  {
+    "name": "motion-timeline",
+    "title": "Motion Timeline",
+    "description": "A horizontally scrollable time ruler with separate scene, motion, and layer lanes.",
+    "category": "Animation Patterns",
+    "preview": "motion-timeline"
+  },
+  {
+    "name": "timeline-segment",
+    "title": "Timeline Segment",
+    "description": "A selectable time block that exposes name, duration, and current state.",
+    "category": "Animation Patterns",
+    "preview": "timeline-segment"
+  },
+  {
+    "name": "playhead",
+    "title": "Playhead",
+    "description": "A keyboard-operable current-time control that stays visible across timeline lanes.",
+    "category": "Animation Patterns",
+    "preview": "playhead"
+  },
+  {
+    "name": "delivery-workspace",
+    "title": "Delivery Workspace",
+    "description": "A final work surface for output choice, checks, rendering, and handoff.",
+    "category": "Animation Patterns",
+    "preview": "delivery-workspace"
+  },
+  {
+    "name": "delivery-action",
+    "title": "Delivery Action",
+    "description": "An output action with idle, working, complete, and failed states.",
+    "category": "Animation Patterns",
+    "preview": "delivery-action"
+  },
+  {
+    "name": "render-status",
+    "title": "Render Status",
+    "description": "Honest queued, rendering, complete, and failed progress with useful next actions.",
+    "category": "Animation Patterns",
+    "preview": "render-status"
+  },
+  {
+    "name": "motion-check",
+    "title": "Motion Check",
+    "description": "A review list for purpose, easing, duration, travel, scale, and reduced motion.",
+    "category": "Animation Patterns",
+    "preview": "motion-check"
+  },
+  {
+    "name": "code-panel",
+    "title": "Code Panel",
+    "description": "A readable, selectable source surface with copy and export actions.",
+    "category": "Animation Patterns",
+    "preview": "code-panel"
+  },
+  {
+    "name": "template-gallery",
+    "title": "Template Gallery",
+    "description": "A responsive set of starting compositions with clear device and duration context.",
+    "category": "Animation Patterns",
+    "preview": "template-gallery"
+  },
+  {
+    "name": "guided-tour",
+    "title": "Guided Tour",
+    "description": "A solid, focusable callout that explains one useful region at a time.",
+    "category": "Animation Patterns",
+    "preview": "guided-tour"
+  },
+  {
+    "name": "workspace-error-boundary",
+    "title": "Workspace Error Boundary",
+    "description": "A real recovery boundary that protects the rest of the creative workspace.",
+    "category": "Animation Patterns",
+    "preview": "workspace-error-boundary"
+  }
+]

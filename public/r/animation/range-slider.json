@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "range-slider",
+  "title": "Animation Studio Range Slider",
+  "description": "Range Slider collects a choice without hiding its state.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/animation/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/range-slider.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type RangeSliderProps = React.ComponentPropsWithoutRef<\"label\">\n\nexport function RangeSlider({ children, className, ...props }: RangeSliderProps) {\n  if (children !== undefined) {\n    return (<label data-slot=\"range-slider\" className={cn(\"grid min-w-0 gap-2\", className)} {...props}>{children}</label>)\n  }\n\n  return (\n    <label data-slot=\"range-slider\" className={cn(\"grid gap-3 text-sm font-semibold\", className)} {...props}>Range Slider<input type=\"range\" min=\"0\" max=\"100\" defaultValue=\"64\" className=\"h-11 w-full accent-primary\" /><span className=\"font-normal text-muted-foreground\">64 of 100</span></label>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
