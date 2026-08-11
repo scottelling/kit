@@ -1,5 +1,22 @@
 # Agent Ledger
 
+## 2026-08-11 — Space sourced kit + the standing intake process
+
+- Agent: Claude Code
+- Scope: Scott is handing over a series of kits, each with its own quirks, to be fitted into the system "without eliminating what makes them different"; establish the repeatable intake process, document it where both agents always look, and onboard the first kit (Space) through it end to end
+- Process authority: new `docs/KIT-INTAKE.md` — classes (complete / foundation / sourced), verbatim source preservation, deconstruction inventory, quirks-kept rule, additive-only compatibility, bridge-don't-convert, declared doctrine deltas, standard emit/verify/record pipeline; `AGENTS.md` routes every future hand-off into it (CLAUDE.md embeds AGENTS.md, so Claude and Codex both always see it), and SPEC 1.1.0 adds §2a (sourced kits, `kit-provenance/1`, `kit-bridge/1`, `kit-sourced-registry/1`)
+- Source preservation: Scott's single-file Space kit (audited from spacefs.com 2026-08-11) archived byte-for-byte at `sources/space/space-ui-kit.html`; its EXTRACTED/DERIVED provenance labeling carries through every published artifact
+- Deconstruction: tokens.css and kit.css are programmatically sliced from the source's own section markers (LIGHT/DARK/SCALE token blocks; `.sp-*` system layer with `.k-*` documentation chrome excluded); the only changes are recorded derived shims — additive `.dark`/`[data-kit-appearance="dark"]` aliases beside the native `[data-theme]` mechanism, `color-scheme` scoped to `:root`, sp-scoped box-sizing/font/margin resets, and an sp-scoped reduced-motion rule replacing the source's global `*` rule
+- Quirks preserved (the point): RGB-channel tokens consumed as `rgb(var(--x) / alpha)`, 48px controls with 30px Finder-density rows, hairline-only structure, flat-unless-floating shadows, 400–500 weights, mono-for-metadata, pills-for-controls vs 6–8px surfaces, blue as functional color only, 150/500ms two-duration motion
+- Doctrine deltas declared, not silenced: the sub-44px dense rows and the skeleton's loading pulse are recorded in provenance with justification and scope (legal in Space territory, never inherited by universal pieces)
+- Bridge: `/r/space/bridge.json` maps 26 native tokens to universal roles — 9 clean, the rest partial or honestly `null` (warning, surface, border-strong, mono, pill vocabulary have no counterpart); the audit exposed a real universal-side gap (no `--font-mono` role exists in the four complete systems)
+- Published: `/r/space/registry.json` (36 pieces, per-piece provenance), `tokens.css`, `kit.css`, `provenance.json`, `bridge.json`; showroom — the full single-file document, essentially verbatim — at `/kit/space` via static rewrite; checksums and kit-doctor cover Space automatically (746 artifacts, registryVersion `597fec708cad`)
+- Pipeline: new `scripts/emit-sourced-kits.mjs` (config-driven, validates formats and piece counts, reusable for every future hand-off) wired into `registry:build`; `verify:dialects` extended with sourced-kit gates (artifact presence, format versions, non-empty provenance sections, bridge targets must exist in the universal set, per-piece provenance flags, showroom rewrite present); full `npm run check` passes
+- Interaction proof: `/kit/space` verified in the browser — native theme auto-detect, Light/Dark segment switching, token painter re-resolving hex values; a separate foreign consumer page (no Space resets, different origin) installed only the published `tokens.css` + `kit.css` and rendered buttons, field, alert, filerow, badge, and switch correctly in dark via the additive `.dark` alias — the standalone-install proof
+- Live proof: `/kit/space` and all five `/r/space/` artifacts return `200` on `kit.scottelling.com`; live registryVersion matches the local build exactly
+- Deployment: Vercel production `dpl_7ovXAZEdPvRhogVwsvUdr6kk1P3g`, aliased to `kit.scottelling.com`; product commit `9d82bc9` pushed to `scottelling/kit`
+- Open loops: Space showroom link could join the kit site's human navigation someday (registry-first was the ask); Google Sans substitution decision deferred to first real Space product; more kits incoming — each follows `docs/KIT-INTAKE.md`
+
 ## 2026-08-11 — KIT format layer: the language without the framework
 
 - Agent: Claude Code
