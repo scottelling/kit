@@ -1,21 +1,34 @@
 import type { Metadata } from "next"
 
 import { createStudioProject, defaultBriefs, projectTones, projectTypes, templateFamilies, type ProjectTone, type ProjectType } from "@/lib/project-studio"
-import { studioAssets } from "@/lib/studio-library"
+import { studioAssets, studioCategories, studioCounts } from "@/lib/studio-library"
 
+import { StudioExperience } from "../studio/studio-experience"
+import "../studio/studio.css"
 import { BuildMode } from "./build-mode"
 
 export const metadata: Metadata = {
   title: "Build",
-  description: "Turn a plain-English project brief into a complete, interactive Purple Rain product.",
+  description: "Shape a complete project in plain English, then build it into a working product — one place, one flow.",
 }
 
 type BuildPageProps = {
   searchParams: Promise<Record<string, string | string[] | undefined>>
 }
 
+// One Build. Shaping and making are two phases of the same page: arrive with no
+// project and you shape one; arrive with a project (or explicit choices) and you
+// work on it.
+const makeParams = ["project", "name", "brief", "type", "tone", "direction", "palette", "font", "motion", "text", "template"]
+
 export default async function BuildPage({ searchParams }: BuildPageProps) {
   const query = await searchParams
+  const isMaking = makeParams.some((key) => typeof query[key] === "string")
+
+  if (!isMaking) {
+    return <StudioExperience assets={studioAssets} categories={studioCategories} counts={studioCounts} />
+  }
+
   const typeValue = typeof query.type === "string" && projectTypes.includes(query.type as ProjectType) ? query.type as ProjectType : "Product app"
   const toneValue = typeof query.tone === "string" && projectTones.includes(query.tone as ProjectTone) ? query.tone as ProjectTone : "Precise"
   const family = templateFamilies.find((item) => item.type === typeValue) ?? templateFamilies[1]

@@ -89,7 +89,7 @@ export function SwapStudio({ contract, systems, layers }: { contract: Contract; 
       <main className="swap-studio-main">
         <section className="swap-opening" aria-labelledby="swap-title">
           <div>
-            <Link href="/studio">Purple Rain Studio</Link>
+            <Link href="/build">Build</Link>
             <h1 id="swap-title">Change the look. Keep the product.</h1>
             <p>A kit swap should feel surgical: repair what is broken, preserve what makes the product work, and make the new visual system easy to undo.</p>
           </div>

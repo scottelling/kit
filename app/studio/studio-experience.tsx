@@ -20,6 +20,7 @@ import { useMemo, useRef, useState } from "react"
 
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
+import { StudioNav } from "@/components/studio-nav"
 import { createStudioProject, templateFamilies, type ProjectTone, type ProjectType } from "@/lib/project-studio"
 import type { StudioAsset, StudioCategory } from "@/lib/studio-library"
 import { useStudioProjects } from "@/lib/use-studio-projects"
@@ -224,14 +225,15 @@ export function StudioExperience({ assets, categories, counts }: StudioExperienc
   return (
     <div className={`studio-shell${dark ? " dark" : ""}`}>
       <SiteHeader />
+      <StudioNav />
       <main>
         <section className="studio-opening" id="brief" aria-labelledby="studio-title">
           <div className="studio-opening__intro">
             <p>Describe the project. Shape the system. Take it live.</p>
-            <h1 id="studio-title">The whole design studio, in one place.</h1>
-            <p>Start in plain English. Purple Rain turns the idea into a coherent direction, complete interface system, working team, and release plan.</p>
-            <div className="studio-proof" aria-label="Studio inventory">
-              <span><strong>{assets.length}</strong> studio tools</span>
+            <h1 id="studio-title">Shape it and build it, in one place.</h1>
+            <p>Start in plain English. Kits turns the idea into a coherent direction, complete interface system, working team, and release plan.</p>
+            <div className="studio-proof" aria-label="Build inventory">
+              <span><strong>{assets.length}</strong> design tools</span>
               <span><strong>128</strong> interface pieces</span>
               <span><strong>1</strong> joined-up system</span>
             </div>
@@ -393,7 +395,7 @@ export function StudioExperience({ assets, categories, counts }: StudioExperienc
         <section className="studio-stage studio-stage--ship" id="ship" aria-labelledby="ship-title">
           <div className="ship-copy">
             <span>06 · Ship</span>
-            <h2 id="ship-title">Take this system straight into Build Mode.</h2>
+            <h2 id="ship-title">Build this system into working screens.</h2>
             <p>Your brief, direction, system, starting point, skills, and team stay together as a saved project. Open it, see all five screens, and keep working visually.</p>
             <button className="studio-primary" type="button" onClick={buildProject}>Build this project <ArrowRight aria-hidden="true" /></button>
           </div>
@@ -408,7 +410,7 @@ export function StudioExperience({ assets, categories, counts }: StudioExperienc
               <div><dt>Team</dt><dd>{teamIds.length} specialists</dd></div>
               <div><dt>Release standard</dt><dd>Build · browser test · deploy · prove</dd></div>
             </dl>
-            <footer><Check aria-hidden="true" /> Ready for the Studio</footer>
+            <footer><Check aria-hidden="true" /> Ready to build</footer>
           </div>
         </section>
       </main>
@@ -432,7 +434,7 @@ export function StudioExperience({ assets, categories, counts }: StudioExperienc
               {selected.colors ? <div className="asset-palette">{selected.colors.map((color) => <i key={color} style={{ "--asset-color": color } as CSSProperties} />)}</div> : null}
               {selected.sample ? <p className={`asset-type asset-type--${selected.id}`}>{selected.sample}</p> : null}
               {selected.motion ? <div className={`asset-motion asset-motion--${selected.motion}`} key={motionRun}><i /><button type="button" onClick={() => setMotionRun((value) => value + 1)}><Play aria-hidden="true" /> Play once</button></div> : null}
-              {!selected.colors && !selected.sample && !selected.motion ? <p className="asset-statement">{selected.category === "Agents" ? `Bring in the ${selected.name}.` : selected.category === "Skills" ? `Give the Studio the ability to ${selected.summary.toLowerCase()}.` : selected.category === "Prompts" ? selected.prompt : selected.detail}</p> : null}
+              {!selected.colors && !selected.sample && !selected.motion ? <p className="asset-statement">{selected.category === "Agents" ? `Bring in the ${selected.name}.` : selected.category === "Skills" ? `Give the build the ability to ${selected.summary.toLowerCase()}.` : selected.category === "Prompts" ? selected.prompt : selected.detail}</p> : null}
             </div>
             <div className="asset-dialog__detail"><p>{selected.detail}</p><dl><div><dt>Best for</dt><dd>{selected.bestFor}</dd></div>{selected.source ? <div><dt>Source</dt><dd>{selected.source}</dd></div> : null}{selected.status ? <div><dt>Status</dt><dd>{selected.status}</dd></div> : null}</dl></div>
             <footer><button className="studio-primary" type="button" onClick={() => applyAsset(selected)}>{assetAction(selected)}</button></footer>

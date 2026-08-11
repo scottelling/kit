@@ -94,8 +94,8 @@ function BuildEditor({ assets, initialProject, saveProject }: { assets: StudioAs
       <StudioNav />
       <main className="build-main">
         <section className="build-intro" aria-labelledby="build-title">
-          <div><p>Build Mode</p><h1 id="build-title">Describe it. Shape it. See it working.</h1></div>
-          <p>The Studio turns your brief into a complete project system with five real pages, live visual choices, saved history, and a shareable preview.</p>
+          <div><p>Working project</p><h1 id="build-title">Describe it. Shape it. See it working.</h1></div>
+          <p>Your brief becomes a complete project system with five real pages, live visual choices, saved history, and a shareable preview.</p>
         </section>
 
         <section className="build-split" aria-label="Project builder">

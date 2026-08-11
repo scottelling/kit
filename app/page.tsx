@@ -24,7 +24,7 @@ export default function Home() {
               <Link className="primary-link" href="/build">
                 Build a project <ArrowRight aria-hidden="true" />
               </Link>
-              <Link className="secondary-link" href="/studio">Shape the system</Link>
+              <Link className="secondary-link" href="/kit">Touch the kits</Link>
             </div>
           </div>
           <HomePreview />
@@ -42,8 +42,8 @@ export default function Home() {
               <span>Describe the outcome and work through five connected screens.</span>
               <ArrowRight aria-hidden="true" />
             </Link>
-            <Link href="/studio">
-              <span className="home-choice-list__number">113 studio tools</span>
+            <Link href="/build#library">
+              <span className="home-choice-list__number">113 design tools</span>
               <strong>Shape the design system</strong>
               <span>Brand, type, color, motion, templates, prompts, skills, and team.</span>
               <ArrowRight aria-hidden="true" />

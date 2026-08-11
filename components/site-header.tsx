@@ -31,23 +31,23 @@ const places = [
   { label: "Explore OS", hint: "Use the complete solid-surface system for desktop, phone, and widget products", href: "/kit/os", words: "os complete kit desktop phone widget window dock command themes components" },
   { label: "Explore JADE", hint: "Touch every raised, seated, and sunken JADE piece", href: "/kit/jade", words: "jade complete kit tactile mint components" },
   { label: "Compare the systems", hint: "Use the same working interface in JADE and Purple Rain", href: "/kit/jade/compare", words: "jade purple rain comparison live working interface" },
-  { label: "Build a project", hint: "Turn an English brief into a working five-page system", href: "/build", words: "make create start execute project plain english" },
+  { label: "Build a project", hint: "Shape a brief into a complete system, then build the working screens", href: "/build", words: "make create start execute project plain english shape studio system" },
   { label: "Saved projects", hint: "Return to drafts, built work, and approvals", href: "/projects", words: "saved history drafts archive approved" },
   { label: "Complete templates", hint: "Choose from eight complete project systems", href: "/templates", words: "landing app ecommerce publication portfolio docs marketplace campaign screens" },
   { label: "Shape a kit copy", hint: "Change a safe copy in plain English and prove it on a real interface", href: "/labs", words: "theme workshop copy colors type shape depth light dark apply publish restore" },
   { label: "Creative Labs", hint: "Tune brand, type, color, text, and motion", href: "/labs", words: "brand fonts palettes text effects animation movement" },
   { label: "Quality approval", hint: "See every release check and approval state", href: "/quality", words: "audit accessibility approve release check standards" },
-  { label: "Purple Rain Studio", hint: "Shape a complete project in plain English", href: "/studio", words: "brief brand fonts colors motion templates prompts skills agents ship deploy" },
+  { label: "Shape a design system", hint: "Direction, type, color, motion, templates, skills, and team in plain English", href: "/build", words: "studio brief brand fonts colors motion templates prompts skills agents ship deploy" },
   ...studioCategories.map((item) => ({
     label: item.plain,
-    hint: `${item.name} in the complete Studio library`,
-    href: `/studio#studio-${item.name.toLowerCase()}`,
+    hint: `${item.name} in the complete Build library`,
+    href: `/build#studio-${item.name.toLowerCase()}`,
     words: `${item.name} ${item.plain}`.toLowerCase(),
   })),
   ...studioAssets.map((item) => ({
     label: item.name,
     hint: item.summary,
-    href: `/studio#library`,
+    href: `/build#library`,
     words: `${item.category} ${item.bestFor} ${item.detail}`.toLowerCase(),
   })),
   ...familyPlaces,
@@ -147,8 +147,7 @@ export function SiteHeader() {
           <span>What are you looking for?</span>
         </button>
         <nav aria-label="Main pages">
-          <Link aria-current={buildPages.includes(pathname) ? "page" : undefined} href="/build">Build</Link>
-          <Link aria-current={pathname.startsWith("/studio") ? "page" : undefined} href="/studio">Studio</Link>
+          <Link aria-current={buildPages.includes(pathname) || pathname.startsWith("/studio") ? "page" : undefined} href="/build">Build</Link>
           <Link aria-current={pathname === "/elements" ? "page" : undefined} href="/elements">Elements</Link>
           <Link aria-current={pathname.startsWith("/kit") ? "page" : undefined} href="/kit">Kits</Link>
         </nav>
