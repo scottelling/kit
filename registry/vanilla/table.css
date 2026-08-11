@@ -1,0 +1,32 @@
+/* KIT vanilla — table: readable data rows that scroll inside their own frame. */
+.kit-table-frame {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card, 12px);
+  background: var(--card);
+  overflow-x: auto;
+  box-shadow: var(--shadow-panel, none);
+}
+.kit-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--kit-body-size, 15px);
+  color: var(--card-foreground);
+}
+.kit-table th,
+.kit-table td {
+  text-align: left;
+  padding: var(--kit-space-base, 12px) calc(var(--kit-space-base, 12px) * 1.25);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.kit-table th {
+  font-size: var(--kit-compact-size, 12px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted-foreground);
+}
+.kit-table tbody tr:last-child th,
+.kit-table tbody tr:last-child td { border-bottom: none; }
+.kit-table tbody tr:hover { background: var(--plane-1, var(--muted)); }
+.kit-table td[data-align="right"], .kit-table th[data-align="right"] { text-align: right; }

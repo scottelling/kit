@@ -6,6 +6,7 @@ const outputs = [
   ["lib/system-catalog.json", "public/r/system-catalog.json"],
   ["lib/icon-catalog.json", "public/r/icon-catalog.json"],
   ["lib/adoption-contract.json", "public/r/adoption-contract.json"],
+  ["lib/doctrine.json", "public/r/doctrine.json"],
 ]
 
 await mkdir(path.join(root, "public", "r"), { recursive: true })

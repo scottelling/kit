@@ -29,7 +29,12 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - Kit-swap workspace: `https://kit.scottelling.com/studio/swap`
 - Shared system catalog: `https://kit.scottelling.com/r/system-catalog.json`
 - Public swap contract: `https://kit.scottelling.com/r/adoption-contract.json`
-- Stack: Next.js App Router, TypeScript, Tailwind CSS v4, shadcn
+- KIT format spec: `SPEC.md` (source of truth for tokens, pieces, manifest, drift)
+- Framework-free tokens: `https://kit.scottelling.com/r/tokens.css` (+ `/r/jade/`, `/r/os/`, `/r/animation/`, `/r/shadow/` tokens.css and design-tokens.json)
+- Vanilla dialect: `https://kit.scottelling.com/vanilla` (demo) + `https://kit.scottelling.com/r/vanilla/registry.json`
+- Machine doctrine: `https://kit.scottelling.com/r/doctrine.json`
+- Registry checksums: `https://kit.scottelling.com/r/checksums.json`
+- Stack: Next.js App Router, TypeScript, Tailwind CSS v4, shadcn (one dialect of the KIT format, not its foundation)
 
 ## Product contract
 
@@ -57,6 +62,19 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - Published Theme Workshop copies must install cleanly into an unrelated shadcn project and merge both light and dark foundations.
 - `/elements` keeps one counted inventory, a live tactile playground, exact visible source, an English project prompt, and a separate public registry in sync.
 - A Signature Effect may use a purpose-bound local effect only inside its isolated frame. It must start sound muted, pause offscreen, become fully static for reduced motion, preserve 44px controls, and leave Purple Rain chrome untouched.
+
+## KIT format layer
+
+- `SPEC.md` governs the format. If implementation and SPEC disagree, fix one and
+  record it in the ledger; never silently deviate.
+- `registry.json` + `lib/*-tokens.json` stay canonical; `npm run registry:build`
+  emits every dialect from them (shadcn items, `tokens.css`,
+  `design-tokens.json`, the vanilla pieces, `doctrine.json`, `checksums.json`).
+  Never hand-edit emitted files under `public/r/`.
+- Vanilla pieces live in `registry/vanilla/` and may reference only variables
+  present in all four complete systems (`npm run verify:dialects` enforces this).
+- Consumers declare installs in `kit-manifest.json`; `npm run doctor --
+  <project-dir>` reports drift against `/r/checksums.json`.
 
 ## Working rules
 

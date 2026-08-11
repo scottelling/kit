@@ -1,0 +1,47 @@
+{
+  "format": "kit-doctrine/1",
+  "purpose": "The machine-readable rules every KIT consumer follows, whatever its framework. Agents styling any project against KIT read this file before writing interface code.",
+  "tokenLaw": {
+    "rule": "Token values are literal and never re-derived, approximated, or renamed. A color, size, or duration must be byte-identical to the published token.",
+    "universalVariables": "Pieces intended to work under every complete system may reference only variables present in all four systems' tokens.css.",
+    "neverInvent": "Never invent a color, shadow, radius, or duration when a token exists for the role. If no token fits, raise it to the kit instead of hardcoding."
+  },
+  "systems": {
+    "complete": ["purple-rain", "jade", "os", "animation"],
+    "foundations": ["shadow"],
+    "note": "Complete systems style the full catalog. Foundation kits supplement a system without replacing its identity."
+  },
+  "minimums": {
+    "controlHeightPx": 44,
+    "controlHeightNote": "Effective touch target. A small visual mark (20px checkbox) is allowed inside a row whose hit area is at least 44px.",
+    "focus": "Every interactive element shows a visible :focus-visible outline using the ring token.",
+    "keyboard": "Every action reachable by pointer is reachable by keyboard.",
+    "contrast": "Body text meets readable contrast on its surface in both appearances the system owns."
+  },
+  "banned": [
+    "glass or backdrop blur",
+    "translucent decorative surfaces",
+    "glow or shadow blooms outside an isolated Signature Effect frame",
+    "decorative gradients or ambient blobs",
+    "floating-card hover lift",
+    "looping resting motion in product UI",
+    "touch targets under 44px effective size"
+  ],
+  "motion": {
+    "durations": "Use the kit-fast and kit-standard duration tokens with the kit-ease curve; motion is short and property-specific.",
+    "reducedMotion": "prefers-reduced-motion: reduce must make every time-based signal static.",
+    "audio": "Any sound starts muted behind an explicit control."
+  },
+  "language": {
+    "rule": "Product copy is plain English. No jargon, no file formats, no internal system names in primary surfaces.",
+    "errors": "Error messages say what happened, what is safe, and the one next action.",
+    "emptyStates": "Empty screens say what will appear and offer one clear next step."
+  },
+  "reversibility": {
+    "rule": "Nothing is un-editable. Destructive actions offer undo or a real rollback path, and a kit swap must keep one reversible appearance switch plus a clean restore.",
+    "swaps": "Product screens, routes, data, and behavior stay owned by the product during a visual-system swap."
+  },
+  "states": ["default", "hover", "active", "focus-visible", "disabled", "loading", "empty", "error", "success"],
+  "proofWidths": [320, 375, 414, 768, 1280, 1440],
+  "proof": "Before claiming done: exercise changed controls with pointer and keyboard, check the proof widths for overflow, check both appearances when the system owns both, and check the console is clean."
+}

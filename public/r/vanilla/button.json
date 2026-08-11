@@ -1,0 +1,23 @@
+{
+  "format": "kit-piece/1",
+  "name": "button",
+  "title": "Button",
+  "description": "Primary, secondary, ghost, and destructive actions with hover, pressed, focus, and disabled states.",
+  "dialect": "vanilla",
+  "systems": "universal",
+  "requires": {
+    "tokens": "https://kit.scottelling.com/r/tokens.css (or the jade/os/animation tokens.css)"
+  },
+  "files": [
+    {
+      "path": "button.css",
+      "type": "css",
+      "content": "/* KIT vanilla — button. Uses only universal token variables. */\n.kit-button {\n  appearance: none;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  gap: 8px;\n  min-height: var(--kit-control-height, 44px);\n  padding: 0 calc(var(--kit-space-base, 12px) * 1.5);\n  border: 1px solid transparent;\n  border-radius: var(--radius-control, 8px);\n  background: var(--primary);\n  color: var(--primary-foreground);\n  font: inherit;\n  font-size: var(--kit-body-size, 15px);\n  font-weight: 600;\n  line-height: 1;\n  cursor: pointer;\n  box-shadow: var(--shadow-control, none);\n  transition: background-color var(--kit-fast, 120ms) var(--kit-ease, ease-out),\n    border-color var(--kit-fast, 120ms) var(--kit-ease, ease-out),\n    color var(--kit-fast, 120ms) var(--kit-ease, ease-out);\n}\n.kit-button:hover { filter: brightness(1.06); }\n.kit-button:active { filter: brightness(0.94); }\n.kit-button:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }\n.kit-button:disabled { opacity: 0.5; cursor: not-allowed; filter: none; }\n\n.kit-button[data-variant=\"secondary\"] {\n  background: var(--secondary);\n  color: var(--secondary-foreground);\n  border-color: var(--border);\n}\n.kit-button[data-variant=\"ghost\"] {\n  background: transparent;\n  color: var(--foreground);\n  box-shadow: none;\n}\n.kit-button[data-variant=\"ghost\"]:hover { background: var(--muted); filter: none; }\n.kit-button[data-variant=\"destructive\"] {\n  background: var(--destructive);\n  color: var(--destructive-foreground);\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .kit-button { transition-duration: 0.01ms; }\n}\n"
+    },
+    {
+      "path": "button.html",
+      "type": "html",
+      "content": "<button class=\"kit-button\" type=\"button\">Save changes</button>\n<button class=\"kit-button\" type=\"button\" data-variant=\"secondary\">Preview</button>\n<button class=\"kit-button\" type=\"button\" data-variant=\"ghost\">Cancel</button>\n<button class=\"kit-button\" type=\"button\" data-variant=\"destructive\">Delete draft</button>\n<button class=\"kit-button\" type=\"button\" disabled>Unavailable</button>\n"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+/* KIT vanilla — select: styled native select, keyboard-complete for free. */
+.kit-select {
+  position: relative;
+  display: inline-flex;
+  max-width: 100%;
+}
+.kit-select > select {
+  appearance: none;
+  min-height: var(--kit-control-height, 44px);
+  padding: 0 calc(var(--kit-space-base, 12px) * 2.5) 0 var(--kit-space-base, 12px);
+  border: 1px solid var(--input);
+  border-radius: var(--radius-control, 8px);
+  background: var(--background);
+  color: var(--foreground);
+  font: inherit;
+  font-size: var(--kit-body-size, 15px);
+  box-shadow: var(--shadow-inset, none);
+  cursor: pointer;
+  width: 100%;
+}
+.kit-select > select:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+.kit-select > select:disabled { opacity: 0.5; cursor: not-allowed; background: var(--muted); }
+.kit-select::after {
+  content: "";
+  position: absolute;
+  right: var(--kit-space-base, 12px);
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--muted-foreground);
+  border-bottom: 2px solid var(--muted-foreground);
+  transform: translateY(-70%) rotate(45deg);
+  pointer-events: none;
+}

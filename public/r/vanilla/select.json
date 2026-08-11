@@ -1,0 +1,23 @@
+{
+  "format": "kit-piece/1",
+  "name": "select",
+  "title": "Select",
+  "description": "Styled native select with full keyboard support.",
+  "dialect": "vanilla",
+  "systems": "universal",
+  "requires": {
+    "tokens": "https://kit.scottelling.com/r/tokens.css (or the jade/os/animation tokens.css)"
+  },
+  "files": [
+    {
+      "path": "select.css",
+      "type": "css",
+      "content": "/* KIT vanilla — select: styled native select, keyboard-complete for free. */\n.kit-select {\n  position: relative;\n  display: inline-flex;\n  max-width: 100%;\n}\n.kit-select > select {\n  appearance: none;\n  min-height: var(--kit-control-height, 44px);\n  padding: 0 calc(var(--kit-space-base, 12px) * 2.5) 0 var(--kit-space-base, 12px);\n  border: 1px solid var(--input);\n  border-radius: var(--radius-control, 8px);\n  background: var(--background);\n  color: var(--foreground);\n  font: inherit;\n  font-size: var(--kit-body-size, 15px);\n  box-shadow: var(--shadow-inset, none);\n  cursor: pointer;\n  width: 100%;\n}\n.kit-select > select:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }\n.kit-select > select:disabled { opacity: 0.5; cursor: not-allowed; background: var(--muted); }\n.kit-select::after {\n  content: \"\";\n  position: absolute;\n  right: var(--kit-space-base, 12px);\n  top: 50%;\n  width: 8px;\n  height: 8px;\n  border-right: 2px solid var(--muted-foreground);\n  border-bottom: 2px solid var(--muted-foreground);\n  transform: translateY(-70%) rotate(45deg);\n  pointer-events: none;\n}\n"
+    },
+    {
+      "path": "select.html",
+      "type": "html",
+      "content": "<div class=\"kit-select\">\n  <select aria-label=\"Project\">\n    <option>Reader</option>\n    <option>Breath</option>\n    <option>Threads</option>\n    <option>Legend</option>\n  </select>\n</div>\n"
+    }
+  ]
+}

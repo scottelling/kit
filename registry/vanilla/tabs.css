@@ -1,0 +1,39 @@
+/* KIT vanilla — tabs: 44px targets, visible focus, arrow-key support via tabs.js. */
+.kit-tabs { display: flex; flex-direction: column; gap: var(--kit-space-base, 12px); }
+.kit-tabs > [role="tablist"] {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+}
+.kit-tabs [role="tab"] {
+  appearance: none;
+  border: none;
+  background: none;
+  min-height: var(--kit-control-height, 44px);
+  padding: 0 var(--kit-space-base, 12px);
+  font: inherit;
+  font-size: var(--kit-body-size, 15px);
+  font-weight: 600;
+  color: var(--muted-foreground);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  white-space: nowrap;
+  transition: color var(--kit-fast, 120ms) var(--kit-ease, ease-out);
+}
+.kit-tabs [role="tab"]:hover { color: var(--foreground); }
+.kit-tabs [role="tab"][aria-selected="true"] {
+  color: var(--foreground);
+  border-bottom-color: var(--primary);
+}
+.kit-tabs [role="tab"]:focus-visible { outline: 2px solid var(--ring); outline-offset: -2px; }
+.kit-tabs [role="tabpanel"] {
+  font-size: var(--kit-body-size, 15px);
+  line-height: var(--kit-leading, 1.5);
+}
+.kit-tabs [role="tabpanel"][hidden] { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .kit-tabs [role="tab"] { transition-duration: 0.01ms; }
+}

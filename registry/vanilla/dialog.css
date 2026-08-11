@@ -1,0 +1,29 @@
+/* KIT vanilla — dialog: native <dialog>, solid surface, no glass. */
+.kit-dialog {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sheet, 16px);
+  background: var(--popover);
+  color: var(--popover-foreground);
+  box-shadow: var(--shadow-panel, 0 24px 48px rgba(0, 0, 0, 0.3));
+  padding: calc(var(--kit-space-base, 12px) * 2);
+  width: min(92vw, 440px);
+}
+.kit-dialog::backdrop { background: var(--overlay, rgba(0, 0, 0, 0.5)); }
+.kit-dialog > h2 {
+  margin: 0 0 8px;
+  font-family: var(--font-heading, inherit);
+  font-size: calc(var(--kit-body-size, 15px) * 1.25);
+  font-weight: 700;
+}
+.kit-dialog > p {
+  margin: 0 0 var(--kit-space-base, 12px);
+  font-size: var(--kit-body-size, 15px);
+  line-height: var(--kit-leading, 1.5);
+  color: var(--muted-foreground);
+}
+.kit-dialog > footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,169 @@
+# KIT Format — SPEC
+
+Version: 1.0.0 (2026-08-11)
+
+This file is the source of truth for the KIT format: how visual systems, tokens,
+pieces, doctrine, and consumers speak one language. The shadcn registry is one
+dialect of this format, not its foundation. If implementation and SPEC disagree,
+fix one and record the correction in `docs/AGENT_LEDGER.md`. The SPEC is
+amendable; silent deviation is not.
+
+## 1. The idea
+
+- **Tokens are the language.** Every system publishes the same variable names.
+  Values are literal law: never re-derived, renamed, or approximated.
+- **Pieces are expressions.** A piece may be delivered in any dialect (vanilla,
+  React/shadcn) as long as it uses the token language and obeys the doctrine.
+- **Consumers declare what they installed** in a manifest, so the registry and
+  the fleet can see each other. Drift is detectable, not silent.
+
+## 2. Systems
+
+Complete systems (each styles the entire 175-piece catalog):
+
+| id | tokens root |
+| --- | --- |
+| `purple-rain` | `/r/` |
+| `jade` | `/r/jade/` |
+| `os` | `/r/os/` |
+| `animation` | `/r/animation/` |
+
+Foundation kits supplement a system without replacing its identity: `shadow`
+(`/r/shadow/`). Animation is a dark-authority system: both appearance contexts
+intentionally receive the same inspected foundation.
+
+## 3. Token artifacts
+
+Every system root publishes three token dialects generated from one source:
+
+| artifact | dialect | consumer |
+| --- | --- | --- |
+| `tokens.css` | plain CSS custom properties | any page with a stylesheet |
+| `design-tokens.json` | `kit-design-tokens/1` (`$value`/`$type` groups) | tools and agents |
+| `tokens.json` (`smooth-shadow.json` for shadow) | shadcn registry item | Next/Tailwind/shadcn projects |
+
+Rules:
+
+- Variable names and values are identical across dialects. The build fails if
+  the shadcn item's trailing CSS disagrees with its declared variables.
+- `tokens.css` structure: `:root` carries theme + light variables; `.dark` and
+  `[data-kit-appearance="dark"]` carry dark overrides; extra rules (OS moods,
+  shadow utilities-as-classes) follow verbatim. Tailwind-only value-
+  parameterized utilities are omitted and documented in a trailing comment.
+- Fonts are referenced by the tokens but loaded by the consuming project.
+- The **universal set** is the intersection of variables present in all four
+  complete systems' `tokens.css` `:root` scope (53 variables today, including
+  the `--kit-*` foundation namespace, semantic colors, planes, radius roles,
+  and shadow roles). Anything portable must restrict itself to this set.
+
+## 4. Pieces
+
+A piece is one installable interface unit. Dialects:
+
+- **vanilla** — zero-dependency HTML/CSS(/JS) under `/r/vanilla/`. Uses only
+  universal variables, so one source renders correctly under every complete
+  system's `tokens.css`. Index: `/r/vanilla/registry.json`; bundles:
+  `/r/vanilla/kit.css` + `/r/vanilla/kit.js`; live proof: `/vanilla`.
+- **react (shadcn)** — the per-system registry items under each system root.
+
+Piece JSON (`kit-piece/1`):
+
+```json
+{
+  "format": "kit-piece/1",
+  "name": "button",
+  "title": "Button",
+  "description": "…",
+  "dialect": "vanilla",
+  "systems": "universal",
+  "requires": { "tokens": "a system tokens.css" },
+  "files": [{ "path": "button.css", "type": "css", "content": "…" }]
+}
+```
+
+Piece rules (enforced by doctrine, verified before release):
+
+- 44px effective touch targets (`--kit-control-height`); a smaller visual mark
+  is allowed inside a ≥44px hit row.
+- Visible `:focus-visible` outline using `--ring`.
+- Motion uses `--kit-fast`/`--kit-standard` with `--kit-ease`;
+  `prefers-reduced-motion: reduce` makes every time-based signal static.
+- No glass, glow, translucent decoration, hover lift, or resting loops.
+- Vanilla JS is declarative (data attributes), delegated, and each file is a
+  self-terminated IIFE safe to concatenate.
+
+## 5. Doctrine
+
+`/r/doctrine.json` (`kit-doctrine/1`) is the machine-readable rulebook: token
+law, minimums, bans, motion, plain-language rules, reversibility, required
+states, and proof widths. Agents styling any consumer read it before writing
+interface code. The plain-language contracts stay alongside it:
+`/r/adoption-contract.json` (swap protection) and `/r/system-catalog.json`
+(shared vs specialist vs product-owned layers).
+
+## 6. Consumer manifest
+
+A consumer project declares its installed artifacts in `kit-manifest.json` at
+its repo root (`kit-manifest/1`):
+
+```json
+{
+  "format": "kit-manifest/1",
+  "project": "threads",
+  "system": "purple-rain",
+  "registry": "https://kit.scottelling.com",
+  "installed": [
+    {
+      "artifact": "r/tokens.css",
+      "sha256": "<sha256 of the artifact as installed>",
+      "installedAt": "2026-08-11",
+      "files": ["src/styles/kit-tokens.css"]
+    }
+  ]
+}
+```
+
+`artifact` is the registry-relative path exactly as it appears in
+`/r/checksums.json`. `files` records where the artifact landed in the consumer
+(possibly adapted); the hash is of the registry artifact, not the adapted file.
+
+## 7. Drift protocol
+
+- `/r/checksums.json` (`kit-checksums/1`) carries a sha256 for every published
+  artifact and a `registryVersion` fingerprint of the whole registry. It is
+  regenerated last in every build.
+- `scripts/kit-doctor.mjs <consumer-dir>` compares a manifest against the live
+  checksums and reports each artifact as `current`, `behind`, or `unknown`.
+  Exit 0 = clean, 1 = drift, 2 = cannot check. `KIT_CHECKSUMS_FILE` points it
+  at a local checksums file for offline runs.
+
+## 8. Installation contract (agents)
+
+The installer for this format is an agent, not a package manager:
+
+1. Read `/r/doctrine.json` and this SPEC.
+2. Pick the dialect by the consumer's stack: shadcn projects install registry
+   items; everything else starts from `tokens.css` + vanilla pieces.
+3. Tokens install literally — exact file, exact names. Pieces may be adapted
+   into the consumer's idiom, but only universal variables and doctrine-legal
+   patterns may be used.
+4. Record every installed artifact in `kit-manifest.json` with its sha256 from
+   `/r/checksums.json`.
+5. Prove per the adoption contract: proof widths, both appearances when owned,
+   pointer + keyboard, clean console, and a reversible appearance switch.
+
+## 9. Versioning
+
+`registryVersion` identifies the registry as a whole; per-artifact sha256
+identifies each artifact. There is no per-artifact semver yet — a change is a
+new hash, and "behind" simply means the registry moved. If per-artifact
+version numbers become necessary, they will be added to `checksums.json` and
+this SPEC first.
+
+## 10. What is deliberately out (v1)
+
+- No authentication on the public registry.
+- No auto-update push into consumers; kit-doctor reports, agents act.
+- No claim that every piece exists in the vanilla dialect yet (12 today —
+  the everyday starter set; the catalog grows piece by piece).
+- No invented light mode for Animation, per its source authority.

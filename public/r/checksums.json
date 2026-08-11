@@ -1,0 +1,2971 @@
+{
+  "format": "kit-checksums/1",
+  "registryVersion": "336c2b5907c9",
+  "artifactCount": 741,
+  "artifacts": {
+    "r/accordion.json": {
+      "sha256": "2a9e0cfea649710182fa95f101f3e3a6aad4eb66fa78ac14c80761987de21a9b",
+      "bytes": 1176
+    },
+    "r/action-menu.json": {
+      "sha256": "021ba00a710029e2fd8bfffbc594e5545c0a2c3685aacab65d075577e8991107",
+      "bytes": 1744
+    },
+    "r/activity-feed.json": {
+      "sha256": "c7c0f4e039449c998bfc6d9f8397f985cccb953e18d5eeb8ce58a0b2a67463f4",
+      "bytes": 1206
+    },
+    "r/adoption-contract.json": {
+      "sha256": "d568f8c87ccf09d9c184e87e632129c1729ecfba52bf352db1f214cfed1f773b",
+      "bytes": 2530
+    },
+    "r/agenda.json": {
+      "sha256": "b69eea9bec5fbfe405187077e7b41f35b4419ce5ea087f3fbc0fd015445fc1fd",
+      "bytes": 1146
+    },
+    "r/ai-director.json": {
+      "sha256": "b11c355fe54263903aace80446c963e94e7e8a825a49c8ee12a89f8caab0de0d",
+      "bytes": 1918
+    },
+    "r/alert-dialog.json": {
+      "sha256": "56f676f48a9a6e7b8c254d0e188f3f01f9e671631eac22d8579a99797fa9c5ad",
+      "bytes": 1755
+    },
+    "r/alert.json": {
+      "sha256": "ee48cb35d6b0c163fa585546828305834cbf4e7d3d58b4e39131b51f5e206d12",
+      "bytes": 1333
+    },
+    "r/anchor-nav.json": {
+      "sha256": "503b3317c8efff01da8da5fa88dd785299aeaf9d204f4c227699c582dc07e6f5",
+      "bytes": 1383
+    },
+    "r/animation/accordion.json": {
+      "sha256": "d2458deefcdabdd13797abeff69133cb854c9da4667dcd1e5622b18c245aa8b7",
+      "bytes": 1191
+    },
+    "r/animation/action-menu.json": {
+      "sha256": "02a76f4a7905ee7979eb27a75d64b494c27ee06c9099ca276616dfea6a3c3c31",
+      "bytes": 1759
+    },
+    "r/animation/activity-feed.json": {
+      "sha256": "20445d8337b534a5d62c8100f107276d99989c1f083c170e95d08de0e984f900",
+      "bytes": 1221
+    },
+    "r/animation/agenda.json": {
+      "sha256": "e5c7cd11364dc6908c4d6be8e656671bc77e727eb4d2f29ced39767913ed257d",
+      "bytes": 1161
+    },
+    "r/animation/ai-director.json": {
+      "sha256": "61b965021ff0cf8228059941c14c24db5e9c44180bde3abc642f434b59f20080",
+      "bytes": 1933
+    },
+    "r/animation/alert-dialog.json": {
+      "sha256": "bd3d4f5883e68379c7b664c90b453655a7d7449c7a68c36c05758f0a5c1b44a1",
+      "bytes": 1770
+    },
+    "r/animation/alert.json": {
+      "sha256": "f2a0adbebc199560db189efb102d9433b1d19c209fc608ad55e2a5c9b9ca8b47",
+      "bytes": 1348
+    },
+    "r/animation/anchor-nav.json": {
+      "sha256": "6d429a6ba53104a9d11d13dc1ee4ff684b915da240a8844093d5729f07ac18ac",
+      "bytes": 1398
+    },
+    "r/animation/app-shell.json": {
+      "sha256": "bd764352df8dd1e51714fd4628452b9460f372f44a775dd8f6cb1409ce267089",
+      "bytes": 1544
+    },
+    "r/animation/app-switcher.json": {
+      "sha256": "a80e822a0f4752aab692aaae432da600f907d1ee7ca41c8ca1412bd61930b126",
+      "bytes": 1420
+    },
+    "r/animation/application-shell.json": {
+      "sha256": "03768c4ef1d249b7bc0b9f604012ee6d2902a250ac609645d9028b0eae2d3131",
+      "bytes": 2354
+    },
+    "r/animation/auth-card.json": {
+      "sha256": "cef02fb404696b87161ebcf02917082f67de1f7f5444b31b8068768363fafc75",
+      "bytes": 2083
+    },
+    "r/animation/avatar-group.json": {
+      "sha256": "858ba2b9561b901997f0d5d7c9052f75039891a3ddf8b289652abf8d8760f96f",
+      "bytes": 1213
+    },
+    "r/animation/avatar.json": {
+      "sha256": "54683a7932979a8698cf71c94039dc06290d71186ff23520c35bc1d94a959cdf",
+      "bytes": 1162
+    },
+    "r/animation/back-link.json": {
+      "sha256": "50fe12eeb3dcd87edbd62c4ca1c5f282372eb6ea961a15621ac74aba88914c77",
+      "bytes": 1387
+    },
+    "r/animation/badge.json": {
+      "sha256": "c354984f10ccc4d04a7d1dd1175757a16d039631d05c4d2652f7e497eb2f5280",
+      "bytes": 1611
+    },
+    "r/animation/banner.json": {
+      "sha256": "f251a615d0e7999d843fa41eb89c33fb19ed2e8272336e8ba72dd233fdc54ff0",
+      "bytes": 1358
+    },
+    "r/animation/bar-chart.json": {
+      "sha256": "416d7fbdb2b2ec3baf74f1e6c73af8639c2008860827901fd1d5a9245eb899b6",
+      "bytes": 1217
+    },
+    "r/animation/bottom-nav.json": {
+      "sha256": "825181e88eadff6e3f4645883ffe5e75610427223a21ef0015c15031c1fed8d7",
+      "bytes": 1398
+    },
+    "r/animation/breadcrumb.json": {
+      "sha256": "e9a455cd8cecd618a7957ab72dc2946f26353d51e5ae9094db6d7c0f85febf52",
+      "bytes": 1401
+    },
+    "r/animation/bulk-action-bar.json": {
+      "sha256": "692c7eba427015911a64eeab6e9cd35d31e1751c55a69cb044df3d06a605f334",
+      "bytes": 1643
+    },
+    "r/animation/button-group.json": {
+      "sha256": "8bf3d1b57caf4f84c15443e8a3a7a096bfaa49e112b3d0dc7bcb69e57fde55ca",
+      "bytes": 1616
+    },
+    "r/animation/button.json": {
+      "sha256": "4e0f04045129c35c33b2f3e9e4f1d4d4522206f0d5e675706ed0e7a055a2aefc",
+      "bytes": 3305
+    },
+    "r/animation/calendar.json": {
+      "sha256": "5f486fa519dc469da90a920d3d7c781421390f02020baa63ec64c1b0126a1b36",
+      "bytes": 1369
+    },
+    "r/animation/card.json": {
+      "sha256": "a60385746e31135da6064a2f27c2feaf4abab30d94acc394d6469c103377aa7f",
+      "bytes": 2001
+    },
+    "r/animation/carousel.json": {
+      "sha256": "fb88ed0c9cbdf12152091892461d3fa1b1e1c9424c88ac860ef6fbf9705a6d6a",
+      "bytes": 1400
+    },
+    "r/animation/cart-summary.json": {
+      "sha256": "60724d4b09561b2a1ef6bb27f20500b2e6053df27aa057796b7c2a08ab5cc399",
+      "bytes": 1826
+    },
+    "r/animation/checkbox-group.json": {
+      "sha256": "5eb5c17941dafce07e53844f5103ba7d27c1069730b2a58553e12f70a9093870",
+      "bytes": 1359
+    },
+    "r/animation/checkbox.json": {
+      "sha256": "f8acc7848ecac3c6d9423e52775d4377f3222155c20876f511ff4c0f83292008",
+      "bytes": 1296
+    },
+    "r/animation/checkout-form.json": {
+      "sha256": "be75277435d74fae9b826f6646c19f9da48005accce438264f2e111bb1c7f2bb",
+      "bytes": 2123
+    },
+    "r/animation/code-panel.json": {
+      "sha256": "fd68802873493c45ecf04e95fb98f62d2d656379144b43e479995222c4c26506",
+      "bytes": 1436
+    },
+    "r/animation/collapsible.json": {
+      "sha256": "858ac908a5b2728c7dd51eeca2a169429565cb773e7e5fa70e6d8e625f7869f2",
+      "bytes": 1211
+    },
+    "r/animation/color-input.json": {
+      "sha256": "3295a773ccd158a0d09dbf3cf3fe67a5cb2f6cb066a3f19df318a9117db244c4",
+      "bytes": 1365
+    },
+    "r/animation/color-swatch.json": {
+      "sha256": "d735cd346842e2c296c3b64766a1d55fc701e8a01df210688be72991b97f8a8c",
+      "bytes": 1159
+    },
+    "r/animation/combobox.json": {
+      "sha256": "1a50c54d54fdc9af9e11d1fbae9f798d02b1a5ac00f4517a32e6292c2212b015",
+      "bytes": 1343
+    },
+    "r/animation/command-bar.json": {
+      "sha256": "627eb937e9efd92d5cbf1928a7e9abda6e4dc0a569017009ecfac9cbb46cbc31",
+      "bytes": 3860
+    },
+    "r/animation/command-menu.json": {
+      "sha256": "f6b98d7e133caa22186d6153ed762f067417e76e531c8a4c3973fbf1a4b32f0d",
+      "bytes": 1420
+    },
+    "r/animation/command-palette.json": {
+      "sha256": "a74a607e83048cf61caa391843bd2bce3f01fd6a3d759ce79f2d516890442709",
+      "bytes": 1803
+    },
+    "r/animation/command-suggestion-list.json": {
+      "sha256": "752830644487bb3a108f10477676a19c3b6d412a4d8d8959beae84e8a8287bf2",
+      "bytes": 1380
+    },
+    "r/animation/contact-form.json": {
+      "sha256": "96752943e49a4b017fff58e103ba1283e9b098517e2358beafea6e9f4dc12fc1",
+      "bytes": 2113
+    },
+    "r/animation/container.json": {
+      "sha256": "da4498d371e7ab07d9e0f6cdd4d769f0cbe7208336f9c26bc6ecb64a86579416",
+      "bytes": 1033
+    },
+    "r/animation/context-menu.json": {
+      "sha256": "19b92cf652bacd7fe8635466e859d7fd9175dbcf9954b6cc3f98aa3d1045d61c",
+      "bytes": 1770
+    },
+    "r/animation/copy-button.json": {
+      "sha256": "423f8d095e97905902de1e7ed3e0ef248d80a3fb6275f7352fff0bbcc55c4b4c",
+      "bytes": 1608
+    },
+    "r/animation/data-table.json": {
+      "sha256": "ddf1bcda32def372893d967f38bc094653c30ac5966f11a15c3880aa3b06745e",
+      "bytes": 1312
+    },
+    "r/animation/date-picker.json": {
+      "sha256": "5723c258bed4282399d3b920ad88a78e681cc058209859088a004d9a7d34d4f0",
+      "bytes": 1364
+    },
+    "r/animation/delivery-action.json": {
+      "sha256": "6d5ad0efed0da6ecbf5a6500cf02313b7b571b9be75d1268699d4710f15e5289",
+      "bytes": 1247
+    },
+    "r/animation/delivery-workspace.json": {
+      "sha256": "b6785689d2e73cc8fdf1797d364cf988b943ece1f6375c154e83fc0ea25a54be",
+      "bytes": 2122
+    },
+    "r/animation/description-list.json": {
+      "sha256": "ca8cea0a1e1cfcf533f21486fc6c3c28cb25e6a98242e0312e57279c894112e8",
+      "bytes": 1295
+    },
+    "r/animation/design-tokens.json": {
+      "sha256": "33dcfa67d5043667b079b50b3ee4b54d379ea2765f403e07541cd0c90d7a0fb3",
+      "bytes": 24454
+    },
+    "r/animation/desktop-shell.json": {
+      "sha256": "79a118ce75c25865752df615b25df5b9d08bfdcbcb5f3ede530f4aab87f8fbde",
+      "bytes": 1869
+    },
+    "r/animation/device-frame.json": {
+      "sha256": "ab18740fa084567a768d27e1416045cac019e939c854eb472879799c55082df1",
+      "bytes": 1304
+    },
+    "r/animation/dialog.json": {
+      "sha256": "ba986be5c07f2ee0dfe30be9913fb9717585415d20fef92c502f1d1507f52181",
+      "bytes": 4564
+    },
+    "r/animation/dock.json": {
+      "sha256": "fb06271b77c539e4101ed7931fdc98a6fbaf5927d4db146a9ce7be69130532af",
+      "bytes": 2423
+    },
+    "r/animation/document-surface.json": {
+      "sha256": "39aed9582b7cfdfdc6f86d238c3e6ee4ceb4ab3c0539dcbf9317b11b7596b83f",
+      "bytes": 1447
+    },
+    "r/animation/donut-chart.json": {
+      "sha256": "00fa5cb4731b79067b88c90b2f0f7b3250c2b3259fc66196474bfe52563ef255",
+      "bytes": 1237
+    },
+    "r/animation/drawer.json": {
+      "sha256": "c7d043c92c9fe543b422903c566aa49f8e0a9d552bccf8c66e55b70ab4822f42",
+      "bytes": 1707
+    },
+    "r/animation/dropdown-menu.json": {
+      "sha256": "f26e5e90b1b5a0ae0054e72c3cfe1c17492c62469e69503e6a9981f980cba34f",
+      "bytes": 1781
+    },
+    "r/animation/dropzone.json": {
+      "sha256": "0f26be284ba016bf578bfb3d44cdcb483ab542e1fe4deb61818a51aab1ff8050",
+      "bytes": 1234
+    },
+    "r/animation/editor-toolbar.json": {
+      "sha256": "3caa989faf2cb903450c2f4e0bb23d75d563b619c4fef7eb6368cc0155606613",
+      "bytes": 1769
+    },
+    "r/animation/empty-state.json": {
+      "sha256": "4946d9f8c8f6219b7148d7aaadaba1bbec2add12e684aaaee3f795f30a07f058",
+      "bytes": 1606
+    },
+    "r/animation/error-state.json": {
+      "sha256": "29d9e2594101850402577d637ba414d958bb6b6953959d1249e99050da817a2a",
+      "bytes": 1192
+    },
+    "r/animation/favorite-button.json": {
+      "sha256": "7e21341f90900fded68446d6c4d405628550ac6502bd679130bc95bb9b88fff1",
+      "bytes": 1702
+    },
+    "r/animation/feedback-form.json": {
+      "sha256": "9271848afcd90da1a1213dadc70503bf88e9dddc9dbc998d4d927974bc0712dd",
+      "bytes": 2123
+    },
+    "r/animation/field.json": {
+      "sha256": "471cf622e3051fccde921354c8c13bf6f6e8d51c05ce2fc552b600067eb64bf6",
+      "bytes": 1313
+    },
+    "r/animation/file-upload.json": {
+      "sha256": "417d088868108f88e635903cb4e10e0365ecc75632854d88f7ab90719bd0efec",
+      "bytes": 1258
+    },
+    "r/animation/filter-bar.json": {
+      "sha256": "eb32f786670e5e4b005a6aa4f9fbb3930cae223744cc61c270902c18b9db6965",
+      "bytes": 1772
+    },
+    "r/animation/filter-tabs.json": {
+      "sha256": "2f8b156c35b8ae9f4214acdd74f465723034b161a07742c13602ff158445ffe5",
+      "bytes": 1463
+    },
+    "r/animation/floating-action-button.json": {
+      "sha256": "818fd24f955cabcae56904803efc26df6c3a63f1982508bbe8efd10ee293fa9d",
+      "bytes": 1716
+    },
+    "r/animation/focus-ring.json": {
+      "sha256": "e348fa9fce48f0e77f2ade07a1e5981618cce400567349dc63038c6a7d9c237f",
+      "bytes": 1292
+    },
+    "r/animation/forgot-password-form.json": {
+      "sha256": "eb7adf4193caf9c6a7a06c9bb6de92e9f27d70ba5c1fe5c3a5be97fcb424b564",
+      "bytes": 2190
+    },
+    "r/animation/guided-tour.json": {
+      "sha256": "5ea772219730b8a81f8369b64241a013f82f49cb36e90eb03328f681d002db50",
+      "bytes": 1568
+    },
+    "r/animation/hover-card.json": {
+      "sha256": "6a9086bf911e07146baab5dff55b273c12f51ed9640fa19c996d9080612daa3a",
+      "bytes": 1748
+    },
+    "r/animation/icon-button.json": {
+      "sha256": "e8a18583f95e05090faeedba02334dd89420599e8e1696924e2ba3e0deebc139",
+      "bytes": 1609
+    },
+    "r/animation/inline-edit.json": {
+      "sha256": "e60efb79b8bdcc93530424a1aed164275a3d793d9f5514d4dc458f632080f44b",
+      "bytes": 1370
+    },
+    "r/animation/input.json": {
+      "sha256": "b4fdca093a8ced9bdde8a6290683f203aff73d2f3c7db5a6d9d869b9ecc2004e",
+      "bytes": 1757
+    },
+    "r/animation/inspector-panel.json": {
+      "sha256": "6588a4cc676efaba6c15df2e16473bf577f56226d2a631ef552416db1cb58dc5",
+      "bytes": 2085
+    },
+    "r/animation/invite-form.json": {
+      "sha256": "43cc45b7add14aee298f543a67cdc86adff5337aa8ab06433b9c0736bb58c9f3",
+      "bytes": 2103
+    },
+    "r/animation/layer-list.json": {
+      "sha256": "2954dc5387c9e88c40d35714a57431f737728c21eb5b0d70aa35fdf998d5ec90",
+      "bytes": 1688
+    },
+    "r/animation/lightbox.json": {
+      "sha256": "b189f375e7285d161a0fd2ac9399c882b96bd8283950a0d099b0cd1851548ac6",
+      "bytes": 1729
+    },
+    "r/animation/link-button.json": {
+      "sha256": "2f29b31e88d078e1d3fb997a65d84e51c83b36be6eb41fa3d6838008c50dad68",
+      "bytes": 1609
+    },
+    "r/animation/list-item.json": {
+      "sha256": "efc176ad9b7fbf60f9912799a6bd6c1a44f6a2a01139b30f04258b307f12f1ed",
+      "bytes": 1207
+    },
+    "r/animation/list.json": {
+      "sha256": "c0de6d06e3c82b04cc1480e2a2dc333bf041d505b604726791413fd369a871e5",
+      "bytes": 1165
+    },
+    "r/animation/loading-dots.json": {
+      "sha256": "41fcacf0b6455b21cbb9e9b2f3cbb81715da3f7090e2ae1125aa64340b502eeb",
+      "bytes": 1227
+    },
+    "r/animation/master-detail.json": {
+      "sha256": "e9a26fa5a6c1265608fa2a1640073aaace6bf7235d0a2af2732f37f7633b05c4",
+      "bytes": 4176
+    },
+    "r/animation/menu-bar.json": {
+      "sha256": "1282bb224136e1f06a317aee3dd6d7eff3d22f8afe9ab3a40503c6322e0b483a",
+      "bytes": 2039
+    },
+    "r/animation/menu-button.json": {
+      "sha256": "8d38f20b5a02afb9aa174c9609eb477074502d2ba421428e51180bcf12de8bc3",
+      "bytes": 1983
+    },
+    "r/animation/meter.json": {
+      "sha256": "af1e27ef5fc9682645dadd230b98117fd7f2b68a2a0f16a14f1c7eef0fdf8f86",
+      "bytes": 1138
+    },
+    "r/animation/mobile-app-nav.json": {
+      "sha256": "c97f11793af7734bafe18bec2160fbe034a370667c6515d179ad9304d5a32c8d",
+      "bytes": 1439
+    },
+    "r/animation/motion-check.json": {
+      "sha256": "d91125e29035872742b636517f6ba096af2c4222ec00fd42cf66e78ac397a6d7",
+      "bytes": 1191
+    },
+    "r/animation/motion-inspector.json": {
+      "sha256": "4a1f22c755a5e592f61b6bdca8990588f3eeeeaa980ba5a1425c84931484ca89",
+      "bytes": 2026
+    },
+    "r/animation/motion-preset-picker.json": {
+      "sha256": "49de4eec7fca62ad82d347f4517956749f73cfc858db11b6240e30b8c6793a77",
+      "bytes": 1340
+    },
+    "r/animation/motion-timeline.json": {
+      "sha256": "17b1411b40779dcb32e4807a37477d6108106328d211c14d7428fdeb6707c4d5",
+      "bytes": 2063
+    },
+    "r/animation/navigation-menu.json": {
+      "sha256": "dea3669d0c6b7f23298d5cfa1bd08375ddbe2afc9e3575f9063932fb36434fc8",
+      "bytes": 1453
+    },
+    "r/animation/notification-center.json": {
+      "sha256": "ffff50f88f87e58f8d1d05daf5b092c43fc7426a73357b7213df25ed89b6d8ef",
+      "bytes": 1584
+    },
+    "r/animation/number-input.json": {
+      "sha256": "408de58211c22850caeb93e3e0d74d6cc5da0ec3ab02ce8d8f37d686173b10c7",
+      "bytes": 1373
+    },
+    "r/animation/offline-state.json": {
+      "sha256": "ea59ff010b0d350aba6d6872f5c621fd10ab16b9d9be88f22161a12e99d4b406",
+      "bytes": 1215
+    },
+    "r/animation/order-summary.json": {
+      "sha256": "f073e854946af3a38755b16cbc2827cee04cbabefee8d621e50a18777fb7e0b6",
+      "bytes": 1836
+    },
+    "r/animation/otp-input.json": {
+      "sha256": "a1f3682bb888fed2a2c73208398dfd788f39490f0d677c6fde2af469d2ffd92b",
+      "bytes": 1350
+    },
+    "r/animation/page-header.json": {
+      "sha256": "3d9d414f218d9ad8991e6be2b5227c48be6a3d17e29fe4a9053e6b938896345d",
+      "bytes": 1409
+    },
+    "r/animation/pagination.json": {
+      "sha256": "8f88bca1d3120be0dab6901ab35232dbfef675fc8f6a05022513d7383bf41383",
+      "bytes": 1456
+    },
+    "r/animation/password-input.json": {
+      "sha256": "d1993cfa5a05c6cd014b28c5bfea8ac1ea5f6e5ed8a4245cff0979154ca14f8a",
+      "bytes": 1398
+    },
+    "r/animation/playhead.json": {
+      "sha256": "0b578dba09a9e93effe3862bbd93174a6b8f13b8908409a817477556af146e49",
+      "bytes": 1056
+    },
+    "r/animation/popover.json": {
+      "sha256": "a1884903bb28d081d59d6fd5a70fe77d10b05ac03441fdb196fd04f0f6ead362",
+      "bytes": 1718
+    },
+    "r/animation/preview-toolbar.json": {
+      "sha256": "76e474a3013d1aee7f88a6b37ae67d1ae0524888d3e0c446790c46304114ad54",
+      "bytes": 1573
+    },
+    "r/animation/pricing-card.json": {
+      "sha256": "b0a7bc2c0393029fcfcd095dc09501bcb92fbd1aea830406a4f3a43ae04df95d",
+      "bytes": 1729
+    },
+    "r/animation/pricing-table.json": {
+      "sha256": "b8640ce1597253a7a4819284e5a21affa15b2eb6e90d45f606c72b81f6716ff9",
+      "bytes": 1738
+    },
+    "r/animation/profile-form.json": {
+      "sha256": "18d391a5649b27608ed97fcf6580b666b5acb3d4a57fe365e84d5baaf6bf4bd4",
+      "bytes": 2113
+    },
+    "r/animation/progress-card.json": {
+      "sha256": "ab6f370bf3ce04f7424c4764d2db494f59dde28d3f9522e0537e1f8e942f5b70",
+      "bytes": 1425
+    },
+    "r/animation/progress.json": {
+      "sha256": "a0f1dffafdb9eed512380a90685b9ddc07d522547e077a29f01cd44a6b895802",
+      "bytes": 1168
+    },
+    "r/animation/project-switcher.json": {
+      "sha256": "beb9e9de25b96ec02e36f34e11ebbd52b638571c3493f220ceb44a02a9dd7426",
+      "bytes": 1656
+    },
+    "r/animation/radio-group.json": {
+      "sha256": "c5ef298cfde2677b2939b77fe10466e9bb5a019eb730a0d648d82135c3592d82",
+      "bytes": 1323
+    },
+    "r/animation/radius-guide.json": {
+      "sha256": "56cf218f620e01f644d398fbd04a21b88aeb611d9c34c3634f62c99032736575",
+      "bytes": 1176
+    },
+    "r/animation/range-slider.json": {
+      "sha256": "d90ca1eea12dea73a616c0917f43e7b7afb36b41932426710434dca65d285618",
+      "bytes": 1205
+    },
+    "r/animation/rating.json": {
+      "sha256": "eaa8ac77cad8340fd8fdc40fc07977ddbdbf4360c220e4e555cff946e45d88cd",
+      "bytes": 1316
+    },
+    "r/animation/registry.json": {
+      "sha256": "f55ba64c2cfeaf02c04fa0a1c52636a0164a3b6a9f4dcd6fb7a8abb1acd6358d",
+      "bytes": 98168
+    },
+    "r/animation/render-status.json": {
+      "sha256": "b9c32e96f53e9f84e2960b063e483a2a77bd7b82e8ae08e60088ae538243ac39",
+      "bytes": 1395
+    },
+    "r/animation/scene-list-item.json": {
+      "sha256": "aeb0227f33c457afce919ea77fd794eb3e8b4e06d3996a7892e1d54c8186de7c",
+      "bytes": 1786
+    },
+    "r/animation/search-field.json": {
+      "sha256": "743353d8f255735ce3f87f9ee5f71d35548dcc8f35d6b1e822af7c0270da2b8b",
+      "bytes": 1380
+    },
+    "r/animation/search-results.json": {
+      "sha256": "0ab8730fd8aa030ccf7584b0890b7f8378de9096663303a551f2788d90bc127b",
+      "bytes": 1808
+    },
+    "r/animation/segmented-control.json": {
+      "sha256": "247f548be1e5b0afb2c0c841df21406e7d1375630f0fd9a265e5d2bd2c59a4d7",
+      "bytes": 1666
+    },
+    "r/animation/select.json": {
+      "sha256": "0e9e965857f37f17bb8704da738ef1fd93bd2c71919cde514c828b727e3dbdd0",
+      "bytes": 1330
+    },
+    "r/animation/separator.json": {
+      "sha256": "4a77b59f768a6d638af57709d2dfb05a82c261245c9173d515ee70a1a063dd2f",
+      "bytes": 1035
+    },
+    "r/animation/settings-panel.json": {
+      "sha256": "03c4fc3980776eea9608226cb928777d026820b8ff7cf9c6d6c8c6d894037fb9",
+      "bytes": 2133
+    },
+    "r/animation/settings-sheet.json": {
+      "sha256": "60e778a3a6b2688cdc55eebe5d1af593e200d8216b352e6a2ad982f82a442e62",
+      "bytes": 4725
+    },
+    "r/animation/shadow-guide.json": {
+      "sha256": "f2216ec94f80a69e844dd8e20b1ef4eb74db84631b510f0a1b2f30f52d40ea81",
+      "bytes": 1162
+    },
+    "r/animation/sheet.json": {
+      "sha256": "117b8b9a0db6a855425612088da18e0db277a7e1ce1485308b78daef3a029e24",
+      "bytes": 1696
+    },
+    "r/animation/sidebar.json": {
+      "sha256": "b03621035cf4b8e669dfe6de8998cc4284788c4a3ad2ca929edea7ed7ee2e606",
+      "bytes": 1368
+    },
+    "r/animation/sign-in-form.json": {
+      "sha256": "7abc70d95f86ad53eb46e5cb17a746412a11f18e34c2b100c49b607a33860ed8",
+      "bytes": 2110
+    },
+    "r/animation/sign-up-form.json": {
+      "sha256": "99785da08244d12ed980c380ca443a7781e5c5caee7bdb2a710111c30bf0a13e",
+      "bytes": 2110
+    },
+    "r/animation/skeleton.json": {
+      "sha256": "f9b1f0b7497273a6eb1fcd9af25c2cc0b5ab8e0a5ed0c4ef3dd364c65512d4cd",
+      "bytes": 1194
+    },
+    "r/animation/slider.json": {
+      "sha256": "5311323690f668eb7b98ef429737a02dc8704cf49c846cfd75691605c11bb1b5",
+      "bytes": 1148
+    },
+    "r/animation/snackbar.json": {
+      "sha256": "447249d3f287b3e9b4e6e4116ea76d5b9e74d2b1cfb2853720bd84ef63c1620a",
+      "bytes": 1378
+    },
+    "r/animation/spacing-guide.json": {
+      "sha256": "8b3e7c0e6b0f35f0ff817cbcfa54e36173836be02a13a388600fd68b68f29093",
+      "bytes": 1106
+    },
+    "r/animation/spinner.json": {
+      "sha256": "b3e5769c2aad1bf567ad5284d19b182e371da653444409d8575b0c81b4c5f8a1",
+      "bytes": 1185
+    },
+    "r/animation/split-button.json": {
+      "sha256": "c3c600b1dc2df1944e595da8d7345ea0e48a5e3dbe2423b8d6867659b1a663c3",
+      "bytes": 1993
+    },
+    "r/animation/split-view.json": {
+      "sha256": "a43c3011f7d29118f5196b19346c85a580dc807fd91899e86f17793155e1d9a8",
+      "bytes": 1773
+    },
+    "r/animation/stack.json": {
+      "sha256": "a7f168aa7117075ff56c397abb254e3fa70c0c012878eb71e680b0f9256ef2cb",
+      "bytes": 1000
+    },
+    "r/animation/stage-viewport.json": {
+      "sha256": "bac2ca92d38942a4eb1e5f211669b3f4456bb17992f0d01269fe45b3aaa1cb05",
+      "bytes": 1411
+    },
+    "r/animation/stat-group.json": {
+      "sha256": "7c2cc06f0c9607ad19ce7aff5224a4e34b6b95a8d03fa3811eecc7e13e469e5c",
+      "bytes": 1373
+    },
+    "r/animation/stat.json": {
+      "sha256": "595a4b51d9a1bf475b14622db6c1ff632aa89a45a5c747d6b33b917c5f7d436f",
+      "bytes": 1322
+    },
+    "r/animation/status-bar.json": {
+      "sha256": "03fc61fda98d895ec61eb7a659d874472feaef6d0d99dc8f8d3637396923cc19",
+      "bytes": 1112
+    },
+    "r/animation/status-dot.json": {
+      "sha256": "e169babc6a518ef536bc595e71a3faf731476e2d2607ca1c357f580676dd7624",
+      "bytes": 1395
+    },
+    "r/animation/stepper.json": {
+      "sha256": "121e0577f56521eee391e8b9b06dd28626df868c9890d284eed25b310718280f",
+      "bytes": 1426
+    },
+    "r/animation/storyboard-rail.json": {
+      "sha256": "a19fa0b3b77ebef9b5f3e10fd7837f820da133c7a25ed950df051086c0f83ca3",
+      "bytes": 1912
+    },
+    "r/animation/studio-header.json": {
+      "sha256": "ed32d4956d45ca67bc0e2727a2a94513bad9d31eb7661e842f80d3499c5ba05b",
+      "bytes": 1838
+    },
+    "r/animation/studio-shell.json": {
+      "sha256": "ea58427c6e6ee76d83b5cc27eb8b5aae43953ebbcb2f4127cd70c6929623f69a",
+      "bytes": 1615
+    },
+    "r/animation/style-inspector.json": {
+      "sha256": "45ab17a6c1ea1b16b658ca8d40f0b7ee80402757954de4fb094d765e9cf935e7",
+      "bytes": 1414
+    },
+    "r/animation/success-state.json": {
+      "sha256": "9c7946de6871242307eb5dd025c1b52f758791280cd4b8f5e7c279886ad1f8c6",
+      "bytes": 1203
+    },
+    "r/animation/surface.json": {
+      "sha256": "6891f96709b92bdb45b1c5574b59d4f09840fbe823e7f0b746603a38f66969dd",
+      "bytes": 1265
+    },
+    "r/animation/switch.json": {
+      "sha256": "6ce4d57c6fef1704780b5f280222386756175b73e34756012a0a511d171cdc0e",
+      "bytes": 1274
+    },
+    "r/animation/table-of-contents.json": {
+      "sha256": "488e503e569d4ffb8e4564ca8fda5007bf60e042c7c9a738880ca9bdfc756d35",
+      "bytes": 1472
+    },
+    "r/animation/table.json": {
+      "sha256": "eb934a183c9e298b80a2381e3c1b1e113629b32d74bb9f191266146a83ace0b7",
+      "bytes": 1270
+    },
+    "r/animation/tabs.json": {
+      "sha256": "175366f460e4951e9070b9d9b7336b7ddbdb229d39345c09d14bf3b143f04570",
+      "bytes": 1396
+    },
+    "r/animation/task-board.json": {
+      "sha256": "8c2bceee6047a92dabe14b3eb473fc2f02aee824ef95d65147b95fcf7a7145a6",
+      "bytes": 1673
+    },
+    "r/animation/task-rail.json": {
+      "sha256": "f81b6b642a38c6b3a9f27a203977bacc4def78683cefe355ba8f58470944facf",
+      "bytes": 1362
+    },
+    "r/animation/template-gallery.json": {
+      "sha256": "f85957304ca2338454b87ee50e90f253b32cc990087646fc6483a2f4ea7bc52c",
+      "bytes": 1469
+    },
+    "r/animation/terminal-surface.json": {
+      "sha256": "16aa89f9be32c3ab49401f2fa262b1326e024d36998dce392775f17c65818149",
+      "bytes": 1174
+    },
+    "r/animation/textarea.json": {
+      "sha256": "e6048593815e316a250cc0e6ef9caedb897f8990e28b679ba18f2d8246b5ebd1",
+      "bytes": 1328
+    },
+    "r/animation/time-input.json": {
+      "sha256": "8acd5a4aca696c97c72c608159ef62c8d22b8d226f97de768446c9bbb3630c20",
+      "bytes": 1354
+    },
+    "r/animation/timeline-segment.json": {
+      "sha256": "0e2048c673fd7da9234118c8612aba812e460fe83f58eba61e3686b34b299c73",
+      "bytes": 1260
+    },
+    "r/animation/timeline.json": {
+      "sha256": "cddfcfc3ad98dd0dac806309c4d9350935bd79def88ec035774de7fd94245ac4",
+      "bytes": 1179
+    },
+    "r/animation/toast.json": {
+      "sha256": "812da11decbbcd7e841855af52a3b708d44904f6d34666c3bc5698580423bea3",
+      "bytes": 1348
+    },
+    "r/animation/toggle-button.json": {
+      "sha256": "9868f10b4ad11f7ca495fc14fdb915a53455442b9ff5ac9e9ba204271ef80e60",
+      "bytes": 1682
+    },
+    "r/animation/toggle-group.json": {
+      "sha256": "b00e644fd25faaa48b5a0918258fd323d4b2563b1ab8d8890a3731a0c738d88a",
+      "bytes": 1616
+    },
+    "r/animation/tokens.css": {
+      "sha256": "dca25ac2e01773647c0d94b0054d2f6caa5c2fa3f238559fc5167367120587cc",
+      "bytes": 10305
+    },
+    "r/animation/tokens.json": {
+      "sha256": "3a8f7c30fe22806ff36d25739f637521ef35ee66d44cc79c774f070a2f105d5b",
+      "bytes": 17930
+    },
+    "r/animation/toolbar.json": {
+      "sha256": "4aa8429db1ef609d765ea84d6b9f4ef940b81eae8a14a2ee06584b614db26431",
+      "bytes": 1569
+    },
+    "r/animation/tooltip.json": {
+      "sha256": "d55daf34c159e066df0d98edb50f6d91465322bbfed81510e5ca3b6808b3efb7",
+      "bytes": 1718
+    },
+    "r/animation/topbar.json": {
+      "sha256": "52c4e0f01a7c138d69a577d2885e4c71aac6fe36631af8f5a667bf8f49e9b30b",
+      "bytes": 1357
+    },
+    "r/animation/transport.json": {
+      "sha256": "8105b1c25cf0a7e0eed407786b403319e02948f1e8025b40850b7b1acbb036a2",
+      "bytes": 1852
+    },
+    "r/animation/tree-view.json": {
+      "sha256": "cb88281f8ef56eaccf216691ffee132319e87b3f97da536ccba835964f5c982a",
+      "bytes": 1188
+    },
+    "r/animation/type-specimen.json": {
+      "sha256": "bbbe1ccc4030b5b97cf208b01c9cf957e8f39f4ced5ef6257c4006cf6284260e",
+      "bytes": 1125
+    },
+    "r/animation/view-switcher.json": {
+      "sha256": "03878eb4a6615577c8d70a7c4b482a1a78e4c311d336b0d2e87566c610311b4d",
+      "bytes": 1483
+    },
+    "r/animation/viewer-shell.json": {
+      "sha256": "026f00225097c325e0112d999d436bd3179ff2ab1e71ccf4e231e3294dbaad8c",
+      "bytes": 1385
+    },
+    "r/animation/widget-shell.json": {
+      "sha256": "9fdec13ccc448a03562a239a27bcf3c5756617f79283e0e70a71262649f23bb2",
+      "bytes": 1462
+    },
+    "r/animation/window-shell.json": {
+      "sha256": "4889e09e007e60bcdf9f4fc9ddbf739d4108e1211bae25265402425a57aa09e7",
+      "bytes": 2036
+    },
+    "r/animation/workspace-error-boundary.json": {
+      "sha256": "9e4290b64dba1d2a6a129d8e826760ed578b255d43f23de0fb93dc126602ebc0",
+      "bytes": 1625
+    },
+    "r/animation/workspace-switcher.json": {
+      "sha256": "04976a42da0a85ed49ca370605d9861938751a2de003e12245b3257c5427c389",
+      "bytes": 1625
+    },
+    "r/animation/workspace-tree.json": {
+      "sha256": "e1fee3f755874941bc015c47f0e09ee854d069005d4535d5d79cf87e1bf9b4f8",
+      "bytes": 3881
+    },
+    "r/app-shell.json": {
+      "sha256": "c5f57d6155705976641e268b8ed094a723856cbdfd96489da0e4560027321a63",
+      "bytes": 1529
+    },
+    "r/app-switcher.json": {
+      "sha256": "551d38f96116e8c5ca59ecae2cebfde29b57b199333820cd1946f6659443f39b",
+      "bytes": 1405
+    },
+    "r/application-shell.json": {
+      "sha256": "df93c3e0e4f49fc163778b714e9cdb3d79f4d6602b4538e0f7a7a989e1206473",
+      "bytes": 2339
+    },
+    "r/auth-card.json": {
+      "sha256": "6cc892d4bd32153fe9f1669ed3b890224d4322ae355a775104e1b8c469871942",
+      "bytes": 2068
+    },
+    "r/avatar-group.json": {
+      "sha256": "bd6224c1a74817457a1dc7cd4f3173bb3e22372f2ddc5b5665b3268be370f241",
+      "bytes": 1198
+    },
+    "r/avatar.json": {
+      "sha256": "2242334525fcf36d0ef395265b8c458ee522623fd2c394c92e348c729517eb88",
+      "bytes": 1147
+    },
+    "r/back-link.json": {
+      "sha256": "6f8e11cee60caf0b75660b5cd34f5e5e167adb66ffd016877ea4e4e324159c58",
+      "bytes": 1372
+    },
+    "r/badge.json": {
+      "sha256": "a6157d430a417f98267239f2d7c361a1de45dc639ea27af67f1b68230868cf79",
+      "bytes": 1596
+    },
+    "r/banner.json": {
+      "sha256": "5e717c0c0f5a1ae2c8e36f6fe287868b1d6b79634f2aaa1b195d75d11d8a753e",
+      "bytes": 1343
+    },
+    "r/bar-chart.json": {
+      "sha256": "30701fe695fe316f9f1f386e7f900acce8d437ad63196d9e12e47d200bf3e4bc",
+      "bytes": 1202
+    },
+    "r/bottom-nav.json": {
+      "sha256": "3ec81876a50f05d3acc47c900357c7ab76f4b6a7627c05ddfb2074a3c76beed0",
+      "bytes": 1383
+    },
+    "r/breadcrumb.json": {
+      "sha256": "5d33fd591697613efe34b3d5de07419f2aebf2a497f3d3af42bbec85be4b1440",
+      "bytes": 1386
+    },
+    "r/bulk-action-bar.json": {
+      "sha256": "f45105372d7f953c4b5fceb44214ded08e1ac3242b22ea308f603adbe51bbe5d",
+      "bytes": 1628
+    },
+    "r/button-group.json": {
+      "sha256": "5a1e9aa273c9b00f1e50b4cdbd89597b2d9c1c2befe281051bca8f3068ba9355",
+      "bytes": 1601
+    },
+    "r/button.json": {
+      "sha256": "ee13b679ad35f983c8107729d08583c9caf5cdf2ec4af5e373173057991cb829",
+      "bytes": 3290
+    },
+    "r/calendar.json": {
+      "sha256": "edfbe25f09f537fa4a993b30e80aa067447f718e145b6818cb3628cb79133382",
+      "bytes": 1354
+    },
+    "r/card.json": {
+      "sha256": "0fa621e9543c12448c392e5eef8ff406136cf3e45df27df96c4f2f89c4f90e90",
+      "bytes": 1986
+    },
+    "r/carousel.json": {
+      "sha256": "f423ece7aa11281de21c754c1c55bc6ce79d5bfb895da79a02efdfd65f5d9743",
+      "bytes": 1385
+    },
+    "r/cart-summary.json": {
+      "sha256": "1bcfdda63d04eac3ba3dc00c84d4bffa63e41bfbf0997db4e7975be13cea143a",
+      "bytes": 1811
+    },
+    "r/checkbox-group.json": {
+      "sha256": "47fcf7a0dfd8750e9b8179b07079eff3f673f4fd90d5f003d27b47923a3a220f",
+      "bytes": 1344
+    },
+    "r/checkbox.json": {
+      "sha256": "8f1eb7eb7e73a4603eb95d471baf14062caab6c4c0b981f2d2c7c2ff366954a5",
+      "bytes": 1281
+    },
+    "r/checkout-form.json": {
+      "sha256": "32d87dcfd4f7a753f55c0316d5333167d9ac27168bb9c3261322b84ab075674c",
+      "bytes": 2108
+    },
+    "r/code-panel.json": {
+      "sha256": "3105306774c238c0e4b0bae72d144ec34a2010944a129ebbcc056e6239f8a71f",
+      "bytes": 1421
+    },
+    "r/collapsible.json": {
+      "sha256": "61715b115652b5e5da51e331f4db0f375ff65cdf4b545ae790064d071036fe69",
+      "bytes": 1196
+    },
+    "r/color-input.json": {
+      "sha256": "4b629d0031be224d9cb1615d1f6f49413452b4b6b9a2277988f6e95cfab87256",
+      "bytes": 1350
+    },
+    "r/color-swatch.json": {
+      "sha256": "23753ccb5f082a149269e0e8984333e53e7b7be05129d38bf38110078f0911d5",
+      "bytes": 1144
+    },
+    "r/combobox.json": {
+      "sha256": "045275bc5f8609e0bf150a6946b84b2b4c012126eb33226a78cbd72f61b99e00",
+      "bytes": 1328
+    },
+    "r/command-bar.json": {
+      "sha256": "a893e8da8af67a73af273e7d2f05ff5e8cdc9bf19bbe9ff2a61f4f24f3c72be7",
+      "bytes": 3845
+    },
+    "r/command-menu.json": {
+      "sha256": "6b71dd141324f095c03801ee1bb8a110d5885c50b767df4be158759089eb9d8c",
+      "bytes": 1405
+    },
+    "r/command-palette.json": {
+      "sha256": "7202f3f25f0f3158bdb9bc79e4ca3d712a586ee2be37575322a67af9b913c5bb",
+      "bytes": 1788
+    },
+    "r/command-suggestion-list.json": {
+      "sha256": "30bc3915bad163290262e4369e60b039aa306d6bb0eb3340fd4de666fb413397",
+      "bytes": 1365
+    },
+    "r/contact-form.json": {
+      "sha256": "8ace0113ad36e9dac63f21b74dec89ceedb9c2264dd89a7170bd1428837b2658",
+      "bytes": 2098
+    },
+    "r/container.json": {
+      "sha256": "c2e5899405657d1402cda99ce0250a4d77395dadb685020ba052ffea8d2f45b2",
+      "bytes": 1018
+    },
+    "r/context-menu.json": {
+      "sha256": "4d53e2a2c2384d6572364bef4ae99b02fc583653278cdfed9f79dd5286185cb9",
+      "bytes": 1755
+    },
+    "r/copy-button.json": {
+      "sha256": "c2c364c36d2ceb2118b6fe143fa36a69a43d1ccec8b8a841fdf0eb36ac6d4b0c",
+      "bytes": 1593
+    },
+    "r/data-table.json": {
+      "sha256": "5ba258bae674e2765c69dcec238bba2a798ab3708b23ee3cbbe720b4c096cec8",
+      "bytes": 1297
+    },
+    "r/date-picker.json": {
+      "sha256": "947ecc31b499112f9046f3f160c2ecba10b23d602a712e53668eed9fd9e3b49b",
+      "bytes": 1349
+    },
+    "r/delivery-action.json": {
+      "sha256": "b6a0d3154134ff8d53023b3b4b8b82285c11fc836eef39b8ce64ecb13008573e",
+      "bytes": 1232
+    },
+    "r/delivery-workspace.json": {
+      "sha256": "faed0f0c84c024f036186a8ccdfeed679272ff1ba56753bb91f14c5dc3241251",
+      "bytes": 2107
+    },
+    "r/description-list.json": {
+      "sha256": "c05bf981bb26de58001391aac93631f8abfa8af45778e275b0e8711dc590e6a1",
+      "bytes": 1280
+    },
+    "r/design-tokens.json": {
+      "sha256": "8e8a34e87406f13166c6406c5ccfd87f1885318520e79098bb049f6f268afe5f",
+      "bytes": 10984
+    },
+    "r/desktop-shell.json": {
+      "sha256": "fe91522c005574b988edf1a9171695fb56baa715c24e7c660847b9083ed3a712",
+      "bytes": 1854
+    },
+    "r/device-frame.json": {
+      "sha256": "ce4e75cf106cd03a59437366907be906346851b79221db83ee3de7e56a08968f",
+      "bytes": 1289
+    },
+    "r/dialog.json": {
+      "sha256": "572ca1fb25fd8d7bdb14ad3c9b24a79761ee0f32b9fe826cd5edef4676991c91",
+      "bytes": 4549
+    },
+    "r/dock.json": {
+      "sha256": "667921be9dcf18b286409aa831240e5cb2b9934a354494b8848364d5ea56172e",
+      "bytes": 2408
+    },
+    "r/doctrine.json": {
+      "sha256": "26cdd178414408234dc605c3c72a871454f8203042f2b78057fc609c99f30e9c",
+      "bytes": 3074
+    },
+    "r/document-surface.json": {
+      "sha256": "cefdd4e410d04e6fc2338b0942870a339d9d5e857f962dc8e1d6f00c9e85be57",
+      "bytes": 1432
+    },
+    "r/donut-chart.json": {
+      "sha256": "445c70171ed07b29839f5e8447a5b93caa4ed4af48e7d1234f7b0d5a18bdd9e7",
+      "bytes": 1222
+    },
+    "r/drawer.json": {
+      "sha256": "534656f183bbae7d0f99ba50bf0403667d876c959e73d0da314b3b07a104f108",
+      "bytes": 1692
+    },
+    "r/dropdown-menu.json": {
+      "sha256": "d6d85cb527f1fa0e96247e90e8780295ece487ef1826f38523c68f6ce0cf1ccb",
+      "bytes": 1766
+    },
+    "r/dropzone.json": {
+      "sha256": "7131f5387c864ade8b177ec5eb2f0582c4f64d65b6e06c5b02b8675c4a7ce418",
+      "bytes": 1219
+    },
+    "r/editor-toolbar.json": {
+      "sha256": "54aa703115e35ddf4a1a71e5f060843344baa66999c74347b54c3acdcb849e3e",
+      "bytes": 1754
+    },
+    "r/elements/larson-scanner.json": {
+      "sha256": "71aaa137e515505036c6518cf71829511359bac98ce566cdfb39bf35f674b238",
+      "bytes": 48140
+    },
+    "r/elements/registry.json": {
+      "sha256": "58cb9d2ba646854441585352a6fa31cb566d08023cdb357198b56e3c57a67995",
+      "bytes": 1273
+    },
+    "r/empty-state.json": {
+      "sha256": "b59c446a01568e9f87e1c61649a31a7cf3d410440df2f04f5a9aadbc214e77c0",
+      "bytes": 1591
+    },
+    "r/error-state.json": {
+      "sha256": "2ba079a9b3911a55ed7b01d4885008308932b3ca79e1c0a18966e1ccd883889c",
+      "bytes": 1177
+    },
+    "r/favorite-button.json": {
+      "sha256": "fec691f312f6d29f4470c026ca5698fcaae62f83e5795cfcf84ebeae6eef035f",
+      "bytes": 1687
+    },
+    "r/feedback-form.json": {
+      "sha256": "916081363e2f53fd4cc43226c7782c276754752ac80004635a155468fd0c5e6f",
+      "bytes": 2108
+    },
+    "r/field.json": {
+      "sha256": "1fe2b5f6bc8be98ed92879293f1b8da4c083f8732ad8a4b8378999b3f7a1f7ba",
+      "bytes": 1298
+    },
+    "r/file-upload.json": {
+      "sha256": "2ab0a58b6ba168a91cdc2100960a6fcbc6db3b8e0f479f8299570daa29adbd40",
+      "bytes": 1243
+    },
+    "r/filter-bar.json": {
+      "sha256": "c6e1a4a41e27597df850e13a73a2ace2c7f7a60c910ae6bf73ba564ae21e8139",
+      "bytes": 1757
+    },
+    "r/filter-tabs.json": {
+      "sha256": "6d8d92a6c75732e82f778465738a2e64c247d8ec522bf1c3c4fa6a1614b13ad9",
+      "bytes": 1448
+    },
+    "r/floating-action-button.json": {
+      "sha256": "62f8be4b95c6aa5ab01fd6404d9fd27e24ddb1fb059e8e0ad11fdb814f54e8a8",
+      "bytes": 1701
+    },
+    "r/focus-ring.json": {
+      "sha256": "6680ecdf74a1a8bca3cb055a71399b981eeb90ec2d23351994ff8bddb1fd6388",
+      "bytes": 1277
+    },
+    "r/forgot-password-form.json": {
+      "sha256": "fc211a49818623cc419c4aa129314655d9c76c18b3f232ff442f28885ea72cd7",
+      "bytes": 2175
+    },
+    "r/guided-tour.json": {
+      "sha256": "f7fbb6c43a8ce43f6407485c2f8321aecacc86174fd6d9da44122df2bf8de537",
+      "bytes": 1553
+    },
+    "r/hover-card.json": {
+      "sha256": "04b2676d75bd1c6c2d83b7f24ea9932d229a0363f0a5e87d82109df96f129a87",
+      "bytes": 1733
+    },
+    "r/icon-button.json": {
+      "sha256": "10c9ed7e5e3d4730536594c4caeeb3d189ac894ab2d23931f221662f7b688e33",
+      "bytes": 1594
+    },
+    "r/icon-catalog.json": {
+      "sha256": "4ecc2d721196e9e1b6c4acaed6334e5ae2dd3ba14fb4c6390c32bae0ba8c6afc",
+      "bytes": 770200
+    },
+    "r/inline-edit.json": {
+      "sha256": "ac91418eaeeb19a903c6146cbb5e17075d469a56a8ec1aac2b35701db11d9afb",
+      "bytes": 1355
+    },
+    "r/input.json": {
+      "sha256": "aa48f3fa6015297b8542b7c6707bd4348d0f6a3b962de319bccebe121a790cc6",
+      "bytes": 1742
+    },
+    "r/inspector-panel.json": {
+      "sha256": "764c6efce4386415af91ba2c90bc9c78a07f6c771464f231e829f31be02d51a6",
+      "bytes": 2070
+    },
+    "r/invite-form.json": {
+      "sha256": "5456692f834e955f935fe30769bcc37ed835d3fae1d41b9b9b3f4e5f91d46ba8",
+      "bytes": 2088
+    },
+    "r/jade/accordion.json": {
+      "sha256": "266803b84331e6454a37014958d5d0359407b2eb3942ac1f43a2c18959da85c4",
+      "bytes": 1174
+    },
+    "r/jade/action-menu.json": {
+      "sha256": "1c1d3e9f7efa051882c8c2151c43bb33905ebfd07d11caa784c21ac4e7c37d2e",
+      "bytes": 1742
+    },
+    "r/jade/activity-feed.json": {
+      "sha256": "ed6ca0fa91f296799dbd53b8dd2c0e8d7ec3a959703a419adc8847145fe3097e",
+      "bytes": 1204
+    },
+    "r/jade/agenda.json": {
+      "sha256": "36532fc5ccd288a891fec01d9dcfc9f34f476dfc2d704326d542a3c5effcd82c",
+      "bytes": 1144
+    },
+    "r/jade/ai-director.json": {
+      "sha256": "70ca3d0e1dcfa3aedd6fc0d9dffac9a76a41efe214f966d74fa8a68a917fbbb5",
+      "bytes": 1916
+    },
+    "r/jade/alert-dialog.json": {
+      "sha256": "7d93fcd20d379232d4884ddc05604f5b4812056a27996a72b4fc9c4513fbcbdc",
+      "bytes": 1753
+    },
+    "r/jade/alert.json": {
+      "sha256": "8925f820cd8bab8d68d8b817e0de9e008fea4063b3a554f607afb9a16bc7d4dd",
+      "bytes": 1331
+    },
+    "r/jade/anchor-nav.json": {
+      "sha256": "493605bb00efa1c80685450e3e0d524fa6b4b2150d586e7c58dec24ed938d34b",
+      "bytes": 1381
+    },
+    "r/jade/app-shell.json": {
+      "sha256": "f0bf4d202c6fb700d8b0bebcc21c58646fc5665db968a8bf7389a01f57696d33",
+      "bytes": 1527
+    },
+    "r/jade/app-switcher.json": {
+      "sha256": "36d245c69c90142b7d3ef6b3d5004bc585667fb24a40e3ee4b8e7b2ceecea1eb",
+      "bytes": 1403
+    },
+    "r/jade/application-shell.json": {
+      "sha256": "ac2ab63a9e76a0f45bb7bab7e6da08d56d2a812ff477e49a3f6a209a42cc8b1d",
+      "bytes": 2337
+    },
+    "r/jade/auth-card.json": {
+      "sha256": "efdacccac75880b38b202dac7da32690bb201850e2e7898b7d3751d2e44dd9bc",
+      "bytes": 2066
+    },
+    "r/jade/avatar-group.json": {
+      "sha256": "533faa114282c035be98ab646e1c280468e9f4d1101dfd9b382bcd4d793dfb01",
+      "bytes": 1196
+    },
+    "r/jade/avatar.json": {
+      "sha256": "50d902b3039f281c6eb5830100fd63a01e1169a69b5f4898a489f426ec50641a",
+      "bytes": 1145
+    },
+    "r/jade/back-link.json": {
+      "sha256": "e3d48f447536ebe11196ae7668ab1150074252ae26481205c4ad8d218ef6b76c",
+      "bytes": 1370
+    },
+    "r/jade/badge.json": {
+      "sha256": "9fe75ee51519a8cf66637d5a8790ce9581d85681b5713f66d939e37eea7991a8",
+      "bytes": 1594
+    },
+    "r/jade/banner.json": {
+      "sha256": "c4792faf9e717f274d1b04c14af1a566bd64ff17f28968d3e1624cd18bd433a0",
+      "bytes": 1341
+    },
+    "r/jade/bar-chart.json": {
+      "sha256": "9997ebf38ee7d6ebc0625aeba921893d71186e187d104197976c167db2c2bd7c",
+      "bytes": 1200
+    },
+    "r/jade/bottom-nav.json": {
+      "sha256": "5524b2ce3359db11296f8dcb98b726a5c2d3f0a1a9d643c447c1c358a44dfe38",
+      "bytes": 1381
+    },
+    "r/jade/breadcrumb.json": {
+      "sha256": "1076c13f3f48f8d031c4c57f02f7cfc9d1d5a678b436ddcdba14c616baa649f5",
+      "bytes": 1384
+    },
+    "r/jade/bulk-action-bar.json": {
+      "sha256": "77f35986626fc8a3160022f8a440aae0e2075e2f51b6e9bd99b7a3798ec77d01",
+      "bytes": 1626
+    },
+    "r/jade/button-group.json": {
+      "sha256": "018c9ce3dceaf9fcf3241a29ada713d4363745972cdb8d37be58511c93b3cd2c",
+      "bytes": 1599
+    },
+    "r/jade/button.json": {
+      "sha256": "b5bdeea5078eabcddb71c58bfde9a952a2acacefae3bf42bb30cc798ba48c04e",
+      "bytes": 3288
+    },
+    "r/jade/calendar.json": {
+      "sha256": "eda50457fe65cfe9003163032a54a6aab8b3461abcf73ca4d7ac10292517941f",
+      "bytes": 1352
+    },
+    "r/jade/card.json": {
+      "sha256": "30c58a8ba82d0209aa1238e6ea9308f6a77a778b701334cba696830584298b6d",
+      "bytes": 1984
+    },
+    "r/jade/carousel.json": {
+      "sha256": "3693f88ca4183138a78c1476123333f53a5a349e20a3a79327e664cae90d2958",
+      "bytes": 1383
+    },
+    "r/jade/cart-summary.json": {
+      "sha256": "906324846246ac8f96bd4c499eac5bfa533f9263e0850d289d41b62564d8d629",
+      "bytes": 1809
+    },
+    "r/jade/checkbox-group.json": {
+      "sha256": "40dc271c5893876083459a8a058010084333ceb628dbc39caabdd7575e3516b3",
+      "bytes": 1342
+    },
+    "r/jade/checkbox.json": {
+      "sha256": "3aabf9af59b91ae23ebdaf97e98bcdf9e9c9e6b25850403d52d09e6dd5052c9b",
+      "bytes": 1279
+    },
+    "r/jade/checkout-form.json": {
+      "sha256": "498f6fcc6acde4ad9e57eb53c7bd9a88479c18f4958ba3a279e704334b2382be",
+      "bytes": 2106
+    },
+    "r/jade/code-panel.json": {
+      "sha256": "669a7c9f047d11f1c2e19d9c39a7e05ab28f26d258b18f5e6580843fd6453d25",
+      "bytes": 1419
+    },
+    "r/jade/collapsible.json": {
+      "sha256": "513e86fd762d0094a59c9d8adccca07a73933c936f5a9a62801a1d6d03f295b4",
+      "bytes": 1194
+    },
+    "r/jade/color-input.json": {
+      "sha256": "e5abb0834f6d6dffff8a26b2aee2d60d36a5f9250528112379cbc16dc1abfb8d",
+      "bytes": 1348
+    },
+    "r/jade/color-swatch.json": {
+      "sha256": "5fdee38264bfd898da009c14c7d90efe74e53dbbcfeb0d0951f8bcf785bdc551",
+      "bytes": 1142
+    },
+    "r/jade/combobox.json": {
+      "sha256": "9d7709679abec05ef5db941a776b1664fab83932308aa7e0c5ab9a2392936abf",
+      "bytes": 1326
+    },
+    "r/jade/command-bar.json": {
+      "sha256": "c976c834e8f26719cadee073d4c7c3291e114fe325e6037f36f147d2bbbdc329",
+      "bytes": 3843
+    },
+    "r/jade/command-menu.json": {
+      "sha256": "ba9f8aeaefea3575a4fbf93cd8664aa2f6cce20f2f84aadef1d39e15635bfc8a",
+      "bytes": 1403
+    },
+    "r/jade/command-palette.json": {
+      "sha256": "2eb959f1ddb9e6e26d05133c4b14c5939530c91d0c2c6bac0908934eae52be68",
+      "bytes": 1786
+    },
+    "r/jade/command-suggestion-list.json": {
+      "sha256": "cb76e1fa5472301ff8d1384417eea184ff884c82e5b39553f48ad2b1165f5cf5",
+      "bytes": 1363
+    },
+    "r/jade/contact-form.json": {
+      "sha256": "91d483d8886a3e7defe6cc440cc51b5e68d1a30cc7c75e26c059e5ec914be931",
+      "bytes": 2096
+    },
+    "r/jade/container.json": {
+      "sha256": "3afe370dd421102e051a1596a97f35c85b11ddc8f9946615b74078301f47cb07",
+      "bytes": 1016
+    },
+    "r/jade/context-menu.json": {
+      "sha256": "3ea98723b34567a6cee62ae73fc9effa8235f5bfa97add5149b2f4e3f54bc227",
+      "bytes": 1753
+    },
+    "r/jade/copy-button.json": {
+      "sha256": "2f84f9b1e9ad9191b2f83d762155ad30b487c4e5e625bd2034ff6aec7dc8fcdf",
+      "bytes": 1591
+    },
+    "r/jade/data-table.json": {
+      "sha256": "9aa6ce7db9daa48546cf1fb79e829c26cfd7925f7e466b4d85f3bf08f0c0e799",
+      "bytes": 1295
+    },
+    "r/jade/date-picker.json": {
+      "sha256": "09d351b6511759c01d6f9ae889d2eb35b0de0fe09148920ed52fe5fa33400cf7",
+      "bytes": 1347
+    },
+    "r/jade/delivery-action.json": {
+      "sha256": "fbc8884c83998d82a10511f8dc7ed9e3f5a62a72a958c9913396062a0ae45618",
+      "bytes": 1230
+    },
+    "r/jade/delivery-workspace.json": {
+      "sha256": "998afec5355201e2d60163a717e772fae2ace0f26b6e7adefbcb6cbcdd72edee",
+      "bytes": 2105
+    },
+    "r/jade/description-list.json": {
+      "sha256": "4367dc0d35ad86fe10f9514f6ecfabc7a8a7ce7696f5eb89b166e0a0c19c7cef",
+      "bytes": 1278
+    },
+    "r/jade/design-tokens.json": {
+      "sha256": "176e6b0948c3239903b4c76eeaa08d4f4a51809898dfec34567608982026b978",
+      "bytes": 12653
+    },
+    "r/jade/desktop-shell.json": {
+      "sha256": "29df62e4899c13c9dfa5f006c7847555a3fc7db80b4013dd0a8c20a06b77240f",
+      "bytes": 1852
+    },
+    "r/jade/device-frame.json": {
+      "sha256": "d27d7915870343b2b0a015a90c463ac9302247d65ce4416e8b8e903b2ed6395a",
+      "bytes": 1287
+    },
+    "r/jade/dialog.json": {
+      "sha256": "147707aadbcdcf84e9b4ce4af80800cb8dd53a3940a9b438c64b32cbeb61123e",
+      "bytes": 4547
+    },
+    "r/jade/dock.json": {
+      "sha256": "4312c7aa3df3e0d8fdee5f2ee9fb36d13a5af2d7dbdf6b08c8bdd17cfadd7a96",
+      "bytes": 2406
+    },
+    "r/jade/document-surface.json": {
+      "sha256": "557dd42e57b48d3324b5f95005268a4dabf8578534ec6b9670d368225cc3c0e2",
+      "bytes": 1430
+    },
+    "r/jade/donut-chart.json": {
+      "sha256": "d00fd514fcf1f6f5cea20a80d7d441a09d9a51f512a1181bc80b257c724a9ea9",
+      "bytes": 1220
+    },
+    "r/jade/drawer.json": {
+      "sha256": "6d070443af768a6dba63b2f43f6d733073d4508384f2ceb587bdcea0ee062ad7",
+      "bytes": 1690
+    },
+    "r/jade/dropdown-menu.json": {
+      "sha256": "daa4a2f4942b79fee361d21d9fc5b6163d79720ed79889a288ca1145c43beac2",
+      "bytes": 1764
+    },
+    "r/jade/dropzone.json": {
+      "sha256": "3385f3874d5b1742582451938c97f11c9eb954a1c0784b5a7cb65263aa5575c8",
+      "bytes": 1217
+    },
+    "r/jade/editor-toolbar.json": {
+      "sha256": "617fb68a31d0f328eff6f7c728accb5511c2d8e79f693d7ea3f5890e58a4503a",
+      "bytes": 1752
+    },
+    "r/jade/empty-state.json": {
+      "sha256": "10feee56b68945bff05e51f85c2f40476dc26338acc034a69da0f8f130a3b0ce",
+      "bytes": 1589
+    },
+    "r/jade/error-state.json": {
+      "sha256": "99573a4f6bf637ed1a52450eb99ce3e493f5668d3b42b90f467d161468f253b3",
+      "bytes": 1175
+    },
+    "r/jade/favorite-button.json": {
+      "sha256": "b7b9e03b984b5cac331826155f76d9854cf241e03b1aaf1a6365ffb18a228672",
+      "bytes": 1685
+    },
+    "r/jade/feedback-form.json": {
+      "sha256": "04fcb43705b67373c076e6e8927d7f8937b922e978cc95db4417f6cc698cb5c5",
+      "bytes": 2106
+    },
+    "r/jade/field.json": {
+      "sha256": "7aee6ddf11997767df1bebb4c0c333fb37ee04a76bd0c3b0c9f4005ec94c83a9",
+      "bytes": 1296
+    },
+    "r/jade/file-upload.json": {
+      "sha256": "0f4073858a37428edc9b9b145ac0ce52f0f347b8f8c82e75ae639a5e7c406da2",
+      "bytes": 1241
+    },
+    "r/jade/filter-bar.json": {
+      "sha256": "8effdccf4c5a3597f228c48eb6d58901bf099c2fd3aa676b374abb626538c39d",
+      "bytes": 1755
+    },
+    "r/jade/filter-tabs.json": {
+      "sha256": "802678983d905e164527cbf3dda28f96d6f71c6b3c3120a361d68272fae1ee81",
+      "bytes": 1446
+    },
+    "r/jade/floating-action-button.json": {
+      "sha256": "5d03ce122c010bb3309335622da5b99408f6f0634303d5837a2537999672bf6c",
+      "bytes": 1699
+    },
+    "r/jade/focus-ring.json": {
+      "sha256": "9ea5d641d87926a7b7330efb0f1593f067a3134c3250136045582d6e5ebd4584",
+      "bytes": 1275
+    },
+    "r/jade/forgot-password-form.json": {
+      "sha256": "f65be0333f26e11a16b8d3b04d1c5c86714a7e99c8218845740a60d7949ea7a5",
+      "bytes": 2173
+    },
+    "r/jade/guided-tour.json": {
+      "sha256": "8af13cde424dfaf67fa694b23477544877a9b96d45e85b530f29a402c23e365c",
+      "bytes": 1551
+    },
+    "r/jade/hover-card.json": {
+      "sha256": "9722d0cabfd72b07b78f96983043e60ca972c50912df789c5698839f31f92cff",
+      "bytes": 1731
+    },
+    "r/jade/icon-button.json": {
+      "sha256": "5648c8e12076c208421b197f364efd03fe791e789154f9ad820b48e359bd5d4c",
+      "bytes": 1592
+    },
+    "r/jade/inline-edit.json": {
+      "sha256": "214a1f0127064ad17aa08c796ce6ab2cd62f9e00c317dbe304842f127ae6793a",
+      "bytes": 1353
+    },
+    "r/jade/input.json": {
+      "sha256": "3582d5a97e0133b1b31ef1326163f3d76bfb74f01d5132d5418fbff32c62e581",
+      "bytes": 1740
+    },
+    "r/jade/inspector-panel.json": {
+      "sha256": "d42b2d71b0d2017b67e8784d9d6ff2eac55a6656ac7c6d36a166c9875509c2e0",
+      "bytes": 2068
+    },
+    "r/jade/invite-form.json": {
+      "sha256": "c3961b0dd515edaa31b5a2740274b69210fbc4d456436ed17ba92b46098a105f",
+      "bytes": 2086
+    },
+    "r/jade/layer-list.json": {
+      "sha256": "68f008530defcddff1252dc4448669a4c775fd3cfdb773bed179054cf28d456d",
+      "bytes": 1671
+    },
+    "r/jade/lightbox.json": {
+      "sha256": "4fba6d22789b95f24447ab24468b692af439924cf28b39270dd2062ee48f3944",
+      "bytes": 1712
+    },
+    "r/jade/link-button.json": {
+      "sha256": "d4991cdd509f81359952d7de0eaddd485ed22fda5eb42f012fd27cb54927a997",
+      "bytes": 1592
+    },
+    "r/jade/list-item.json": {
+      "sha256": "c593c6627c8e9e434dd9394c8012cb3f8d1987903ddb11464e566a24ac468338",
+      "bytes": 1190
+    },
+    "r/jade/list.json": {
+      "sha256": "b007dbf66c2b64eb0a852d4ef8858a00048d8cd88ba01fc1f90202ff07c7e62f",
+      "bytes": 1148
+    },
+    "r/jade/loading-dots.json": {
+      "sha256": "20bdfa13eac71aeb7f7c9d5ab1f684060314bac1688ae090d2c8fe3224bf3ad9",
+      "bytes": 1210
+    },
+    "r/jade/master-detail.json": {
+      "sha256": "56005bd43fb85e6374c167f8a7902f38d6eb79cd4393d59ed270609558dffc00",
+      "bytes": 4159
+    },
+    "r/jade/menu-bar.json": {
+      "sha256": "24c4af1d37061f96e97955358d022ae0c7616de417f0c0587f64de6d93fa2c44",
+      "bytes": 2022
+    },
+    "r/jade/menu-button.json": {
+      "sha256": "8920a7531259a8cbe726d250b2811f851f27d74df9aed8791be8a932f091ce33",
+      "bytes": 1966
+    },
+    "r/jade/meter.json": {
+      "sha256": "98510854622fee3d0c6468874530457a0fa9fbbed0aa771af425f9382e76aaca",
+      "bytes": 1121
+    },
+    "r/jade/mobile-app-nav.json": {
+      "sha256": "d64e815f8c1c7f824f36edee6c4d05d1403a542b8e04cae34d92b48d2099ced0",
+      "bytes": 1422
+    },
+    "r/jade/motion-check.json": {
+      "sha256": "b3ffcae78eeeb9e5c916456873894bf8a129600c55ac21e6d188d51baea38128",
+      "bytes": 1174
+    },
+    "r/jade/motion-inspector.json": {
+      "sha256": "f0839cf40686320b051080ea195ed97dc111fbb4371439764dddce99eb5bd022",
+      "bytes": 2009
+    },
+    "r/jade/motion-preset-picker.json": {
+      "sha256": "6a3a858d9f800ab33f4a2bb721c796af676e77bbe9245989957b43117439bb9c",
+      "bytes": 1323
+    },
+    "r/jade/motion-timeline.json": {
+      "sha256": "71df43b9a04ea3fcee23ff0376143084e68c676f586aa87c321998a8b264e1be",
+      "bytes": 2046
+    },
+    "r/jade/navigation-menu.json": {
+      "sha256": "cc2791458a7527b4870aeeb52e17ccdd41743eaeb8716e1b7b625b17bc7c8499",
+      "bytes": 1436
+    },
+    "r/jade/notification-center.json": {
+      "sha256": "5e7bcc141a2c20659aaabb2f449eef32e20ad4ae2bee9751023fc40139e533cf",
+      "bytes": 1567
+    },
+    "r/jade/number-input.json": {
+      "sha256": "c49dae99e38e192f7563fc8d3f0aed966943e4333b1376b0523b6203c0c16dbf",
+      "bytes": 1356
+    },
+    "r/jade/offline-state.json": {
+      "sha256": "7b8c78ada9360c0c290f73e3bc69e965db3fe366e335f587638dc2cdadfa21ea",
+      "bytes": 1198
+    },
+    "r/jade/order-summary.json": {
+      "sha256": "d75b8ea709e564afdab5523d04674ae643a04b55db1e9eca476353907cf6d513",
+      "bytes": 1819
+    },
+    "r/jade/otp-input.json": {
+      "sha256": "893611c3e2aa33804e865cd5276c2f2e3bd24a5febe9f0925793e68e4b9498ca",
+      "bytes": 1333
+    },
+    "r/jade/page-header.json": {
+      "sha256": "f0aabc7b99e70c58fb6049a878bb6e5d150448f4d00e0c49abc22eeae3625a86",
+      "bytes": 1392
+    },
+    "r/jade/pagination.json": {
+      "sha256": "9c20ebeb277e253af07ac77e35769f2b8ce331237db6afaef15ec97b1ef21c4d",
+      "bytes": 1439
+    },
+    "r/jade/password-input.json": {
+      "sha256": "e37db764191ab574e2634fe7fdd1d446274c60a7705810b0c4bb25f7d744d8fc",
+      "bytes": 1381
+    },
+    "r/jade/playhead.json": {
+      "sha256": "549dec6f92efa12e870ddb9aa488686c078e454071f351ed719c9009b625f39d",
+      "bytes": 1039
+    },
+    "r/jade/popover.json": {
+      "sha256": "66040fdeab30b78099ac7724593834ae30f6c860a78220de706a0efdcba61ddb",
+      "bytes": 1701
+    },
+    "r/jade/preview-toolbar.json": {
+      "sha256": "d58c1a4b22103e33be9d1b0a7499be1d7b73d8d2266212ef4b6e9a26b5b989c5",
+      "bytes": 1556
+    },
+    "r/jade/pricing-card.json": {
+      "sha256": "0bac5556536f595391327e7151f71f934e3433855b566a17e8b2f3881d7f2bc5",
+      "bytes": 1712
+    },
+    "r/jade/pricing-table.json": {
+      "sha256": "1f2d4fb87d20da38eea2251bc489e87ce59ed1b6f731ddabec2e6b7a84c06290",
+      "bytes": 1721
+    },
+    "r/jade/profile-form.json": {
+      "sha256": "e7d5979602b63746d9f117a21d09ae5fb45d5189d09b5a2df233d77f3bc71877",
+      "bytes": 2096
+    },
+    "r/jade/progress-card.json": {
+      "sha256": "830f75a97db2811866802290c4b08b5ca19675d9690a1d164f751494e871a23d",
+      "bytes": 1408
+    },
+    "r/jade/progress.json": {
+      "sha256": "c103752ce6c092f845fd009dc35f90e2873f0e5a863852de6cd8009ceb4272cc",
+      "bytes": 1151
+    },
+    "r/jade/project-switcher.json": {
+      "sha256": "5bc15252243be3ddcd8fa71d14c295f4a6ec3562d3620c770740e65447e3c738",
+      "bytes": 1639
+    },
+    "r/jade/radio-group.json": {
+      "sha256": "11ea0cef4aa4c2e2f2c4361d617de2f4042c7f680d53b741bac9b14c573af92b",
+      "bytes": 1306
+    },
+    "r/jade/radius-guide.json": {
+      "sha256": "bc48dc22bbef01f23b387a03db926fd22623b3270b3c52511702d0f9a3c898da",
+      "bytes": 1159
+    },
+    "r/jade/range-slider.json": {
+      "sha256": "5a99a9fafc8f01eb11397e06f50e988d4e2a5104b5df25cd84e5cbe7b24b3849",
+      "bytes": 1188
+    },
+    "r/jade/rating.json": {
+      "sha256": "49772b828e78a15be087a03c8b1fea26962b0007f857373a0f8f0c9299e4b751",
+      "bytes": 1299
+    },
+    "r/jade/registry.json": {
+      "sha256": "bda5f7c250fb247271566eca18e95f49e441ee31beef58b9f4fa6a9d2dc0784a",
+      "bytes": 89558
+    },
+    "r/jade/render-status.json": {
+      "sha256": "7eacba7e3a5b86189679501d2e764e68b7cee8949fd4ce1f69d6d4118452203f",
+      "bytes": 1378
+    },
+    "r/jade/scene-list-item.json": {
+      "sha256": "c126f62c7e501606e5daa20fffcd680290f5e7e5ddc25a85df6702ff465d7bf5",
+      "bytes": 1769
+    },
+    "r/jade/search-field.json": {
+      "sha256": "238f7c39358f1fe8259c3f54f0b32b616cb11bbfea45b1d782b116564c62de4d",
+      "bytes": 1363
+    },
+    "r/jade/search-results.json": {
+      "sha256": "0f23ceca7536caed6ecbd0320b2969de3e9e7a04c63c5be5f3d07741b64b92eb",
+      "bytes": 1791
+    },
+    "r/jade/segmented-control.json": {
+      "sha256": "ac7cb73a857a78cd4d985c69f4fcdcc5e386ee18b20cde3d2bdf860629196a1e",
+      "bytes": 1649
+    },
+    "r/jade/select.json": {
+      "sha256": "2636681c8eb6e95f3b51158af34f567e5c8c7c01935375d86974a77a73c01a88",
+      "bytes": 1313
+    },
+    "r/jade/separator.json": {
+      "sha256": "1700ed2b52347c45ee5e54dd836e86c112cce0ef6e36cbeca281e11b8383246c",
+      "bytes": 1018
+    },
+    "r/jade/settings-panel.json": {
+      "sha256": "c32037cd093ad613e630ed649d14f35f1aaf9c1ebfeeea2b366172035a382e85",
+      "bytes": 2116
+    },
+    "r/jade/settings-sheet.json": {
+      "sha256": "80e9d2079ae6128e284b20777c429779958d6915f853fd714b76ba45ef3a8089",
+      "bytes": 4708
+    },
+    "r/jade/shadow-guide.json": {
+      "sha256": "c1d652092242f92280e9211e2a1d0a69d3883ab3e1cd395799886c2c01240fdd",
+      "bytes": 1145
+    },
+    "r/jade/sheet.json": {
+      "sha256": "5a1bc2d20487cc218fb45506c253b64a44b3d013e171c9055f0aae8f7bbd9166",
+      "bytes": 1679
+    },
+    "r/jade/sidebar.json": {
+      "sha256": "37089232376298d32dfe773152c0c8385c4bb189fa275a303d9299f532712b40",
+      "bytes": 1351
+    },
+    "r/jade/sign-in-form.json": {
+      "sha256": "3c082b068c103a663b4eeb1d1985b3b8d34efd23b5ac6adb808492a0bed7ecef",
+      "bytes": 2093
+    },
+    "r/jade/sign-up-form.json": {
+      "sha256": "d9a8f57dd3b66bfdba4387de21d51d5f634897e5182fdaee1df1e418b5c48bad",
+      "bytes": 2093
+    },
+    "r/jade/skeleton.json": {
+      "sha256": "c0bb08df0d60b3fa2172c8383ee48e8fb5c7da0d69e4963d2002659f3a113b21",
+      "bytes": 1177
+    },
+    "r/jade/slider.json": {
+      "sha256": "8eb72039e30fd623c62b1a5eca291951ee105ac057f6d8e64973f76c1b2b4b2b",
+      "bytes": 1131
+    },
+    "r/jade/snackbar.json": {
+      "sha256": "5acf701a28efba338d298e62426a17bd59432557d86238bca08374379a2391b7",
+      "bytes": 1361
+    },
+    "r/jade/spacing-guide.json": {
+      "sha256": "179f74c2aab728865cbbbb9212352715c0dc5eb68e0dc1a12c7118af90732fa6",
+      "bytes": 1089
+    },
+    "r/jade/spinner.json": {
+      "sha256": "7de79f70d683376dda9697340f6a77a976e8975226b379e078705f97fa1c6b8e",
+      "bytes": 1168
+    },
+    "r/jade/split-button.json": {
+      "sha256": "646ef4e3cc3974645f22477442e509888397b5c484fcb58118a7ca8010426677",
+      "bytes": 1976
+    },
+    "r/jade/split-view.json": {
+      "sha256": "324232a3c7f0a3d04ffbab8d5b4c6ddba54c8242ede368579678d60f3a60b92d",
+      "bytes": 1756
+    },
+    "r/jade/stack.json": {
+      "sha256": "f9510828f24435f4d7eabbce5242f7b4b16cb04d5799eda85ad97d8777bd68c0",
+      "bytes": 983
+    },
+    "r/jade/stage-viewport.json": {
+      "sha256": "9135a6bce7b0900dc4e97fc50381f75d17a17d6dce9313e59fc099128127b30b",
+      "bytes": 1394
+    },
+    "r/jade/stat-group.json": {
+      "sha256": "da3d9b71462c325143812e00eba6763bbfb33a2a8e9edefc6013a3518a876234",
+      "bytes": 1356
+    },
+    "r/jade/stat.json": {
+      "sha256": "d9afa154a61d299ba993e875278044ff44ab0da814173a57b5c77be24ab761e1",
+      "bytes": 1305
+    },
+    "r/jade/status-bar.json": {
+      "sha256": "9313daa28ce9204896a9920213fa508badf0ca855d7dc51721e050d399892c1d",
+      "bytes": 1095
+    },
+    "r/jade/status-dot.json": {
+      "sha256": "8a098f74513b444a34927d49be9db6704975998c585845c2b2e90f67a7f45fb3",
+      "bytes": 1378
+    },
+    "r/jade/stepper.json": {
+      "sha256": "1e15e3ada91d66cd017cc1c2e9519fdf01e6ec60ff0031b3a66710e4c0fba8d3",
+      "bytes": 1409
+    },
+    "r/jade/storyboard-rail.json": {
+      "sha256": "496f87a6242767bda7931f1b83762d10e30b829e0585e610093d4452d6230eef",
+      "bytes": 1895
+    },
+    "r/jade/studio-header.json": {
+      "sha256": "5dab90f07732f753838b5f2d332519d32e2716b62014197aff7f7118fe89ac03",
+      "bytes": 1821
+    },
+    "r/jade/studio-shell.json": {
+      "sha256": "25b0886ee37e79c9ef9a6fec5efb1aa3dd45d574c5867b99a3968622a134e9db",
+      "bytes": 1598
+    },
+    "r/jade/style-inspector.json": {
+      "sha256": "4b8faced1393df14c87c4a50e7f11d4dad94a80e77da00e9aa7633f326954529",
+      "bytes": 1397
+    },
+    "r/jade/success-state.json": {
+      "sha256": "4f8709f5c216b5a63ed185f59edd0cb901247687d34fa2f733f00cf5779144d8",
+      "bytes": 1186
+    },
+    "r/jade/surface.json": {
+      "sha256": "bd97a9d89d404af0789fc75c177f4c97e55e563dd4999ae5f2e146f4293866d2",
+      "bytes": 1248
+    },
+    "r/jade/switch.json": {
+      "sha256": "e511af0fa0ccb2099b4e1c512fb80e32a7cce649db71608400f5efca7ec46c9c",
+      "bytes": 1257
+    },
+    "r/jade/table-of-contents.json": {
+      "sha256": "5c6063e2b992921924300b0869e1ef93e93f5e2e966e3ca2cf17f82be853fbbc",
+      "bytes": 1455
+    },
+    "r/jade/table.json": {
+      "sha256": "86ca3cbb47dbaa635975ac456e1d14175db6d2f5e0e701369e5e7faf6b0f373e",
+      "bytes": 1253
+    },
+    "r/jade/tabs.json": {
+      "sha256": "c3d8bebe2457fc9bcf557b9c6b65db794288e14388e82b57d5efcccda7b6a87f",
+      "bytes": 1379
+    },
+    "r/jade/task-board.json": {
+      "sha256": "34bc542a9a365e0c8e41fb03ee82defd656d9c731fd5fb643ecd899db0d7e7dc",
+      "bytes": 1656
+    },
+    "r/jade/task-rail.json": {
+      "sha256": "5e015c8411f7dcf1a8fe24d43cf28b8d1f67d9a769d88f045c6991d9799122a9",
+      "bytes": 1345
+    },
+    "r/jade/template-gallery.json": {
+      "sha256": "b5fdf19f6f45122fb4954016b5222c8db25a05b3a39908b5f93788e6e432c0c7",
+      "bytes": 1452
+    },
+    "r/jade/terminal-surface.json": {
+      "sha256": "e26839c9da9a5ce3f85f4d766f03fbd6c7274278dc60daccd409ec4a5ee7a4c7",
+      "bytes": 1157
+    },
+    "r/jade/textarea.json": {
+      "sha256": "28dc7d14741c86df624012199329f889b5e86112b8a89189b914652321830280",
+      "bytes": 1311
+    },
+    "r/jade/time-input.json": {
+      "sha256": "56dc911df3ec806b79545f5145d26b9eb012dd5e9b12e68ffe521f62ca953277",
+      "bytes": 1337
+    },
+    "r/jade/timeline-segment.json": {
+      "sha256": "e4ff3ec1fee2556aa736202377f28ae8025a388db1c7e5e322f5c07ca36b94f3",
+      "bytes": 1243
+    },
+    "r/jade/timeline.json": {
+      "sha256": "57aec5ba22611e8f39cd73b40bd9f1d0996eca358aa126b76e0db0011c638179",
+      "bytes": 1162
+    },
+    "r/jade/toast.json": {
+      "sha256": "346014ecd7390d2d7131a742d7253a8fb38834a4c9a8dcc88704d6db05f7b462",
+      "bytes": 1331
+    },
+    "r/jade/toggle-button.json": {
+      "sha256": "e69f8e11c345c9d2c1d821182650fc84f2158236b04f982c49fab3e0aa79aeab",
+      "bytes": 1665
+    },
+    "r/jade/toggle-group.json": {
+      "sha256": "33ecc98cbe00c39c14c19eaf5f58aae77462da941aec4d03cab51946a45e9b36",
+      "bytes": 1599
+    },
+    "r/jade/tokens.css": {
+      "sha256": "ec3e43f3679352d888ff6ea6367c34d2022fe5473c82ed7bafd31ef3386c6fd4",
+      "bytes": 6192
+    },
+    "r/jade/tokens.json": {
+      "sha256": "ace13dec44522a9f2eba102e9ea66bcc64cf036faec32c7578b2f183ab8e2201",
+      "bytes": 12860
+    },
+    "r/jade/toolbar.json": {
+      "sha256": "61d3cd3a99a46994d74daea8692bf54d412df86a1fc0f126d65c7c541f26b37e",
+      "bytes": 1552
+    },
+    "r/jade/tooltip.json": {
+      "sha256": "11239aa2fda258837752a4483a8eba0ebbb341039efe209655dc2592cf232c2d",
+      "bytes": 1701
+    },
+    "r/jade/topbar.json": {
+      "sha256": "2e6446723e3cfa6f343609992f1a29c81b81f13c249d881e62219cef62f5634c",
+      "bytes": 1340
+    },
+    "r/jade/transport.json": {
+      "sha256": "2d9b7eed2e935a7606e69088dc3a2d672b9154fccc4c14ef662ee4de14d79d64",
+      "bytes": 1835
+    },
+    "r/jade/tree-view.json": {
+      "sha256": "29d9e5ea7e00670af42b2ae2b48a91a12289a30df4224a400946837cab0b8891",
+      "bytes": 1171
+    },
+    "r/jade/type-specimen.json": {
+      "sha256": "ec994f22eefcf55c026e2943eb2e50b0cfb02ec4209a416e2eae7e21c84243a9",
+      "bytes": 1108
+    },
+    "r/jade/view-switcher.json": {
+      "sha256": "3e867ee0c34cd580868653499b306878acb2b7fd1b3b2bcf61ea74582ee2fbdc",
+      "bytes": 1466
+    },
+    "r/jade/viewer-shell.json": {
+      "sha256": "46ee694dee234030c5c44b1a81d3f666b3c55a64d48fc1ab92dec9ca7f697a02",
+      "bytes": 1368
+    },
+    "r/jade/widget-shell.json": {
+      "sha256": "39d9dae58bfaddd740c8ad74a72773f9cc98546b4276240f2bf44eeca52e4286",
+      "bytes": 1445
+    },
+    "r/jade/window-shell.json": {
+      "sha256": "5250032533beeb3ba16f13d8ecdf1e48afd6d3174ff679d1cb6c1df5f430c4eb",
+      "bytes": 2019
+    },
+    "r/jade/workspace-error-boundary.json": {
+      "sha256": "f216fd02d39842468568fd8c9666463407e06408d0dc1e527966f090fab4b5bf",
+      "bytes": 1608
+    },
+    "r/jade/workspace-switcher.json": {
+      "sha256": "ad6f8fef33496b716315fcf37fb9b3271e01235fd02176b58e75e55c8bf49c7e",
+      "bytes": 1608
+    },
+    "r/jade/workspace-tree.json": {
+      "sha256": "abfc576d47865788fad7e4421323e3916d8b026b3ea5bf200d44c19816ed20be",
+      "bytes": 3864
+    },
+    "r/layer-list.json": {
+      "sha256": "e0f6077322230ee04e4f76ebd3594013233d738e9bb4eae59f72a3b68188256f",
+      "bytes": 1673
+    },
+    "r/lightbox.json": {
+      "sha256": "fd3ec5b8b5c4b1a57ff74a589b0462e82942d60157417fd69ec8b25573776876",
+      "bytes": 1714
+    },
+    "r/link-button.json": {
+      "sha256": "b78345af6a78d2a777383e2c00e40c48ed29ad399308491b005bc8627df41bf9",
+      "bytes": 1594
+    },
+    "r/list-item.json": {
+      "sha256": "4927db1c81ae8f2d052577bdb77f9c1b49c27268a3a23cba17281c6ff1ea94b1",
+      "bytes": 1192
+    },
+    "r/list.json": {
+      "sha256": "6c3f53f5ce9ec03d1f8cd0c285d8e518f329147e8464a306e8e21f1b0d67f673",
+      "bytes": 1150
+    },
+    "r/loading-dots.json": {
+      "sha256": "d1bdeb07049a7b848e45958841f585b5a7d1c4bbbee9792bc8841763b5263d23",
+      "bytes": 1212
+    },
+    "r/master-detail.json": {
+      "sha256": "8538cd96f66db1692f71abaa80c189f32e119ac00469d3db0fed05bd690b0c98",
+      "bytes": 4161
+    },
+    "r/menu-bar.json": {
+      "sha256": "8c2802126776a30e8f18a44bd025b506ed6bf54af3a967294f37b78bf4aa1079",
+      "bytes": 2024
+    },
+    "r/menu-button.json": {
+      "sha256": "4f9b87b7e33282c317f7ea54b316d440a86ef93efe5b52a4d177e03b8896f725",
+      "bytes": 1968
+    },
+    "r/meter.json": {
+      "sha256": "19f450a17e4e0c25db147f941dc17855deb44ed971e59893577e9bff1fad2116",
+      "bytes": 1123
+    },
+    "r/mobile-app-nav.json": {
+      "sha256": "a4b8400b8195237d352d03233f136791e65e209e5c0e7deedc9a798d8925c438",
+      "bytes": 1424
+    },
+    "r/motion-check.json": {
+      "sha256": "9344881dcf8bcccd56f782d4e6f3edbf2fea547ceba65ec14e27d9f88722676c",
+      "bytes": 1176
+    },
+    "r/motion-inspector.json": {
+      "sha256": "da1f2ed1ed3b61235069c57b021b3528bdd9794bb5a687d00f1293e6ff64de77",
+      "bytes": 2011
+    },
+    "r/motion-preset-picker.json": {
+      "sha256": "3d236fa6133ec54ce66fe57578b0cce4023d1e688815bc315c06331eea4762e6",
+      "bytes": 1325
+    },
+    "r/motion-timeline.json": {
+      "sha256": "da5d48b3c112119053a9ade20eb4e3a0e9c6d3773c6c24674950fda7bbcf4671",
+      "bytes": 2048
+    },
+    "r/navigation-menu.json": {
+      "sha256": "1bcecca8a79d58720735b14e49414d04c87d9e3cd1eed38e2e9e384154152f03",
+      "bytes": 1438
+    },
+    "r/notification-center.json": {
+      "sha256": "8c9bdb1ca754df98e6f624a3f73d27bbd3b5a3d63cb801544e3a9a5fa1bcab79",
+      "bytes": 1569
+    },
+    "r/number-input.json": {
+      "sha256": "d91e2e3530bc92f228c0957b0ca39b8e924130b2ee5f14c7e669be43435f5df0",
+      "bytes": 1358
+    },
+    "r/offline-state.json": {
+      "sha256": "043ecd73b6ad4c9cd936f42d35f4c2430f5615514cc3aa87fcf798b35c3f1fcc",
+      "bytes": 1200
+    },
+    "r/order-summary.json": {
+      "sha256": "e131b07c48686e067461ee9e7cfe8a587ac7113d5d6acdf517ee5dc9213443c8",
+      "bytes": 1821
+    },
+    "r/os/accordion.json": {
+      "sha256": "212c2ba3fe3b59864f5e60b784485945bde8b2e2dc044114b22a8d070dab61a4",
+      "bytes": 1170
+    },
+    "r/os/action-menu.json": {
+      "sha256": "77c05a46251921785d03e17bc7dd874cc6725b6f0b9adf32817594bb42a462fe",
+      "bytes": 1738
+    },
+    "r/os/activity-feed.json": {
+      "sha256": "16840331c23816bac9ebfad8c62a251915f91d841b2d6548febf11ebe224717f",
+      "bytes": 1200
+    },
+    "r/os/agenda.json": {
+      "sha256": "c1c7556fffdcaf495ab712c7e2758dd38696bf938dff6a0172a4f07dd4f9e2f6",
+      "bytes": 1140
+    },
+    "r/os/ai-director.json": {
+      "sha256": "c9ab0b6feb76ca9d39451b5d9016109672070f68e836183cf4455d974d223b32",
+      "bytes": 1912
+    },
+    "r/os/alert-dialog.json": {
+      "sha256": "c4f3d8d4504a853af4460439f432976a9f3ce89d38b3d3fc34a4fd6473a2c74b",
+      "bytes": 1749
+    },
+    "r/os/alert.json": {
+      "sha256": "3e029ff7053755f245d4132f542a583aaabb4cbfc614cefefbb0c5ac000ccd42",
+      "bytes": 1327
+    },
+    "r/os/anchor-nav.json": {
+      "sha256": "90dd54796f69a59d58993fd6e8d9f94a62ac1b707cef84af7461a31607c6cfee",
+      "bytes": 1377
+    },
+    "r/os/app-shell.json": {
+      "sha256": "32eb7576b8561a1d41147437a05b6fa5335a7ae147b1f57d36043a04711d64a0",
+      "bytes": 1523
+    },
+    "r/os/app-switcher.json": {
+      "sha256": "441c37734eea349f978e2c45f3515417353127849c9fcff1dc650e491c90566e",
+      "bytes": 1399
+    },
+    "r/os/application-shell.json": {
+      "sha256": "79dd3046498e7797501419c200bc3b586885a2a649c6fd34c18e751abaa6b795",
+      "bytes": 2333
+    },
+    "r/os/auth-card.json": {
+      "sha256": "c0230f8c6cd71f4174f5f4770bd81ff6545e8d192e1daaaa8e774543c14094f1",
+      "bytes": 2062
+    },
+    "r/os/avatar-group.json": {
+      "sha256": "f8468c6882ee5c1586ab2b66248baa93b1e6cac30f5490ae7d05b55b10c6c795",
+      "bytes": 1192
+    },
+    "r/os/avatar.json": {
+      "sha256": "f26483e28189d0bf45200df69818ea17f23f3e170ad22bd265760bbaf788759f",
+      "bytes": 1141
+    },
+    "r/os/back-link.json": {
+      "sha256": "c8cef8236da5d3ff247a5793f62b2c9236622cc78b5681fb6b0a6670b6df85fa",
+      "bytes": 1366
+    },
+    "r/os/badge.json": {
+      "sha256": "06d71e24843c1550474ec89d9a36ee0debb37c6279bf5e5e10e54e68344b8012",
+      "bytes": 1590
+    },
+    "r/os/banner.json": {
+      "sha256": "cf76efd559e76563e4351abc51489edccc93eaa3fd20c53236945788c2add246",
+      "bytes": 1337
+    },
+    "r/os/bar-chart.json": {
+      "sha256": "9024621197e2f7964b60738c277c4241bf0ab1b8fe4079730aa048e0294f6b5b",
+      "bytes": 1196
+    },
+    "r/os/bottom-nav.json": {
+      "sha256": "32b78c6647a66704d2cd30a2fa99721cd4106bc2c868092a402f91dbfbf9a767",
+      "bytes": 1377
+    },
+    "r/os/breadcrumb.json": {
+      "sha256": "52aeda340149c9a4ce0e17b4013411de5131bf439ba8df6ccf95d933f190d2b6",
+      "bytes": 1380
+    },
+    "r/os/bulk-action-bar.json": {
+      "sha256": "b31cbf4030d000dce35b0c1620c44000c0c0c1a332c668e21b333af1a55dd636",
+      "bytes": 1622
+    },
+    "r/os/button-group.json": {
+      "sha256": "a8743801eb3c2bd0878a8387ff630198b277cd40070e836e4830827ca6f8a293",
+      "bytes": 1595
+    },
+    "r/os/button.json": {
+      "sha256": "b5348ebfa9921c98c8660dd0ba4cfba33b176ad38a9adbe558794fbc24b5508b",
+      "bytes": 3284
+    },
+    "r/os/calendar.json": {
+      "sha256": "dc08974a9749a69e2a4d3e5ce09e7dffb1de0b63c7c6e146764b19e892f3a9cb",
+      "bytes": 1348
+    },
+    "r/os/card.json": {
+      "sha256": "382c4c9f9b2b62ac14ddf8a2a2ddeed80d286b09aa85b840fd39e9a4cf1a2016",
+      "bytes": 1980
+    },
+    "r/os/carousel.json": {
+      "sha256": "cd24605e19e4089d357a65669aed108d4aa3b78339e1952032f06f21c8ddf973",
+      "bytes": 1379
+    },
+    "r/os/cart-summary.json": {
+      "sha256": "e3fc118395106f142f249c305adb5966247128c0c1cc85e31009ed7ea444a530",
+      "bytes": 1805
+    },
+    "r/os/checkbox-group.json": {
+      "sha256": "2b07bc0d484cd8250caea6e2217372375e5ceb784fe9bf8c80722c0a3517061a",
+      "bytes": 1338
+    },
+    "r/os/checkbox.json": {
+      "sha256": "0a1fee846f817a8959a259716ddf69236698ba3c74ee78f0c0a0c5a79a0c9402",
+      "bytes": 1275
+    },
+    "r/os/checkout-form.json": {
+      "sha256": "357cd889d2e4588bb040d19b2e2de897453406b1940fe0f32bdd3337f2eef134",
+      "bytes": 2102
+    },
+    "r/os/code-panel.json": {
+      "sha256": "9667986f3aa4a701ed78ea75385e6eabaa4ffa9f4faf71712a7f26fac13e8cf5",
+      "bytes": 1415
+    },
+    "r/os/collapsible.json": {
+      "sha256": "78d70eba8fdcb7083472dec5d02bf3cc9665141005fee33869df3736c2295343",
+      "bytes": 1190
+    },
+    "r/os/color-input.json": {
+      "sha256": "26bd698e8d27a1700725e28645b0f985084aa69c2f43782afcdd8585c44790e7",
+      "bytes": 1344
+    },
+    "r/os/color-swatch.json": {
+      "sha256": "7493459d92151eb8d7b54899004b3597e61d2a27b6bdb07656a83eae27dd463b",
+      "bytes": 1138
+    },
+    "r/os/combobox.json": {
+      "sha256": "e3c6dd2c29c5b34fe32e9cd772bcb483efbbd47417caed3d3b7d4699b1676ba7",
+      "bytes": 1322
+    },
+    "r/os/command-bar.json": {
+      "sha256": "60b5b7bfd366e33337b80d11664adb6efa3be1c71edf786e9c673646583d4447",
+      "bytes": 3839
+    },
+    "r/os/command-menu.json": {
+      "sha256": "c7cec7b81b4232bcc684219beec8eeff5053f25650f7f670a561f89ef4ad76a4",
+      "bytes": 1399
+    },
+    "r/os/command-palette.json": {
+      "sha256": "0b2f234a08aac3b6e67903087a1b3d3dd40946ea912d0e0a66fa6acbe3f13cd0",
+      "bytes": 1782
+    },
+    "r/os/command-suggestion-list.json": {
+      "sha256": "c658fd242a3b0b65ff4c4de45b892f7ed3f2f7d86a36ddbb79a7c793f61543fc",
+      "bytes": 1359
+    },
+    "r/os/contact-form.json": {
+      "sha256": "ea555a76f8c25b43b6b76508a7445d36f7d14f20142a62554d9d9e96a7d5511a",
+      "bytes": 2092
+    },
+    "r/os/container.json": {
+      "sha256": "f0e67a4505861f8a078765fc2d2e7dc8f5a79ff3829b43cd7f61dd5898b69881",
+      "bytes": 1012
+    },
+    "r/os/context-menu.json": {
+      "sha256": "a27f878ab7237e8af7ea258e2cc5fe6dfe4dce29979e48c541470a5748cafe7b",
+      "bytes": 1749
+    },
+    "r/os/copy-button.json": {
+      "sha256": "24e853dccf3a59e6daf36faa5dab74f82c75eb39dee48b840c81305eab76bae2",
+      "bytes": 1587
+    },
+    "r/os/data-table.json": {
+      "sha256": "aeb7522ad38db2b8213486e0699c31251a99b02e5e90fb9899516ae870f28673",
+      "bytes": 1291
+    },
+    "r/os/date-picker.json": {
+      "sha256": "4d32aa9572b3b1ebaf5e28df080bc20fb33f9ad1e8fa699229e9befa8117e90c",
+      "bytes": 1343
+    },
+    "r/os/delivery-action.json": {
+      "sha256": "b47921b250dc4530d770cf49dc05120fa2e77fdb82b2f4acb79886ca15eab7b7",
+      "bytes": 1226
+    },
+    "r/os/delivery-workspace.json": {
+      "sha256": "a78a0b15efa134feb3b88af96795c574d60c23cab41934bdfed2b18596b7ea60",
+      "bytes": 2101
+    },
+    "r/os/description-list.json": {
+      "sha256": "f27c70c85a847b2ca7e291bfc6c784f93ff6237b05eb85f4aad35dd0600243de",
+      "bytes": 1274
+    },
+    "r/os/design-tokens.json": {
+      "sha256": "4cfc0fa3f6ea4c56ca85088845ebc2f9f36e69ddf7dd7a313a288a985cf67803",
+      "bytes": 41922
+    },
+    "r/os/desktop-shell.json": {
+      "sha256": "2f6ea886d0a7a04175727656f1ad66d5aab27accd42e70049a98a210c107bf0c",
+      "bytes": 1848
+    },
+    "r/os/device-frame.json": {
+      "sha256": "1b82445d53d018ce188613c55203b97fcff86512b71423197550aefdb2e908af",
+      "bytes": 1283
+    },
+    "r/os/dialog.json": {
+      "sha256": "eef306c7811ea28ace3f6ec47c7734c51a97266c64c88828121fd9554b857352",
+      "bytes": 4543
+    },
+    "r/os/dock.json": {
+      "sha256": "d1831d9958169fa55322ac24b33b2b363cdfa5e956010cb8b62ed6cb49d0e5d9",
+      "bytes": 2402
+    },
+    "r/os/document-surface.json": {
+      "sha256": "fa9b6045aedc6d5217257202b8bbd765e49caf73093b2170fd290a0d8fcb2860",
+      "bytes": 1426
+    },
+    "r/os/donut-chart.json": {
+      "sha256": "df814b8cb0d3c709bc5b2ed6593a0a727207075e61b2fb9fc244c7408e7f391a",
+      "bytes": 1216
+    },
+    "r/os/drawer.json": {
+      "sha256": "b90ebd3106ce519128330f2383275f83ae11c74a74b08fadbbc67db9822d6f25",
+      "bytes": 1686
+    },
+    "r/os/dropdown-menu.json": {
+      "sha256": "efd9430dc69ce18f5637781c4f0fed9ddb8fa1f81199838b9f7a971b9cece4cd",
+      "bytes": 1760
+    },
+    "r/os/dropzone.json": {
+      "sha256": "879830c3f400451c17ff2141d082d339cf97ba0f947d64e81a935591be0dda37",
+      "bytes": 1213
+    },
+    "r/os/editor-toolbar.json": {
+      "sha256": "0602f079693a055346763bd6377711a303074287f53806bf8c02b6749c35586a",
+      "bytes": 1748
+    },
+    "r/os/empty-state.json": {
+      "sha256": "64e5824b64ffeea51291172d14e8ddde28852c17b513d65a7b4c03241c87d05f",
+      "bytes": 1585
+    },
+    "r/os/error-state.json": {
+      "sha256": "743ff97c49319053c9bbbbf754039dce818e9161c887e55f0c5e6fe648e51934",
+      "bytes": 1171
+    },
+    "r/os/favorite-button.json": {
+      "sha256": "e2d5eafce641fb60079cb02cadf8e129bc2d93ba6bcb096c3416659c78bd878f",
+      "bytes": 1681
+    },
+    "r/os/feedback-form.json": {
+      "sha256": "15b7073dc37ad13b898ea9234a675cd2dcdc39bc978b4d6ea8f67b17bf6e8f07",
+      "bytes": 2102
+    },
+    "r/os/field.json": {
+      "sha256": "287246a517873bd0aebad0bb708f2fe8183f849bdb10556ad28062159ee41731",
+      "bytes": 1292
+    },
+    "r/os/file-upload.json": {
+      "sha256": "738768c65aa62ae30c5e552951b658e4f7ee4fff18335b0e5d30b72b9afb3a3b",
+      "bytes": 1237
+    },
+    "r/os/filter-bar.json": {
+      "sha256": "e97e7ef1e66bfcb4225203a263068c1b4bbb31d2717391a6f5da66a8998b8e94",
+      "bytes": 1751
+    },
+    "r/os/filter-tabs.json": {
+      "sha256": "de75b52fde86b4b29cf1746dad9efe233ac169baa273747619b46bf1c6eabd0d",
+      "bytes": 1442
+    },
+    "r/os/floating-action-button.json": {
+      "sha256": "adf9bddea89afc2837060d77be1aab83247976986407b33ecdf407605ef1a9e1",
+      "bytes": 1695
+    },
+    "r/os/focus-ring.json": {
+      "sha256": "0f518d82b6f645dfcfe0c61e9d42d7f76a2431969f4fa2ed2cc9ac7b4f81dcb7",
+      "bytes": 1271
+    },
+    "r/os/forgot-password-form.json": {
+      "sha256": "0ca14a737e0f08f486603e63a72f6c41f1df55666f3ad4964a7b49da852a4a35",
+      "bytes": 2169
+    },
+    "r/os/guided-tour.json": {
+      "sha256": "33969cea79858ef03d55f45116c49340c82c82ea7e3119e4daacc5efb3d2e282",
+      "bytes": 1547
+    },
+    "r/os/hover-card.json": {
+      "sha256": "f2856ae5eb7b4197def978da7eb958acc161de59051807035d4291662d9a180a",
+      "bytes": 1727
+    },
+    "r/os/icon-button.json": {
+      "sha256": "9a8cc711bcd34ef41b4f886e2281bd59294d60c69e45a2351929cdd6b392ea4e",
+      "bytes": 1588
+    },
+    "r/os/inline-edit.json": {
+      "sha256": "0f014c3a35b14dc5a2edf91764dbc881e3fe7d6512c3f8768303ff138b2ec488",
+      "bytes": 1349
+    },
+    "r/os/input.json": {
+      "sha256": "64ad6f994ddde0c6465b442f12f3755c5b8fe408cfaf068373dab8f7e9521baa",
+      "bytes": 1736
+    },
+    "r/os/inspector-panel.json": {
+      "sha256": "472b1d675e835f0b8f49b9aa4f991ca082962c618c27c46c0b2e55adec0fd8a4",
+      "bytes": 2064
+    },
+    "r/os/invite-form.json": {
+      "sha256": "159a494fa344d7ea5b3ce7f080521c3fa97a089c86c7c88ffc34829f35b8d472",
+      "bytes": 2082
+    },
+    "r/os/layer-list.json": {
+      "sha256": "281fafa6cd30ba2f27e30ebaa1a9c3b4979fecf4ec7d9bbeb6eb96c171f7f551",
+      "bytes": 1667
+    },
+    "r/os/lightbox.json": {
+      "sha256": "7417c0d5c4d6167f52deade004ab359405a67f6fceb81fb9c04550bdd810d959",
+      "bytes": 1708
+    },
+    "r/os/link-button.json": {
+      "sha256": "1b661cd93677bcb140ad0876dfaec67e78c111a4680a2fd2305f913a3877f3d4",
+      "bytes": 1588
+    },
+    "r/os/list-item.json": {
+      "sha256": "721f68a598d502db84fdb2b5d92a58ad57360b5ac32b023de3f00e81bf439c62",
+      "bytes": 1186
+    },
+    "r/os/list.json": {
+      "sha256": "d299e5ff1e7c7a476c0ce701008269244bda9608546d0ca1cd953b824c1c8f4f",
+      "bytes": 1144
+    },
+    "r/os/loading-dots.json": {
+      "sha256": "791116cc50543b81a6d310f1ae0f4021018ba16b466f2078f515be7eb7e935f2",
+      "bytes": 1206
+    },
+    "r/os/master-detail.json": {
+      "sha256": "a65cb27466c96f22e258ac230e3035f564443b70c4cff010044a7b51ea149986",
+      "bytes": 4155
+    },
+    "r/os/menu-bar.json": {
+      "sha256": "2326aaa52da37dd12177c6fc9c5eb96811488dd3b042f9b872215420732f2d6e",
+      "bytes": 2018
+    },
+    "r/os/menu-button.json": {
+      "sha256": "24baffb1b890d0bd7b9f67e7d5eba06c5c3e03536c8323281d504f0cbd2c378b",
+      "bytes": 1962
+    },
+    "r/os/meter.json": {
+      "sha256": "f355864902910aaeae131caa7f8a956262af6a5a274d191241185fe9464e7d7e",
+      "bytes": 1117
+    },
+    "r/os/mobile-app-nav.json": {
+      "sha256": "b8e13d8d352e1a83a63fec6c4ea29bc5b400d5ae34a9690ed509e40e498f3682",
+      "bytes": 1418
+    },
+    "r/os/motion-check.json": {
+      "sha256": "71dad4c56de2eef918cb69e488f30542384d041376ebd78cdedf8ab51acb5092",
+      "bytes": 1170
+    },
+    "r/os/motion-inspector.json": {
+      "sha256": "b2481ec7d155b1ed1cdd998bcec2433cc5f96d914ebb3aa32930aa73923decde",
+      "bytes": 2005
+    },
+    "r/os/motion-preset-picker.json": {
+      "sha256": "5a02b9dfbb2cdba64f4813775d40da4701ec943733c787c89174083217cf500f",
+      "bytes": 1319
+    },
+    "r/os/motion-timeline.json": {
+      "sha256": "73a022a66c7ac0e2c2ad4c9ec9c7fa48d3150e73d35ee3b2dd6a83c783f3f2e8",
+      "bytes": 2042
+    },
+    "r/os/navigation-menu.json": {
+      "sha256": "9086eb6c6499f04d32b10f9ff9deeb50f41d55035bdf779529ee960d0203e26a",
+      "bytes": 1432
+    },
+    "r/os/notification-center.json": {
+      "sha256": "dc78ffb7b7c798b0ce456f3c85f054d68e4d3e2bc1c566154137953f82ba0aa1",
+      "bytes": 1563
+    },
+    "r/os/number-input.json": {
+      "sha256": "2baebf858961990cf666b7f0e5fec8299bd3187152c33475aed91e7e3647475d",
+      "bytes": 1352
+    },
+    "r/os/offline-state.json": {
+      "sha256": "34ed88a4562b9c864eac373e007d6285db5feea9a0a07212b8e1adcc04d7dd0c",
+      "bytes": 1194
+    },
+    "r/os/order-summary.json": {
+      "sha256": "a95492144288bcbbe2422e69f541c8bbaaa202a4c4b993143d7a35ea7d6bd932",
+      "bytes": 1815
+    },
+    "r/os/otp-input.json": {
+      "sha256": "15f0970a1096089566c21fa01046db0b4e419a8bcdef4791a10704681eaf74fd",
+      "bytes": 1329
+    },
+    "r/os/page-header.json": {
+      "sha256": "0ff6058961c1a053212aa591b32d2047620bce9b057a154caa983e58685f6ebc",
+      "bytes": 1388
+    },
+    "r/os/pagination.json": {
+      "sha256": "23481c0b7c57465c8525b7c4b0987cb7865ede2bba17773240d0f2fcc60d6a77",
+      "bytes": 1435
+    },
+    "r/os/password-input.json": {
+      "sha256": "8b461e3f20021c0e58e5369aefe4c5ee214fbf96a456bd4b165ddf1027068596",
+      "bytes": 1377
+    },
+    "r/os/playhead.json": {
+      "sha256": "a6b89f1c00cf9245e236bac4fadca11d11941b115001594538e24a389f5b165f",
+      "bytes": 1035
+    },
+    "r/os/popover.json": {
+      "sha256": "51a0d48bae507cf6c6b91a429830e635afff79a97cb187f1ecf9481879e91c80",
+      "bytes": 1697
+    },
+    "r/os/preview-toolbar.json": {
+      "sha256": "7a0d9b7063d020a8e37bc1891db314a69111e0858b3267a88dc67788bd7ef8f5",
+      "bytes": 1552
+    },
+    "r/os/pricing-card.json": {
+      "sha256": "9d0794ba5a42b0d3975361f3824eb7c601840a62467c021f64fe911c53046403",
+      "bytes": 1708
+    },
+    "r/os/pricing-table.json": {
+      "sha256": "3702ba09820f10514ee9279665483736c8b6e03a21c8f15ffba9def487728abc",
+      "bytes": 1717
+    },
+    "r/os/profile-form.json": {
+      "sha256": "9b619623eb5e9595928fdab0b2b88c09d8ffef47e97a38ec0429c8ed2b00e812",
+      "bytes": 2092
+    },
+    "r/os/progress-card.json": {
+      "sha256": "03f3dccb3e0862b53225da686612e3a90f6461448d12cc06190625dc86e1cbb5",
+      "bytes": 1404
+    },
+    "r/os/progress.json": {
+      "sha256": "75585a5a8c6d9631b39335fc87058dee99d5c424c724cd35ea5a56b2625c22d4",
+      "bytes": 1147
+    },
+    "r/os/project-switcher.json": {
+      "sha256": "f417a32280dff0c76eb2b672d132f42af3fcab8ef6eea54fb28c2ac193b1b070",
+      "bytes": 1635
+    },
+    "r/os/radio-group.json": {
+      "sha256": "643dad75c017e4980d6a072b208869669ff9ab1a4736e59abe6785f7465e102b",
+      "bytes": 1302
+    },
+    "r/os/radius-guide.json": {
+      "sha256": "9c6f840d974acebdaba4ad7f41068294e5d56aa721bff33376801e8787f438a9",
+      "bytes": 1155
+    },
+    "r/os/range-slider.json": {
+      "sha256": "6abfe66cbdf02f13a44f5e097b3eeab038bde5fec333c4cb1f668aa3bff6b3c3",
+      "bytes": 1184
+    },
+    "r/os/rating.json": {
+      "sha256": "9c7e05ecf95053e43e8bd4d6d64da4263d6f055c7d860811de377f51b28d8b86",
+      "bytes": 1295
+    },
+    "r/os/registry.json": {
+      "sha256": "dd6d34f934508ddf8639cfadecf22c01cd016ca17918f731a7ce65dafd3b92d3",
+      "bytes": 102248
+    },
+    "r/os/render-status.json": {
+      "sha256": "3130c02ffab348cb7b317317a53ee8afd29175fee84150419da6a83bb4c137bb",
+      "bytes": 1374
+    },
+    "r/os/scene-list-item.json": {
+      "sha256": "4f42118d174028e9433c2a5ba84e9cb74294fa9435cd706475ebc5e68ca1835c",
+      "bytes": 1765
+    },
+    "r/os/search-field.json": {
+      "sha256": "1b53b2769e6cacab5854ec6b40a10d16cab5ab86451663e904503d6de8cfaf71",
+      "bytes": 1359
+    },
+    "r/os/search-results.json": {
+      "sha256": "dd545237d8e4e14d374fa207327db50060d741d88c93a198c2b88de1a7e18a04",
+      "bytes": 1787
+    },
+    "r/os/segmented-control.json": {
+      "sha256": "c4876856f6469560ac832c783f232864de421a5cb120cbfcc986a407154f34e3",
+      "bytes": 1645
+    },
+    "r/os/select.json": {
+      "sha256": "dfcb740386453c50a5788fdf6080242837011e381ab306597c2df369b719e722",
+      "bytes": 1309
+    },
+    "r/os/separator.json": {
+      "sha256": "2b50423042d93608796bd82ebd7a3c4fc780ea17532f3042d5fbeee775cf3326",
+      "bytes": 1014
+    },
+    "r/os/settings-panel.json": {
+      "sha256": "dcc635352863fd9b405d798074abaf038823c5fdbb309c7003235639f3238e07",
+      "bytes": 2112
+    },
+    "r/os/settings-sheet.json": {
+      "sha256": "b2498ffb9efbc23b7a771425bb6a0f1b73e653009d8fd164b0dd316126d6043a",
+      "bytes": 4704
+    },
+    "r/os/shadow-guide.json": {
+      "sha256": "e5cdc886902b9fc13ee434ecdab28101b7f3a22974bc9b2a24cfa07300d81155",
+      "bytes": 1141
+    },
+    "r/os/sheet.json": {
+      "sha256": "31774c5bcc1cbeec6271fc3aba9dceadcc385932bc5fb452fe23e93b973fc623",
+      "bytes": 1675
+    },
+    "r/os/sidebar.json": {
+      "sha256": "2e481ca5e36376b2bf3e9bc5b7fbe56d13fdb529c9af09b0a930dcd23bc8e92b",
+      "bytes": 1347
+    },
+    "r/os/sign-in-form.json": {
+      "sha256": "be3f7f058dab069b91732df20f3734264ce0adefe04eda854c8fd8f4b32b3243",
+      "bytes": 2089
+    },
+    "r/os/sign-up-form.json": {
+      "sha256": "71fce5725586bd19e99f8e5ea354e01e5d4566a6179348313a6d181a95dc9caa",
+      "bytes": 2089
+    },
+    "r/os/skeleton.json": {
+      "sha256": "9189bc9533f46b65bdd23b2cfac6b96bb098fbbef2507518035a1da3ac83e710",
+      "bytes": 1173
+    },
+    "r/os/slider.json": {
+      "sha256": "daef0a8cb9ebd4df8aceccd80ea68363d1f77753ec9aa38d827d656b6bb54fd2",
+      "bytes": 1127
+    },
+    "r/os/snackbar.json": {
+      "sha256": "151be2c760eb9acff4a1dbf4c61f1388b60345963be8c6632afbc1a1f72c87a6",
+      "bytes": 1357
+    },
+    "r/os/spacing-guide.json": {
+      "sha256": "9a0e677f9e8120512ce805193423dfa35b5847d9eb93729568d191779e021cdc",
+      "bytes": 1085
+    },
+    "r/os/spinner.json": {
+      "sha256": "4e67abfc46996810a0881b92db1802fc5ec0bf593c930eb7ec58052a5f827427",
+      "bytes": 1164
+    },
+    "r/os/split-button.json": {
+      "sha256": "35aa94a9c6ac11311c08ac789f38eb625a6f831291f5e0d6205ec63808faddb0",
+      "bytes": 1972
+    },
+    "r/os/split-view.json": {
+      "sha256": "a974a7178a3fc16c0de6b5a1d553e3cf0aa4c99c16b65d30220a48df1740c6ab",
+      "bytes": 1752
+    },
+    "r/os/stack.json": {
+      "sha256": "26c36fcc89b405b2530542dedf559f4cb4787894674d77c2458d3ba92405555c",
+      "bytes": 979
+    },
+    "r/os/stage-viewport.json": {
+      "sha256": "cf46ad9deec9a8f5e5e3ed2bee7a97cc0a0531812c7e80937a99b889695f69a9",
+      "bytes": 1390
+    },
+    "r/os/stat-group.json": {
+      "sha256": "8dfcd059323b7eb24b9c868188d3083c3e51505a94440248d23315a2abe30579",
+      "bytes": 1352
+    },
+    "r/os/stat.json": {
+      "sha256": "d2366ed79e14ee9f8226b9012795b7fc405a1344e2b9678be9cb480ec50673ce",
+      "bytes": 1301
+    },
+    "r/os/status-bar.json": {
+      "sha256": "707bbb3f562874a734c8bcaa8c08dd052f59646cbb35063ad5b159b1f02257eb",
+      "bytes": 1091
+    },
+    "r/os/status-dot.json": {
+      "sha256": "2f61d16ab2e5d66544379f70949e4913a9b96ae0b2b5821e5613d1e8309c8d90",
+      "bytes": 1374
+    },
+    "r/os/stepper.json": {
+      "sha256": "8ab7cd329b76eeee175ed19ef1a55e2993c8be0012081c93d975a8d47e4bf4d3",
+      "bytes": 1405
+    },
+    "r/os/storyboard-rail.json": {
+      "sha256": "34c9454fa43781e1f310cdd9bfae534fff12c02810172a431c867611c80baaac",
+      "bytes": 1891
+    },
+    "r/os/studio-header.json": {
+      "sha256": "e99f29baaabadaa568292ee2a797767cfe602073607a621a80ad7aefb6044d5b",
+      "bytes": 1817
+    },
+    "r/os/studio-shell.json": {
+      "sha256": "f5de80d512de6ae543df7456a408d5879f6219f0558037a49ddf01341254dab7",
+      "bytes": 1594
+    },
+    "r/os/style-inspector.json": {
+      "sha256": "34c52d6ff4e4ca62ab9804fcef81b2877afadc38dd0a6a81dddec2a2b052cc84",
+      "bytes": 1393
+    },
+    "r/os/success-state.json": {
+      "sha256": "93c8f44b9838b2060049e4a44766e933c2f21714e11b7e734d8f7f6025d84a54",
+      "bytes": 1182
+    },
+    "r/os/surface.json": {
+      "sha256": "7faefe1a9630a04796ba8e545d230fd1d024a66173d3d8bef94809271f033980",
+      "bytes": 1244
+    },
+    "r/os/switch.json": {
+      "sha256": "b692084efaf541e872c7c09dd188a9de0dc06ea8f7da4e706f7fa10fe85e531e",
+      "bytes": 1253
+    },
+    "r/os/table-of-contents.json": {
+      "sha256": "cd385ec0a8d727a50dd435fbdd65763ad50317ab444a66e82182e3921a33d093",
+      "bytes": 1451
+    },
+    "r/os/table.json": {
+      "sha256": "cc30e3d7cfec2edee32e4acdf255ceb6c6ffaddaa97a40b72777bbbe225d4e73",
+      "bytes": 1249
+    },
+    "r/os/tabs.json": {
+      "sha256": "4360d9bb64f59c1ad446bfe20d4a8d70cdfc016b78fce79ed48225f43f7d9560",
+      "bytes": 1375
+    },
+    "r/os/task-board.json": {
+      "sha256": "eef8304a1ed8fac383d4ddca4ebb82b07cf4e8009ce277c79548434f052cb9b8",
+      "bytes": 1652
+    },
+    "r/os/task-rail.json": {
+      "sha256": "1ef0d0b287af515253deae704468ca2f82a64b0c38ba52ef87fdbbcf72ff8128",
+      "bytes": 1341
+    },
+    "r/os/template-gallery.json": {
+      "sha256": "036d121da458f5681067bd10e80f7fcea8ea613ede5459e1a1d1674dc597802f",
+      "bytes": 1448
+    },
+    "r/os/terminal-surface.json": {
+      "sha256": "c105d174b2bacf6e7f6f08213e7bc3ce13074a3b8fdbe46e9de41d957a30408a",
+      "bytes": 1153
+    },
+    "r/os/textarea.json": {
+      "sha256": "c43f0e3dab7219b2ef2cc186ef8c50895069f2d955a6638b2a02c98f3bfdebff",
+      "bytes": 1307
+    },
+    "r/os/time-input.json": {
+      "sha256": "a752b254508a7567be1d32052bbbc58ed6d6b54a8ada78d1845b2c331cd88259",
+      "bytes": 1333
+    },
+    "r/os/timeline-segment.json": {
+      "sha256": "e60d6b5e271d84b150baf6506292846edc0cfa0006daee54a8392fe55ee9830d",
+      "bytes": 1239
+    },
+    "r/os/timeline.json": {
+      "sha256": "1e32161c71166fe61f49cf8d7981a8f955fe5a2e5f5931b8e4967c4b229a8773",
+      "bytes": 1158
+    },
+    "r/os/toast.json": {
+      "sha256": "20f656ba0c18a113c5c94ce9c4670a80cb55641db7febe2b6800cb4f12e4b915",
+      "bytes": 1327
+    },
+    "r/os/toggle-button.json": {
+      "sha256": "5ca4d6cf69b7a39dd6ef56770c7eaa25d36dd8be0395c79dd3a038feb5f51db5",
+      "bytes": 1661
+    },
+    "r/os/toggle-group.json": {
+      "sha256": "69c85d6b92229a9739a84872faa54a6a114d03d5321a80d983c1395940b7eabb",
+      "bytes": 1595
+    },
+    "r/os/tokens.css": {
+      "sha256": "8e00a15d00d1c6d07935144cdd831ca8f8eae7604a11706d48674cad21987883",
+      "bytes": 16897
+    },
+    "r/os/tokens.json": {
+      "sha256": "617cfc0e31e44d012f60db47ddb4960b10b385286138523835c2c429213f9da5",
+      "bytes": 25070
+    },
+    "r/os/toolbar.json": {
+      "sha256": "e6d5375e2504978a46bea8e03b2a237de0c5fc774438411c495c9bb7b6c93909",
+      "bytes": 1548
+    },
+    "r/os/tooltip.json": {
+      "sha256": "7d925a2181ac87b492584c29bd94d867fe8fcdf4107083324311e4c240c6825d",
+      "bytes": 1697
+    },
+    "r/os/topbar.json": {
+      "sha256": "c75705386a634083812e5bb34e26f2427922ef3592432336438d7d7ff959e7da",
+      "bytes": 1336
+    },
+    "r/os/transport.json": {
+      "sha256": "e0f16f96b88337917f8c45f6f3dbe6329ea3ca5b856a76e474970bc67b7e9d6a",
+      "bytes": 1831
+    },
+    "r/os/tree-view.json": {
+      "sha256": "e80cf6967e0eb19c0612571274e3c3960d3abad9899bd5f7c77f78f57b35387f",
+      "bytes": 1167
+    },
+    "r/os/type-specimen.json": {
+      "sha256": "a5de4a15926173313b26ba619d107d3bf5f4205ce73fcb2825ebbee3a1512824",
+      "bytes": 1104
+    },
+    "r/os/view-switcher.json": {
+      "sha256": "0bdf8bfa3e1b9ff1bbadc4ad16ed85892982ed26b5b599f0ecd5fe5a2481e30c",
+      "bytes": 1462
+    },
+    "r/os/viewer-shell.json": {
+      "sha256": "d73c024bfe095d751dafe0e1c2c643549c55017889c5df1dd9dab9085b9579ff",
+      "bytes": 1364
+    },
+    "r/os/widget-shell.json": {
+      "sha256": "ac557c3248a6aa6bdfd604b47063c3bf8db5393eb974f5f42ee18e19aa98d6e7",
+      "bytes": 1441
+    },
+    "r/os/window-shell.json": {
+      "sha256": "2ed38c29f204b2745792aae85704f1e76015d9ec63c6199f2a29972758a43e42",
+      "bytes": 2015
+    },
+    "r/os/workspace-error-boundary.json": {
+      "sha256": "f981202a9988192f034038eb613de55d0975e4330ca0798cf7cc4122a0860def",
+      "bytes": 1604
+    },
+    "r/os/workspace-switcher.json": {
+      "sha256": "6c74961789ae0bed7820714925a4ddd38d768b1405b64f8fa2206b650a57b972",
+      "bytes": 1604
+    },
+    "r/os/workspace-tree.json": {
+      "sha256": "70f24844f4a5ace97eb88ea56fd44c56ffe6b7b3970e1bd393975ecbe5dea6fc",
+      "bytes": 3860
+    },
+    "r/otp-input.json": {
+      "sha256": "a52a5f66a6468e94e1c5df99ae1d313e55b78a6afbfbc61d3f71864abb304330",
+      "bytes": 1335
+    },
+    "r/page-header.json": {
+      "sha256": "6bb5074d15fc01776281fa9a06243aa64d5ec9f7588685cc10352043d84d3447",
+      "bytes": 1394
+    },
+    "r/pagination.json": {
+      "sha256": "1ad59a1a401cbb92907792b176cfb577a4e5877e20026e63c42ff4ebd652b482",
+      "bytes": 1441
+    },
+    "r/password-input.json": {
+      "sha256": "efc7e0e2ef1939e85dc2ed66fa5d7da3586bef5d897bcf7fea2e89fdb39b30ca",
+      "bytes": 1383
+    },
+    "r/playhead.json": {
+      "sha256": "6af37fcaed4c39e0f5bd733736ce9ee3c8aca3a146bbb350ce60a37b48cc0fd0",
+      "bytes": 1041
+    },
+    "r/popover.json": {
+      "sha256": "022c90160013066fd38421fc7ed7eab8380f0afff7bed29c5ba389304dbe9c8e",
+      "bytes": 1703
+    },
+    "r/preview-toolbar.json": {
+      "sha256": "f039cf1df07c2f86e6dd5688b8ddbd6e2f8b45239029d8e67af9dc4e1b9f76b5",
+      "bytes": 1558
+    },
+    "r/pricing-card.json": {
+      "sha256": "1a081aeaa4ab59e555c1eae92b73508c4a903c43839381ffe14003da8865d8a9",
+      "bytes": 1714
+    },
+    "r/pricing-table.json": {
+      "sha256": "cf45dc85f799841964b6fe91bbd9df192b739ba41a018f7f12b2d333d0c6b37e",
+      "bytes": 1723
+    },
+    "r/profile-form.json": {
+      "sha256": "084f51ad5d7c935aec44271ffdbaa47075e10e62f904e89163aae6c9815bad0e",
+      "bytes": 2098
+    },
+    "r/progress-card.json": {
+      "sha256": "557d363b71b882260f69012fe4916a7911b8e90d50501ddd08d81dcbc4aeee6e",
+      "bytes": 1410
+    },
+    "r/progress.json": {
+      "sha256": "6e221f62864a97cffda2e3207543e94868faa5b947d1c389a2b504df0e0c37ce",
+      "bytes": 1153
+    },
+    "r/project-switcher.json": {
+      "sha256": "7bacf0e6885b59fb4fa388413bd1e4f92d5891c19e331ccebd8f077808fa3e13",
+      "bytes": 1641
+    },
+    "r/radio-group.json": {
+      "sha256": "5b0fadfeb34254956c9e21a5dc6ff852164f84da8ba69c40ef48e35134b04b5e",
+      "bytes": 1308
+    },
+    "r/radius-guide.json": {
+      "sha256": "9d6dfac6e593f2d804f4cdcbd408fd8acb08f2bec03752803cc0bcd63e84efc3",
+      "bytes": 1161
+    },
+    "r/range-slider.json": {
+      "sha256": "241da3dc0672744a79d67684c826673cf590e504d4ca35104546f21ac774ebf1",
+      "bytes": 1190
+    },
+    "r/rating.json": {
+      "sha256": "14d6a77e757edf1aad09d5bff6a489c45b99a10f8d0160fef6f2cc0eb37cca05",
+      "bytes": 1301
+    },
+    "r/registry.json": {
+      "sha256": "d14a14bd6901a51bb0efbce131e6db2f7d778f25b1cb072f6bf5a9c84b79c498",
+      "bytes": 86129
+    },
+    "r/render-status.json": {
+      "sha256": "450eec92589cede412232722a10fa7ab0e5024af2082e254c4290cbc4dab5c8c",
+      "bytes": 1380
+    },
+    "r/scene-list-item.json": {
+      "sha256": "0556076f83414dd9a899a31fec64f35f7243af3a0d7364570bc9586be6ff0458",
+      "bytes": 1771
+    },
+    "r/search-field.json": {
+      "sha256": "274494db2636ce5d29ab5b6a837c512e39ccae6453f9f00404cb84b75cd9b346",
+      "bytes": 1365
+    },
+    "r/search-results.json": {
+      "sha256": "0295105091a114666d3a9d842db305f865def9e7f8b3722c9a3650775fc4ff23",
+      "bytes": 1793
+    },
+    "r/segmented-control.json": {
+      "sha256": "cf23c8d1e7a08f92fc555dcdc17b14b9f3c4aef15c2743c8ccd772d110519a3d",
+      "bytes": 1651
+    },
+    "r/select.json": {
+      "sha256": "31370622620335ae925662e8d0c7bdd58ad15add4d99300fa2cbbdce6383ec9a",
+      "bytes": 1315
+    },
+    "r/separator.json": {
+      "sha256": "1e78c53e81451b8ba6e141479b40b5fac6ae63d68406d6caf333825344285609",
+      "bytes": 1020
+    },
+    "r/settings-panel.json": {
+      "sha256": "fdec9ca586d5547256d79bebcd5c40be526f3b2a84299b8fd6c23cf50e428f36",
+      "bytes": 2118
+    },
+    "r/settings-sheet.json": {
+      "sha256": "7b781b41ed8de27aa0cd41f26d0427f20b1388a4dd3011cea6624a67ee4c146d",
+      "bytes": 4710
+    },
+    "r/shadow-guide.json": {
+      "sha256": "5cc7014d6f9e6fb480470f0a6d8a5e70ca968c2f3a2fd58c536691c30d76f913",
+      "bytes": 1147
+    },
+    "r/shadow/design-tokens.json": {
+      "sha256": "aa72c1ce0da83f6916aad80efb7553ae8c96b3eb5236997395cc349a6b056936",
+      "bytes": 10416
+    },
+    "r/shadow/registry.json": {
+      "sha256": "120a0b0a26e0107617174942a55bc854d07db175c904b6defa6ebcce69b98640",
+      "bytes": 10489
+    },
+    "r/shadow/smooth-shadow.json": {
+      "sha256": "341179fe9cf4cd21586bb150361c29bac773edd7b41a6df973f71a5e324bdd6a",
+      "bytes": 11099
+    },
+    "r/shadow/tokens.css": {
+      "sha256": "575ea69c79ca67473829047aa481b989f7bcb7bd0bdc55b2325926ede54cef2d",
+      "bytes": 8949
+    },
+    "r/sheet.json": {
+      "sha256": "0a4b64707e1dd7a883039a28afc7e27d8ba617bd7b5c89d49173fc338c78afbf",
+      "bytes": 1681
+    },
+    "r/sidebar.json": {
+      "sha256": "f8ecf864b2f11e3df876e0a5e13c12310af6f52519432bf88c09e184c5783bb9",
+      "bytes": 1353
+    },
+    "r/sign-in-form.json": {
+      "sha256": "525e502568ab3612d2e7c0dba32b5ba094310c844a188fe83378ac18c36b412f",
+      "bytes": 2095
+    },
+    "r/sign-up-form.json": {
+      "sha256": "6e2dcb9600dc0ee52a808b4446f6a63e8a30574fa131bdccb232cdb058b7d6ee",
+      "bytes": 2095
+    },
+    "r/skeleton.json": {
+      "sha256": "e2efa5179e3c01c17a91020e8378b1341341a9c2c540c1898e2f28871e61240c",
+      "bytes": 1179
+    },
+    "r/slider.json": {
+      "sha256": "c413be8004c98d3341aebb4be6d1e6695d138cbbc35df3d20bfecc40f6d6cec2",
+      "bytes": 1133
+    },
+    "r/snackbar.json": {
+      "sha256": "dfccfe1e3ad4afe5d165a16c95f1ccdff3d443e242c16fc9b0c5a65f2464a4f7",
+      "bytes": 1363
+    },
+    "r/spacing-guide.json": {
+      "sha256": "4540144e056307bc559cc6cdd7cfb135d939b2ae6e690887ad82b7183c30e051",
+      "bytes": 1091
+    },
+    "r/spinner.json": {
+      "sha256": "4b1a6c4d1808843535475443c4bc0001e79a4d1827a429466ba680b0ffbb85b3",
+      "bytes": 1170
+    },
+    "r/split-button.json": {
+      "sha256": "538f5a1bdb1171adc55b55279d964a3c246db04d12fa7719609e78a6d2d31750",
+      "bytes": 1978
+    },
+    "r/split-view.json": {
+      "sha256": "d5964e99049b8d44d91985adc06e0824ff3784d1184af76459622dbf8ee0b639",
+      "bytes": 1758
+    },
+    "r/stack.json": {
+      "sha256": "cbf405462970aea8d84da9f4a81f9c535244772ad2fcf28c5b16abc6f79b1fe0",
+      "bytes": 985
+    },
+    "r/stage-viewport.json": {
+      "sha256": "0b3619b3c16ab2a48811b77587ba931f954a05f6b0a02e3ad3efd52819e0184c",
+      "bytes": 1396
+    },
+    "r/stat-group.json": {
+      "sha256": "2a77f4cc1d85d9c951d6cec47397980cca574c86f7dcc5d251ac9d1b5dc082bb",
+      "bytes": 1358
+    },
+    "r/stat.json": {
+      "sha256": "9d3f8b0c49bf6da320c1191fa5e6dddc0ae8e46b0980e964510bdb24df04fecf",
+      "bytes": 1307
+    },
+    "r/status-bar.json": {
+      "sha256": "3282aa32d03527119acd1330a885d05a02e196a0624d7614686ba18cbdc6896c",
+      "bytes": 1097
+    },
+    "r/status-dot.json": {
+      "sha256": "98810d20daa0843cb76d93ea94c60475c1b8ed588935791235f741bd0d44761d",
+      "bytes": 1380
+    },
+    "r/stepper.json": {
+      "sha256": "fe7a482f7fd32ebcd5cf67dba8f9627465e754933e19c3bacce2cc5d9cf5b61e",
+      "bytes": 1411
+    },
+    "r/storyboard-rail.json": {
+      "sha256": "e50283318b9b14c429ad2dcf7d6d6ad1d88a3a5e61bd9477a7ca0eab3b0ff1f4",
+      "bytes": 1897
+    },
+    "r/studio-header.json": {
+      "sha256": "78068cf16e19d3e6f5f9630dff8fcbf7119b6bdf24552cf8acc1f96cd5e8bc0d",
+      "bytes": 1823
+    },
+    "r/studio-shell.json": {
+      "sha256": "aef287d9a659f331d04be5e5720e2aefc60b4e5a0f9b606fdb7b4f9a17ed530c",
+      "bytes": 1600
+    },
+    "r/style-inspector.json": {
+      "sha256": "58e4237e8c35be90e1bd21552e043c5152ac12067ea2e991458b8bde4aa00dca",
+      "bytes": 1399
+    },
+    "r/success-state.json": {
+      "sha256": "c49f35a61f027d3673deaf9ddf9b07d1ed9ced0d648a121ec3c86e05ed02911d",
+      "bytes": 1188
+    },
+    "r/surface.json": {
+      "sha256": "8cd2767c0d56d521db8f89f7531d5b9c1a5734718bd1f5e903964e4896f9039f",
+      "bytes": 1250
+    },
+    "r/switch.json": {
+      "sha256": "66dbdc0dd3fa4799969ff0368165fb8463a9f2b57df270992f7cc06775722e05",
+      "bytes": 1259
+    },
+    "r/system-catalog.json": {
+      "sha256": "a6f4fc9fbb8ef77c46cc50167bda64c470e745d49b3a0f0f85c44e149d014ecc",
+      "bytes": 69797
+    },
+    "r/table-of-contents.json": {
+      "sha256": "654623097d3db238a795b87bafa02330190c3909e309d2bbc5fc5dbfdfad9b52",
+      "bytes": 1457
+    },
+    "r/table.json": {
+      "sha256": "31158984ce813c6e46434aaa3347db19004a5046d110770da23b3eda62a4d7ca",
+      "bytes": 1255
+    },
+    "r/tabs.json": {
+      "sha256": "bd9ddc002fbf55c5b49b32eee8ed11a06cc1bec51d9b0740b73473d8f96678ad",
+      "bytes": 1381
+    },
+    "r/task-board.json": {
+      "sha256": "4da75af6b63dc1a23e5a43967d30cd5794f0727e5f028cb07e00f2f5b7e84fd6",
+      "bytes": 1658
+    },
+    "r/task-rail.json": {
+      "sha256": "761fc70559bb75b7be6bf7b1e1da2df33da70a52296f8c354ab7753c63e718f6",
+      "bytes": 1347
+    },
+    "r/template-gallery.json": {
+      "sha256": "675c2fc187b5742d053637be5f1b9230409cea8871e2b52bff5b156fdfc529e0",
+      "bytes": 1454
+    },
+    "r/terminal-surface.json": {
+      "sha256": "674e6452f4c869078cb23ac0a37cc9af5f029821ea47b33224ff30f0a52df2b8",
+      "bytes": 1159
+    },
+    "r/textarea.json": {
+      "sha256": "c54a179894c87f2e1160c1d48739d186a969d9372588e2e5ed28e55a08ec973d",
+      "bytes": 1313
+    },
+    "r/time-input.json": {
+      "sha256": "e25eefd07eeab27592547715421ddee5326e05dd0e476682a59b14a9f27e7807",
+      "bytes": 1339
+    },
+    "r/timeline-segment.json": {
+      "sha256": "df396b8499238d836bd633f083ef11470761436ef3790c5452ba6131603f69e2",
+      "bytes": 1245
+    },
+    "r/timeline.json": {
+      "sha256": "59af3e275cf0e7271f0e400819c08bf932fd898e0431177a315131c66198d0ec",
+      "bytes": 1164
+    },
+    "r/toast.json": {
+      "sha256": "44d94c555091eece2ce9b47b32d0b7f166db0c3b201f61c836ce881401db071d",
+      "bytes": 1333
+    },
+    "r/toggle-button.json": {
+      "sha256": "f6c4fa0cafce8db6b6a5017d1ca9a764416ade6be1f16be0f6719edc8274e3df",
+      "bytes": 1667
+    },
+    "r/toggle-group.json": {
+      "sha256": "adef4bb55c5e8f7fdfd0be4a209a7c75eee130a67310d20e1b99a5877a955253",
+      "bytes": 1601
+    },
+    "r/tokens.css": {
+      "sha256": "bbf616059e4b02b928c57186f3f834a386b93101343462f1b97db9951140a940",
+      "bytes": 4803
+    },
+    "r/tokens.json": {
+      "sha256": "38e9145a166339d5382110352e422a3286442b391895a7b9cda423ec12ef89a7",
+      "bytes": 9207
+    },
+    "r/toolbar.json": {
+      "sha256": "17c1f772406cef6b83d256aed078082751046152307cbd4ca0f93c5ae751eb71",
+      "bytes": 1554
+    },
+    "r/tooltip.json": {
+      "sha256": "b20306f01bbf23a2a14c22556157920230be5e770db60ec38fa131db7f9224df",
+      "bytes": 1703
+    },
+    "r/topbar.json": {
+      "sha256": "f62b1e872c039f0b5a6fc0009024c68d6040de942cede61433a2d97663766584",
+      "bytes": 1342
+    },
+    "r/transport.json": {
+      "sha256": "927040e6011aba94148b2cbebbd2f8590883aada0cd7b476a064f9ee34b34562",
+      "bytes": 1837
+    },
+    "r/tree-view.json": {
+      "sha256": "1b121b931f381b7fee1eef35087afb2ebb42d6d8c22d2c292d6c1105c00f7fad",
+      "bytes": 1173
+    },
+    "r/type-specimen.json": {
+      "sha256": "2af5d7e11c1853dd38329ad1db1ecdb96c21bf136abe94526624480735e88a7a",
+      "bytes": 1110
+    },
+    "r/vanilla/badge.json": {
+      "sha256": "8c2fb910f878d4ff45092addf80bf95d088a9411cd3a81dc5877bbbaa86e4ef9",
+      "bytes": 2126
+    },
+    "r/vanilla/button.json": {
+      "sha256": "57b3877055db1d47670cf615f9d050c04221c5810511b1211b513759b34cf4c9",
+      "bytes": 2616
+    },
+    "r/vanilla/card.json": {
+      "sha256": "e2d1995cc4104376a84d2378231fa0d8c74801eeb9c1e3f3e57265651b532aa3",
+      "bytes": 1824
+    },
+    "r/vanilla/checkbox.json": {
+      "sha256": "654e039675d130a8552a24fa67d62c502c5dad98d9dd67a74b41c8b35009541e",
+      "bytes": 2474
+    },
+    "r/vanilla/dialog.json": {
+      "sha256": "b3b30601dcd976338b7daba21717e8a569ab69bea6aae7854733aabed5fd37d3",
+      "bytes": 2731
+    },
+    "r/vanilla/empty-state.json": {
+      "sha256": "3d541fe3ae1b89e27157bf4c46292cb7c02d043206de7c9b7183e154de0e1f6d",
+      "bytes": 1585
+    },
+    "r/vanilla/field.json": {
+      "sha256": "5c0ccd95d8b7c44cc5045b658bbbb9cc5ab8760078afabfef25c523c5ec48093",
+      "bytes": 2608
+    },
+    "r/vanilla/kit.css": {
+      "sha256": "a6e4c0c51cb5d2960bb85f6d94f8d4d1c887d4733255b2b92c01768f071f1991",
+      "bytes": 15316
+    },
+    "r/vanilla/kit.js": {
+      "sha256": "5ca18ba626be2378cd10e49ebe801fe4f5a92ddfd2c16c3a781b2d18f5ce0f56",
+      "bytes": 2359
+    },
+    "r/vanilla/notice.json": {
+      "sha256": "23e419f9c23064d3a169501b481cd6aecaaca4aae19e31efa31f63e62824dcc5",
+      "bytes": 3284
+    },
+    "r/vanilla/registry.json": {
+      "sha256": "da3364f2b632446780e246d8830b87549e5795a3d9e11a5aa2af6af4d19d5ba3",
+      "bytes": 2888
+    },
+    "r/vanilla/select.json": {
+      "sha256": "5a5064450e086807ef85f34d5df452ab6ca74932beb9ca198a76aba5ef00e49f",
+      "bytes": 1834
+    },
+    "r/vanilla/switch.json": {
+      "sha256": "1034c0f0e7d9d0e41c37196d0354f2a72aa1936aca00a1be9239eb6b493849ac",
+      "bytes": 2229
+    },
+    "r/vanilla/table.json": {
+      "sha256": "7fd571add0328ab04b7d7648d58b570a9e9619838aa3355142587040bc2a0b2f",
+      "bytes": 2235
+    },
+    "r/vanilla/tabs.json": {
+      "sha256": "221c528423da85759f7e87ecb29fd7b0be7f722517d04aa2d63a9ade096575df",
+      "bytes": 4242
+    },
+    "r/view-switcher.json": {
+      "sha256": "78de521c9d8e148bc1623e176a76c714f1d611a2afa22917c73282cd89b322fd",
+      "bytes": 1468
+    },
+    "r/viewer-shell.json": {
+      "sha256": "4e7da127ef138a2746782ae4266cbe28d920b24b64131ae5a2440763821df862",
+      "bytes": 1370
+    },
+    "r/widget-shell.json": {
+      "sha256": "4496a2ca918ec8e7573191ce5d44a05fdb218c66ac14e5d866e244b1ff2c5808",
+      "bytes": 1447
+    },
+    "r/window-shell.json": {
+      "sha256": "4c208cb333e6d31db52d34fc45e1580a1a558b0ea859153f89b1b7dd3077aeed",
+      "bytes": 2021
+    },
+    "r/workspace-error-boundary.json": {
+      "sha256": "0180acd8cc0fe2dc5724dd6559bd8fba652b76da37e87c5708f8790b9a5e4b87",
+      "bytes": 1610
+    },
+    "r/workspace-switcher.json": {
+      "sha256": "9b004000fe4dbc2d36822b1037dc94938d766ca3c4170913030b9290115ad62b",
+      "bytes": 1610
+    },
+    "r/workspace-tree.json": {
+      "sha256": "ddb1d389ffde277b2c4cc7858a58f2d6e92545904b86f4daa327269569f389f6",
+      "bytes": 3866
+    }
+  }
+}

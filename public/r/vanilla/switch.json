@@ -1,0 +1,23 @@
+{
+  "format": "kit-piece/1",
+  "name": "switch",
+  "title": "Switch",
+  "description": "CSS-only toggle on a real checkbox.",
+  "dialect": "vanilla",
+  "systems": "universal",
+  "requires": {
+    "tokens": "https://kit.scottelling.com/r/tokens.css (or the jade/os/animation tokens.css)"
+  },
+  "files": [
+    {
+      "path": "switch.css",
+      "type": "css",
+      "content": "/* KIT vanilla — switch: CSS-only toggle on a real checkbox, 44px row. */\n.kit-switch-row {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: var(--kit-space-base, 12px);\n  min-height: var(--kit-control-height, 44px);\n  font-size: var(--kit-body-size, 15px);\n  color: var(--foreground);\n  cursor: pointer;\n}\n.kit-switch {\n  appearance: none;\n  flex: none;\n  width: 44px;\n  height: 26px;\n  margin: 0;\n  border: 1.5px solid var(--input);\n  border-radius: 999px;\n  background: var(--muted);\n  cursor: pointer;\n  position: relative;\n  transition: background-color var(--kit-standard, 180ms) var(--kit-ease, ease-out),\n    border-color var(--kit-standard, 180ms) var(--kit-ease, ease-out);\n}\n.kit-switch::before {\n  content: \"\";\n  position: absolute;\n  top: 2px;\n  left: 2px;\n  width: 19px;\n  height: 19px;\n  border-radius: 50%;\n  background: var(--background);\n  box-shadow: var(--shadow-control, 0 1px 2px rgba(0, 0, 0, 0.2));\n  transition: translate var(--kit-standard, 180ms) var(--kit-ease, ease-out);\n}\n.kit-switch:checked {\n  background: var(--primary);\n  border-color: var(--primary);\n}\n.kit-switch:checked::before { translate: 18px 0; }\n.kit-switch:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }\n.kit-switch:disabled { opacity: 0.5; cursor: not-allowed; }\n\n@media (prefers-reduced-motion: reduce) {\n  .kit-switch, .kit-switch::before { transition-duration: 0.01ms; }\n}\n"
+    },
+    {
+      "path": "switch.html",
+      "type": "html",
+      "content": "<label class=\"kit-switch-row\">\n  Desktop alerts\n  <input class=\"kit-switch\" type=\"checkbox\" role=\"switch\" checked />\n</label>\n<label class=\"kit-switch-row\">\n  Auto-deploy on push\n  <input class=\"kit-switch\" type=\"checkbox\" role=\"switch\" />\n</label>\n"
+    }
+  ]
+}

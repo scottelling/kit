@@ -8,6 +8,21 @@ npx shadcn add https://kit.scottelling.com/r/button.json
 
 Every component carries the `tokens` registry dependency, so Purple Rain’s OKLCH light and dark variables merge automatically.
 
+## The KIT format
+
+`SPEC.md` defines the format underneath the registry: tokens are the shared
+language, and shadcn is one dialect of it, not the foundation. A project with
+no React, Tailwind, or build step adopts the same language directly:
+
+```html
+<link rel="stylesheet" href="https://kit.scottelling.com/r/tokens.css" />
+```
+
+- Framework-free tokens: `/r/tokens.css` + `/r/design-tokens.json` per system
+- Vanilla pieces (zero-dependency HTML/CSS/JS): `/r/vanilla/registry.json`, live at `/vanilla`
+- Machine-readable doctrine for agents: `/r/doctrine.json`
+- Drift detection: `/r/checksums.json` + a consumer `kit-manifest.json` + `npm run doctor -- <project-dir>`
+
 Purple Rain, JADE, OS, and Animation Studio each expose the same 175-piece catalog. The 138 everyday pieces and 37 specialist patterns are all available, but each is installed individually so unrelated layouts never arrive by accident.
 
 JADE exposes the same production component contract with its own tactile light and dark foundations under `https://kit.scottelling.com/r/jade/`.

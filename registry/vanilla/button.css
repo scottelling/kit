@@ -1,0 +1,47 @@
+/* KIT vanilla — button. Uses only universal token variables. */
+.kit-button {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--kit-control-height, 44px);
+  padding: 0 calc(var(--kit-space-base, 12px) * 1.5);
+  border: 1px solid transparent;
+  border-radius: var(--radius-control, 8px);
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font: inherit;
+  font-size: var(--kit-body-size, 15px);
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow-control, none);
+  transition: background-color var(--kit-fast, 120ms) var(--kit-ease, ease-out),
+    border-color var(--kit-fast, 120ms) var(--kit-ease, ease-out),
+    color var(--kit-fast, 120ms) var(--kit-ease, ease-out);
+}
+.kit-button:hover { filter: brightness(1.06); }
+.kit-button:active { filter: brightness(0.94); }
+.kit-button:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+.kit-button:disabled { opacity: 0.5; cursor: not-allowed; filter: none; }
+
+.kit-button[data-variant="secondary"] {
+  background: var(--secondary);
+  color: var(--secondary-foreground);
+  border-color: var(--border);
+}
+.kit-button[data-variant="ghost"] {
+  background: transparent;
+  color: var(--foreground);
+  box-shadow: none;
+}
+.kit-button[data-variant="ghost"]:hover { background: var(--muted); filter: none; }
+.kit-button[data-variant="destructive"] {
+  background: var(--destructive);
+  color: var(--destructive-foreground);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kit-button { transition-duration: 0.01ms; }
+}

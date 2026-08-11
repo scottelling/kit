@@ -1,0 +1,48 @@
+/* KIT vanilla — checkbox: 20px mark inside a 44px touch row. */
+.kit-choice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: var(--kit-control-height, 44px);
+  padding: 0 4px;
+  cursor: pointer;
+  font-size: var(--kit-body-size, 15px);
+  color: var(--foreground);
+  border-radius: var(--radius-control, 8px);
+}
+.kit-choice > input[type="checkbox"] {
+  appearance: none;
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  border: 1.5px solid var(--input);
+  border-radius: 6px;
+  background: var(--background);
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  transition: background-color var(--kit-fast, 120ms) var(--kit-ease, ease-out),
+    border-color var(--kit-fast, 120ms) var(--kit-ease, ease-out);
+}
+.kit-choice > input[type="checkbox"]::before {
+  content: "";
+  width: 10px;
+  height: 6px;
+  border-left: 2px solid var(--primary-foreground);
+  border-bottom: 2px solid var(--primary-foreground);
+  transform: rotate(-45deg) translate(1px, -1px);
+  opacity: 0;
+}
+.kit-choice > input[type="checkbox"]:checked {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.kit-choice > input[type="checkbox"]:checked::before { opacity: 1; }
+.kit-choice > input[type="checkbox"]:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+.kit-choice > input[type="checkbox"]:disabled { opacity: 0.5; cursor: not-allowed; }
+.kit-choice:has(> input:disabled) { cursor: not-allowed; color: var(--muted-foreground); }
+
+@media (prefers-reduced-motion: reduce) {
+  .kit-choice > input[type="checkbox"] { transition-duration: 0.01ms; }
+}

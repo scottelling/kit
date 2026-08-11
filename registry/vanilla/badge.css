@@ -1,0 +1,38 @@
+/* KIT vanilla — badge: compact status label, readable at 12px. */
+.kit-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--muted);
+  color: var(--foreground);
+  font-size: var(--kit-compact-size, 12px);
+  font-weight: 600;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+.kit-badge::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--muted-foreground);
+}
+.kit-badge[data-tone="positive"] {
+  background: color-mix(in oklab, var(--positive) 12%, var(--background));
+  border-color: color-mix(in oklab, var(--positive) 35%, var(--border));
+  color: var(--foreground);
+}
+.kit-badge[data-tone="positive"]::before { background: var(--positive); }
+.kit-badge[data-tone="destructive"] {
+  background: color-mix(in oklab, var(--destructive) 12%, var(--background));
+  border-color: color-mix(in oklab, var(--destructive) 35%, var(--border));
+}
+.kit-badge[data-tone="destructive"]::before { background: var(--destructive); }
+.kit-badge[data-tone="primary"] {
+  background: color-mix(in oklab, var(--primary) 12%, var(--background));
+  border-color: color-mix(in oklab, var(--primary) 35%, var(--border));
+}
+.kit-badge[data-tone="primary"]::before { background: var(--primary); }

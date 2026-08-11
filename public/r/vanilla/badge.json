@@ -1,0 +1,23 @@
+{
+  "format": "kit-piece/1",
+  "name": "badge",
+  "title": "Badge",
+  "description": "Compact status label in neutral, primary, positive, and destructive tones.",
+  "dialect": "vanilla",
+  "systems": "universal",
+  "requires": {
+    "tokens": "https://kit.scottelling.com/r/tokens.css (or the jade/os/animation tokens.css)"
+  },
+  "files": [
+    {
+      "path": "badge.css",
+      "type": "css",
+      "content": "/* KIT vanilla — badge: compact status label, readable at 12px. */\n.kit-badge {\n  display: inline-flex;\n  align-items: center;\n  gap: 6px;\n  padding: 3px 10px;\n  border: 1px solid var(--border);\n  border-radius: 999px;\n  background: var(--muted);\n  color: var(--foreground);\n  font-size: var(--kit-compact-size, 12px);\n  font-weight: 600;\n  line-height: 1.6;\n  white-space: nowrap;\n}\n.kit-badge::before {\n  content: \"\";\n  width: 6px;\n  height: 6px;\n  border-radius: 50%;\n  background: var(--muted-foreground);\n}\n.kit-badge[data-tone=\"positive\"] {\n  background: color-mix(in oklab, var(--positive) 12%, var(--background));\n  border-color: color-mix(in oklab, var(--positive) 35%, var(--border));\n  color: var(--foreground);\n}\n.kit-badge[data-tone=\"positive\"]::before { background: var(--positive); }\n.kit-badge[data-tone=\"destructive\"] {\n  background: color-mix(in oklab, var(--destructive) 12%, var(--background));\n  border-color: color-mix(in oklab, var(--destructive) 35%, var(--border));\n}\n.kit-badge[data-tone=\"destructive\"]::before { background: var(--destructive); }\n.kit-badge[data-tone=\"primary\"] {\n  background: color-mix(in oklab, var(--primary) 12%, var(--background));\n  border-color: color-mix(in oklab, var(--primary) 35%, var(--border));\n}\n.kit-badge[data-tone=\"primary\"]::before { background: var(--primary); }\n"
+    },
+    {
+      "path": "badge.html",
+      "type": "html",
+      "content": "<span class=\"kit-badge\">Draft</span>\n<span class=\"kit-badge\" data-tone=\"primary\">Building</span>\n<span class=\"kit-badge\" data-tone=\"positive\">Live</span>\n<span class=\"kit-badge\" data-tone=\"destructive\">Failed</span>\n"
+    }
+  ]
+}

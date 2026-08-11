@@ -1,0 +1,40 @@
+/* KIT vanilla — field: label, text input, help and error lines. */
+.kit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: var(--kit-reading-measure, 64ch);
+}
+.kit-field > label {
+  font-size: var(--kit-compact-size, 12px);
+  font-weight: 600;
+  color: var(--foreground);
+}
+.kit-field .kit-input {
+  appearance: none;
+  min-height: var(--kit-control-height, 44px);
+  padding: 0 var(--kit-space-base, 12px);
+  border: 1px solid var(--input);
+  border-radius: var(--radius-control, 8px);
+  background: var(--background);
+  color: var(--foreground);
+  font: inherit;
+  font-size: var(--kit-body-size, 15px);
+  box-shadow: var(--shadow-inset, none);
+  transition: border-color var(--kit-fast, 120ms) var(--kit-ease, ease-out);
+  width: 100%;
+}
+.kit-field .kit-input::placeholder { color: var(--muted-foreground); }
+.kit-field .kit-input:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; border-color: var(--ring); }
+.kit-field .kit-input:disabled { opacity: 0.5; cursor: not-allowed; background: var(--muted); }
+.kit-field .kit-help {
+  font-size: var(--kit-compact-size, 12px);
+  color: var(--muted-foreground);
+}
+.kit-field[data-state="error"] .kit-input { border-color: var(--destructive); }
+.kit-field[data-state="error"] .kit-help { color: var(--destructive); }
+.kit-field[data-state="success"] .kit-help { color: var(--positive); }
+
+@media (prefers-reduced-motion: reduce) {
+  .kit-field .kit-input { transition-duration: 0.01ms; }
+}

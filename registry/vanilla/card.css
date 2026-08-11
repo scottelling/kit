@@ -1,0 +1,35 @@
+/* KIT vanilla — card: seated surface, tonal depth, no hover lift. */
+.kit-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kit-space-base, 12px);
+  padding: calc(var(--kit-space-base, 12px) * 1.5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card, 12px);
+  background: var(--card);
+  color: var(--card-foreground);
+  box-shadow: var(--shadow-panel, none);
+  max-width: var(--kit-reading-measure, 64ch);
+}
+.kit-card > h3 {
+  margin: 0;
+  font-family: var(--font-heading, inherit);
+  font-size: calc(var(--kit-body-size, 15px) * 1.2);
+  font-weight: 700;
+  line-height: var(--kit-leading, 1.5);
+}
+.kit-card > p {
+  margin: 0;
+  font-size: var(--kit-body-size, 15px);
+  line-height: var(--kit-leading, 1.5);
+  color: var(--muted-foreground);
+}
+.kit-card > footer {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.kit-card[data-selected="true"] {
+  border-color: var(--primary);
+  outline: 1px solid var(--primary);
+}

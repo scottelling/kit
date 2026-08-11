@@ -1,0 +1,28 @@
+{
+  "format": "kit-piece/1",
+  "name": "tabs",
+  "title": "Tabs",
+  "description": "Accessible tabs with click and arrow-key switching.",
+  "dialect": "vanilla",
+  "systems": "universal",
+  "requires": {
+    "tokens": "https://kit.scottelling.com/r/tokens.css (or the jade/os/animation tokens.css)"
+  },
+  "files": [
+    {
+      "path": "tabs.css",
+      "type": "css",
+      "content": "/* KIT vanilla — tabs: 44px targets, visible focus, arrow-key support via tabs.js. */\n.kit-tabs { display: flex; flex-direction: column; gap: var(--kit-space-base, 12px); }\n.kit-tabs > [role=\"tablist\"] {\n  display: flex;\n  gap: 4px;\n  border-bottom: 1px solid var(--border);\n  overflow-x: auto;\n}\n.kit-tabs [role=\"tab\"] {\n  appearance: none;\n  border: none;\n  background: none;\n  min-height: var(--kit-control-height, 44px);\n  padding: 0 var(--kit-space-base, 12px);\n  font: inherit;\n  font-size: var(--kit-body-size, 15px);\n  font-weight: 600;\n  color: var(--muted-foreground);\n  cursor: pointer;\n  border-bottom: 2px solid transparent;\n  margin-bottom: -1px;\n  white-space: nowrap;\n  transition: color var(--kit-fast, 120ms) var(--kit-ease, ease-out);\n}\n.kit-tabs [role=\"tab\"]:hover { color: var(--foreground); }\n.kit-tabs [role=\"tab\"][aria-selected=\"true\"] {\n  color: var(--foreground);\n  border-bottom-color: var(--primary);\n}\n.kit-tabs [role=\"tab\"]:focus-visible { outline: 2px solid var(--ring); outline-offset: -2px; }\n.kit-tabs [role=\"tabpanel\"] {\n  font-size: var(--kit-body-size, 15px);\n  line-height: var(--kit-leading, 1.5);\n}\n.kit-tabs [role=\"tabpanel\"][hidden] { display: none; }\n\n@media (prefers-reduced-motion: reduce) {\n  .kit-tabs [role=\"tab\"] { transition-duration: 0.01ms; }\n}\n"
+    },
+    {
+      "path": "tabs.html",
+      "type": "html",
+      "content": "<div class=\"kit-tabs\" data-kit-tabs>\n  <div role=\"tablist\" aria-label=\"Report sections\">\n    <button role=\"tab\" id=\"tab-summary\" aria-controls=\"panel-summary\" aria-selected=\"true\" type=\"button\">Summary</button>\n    <button role=\"tab\" id=\"tab-activity\" aria-controls=\"panel-activity\" aria-selected=\"false\" type=\"button\">Activity</button>\n    <button role=\"tab\" id=\"tab-settings\" aria-controls=\"panel-settings\" aria-selected=\"false\" type=\"button\">Settings</button>\n  </div>\n  <div role=\"tabpanel\" id=\"panel-summary\" aria-labelledby=\"tab-summary\">Everything shipped cleanly this week.</div>\n  <div role=\"tabpanel\" id=\"panel-activity\" aria-labelledby=\"tab-activity\" hidden>Three deploys, two token updates.</div>\n  <div role=\"tabpanel\" id=\"panel-settings\" aria-labelledby=\"tab-settings\" hidden>Alerts are on. Auto-deploy is off.</div>\n</div>\n"
+    },
+    {
+      "path": "tabs.js",
+      "type": "js",
+      "content": "/* KIT vanilla — tabs behavior: click + Left/Right/Home/End keys. */\n(function () {\n  function activate(tabs, tab) {\n    var list = tabs.querySelectorAll('[role=\"tab\"]')\n    list.forEach(function (t) {\n      var selected = t === tab\n      t.setAttribute(\"aria-selected\", selected ? \"true\" : \"false\")\n      t.tabIndex = selected ? 0 : -1\n      var panel = document.getElementById(t.getAttribute(\"aria-controls\"))\n      if (panel) panel.hidden = !selected\n    })\n    tab.focus()\n  }\n\n  document.addEventListener(\"click\", function (event) {\n    var tab = event.target.closest('[data-kit-tabs] [role=\"tab\"]')\n    if (tab) activate(tab.closest(\"[data-kit-tabs]\"), tab)\n  })\n\n  document.addEventListener(\"keydown\", function (event) {\n    var tab = event.target.closest('[data-kit-tabs] [role=\"tab\"]')\n    if (!tab) return\n    var tabs = tab.closest(\"[data-kit-tabs]\")\n    var list = Array.prototype.slice.call(tabs.querySelectorAll('[role=\"tab\"]'))\n    var index = list.indexOf(tab)\n    var next = null\n    if (event.key === \"ArrowRight\") next = list[(index + 1) % list.length]\n    if (event.key === \"ArrowLeft\") next = list[(index - 1 + list.length) % list.length]\n    if (event.key === \"Home\") next = list[0]\n    if (event.key === \"End\") next = list[list.length - 1]\n    if (next) {\n      event.preventDefault()\n      activate(tabs, next)\n    }\n  })\n})();\n"
+    }
+  ]
+}

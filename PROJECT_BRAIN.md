@@ -46,6 +46,23 @@ visible and tactile in public, reusable by agents, and installable behind the sc
 - The personal `purple-rain-studio` Codex plugin is installed by default from the personal marketplace, so English requests can carry the same workflow outside this repository.
 - The public experience never claims to generate an arbitrary product in the browser. Build Mode assembles and preserves complete Purple Rain project systems; the reusable Codex plugin performs open-ended project execution.
 
+- `SPEC.md` defines the KIT format (2026-08-11): tokens are the shared language,
+  published in three dialects from one source — shadcn items, framework-free
+  `tokens.css`, and `design-tokens.json`. shadcn is a dialect, not the
+  foundation; a project with no React or Tailwind adopts the same language
+  through `tokens.css` and the vanilla pieces.
+- The universal variable set (the intersection of all four complete systems'
+  root scopes, 53 variables including the `--kit-*` foundations) is the only
+  vocabulary allowed in cross-system pieces; `verify:dialects` enforces it.
+- `/vanilla` is the living proof: one plain HTML page whose entire visual
+  system swaps by changing a single stylesheet link.
+- `/r/doctrine.json` is the machine-readable rulebook agents load before
+  styling any consumer; `/r/checksums.json` + `kit-manifest.json` +
+  `scripts/kit-doctor.mjs` make consumer drift visible instead of silent.
+- Tailwind `@theme` self-references (`radius-x: var(--radius-x)`) are namespace
+  glue and are deliberately not emitted into the plain-CSS dialect; wildcard
+  `@utility` rules are omitted with a documented manual equivalent.
+
 ## Product truth
 
 Purple Rain is not violet wallpaper. Accent marks selection, focus, progress, and the primary decision. Tonal planes and directional depth carry hierarchy. The current object and next action stay obvious.

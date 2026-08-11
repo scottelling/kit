@@ -1,0 +1,929 @@
+{
+  "format": "kit-design-tokens/1",
+  "system": "animation",
+  "title": "Animation Studio",
+  "source": "https://kit.scottelling.com/r/animation/tokens.json",
+  "groups": {
+    "theme": {
+      "font-sans": {
+        "$value": "var(--font-animation-ui)",
+        "$type": "fontFamily"
+      },
+      "font-heading": {
+        "$value": "var(--font-animation-ui)",
+        "$type": "fontFamily"
+      },
+      "font-mono": {
+        "$value": "var(--font-animation-mono)",
+        "$type": "fontFamily"
+      },
+      "font-animation-ui": {
+        "$value": "Outfit, ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        "$type": "fontFamily"
+      },
+      "font-animation-content": {
+        "$value": "-apple-system, BlinkMacSystemFont, SF Pro Text, Segoe UI, sans-serif",
+        "$type": "fontFamily"
+      },
+      "font-animation-mono": {
+        "$value": "JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace",
+        "$type": "fontFamily"
+      },
+      "animation-control-height": {
+        "$value": "44px",
+        "$type": "dimension"
+      },
+      "animation-icon-size": {
+        "$value": "17px",
+        "$type": "dimension"
+      },
+      "animation-compact-size": {
+        "$value": "10px",
+        "$type": "dimension"
+      },
+      "animation-label-size": {
+        "$value": "12px",
+        "$type": "dimension"
+      },
+      "animation-body-size": {
+        "$value": "14px",
+        "$type": "dimension"
+      },
+      "animation-title-size": {
+        "$value": "20px",
+        "$type": "dimension"
+      },
+      "animation-reading-measure": {
+        "$value": "64ch",
+        "$type": "dimension"
+      },
+      "animation-space-1": {
+        "$value": "2px",
+        "$type": "dimension"
+      },
+      "animation-space-2": {
+        "$value": "4px",
+        "$type": "dimension"
+      },
+      "animation-space-3": {
+        "$value": "6px",
+        "$type": "dimension"
+      },
+      "animation-space-4": {
+        "$value": "8px",
+        "$type": "dimension"
+      },
+      "animation-space-5": {
+        "$value": "10px",
+        "$type": "dimension"
+      },
+      "animation-space-6": {
+        "$value": "12px",
+        "$type": "dimension"
+      },
+      "animation-space-7": {
+        "$value": "14px",
+        "$type": "dimension"
+      },
+      "animation-space-8": {
+        "$value": "16px",
+        "$type": "dimension"
+      },
+      "animation-space-9": {
+        "$value": "18px",
+        "$type": "dimension"
+      },
+      "animation-space-10": {
+        "$value": "22px",
+        "$type": "dimension"
+      },
+      "animation-motion-linear": {
+        "$value": "linear"
+      },
+      "animation-motion-ease-out": {
+        "$value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "$type": "cubicBezier"
+      },
+      "animation-motion-ease-in-out": {
+        "$value": "cubic-bezier(0.77, 0, 0.175, 1)",
+        "$type": "cubicBezier"
+      },
+      "animation-motion-drawer": {
+        "$value": "cubic-bezier(0.32, 0.72, 0, 1)",
+        "$type": "cubicBezier"
+      },
+      "animation-rise-duration": {
+        "$value": "420ms",
+        "$type": "duration"
+      },
+      "animation-pop-duration": {
+        "$value": "360ms",
+        "$type": "duration"
+      },
+      "animation-fade-duration": {
+        "$value": "280ms",
+        "$type": "duration"
+      },
+      "animation-exit-duration": {
+        "$value": "300ms",
+        "$type": "duration"
+      },
+      "pr-font": {
+        "$value": "var(--font-animation-ui)"
+      },
+      "pr-mono": {
+        "$value": "var(--font-animation-mono)"
+      },
+      "pr-compact-size": {
+        "$value": "10px",
+        "$type": "dimension"
+      },
+      "pr-body-size": {
+        "$value": "14px",
+        "$type": "dimension"
+      },
+      "pr-control-size": {
+        "$value": "13px",
+        "$type": "dimension"
+      },
+      "pr-heading-size": {
+        "$value": "38px",
+        "$type": "dimension"
+      },
+      "pr-regular": {
+        "$value": "400",
+        "$type": "number"
+      },
+      "pr-weight": {
+        "$value": "600",
+        "$type": "number"
+      },
+      "pr-strong": {
+        "$value": "800",
+        "$type": "number"
+      },
+      "pr-leading": {
+        "$value": "1.45",
+        "$type": "number"
+      },
+      "pr-heading-leading": {
+        "$value": "1.02",
+        "$type": "number"
+      },
+      "pr-heading-letter": {
+        "$value": "-0.045em",
+        "$type": "dimension"
+      },
+      "pr-letter": {
+        "$value": "-0.008em",
+        "$type": "dimension"
+      },
+      "pr-measure": {
+        "$value": "64ch",
+        "$type": "dimension"
+      },
+      "pr-space-base": {
+        "$value": "10px",
+        "$type": "dimension"
+      },
+      "pr-space-section": {
+        "$value": "28px",
+        "$type": "dimension"
+      },
+      "pr-control-height": {
+        "$value": "44px",
+        "$type": "dimension"
+      },
+      "pr-fast": {
+        "$value": "120ms",
+        "$type": "duration"
+      },
+      "pr-standard": {
+        "$value": "180ms",
+        "$type": "duration"
+      },
+      "pr-ease": {
+        "$value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "$type": "cubicBezier"
+      },
+      "kit-control-height": {
+        "$value": "44px",
+        "$type": "dimension"
+      },
+      "kit-compact-size": {
+        "$value": "10px",
+        "$type": "dimension"
+      },
+      "kit-body-size": {
+        "$value": "14px",
+        "$type": "dimension"
+      },
+      "kit-heading-size": {
+        "$value": "38px",
+        "$type": "dimension"
+      },
+      "kit-reading-measure": {
+        "$value": "64ch",
+        "$type": "dimension"
+      },
+      "kit-leading": {
+        "$value": "1.45",
+        "$type": "number"
+      },
+      "kit-space-base": {
+        "$value": "10px",
+        "$type": "dimension"
+      },
+      "kit-space-section": {
+        "$value": "28px",
+        "$type": "dimension"
+      },
+      "kit-fast": {
+        "$value": "120ms",
+        "$type": "duration"
+      },
+      "kit-standard": {
+        "$value": "180ms",
+        "$type": "duration"
+      },
+      "kit-ease": {
+        "$value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "$type": "cubicBezier"
+      },
+      "color-positive": {
+        "$value": "var(--positive)"
+      },
+      "color-positive-foreground": {
+        "$value": "var(--positive-foreground)"
+      },
+      "radius-control": {
+        "$value": "var(--radius-control)"
+      },
+      "radius-card": {
+        "$value": "var(--radius-card)"
+      },
+      "radius-sheet": {
+        "$value": "var(--radius-sheet)"
+      }
+    },
+    "light": {
+      "background": {
+        "$value": "oklch(0.15683 0.01057 285.12)",
+        "$type": "color"
+      },
+      "foreground": {
+        "$value": "oklch(0.94481 0.00802 286.25)",
+        "$type": "color"
+      },
+      "card": {
+        "$value": "oklch(0.20452 0.01782 284.72)",
+        "$type": "color"
+      },
+      "card-foreground": {
+        "$value": "oklch(0.94481 0.00802 286.25)",
+        "$type": "color"
+      },
+      "popover": {
+        "$value": "oklch(0.24539 0.02460 284.44)",
+        "$type": "color"
+      },
+      "popover-foreground": {
+        "$value": "oklch(0.94481 0.00802 286.25)",
+        "$type": "color"
+      },
+      "primary": {
+        "$value": "oklch(0.71998 0.17231 303.07)",
+        "$type": "color"
+      },
+      "primary-foreground": {
+        "$value": "oklch(0.15683 0.01057 285.12)",
+        "$type": "color"
+      },
+      "secondary": {
+        "$value": "oklch(0.24539 0.02460 284.44)",
+        "$type": "color"
+      },
+      "secondary-foreground": {
+        "$value": "oklch(1 0 0 / 0.72)",
+        "$type": "color"
+      },
+      "muted": {
+        "$value": "oklch(0.17650 0.01438 284.83)",
+        "$type": "color"
+      },
+      "muted-foreground": {
+        "$value": "oklch(1 0 0 / 0.56)",
+        "$type": "color"
+      },
+      "accent": {
+        "$value": "oklch(0.24539 0.02460 284.44)",
+        "$type": "color"
+      },
+      "accent-foreground": {
+        "$value": "oklch(0.94481 0.00802 286.25)",
+        "$type": "color"
+      },
+      "destructive": {
+        "$value": "oklch(0.71161 0.18122 22.84)",
+        "$type": "color"
+      },
+      "destructive-foreground": {
+        "$value": "oklch(0.15683 0.01057 285.12)",
+        "$type": "color"
+      },
+      "positive": {
+        "$value": "oklch(0.86280 0.15184 159.40)",
+        "$type": "color"
+      },
+      "positive-foreground": {
+        "$value": "oklch(0.15683 0.01057 285.12)",
+        "$type": "color"
+      },
+      "border": {
+        "$value": "oklch(1 0 0 / 0.07)",
+        "$type": "color"
+      },
+      "input": {
+        "$value": "oklch(0.24539 0.02460 284.44)",
+        "$type": "color"
+      },
+      "ring": {
+        "$value": "oklch(0.71998 0.17231 303.07)",
+        "$type": "color"
+      },
+      "overlay": {
+        "$value": "oklch(0.15683 0.01057 285.12)",
+        "$type": "color"
+      },
+      "plane-1": {
+        "$value": "oklch(0.17650 0.01438 284.83)",
+        "$type": "color"
+      },
+      "plane-2": {
+        "$value": "oklch(0.20452 0.01782 284.72)",
+        "$type": "color"
+      },
+      "plane-3": {
+        "$value": "oklch(0.24539 0.02460 284.44)",
+        "$type": "color"
+      },
+      "plane-pressed": {
+        "$value": "oklch(0.16788 0.01665 284.46)",
+        "$type": "color"
+      },
+      "ink-faint": {
+        "$value": "oklch(1 0 0 / 0.36)",
+        "$type": "color"
+      },
+      "chart-1": {
+        "$value": "oklch(0.71998 0.17231 303.07)",
+        "$type": "color"
+      },
+      "chart-2": {
+        "$value": "oklch(0.75854 0.12380 260.18)",
+        "$type": "color"
+      },
+      "chart-3": {
+        "$value": "oklch(0.88878 0.16396 93.40)",
+        "$type": "color"
+      },
+      "chart-4": {
+        "$value": "oklch(0.86280 0.15184 159.40)",
+        "$type": "color"
+      },
+      "chart-5": {
+        "$value": "oklch(0.71161 0.18122 22.84)",
+        "$type": "color"
+      },
+      "sidebar": {
+        "$value": "oklch(0.17650 0.01438 284.83)",
+        "$type": "color"
+      },
+      "sidebar-foreground": {
+        "$value": "oklch(0.94481 0.00802 286.25)",
+        "$type": "color"
+      },
+      "sidebar-primary": {
+        "$value": "oklch(0.71998 0.17231 303.07)",
+        "$type": "color"
+      },
+      "sidebar-primary-foreground": {
+        "$value": "oklch(0.15683 0.01057 285.12)",
+        "$type": "color"
+      },
+      "sidebar-accent": {
+        "$value": "oklch(0.24539 0.02460 284.44)",
+        "$type": "color"
+      },
+      "sidebar-accent-foreground": {
+        "$value": "oklch(0.94481 0.00802 286.25)",
+        "$type": "color"
+      },
+      "sidebar-border": {
+        "$value": "oklch(1 0 0 / 0.07)",
+        "$type": "color"
+      },
+      "sidebar-ring": {
+        "$value": "oklch(0.71998 0.17231 303.07)",
+        "$type": "color"
+      },
+      "animation-info": {
+        "$value": "oklch(0.75854 0.12380 260.18)",
+        "$type": "color"
+      },
+      "animation-warning": {
+        "$value": "oklch(0.88878 0.16396 93.40)",
+        "$type": "color"
+      },
+      "animation-success": {
+        "$value": "oklch(0.86280 0.15184 159.40)",
+        "$type": "color"
+      },
+      "animation-danger": {
+        "$value": "oklch(0.71161 0.18122 22.84)",
+        "$type": "color"
+      },
+      "radius": {
+        "$value": "0.625rem",
+        "$type": "dimension"
+      },
+      "radius-control": {
+        "$value": "0.5625rem",
+        "$type": "dimension"
+      },
+      "radius-card": {
+        "$value": "0.75rem",
+        "$type": "dimension"
+      },
+      "radius-sheet": {
+        "$value": "1rem",
+        "$type": "dimension"
+      },
+      "dur-micro": {
+        "$value": "120ms",
+        "$type": "duration"
+      },
+      "dur-short": {
+        "$value": "180ms",
+        "$type": "duration"
+      },
+      "dur-long": {
+        "$value": "420ms",
+        "$type": "duration"
+      },
+      "ease-standard": {
+        "$value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "$type": "cubicBezier"
+      },
+      "shadow-control": {
+        "$value": "inset 0 0 0 1px oklch(1 0 0 / 0.07)"
+      },
+      "shadow-panel": {
+        "$value": "0 18px 46px -18px oklch(0 0 0 / 0.90), inset 0 0 0 1px oklch(1 0 0 / 0.07)"
+      },
+      "shadow-inset": {
+        "$value": "inset 0 1px 0 oklch(1 0 0 / 0.07)"
+      }
+    },
+    "dark": {
+      "background": {
+        "$value": "oklch(0.15683 0.01057 285.12)",
+        "$type": "color"
+      },
+      "foreground": {
+        "$value": "oklch(0.94481 0.00802 286.25)",
+        "$type": "color"
+      },
+      "card": {
+        "$value": "oklch(0.20452 0.01782 284.72)",
+        "$type": "color"
+      },
+      "card-foreground": {
+        "$value": "oklch(0.94481 0.00802 286.25)",
+        "$type": "color"
+      },
+      "popover": {
+        "$value": "oklch(0.24539 0.02460 284.44)",
+        "$type": "color"
+      },
+      "popover-foreground": {
+        "$value": "oklch(0.94481 0.00802 286.25)",
+        "$type": "color"
+      },
+      "primary": {
+        "$value": "oklch(0.71998 0.17231 303.07)",
+        "$type": "color"
+      },
+      "primary-foreground": {
+        "$value": "oklch(0.15683 0.01057 285.12)",
+        "$type": "color"
+      },
+      "secondary": {
+        "$value": "oklch(0.24539 0.02460 284.44)",
+        "$type": "color"
+      },
+      "secondary-foreground": {
+        "$value": "oklch(1 0 0 / 0.72)",
+        "$type": "color"
+      },
+      "muted": {
+        "$value": "oklch(0.17650 0.01438 284.83)",
+        "$type": "color"
+      },
+      "muted-foreground": {
+        "$value": "oklch(1 0 0 / 0.56)",
+        "$type": "color"
+      },
+      "accent": {
+        "$value": "oklch(0.24539 0.02460 284.44)",
+        "$type": "color"
+      },
+      "accent-foreground": {
+        "$value": "oklch(0.94481 0.00802 286.25)",
+        "$type": "color"
+      },
+      "destructive": {
+        "$value": "oklch(0.71161 0.18122 22.84)",
+        "$type": "color"
+      },
+      "destructive-foreground": {
+        "$value": "oklch(0.15683 0.01057 285.12)",
+        "$type": "color"
+      },
+      "positive": {
+        "$value": "oklch(0.86280 0.15184 159.40)",
+        "$type": "color"
+      },
+      "positive-foreground": {
+        "$value": "oklch(0.15683 0.01057 285.12)",
+        "$type": "color"
+      },
+      "border": {
+        "$value": "oklch(1 0 0 / 0.07)",
+        "$type": "color"
+      },
+      "input": {
+        "$value": "oklch(0.24539 0.02460 284.44)",
+        "$type": "color"
+      },
+      "ring": {
+        "$value": "oklch(0.71998 0.17231 303.07)",
+        "$type": "color"
+      },
+      "overlay": {
+        "$value": "oklch(0.15683 0.01057 285.12)",
+        "$type": "color"
+      },
+      "plane-1": {
+        "$value": "oklch(0.17650 0.01438 284.83)",
+        "$type": "color"
+      },
+      "plane-2": {
+        "$value": "oklch(0.20452 0.01782 284.72)",
+        "$type": "color"
+      },
+      "plane-3": {
+        "$value": "oklch(0.24539 0.02460 284.44)",
+        "$type": "color"
+      },
+      "plane-pressed": {
+        "$value": "oklch(0.16788 0.01665 284.46)",
+        "$type": "color"
+      },
+      "ink-faint": {
+        "$value": "oklch(1 0 0 / 0.36)",
+        "$type": "color"
+      },
+      "chart-1": {
+        "$value": "oklch(0.71998 0.17231 303.07)",
+        "$type": "color"
+      },
+      "chart-2": {
+        "$value": "oklch(0.75854 0.12380 260.18)",
+        "$type": "color"
+      },
+      "chart-3": {
+        "$value": "oklch(0.88878 0.16396 93.40)",
+        "$type": "color"
+      },
+      "chart-4": {
+        "$value": "oklch(0.86280 0.15184 159.40)",
+        "$type": "color"
+      },
+      "chart-5": {
+        "$value": "oklch(0.71161 0.18122 22.84)",
+        "$type": "color"
+      },
+      "sidebar": {
+        "$value": "oklch(0.17650 0.01438 284.83)",
+        "$type": "color"
+      },
+      "sidebar-foreground": {
+        "$value": "oklch(0.94481 0.00802 286.25)",
+        "$type": "color"
+      },
+      "sidebar-primary": {
+        "$value": "oklch(0.71998 0.17231 303.07)",
+        "$type": "color"
+      },
+      "sidebar-primary-foreground": {
+        "$value": "oklch(0.15683 0.01057 285.12)",
+        "$type": "color"
+      },
+      "sidebar-accent": {
+        "$value": "oklch(0.24539 0.02460 284.44)",
+        "$type": "color"
+      },
+      "sidebar-accent-foreground": {
+        "$value": "oklch(0.94481 0.00802 286.25)",
+        "$type": "color"
+      },
+      "sidebar-border": {
+        "$value": "oklch(1 0 0 / 0.07)",
+        "$type": "color"
+      },
+      "sidebar-ring": {
+        "$value": "oklch(0.71998 0.17231 303.07)",
+        "$type": "color"
+      },
+      "animation-info": {
+        "$value": "oklch(0.75854 0.12380 260.18)",
+        "$type": "color"
+      },
+      "animation-warning": {
+        "$value": "oklch(0.88878 0.16396 93.40)",
+        "$type": "color"
+      },
+      "animation-success": {
+        "$value": "oklch(0.86280 0.15184 159.40)",
+        "$type": "color"
+      },
+      "animation-danger": {
+        "$value": "oklch(0.71161 0.18122 22.84)",
+        "$type": "color"
+      },
+      "radius": {
+        "$value": "0.625rem",
+        "$type": "dimension"
+      },
+      "radius-control": {
+        "$value": "0.5625rem",
+        "$type": "dimension"
+      },
+      "radius-card": {
+        "$value": "0.75rem",
+        "$type": "dimension"
+      },
+      "radius-sheet": {
+        "$value": "1rem",
+        "$type": "dimension"
+      },
+      "dur-micro": {
+        "$value": "120ms",
+        "$type": "duration"
+      },
+      "dur-short": {
+        "$value": "180ms",
+        "$type": "duration"
+      },
+      "dur-long": {
+        "$value": "420ms",
+        "$type": "duration"
+      },
+      "ease-standard": {
+        "$value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "$type": "cubicBezier"
+      },
+      "shadow-control": {
+        "$value": "inset 0 0 0 1px oklch(1 0 0 / 0.07)"
+      },
+      "shadow-panel": {
+        "$value": "0 18px 46px -18px oklch(0 0 0 / 0.90), inset 0 0 0 1px oklch(1 0 0 / 0.07)"
+      },
+      "shadow-inset": {
+        "$value": "inset 0 1px 0 oklch(1 0 0 / 0.07)"
+      }
+    },
+    "rules": {
+      ".animation-system": {
+        "background": {
+          "$value": "oklch(0.15683 0.01057 285.12)",
+          "$type": "color"
+        },
+        "foreground": {
+          "$value": "oklch(0.94481 0.00802 286.25)",
+          "$type": "color"
+        },
+        "card": {
+          "$value": "oklch(0.20452 0.01782 284.72)",
+          "$type": "color"
+        },
+        "card-foreground": {
+          "$value": "oklch(0.94481 0.00802 286.25)",
+          "$type": "color"
+        },
+        "popover": {
+          "$value": "oklch(0.24539 0.02460 284.44)",
+          "$type": "color"
+        },
+        "popover-foreground": {
+          "$value": "oklch(0.94481 0.00802 286.25)",
+          "$type": "color"
+        },
+        "primary": {
+          "$value": "oklch(0.71998 0.17231 303.07)",
+          "$type": "color"
+        },
+        "primary-foreground": {
+          "$value": "oklch(0.15683 0.01057 285.12)",
+          "$type": "color"
+        },
+        "secondary": {
+          "$value": "oklch(0.24539 0.02460 284.44)",
+          "$type": "color"
+        },
+        "secondary-foreground": {
+          "$value": "oklch(1 0 0 / 0.72)",
+          "$type": "color"
+        },
+        "muted": {
+          "$value": "oklch(0.17650 0.01438 284.83)",
+          "$type": "color"
+        },
+        "muted-foreground": {
+          "$value": "oklch(1 0 0 / 0.56)",
+          "$type": "color"
+        },
+        "accent": {
+          "$value": "oklch(0.24539 0.02460 284.44)",
+          "$type": "color"
+        },
+        "accent-foreground": {
+          "$value": "oklch(0.94481 0.00802 286.25)",
+          "$type": "color"
+        },
+        "destructive": {
+          "$value": "oklch(0.71161 0.18122 22.84)",
+          "$type": "color"
+        },
+        "destructive-foreground": {
+          "$value": "oklch(0.15683 0.01057 285.12)",
+          "$type": "color"
+        },
+        "positive": {
+          "$value": "oklch(0.86280 0.15184 159.40)",
+          "$type": "color"
+        },
+        "positive-foreground": {
+          "$value": "oklch(0.15683 0.01057 285.12)",
+          "$type": "color"
+        },
+        "border": {
+          "$value": "oklch(1 0 0 / 0.07)",
+          "$type": "color"
+        },
+        "input": {
+          "$value": "oklch(0.24539 0.02460 284.44)",
+          "$type": "color"
+        },
+        "ring": {
+          "$value": "oklch(0.71998 0.17231 303.07)",
+          "$type": "color"
+        },
+        "overlay": {
+          "$value": "oklch(0.15683 0.01057 285.12)",
+          "$type": "color"
+        },
+        "plane-1": {
+          "$value": "oklch(0.17650 0.01438 284.83)",
+          "$type": "color"
+        },
+        "plane-2": {
+          "$value": "oklch(0.20452 0.01782 284.72)",
+          "$type": "color"
+        },
+        "plane-3": {
+          "$value": "oklch(0.24539 0.02460 284.44)",
+          "$type": "color"
+        },
+        "plane-pressed": {
+          "$value": "oklch(0.16788 0.01665 284.46)",
+          "$type": "color"
+        },
+        "ink-faint": {
+          "$value": "oklch(1 0 0 / 0.36)",
+          "$type": "color"
+        },
+        "chart-1": {
+          "$value": "oklch(0.71998 0.17231 303.07)",
+          "$type": "color"
+        },
+        "chart-2": {
+          "$value": "oklch(0.75854 0.12380 260.18)",
+          "$type": "color"
+        },
+        "chart-3": {
+          "$value": "oklch(0.88878 0.16396 93.40)",
+          "$type": "color"
+        },
+        "chart-4": {
+          "$value": "oklch(0.86280 0.15184 159.40)",
+          "$type": "color"
+        },
+        "chart-5": {
+          "$value": "oklch(0.71161 0.18122 22.84)",
+          "$type": "color"
+        },
+        "sidebar": {
+          "$value": "oklch(0.17650 0.01438 284.83)",
+          "$type": "color"
+        },
+        "sidebar-foreground": {
+          "$value": "oklch(0.94481 0.00802 286.25)",
+          "$type": "color"
+        },
+        "sidebar-primary": {
+          "$value": "oklch(0.71998 0.17231 303.07)",
+          "$type": "color"
+        },
+        "sidebar-primary-foreground": {
+          "$value": "oklch(0.15683 0.01057 285.12)",
+          "$type": "color"
+        },
+        "sidebar-accent": {
+          "$value": "oklch(0.24539 0.02460 284.44)",
+          "$type": "color"
+        },
+        "sidebar-accent-foreground": {
+          "$value": "oklch(0.94481 0.00802 286.25)",
+          "$type": "color"
+        },
+        "sidebar-border": {
+          "$value": "oklch(1 0 0 / 0.07)",
+          "$type": "color"
+        },
+        "sidebar-ring": {
+          "$value": "oklch(0.71998 0.17231 303.07)",
+          "$type": "color"
+        },
+        "animation-info": {
+          "$value": "oklch(0.75854 0.12380 260.18)",
+          "$type": "color"
+        },
+        "animation-warning": {
+          "$value": "oklch(0.88878 0.16396 93.40)",
+          "$type": "color"
+        },
+        "animation-success": {
+          "$value": "oklch(0.86280 0.15184 159.40)",
+          "$type": "color"
+        },
+        "animation-danger": {
+          "$value": "oklch(0.71161 0.18122 22.84)",
+          "$type": "color"
+        },
+        "radius": {
+          "$value": "0.625rem",
+          "$type": "dimension"
+        },
+        "radius-control": {
+          "$value": "0.5625rem",
+          "$type": "dimension"
+        },
+        "radius-card": {
+          "$value": "0.75rem",
+          "$type": "dimension"
+        },
+        "radius-sheet": {
+          "$value": "1rem",
+          "$type": "dimension"
+        },
+        "dur-micro": {
+          "$value": "120ms",
+          "$type": "duration"
+        },
+        "dur-short": {
+          "$value": "180ms",
+          "$type": "duration"
+        },
+        "dur-long": {
+          "$value": "420ms",
+          "$type": "duration"
+        },
+        "ease-standard": {
+          "$value": "cubic-bezier(0.23, 1, 0.32, 1)",
+          "$type": "cubicBezier"
+        },
+        "shadow-control": {
+          "$value": "inset 0 0 0 1px oklch(1 0 0 / 0.07)"
+        },
+        "shadow-panel": {
+          "$value": "0 18px 46px -18px oklch(0 0 0 / 0.90), inset 0 0 0 1px oklch(1 0 0 / 0.07)"
+        },
+        "shadow-inset": {
+          "$value": "inset 0 1px 0 oklch(1 0 0 / 0.07)"
+        }
+      }
+    }
+  }
+}

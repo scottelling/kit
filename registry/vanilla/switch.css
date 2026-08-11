@@ -1,0 +1,48 @@
+/* KIT vanilla — switch: CSS-only toggle on a real checkbox, 44px row. */
+.kit-switch-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--kit-space-base, 12px);
+  min-height: var(--kit-control-height, 44px);
+  font-size: var(--kit-body-size, 15px);
+  color: var(--foreground);
+  cursor: pointer;
+}
+.kit-switch {
+  appearance: none;
+  flex: none;
+  width: 44px;
+  height: 26px;
+  margin: 0;
+  border: 1.5px solid var(--input);
+  border-radius: 999px;
+  background: var(--muted);
+  cursor: pointer;
+  position: relative;
+  transition: background-color var(--kit-standard, 180ms) var(--kit-ease, ease-out),
+    border-color var(--kit-standard, 180ms) var(--kit-ease, ease-out);
+}
+.kit-switch::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: var(--background);
+  box-shadow: var(--shadow-control, 0 1px 2px rgba(0, 0, 0, 0.2));
+  transition: translate var(--kit-standard, 180ms) var(--kit-ease, ease-out);
+}
+.kit-switch:checked {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.kit-switch:checked::before { translate: 18px 0; }
+.kit-switch:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+.kit-switch:disabled { opacity: 0.5; cursor: not-allowed; }
+
+@media (prefers-reduced-motion: reduce) {
+  .kit-switch, .kit-switch::before { transition-duration: 0.01ms; }
+}

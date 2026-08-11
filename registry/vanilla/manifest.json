@@ -1,0 +1,18 @@
+{
+  "format": "kit-vanilla-registry/1",
+  "description": "Zero-dependency HTML/CSS/JS reference pieces. Every piece uses only the universal token variables, so the same markup renders correctly under any complete KIT system's tokens.css.",
+  "pieces": [
+    { "name": "button", "title": "Button", "description": "Primary, secondary, ghost, and destructive actions with hover, pressed, focus, and disabled states." },
+    { "name": "field", "title": "Field", "description": "Label, text input, help line, and error/success states." },
+    { "name": "select", "title": "Select", "description": "Styled native select with full keyboard support." },
+    { "name": "checkbox", "title": "Checkbox", "description": "A 20px mark inside a 44px touch row." },
+    { "name": "switch", "title": "Switch", "description": "CSS-only toggle on a real checkbox." },
+    { "name": "card", "title": "Card", "description": "Seated content surface with heading, body, and actions." },
+    { "name": "badge", "title": "Badge", "description": "Compact status label in neutral, primary, positive, and destructive tones." },
+    { "name": "tabs", "title": "Tabs", "description": "Accessible tabs with click and arrow-key switching." },
+    { "name": "dialog", "title": "Dialog", "description": "Native modal dialog on a solid surface with backdrop." },
+    { "name": "notice", "title": "Notice", "description": "Inline status message with tones and optional dismiss." },
+    { "name": "table", "title": "Table", "description": "Readable data rows that scroll inside their own frame." },
+    { "name": "empty-state", "title": "Empty state", "description": "Plain-language empty screen with one clear next action." }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "format": "kit-piece/1",
+  "name": "card",
+  "title": "Card",
+  "description": "Seated content surface with heading, body, and actions.",
+  "dialect": "vanilla",
+  "systems": "universal",
+  "requires": {
+    "tokens": "https://kit.scottelling.com/r/tokens.css (or the jade/os/animation tokens.css)"
+  },
+  "files": [
+    {
+      "path": "card.css",
+      "type": "css",
+      "content": "/* KIT vanilla — card: seated surface, tonal depth, no hover lift. */\n.kit-card {\n  display: flex;\n  flex-direction: column;\n  gap: var(--kit-space-base, 12px);\n  padding: calc(var(--kit-space-base, 12px) * 1.5);\n  border: 1px solid var(--border);\n  border-radius: var(--radius-card, 12px);\n  background: var(--card);\n  color: var(--card-foreground);\n  box-shadow: var(--shadow-panel, none);\n  max-width: var(--kit-reading-measure, 64ch);\n}\n.kit-card > h3 {\n  margin: 0;\n  font-family: var(--font-heading, inherit);\n  font-size: calc(var(--kit-body-size, 15px) * 1.2);\n  font-weight: 700;\n  line-height: var(--kit-leading, 1.5);\n}\n.kit-card > p {\n  margin: 0;\n  font-size: var(--kit-body-size, 15px);\n  line-height: var(--kit-leading, 1.5);\n  color: var(--muted-foreground);\n}\n.kit-card > footer {\n  display: flex;\n  gap: 8px;\n  flex-wrap: wrap;\n}\n.kit-card[data-selected=\"true\"] {\n  border-color: var(--primary);\n  outline: 1px solid var(--primary);\n}\n"
+    },
+    {
+      "path": "card.html",
+      "type": "html",
+      "content": "<article class=\"kit-card\">\n  <h3>Weekly report</h3>\n  <p>Your deploys finished cleanly. Two projects picked up new kit tokens this week.</p>\n  <footer>\n    <button class=\"kit-button\" type=\"button\">Open report</button>\n    <button class=\"kit-button\" type=\"button\" data-variant=\"ghost\">Dismiss</button>\n  </footer>\n</article>\n"
+    }
+  ]
+}

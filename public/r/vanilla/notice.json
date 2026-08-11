@@ -1,0 +1,28 @@
+{
+  "format": "kit-piece/1",
+  "name": "notice",
+  "title": "Notice",
+  "description": "Inline status message with tones and optional dismiss.",
+  "dialect": "vanilla",
+  "systems": "universal",
+  "requires": {
+    "tokens": "https://kit.scottelling.com/r/tokens.css (or the jade/os/animation tokens.css)"
+  },
+  "files": [
+    {
+      "path": "notice.css",
+      "type": "css",
+      "content": "/* KIT vanilla — notice: inline status message with optional dismiss. */\n.kit-notice {\n  display: flex;\n  align-items: flex-start;\n  gap: 10px;\n  padding: var(--kit-space-base, 12px) calc(var(--kit-space-base, 12px) * 1.25);\n  border: 1px solid var(--border);\n  border-radius: var(--radius-control, 8px);\n  background: var(--plane-1, var(--muted));\n  color: var(--foreground);\n  font-size: var(--kit-body-size, 15px);\n  line-height: var(--kit-leading, 1.5);\n  max-width: var(--kit-reading-measure, 64ch);\n}\n.kit-notice::before {\n  content: \"\";\n  flex: none;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  margin-top: 7px;\n  background: var(--muted-foreground);\n}\n.kit-notice[data-tone=\"positive\"] { border-color: color-mix(in oklab, var(--positive) 40%, var(--border)); }\n.kit-notice[data-tone=\"positive\"]::before { background: var(--positive); }\n.kit-notice[data-tone=\"destructive\"] { border-color: color-mix(in oklab, var(--destructive) 40%, var(--border)); }\n.kit-notice[data-tone=\"destructive\"]::before { background: var(--destructive); }\n.kit-notice > div { flex: 1; }\n.kit-notice strong { display: block; font-weight: 700; }\n.kit-notice [data-kit-dismiss] {\n  appearance: none;\n  border: none;\n  background: none;\n  color: var(--muted-foreground);\n  font: inherit;\n  font-size: var(--kit-compact-size, 12px);\n  font-weight: 600;\n  cursor: pointer;\n  min-height: var(--kit-control-height, 44px);\n  margin: calc(var(--kit-space-base, 12px) * -1) 0;\n  padding: 0 8px;\n}\n.kit-notice [data-kit-dismiss]:hover { color: var(--foreground); }\n.kit-notice [data-kit-dismiss]:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }\n"
+    },
+    {
+      "path": "notice.html",
+      "type": "html",
+      "content": "<div class=\"kit-notice\" data-tone=\"positive\" role=\"status\">\n  <div><strong>Theme published</strong> Any project can now install this copy.</div>\n  <button type=\"button\" data-kit-dismiss aria-label=\"Dismiss\">Dismiss</button>\n</div>\n<div class=\"kit-notice\" data-tone=\"destructive\" role=\"alert\">\n  <div><strong>Deploy failed</strong> The build stopped on a missing token. Nothing changed on the live site.</div>\n  <button type=\"button\" data-kit-dismiss aria-label=\"Dismiss\">Dismiss</button>\n</div>\n<div class=\"kit-notice\" role=\"status\">\n  <div><strong>Heads up</strong> Two projects are one token release behind.</div>\n</div>\n"
+    },
+    {
+      "path": "notice.js",
+      "type": "js",
+      "content": "/* KIT vanilla — notice behavior: dismiss removes the notice. */\n(function () {\n  document.addEventListener(\"click\", function (event) {\n    var dismiss = event.target.closest(\".kit-notice [data-kit-dismiss]\")\n    if (dismiss) {\n      var notice = dismiss.closest(\".kit-notice\")\n      if (notice) notice.remove()\n    }\n  })\n})();\n"
+    }
+  ]
+}

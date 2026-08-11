@@ -1,0 +1,28 @@
+/* KIT vanilla — empty state: honest, plain-language, with one clear next action. */
+.kit-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  padding: calc(var(--kit-space-section, 32px) * 1.25) var(--kit-space-base, 12px);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-card, 12px);
+  background: var(--plane-1, transparent);
+  color: var(--foreground);
+}
+.kit-empty > h3 {
+  margin: 0;
+  font-family: var(--font-heading, inherit);
+  font-size: calc(var(--kit-body-size, 15px) * 1.15);
+  font-weight: 700;
+}
+.kit-empty > p {
+  margin: 0;
+  font-size: var(--kit-body-size, 15px);
+  line-height: var(--kit-leading, 1.5);
+  color: var(--muted-foreground);
+  max-width: 40ch;
+}
+.kit-empty > .kit-button { margin-top: 6px; }
