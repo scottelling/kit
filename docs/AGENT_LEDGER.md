@@ -1,5 +1,22 @@
 # Agent Ledger
 
+## 2026-08-11 — KIT format layer: the language without the framework
+
+- Agent: Claude Code
+- Scope: make KIT's token language adoptable by every project regardless of stack, per Scott's direction that shadcn was the starting path, not the destination; establish the format spec, the framework-free dialects, the machine doctrine, and consumer drift detection
+- Format authority: new root `SPEC.md` (KIT Format 1.0.0) defines systems, token dialects, piece dialects, the consumer manifest, the drift protocol, the agent installation contract, and versioning; shadcn is now documented as one dialect of the format rather than its foundation
+- Token dialects: `registry:build` now emits `tokens.css` and `design-tokens.json` for Purple Rain (`/r/`), JADE, OS, Animation, and Shadow from the built registry items, so variable names and values are provably identical across shadcn and plain-CSS consumers; Tailwind `@theme` self-references are recognized as namespace glue and excluded, wildcard `@utility` rules are omitted with a documented manual equivalent, and OS mood classes plus Shadow utility classes carry over as plain CSS
+- Vanilla dialect: twelve zero-dependency pieces (button, field, select, checkbox, switch, card, badge, tabs, dialog, notice, table, empty-state) under `registry/vanilla/`, published as `kit-piece/1` JSON with bundles at `/r/vanilla/kit.css` and `/r/vanilla/kit.js`; every piece restricts itself to the 53-variable universal set shared by all four complete systems, keeps 44px effective targets, visible focus, and reduced-motion stillness
+- Living proof: `/vanilla` is a generated static page — plain HTML, no framework — where switching one stylesheet link re-renders the same markup as Purple Rain, JADE, OS, or Animation in light and dark
+- Machine doctrine: `/r/doctrine.json` (`kit-doctrine/1`) publishes token law, minimums, bans, motion, plain-language, reversibility, required states, and proof widths for agents styling any consumer
+- Drift detection: `/r/checksums.json` (`kit-checksums/1`) hashes all 741 registry artifacts with a deterministic `registryVersion` fingerprint (`336c2b5907c9`); consumers declare installs in `kit-manifest.json` (`kit-manifest/1`), and `scripts/kit-doctor.mjs` reports current/behind/unknown per artifact — proven against a scratch consumer both offline and over the live network, including correct nonzero exit on drift
+- Verification: new `verify:dialects` gate (wired into `npm run check`) proves per-scope value parity between registry items and every `tokens.css`, universal-set compliance of the vanilla bundle, piece/registry completeness, kit.js parseability, demo wiring, doctrine shape, and checksum accuracy; full `npm run check` passes and the registry fingerprint is byte-stable across rebuilds
+- Interaction proof: dev-server browser checks confirmed live system switching (Purple Rain → JADE → OS → Animation), dark toggle, tab click and panel swap, dialog open/close, dismissible notices, zero horizontal overflow at 375px, and all effective touch rows at 44px; a pre-release IIFE concatenation bug in `kit.js` was caught in the browser and fixed with self-terminating sources plus a defensive bundle join
+- Live proof: `/vanilla`, all five `tokens.css`, `/r/design-tokens.json`, `/r/doctrine.json`, `/r/checksums.json`, and the vanilla registry/bundles/pieces return `200` on `kit.scottelling.com`; the live `registryVersion` matches the local build exactly
+- Deployment: Vercel production `dpl_GcUWrmdEMW24wL1z5Tr8cQFyvEsV`, aliased to `kit.scottelling.com`; product commit `e6628bc` pushed to `scottelling/kit`
+- Git identity: this machine's missing global git author was set to `Scott <scottelling@gmail.com>` earlier today; this release is the first kit commit under the correct identity
+- Open loops: grow the vanilla dialect beyond the 12-piece starter set; first real consumer swap (bear or threads) awaits Scott's pick; per-artifact semver deferred until needed (SPEC §9)
+
 ## 2026-08-06 — Universal Kit catalog, Animation Studio, and resource libraries
 
 - Agent: Codex
