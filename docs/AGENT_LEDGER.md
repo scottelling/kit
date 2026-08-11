@@ -1,5 +1,16 @@
 # Agent Ledger
 
+## 2026-08-11 — Every kit in Explore, same format, automatically
+
+- Agent: Claude Code
+- Scope: Scott flagged that Space was missing from the Explore kit switcher; rule going forward — every kit appears in Explore and follows the same format
+- Delivered: `emit-sourced-kits.mjs` now also generates `lib/sourced-kits.generated.json`; both kit switchers (shared kit experience + Shadow's) append every sourced kit from it, and a new statically-generated `app/kit/[sourced]` route renders the standard Explore shell — same switcher, same "The whole X kit." hero, same count block (36 pieces · 7 sections · 2 themes), plus a provenance line — with the full preserved document embedded below and "Open the full document" / "Get the code" actions. Future sourced kits appear in Explore with zero site code
+- Verification: `verify:dialects` now gates the manifest (id/route/pieceCount parity) and the showroom route instead of a next.config rewrite (the per-kit rewrite is gone; the app route supersedes it); full `npm run check` passes; `/kit/space` prerenders statically
+- Interaction proof: switcher pill verified on `/kit/os` and clicked through; `/kit/space` shell renders in the house format with the Space pill active; the embedded document loads completely (verified via its DOM — the pane's iframe screenshots are a known capture artifact); 375px shows no overflow
+- Live proof: all five Explore pages carry the Space pill; `/kit/space` returns `200` as the shell page; the document and all `/r/space/` artifacts remain live
+- Deployment: production via `./ship.sh`; product commit `5f5ddd7` pushed to `scottelling/kit`
+- Open loops: none — the previous entry's "showroom link could join navigation someday" is resolved
+
 ## 2026-08-11 — Space sourced kit + the standing intake process
 
 - Agent: Claude Code
