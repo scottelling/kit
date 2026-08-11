@@ -1,5 +1,18 @@
 # Agent Ledger
 
+## 2026-08-11 — Studio and Build unified into one Build
+
+- Agent: Claude Code
+- Scope: per Scott — Studio and Build were two nav items for one job (Studio shaped the system, Build made the project, and Studio's last step already pushed into Build). Unify them under the single name Build
+- Shape of the merge: `/build` is now one page with two phases of the same flow. Arrive with no project and you get the composer (brief → direction → system → library → team → ship); arrive with `?project=` (or explicit shaping params) and you get the working project. The composer's "Build this project" creates the project and lands in the workspace on the same route
+- Navigation: main nav is now Build · Elements · Kits (Studio removed; Build stays current across `/build`, `/projects`, `/templates`, `/labs`, `/quality`, `/preview`, and the `/studio/*` libraries). The room rail label changed from "Project Studio" to "Build" and now also appears on the composer, so Projects/Templates/Labs/Quality are reachable from the Build landing
+- Routes: `/studio` permanently redirects (308) to `/build`; the resource libraries keep their URLs (`/studio/icons`, `/studio/fonts`, `/studio/swap`) and stay linked from Build's library stage
+- Copy: composer headline is now "Shape it and build it, in one place."; "Take this system straight into Build Mode" → "Build this system into working screens"; "Ready for the Studio" → "Ready to build"; workspace eyebrow "Build Mode" → "Working project" and its "The Studio turns your brief…" line rewritten; "Back to Studio" → "Back to Build" in the published preview; the Quality check group "Studio" → "Team"; home page's Studio entries now point into Build
+- Verification: TypeScript and full `npm run check` pass; browser-verified the end-to-end flow (composer → real click on "Build this project" → workspace with five built screens on `/build?project=…`), the nav and room rail, and no page-level horizontal overflow at 1280 or 375 (the room rail scrolls inside its own container). An initial "overflow" reading was a hidden-pane zero-width measurement artifact, not a real defect — re-measured with an explicit viewport
+- Live proof: `/studio` returns 308 → `/build`; `/build` returns 200 with the three-item nav and no Studio entry; all three libraries still return 200
+- Deployment: production via `./ship.sh`; commit `1a42233` pushed to `scottelling/kit`
+- Open loops: `/studio/*` library URLs still carry the old word; renaming them would need redirects and inbound-link updates — deferred until Scott wants it
+
 ## 2026-08-11 — Site chrome rebrand: Kits
 
 - Agent: Claude Code
