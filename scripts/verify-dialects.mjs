@@ -175,7 +175,18 @@ try {
     .filter((entry) => entry.isDirectory())
     .map((entry) => entry.name)
 } catch {}
-const nextConfig = await readText("next.config.ts")
+let sourcedManifest = []
+try {
+  sourcedManifest = await readJson("lib/sourced-kits.generated.json")
+} catch {
+  if (sourcedIds.length > 0) fail("lib/sourced-kits.generated.json is missing — run the registry build")
+}
+let sourcedRouteExists = true
+try {
+  await readText("app/kit/[sourced]/page.tsx")
+} catch {
+  sourcedRouteExists = false
+}
 for (const id of sourcedIds) {
   let index, sourcedProvenance, sourcedBridge, sourcedTokens
   try {
@@ -204,9 +215,14 @@ for (const id of sourcedIds) {
     }
   }
   if (/\[object Object\]/.test(sourcedTokens)) fail(`sourced ${id}: tokens.css contains a serialization error`)
-  if (index.showroomRoute && !nextConfig.includes(`"${index.showroomRoute}"`)) {
-    fail(`sourced ${id}: next.config.ts has no rewrite for ${index.showroomRoute}`)
+  const manifestEntry = sourcedManifest.find((entry) => entry.id === id)
+  if (!manifestEntry) {
+    fail(`sourced ${id}: missing from lib/sourced-kits.generated.json — the Explore switcher will not show it`)
+  } else {
+    if (manifestEntry.route !== index.showroomRoute) fail(`sourced ${id}: manifest route differs from meta showroomRoute`)
+    if (manifestEntry.pieceCount !== index.componentCount) fail(`sourced ${id}: manifest pieceCount differs from componentCount`)
   }
+  if (!sourcedRouteExists) fail(`sourced ${id}: app/kit/[sourced]/page.tsx is missing — no Explore showroom shell`)
   for (const piece of index.pieces ?? []) {
     if (piece.provenance !== "extracted" && piece.provenance !== "derived") {
       fail(`sourced ${id}: piece "${piece.name}" lacks an extracted/derived provenance flag`)

@@ -8,6 +8,7 @@ import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import animationTokens from "@/lib/animation-tokens.json"
 import osTokens from "@/lib/os-tokens.json"
+import sourcedKits from "@/lib/sourced-kits.generated.json"
 
 import { AnimationWorkbench } from "./animation/animation-workbench"
 import { ComponentPreview, type LibraryItem } from "./component-preview"
@@ -122,6 +123,9 @@ export function KitExperience({ library, system = "purple-rain" }: KitExperience
             <Link ref={isOs ? activeKitRef : undefined} aria-current={isOs ? "page" : undefined} href="/kit/os">OS <small>{library.length} pieces</small></Link>
             <Link ref={isAnimation ? activeKitRef : undefined} aria-current={isAnimation ? "page" : undefined} href="/kit/animation">Animation <small>{library.length} pieces</small></Link>
             <Link href="/kit/shadow">Shadow <small>12 elevations</small></Link>
+            {sourcedKits.map((kit) => (
+              <Link key={kit.id} href={kit.route}>{kit.title} <small>{kit.pieceCount} pieces</small></Link>
+            ))}
           </div>
         </nav>
         <section className="kit-index-intro" aria-labelledby="kit-title">

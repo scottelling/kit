@@ -17,6 +17,7 @@ import { type CSSProperties, type ReactNode, useRef, useState } from "react"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { shadowDepths, type ShadowDepth, shadowRecipeCount, shadowSource } from "@/lib/shadow-system"
+import sourcedKits from "@/lib/sourced-kits.generated.json"
 
 type ShadowStyle = CSSProperties & {
   "--shadow-ink": string
@@ -83,6 +84,9 @@ export function ShadowExperience() {
             <Link href="/kit/os">OS <small>175 pieces</small></Link>
             <Link href="/kit/animation">Animation <small>175 pieces</small></Link>
             <Link aria-current="page" href="/kit/shadow">Shadow <small>{shadowRecipeCount} elevations</small></Link>
+            {sourcedKits.map((kit) => (
+              <Link key={kit.id} href={kit.route}>{kit.title} <small>{kit.pieceCount} pieces</small></Link>
+            ))}
           </div>
         </nav>
 

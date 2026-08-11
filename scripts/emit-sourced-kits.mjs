@@ -13,9 +13,12 @@ let kitIds = []
 try {
   kitIds = (await readdir(sourcedDir, { withFileTypes: true })).filter((e) => e.isDirectory()).map((e) => e.name)
 } catch {
+  await writeFile(path.join(root, "lib", "sourced-kits.generated.json"), "[]\n")
   console.log("No sourced kits to emit.")
   process.exit(0)
 }
+
+const manifest = []
 
 const required = ["meta.json", "tokens.css", "kit.css", "provenance.json", "bridge.json", "pieces.json", "showroom.html"]
 
@@ -75,5 +78,22 @@ for (const id of kitIds.sort()) {
   }
   await writeFile(path.join(outDir, "registry.json"), `${JSON.stringify(index, null, 2)}\n`)
   await writeFile(path.join(root, "public", `kit-${id}.html`), files["showroom.html"])
+
+  manifest.push({
+    id,
+    title: meta.title,
+    description: meta.description,
+    pieceCount: pieces.pieces.length,
+    sectionCount: new Set(pieces.pieces.map((piece) => piece.section)).size,
+    themes: meta.themes,
+    route: meta.showroomRoute,
+    documentUrl: `/kit-${id}.html`,
+    source: meta.source.site,
+    audited: meta.source.audited,
+  })
   console.log(`Emitted sourced kit "${id}": ${pieces.pieces.length} pieces, showroom at ${meta.showroomRoute}.`)
 }
+
+// The app's Explore switcher and the /kit/[sourced] shell import this at build
+// time, so every sourced kit appears in the site automatically.
+await writeFile(path.join(root, "lib", "sourced-kits.generated.json"), `${JSON.stringify(manifest, null, 2)}\n`)

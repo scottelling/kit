@@ -1667,3 +1667,54 @@
   .mini-dots i,
   .mini-spinner { animation: none !important; }
 }
+
+/* --- Sourced-kit showroom shell (/kit/[sourced]) --- */
+.sourced-provenance {
+  margin-top: var(--space-sm);
+  color: var(--muted-foreground);
+  font-size: var(--text-sm);
+}
+
+.sourced-document {
+  margin-top: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.sourced-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.sourced-actions a {
+  min-height: var(--pr-control-height);
+  display: inline-flex;
+  align-items: center;
+  padding-inline: var(--space-md);
+  border: var(--rule-hair) solid var(--border);
+  border-radius: var(--radius-round);
+  color: var(--foreground);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sourced-actions a:hover {
+  background: var(--muted);
+}
+
+.sourced-actions a:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.sourced-frame {
+  width: 100%;
+  height: min(150vh, 1400px);
+  min-height: 40rem;
+  border: var(--rule-hair) solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--card);
+}

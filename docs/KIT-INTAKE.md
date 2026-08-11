@@ -96,10 +96,15 @@ showroom.html     the presentable single-file document (usually the source
                   file, at most minimally adapted)
 ```
 
-`npm run registry:build` publishes them to `/r/<kit-id>/` plus the showroom at
-`/kit/<kit-id>`, and checksums cover them automatically (kit-doctor therefore
-works with zero extra effort). `verify:dialects` gates the formats, the bridge
-targets, and the showroom.
+`npm run registry:build` publishes them to `/r/<kit-id>/`, serves the document
+at `/kit-<kit-id>.html`, and regenerates `lib/sourced-kits.generated.json` —
+which the site imports at build time, so **every sourced kit automatically
+appears in the Explore kit switcher and gets its `/kit/<kit-id>` showroom
+page** (the shared `app/kit/[sourced]` shell: same switcher, same hero format,
+with the full document embedded). No per-kit site code is needed. Checksums
+cover the artifacts automatically (kit-doctor therefore works with zero extra
+effort), and `verify:dialects` gates the formats, the bridge targets, the
+manifest, and the showroom route.
 
 ## 7. Record and ship
 

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "space",
+    "title": "Space",
+    "description": "Finder-adjacent cloud-filesystem UI kit audited from spacefs.com and completed with a dark theme, semantic palette, forms, and filesystem components. Preserved as authored: RGB-channel tokens, hairline structure, 400–500 weights, desktop density.",
+    "pieceCount": 36,
+    "sectionCount": 7,
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "route": "/kit/space",
+    "documentUrl": "/kit-space.html",
+    "source": "spacefs.com",
+    "audited": "2026-08-11"
+  }
+]
