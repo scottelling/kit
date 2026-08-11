@@ -139,8 +139,8 @@ export function SiteHeader() {
   return (
     <>
       <header className="site-header">
-        <Link className="wordmark" href="/" aria-label="Purple Rain home">
-          purple rain<span aria-hidden="true">.</span>
+        <Link className="wordmark" href="/" aria-label="Kits home">
+          kits<span aria-hidden="true">.</span>
         </Link>
         <button className="find-button" type="button" onClick={openFinder}>
           <Search aria-hidden="true" />
@@ -150,7 +150,7 @@ export function SiteHeader() {
           <Link aria-current={buildPages.includes(pathname) ? "page" : undefined} href="/build">Build</Link>
           <Link aria-current={pathname.startsWith("/studio") ? "page" : undefined} href="/studio">Studio</Link>
           <Link aria-current={pathname === "/elements" ? "page" : undefined} href="/elements">Elements</Link>
-          <Link aria-current={pathname.startsWith("/kit") ? "page" : undefined} href="/kit">Explore</Link>
+          <Link aria-current={pathname.startsWith("/kit") ? "page" : undefined} href="/kit">Kits</Link>
         </nav>
       </header>
 
