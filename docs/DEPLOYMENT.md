@@ -54,6 +54,12 @@ curl -fsS https://kit.scottelling.com/r/vanilla/kit.css
 curl -fsS https://kit.scottelling.com/r/vanilla/kit.js
 curl -fsS https://kit.scottelling.com/r/vanilla/button.json
 curl -fsS https://kit.scottelling.com/vanilla
+curl -fsS https://kit.scottelling.com/r/space/registry.json
+curl -fsS https://kit.scottelling.com/r/space/tokens.css
+curl -fsS https://kit.scottelling.com/r/space/kit.css
+curl -fsS https://kit.scottelling.com/r/space/provenance.json
+curl -fsS https://kit.scottelling.com/r/space/bridge.json
+curl -fsS https://kit.scottelling.com/kit/space
 curl -fsS https://kit.scottelling.com/demo
 curl -fsS https://kit.scottelling.com/labs
 curl -fsS https://kit.scottelling.com/elements

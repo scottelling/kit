@@ -34,6 +34,8 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - Vanilla dialect: `https://kit.scottelling.com/vanilla` (demo) + `https://kit.scottelling.com/r/vanilla/registry.json`
 - Machine doctrine: `https://kit.scottelling.com/r/doctrine.json`
 - Registry checksums: `https://kit.scottelling.com/r/checksums.json`
+- Space (sourced kit): `https://kit.scottelling.com/kit/space` (showroom) + `https://kit.scottelling.com/r/space/registry.json`
+- Kit intake process: `docs/KIT-INTAKE.md` (per-kit records: `docs/SPACE-KIT-INTAKE.md`)
 - Stack: Next.js App Router, TypeScript, Tailwind CSS v4, shadcn (one dialect of the KIT format, not its foundation)
 
 ## Product contract
@@ -62,6 +64,13 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - Published Theme Workshop copies must install cleanly into an unrelated shadcn project and merge both light and dark foundations.
 - `/elements` keeps one counted inventory, a live tactile playground, exact visible source, an English project prompt, and a separate public registry in sync.
 - A Signature Effect may use a purpose-bound local effect only inside its isolated frame. It must start sound muted, pause offscreen, become fully static for reduced motion, preserve 44px controls, and leave Purple Rain chrome untouched.
+
+## Kit intake
+
+When Scott hands over a new kit (an HTML file, a site audit, a repo), follow
+`docs/KIT-INTAKE.md` — the standing process. Default class is **sourced kit**:
+quirks preserved verbatim, bridged to the universal language, never converted.
+Space (`/kit/space`, `/r/space/`) is the reference example.
 
 ## KIT format layer
 

@@ -1,6 +1,7 @@
 # KIT Format — SPEC
 
-Version: 1.0.0 (2026-08-11)
+Version: 1.1.0 (2026-08-11) — adds sourced kits (§2a), `kit-provenance/1`,
+`kit-bridge/1`, and the intake process pointer (`docs/KIT-INTAKE.md`).
 
 This file is the source of truth for the KIT format: how visual systems, tokens,
 pieces, doctrine, and consumers speak one language. The shadcn registry is one
@@ -31,6 +32,37 @@ Complete systems (each styles the entire 175-piece catalog):
 Foundation kits supplement a system without replacing its identity: `shadow`
 (`/r/shadow/`). Animation is a dark-authority system: both appearance contexts
 intentionally receive the same inspected foundation.
+
+## 2a. Sourced kits
+
+A sourced kit is a system Scott hands over (an audit, a single file, a repo)
+that enters the registry **as authored** — native token format, native names,
+native density and rules. Quirks are the product; nothing is normalized. The
+full process lives in `docs/KIT-INTAKE.md`; the first example is `space`
+(`/r/space/`, showroom `/kit/space`).
+
+Sourced kits publish under `/r/<kit-id>/`:
+
+| artifact | format | carries |
+| --- | --- | --- |
+| `registry.json` | `kit-sourced-registry/1` | identity, install URLs, piece inventory with per-piece `extracted`/`derived` flags |
+| `tokens.css` | native | the kit's tokens, plus *additive-only* compatibility (e.g. kit's dark-mode selectors alongside the native theme mechanism) |
+| `kit.css` (+ `kit.js` if the system ships behavior) | native | the installable system layer, chrome excluded |
+| `provenance.json` | `kit-provenance/1` | source, audit method, extracted vs derived, quirks, **doctrine deltas**, cautions, font licensing |
+| `bridge.json` | `kit-bridge/1` | honest partial map from native tokens to universal roles; `null` where no true counterpart exists |
+
+Rules:
+
+- The original artifact is archived verbatim under `sources/<kit-id>/` and
+  never edited.
+- A **doctrine delta** is a declared, justified conflict with
+  `/r/doctrine.json` (e.g. Space's 30px Finder-density rows vs the 44px
+  minimum). Deltas are legal inside the sourced kit's own products and
+  showroom, never in universal pieces or complete systems, and never silent.
+- The bridge never changes the kit. Adapters crossing it convert format at the
+  boundary (e.g. Space's RGB channel triplets → complete color values).
+- Sourced kits do not claim the universal catalog; their piece inventory is
+  their own. Checksums and kit-doctor cover them like every other artifact.
 
 ## 3. Token artifacts
 

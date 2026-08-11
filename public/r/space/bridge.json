@@ -1,0 +1,38 @@
+{
+  "format": "kit-bridge/1",
+  "id": "space",
+  "purpose": "Honest, partial map from Space's native tokens to the KIT universal roles. The bridge lets cross-kit tooling reason about Space; Space itself never changes to satisfy it.",
+  "tokenFormat": {
+    "space": "space-separated RGB channels; consume as rgb(var(--x)) or rgb(var(--x) / alpha)",
+    "universal": "complete color values (OKLCH)",
+    "conversion": "Adapters crossing the bridge must convert format at the boundary — a Space value is never a drop-in universal value, even when the role matches"
+  },
+  "map": [
+    { "space": "--background", "universal": "--background" },
+    { "space": "--foreground", "universal": "--foreground" },
+    { "space": "--muted", "universal": "--muted" },
+    { "space": "--muted-foreground", "universal": "--muted-foreground" },
+    { "space": "--border", "universal": "--border", "note": "also plays the universal --input role; Space has no separate input border token" },
+    { "space": "--border-strong", "universal": null, "note": "hover/active hairline; no universal counterpart" },
+    { "space": "--ring", "universal": "--ring" },
+    { "space": "--success", "universal": "--positive", "note": "no paired -foreground token; Space colors dots and rules, not fills" },
+    { "space": "--danger", "universal": "--destructive" },
+    { "space": "--warning", "universal": null, "note": "universal set has no warning role" },
+    { "space": "--surface", "universal": null, "note": "inverting section treatment; closest spirit is an inverted popover, but no true counterpart" },
+    { "space": "--surface-foreground", "universal": null },
+    { "space": "--skeleton", "universal": null, "note": "alpha fragment (channels / opacity), consumed as rgb(var(--skeleton))" },
+    { "space": "--control-h", "universal": "--kit-control-height", "note": "48px vs universal 44px — Space runs taller standard controls" },
+    { "space": "--radius-md", "universal": "--radius-control", "note": "8px; also plays the card role — Space surfaces share one radius" },
+    { "space": "--radius-xl", "universal": "--radius-sheet", "note": "dialog radius" },
+    { "space": "--radius-full", "universal": null, "note": "pill vocabulary for controls has no universal token; universal systems encode it per piece" },
+    { "space": "--duration-fast", "universal": "--kit-fast", "note": "150ms vs 120ms" },
+    { "space": "--duration", "universal": "--kit-standard", "note": "500ms vs 180ms — Space's reveals are deliberately slower; do not normalize" },
+    { "space": "--ease", "universal": "--kit-ease" },
+    { "space": "--font-sans", "universal": "--font-sans" },
+    { "space": "--font-mono", "universal": null, "note": "the universal set has no mono role — a gap worth closing on the universal side someday, not by renaming Space" },
+    { "space": "--container", "universal": null },
+    { "space": "--gutter", "universal": "--kit-space-base", "note": "20px vs 12px; loose correspondence, layout rhythm differs by design" },
+    { "space": "--shadow-menu", "universal": "--shadow-panel", "note": "floating overlays only — Space never shadows cards or buttons" },
+    { "space": "--leading-body", "universal": "--kit-leading", "note": "1.625 vs 1.5" }
+  ]
+}

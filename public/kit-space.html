@@ -1,0 +1,1207 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Space — UI Kit</title>
+<style>
+/* ============================================================
+   SPACE — UI KIT  (single file)
+   Extracted from spacefs.com (2026-08-11) via live DOM audit,
+   then extended: dark theme, semantic palette, form controls,
+   filesystem components.
+
+   EXTRACTED = read off the source.
+   DERIVED   = designed here to complete the system.
+   ============================================================ */
+
+/* ---------- LIGHT (EXTRACTED) ---------- */
+:root,
+[data-theme="light"]{
+  --background:255 255 255;
+  --foreground:10 10 10;
+  --muted:245 245 245;
+  --muted-foreground:115 115 115;
+  --border:229 229 229;
+  --border-strong:212 212 212;   /* DERIVED — hover/active hairline */
+  --ring:0 102 255;
+  --surface:10 10 10;
+  --surface-foreground:255 255 255;
+
+  /* Semantic — DERIVED from Apple's system palette. The product
+     lives inside Finder and the source's blue already sits within
+     a few degrees of systemBlue. */
+  --success:52 199 89;
+  --warning:255 149 0;
+  --danger:255 59 48;
+
+  --shadow-menu:0 8px 24px -6px rgb(0 0 0 / .12), 0 2px 6px -2px rgb(0 0 0 / .08);
+  --shadow-float:0 30px 70px -24px rgb(0 0 0 / .45);
+  --skeleton:0 0 0 / .06;
+}
+
+/* ---------- DARK (DERIVED) ---------- */
+[data-theme="dark"]{
+  --background:10 10 10;          /* the source's own --surface */
+  --foreground:255 255 255;
+  --muted:23 23 23;
+  --muted-foreground:158 158 158; /* white/60% flattened — their measured dark body color */
+  --border:38 38 38;              /* NOT white/8% — see derivation table */
+  --border-strong:64 64 64;
+  --ring:10 132 255;              /* systemBlue dark variant */
+  --surface:250 250 250;          /* inverts — light panel on a dark page */
+  --surface-foreground:10 10 10;
+
+  --success:48 209 88;
+  --warning:255 159 10;
+  --danger:255 69 58;
+
+  --shadow-menu:0 8px 24px -6px rgb(0 0 0 / .6), 0 2px 6px -2px rgb(0 0 0 / .4);
+  --shadow-float:0 30px 70px -24px rgb(0 0 0 / .8);
+  --skeleton:255 255 255 / .07;
+}
+
+/* ---------- SCALE (EXTRACTED) ---------- */
+:root{
+  --font-sans:"Google Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --font-mono:"Google Sans Code",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+
+  --text-display:clamp(38px,4.8vw,68px);
+  --text-title:clamp(30px,4.5vw,52px);
+  --text-statement:clamp(30px,4.2vw,52px);
+  --leading-body:1.625;
+  --tracking-tight:-.025em;
+
+  --radius-xs:4px; --radius-sm:6px; --radius-md:8px;
+  --radius-lg:12px; --radius-xl:16px; --radius-2xl:24px; --radius-full:9999px;
+
+  --container:1440px;
+  --gutter:20px; --gutter-sm:32px; --gutter-lg:40px;
+  --nav-height:80px;
+
+  --ease:cubic-bezier(0,0,.2,1);
+  --duration-fast:150ms;
+  --duration:500ms;
+
+  --control-h:48px;      /* EXTRACTED */
+  --control-h-sm:36px;   /* DERIVED   */
+  --control-h-nav:52px;  /* EXTRACTED */
+}
+
+/* ============================================================
+   PRIMITIVES  .sp-*
+   ============================================================ */
+*{box-sizing:border-box}
+html{color-scheme:light}
+[data-theme="dark"]{color-scheme:dark}
+body{margin:0;font-family:var(--font-sans);background:rgb(var(--background));
+  color:rgb(var(--foreground));-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,p{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+
+.sp-container{max-width:var(--container);margin-inline:auto;padding-inline:var(--gutter)}
+@media(min-width:640px){.sp-container{padding-inline:var(--gutter-sm)}}
+@media(min-width:1024px){.sp-container{padding-inline:var(--gutter-lg)}}
+
+/* --- Type --- */
+.sp-display{font-size:var(--text-display);line-height:1.06;letter-spacing:var(--tracking-tight);font-weight:400}
+.sp-title{font-size:var(--text-title);line-height:1.05;letter-spacing:var(--tracking-tight);font-weight:500;text-wrap:balance}
+.sp-heading{font-size:24px;line-height:1.11;letter-spacing:var(--tracking-tight);font-weight:500}
+@media(min-width:640px){.sp-heading{font-size:36px}}
+.sp-subhead{font-size:18px;line-height:1.35;letter-spacing:var(--tracking-tight);font-weight:500}
+.sp-body{font-size:16px;line-height:var(--leading-body);color:rgb(var(--muted-foreground))}
+.sp-lead{font-size:15px;line-height:var(--leading-body);color:rgb(var(--muted-foreground))}
+.sp-body-sm{font-size:14px;line-height:var(--leading-body);color:rgb(var(--muted-foreground))}
+.sp-mono{font-family:var(--font-mono);font-size:12px;line-height:1.33;color:rgb(var(--muted-foreground))}
+.sp-strong{color:rgb(var(--foreground));font-weight:500}
+
+/* Link — DERIVED. Source has no in-prose link style. */
+.sp-link{color:rgb(var(--foreground));text-decoration:none;
+  border-bottom:1px solid rgb(var(--border-strong));
+  transition:border-color var(--duration-fast) var(--ease)}
+.sp-link:hover{border-bottom-color:rgb(var(--foreground))}
+
+.focus-ring:focus-visible,.sp-btn:focus-visible{outline:2px solid rgb(var(--ring));outline-offset:2px}
+
+/* --- Button (EXTRACTED: primary, secondary, nav) --- */
+.sp-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  height:var(--control-h);padding-inline:28px;border-radius:var(--radius-full);
+  font-size:14px;font-weight:500;border:0;cursor:pointer;text-decoration:none;white-space:nowrap}
+.sp-btn--primary{background:rgb(var(--foreground));color:rgb(var(--background));
+  transition:opacity var(--duration-fast) var(--ease)}
+.sp-btn--primary:hover{opacity:.85}
+.sp-btn--secondary{background:rgb(var(--background));color:rgb(var(--foreground));
+  border:1px solid rgb(var(--border));transition:background-color var(--duration-fast) var(--ease)}
+.sp-btn--secondary:hover{background:rgb(var(--muted))}
+.sp-btn--ghost{background:transparent;color:rgb(var(--muted-foreground));padding-inline:16px;
+  transition:background-color var(--duration-fast) var(--ease),color var(--duration-fast) var(--ease)}
+.sp-btn--ghost:hover{background:rgb(var(--muted));color:rgb(var(--foreground))}
+.sp-btn--danger{background:rgb(var(--danger));color:#fff;transition:opacity var(--duration-fast) var(--ease)}
+.sp-btn--danger:hover{opacity:.85}
+.sp-btn--sm{height:var(--control-h-sm);padding-inline:18px;font-size:13px}
+.sp-btn--nav{height:var(--control-h-nav);padding-inline:24px}
+.sp-btn--icon{width:var(--control-h-sm);height:var(--control-h-sm);padding:0}
+.sp-btn[disabled],.sp-btn[aria-disabled="true"]{opacity:.4;pointer-events:none}
+
+/* Segmented control — DERIVED */
+.sp-segment{display:inline-flex;padding:3px;gap:3px;border:1px solid rgb(var(--border));
+  border-radius:var(--radius-full);background:rgb(var(--background))}
+.sp-segment button{height:30px;padding-inline:16px;border:0;border-radius:var(--radius-full);
+  background:transparent;color:rgb(var(--muted-foreground));font-size:13px;font-weight:500;cursor:pointer;
+  transition:background-color var(--duration-fast) var(--ease),color var(--duration-fast) var(--ease)}
+.sp-segment button[aria-selected="true"]{background:rgb(var(--foreground));color:rgb(var(--background))}
+.sp-segment button:focus-visible{outline:2px solid rgb(var(--ring));outline-offset:2px}
+
+/* --- Badge, status, kbd, avatar (DERIVED) --- */
+.sp-badge{display:inline-flex;align-items:center;gap:6px;height:24px;padding-inline:10px;
+  border-radius:var(--radius-full);border:1px solid rgb(var(--border));
+  font-size:12px;font-weight:500;color:rgb(var(--muted-foreground));white-space:nowrap}
+.sp-badge--solid{background:rgb(var(--foreground));color:rgb(var(--background));border-color:transparent}
+.sp-badge--mono{font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+
+.sp-dot{width:6px;height:6px;border-radius:var(--radius-full);flex-shrink:0;
+  background:rgb(var(--muted-foreground));display:inline-block}
+.sp-dot--synced{background:rgb(var(--success))}
+.sp-dot--streaming{background:rgb(var(--ring))}
+.sp-dot--pending{background:rgb(var(--warning))}
+.sp-dot--offline{background:rgb(var(--danger))}
+.sp-status{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:rgb(var(--muted-foreground))}
+
+.sp-kbd{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;
+  padding-inline:6px;border-radius:var(--radius-sm);border:1px solid rgb(var(--border));
+  background:rgb(var(--muted));font-family:var(--font-mono);font-size:11px;
+  color:rgb(var(--muted-foreground))}
+
+.sp-avatar{width:28px;height:28px;border-radius:var(--radius-full);background:rgb(var(--muted));
+  border:1px solid rgb(var(--border));display:inline-flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:500;color:rgb(var(--muted-foreground))}
+.sp-avatars{display:inline-flex}
+.sp-avatars .sp-avatar{box-shadow:0 0 0 2px rgb(var(--background))}
+.sp-avatars .sp-avatar+.sp-avatar{margin-left:-8px}
+
+/* --- Forms (DERIVED — none exist in source) --- */
+.sp-field{display:flex;flex-direction:column;gap:8px}
+.sp-field__label{font-size:13px;font-weight:500;color:rgb(var(--foreground))}
+.sp-field__hint{font-size:13px;line-height:1.5;color:rgb(var(--muted-foreground))}
+.sp-field__error{font-size:13px;line-height:1.5;color:rgb(var(--danger))}
+
+.sp-input{width:100%;height:var(--control-h);padding-inline:16px;border-radius:var(--radius-md);
+  border:1px solid rgb(var(--border));background:rgb(var(--background));font-size:15px;
+  transition:border-color var(--duration-fast) var(--ease)}
+.sp-input::placeholder{color:rgb(var(--muted-foreground))}
+.sp-input:hover{border-color:rgb(var(--border-strong))}
+.sp-input:focus{outline:2px solid rgb(var(--ring));outline-offset:2px;border-color:transparent}
+.sp-input[aria-invalid="true"]{border-color:rgb(var(--danger))}
+.sp-input[disabled]{background:rgb(var(--muted));color:rgb(var(--muted-foreground));cursor:not-allowed}
+textarea.sp-input{height:auto;min-height:112px;padding-block:14px;line-height:var(--leading-body);resize:vertical}
+select.sp-input{appearance:none;cursor:pointer;padding-right:40px;
+  background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),
+                   linear-gradient(135deg,currentColor 50%,transparent 50%);
+  background-position:calc(100% - 21px) 21px,calc(100% - 16px) 21px;
+  background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+
+.sp-inputgroup{position:relative;display:flex;align-items:center}
+.sp-inputgroup .sp-input{padding-left:44px}
+.sp-inputgroup>svg{position:absolute;left:16px;color:rgb(var(--muted-foreground));pointer-events:none}
+
+.sp-check{display:inline-flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:14px}
+.sp-check input{appearance:none;margin:0;width:18px;height:18px;flex-shrink:0;margin-top:2px;
+  border:1px solid rgb(var(--border-strong));border-radius:var(--radius-xs);
+  background:rgb(var(--background));cursor:pointer;
+  transition:background-color var(--duration-fast) var(--ease),border-color var(--duration-fast) var(--ease)}
+.sp-check input[type="radio"]{border-radius:var(--radius-full)}
+.sp-check input:checked{background-color:rgb(var(--foreground));border-color:rgb(var(--foreground))}
+.sp-check input[type="checkbox"]:checked{
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.5 8.5l3 3 6-6'/%3E%3C/svg%3E");
+  background-size:14px;background-position:center;background-repeat:no-repeat}
+[data-theme="dark"] .sp-check input[type="checkbox"]:checked{
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.5 8.5l3 3 6-6'/%3E%3C/svg%3E")}
+.sp-check input[type="radio"]:checked{box-shadow:inset 0 0 0 4px rgb(var(--background))}
+.sp-check input:disabled{opacity:.4;cursor:not-allowed}
+.sp-check input:focus-visible{outline:2px solid rgb(var(--ring));outline-offset:2px}
+
+.sp-switch{position:relative;display:inline-flex;align-items:center;gap:12px;cursor:pointer;font-size:14px}
+.sp-switch input{appearance:none;margin:0;width:44px;height:26px;flex-shrink:0;
+  border-radius:var(--radius-full);background:rgb(var(--border-strong));cursor:pointer;
+  transition:background-color var(--duration-fast) var(--ease)}
+.sp-switch input:checked{background:rgb(var(--foreground))}
+.sp-switch input::after{content:"";position:absolute;left:3px;top:3px;width:20px;height:20px;
+  border-radius:var(--radius-full);background:rgb(var(--background));
+  transition:transform var(--duration-fast) var(--ease)}
+.sp-switch input:checked::after{transform:translateX(18px)}
+.sp-switch input:focus-visible{outline:2px solid rgb(var(--ring));outline-offset:2px}
+
+.sp-slider{appearance:none;width:100%;height:4px;border-radius:var(--radius-full);
+  background:rgb(var(--border));cursor:pointer}
+.sp-slider::-webkit-slider-thumb{appearance:none;width:16px;height:16px;
+  border-radius:var(--radius-full);background:rgb(var(--foreground));border:0}
+.sp-slider::-moz-range-thumb{width:16px;height:16px;border-radius:var(--radius-full);
+  background:rgb(var(--foreground));border:0}
+.sp-slider:focus-visible{outline:2px solid rgb(var(--ring));outline-offset:6px}
+
+/* --- Filesystem (DERIVED from the product's own UI) --- */
+.sp-breadcrumb{display:flex;align-items:center;gap:6px;font-size:12px;
+  color:rgb(var(--muted-foreground));flex-wrap:wrap}
+.sp-breadcrumb a{color:inherit;text-decoration:none}
+.sp-breadcrumb a:hover{color:rgb(var(--foreground))}
+.sp-breadcrumb [aria-current]{color:rgb(var(--foreground))}
+.sp-breadcrumb i{font-style:normal;opacity:.5}
+
+.sp-sidebar{padding:12px;border-right:1px solid rgb(var(--border));min-width:0}
+.sp-sidebar__label{font-family:var(--font-mono);font-size:10px;text-transform:uppercase;
+  letter-spacing:.08em;color:rgb(var(--muted-foreground));padding:12px 10px 6px;display:block}
+.sp-sidebar__item{display:flex;align-items:center;gap:10px;height:30px;padding-inline:10px;
+  border-radius:var(--radius-sm);font-size:13px;color:rgb(var(--foreground));
+  text-decoration:none;cursor:pointer;transition:background-color var(--duration-fast) var(--ease)}
+.sp-sidebar__item:hover{background:rgb(var(--muted))}
+.sp-sidebar__item[aria-current="true"]{background:rgb(var(--muted));font-weight:500}
+.sp-sidebar__item svg{color:rgb(var(--muted-foreground));flex-shrink:0}
+
+.sp-toolbar{display:flex;align-items:center;gap:4px;height:44px;padding-inline:12px;
+  border-bottom:1px solid rgb(var(--border))}
+.sp-toolbar__spacer{flex:1}
+
+.sp-filecard{border:1px solid rgb(var(--border));border-radius:var(--radius-md);overflow:hidden;
+  background:rgb(var(--background));transition:border-color var(--duration-fast) var(--ease)}
+.sp-filecard:hover{border-color:rgb(var(--border-strong))}
+.sp-filecard__thumb{aspect-ratio:16/10;background:rgb(var(--muted));display:flex;
+  align-items:flex-end;padding:8px}
+.sp-filecard__ext{font-family:var(--font-mono);font-size:10px;text-transform:uppercase;
+  letter-spacing:.04em;background:rgb(var(--foreground));color:rgb(var(--background));
+  padding:2px 6px;border-radius:var(--radius-xs)}
+.sp-filecard__meta{padding:10px 12px;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.sp-filecard__name{font-size:12px;color:rgb(var(--foreground));overflow:hidden;
+  text-overflow:ellipsis;white-space:nowrap}
+.sp-filecard__size{font-family:var(--font-mono);font-size:11px;
+  color:rgb(var(--muted-foreground));flex-shrink:0}
+
+.sp-filerow{display:grid;grid-template-columns:1fr 84px 76px 40px;align-items:center;gap:12px;
+  padding:10px 12px;border-bottom:1px solid rgb(var(--border));font-size:13px;
+  transition:background-color var(--duration-fast) var(--ease)}
+.sp-filerow:hover{background:rgb(var(--muted))}
+.sp-filerow__name{display:flex;align-items:center;gap:10px;overflow:hidden}
+.sp-filerow__name span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sp-filerow__num{font-family:var(--font-mono);font-size:12px;
+  color:rgb(var(--muted-foreground));text-align:right}
+.sp-filerow--head{font-family:var(--font-mono);font-size:10px;text-transform:uppercase;
+  letter-spacing:.08em;color:rgb(var(--muted-foreground))}
+.sp-filerow--head:hover{background:transparent}
+.sp-filerow--head .sp-filerow__num{font-size:10px}
+
+.sp-progress{display:flex;flex-direction:column;gap:8px}
+.sp-progress__meta{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.sp-progress__track{height:2px;background:rgb(var(--border));
+  border-radius:var(--radius-full);overflow:hidden}
+.sp-progress__fill{height:100%;background:rgb(var(--foreground));
+  border-radius:var(--radius-full);transition:width var(--duration) var(--ease)}
+.sp-progress--streaming .sp-progress__fill{background:rgb(var(--ring))}
+
+.sp-meter{display:flex;flex-direction:column;gap:10px}
+.sp-meter__track{display:flex;height:6px;border-radius:var(--radius-full);
+  overflow:hidden;background:rgb(var(--muted))}
+.sp-meter__key{display:flex;flex-wrap:wrap;gap:8px 20px}
+
+.sp-menu{width:220px;padding:5px;border:1px solid rgb(var(--border));
+  border-radius:var(--radius-md);background:rgb(var(--background));box-shadow:var(--shadow-menu)}
+.sp-menu__item{display:flex;align-items:center;justify-content:space-between;gap:16px;height:30px;
+  padding-inline:10px;border-radius:var(--radius-sm);font-size:13px;cursor:pointer;
+  transition:background-color var(--duration-fast) var(--ease)}
+.sp-menu__item:hover{background:rgb(var(--muted))}
+.sp-menu__item--danger{color:rgb(var(--danger))}
+.sp-menu__sep{height:1px;background:rgb(var(--border));margin:5px 10px}
+
+.sp-palette{width:100%;max-width:560px;border:1px solid rgb(var(--border));
+  border-radius:var(--radius-lg);background:rgb(var(--background));
+  box-shadow:var(--shadow-menu);overflow:hidden}
+.sp-palette__search{display:flex;align-items:center;gap:12px;padding:16px 18px;
+  border-bottom:1px solid rgb(var(--border))}
+.sp-palette__search input{flex:1;min-width:0;border:0;background:transparent;font-size:16px;outline:none}
+.sp-palette__search input::placeholder{color:rgb(var(--muted-foreground))}
+.sp-palette__group{font-family:var(--font-mono);font-size:10px;text-transform:uppercase;
+  letter-spacing:.08em;color:rgb(var(--muted-foreground));padding:14px 18px 6px;display:block}
+.sp-palette__item{display:flex;align-items:center;gap:12px;padding:9px 18px;cursor:pointer;
+  transition:background-color var(--duration-fast) var(--ease)}
+.sp-palette__item:hover,.sp-palette__item[aria-selected="true"]{background:rgb(var(--muted))}
+.sp-palette__item div{flex:1;min-width:0}
+.sp-palette__item strong{display:block;font-size:14px;font-weight:400;color:rgb(var(--foreground));
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sp-palette__item small{display:block;font-size:12px;color:rgb(var(--muted-foreground));
+  margin-top:1px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sp-palette__foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;padding:10px 18px;
+  border-top:1px solid rgb(var(--border));background:rgb(var(--muted))}
+
+/* --- Feedback (DERIVED) --- */
+.sp-alert{display:flex;gap:14px;padding-left:18px;border-left:2px solid rgb(var(--foreground))}
+.sp-alert--info{border-left-color:rgb(var(--ring))}
+.sp-alert--success{border-left-color:rgb(var(--success))}
+.sp-alert--warning{border-left-color:rgb(var(--warning))}
+.sp-alert--danger{border-left-color:rgb(var(--danger))}
+.sp-alert h4{font-size:14px;font-weight:500;margin-bottom:4px}
+
+.sp-toast{display:flex;align-items:center;gap:14px;padding:14px 16px 14px 18px;
+  border-radius:var(--radius-lg);background:rgb(var(--surface));
+  color:rgb(var(--surface-foreground));box-shadow:var(--shadow-menu);max-width:440px}
+.sp-toast p{font-size:14px;flex:1}
+.sp-toast button{background:transparent;border:0;color:inherit;font-size:14px;font-weight:500;
+  cursor:pointer;opacity:.7;padding:0}
+.sp-toast button:hover{opacity:1}
+
+.sp-tooltip{display:inline-flex;padding:6px 10px;border-radius:var(--radius-sm);
+  background:rgb(var(--surface));color:rgb(var(--surface-foreground));font-size:12px;line-height:1.3}
+
+.sp-dialog{width:100%;max-width:440px;border:1px solid rgb(var(--border));
+  border-radius:var(--radius-xl);background:rgb(var(--background));padding:28px;
+  box-shadow:var(--shadow-menu)}
+.sp-dialog h3{font-size:18px;font-weight:500;letter-spacing:var(--tracking-tight);margin-bottom:10px}
+.sp-dialog__actions{display:flex;gap:12px;justify-content:flex-end;margin-top:28px}
+
+.sp-tabs{display:flex;gap:28px;border-bottom:1px solid rgb(var(--border))}
+.sp-tabs button{background:transparent;border:0;padding:0 0 14px;font-size:14px;font-weight:500;
+  color:rgb(var(--muted-foreground));cursor:pointer;position:relative;
+  transition:color var(--duration-fast) var(--ease)}
+.sp-tabs button:hover{color:rgb(var(--foreground))}
+.sp-tabs button[aria-selected="true"]{color:rgb(var(--foreground))}
+.sp-tabs button[aria-selected="true"]::after{content:"";position:absolute;left:0;right:0;bottom:-1px;
+  height:1px;background:rgb(var(--foreground))}
+
+.sp-empty{text-align:center;padding:56px 24px;border:1px dashed rgb(var(--border));
+  border-radius:var(--radius-lg)}
+.sp-empty h4{font-size:16px;font-weight:500;margin-bottom:8px}
+
+.sp-skel{background:rgb(var(--skeleton));border-radius:var(--radius-sm);
+  animation:sp-pulse 1.6s var(--ease) infinite}
+@keyframes sp-pulse{0%,100%{opacity:1}50%{opacity:.45}}
+
+/* --- Content patterns (EXTRACTED) --- */
+.sp-row{border-bottom:1px solid rgb(var(--border))}
+.sp-row__inner{display:flex;align-items:center;gap:20px;padding-block:32px}
+@media(min-width:640px){.sp-row__inner{gap:32px;padding-block:48px}}
+.sp-row__num{width:32px;flex-shrink:0;font-family:var(--font-mono);font-size:12px;
+  color:rgb(var(--muted-foreground))}
+.sp-row__body h4{margin-bottom:8px;transition:transform var(--duration) var(--ease)}
+@media(min-width:1024px){.sp-row:hover .sp-row__body h4{transform:translateX(12px)}}
+
+.sp-faq{border-top:1px solid rgb(var(--border))}
+.sp-faq:last-of-type{border-bottom:1px solid rgb(var(--border))}
+.sp-faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;
+  align-items:center;gap:24px;padding-block:24px;font-size:16px}
+.sp-faq summary::-webkit-details-marker{display:none}
+.sp-faq summary::after{content:"+";font-family:var(--font-mono);font-size:18px;
+  color:rgb(var(--muted-foreground));transition:transform var(--duration-fast) var(--ease)}
+.sp-faq[open] summary::after{transform:rotate(45deg)}
+.sp-faq p{padding-bottom:24px;max-width:60ch}
+
+.sp-surface{background:rgb(var(--surface));color:rgb(var(--surface-foreground));
+  border-radius:var(--radius-2xl)}
+
+.sp-nav{height:var(--nav-height);display:flex;align-items:center;justify-content:space-between;
+  gap:20px;padding-inline:var(--gutter)}
+@media(min-width:1024px){.sp-nav{padding-inline:var(--gutter-lg)}}
+.sp-nav__brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:500;
+  color:rgb(var(--foreground));text-decoration:none;flex-shrink:0}
+.sp-nav__mark{width:24px;height:24px;border-radius:var(--radius-md);
+  background:rgb(var(--foreground));flex-shrink:0}
+
+.sp-table{width:100%;border-collapse:collapse;font-size:13px}
+.sp-table th{text-align:left;font-family:var(--font-mono);font-size:10px;text-transform:uppercase;
+  letter-spacing:.08em;color:rgb(var(--muted-foreground));font-weight:400;padding:0 16px 12px 0;
+  border-bottom:1px solid rgb(var(--border))}
+.sp-table td{padding:14px 16px 14px 0;border-bottom:1px solid rgb(var(--border));vertical-align:top}
+.sp-table th:last-child,.sp-table td:last-child{padding-right:0}
+.sp-table tbody tr:last-child td{border-bottom:0}
+.sp-table .num{font-family:var(--font-mono);font-size:12px;
+  color:rgb(var(--muted-foreground));white-space:nowrap}
+
+/* ============================================================
+   KIT CHROME  .k-*   (documentation shell, not the system)
+   ============================================================ */
+.k-header{position:sticky;top:0;z-index:50;background:rgb(var(--background));
+  border-bottom:1px solid rgb(var(--border))}
+.k-hero{padding-block:88px 64px}
+.k-hero .sp-lead{max-width:58ch;margin-top:24px}
+.k-hero__meta{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:32px}
+
+.k-section{border-top:1px solid rgb(var(--border));padding-block:80px;scroll-margin-top:96px}
+.k-section__head{display:flex;align-items:baseline;gap:20px;margin-bottom:48px}
+.k-section__num{width:32px;flex-shrink:0;font-family:var(--font-mono);font-size:12px;
+  color:rgb(var(--muted-foreground))}
+.k-section__head p{margin-top:12px;max-width:66ch}
+
+.k-block{margin-bottom:64px}
+@media(min-width:768px){.k-block{margin-left:52px}}
+.k-block:last-child{margin-bottom:0}
+.k-label{font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;
+  color:rgb(var(--muted-foreground));padding-bottom:12px;border-bottom:1px solid rgb(var(--border));
+  margin-bottom:24px;display:flex;justify-content:space-between;gap:16px;align-items:baseline;
+  flex-wrap:wrap}
+.k-label em{font-style:normal;opacity:.7;text-transform:none;letter-spacing:0}
+
+.k-demo{border:1px solid rgb(var(--border));border-radius:var(--radius-lg);padding:32px;
+  background:rgb(var(--background))}
+.k-demo--muted{background:rgb(var(--muted))}
+.k-demo--center{display:flex;align-items:center;justify-content:center}
+.k-demo--tight{padding:0 32px}
+.k-cluster{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.k-stack{display:flex;flex-direction:column;gap:24px}
+.k-spec{font-family:var(--font-mono);font-size:11px;line-height:1.7;
+  color:rgb(var(--muted-foreground));margin-top:14px}
+
+.k-grid{display:grid;gap:1px;background:rgb(var(--border));border:1px solid rgb(var(--border));
+  border-radius:var(--radius-lg);overflow:hidden}
+.k-grid--3{grid-template-columns:1fr}
+.k-grid--4{grid-template-columns:repeat(2,1fr)}
+@media(min-width:768px){
+  .k-grid--3{grid-template-columns:repeat(3,1fr)}
+  .k-grid--4{grid-template-columns:repeat(4,1fr)}
+}
+.k-cell{background:rgb(var(--background));padding:20px;min-height:140px;
+  display:flex;flex-direction:column;justify-content:space-between}
+.k-chip{height:52px;border-radius:var(--radius-md);border:1px solid rgb(var(--border));margin-bottom:16px}
+.k-chip-name{font-size:13px;font-weight:500;color:rgb(var(--foreground));display:block}
+.k-chip-val{font-family:var(--font-mono);font-size:11px;color:rgb(var(--muted-foreground));
+  margin-top:4px;display:block}
+
+.k-cols{display:grid;grid-template-columns:1fr;gap:24px}
+.k-cols--3{display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:768px){
+  .k-cols{grid-template-columns:repeat(2,1fr)}
+  .k-cols--3{grid-template-columns:repeat(3,1fr)}
+}
+
+.k-note{border-left:2px solid rgb(var(--foreground));padding-left:20px;margin-top:24px}
+.k-files{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:768px){.k-files{grid-template-columns:repeat(4,1fr)}}
+
+.k-radius-row{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgb(var(--border));
+  border:1px solid rgb(var(--border));border-radius:var(--radius-lg);overflow:hidden}
+@media(min-width:768px){.k-radius-row{grid-template-columns:repeat(7,1fr)}}
+.k-radius-cell{background:rgb(var(--background));padding:20px;text-align:center}
+.k-radius-swatch{height:44px;background:rgb(var(--muted));border:1px solid rgb(var(--border));
+  margin-bottom:12px}
+
+.k-rule{background:rgb(var(--foreground));opacity:.08}
+.k-mock{display:grid;grid-template-columns:1fr;border:1px solid rgb(var(--border));
+  border-radius:var(--radius-lg);overflow:hidden}
+@media(min-width:768px){.k-mock{grid-template-columns:180px 1fr;min-height:340px}}
+.k-mock__main{display:flex;flex-direction:column;min-width:0}
+.k-footer{border-top:1px solid rgb(var(--border));padding-block:48px 72px}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<header class="k-header">
+  <nav class="sp-nav">
+    <a class="sp-nav__brand focus-ring" href="#top"><span class="sp-nav__mark"></span>Space — UI Kit</a>
+    <div class="sp-segment" role="group" aria-label="Theme">
+      <button aria-selected="true" data-set-theme="light">Light</button>
+      <button aria-selected="false" data-set-theme="dark">Dark</button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+<section class="sp-container k-hero">
+  <h1 class="sp-display">Space&nbsp;— UI kit</h1>
+  <p class="sp-lead">Audited from spacefs.com by reading computed styles off the live DOM, then
+    completed. The source ships a marketing page: eight color tokens, one typeface, two button
+    variants. Everything past that — the dark theme, the semantic palette, forms, and the filesystem
+    components — is derived here, and labelled as such throughout.</p>
+  <div class="k-hero__meta">
+    <span class="sp-mono">SOURCE&nbsp;&nbsp;spacefs.com</span>
+    <span class="sp-mono">AUDITED&nbsp;&nbsp;2026-08-11</span>
+    <span class="sp-mono">36&nbsp;COMPONENTS</span>
+    <span class="sp-mono">2&nbsp;THEMES</span>
+  </div>
+</section>
+
+<!-- 01 -->
+<section class="k-section sp-container" id="rules">
+  <div class="k-section__head">
+    <span class="k-section__num">01</span>
+    <div>
+      <h2 class="sp-heading">Governing rules</h2>
+      <p class="sp-body">Six rules hold the system together. Every derived component below was built
+        to obey them — that's what keeps the additions from reading as a second system bolted on.</p>
+    </div>
+  </div>
+  <div class="k-block">
+    <table class="sp-table">
+      <thead><tr><th style="width:32%">Rule</th><th>Why it holds</th></tr></thead>
+      <tbody>
+        <tr><td class="sp-strong">Body copy is always grey</td><td class="sp-body-sm">Headings and control labels take near-black, everything else takes the muted token. The contrast gap does the hierarchy work weight usually would.</td></tr>
+        <tr><td class="sp-strong">One border width</td><td class="sp-body-sm">1px, one color. Structure comes from hairlines, not boxes or fills.</td></tr>
+        <tr><td class="sp-strong">Flat by default</td><td class="sp-body-sm">Shadow appears only where something genuinely floats — menus, overlays, the product mock. Never on cards or buttons.</td></tr>
+        <tr><td class="sp-strong">Weight range is 400–500</td><td class="sp-body-sm">No bold anywhere, at any size. Emphasis is size and color.</td></tr>
+        <tr><td class="sp-strong">Mono carries metadata</td><td class="sp-body-sm">Sequence numbers, byte sizes, extensions, keys, section labels. Prose never uses it.</td></tr>
+        <tr><td class="sp-strong">Pills for controls, 6–8px for surfaces</td><td class="sp-body-sm">Buttons, badges, switches, avatars are fully round. Cards, inputs, menus, panels are not. The vocabularies never cross.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="k-section sp-container" id="color">
+  <div class="k-section__head">
+    <span class="k-section__num">02</span>
+    <div>
+      <h2 class="sp-heading">Color</h2>
+      <p class="sp-body">Shipped as space-separated RGB channels so alpha composes —
+        <span class="sp-mono">rgb(var(--foreground) / 0.6)</span>. Toggle the theme in the header and
+        every swatch below re-resolves.</p>
+    </div>
+  </div>
+
+  <div class="k-block">
+    <span class="k-label"><span>Core</span><em>extracted (light) · derived (dark)</em></span>
+    <div class="k-grid k-grid--4">
+      <div class="k-cell"><div class="k-chip" style="background:rgb(var(--background))"></div><div><span class="k-chip-name">background</span><span class="k-chip-val" data-token="--background"></span></div></div>
+      <div class="k-cell"><div class="k-chip" style="background:rgb(var(--foreground))"></div><div><span class="k-chip-name">foreground</span><span class="k-chip-val" data-token="--foreground"></span></div></div>
+      <div class="k-cell"><div class="k-chip" style="background:rgb(var(--muted))"></div><div><span class="k-chip-name">muted</span><span class="k-chip-val" data-token="--muted"></span></div></div>
+      <div class="k-cell"><div class="k-chip" style="background:rgb(var(--muted-foreground))"></div><div><span class="k-chip-name">muted-foreground</span><span class="k-chip-val" data-token="--muted-foreground"></span></div></div>
+      <div class="k-cell"><div class="k-chip" style="background:rgb(var(--border))"></div><div><span class="k-chip-name">border</span><span class="k-chip-val" data-token="--border"></span></div></div>
+      <div class="k-cell"><div class="k-chip" style="background:rgb(var(--border-strong))"></div><div><span class="k-chip-name">border-strong</span><span class="k-chip-val" data-token="--border-strong"></span></div></div>
+      <div class="k-cell"><div class="k-chip" style="background:rgb(var(--ring))"></div><div><span class="k-chip-name">ring</span><span class="k-chip-val" data-token="--ring"></span></div></div>
+      <div class="k-cell"><div class="k-chip" style="background:rgb(var(--surface))"></div><div><span class="k-chip-name">surface</span><span class="k-chip-val" data-token="--surface"></span></div></div>
+    </div>
+  </div>
+
+  <div class="k-block">
+    <span class="k-label"><span>Semantic</span><em>derived</em></span>
+    <div class="k-grid k-grid--3">
+      <div class="k-cell"><div class="k-chip" style="background:rgb(var(--success))"></div><div><span class="k-chip-name">success</span><span class="k-chip-val" data-token="--success"></span></div></div>
+      <div class="k-cell"><div class="k-chip" style="background:rgb(var(--warning))"></div><div><span class="k-chip-name">warning</span><span class="k-chip-val" data-token="--warning"></span></div></div>
+      <div class="k-cell"><div class="k-chip" style="background:rgb(var(--danger))"></div><div><span class="k-chip-name">danger</span><span class="k-chip-val" data-token="--danger"></span></div></div>
+    </div>
+    <div class="k-note">
+      <p class="sp-body-sm"><span class="sp-strong">Why these three specifically.</span> The source's
+        blue sits within a few degrees of macOS systemBlue, and the product's entire home is Finder.
+        So the semantic set is Apple's system palette rather than a generic red/amber/green — the same
+        register as the blue already in use, and it sits correctly next to native chrome when this UI
+        appears inside a Mac window. Each has a documented dark variant, which solves the theme
+        problem for free.</p>
+    </div>
+  </div>
+
+  <div class="k-block">
+    <span class="k-label"><span>Inverted surface</span><em>extracted</em></span>
+    <div class="sp-surface" style="padding:40px">
+      <h3 class="sp-subhead" style="margin-bottom:12px">Files arrive before they finish uploading</h3>
+      <p class="sp-body-sm" style="color:rgb(var(--surface-foreground) / .6);max-width:52ch">
+        <span class="sp-mono" style="color:inherit">--surface</span> is a section treatment, not a
+        theme. It flips: near-black panel on a light page, near-white panel on a dark one.</p>
+      <div style="height:1px;background:rgb(var(--surface-foreground) / .12);margin:28px 0"></div>
+      <div class="k-cluster">
+        <button class="sp-btn" style="background:rgb(var(--surface-foreground));color:rgb(var(--surface))">Download</button>
+        <button class="sp-btn" style="background:transparent;color:rgb(var(--surface-foreground));border:1px solid rgb(var(--surface-foreground) / .25)">Book a demo</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="k-block">
+    <span class="k-label"><span>Dark theme derivation</span><em>how each value was reached</em></span>
+    <table class="sp-table">
+      <thead><tr><th style="width:20%">Token</th><th style="width:18%">Dark value</th><th>Reasoning</th></tr></thead>
+      <tbody>
+        <tr><td class="sp-strong">background</td><td class="num">10 10 10</td><td class="sp-body-sm">The source's own <span class="sp-mono">--surface</span>. No new value invented — the dark page is their inverted section, scaled up.</td></tr>
+        <tr><td class="sp-strong">foreground</td><td class="num">255 255 255</td><td class="sp-body-sm">Kept pure, matching their dark sections. The "never pure black" rule is asymmetric on purpose: pure white on #0A0A0A reads fine, pure black on white does not.</td></tr>
+        <tr><td class="sp-strong">muted-foreground</td><td class="num">158 158 158</td><td class="sp-body-sm">They render dark body copy as white at 60%, which flattens over #0A0A0A to exactly #9E9E9E — measured, not invented. Lands at 6.7:1, more headroom than light mode's 4.7:1, which is correct for dark.</td></tr>
+        <tr><td class="sp-strong">border</td><td class="num">38 38 38</td><td class="sp-body-sm">The one place a literal port fails. Their dark hairline is white/8%, which flattens to #1E1E1E — invisible against a #171717 muted fill. Lifted to #262626 so hairlines survive at every layer.</td></tr>
+        <tr><td class="sp-strong">ring</td><td class="num">10 132 255</td><td class="sp-body-sm">#0066FF only reaches 4.1:1 on near-black. systemBlue's dark variant reaches 5.4:1 and stays in the same hue family.</td></tr>
+        <tr><td class="sp-strong">surface</td><td class="num">250 250 250</td><td class="sp-body-sm">Inverts — but not to pure white. A #FFFFFF panel on a near-black page glares, so it steps back one notch.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="k-section sp-container" id="type">
+  <div class="k-section__head">
+    <span class="k-section__num">03</span>
+    <div>
+      <h2 class="sp-heading">Typography</h2>
+      <p class="sp-body">One family, two weights, one leading ratio. Unchanged from the source.</p>
+    </div>
+  </div>
+  <div class="k-block">
+    <span class="k-label"><span>Scale</span><em>extracted</em></span>
+    <table class="sp-table">
+      <thead><tr><th style="width:20%">Role</th><th style="width:28%">Size</th><th style="width:12%">Weight</th><th style="width:14%">Leading</th><th>Tracking</th></tr></thead>
+      <tbody>
+        <tr><td class="sp-strong">Display / h1</td><td class="num">clamp(38px, 4.8vw, 68px)</td><td class="num">400</td><td class="num">1.06</td><td class="num">-0.025em</td></tr>
+        <tr><td class="sp-strong">Display &lt;640</td><td class="num">clamp(30px, 9vw, 38px)</td><td class="num">400</td><td class="num">1.06</td><td class="num">-0.025em</td></tr>
+        <tr><td class="sp-strong">Title / h2</td><td class="num">clamp(30px, 4.5vw, 52px)</td><td class="num">500</td><td class="num">1.05</td><td class="num">-0.025em</td></tr>
+        <tr><td class="sp-strong">Statement</td><td class="num">clamp(30px, 4.2vw, 52px)</td><td class="num">500</td><td class="num">1.18</td><td class="num">-0.025em</td></tr>
+        <tr><td class="sp-strong">Heading / h3</td><td class="num">24px → 36px @640</td><td class="num">500</td><td class="num">1.11</td><td class="num">-0.025em</td></tr>
+        <tr><td class="sp-strong">Subhead</td><td class="num">18px</td><td class="num">500</td><td class="num">1.35</td><td class="num">-0.025em</td></tr>
+        <tr><td class="sp-strong">Body</td><td class="num">16px</td><td class="num">400</td><td class="num">1.625</td><td class="num">normal</td></tr>
+        <tr><td class="sp-strong">Lead</td><td class="num">15px</td><td class="num">400</td><td class="num">1.625</td><td class="num">normal</td></tr>
+        <tr><td class="sp-strong">Body small</td><td class="num">14px</td><td class="num">400</td><td class="num">1.625</td><td class="num">normal</td></tr>
+        <tr><td class="sp-strong">Control label</td><td class="num">14px</td><td class="num">500</td><td class="num">1.0</td><td class="num">normal</td></tr>
+        <tr><td class="sp-strong">Mono meta</td><td class="num">10–12px</td><td class="num">400</td><td class="num">1.33</td><td class="num">0 – .08em</td></tr>
+      </tbody>
+    </table>
+    <div class="k-note">
+      <p class="sp-body-sm"><span class="sp-strong">1.625 is a ratio, not a per-size value.</span>
+        It resolves identically at 14, 15, and 16px. Tracking is the mirror rule: −0.025em on
+        everything ≥24px, normal below. Two constants, no exceptions.</p>
+    </div>
+  </div>
+  <div class="k-block">
+    <span class="k-label"><span>Specimen</span></span>
+    <div class="k-demo">
+      <p class="sp-display" style="margin-bottom:12px">Infinite space</p>
+      <p class="sp-title" style="margin-bottom:24px">Never wait for file transfers again</p>
+      <p class="sp-heading" style="margin-bottom:20px">Files open instantly</p>
+      <p class="sp-body" style="max-width:60ch;margin-bottom:14px">Space streams byte ranges from the
+        cloud in real time, so files don't need to be downloaded before an application can use them.
+        More in the <a href="#type" class="sp-link">technical overview</a>.</p>
+      <p class="sp-mono">01 &nbsp; BRAW &nbsp; 24.3 GB &nbsp; ⌥ SPACE</p>
+    </div>
+    <p class="k-spec">sans: "Google Sans" → -apple-system → BlinkMacSystemFont → "Segoe UI" → Roboto → Helvetica → Arial<br>
+      mono: "Google Sans Code" → ui-monospace → SFMono-Regular → Menlo → Consolas</p>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="k-section sp-container" id="rhythm">
+  <div class="k-section__head">
+    <span class="k-section__num">04</span>
+    <div>
+      <h2 class="sp-heading">Layout, rhythm &amp; radius</h2>
+      <p class="sp-body">One container, three gutter steps, a deliberately coarse vertical scale.</p>
+    </div>
+  </div>
+  <div class="k-block">
+    <div class="k-cols">
+      <div>
+        <span class="k-label"><span>Container</span><em>extracted</em></span>
+        <table class="sp-table">
+          <tbody>
+            <tr><td class="sp-strong">container</td><td class="num">1440px</td><td class="sp-body-sm">centered</td></tr>
+            <tr><td class="sp-strong">gutter</td><td class="num">20px</td><td class="sp-body-sm">base</td></tr>
+            <tr><td class="sp-strong">gutter-sm</td><td class="num">32px</td><td class="sp-body-sm">≥640</td></tr>
+            <tr><td class="sp-strong">gutter-lg</td><td class="num">40px</td><td class="sp-body-sm">≥1024</td></tr>
+            <tr><td class="sp-strong">nav-height</td><td class="num">80px</td><td class="sp-body-sm">fixed header</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <span class="k-label"><span>Control heights</span></span>
+        <table class="sp-table">
+          <tbody>
+            <tr><td class="sp-strong">control-h</td><td class="num">48px</td><td class="sp-body-sm">buttons, inputs</td></tr>
+            <tr><td class="sp-strong">control-h-sm</td><td class="num">36px</td><td class="sp-body-sm">derived — toolbars</td></tr>
+            <tr><td class="sp-strong">control-h-nav</td><td class="num">52px</td><td class="sp-body-sm">header CTA only</td></tr>
+            <tr><td class="sp-strong">row-y</td><td class="num">32 → 48px</td><td class="sp-body-sm">list rows, ≥640</td></tr>
+            <tr><td class="sp-strong">menu item</td><td class="num">30px</td><td class="sp-body-sm">derived — Finder density</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="k-block">
+    <span class="k-label"><span>Vertical rhythm</span><em>extracted</em></span>
+    <div class="k-demo k-demo--muted">
+      <div class="k-rule" style="height:128px"></div>
+      <p class="sp-mono" style="padding:10px 0">128px &nbsp;·&nbsp; section close</p>
+      <div class="k-rule" style="height:192px"></div>
+      <p class="sp-mono" style="padding:10px 0">192px &nbsp;·&nbsp; section open</p>
+      <div class="k-rule" style="height:288px"></div>
+      <p class="sp-mono" style="padding:10px 0">288px &nbsp;·&nbsp; full-bleed breather</p>
+    </div>
+  </div>
+  <div class="k-block">
+    <span class="k-label"><span>Radius</span><em>extracted</em></span>
+    <div class="k-radius-row">
+      <div class="k-radius-cell"><div class="k-radius-swatch" style="border-radius:4px"></div><span class="sp-mono">4</span></div>
+      <div class="k-radius-cell"><div class="k-radius-swatch" style="border-radius:6px"></div><span class="sp-mono">6</span></div>
+      <div class="k-radius-cell"><div class="k-radius-swatch" style="border-radius:8px"></div><span class="sp-mono">8</span></div>
+      <div class="k-radius-cell"><div class="k-radius-swatch" style="border-radius:12px"></div><span class="sp-mono">12</span></div>
+      <div class="k-radius-cell"><div class="k-radius-swatch" style="border-radius:16px"></div><span class="sp-mono">16</span></div>
+      <div class="k-radius-cell"><div class="k-radius-swatch" style="border-radius:24px"></div><span class="sp-mono">24</span></div>
+      <div class="k-radius-cell"><div class="k-radius-swatch" style="border-radius:9999px"></div><span class="sp-mono">full</span></div>
+    </div>
+    <p class="k-spec">source frequency — 8px (55×) · 6px (51×) · full (46×) · 4px (41×) · 12px (15×) · 24px (4×)</p>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="k-section sp-container" id="controls">
+  <div class="k-section__head">
+    <span class="k-section__num">05</span>
+    <div>
+      <h2 class="sp-heading">Controls</h2>
+      <p class="sp-body">Two variants existed. Ghost, danger, small, and icon are derived from the
+        same geometry — pill radius, 14px/500 label, opacity or fill on hover, never transform.</p>
+    </div>
+  </div>
+  <div class="k-block">
+    <span class="k-label"><span>Button</span><em>primary + secondary extracted, rest derived</em></span>
+    <div class="k-demo">
+      <div class="k-cluster" style="margin-bottom:24px">
+        <button class="sp-btn sp-btn--primary">Download</button>
+        <button class="sp-btn sp-btn--secondary">Book a demo</button>
+        <button class="sp-btn sp-btn--ghost">Cancel</button>
+        <button class="sp-btn sp-btn--danger">Remove from Space</button>
+        <button class="sp-btn sp-btn--primary" disabled>Disabled</button>
+      </div>
+      <div class="k-cluster">
+        <button class="sp-btn sp-btn--primary sp-btn--sm">Small</button>
+        <button class="sp-btn sp-btn--secondary sp-btn--sm">Small</button>
+        <button class="sp-btn sp-btn--primary sp-btn--nav">Nav</button>
+        <button class="sp-btn sp-btn--secondary sp-btn--icon" aria-label="More options">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="currentColor" aria-hidden="true"><circle cx="3" cy="7.5" r="1.2"/><circle cx="7.5" cy="7.5" r="1.2"/><circle cx="12" cy="7.5" r="1.2"/></svg>
+        </button>
+      </div>
+    </div>
+    <p class="k-spec">primary → opacity .85 · secondary → bg muted · ghost → bg muted + fg near-black · all 150ms ease-out</p>
+  </div>
+
+  <div class="k-block">
+    <span class="k-label"><span>Segment, tabs, badges, status, keys</span><em>derived</em></span>
+    <div class="k-demo k-stack">
+      <div class="k-cluster">
+        <div class="sp-segment">
+          <button aria-selected="true">Grid</button>
+          <button aria-selected="false">List</button>
+          <button aria-selected="false">Columns</button>
+        </div>
+        <span class="sp-badge">Cached</span>
+        <span class="sp-badge sp-badge--solid">Pro</span>
+        <span class="sp-badge sp-badge--mono">braw</span>
+        <span class="k-cluster" style="gap:5px"><span class="sp-kbd">⌥</span><span class="sp-kbd">Space</span></span>
+        <span class="sp-avatars"><span class="sp-avatar">JZ</span><span class="sp-avatar">MA</span><span class="sp-avatar">+3</span></span>
+      </div>
+      <div class="sp-tabs">
+        <button aria-selected="true">Files</button>
+        <button aria-selected="false">Activity</button>
+        <button aria-selected="false">Members</button>
+        <button aria-selected="false">Settings</button>
+      </div>
+      <div class="k-cluster" style="gap:28px">
+        <span class="sp-status"><span class="sp-dot sp-dot--synced"></span>Synced</span>
+        <span class="sp-status"><span class="sp-dot sp-dot--streaming"></span>Streaming</span>
+        <span class="sp-status"><span class="sp-dot sp-dot--pending"></span>Uploading</span>
+        <span class="sp-status"><span class="sp-dot sp-dot--offline"></span>Offline</span>
+      </div>
+    </div>
+    <p class="k-spec">the tab indicator is a 1px rule sitting on the hairline baseline — no pill, no fill, no thick underline</p>
+  </div>
+</section>
+
+<!-- 06 -->
+<section class="k-section sp-container" id="forms">
+  <div class="k-section__head">
+    <span class="k-section__num">06</span>
+    <div>
+      <h2 class="sp-heading">Forms</h2>
+      <p class="sp-body">The largest gap in the source — a marketing page has no inputs at all. These
+        take the button's 48px height but the card's 8px radius rather than the pill, because a pill
+        text field fights the reading line.</p>
+    </div>
+  </div>
+  <div class="k-block">
+    <span class="k-label"><span>Text inputs</span><em>derived</em></span>
+    <div class="k-demo">
+      <div class="k-cols">
+        <div class="k-stack">
+          <div class="sp-field">
+            <label class="sp-field__label" for="f1">Space name</label>
+            <input class="sp-input" id="f1" placeholder="Q3 Brand Film">
+            <span class="sp-field__hint">Appears in Finder as a drive.</span>
+          </div>
+          <div class="sp-field">
+            <label class="sp-field__label" for="f2">Cache limit</label>
+            <select class="sp-input" id="f2"><option>50 GB</option><option>100 GB</option><option>Unlimited</option></select>
+          </div>
+          <div class="sp-field">
+            <label class="sp-field__label" for="f3">Mount point</label>
+            <input class="sp-input" id="f3" value="/Volumes/Space" aria-invalid="true">
+            <span class="sp-field__error">A volume with this name is already mounted.</span>
+          </div>
+        </div>
+        <div class="k-stack">
+          <div class="sp-field">
+            <label class="sp-field__label" for="f4">Search</label>
+            <div class="sp-inputgroup">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14" stroke-linecap="round"/></svg>
+              <input class="sp-input" id="f4" placeholder="Search files and folders…">
+            </div>
+          </div>
+          <div class="sp-field">
+            <label class="sp-field__label" for="f5">Note</label>
+            <textarea class="sp-input" id="f5" placeholder="Optional context for your team…"></textarea>
+          </div>
+          <div class="sp-field">
+            <label class="sp-field__label" for="f6">Disabled</label>
+            <input class="sp-input" id="f6" value="Read-only value" disabled>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="k-spec">48px height · 8px radius · border → border-strong on hover → focus ring on focus, with the border going transparent so the ring reads clean</p>
+  </div>
+
+  <div class="k-block">
+    <span class="k-label"><span>Selection controls</span><em>derived</em></span>
+    <div class="k-demo">
+      <div class="k-cols--3">
+        <div class="k-stack" style="gap:14px">
+          <label class="sp-check"><input type="checkbox" checked><span>Keep offline copy</span></label>
+          <label class="sp-check"><input type="checkbox"><span>Notify teammates on save</span></label>
+          <label class="sp-check"><input type="checkbox" disabled><span>Unavailable option</span></label>
+        </div>
+        <div class="k-stack" style="gap:14px">
+          <label class="sp-check"><input type="radio" name="r" checked><span>Stream on demand</span></label>
+          <label class="sp-check"><input type="radio" name="r"><span>Pin to disk</span></label>
+          <label class="sp-check"><input type="radio" name="r"><span>Follow team default</span></label>
+        </div>
+        <div class="k-stack" style="gap:18px">
+          <label class="sp-switch"><input type="checkbox" checked><span>Spacebar shortcut</span></label>
+          <label class="sp-switch"><input type="checkbox"><span>Show hidden files</span></label>
+          <div class="sp-field">
+            <label class="sp-field__label" for="f7">Bandwidth ceiling</label>
+            <input class="sp-slider" type="range" id="f7" value="70">
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="k-spec">checkbox 18px / 4px · radio 18px / full · switch 44×26 · all fill with foreground when on — no accent color, keeping blue reserved for focus</p>
+  </div>
+</section>
+
+<!-- 07 -->
+<section class="k-section sp-container" id="filesystem">
+  <div class="k-section__head">
+    <span class="k-section__num">07</span>
+    <div>
+      <h2 class="sp-heading">Filesystem components</h2>
+      <p class="sp-body">The components worth adding aren't a generic kitchen sink — they're the ones
+        the product already implies. Every piece here appears somewhere in the source's own screenshots
+        or copy: the Finder sidebar, the path bar, the ⌥Space palette, the right-click menu, the
+        "arrives before it finishes uploading" progress state.</p>
+    </div>
+  </div>
+
+  <div class="k-block">
+    <span class="k-label"><span>Browser shell</span><em>sidebar · toolbar · path bar · rows</em></span>
+    <div class="k-mock">
+      <aside class="sp-sidebar">
+        <span class="sp-sidebar__label">Favorites</span>
+        <a class="sp-sidebar__item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="1.5" y="2.5" width="11" height="9" rx="1.5"/></svg>Desktop</a>
+        <a class="sp-sidebar__item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 3.5h4l1 1.5h5v6H2z"/></svg>Documents</a>
+        <span class="sp-sidebar__label">Locations</span>
+        <a class="sp-sidebar__item" aria-current="true"><span class="sp-nav__mark" style="width:14px;height:14px;border-radius:4px"></span>Space</a>
+        <a class="sp-sidebar__item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="1.5" y="3.5" width="11" height="7" rx="1"/></svg>Macintosh HD</a>
+        <a class="sp-sidebar__item"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="7" cy="7" r="5"/></svg>AirDrop</a>
+        <span class="sp-sidebar__label">Tags</span>
+        <a class="sp-sidebar__item"><span class="sp-dot sp-dot--streaming"></span>Selects</a>
+        <a class="sp-sidebar__item"><span class="sp-dot sp-dot--pending"></span>Needs review</a>
+      </aside>
+      <div class="k-mock__main">
+        <div class="sp-toolbar">
+          <button class="sp-btn sp-btn--ghost sp-btn--sm">View</button>
+          <button class="sp-btn sp-btn--ghost sp-btn--sm">Group</button>
+          <button class="sp-btn sp-btn--ghost sp-btn--sm">Share</button>
+          <span class="sp-toolbar__spacer"></span>
+          <span class="sp-status"><span class="sp-dot sp-dot--synced"></span>Synced</span>
+        </div>
+        <div style="padding:10px 12px;border-bottom:1px solid rgb(var(--border))">
+          <nav class="sp-breadcrumb" aria-label="Path">
+            <a href="#filesystem">Space</a><i>›</i>
+            <a href="#filesystem">2026</a><i>›</i>
+            <a href="#filesystem">06</a><i>›</i>
+            <span aria-current="page">14_nyc-soho</span>
+          </nav>
+        </div>
+        <div style="flex:1;min-height:0">
+          <div class="sp-filerow sp-filerow--head"><span>Name</span><span class="sp-filerow__num">Size</span><span class="sp-filerow__num">Modified</span><span class="sp-filerow__num">State</span></div>
+          <div class="sp-filerow"><span class="sp-filerow__name"><span class="sp-badge sp-badge--mono">braw</span><span>A003_06141021_C001.braw</span></span><span class="sp-filerow__num">24.3 GB</span><span class="sp-filerow__num">14 Jun</span><span class="sp-filerow__num"><span class="sp-dot sp-dot--synced" title="Synced"></span></span></div>
+          <div class="sp-filerow"><span class="sp-filerow__name"><span class="sp-badge sp-badge--mono">mp4</span><span>C0043.MP4</span></span><span class="sp-filerow__num">4.2 GB</span><span class="sp-filerow__num">14 Jun</span><span class="sp-filerow__num"><span class="sp-dot sp-dot--streaming" title="Streaming"></span></span></div>
+          <div class="sp-filerow"><span class="sp-filerow__name"><span class="sp-badge sp-badge--mono">arw</span><span>DSC04231.ARW</span></span><span class="sp-filerow__num">62 MB</span><span class="sp-filerow__num">14 Jun</span><span class="sp-filerow__num"><span class="sp-dot sp-dot--pending" title="Uploading"></span></span></div>
+          <div class="sp-filerow" style="border-bottom:0"><span class="sp-filerow__name"><span class="sp-badge sp-badge--mono">psd</span><span>concept-deck.psd</span></span><span class="sp-filerow__num">890 MB</span><span class="sp-filerow__num">13 Jun</span><span class="sp-filerow__num"><span class="sp-dot sp-dot--synced" title="Synced"></span></span></div>
+        </div>
+        <div style="padding:10px 12px;border-top:1px solid rgb(var(--border))">
+          <span class="sp-mono">4 items, infinite space available</span>
+        </div>
+      </div>
+    </div>
+    <p class="k-spec">sidebar 180px · items 30px / 6px radius · toolbar 44px · path bar 12px sans with muted separators · rows 13px, mono numerics right-aligned</p>
+  </div>
+
+  <div class="k-block">
+    <span class="k-label"><span>File cards</span><em>extracted · skeleton derived</em></span>
+    <div class="k-demo">
+      <div class="k-files">
+        <div class="sp-filecard"><div class="sp-filecard__thumb"><span class="sp-filecard__ext">braw</span></div><div class="sp-filecard__meta"><span class="sp-filecard__name">A003_06141021_C001.braw</span><span class="sp-filecard__size">24.3 GB</span></div></div>
+        <div class="sp-filecard"><div class="sp-filecard__thumb"><span class="sp-filecard__ext">mp4</span></div><div class="sp-filecard__meta"><span class="sp-filecard__name">C0043.MP4</span><span class="sp-filecard__size">4.2 GB</span></div></div>
+        <div class="sp-filecard"><div class="sp-filecard__thumb"><span class="sp-filecard__ext">arw</span></div><div class="sp-filecard__meta"><span class="sp-filecard__name">DSC04231.ARW</span><span class="sp-filecard__size">62 MB</span></div></div>
+        <div class="sp-filecard"><div class="sp-filecard__thumb"><div class="sp-skel" style="width:100%;height:100%;border-radius:4px"></div></div><div class="sp-filecard__meta"><div class="sp-skel" style="width:70%;height:10px"></div><div class="sp-skel" style="width:34px;height:10px"></div></div></div>
+      </div>
+    </div>
+    <p class="k-spec">last card is the skeleton state — opacity pulse only, no shimmer sweep</p>
+  </div>
+
+  <div class="k-block">
+    <span class="k-label"><span>Command palette</span><em>the product's own ⌥Space feature</em></span>
+    <div class="k-demo k-demo--muted k-demo--center">
+      <div class="sp-palette">
+        <div class="sp-palette__search">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" style="color:rgb(var(--muted-foreground));flex-shrink:0" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14" stroke-linecap="round"/></svg>
+          <input placeholder="Search files and folders…" aria-label="Search files and folders">
+          <span class="sp-kbd">esc</span>
+        </div>
+        <span class="sp-palette__group">Actions</span>
+        <div class="sp-palette__item" aria-selected="true"><span class="sp-badge sp-badge--mono">go</span><div><strong>Browse Files</strong><small>Browse files from your Home folder</small></div><span class="sp-kbd">↵</span></div>
+        <div class="sp-palette__item"><span class="sp-badge sp-badge--mono">dl</span><div><strong>Downloads</strong><small>Browse recent items in Downloads</small></div></div>
+        <span class="sp-palette__group">Recent</span>
+        <div class="sp-palette__item"><span class="sp-badge sp-badge--mono">braw</span><div><strong>A003_06141021_C001.braw</strong><small>Space › 2026 › 06 › 14_nyc-soho</small></div><span class="sp-mono">24.3 GB</span></div>
+        <div class="sp-palette__item"><span class="sp-badge sp-badge--mono">mov</span><div><strong>brand-film-v10-color.mov</strong><small>Space › Final Cuts › Q3 Brand Film</small></div><span class="sp-mono">58.4 GB</span></div>
+        <div class="sp-palette__foot">
+          <span class="sp-status"><span class="sp-kbd">↑</span><span class="sp-kbd">↓</span>Navigate</span>
+          <span class="sp-status"><span class="sp-kbd">↵</span>Open</span>
+          <span class="sp-status"><span class="sp-kbd">tab</span>Actions</span>
+        </div>
+      </div>
+    </div>
+    <p class="k-spec">560px · 12px radius · shadow-menu · rows pair a mono type badge with a sans name and muted path — the file card's mono/sans split, scaled down</p>
+  </div>
+
+  <div class="k-block">
+    <span class="k-label"><span>Transfer, storage &amp; context menu</span><em>derived</em></span>
+    <div class="k-cols">
+      <div class="k-demo k-stack">
+        <div class="sp-progress sp-progress--streaming">
+          <div class="sp-progress__meta">
+            <span style="font-size:13px">Streaming <span class="sp-mono">C0043.MP4</span></span>
+            <span class="sp-mono">1.8 / 4.2 GB</span>
+          </div>
+          <div class="sp-progress__track"><div class="sp-progress__fill" style="width:43%"></div></div>
+          <span class="sp-mono">Openable now · 240 MB/s</span>
+        </div>
+        <div class="sp-progress">
+          <div class="sp-progress__meta">
+            <span style="font-size:13px">Uploading <span class="sp-mono">brand-film-v10.mov</span></span>
+            <span class="sp-mono">92%</span>
+          </div>
+          <div class="sp-progress__track"><div class="sp-progress__fill" style="width:92%"></div></div>
+        </div>
+        <div class="sp-meter">
+          <div class="sp-meter__track">
+            <div style="width:34%;background:rgb(var(--foreground))"></div>
+            <div style="width:18%;background:rgb(var(--ring))"></div>
+            <div style="width:9%;background:rgb(var(--warning))"></div>
+          </div>
+          <div class="sp-meter__key">
+            <span class="sp-status"><span class="sp-dot" style="background:rgb(var(--foreground))"></span>Pinned 71 GB</span>
+            <span class="sp-status"><span class="sp-dot sp-dot--streaming"></span>Cached 38 GB</span>
+            <span class="sp-status"><span class="sp-dot sp-dot--pending"></span>Pending 19 GB</span>
+          </div>
+        </div>
+      </div>
+      <div class="k-demo k-demo--muted k-demo--center">
+        <div class="sp-menu">
+          <div class="sp-menu__item">Open<span class="sp-kbd">↵</span></div>
+          <div class="sp-menu__item">Open With</div>
+          <div class="sp-menu__item">Get Info<span class="sp-kbd">⌘I</span></div>
+          <div class="sp-menu__sep"></div>
+          <div class="sp-menu__item">Rename</div>
+          <div class="sp-menu__item">Duplicate<span class="sp-kbd">⌘D</span></div>
+          <div class="sp-menu__item">Pin to disk</div>
+          <div class="sp-menu__sep"></div>
+          <div class="sp-menu__item sp-menu__item--danger">Remove from Space</div>
+        </div>
+      </div>
+    </div>
+    <p class="k-spec">the progress track is 2px — same weight as the tab indicator, so every horizontal rule in the system reads as one family. Blue fill means streaming (functional), near-black means a plain transfer.</p>
+  </div>
+</section>
+
+<!-- 08 -->
+<section class="k-section sp-container" id="feedback">
+  <div class="k-section__head">
+    <span class="k-section__num">08</span>
+    <div>
+      <h2 class="sp-heading">Feedback &amp; overlay</h2>
+      <p class="sp-body">Alerts use a 2px left rule rather than a tinted panel — a fill would break
+        the rule that surfaces stay neutral. The semantic color lives in the rule alone.</p>
+    </div>
+  </div>
+  <div class="k-block">
+    <span class="k-label"><span>Alerts</span><em>derived</em></span>
+    <div class="k-demo k-stack">
+      <div class="sp-alert sp-alert--info"><div><h4>Streaming over cellular</h4><p class="sp-body-sm">Large files will open, but scrubbing may stall. Pin the clip to work offline.</p></div></div>
+      <div class="sp-alert sp-alert--success"><div><h4>Space mounted</h4><p class="sp-body-sm">4 items available, using none of your disk.</p></div></div>
+      <div class="sp-alert sp-alert--warning"><div><h4>Cache is nearly full</h4><p class="sp-body-sm">Raise the cache limit in Settings, or let Space evict the least-used files automatically.</p></div></div>
+      <div class="sp-alert sp-alert--danger"><div><h4>Can't reach the sync service</h4><p class="sp-body-sm">Cached files are still readable. Changes sync when the connection returns.</p></div></div>
+    </div>
+  </div>
+  <div class="k-block">
+    <span class="k-label"><span>Toast, tooltip, dialog, empty state</span><em>derived</em></span>
+    <div class="k-cols">
+      <div class="k-demo k-stack">
+        <div class="sp-toast">
+          <span class="sp-dot sp-dot--synced"></span>
+          <p>brand-film-v10.mov is available to your team.</p>
+          <button>Copy link</button>
+        </div>
+        <div><span class="sp-tooltip">Uses no disk space</span></div>
+        <div class="sp-empty">
+          <h4>Nothing here yet</h4>
+          <p class="sp-body-sm" style="margin-bottom:20px">Drop files into this folder, or connect a
+            source to mount storage you already have.</p>
+          <button class="sp-btn sp-btn--secondary sp-btn--sm">Connect a source</button>
+        </div>
+      </div>
+      <div class="k-demo k-demo--muted k-demo--center">
+        <div class="sp-dialog">
+          <h3>Remove 3 files from Space?</h3>
+          <p class="sp-body-sm">They'll be removed for everyone on the team. Cached copies on your Mac
+            are deleted at the next sync.</p>
+          <label class="sp-check" style="margin-top:20px"><input type="checkbox"><span>Keep a local copy on this Mac</span></label>
+          <div class="sp-dialog__actions">
+            <button class="sp-btn sp-btn--ghost sp-btn--sm">Cancel</button>
+            <button class="sp-btn sp-btn--danger sp-btn--sm">Remove files</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="k-spec">toast and tooltip both sit on --surface, so they invert with the theme automatically — the one place the source's surface token pays off directly</p>
+  </div>
+</section>
+
+<!-- 09 -->
+<section class="k-section sp-container" id="content">
+  <div class="k-section__head">
+    <span class="k-section__num">09</span>
+    <div>
+      <h2 class="sp-heading">Content patterns</h2>
+      <p class="sp-body">Marketing-side patterns, extracted as-is.</p>
+    </div>
+  </div>
+  <div class="k-block">
+    <span class="k-label"><span>Numbered row</span><em>extracted</em></span>
+    <div class="k-demo k-demo--tight">
+      <div class="sp-row"><div class="sp-row__inner"><span class="sp-row__num">01</span><div class="sp-row__body"><h4 class="sp-heading">Files open instantly</h4><p class="sp-body-sm" style="max-width:56ch">Space streams byte ranges from the cloud in real time, so files don't need to be downloaded to be used in applications.</p></div></div></div>
+      <div class="sp-row" style="border-bottom:0"><div class="sp-row__inner"><span class="sp-row__num">02</span><div class="sp-row__body"><h4 class="sp-heading">Instant sync and collaboration</h4><p class="sp-body-sm" style="max-width:56ch">Hit save and your changes reach every device on the same Space in seconds.</p></div></div></div>
+    </div>
+    <p class="k-spec">hover ≥1024 slides the heading 12px right over 500ms — the row is the hover target, not the heading</p>
+  </div>
+  <div class="k-block">
+    <span class="k-label"><span>Disclosure</span><em>extracted</em></span>
+    <div class="k-demo k-demo--tight">
+      <details class="sp-faq" open><summary>What is Space?</summary><p class="sp-body-sm">A cloud filesystem that appears in Finder as a regular drive.</p></details>
+      <details class="sp-faq"><summary>How does it save disk space?</summary><p class="sp-body-sm">Only the byte ranges an application requests are streamed and cached.</p></details>
+      <details class="sp-faq"><summary>Will it work with my existing apps?</summary><p class="sp-body-sm">Yes — no extensions or plugins required.</p></details>
+    </div>
+    <p class="k-spec">border-top on each, border-bottom on the last only · question 16px/400 near-black · answer 14px grey · a rotating + rather than a chevron</p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="k-section sp-container" id="motion">
+  <div class="k-section__head">
+    <span class="k-section__num">10</span>
+    <div>
+      <h2 class="sp-heading">Motion &amp; elevation</h2>
+      <p class="sp-body">Two durations, one curve. Shadow only where something genuinely floats.</p>
+    </div>
+  </div>
+  <div class="k-block">
+    <table class="sp-table">
+      <thead><tr><th style="width:20%">Token</th><th style="width:30%">Value</th><th>Applied to</th></tr></thead>
+      <tbody>
+        <tr><td class="sp-strong">duration-fast</td><td class="num">150ms</td><td class="sp-body-sm">opacity and color on controls</td></tr>
+        <tr><td class="sp-strong">duration</td><td class="num">500ms</td><td class="sp-body-sm">content reveals, hover translate, progress fills</td></tr>
+        <tr><td class="sp-strong">ease</td><td class="num">cubic-bezier(0, 0, .2, 1)</td><td class="sp-body-sm">everything — ease-out only, no spring, no bounce</td></tr>
+        <tr><td class="sp-strong">shadow-menu</td><td class="num">0 8px 24px -6px / 0 2px 6px -2px</td><td class="sp-body-sm">derived — menus, palette, dialog, toast</td></tr>
+        <tr><td class="sp-strong">shadow-float</td><td class="num">0 30px 70px -24px</td><td class="sp-body-sm">extracted — the floating product mock, once</td></tr>
+        <tr><td class="sp-strong">focus ring</td><td class="num">2px ring, offset 2px</td><td class="sp-body-sm">every interactive element, both themes</td></tr>
+      </tbody>
+    </table>
+    <div class="k-note">
+      <p class="sp-body-sm"><span class="sp-strong">Dark-mode shadows do less work, not more.</span>
+        On a near-black page a drop shadow is nearly invisible, so overlay separation comes primarily
+        from the hairline border — which is exactly why <span class="sp-mono">--border</span> had to
+        be lifted to #262626. The shadow opacities roughly double in dark to retain some depth cue,
+        but they're no longer the load-bearing signal.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="k-section sp-container" id="notes">
+  <div class="k-section__head">
+    <span class="k-section__num">11</span>
+    <div>
+      <h2 class="sp-heading">Remaining cautions</h2>
+      <p class="sp-body">What's still unresolved after the extension.</p>
+    </div>
+  </div>
+  <div class="k-block">
+    <table class="sp-table">
+      <thead><tr><th style="width:28%">Issue</th><th>Detail</th></tr></thead>
+      <tbody>
+        <tr><td class="sp-strong">Google Sans isn't licensable</td><td class="sp-body-sm">Google's proprietary brand face — substitute before shipping. Geist, Inter, or Instrument Sans sit closest to its geometric-humanist proportions. Google Sans Code (the mono) is openly released and carries over intact.</td></tr>
+        <tr><td class="sp-strong">Statement size is inferred</td><td class="sp-body-sm">The pull quote resolved to 48.17px at a 1147px viewport. Its clamp is reconstructed from that ratio and its sibling declarations — verify at a second width if it matters.</td></tr>
+        <tr><td class="sp-strong">No data visualization</td><td class="sp-body-sm">The storage meter is the only chart-like element here. A real charting layer needs a categorical sequence, and the palette gives you nothing to build one from without breaking the "color is functional only" rule.</td></tr>
+        <tr><td class="sp-strong">Dark mode is unvalidated against the imagery</td><td class="sp-body-sm">The site leans heavily on video and photo thumbnails designed against white. On near-black they'll read hotter and may need an inset hairline to sit properly.</td></tr>
+        <tr><td class="sp-strong">Focus ring vs. dense rows</td><td class="sp-body-sm">A 2px ring at 2px offset needs 4px of clearance. In the 30px sidebar and menu rows that eats the gap — either tighten the offset to 1px in dense contexts or accept slight overlap.</td></tr>
+        <tr><td class="sp-strong">No responsive story for the browser shell</td><td class="sp-body-sm">The sidebar/toolbar/row layout is desktop-shaped, matching the product. It stacks below 768px here, but a real collapse pattern has no precedent in the source.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+</main>
+
+<footer class="k-footer sp-container">
+  <p class="sp-body-sm" style="max-width:64ch">Values read from the live DOM at spacefs.com on
+    2026-08-11 via computed styles and stylesheet inspection. Everything marked <em>derived</em> is a
+    design decision made here to complete the system, not something the source ships.</p>
+</footer>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  var btns = document.querySelectorAll('[data-set-theme]');
+
+  function paintTokens(){
+    var cs = getComputedStyle(root);
+    document.querySelectorAll('[data-token]').forEach(function(el){
+      var raw = cs.getPropertyValue(el.getAttribute('data-token')).trim();
+      var parts = raw.split(/\s+/).map(Number);
+      var hex = '';
+      if (parts.length === 3 && parts.every(function(n){ return !isNaN(n); })) {
+        hex = '#' + parts.map(function(n){
+          return n.toString(16).padStart(2, '0');
+        }).join('').toUpperCase();
+      }
+      el.textContent = raw + (hex ? ' · ' + hex : '');
+    });
+  }
+
+  function setTheme(t){
+    root.setAttribute('data-theme', t);
+    btns.forEach(function(b){
+      b.setAttribute('aria-selected', String(b.getAttribute('data-set-theme') === t));
+    });
+    paintTokens();
+  }
+
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){ setTheme(b.getAttribute('data-set-theme')); });
+  });
+
+  var mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+  setTheme(mq && mq.matches ? 'dark' : 'light');
+})();
+</script>
+
+</body>
+</html>

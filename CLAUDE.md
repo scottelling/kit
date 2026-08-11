@@ -30,6 +30,7 @@ A public design-engineering studio and shadcn registry that distributes complete
 - Theme Workshop: safe Purple Rain/JADE/OS copies, live proof, exact restore, preview sharing, and public handoff under `/labs`
 - Elements Library: live, copyable, independently installable behaviors under `/elements`; Knight Rider opens Signature Effects
 - KIT format layer (`SPEC.md`): framework-free `tokens.css` + `design-tokens.json` per system, the zero-dependency vanilla dialect under `/r/vanilla/` with its `/vanilla` demo, machine doctrine at `/r/doctrine.json`, and drift detection via `/r/checksums.json` + `kit-manifest.json` + kit-doctor
+- Sourced kits (`docs/KIT-INTAKE.md`): hand-off kits preserved as authored with provenance, doctrine deltas, and a bridge to the universal roles — Space is live at `/kit/space` + `/r/space/`
 - Static registry output: `public/r/*.json`
 - Product page: `/`
 - Side-by-side comparison: `/demo`

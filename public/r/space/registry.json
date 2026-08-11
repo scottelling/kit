@@ -1,0 +1,251 @@
+{
+  "format": "kit-sourced-registry/1",
+  "id": "space",
+  "title": "Space",
+  "description": "Finder-adjacent cloud-filesystem UI kit audited from spacefs.com and completed with a dark theme, semantic palette, forms, and filesystem components. Preserved as authored: RGB-channel tokens, hairline structure, 400–500 weights, desktop density.",
+  "class": "sourced",
+  "source": {
+    "site": "spacefs.com",
+    "audited": "2026-08-11",
+    "method": "live DOM computed-styles audit and stylesheet inspection, then extended in a single-file kit",
+    "authoredBy": "Scott (hand-off, 2026-08-11)",
+    "archive": "sources/space/space-ui-kit.html"
+  },
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "componentCount": 36,
+  "prefix": "sp-",
+  "showroomRoute": "/kit/space",
+  "install": {
+    "tokens": "https://kit.scottelling.com/r/space/tokens.css",
+    "css": "https://kit.scottelling.com/r/space/kit.css",
+    "note": "Install tokens.css + kit.css verbatim and use the native class names. Read provenance.json (quirks, doctrine deltas, cautions) and bridge.json before styling."
+  },
+  "artifacts": {
+    "provenance": "https://kit.scottelling.com/r/space/provenance.json",
+    "bridge": "https://kit.scottelling.com/r/space/bridge.json",
+    "showroom": "https://kit.scottelling.com/kit/space"
+  },
+  "pieces": [
+    {
+      "name": "container",
+      "className": "sp-container",
+      "provenance": "extracted",
+      "section": "layout"
+    },
+    {
+      "name": "type",
+      "className": "sp-display / sp-title / sp-heading / sp-subhead / sp-body / sp-lead / sp-body-sm / sp-mono / sp-strong",
+      "provenance": "extracted",
+      "section": "type"
+    },
+    {
+      "name": "link",
+      "className": "sp-link",
+      "provenance": "derived",
+      "section": "type"
+    },
+    {
+      "name": "button",
+      "className": "sp-btn (--primary --secondary --ghost --danger --sm --nav --icon)",
+      "provenance": "extracted",
+      "note": "primary, secondary, and nav geometry extracted; ghost, danger, small, icon derived",
+      "section": "controls"
+    },
+    {
+      "name": "segment",
+      "className": "sp-segment",
+      "provenance": "derived",
+      "section": "controls"
+    },
+    {
+      "name": "badge",
+      "className": "sp-badge (--solid --mono)",
+      "provenance": "derived",
+      "section": "controls"
+    },
+    {
+      "name": "status",
+      "className": "sp-status / sp-dot (--synced --streaming --pending --offline)",
+      "provenance": "derived",
+      "section": "controls"
+    },
+    {
+      "name": "kbd",
+      "className": "sp-kbd",
+      "provenance": "derived",
+      "section": "controls"
+    },
+    {
+      "name": "avatar",
+      "className": "sp-avatar / sp-avatars",
+      "provenance": "derived",
+      "section": "controls"
+    },
+    {
+      "name": "field",
+      "className": "sp-field (__label __hint __error)",
+      "provenance": "derived",
+      "section": "forms"
+    },
+    {
+      "name": "input",
+      "className": "sp-input (input, textarea, select)",
+      "provenance": "derived",
+      "section": "forms"
+    },
+    {
+      "name": "inputgroup",
+      "className": "sp-inputgroup",
+      "provenance": "derived",
+      "section": "forms"
+    },
+    {
+      "name": "check",
+      "className": "sp-check (checkbox, radio)",
+      "provenance": "derived",
+      "section": "forms"
+    },
+    {
+      "name": "switch",
+      "className": "sp-switch",
+      "provenance": "derived",
+      "section": "forms"
+    },
+    {
+      "name": "slider",
+      "className": "sp-slider",
+      "provenance": "derived",
+      "section": "forms"
+    },
+    {
+      "name": "breadcrumb",
+      "className": "sp-breadcrumb",
+      "provenance": "derived",
+      "section": "filesystem"
+    },
+    {
+      "name": "sidebar",
+      "className": "sp-sidebar (__label __item)",
+      "provenance": "derived",
+      "section": "filesystem"
+    },
+    {
+      "name": "toolbar",
+      "className": "sp-toolbar",
+      "provenance": "derived",
+      "section": "filesystem"
+    },
+    {
+      "name": "filecard",
+      "className": "sp-filecard (__thumb __ext __meta __name __size)",
+      "provenance": "extracted",
+      "note": "skeleton state derived",
+      "section": "filesystem"
+    },
+    {
+      "name": "filerow",
+      "className": "sp-filerow (--head __name __num)",
+      "provenance": "derived",
+      "section": "filesystem"
+    },
+    {
+      "name": "progress",
+      "className": "sp-progress (--streaming)",
+      "provenance": "derived",
+      "section": "filesystem"
+    },
+    {
+      "name": "meter",
+      "className": "sp-meter (__track __key)",
+      "provenance": "derived",
+      "section": "filesystem"
+    },
+    {
+      "name": "menu",
+      "className": "sp-menu (__item __sep --danger)",
+      "provenance": "derived",
+      "section": "filesystem"
+    },
+    {
+      "name": "palette",
+      "className": "sp-palette (__search __group __item __foot)",
+      "provenance": "derived",
+      "section": "filesystem"
+    },
+    {
+      "name": "alert",
+      "className": "sp-alert (--info --success --warning --danger)",
+      "provenance": "derived",
+      "section": "feedback"
+    },
+    {
+      "name": "toast",
+      "className": "sp-toast",
+      "provenance": "derived",
+      "section": "feedback"
+    },
+    {
+      "name": "tooltip",
+      "className": "sp-tooltip",
+      "provenance": "derived",
+      "section": "feedback"
+    },
+    {
+      "name": "dialog",
+      "className": "sp-dialog (__actions)",
+      "provenance": "derived",
+      "section": "feedback"
+    },
+    {
+      "name": "tabs",
+      "className": "sp-tabs",
+      "provenance": "derived",
+      "section": "feedback"
+    },
+    {
+      "name": "empty",
+      "className": "sp-empty",
+      "provenance": "derived",
+      "section": "feedback"
+    },
+    {
+      "name": "skeleton",
+      "className": "sp-skel",
+      "provenance": "derived",
+      "section": "feedback"
+    },
+    {
+      "name": "row",
+      "className": "sp-row (__inner __num __body)",
+      "provenance": "extracted",
+      "section": "content"
+    },
+    {
+      "name": "faq",
+      "className": "sp-faq",
+      "provenance": "extracted",
+      "section": "content"
+    },
+    {
+      "name": "surface",
+      "className": "sp-surface",
+      "provenance": "extracted",
+      "section": "content"
+    },
+    {
+      "name": "nav",
+      "className": "sp-nav (__brand __mark)",
+      "provenance": "extracted",
+      "section": "content"
+    },
+    {
+      "name": "table",
+      "className": "sp-table",
+      "provenance": "extracted",
+      "section": "content"
+    }
+  ]
+}

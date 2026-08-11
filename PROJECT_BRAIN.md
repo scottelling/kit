@@ -63,6 +63,14 @@ visible and tactile in public, reusable by agents, and installable behind the sc
   glue and are deliberately not emitted into the plain-CSS dialect; wildcard
   `@utility` rules are omitted with a documented manual equivalent.
 
+- Sourced kits (2026-08-11, SPEC §2a + `docs/KIT-INTAKE.md`): kits Scott hands
+  over enter the registry as authored — quirks preserved, provenance and
+  doctrine deltas declared, bridged to the universal roles rather than
+  converted. Space (`/kit/space`, `/r/space/`) is the reference intake: RGB-
+  channel tokens, Finder density, hairline structure, all intact. The intake
+  process is the standing answer to "more kits are coming, each with its own
+  quirks."
+
 ## Product truth
 
 Purple Rain is not violet wallpaper. Accent marks selection, focus, progress, and the primary decision. Tonal planes and directional depth carry hierarchy. The current object and next action stay obvious.

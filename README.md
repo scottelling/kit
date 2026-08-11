@@ -23,6 +23,11 @@ no React, Tailwind, or build step adopts the same language directly:
 - Machine-readable doctrine for agents: `/r/doctrine.json`
 - Drift detection: `/r/checksums.json` + a consumer `kit-manifest.json` + `npm run doctor -- <project-dir>`
 
+Sourced kits enter the registry as authored — quirks preserved, provenance and
+doctrine deltas declared, bridged to the universal roles instead of converted
+(`docs/KIT-INTAKE.md`). The first is **Space**, a Finder-adjacent filesystem
+kit: showroom at `/kit/space`, installable from `/r/space/registry.json`.
+
 Purple Rain, JADE, OS, and Animation Studio each expose the same 175-piece catalog. The 138 everyday pieces and 37 specialist patterns are all available, but each is installed individually so unrelated layouts never arrive by accident.
 
 JADE exposes the same production component contract with its own tactile light and dark foundations under `https://kit.scottelling.com/r/jade/`.

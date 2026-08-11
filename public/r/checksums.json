@@ -1,7 +1,7 @@
 {
   "format": "kit-checksums/1",
-  "registryVersion": "336c2b5907c9",
-  "artifactCount": 741,
+  "registryVersion": "597fec708cad",
+  "artifactCount": 746,
   "artifacts": {
     "r/accordion.json": {
       "sha256": "2a9e0cfea649710182fa95f101f3e3a6aad4eb66fa78ac14c80761987de21a9b",
@@ -2714,6 +2714,26 @@
     "r/snackbar.json": {
       "sha256": "dfccfe1e3ad4afe5d165a16c95f1ccdff3d443e242c16fc9b0c5a65f2464a4f7",
       "bytes": 1363
+    },
+    "r/space/bridge.json": {
+      "sha256": "006c241c3feb65382e5877b1baad3dc61d75aceac1bb63c79d1d758d9be7bad8",
+      "bytes": 3253
+    },
+    "r/space/kit.css": {
+      "sha256": "2147eba4ca03fb9be016432a6c4a4fdf526d9dd02b44beebc392fdca6c6366f5",
+      "bytes": 21839
+    },
+    "r/space/provenance.json": {
+      "sha256": "18c11de58bef8aaf0c0e05940616aae652eee9484f3cf6c699427c8782fff3d1",
+      "bytes": 5148
+    },
+    "r/space/registry.json": {
+      "sha256": "e0835718082748f4987ef139b2c695fb73223fd11353a1422b75f1418d0b001c",
+      "bytes": 6613
+    },
+    "r/space/tokens.css": {
+      "sha256": "712e5de3780bab9c1aab7c820da0f881505fa54d5fee24f28b6455c3153044b5",
+      "bytes": 3278
     },
     "r/spacing-guide.json": {
       "sha256": "4540144e056307bc559cc6cdd7cfb135d939b2ae6e690887ad82b7183c30e051",

@@ -1,6 +1,6 @@
 import { execFileSync } from "node:child_process"
 import { createHash } from "node:crypto"
-import { readFile } from "node:fs/promises"
+import { readFile, readdir } from "node:fs/promises"
 import path from "node:path"
 
 // Verifies the KIT format layer (SPEC.md): framework-free token dialects,
@@ -167,9 +167,56 @@ for (const artifact of ["r/tokens.css", "r/vanilla/kit.css", "r/doctrine.json"])
   }
 }
 
+// 6. Sourced kits (docs/KIT-INTAKE.md): quirks preserved, provenance and
+// bridge published, showroom routed, bridge targets real.
+let sourcedIds = []
+try {
+  sourcedIds = (await readdir(path.join(root, "registry", "sourced"), { withFileTypes: true }))
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name)
+} catch {}
+const nextConfig = await readText("next.config.ts")
+for (const id of sourcedIds) {
+  let index, sourcedProvenance, sourcedBridge, sourcedTokens
+  try {
+    index = await readJson(`public/r/${id}/registry.json`)
+    sourcedProvenance = await readJson(`public/r/${id}/provenance.json`)
+    sourcedBridge = await readJson(`public/r/${id}/bridge.json`)
+    sourcedTokens = await readText(`public/r/${id}/tokens.css`)
+    await readText(`public/r/${id}/kit.css`)
+    await readText(`public/kit-${id}.html`)
+  } catch (error) {
+    fail(`sourced ${id}: missing published artifact — ${error.message}`)
+    continue
+  }
+  if (index.format !== "kit-sourced-registry/1") fail(`sourced ${id}: registry.json is not kit-sourced-registry/1`)
+  if (index.pieces?.length !== index.componentCount) fail(`sourced ${id}: piece count does not match componentCount`)
+  if (sourcedProvenance.format !== "kit-provenance/1") fail(`sourced ${id}: provenance.json is not kit-provenance/1`)
+  for (const section of ["extracted", "derived", "quirks", "doctrineDeltas", "cautions"]) {
+    if (!Array.isArray(sourcedProvenance[section]) || sourcedProvenance[section].length === 0) {
+      fail(`sourced ${id}: provenance.${section} is missing or empty`)
+    }
+  }
+  if (sourcedBridge.format !== "kit-bridge/1") fail(`sourced ${id}: bridge.json is not kit-bridge/1`)
+  for (const entry of sourcedBridge.map ?? []) {
+    if (entry.universal !== null && universal && !universal.has(entry.universal)) {
+      fail(`sourced ${id}: bridge maps ${entry.space} to ${entry.universal}, which is not a universal variable`)
+    }
+  }
+  if (/\[object Object\]/.test(sourcedTokens)) fail(`sourced ${id}: tokens.css contains a serialization error`)
+  if (index.showroomRoute && !nextConfig.includes(`"${index.showroomRoute}"`)) {
+    fail(`sourced ${id}: next.config.ts has no rewrite for ${index.showroomRoute}`)
+  }
+  for (const piece of index.pieces ?? []) {
+    if (piece.provenance !== "extracted" && piece.provenance !== "derived") {
+      fail(`sourced ${id}: piece "${piece.name}" lacks an extracted/derived provenance flag`)
+    }
+  }
+}
+
 if (failures.length > 0) {
   console.error(`KIT format verification failed (${failures.length}):`)
   for (const failure of failures) console.error(`  - ${failure}`)
   process.exit(1)
 }
-console.log(`KIT format verified: ${systems.length} token dialects, ${vanillaManifest.pieces.length} vanilla pieces, doctrine, demo, and ${checksums.artifactCount} checksummed artifacts.`)
+console.log(`KIT format verified: ${systems.length} token dialects, ${vanillaManifest.pieces.length} vanilla pieces, ${sourcedIds.length} sourced kit(s), doctrine, demo, and ${checksums.artifactCount} checksummed artifacts.`)

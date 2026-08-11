@@ -1,0 +1,80 @@
+{
+  "format": "kit-provenance/1",
+  "id": "space",
+  "source": {
+    "site": "spacefs.com",
+    "audited": "2026-08-11",
+    "method": "live DOM computed-styles audit and stylesheet inspection",
+    "archive": "sources/space/space-ui-kit.html"
+  },
+  "extracted": [
+    "light core tokens (background, foreground, muted, muted-foreground, border, ring, surface, surface-foreground)",
+    "type scale (display/title/statement clamps, heading steps, 1.625 leading ratio, -0.025em tracking rule)",
+    "radius scale (4/6/8/12/16/24/full) with source frequency counts",
+    "container 1440px, gutters 20/32/40, nav-height 80px, vertical rhythm 128/192/288",
+    "motion (150ms fast, 500ms standard, cubic-bezier(0,0,.2,1) only)",
+    "control-h 48px and control-h-nav 52px",
+    "shadow-float",
+    "button primary and secondary, nav geometry",
+    "inverted surface section treatment",
+    "file card",
+    "numbered row, FAQ disclosure, nav, table content patterns"
+  ],
+  "derived": [
+    "entire dark theme (per-token derivation reasoning preserved in the showroom's derivation table)",
+    "semantic palette success/warning/danger from Apple's system palette (product lives inside Finder; source blue ≈ systemBlue)",
+    "border-strong, control-h-sm, shadow-menu, skeleton token",
+    "in-prose link style",
+    "ghost/danger/small/icon button variants, segment, badge, status dots, kbd, avatar",
+    "all form controls (field, input, textarea, select, inputgroup, check, radio, switch, slider)",
+    "filesystem set: breadcrumb, sidebar, toolbar, filerow, progress, meter, context menu, command palette",
+    "feedback set: alert, toast, tooltip, dialog, tabs, empty state, skeleton",
+    "intake shims by kit (2026-08-11): additive .dark/[data-kit-appearance=\"dark\"] theme aliases, color-scheme moved from html to :root scope, sp-scoped box-sizing/font/margin resets, sp-scoped reduced-motion rule"
+  ],
+  "quirks": [
+    "Color tokens are space-separated RGB channels consumed as rgb(var(--x)) or rgb(var(--x) / alpha) — alpha composition is the point; the raw value is not a color",
+    "Native theme mechanism is [data-theme] on the root element",
+    "Body copy is always grey (muted-foreground); near-black is reserved for headings and control labels",
+    "One border width: 1px hairlines carry all structure; no boxes or fills",
+    "Flat by default: shadow only where something genuinely floats (menus, overlays), never on cards or buttons",
+    "Weight range 400–500; no bold at any size; emphasis is size and color",
+    "Mono carries metadata only (numbers, sizes, extensions, keys, section labels); prose never uses it",
+    "Pills for controls, 6–8px radius for surfaces; the vocabularies never cross",
+    "Blue is functional only: focus ring and streaming state; never decoration",
+    "--surface is a section treatment that inverts per theme, not a theme",
+    "Every horizontal rule is part of one 1–2px family (tab indicator, progress track, alert rule)"
+  ],
+  "doctrineDeltas": [
+    {
+      "rule": "minimums.controlHeightPx (44)",
+      "kitValues": "48px standard controls and inputs; 36px small/toolbar controls; 30px menu, sidebar, and segment rows; 26px switch; 24px badges; ~22px check/radio rows",
+      "justification": "Finder-adjacent desktop density is the source identity; the standard control is above kit minimum, the dense rows are deliberately below it",
+      "scope": "Legal inside Space products and the Space showroom; never inherited by universal pieces or complete systems"
+    },
+    {
+      "rule": "banned: looping resting motion",
+      "kitValues": "sp-skel opacity pulse loops while visible",
+      "justification": "Loading indication is functional, not decorative; it stops when content arrives and freezes under reduced motion",
+      "scope": "Loading states only"
+    }
+  ],
+  "cautions": [
+    "Google Sans is not licensable (Google brand face) — substitute Geist, Inter, or Instrument Sans before shipping a product; Google Sans Code (mono) is openly released and carries over",
+    "Statement type size is inferred from one 1147px-viewport measurement — verify at a second width if it matters",
+    "No data-visualization language exists; the storage meter is the only chart-like element, and the functional-color rule leaves no categorical sequence to build charts from",
+    "Dark mode is unvalidated against the source's white-designed imagery; thumbnails may need an inset hairline",
+    "The 2px/2px focus ring needs 4px clearance and will crowd 30px rows — tighten offset to 1px in dense contexts or accept overlap",
+    "No responsive precedent for the browser shell below 768px; the stack behavior here is an assumption"
+  ],
+  "fonts": {
+    "sans": {
+      "stack": "\"Google Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+      "status": "NOT licensable — substitute before shipping",
+      "substitutes": ["Geist", "Inter", "Instrument Sans"]
+    },
+    "mono": {
+      "stack": "\"Google Sans Code\", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+      "status": "openly released"
+    }
+  }
+}
