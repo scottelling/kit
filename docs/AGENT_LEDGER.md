@@ -1,5 +1,16 @@
 # Agent Ledger
 
+## 2026-08-11 — Site chrome rebrand: Kits
+
+- Agent: Claude Code
+- Scope: per Scott — the site's identity is Kits, not Purple Rain (which is one kit among several); rename the Explore nav item to Kits
+- Delivered: wordmark `purple rain.` → `kits.` (aria-label "Kits home"), main nav `Explore` → `Kits`, footer brand line `Purple Rain` → `Kits`, root metadata default/template/openGraph titles → `Kits — the complete design studio` / `%s — Kits`
+- Boundary: only site chrome changed; every content reference to Purple Rain the design system (kit pages, registry, docs) is untouched
+- Verification: full `npm run check` passes; browser-verified wordmark, nav, footer, and title on home and `/kit/os`
+- Live proof: production `<title>` is `Kits — the complete design studio`; header brand and nav confirmed on `kit.scottelling.com`
+- Deployment: production via `./ship.sh`; commit `3277974` pushed to `scottelling/kit`
+- Open loops: none
+
 ## 2026-08-11 — Every kit in Explore, same format, automatically
 
 - Agent: Claude Code
