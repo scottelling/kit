@@ -1,5 +1,22 @@
 # Agent Ledger
 
+## 2026-08-16 — Complete Beautiful UI Elements collection
+
+- Agent: Codex
+- Scope: add every element from Beautiful UI to Kit's tactile Elements Library without importing a disconnected visual system
+- Delivered: nineteen new working elements across agent interfaces, conversation, decisions, knowledge, data, navigation, developer tools, and creation tools; Knight Rider remains intact as the first Signature Effect, bringing the visible collection to twenty elements
+- Adaptation: preserved the useful behavior of each Beautiful UI idea while rebuilding its presentation with solid surfaces, readable hierarchy, visible focus, responsive composition, 44-pixel controls, and reduced-motion stillness; no glass, glow, decorative gradients, or ambient motion entered the showroom
+- Credit: every adapted item identifies Shane Levine as the original creator, links to Beautiful UI, and automatically carries the original MIT notice
+- Showroom: added category filters, instant search, stable numbering, live interaction, an English project handoff, exact source viewing, complete shared-foundation viewing, and global finder results for every element
+- Public handoff: the Elements registry now publishes twenty visible items plus one shared foundation; each of the nineteen additions has its own public URL and automatically pulls the shared behavior, styling, approved Lucide icons, and license from Kit's absolute public URL
+- Interaction proof: search, category filtering, approval choice and confirmation, data filtering, sidebar selection, text rewriting, source opening, file switching, and source closing passed in the browser
+- Responsive proof: local desktop, 768-pixel tablet, and 390-pixel phone checks produced no horizontal overflow, no visible control below 44 pixels, and no console warnings or errors; the same 390-pixel approval journey and overflow checks passed on production
+- Build proof: the full registry validation, generation, drift checks, design-system checks, Elements checks, lint, TypeScript, and production build passed repeatedly; Elements validation confirms all twenty visible items and every emitted public file
+- Live proof: `https://kit.scottelling.com/elements`, `/r/elements/approval-card.json`, and `/r/elements/beautiful-ui-foundation.json` return `200`; the live page exposes all nineteen additions and a clean console
+- Live downstream proof: a fresh outside Next/shadcn project installed Approval Card from the live Kit URL; exactly four files arrived—`approval-card.tsx`, `beautiful-ui-elements.tsx`, `beautiful-ui-elements.css`, and `LICENSE-beautiful-ui.txt`—with no package, lockfile, configuration, or global-style change, and the outside production build passed
+- Deployment: Vercel production `dpl_7QiWm6XH563h9ziC5bToer6kbp27`, aliased to `kit.scottelling.com`; product commit `c825007` pushed to `scottelling/kit`
+- Open loops: none
+
 ## 2026-08-16 — Oracle migration: standard .md names + workspace pointer
 
 - Agent: Claude Code
