@@ -1,5 +1,14 @@
 # Agent Ledger
 
+## 2026-08-16 — Oracle migration: standard .md names + workspace pointer
+
+- Agent: Claude Code
+- Renamed `PROJECT_BRAIN.md` → `docs/BRAIN.md` and `docs/AGENT_LEDGER.md` → `docs/LEDGER.md` (git mv).
+- Merged CLAUDE.md's unique content (origin, Purple Rain identity, ship.sh deploy contract) into `AGENTS.md`; CLAUDE.md is now the one-liner `Read AGENTS.md.`
+- Added the Workspace Standards (Oracle) pointer block to `AGENTS.md`.
+- Updated live references to the old names in `SPEC.md`, `docs/KIT-INTAKE.md`, and `AGENTS.md`.
+- No product, registry, or deploy changes. Not shipped; `./ship.sh` untouched.
+
 ## 2026-08-11 — Studio and Build unified into one Build
 
 - Agent: Claude Code

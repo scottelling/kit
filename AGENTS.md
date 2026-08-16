@@ -6,6 +6,12 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 # kit — Agent Orientation
 
+## Workspace Standards (Oracle)
+
+Master standards: `/Users/scott/ScottAI/01_Active_Projects/oracle/canon/`
+Read before working: `PLAIN_ENGLISH.md` (how to talk to Scott), `MD_TAXONOMY.md` (file names and jobs), `PROJECT_STANDARD.md` (what this project must have).
+When Scott says "make this standard" or "always do this from now on": append it to `/Users/scott/ScottAI/01_Active_Projects/oracle/inbox/INBOX.md` with the date, this project's name, and Scott's exact words. Do not edit canon directly from this project.
+
 `kit` is the public design-engineering registry for Purple Rain, JADE, OS, Animation Studio, focused foundations, and isolated interface behaviors.
 
 ## Canonical
@@ -85,10 +91,20 @@ Space (`/kit/space`, `/r/space/`) is the reference example.
 - Consumers declare installs in `kit-manifest.json`; `npm run doctor --
   <project-dir>` reports drift against `/r/checksums.json`.
 
+## Origin and identity
+
+- Created 2026-07-25 from Studio Purple Rain `2.0.0-rc.1`. Status: production build.
+- Purple Rain is a focused product system: plum canvas, stepped aubergine surfaces, restrained orchid decision signals, seated controls, 44px targets, visible focus, and short property-specific motion. No glass, translucency, glow, or ethereal decoration.
+
+## Deploy
+
+- Run `./ship.sh` from this project root (it runs `npm run check`, pushes main, deploys with `vercel --prod`, and curls the live registry). See `docs/DEPLOYMENT.md` for the complete contract.
+- The project is not git-connected on Vercel: pushing to main alone does not deploy.
+
 ## Working rules
 
-- Read `PROJECT_BRAIN.md`, `docs/AGENT_LEDGER.md`, and `docs/DEPLOYMENT.md` before meaningful work.
+- Read `docs/BRAIN.md`, `docs/LEDGER.md`, and `docs/DEPLOYMENT.md` before meaningful work.
 - Run `npm run check` before commit or deploy.
 - Prove registry changes with a throwaway consumer app, not only schema validation.
 - Keep secrets out of source and logs.
-- Update `docs/AGENT_LEDGER.md` after meaningful product, registry, or deployment changes.
+- Update `docs/LEDGER.md` after meaningful product, registry, or deployment changes.

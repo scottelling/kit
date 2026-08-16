@@ -110,7 +110,7 @@ manifest, and the showroom route.
 
 - Write `docs/<KIT-ID>-KIT-INTAKE.md`: source authority, class decision, what
   was preserved, what was derived, the bridge stance, open cautions.
-- Add the kit to `AGENTS.md` canonical URLs, `README.md`, `PROJECT_BRAIN.md`,
+- Add the kit to `AGENTS.md` canonical URLs, `README.md`, `docs/BRAIN.md`,
   and the live checks in `docs/DEPLOYMENT.md`.
 - Ledger entry, `npm run check`, `./ship.sh`, live curls. Same bar as any
   release: the intake is not done until the kit is live and verified.

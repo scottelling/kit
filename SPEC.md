@@ -6,7 +6,7 @@ Version: 1.1.0 (2026-08-11) — adds sourced kits (§2a), `kit-provenance/1`,
 This file is the source of truth for the KIT format: how visual systems, tokens,
 pieces, doctrine, and consumers speak one language. The shadcn registry is one
 dialect of this format, not its foundation. If implementation and SPEC disagree,
-fix one and record the correction in `docs/AGENT_LEDGER.md`. The SPEC is
+fix one and record the correction in `docs/LEDGER.md`. The SPEC is
 amendable; silent deviation is not.
 
 ## 1. The idea
