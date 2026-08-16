@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "fine-tune-card",
+  "title": "Fine-tune Card",
+  "author": "Shane Levine; adapted by Scott E. Telling",
+  "description": "A live inspector for adjusting corners, spacing, and type weight against the real result.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+  ],
+  "files": [
+    {
+      "path": "registry/elements/beautiful-ui/fine-tune-card.tsx",
+      "content": "\"use client\"\nimport { BeautifulUIElement } from \"./beautiful-ui-elements\"\nexport function FineTuneCard() { return <BeautifulUIElement kind=\"fine-tune-card\" /> }\n",
+      "type": "registry:ui",
+      "target": "components/ui/fine-tune-card.tsx"
+    }
+  ],
+  "docs": "Import Visual Property Inspector from the generated fine-tune-card file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support.",
+  "categories": [
+    "Creation Tools",
+    "Interactive",
+    "Beautiful UI"
+  ],
+  "type": "registry:ui"
+}

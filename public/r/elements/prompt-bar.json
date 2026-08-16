@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "prompt-bar",
+  "title": "Prompt Bar",
+  "author": "Shane Levine; adapted by Scott E. Telling",
+  "description": "A roomy prompt composer for context, model choice, dictation, and submission.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+  ],
+  "files": [
+    {
+      "path": "registry/elements/beautiful-ui/prompt-bar.tsx",
+      "content": "\"use client\"\nimport { BeautifulUIElement } from \"./beautiful-ui-elements\"\nexport function PromptBar() { return <BeautifulUIElement kind=\"prompt-bar\" /> }\n",
+      "type": "registry:ui",
+      "target": "components/ui/prompt-bar.tsx"
+    }
+  ],
+  "docs": "Import ContextAware Composer from the generated prompt-bar file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support.",
+  "categories": [
+    "Conversation",
+    "Interactive",
+    "Beautiful UI"
+  ],
+  "type": "registry:ui"
+}

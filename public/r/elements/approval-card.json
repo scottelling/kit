@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "approval-card",
+  "title": "Approval Card",
+  "author": "Shane Levine; adapted by Scott E. Telling",
+  "description": "A decision surface that makes an agent stop, explain the choices, and wait for approval.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+  ],
+  "files": [
+    {
+      "path": "registry/elements/beautiful-ui/approval-card.tsx",
+      "content": "\"use client\"\nimport { BeautifulUIElement } from \"./beautiful-ui-elements\"\nexport function ApprovalCard() { return <BeautifulUIElement kind=\"approval-card\" /> }\n",
+      "type": "registry:ui",
+      "target": "components/ui/approval-card.tsx"
+    }
+  ],
+  "docs": "Import Human Approval Gate from the generated approval-card file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support.",
+  "categories": [
+    "Agent Interfaces",
+    "Interactive",
+    "Beautiful UI"
+  ],
+  "type": "registry:ui"
+}

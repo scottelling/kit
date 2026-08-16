@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "diff-table",
+  "title": "Diff Table",
+  "author": "Shane Levine; adapted by Scott E. Telling",
+  "description": "A field-by-field review of current and proposed values with selective acceptance.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+  ],
+  "files": [
+    {
+      "path": "registry/elements/beautiful-ui/diff-table.tsx",
+      "content": "\"use client\"\nimport { BeautifulUIElement } from \"./beautiful-ui-elements\"\nexport function DiffTable() { return <BeautifulUIElement kind=\"diff-table\" /> }\n",
+      "type": "registry:ui",
+      "target": "components/ui/diff-table.tsx"
+    }
+  ],
+  "docs": "Import Proposed Change Table from the generated diff-table file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support.",
+  "categories": [
+    "Data",
+    "Interactive",
+    "Beautiful UI"
+  ],
+  "type": "registry:ui"
+}

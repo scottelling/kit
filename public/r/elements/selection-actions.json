@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "selection-actions",
+  "title": "Selection Actions",
+  "author": "Shane Levine; adapted by Scott E. Telling",
+  "description": "A focused rewrite bar that applies clear text transformations and preserves an immediate reset.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+  ],
+  "files": [
+    {
+      "path": "registry/elements/beautiful-ui/selection-actions.tsx",
+      "content": "\"use client\"\nimport { BeautifulUIElement } from \"./beautiful-ui-elements\"\nexport function SelectionActions() { return <BeautifulUIElement kind=\"selection-actions\" /> }\n",
+      "type": "registry:ui",
+      "target": "components/ui/selection-actions.tsx"
+    }
+  ],
+  "docs": "Import Inline Rewrite Actions from the generated selection-actions file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support.",
+  "categories": [
+    "Creation Tools",
+    "Interactive",
+    "Beautiful UI"
+  ],
+  "type": "registry:ui"
+}

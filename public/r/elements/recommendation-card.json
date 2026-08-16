@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "recommendation-card",
+  "title": "Recommendation Card",
+  "author": "Shane Levine; adapted by Scott E. Telling",
+  "description": "A recommendation with visible confidence and explicit accept or save actions.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+  ],
+  "files": [
+    {
+      "path": "registry/elements/beautiful-ui/recommendation-card.tsx",
+      "content": "\"use client\"\nimport { BeautifulUIElement } from \"./beautiful-ui-elements\"\nexport function RecommendationCard() { return <BeautifulUIElement kind=\"recommendation-card\" /> }\n",
+      "type": "registry:ui",
+      "target": "components/ui/recommendation-card.tsx"
+    }
+  ],
+  "docs": "Import Confidence Recommendation from the generated recommendation-card file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support.",
+  "categories": [
+    "Decisions",
+    "Interactive",
+    "Beautiful UI"
+  ],
+  "type": "registry:ui"
+}

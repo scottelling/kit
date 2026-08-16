@@ -4,16 +4,18 @@ import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import elementLibrary from "@/lib/elements-library.json"
 
+import { BeautifulUIShowroom } from "./beautiful-ui-showroom"
 import { ElementShowroom } from "./element-showroom"
 import "./elements.css"
 
 export const metadata: Metadata = {
   title: "Elements",
-  description: "Touch, tune, and reuse complete production interface elements. Knight Rider opens the Signature Effects collection.",
+  description: "Touch, tune, and reuse complete production interface elements, from signature effects to agent interfaces, data tools, and creation controls.",
 }
 
 export default function ElementsPage() {
   const knightRider = elementLibrary[0]
+  const beautifulUi = elementLibrary.slice(1)
   return (
     <div className="elements-shell">
       <SiteHeader />
@@ -27,19 +29,21 @@ export default function ElementsPage() {
           <aside aria-label="Elements Library status">
             <span>Live collection</span>
             <strong>{String(elementLibrary.length).padStart(2, "0")}</strong>
-            <p>Signature Effect</p>
+            <p>Working elements</p>
           </aside>
         </section>
 
         <nav className="elements-index" aria-label="Element categories">
-          <a href="#knight-rider" aria-current="page"><span>01</span><strong>Signature Effects</strong><small>Knight Rider</small></a>
-          <span><i>02</i><strong>Micro-interactions</strong><small>Next collection</small></span>
-          <span><i>03</i><strong>Text treatments</strong><small>Next collection</small></span>
+          <a href="#knight-rider"><span>01</span><strong>Signature Effects</strong><small>Knight Rider</small></a>
+          <a href="#beautiful-ui" aria-current="page"><span>02</span><strong>Interactive Elements</strong><small>19 working patterns</small></a>
+          <a href="#elements-standard"><span>03</span><strong>Our standard</strong><small>How every element earns its place</small></a>
         </nav>
 
         <ElementShowroom item={knightRider} />
 
-        <section className="elements-standard" aria-labelledby="elements-standard-title">
+        <BeautifulUIShowroom items={beautifulUi} />
+
+        <section className="elements-standard" id="elements-standard" aria-labelledby="elements-standard-title">
           <div><span>Elements standard</span><h2 id="elements-standard-title">A beautiful experiment is only the beginning.</h2></div>
           <ol>
             <li><span>01</span><strong>It must be felt</strong><p>The real behavior is visible and touchable before anyone takes it.</p></li>

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sidebar-nav",
+  "title": "Sidebar Nav",
+  "author": "Shane Levine; adapted by Scott E. Telling",
+  "description": "A complete workspace rail with search, destinations, counts, and a user control.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+  ],
+  "files": [
+    {
+      "path": "registry/elements/beautiful-ui/sidebar-nav.tsx",
+      "content": "\"use client\"\nimport { BeautifulUIElement } from \"./beautiful-ui-elements\"\nexport function SidebarNav() { return <BeautifulUIElement kind=\"sidebar-nav\" /> }\n",
+      "type": "registry:ui",
+      "target": "components/ui/sidebar-nav.tsx"
+    }
+  ],
+  "docs": "Import Workspace Sidebar Navigation from the generated sidebar-nav file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support.",
+  "categories": [
+    "Navigation",
+    "Interactive",
+    "Beautiful UI"
+  ],
+  "type": "registry:ui"
+}

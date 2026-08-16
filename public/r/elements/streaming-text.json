@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "streaming-text",
+  "title": "Streaming Text",
+  "author": "Shane Levine; adapted by Scott E. Telling",
+  "description": "A progressive answer with visible sources and a clear continuation control.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+  ],
+  "files": [
+    {
+      "path": "registry/elements/beautiful-ui/streaming-text.tsx",
+      "content": "\"use client\"\nimport { BeautifulUIElement } from \"./beautiful-ui-elements\"\nexport function StreamingText() { return <BeautifulUIElement kind=\"streaming-text\" /> }\n",
+      "type": "registry:ui",
+      "target": "components/ui/streaming-text.tsx"
+    }
+  ],
+  "docs": "Import Sourced Answer from the generated streaming-text file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support.",
+  "categories": [
+    "Agent Interfaces",
+    "Interactive",
+    "Beautiful UI"
+  ],
+  "type": "registry:ui"
+}

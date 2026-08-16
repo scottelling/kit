@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "chat",
+  "title": "Chat",
+  "author": "Shane Levine; adapted by Scott E. Telling",
+  "description": "A compact project conversation with readable turns and a working composer.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+  ],
+  "files": [
+    {
+      "path": "registry/elements/beautiful-ui/chat.tsx",
+      "content": "\"use client\"\nimport { BeautifulUIElement } from \"./beautiful-ui-elements\"\nexport function Chat() { return <BeautifulUIElement kind=\"chat\" /> }\n",
+      "type": "registry:ui",
+      "target": "components/ui/chat.tsx"
+    }
+  ],
+  "docs": "Import Project Conversation from the generated chat file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support.",
+  "categories": [
+    "Conversation",
+    "Interactive",
+    "Beautiful UI"
+  ],
+  "type": "registry:ui"
+}

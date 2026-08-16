@@ -3,7 +3,7 @@
   "name": "larson-scanner",
   "title": "Knight Rider — Larson Scanner",
   "author": "Scott E. Telling",
-  "description": "A programmable sci-fi light scanner with six motion patterns, custom paths, color and voice controls, complete reduced-motion behavior, and touch-safe programming.",
+  "description": "A programmable sci-fi light scanner with six patterns, custom paths, color, voice, complete reduced-motion behavior, and touch-safe programming.",
   "files": [
     {
       "path": "registry/elements/larson-scanner/larson-scanner.tsx",

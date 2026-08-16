@@ -7,9 +7,13 @@
       "name": "larson-scanner",
       "type": "registry:ui",
       "title": "Knight Rider — Larson Scanner",
-      "description": "A programmable sci-fi light scanner with six motion patterns, custom paths, color and voice controls, complete reduced-motion behavior, and touch-safe programming.",
+      "description": "A programmable sci-fi light scanner with six patterns, custom paths, color, voice, complete reduced-motion behavior, and touch-safe programming.",
       "author": "Scott E. Telling",
-      "categories": ["Signature Effects", "Motion", "Interactive"],
+      "categories": [
+        "Signature Effects",
+        "Motion",
+        "Interactive"
+      ],
       "files": [
         {
           "path": "registry/elements/larson-scanner/larson-scanner.tsx",
@@ -23,6 +27,474 @@
         }
       ],
       "docs": "Import LarsonScanner from your components/ui folder. Sound starts muted. The canvas freezes every time-based effect for reduced motion and pauses when the element is offscreen. The purpose-built light belongs inside the scanner frame; do not spread its glow into surrounding product chrome."
+    },
+    {
+      "name": "beautiful-ui-foundation",
+      "type": "registry:style",
+      "title": "Beautiful UI Elements Foundation",
+      "description": "The shared responsive, accessible foundation for Kit's adapted Beautiful UI elements.",
+      "author": "Shane Levine; adapted by Scott E. Telling",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "categories": [
+        "Elements Foundation"
+      ],
+      "files": [
+        {
+          "path": "registry/elements/beautiful-ui/beautiful-ui-elements.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/beautiful-ui-elements.tsx"
+        },
+        {
+          "path": "registry/elements/beautiful-ui/beautiful-ui-elements.css",
+          "type": "registry:file",
+          "target": "components/ui/beautiful-ui-elements.css"
+        },
+        {
+          "path": "registry/elements/beautiful-ui/LICENSE.txt",
+          "type": "registry:file",
+          "target": "LICENSE-beautiful-ui.txt"
+        }
+      ],
+      "docs": "Adapted from Beautiful UI by Shane Levine under the MIT License. Keep the included license notice. The foundation uses solid surfaces, 44-pixel controls, responsive layouts, visible focus, and reduced-motion behavior."
+    },
+    {
+      "name": "loading-state",
+      "type": "registry:ui",
+      "title": "Loading State",
+      "description": "A calm, specific progress surface that shows what is happening and lets people pause or advance it.",
+      "author": "Shane Levine; adapted by Scott E. Telling",
+      "categories": [
+        "Agent Interfaces",
+        "Interactive",
+        "Beautiful UI"
+      ],
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+      ],
+      "files": [
+        {
+          "path": "registry/elements/beautiful-ui/loading-state.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/loading-state.tsx"
+        }
+      ],
+      "docs": "Import Progressive Loading State from the generated loading-state file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support."
+    },
+    {
+      "name": "thinking",
+      "type": "registry:ui",
+      "title": "Thinking",
+      "description": "A readable trace of completed reasoning steps with details available on demand.",
+      "author": "Shane Levine; adapted by Scott E. Telling",
+      "categories": [
+        "Agent Interfaces",
+        "Interactive",
+        "Beautiful UI"
+      ],
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+      ],
+      "files": [
+        {
+          "path": "registry/elements/beautiful-ui/thinking.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/thinking.tsx"
+        }
+      ],
+      "docs": "Import Expandable Reasoning Trace from the generated thinking file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support."
+    },
+    {
+      "name": "streaming-text",
+      "type": "registry:ui",
+      "title": "Streaming Text",
+      "description": "A progressive answer with visible sources and a clear continuation control.",
+      "author": "Shane Levine; adapted by Scott E. Telling",
+      "categories": [
+        "Agent Interfaces",
+        "Interactive",
+        "Beautiful UI"
+      ],
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+      ],
+      "files": [
+        {
+          "path": "registry/elements/beautiful-ui/streaming-text.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/streaming-text.tsx"
+        }
+      ],
+      "docs": "Import Sourced Answer from the generated streaming-text file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support."
+    },
+    {
+      "name": "approval-card",
+      "type": "registry:ui",
+      "title": "Approval Card",
+      "description": "A decision surface that makes an agent stop, explain the choices, and wait for approval.",
+      "author": "Shane Levine; adapted by Scott E. Telling",
+      "categories": [
+        "Agent Interfaces",
+        "Interactive",
+        "Beautiful UI"
+      ],
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+      ],
+      "files": [
+        {
+          "path": "registry/elements/beautiful-ui/approval-card.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/approval-card.tsx"
+        }
+      ],
+      "docs": "Import Human Approval Gate from the generated approval-card file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support."
+    },
+    {
+      "name": "tool-chips",
+      "type": "registry:ui",
+      "title": "Tool Chips",
+      "description": "Compact, inspectable summaries of files read, changes made, and checks completed.",
+      "author": "Shane Levine; adapted by Scott E. Telling",
+      "categories": [
+        "Agent Interfaces",
+        "Interactive",
+        "Beautiful UI"
+      ],
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+      ],
+      "files": [
+        {
+          "path": "registry/elements/beautiful-ui/tool-chips.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/tool-chips.tsx"
+        }
+      ],
+      "docs": "Import Work Activity Chips from the generated tool-chips file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support."
+    },
+    {
+      "name": "task-rows",
+      "type": "registry:ui",
+      "title": "Task Rows",
+      "description": "Live task states that separate completed work, current work, and attention needed.",
+      "author": "Shane Levine; adapted by Scott E. Telling",
+      "categories": [
+        "Agent Interfaces",
+        "Interactive",
+        "Beautiful UI"
+      ],
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+      ],
+      "files": [
+        {
+          "path": "registry/elements/beautiful-ui/task-rows.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/task-rows.tsx"
+        }
+      ],
+      "docs": "Import Agent Task Status Rows from the generated task-rows file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support."
+    },
+    {
+      "name": "chat",
+      "type": "registry:ui",
+      "title": "Chat",
+      "description": "A compact project conversation with readable turns and a working composer.",
+      "author": "Shane Levine; adapted by Scott E. Telling",
+      "categories": [
+        "Conversation",
+        "Interactive",
+        "Beautiful UI"
+      ],
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+      ],
+      "files": [
+        {
+          "path": "registry/elements/beautiful-ui/chat.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/chat.tsx"
+        }
+      ],
+      "docs": "Import Project Conversation from the generated chat file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support."
+    },
+    {
+      "name": "prompt-bar",
+      "type": "registry:ui",
+      "title": "Prompt Bar",
+      "description": "A roomy prompt composer for context, model choice, dictation, and submission.",
+      "author": "Shane Levine; adapted by Scott E. Telling",
+      "categories": [
+        "Conversation",
+        "Interactive",
+        "Beautiful UI"
+      ],
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+      ],
+      "files": [
+        {
+          "path": "registry/elements/beautiful-ui/prompt-bar.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/prompt-bar.tsx"
+        }
+      ],
+      "docs": "Import ContextAware Composer from the generated prompt-bar file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support."
+    },
+    {
+      "name": "recommendation-card",
+      "type": "registry:ui",
+      "title": "Recommendation Card",
+      "description": "A recommendation with visible confidence and explicit accept or save actions.",
+      "author": "Shane Levine; adapted by Scott E. Telling",
+      "categories": [
+        "Decisions",
+        "Interactive",
+        "Beautiful UI"
+      ],
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+      ],
+      "files": [
+        {
+          "path": "registry/elements/beautiful-ui/recommendation-card.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/recommendation-card.tsx"
+        }
+      ],
+      "docs": "Import Confidence Recommendation from the generated recommendation-card file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support."
+    },
+    {
+      "name": "context-cards",
+      "type": "registry:ui",
+      "title": "Context Cards",
+      "description": "Source cards that reveal the evidence behind an answer without losing provenance.",
+      "author": "Shane Levine; adapted by Scott E. Telling",
+      "categories": [
+        "Knowledge",
+        "Interactive",
+        "Beautiful UI"
+      ],
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+      ],
+      "files": [
+        {
+          "path": "registry/elements/beautiful-ui/context-cards.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/context-cards.tsx"
+        }
+      ],
+      "docs": "Import Retrieved Source Cards from the generated context-cards file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support."
+    },
+    {
+      "name": "diff-table",
+      "type": "registry:ui",
+      "title": "Diff Table",
+      "description": "A field-by-field review of current and proposed values with selective acceptance.",
+      "author": "Shane Levine; adapted by Scott E. Telling",
+      "categories": [
+        "Data",
+        "Interactive",
+        "Beautiful UI"
+      ],
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+      ],
+      "files": [
+        {
+          "path": "registry/elements/beautiful-ui/diff-table.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/diff-table.tsx"
+        }
+      ],
+      "docs": "Import Proposed Change Table from the generated diff-table file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support."
+    },
+    {
+      "name": "records-table",
+      "type": "registry:ui",
+      "title": "Records Table",
+      "description": "A tactile records grid with sorting, selection, owners, stages, and value.",
+      "author": "Shane Levine; adapted by Scott E. Telling",
+      "categories": [
+        "Data",
+        "Interactive",
+        "Beautiful UI"
+      ],
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+      ],
+      "files": [
+        {
+          "path": "registry/elements/beautiful-ui/records-table.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/records-table.tsx"
+        }
+      ],
+      "docs": "Import Relationship Records Grid from the generated records-table file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support."
+    },
+    {
+      "name": "filter-table",
+      "type": "registry:ui",
+      "title": "Filter Table",
+      "description": "A compact records view whose visible results respond immediately to status choices.",
+      "author": "Shane Levine; adapted by Scott E. Telling",
+      "categories": [
+        "Data",
+        "Interactive",
+        "Beautiful UI"
+      ],
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+      ],
+      "files": [
+        {
+          "path": "registry/elements/beautiful-ui/filter-table.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/filter-table.tsx"
+        }
+      ],
+      "docs": "Import Live Filtered Records from the generated filter-table file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support."
+    },
+    {
+      "name": "sidebar-nav",
+      "type": "registry:ui",
+      "title": "Sidebar Nav",
+      "description": "A complete workspace rail with search, destinations, counts, and a user control.",
+      "author": "Shane Levine; adapted by Scott E. Telling",
+      "categories": [
+        "Navigation",
+        "Interactive",
+        "Beautiful UI"
+      ],
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+      ],
+      "files": [
+        {
+          "path": "registry/elements/beautiful-ui/sidebar-nav.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/sidebar-nav.tsx"
+        }
+      ],
+      "docs": "Import Workspace Sidebar Navigation from the generated sidebar-nav file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support."
+    },
+    {
+      "name": "search",
+      "type": "registry:ui",
+      "title": "Search",
+      "description": "Fast live filtering across actions and workspace destinations, including a useful empty state.",
+      "author": "Shane Levine; adapted by Scott E. Telling",
+      "categories": [
+        "Navigation",
+        "Interactive",
+        "Beautiful UI"
+      ],
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+      ],
+      "files": [
+        {
+          "path": "registry/elements/beautiful-ui/search.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/search.tsx"
+        }
+      ],
+      "docs": "Import Command Search from the generated search file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support."
+    },
+    {
+      "name": "insight-cards",
+      "type": "registry:ui",
+      "title": "Insight Cards",
+      "description": "A paged insight surface that joins a clear conclusion to a compact chart.",
+      "author": "Shane Levine; adapted by Scott E. Telling",
+      "categories": [
+        "Data",
+        "Interactive",
+        "Beautiful UI"
+      ],
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+      ],
+      "files": [
+        {
+          "path": "registry/elements/beautiful-ui/insight-cards.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/insight-cards.tsx"
+        }
+      ],
+      "docs": "Import Paged Agent Insights from the generated insight-cards file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support."
+    },
+    {
+      "name": "code-block",
+      "type": "registry:ui",
+      "title": "Code Block",
+      "description": "A readable code surface that can reveal work progressively and copy the finished result.",
+      "author": "Shane Levine; adapted by Scott E. Telling",
+      "categories": [
+        "Developer Tools",
+        "Interactive",
+        "Beautiful UI"
+      ],
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+      ],
+      "files": [
+        {
+          "path": "registry/elements/beautiful-ui/code-block.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/code-block.tsx"
+        }
+      ],
+      "docs": "Import Progressive Code Block from the generated code-block file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support."
+    },
+    {
+      "name": "fine-tune-card",
+      "type": "registry:ui",
+      "title": "Fine-tune Card",
+      "description": "A live inspector for adjusting corners, spacing, and type weight against the real result.",
+      "author": "Shane Levine; adapted by Scott E. Telling",
+      "categories": [
+        "Creation Tools",
+        "Interactive",
+        "Beautiful UI"
+      ],
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+      ],
+      "files": [
+        {
+          "path": "registry/elements/beautiful-ui/fine-tune-card.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/fine-tune-card.tsx"
+        }
+      ],
+      "docs": "Import Visual Property Inspector from the generated fine-tune-card file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support."
+    },
+    {
+      "name": "selection-actions",
+      "type": "registry:ui",
+      "title": "Selection Actions",
+      "description": "A focused rewrite bar that applies clear text transformations and preserves an immediate reset.",
+      "author": "Shane Levine; adapted by Scott E. Telling",
+      "categories": [
+        "Creation Tools",
+        "Interactive",
+        "Beautiful UI"
+      ],
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+      ],
+      "files": [
+        {
+          "path": "registry/elements/beautiful-ui/selection-actions.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/selection-actions.tsx"
+        }
+      ],
+      "docs": "Import Inline Rewrite Actions from the generated selection-actions file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support."
     }
   ]
 }

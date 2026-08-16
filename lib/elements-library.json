@@ -8,5 +8,157 @@
     "registryUrl": "https://kit.scottelling.com/r/elements/larson-scanner.json",
     "states": ["running", "paused", "muted", "sound", "custom", "reduced-motion", "offscreen"],
     "controls": ["pattern", "speed", "fade", "ribbon", "brightness", "nodes", "color", "voice", "direction"]
+  },
+  {
+    "id": "loading-state",
+    "title": "Loading State",
+    "technicalName": "Progressive Loading State",
+    "category": "Agent Interfaces",
+    "description": "A calm, specific progress surface that shows what is happening and lets people pause or advance it.",
+    "registryUrl": "https://kit.scottelling.com/r/elements/loading-state.json"
+  },
+  {
+    "id": "thinking",
+    "title": "Thinking",
+    "technicalName": "Expandable Reasoning Trace",
+    "category": "Agent Interfaces",
+    "description": "A readable trace of completed reasoning steps with details available on demand.",
+    "registryUrl": "https://kit.scottelling.com/r/elements/thinking.json"
+  },
+  {
+    "id": "streaming-text",
+    "title": "Streaming Text",
+    "technicalName": "Sourced Answer",
+    "category": "Agent Interfaces",
+    "description": "A progressive answer with visible sources and a clear continuation control.",
+    "registryUrl": "https://kit.scottelling.com/r/elements/streaming-text.json"
+  },
+  {
+    "id": "approval-card",
+    "title": "Approval Card",
+    "technicalName": "Human Approval Gate",
+    "category": "Agent Interfaces",
+    "description": "A decision surface that makes an agent stop, explain the choices, and wait for approval.",
+    "registryUrl": "https://kit.scottelling.com/r/elements/approval-card.json"
+  },
+  {
+    "id": "tool-chips",
+    "title": "Tool Chips",
+    "technicalName": "Work Activity Chips",
+    "category": "Agent Interfaces",
+    "description": "Compact, inspectable summaries of files read, changes made, and checks completed.",
+    "registryUrl": "https://kit.scottelling.com/r/elements/tool-chips.json"
+  },
+  {
+    "id": "task-rows",
+    "title": "Task Rows",
+    "technicalName": "Agent Task Status Rows",
+    "category": "Agent Interfaces",
+    "description": "Live task states that separate completed work, current work, and attention needed.",
+    "registryUrl": "https://kit.scottelling.com/r/elements/task-rows.json"
+  },
+  {
+    "id": "chat",
+    "title": "Chat",
+    "technicalName": "Project Conversation",
+    "category": "Conversation",
+    "description": "A compact project conversation with readable turns and a working composer.",
+    "registryUrl": "https://kit.scottelling.com/r/elements/chat.json"
+  },
+  {
+    "id": "prompt-bar",
+    "title": "Prompt Bar",
+    "technicalName": "Context-Aware Composer",
+    "category": "Conversation",
+    "description": "A roomy prompt composer for context, model choice, dictation, and submission.",
+    "registryUrl": "https://kit.scottelling.com/r/elements/prompt-bar.json"
+  },
+  {
+    "id": "recommendation-card",
+    "title": "Recommendation Card",
+    "technicalName": "Confidence Recommendation",
+    "category": "Decisions",
+    "description": "A recommendation with visible confidence and explicit accept or save actions.",
+    "registryUrl": "https://kit.scottelling.com/r/elements/recommendation-card.json"
+  },
+  {
+    "id": "context-cards",
+    "title": "Context Cards",
+    "technicalName": "Retrieved Source Cards",
+    "category": "Knowledge",
+    "description": "Source cards that reveal the evidence behind an answer without losing provenance.",
+    "registryUrl": "https://kit.scottelling.com/r/elements/context-cards.json"
+  },
+  {
+    "id": "diff-table",
+    "title": "Diff Table",
+    "technicalName": "Proposed Change Table",
+    "category": "Data",
+    "description": "A field-by-field review of current and proposed values with selective acceptance.",
+    "registryUrl": "https://kit.scottelling.com/r/elements/diff-table.json"
+  },
+  {
+    "id": "records-table",
+    "title": "Records Table",
+    "technicalName": "Relationship Records Grid",
+    "category": "Data",
+    "description": "A tactile records grid with sorting, selection, owners, stages, and value.",
+    "registryUrl": "https://kit.scottelling.com/r/elements/records-table.json"
+  },
+  {
+    "id": "filter-table",
+    "title": "Filter Table",
+    "technicalName": "Live Filtered Records",
+    "category": "Data",
+    "description": "A compact records view whose visible results respond immediately to status choices.",
+    "registryUrl": "https://kit.scottelling.com/r/elements/filter-table.json"
+  },
+  {
+    "id": "sidebar-nav",
+    "title": "Sidebar Nav",
+    "technicalName": "Workspace Sidebar Navigation",
+    "category": "Navigation",
+    "description": "A complete workspace rail with search, destinations, counts, and a user control.",
+    "registryUrl": "https://kit.scottelling.com/r/elements/sidebar-nav.json"
+  },
+  {
+    "id": "search",
+    "title": "Search",
+    "technicalName": "Command Search",
+    "category": "Navigation",
+    "description": "Fast live filtering across actions and workspace destinations, including a useful empty state.",
+    "registryUrl": "https://kit.scottelling.com/r/elements/search.json"
+  },
+  {
+    "id": "insight-cards",
+    "title": "Insight Cards",
+    "technicalName": "Paged Agent Insights",
+    "category": "Data",
+    "description": "A paged insight surface that joins a clear conclusion to a compact chart.",
+    "registryUrl": "https://kit.scottelling.com/r/elements/insight-cards.json"
+  },
+  {
+    "id": "code-block",
+    "title": "Code Block",
+    "technicalName": "Progressive Code Block",
+    "category": "Developer Tools",
+    "description": "A readable code surface that can reveal work progressively and copy the finished result.",
+    "registryUrl": "https://kit.scottelling.com/r/elements/code-block.json"
+  },
+  {
+    "id": "fine-tune-card",
+    "title": "Fine-tune Card",
+    "technicalName": "Visual Property Inspector",
+    "category": "Creation Tools",
+    "description": "A live inspector for adjusting corners, spacing, and type weight against the real result.",
+    "registryUrl": "https://kit.scottelling.com/r/elements/fine-tune-card.json"
+  },
+  {
+    "id": "selection-actions",
+    "title": "Selection Actions",
+    "technicalName": "Inline Rewrite Actions",
+    "category": "Creation Tools",
+    "description": "A focused rewrite bar that applies clear text transformations and preserves an immediate reset.",
+    "registryUrl": "https://kit.scottelling.com/r/elements/selection-actions.json"
   }
 ]

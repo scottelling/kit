@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "code-block",
+  "title": "Code Block",
+  "author": "Shane Levine; adapted by Scott E. Telling",
+  "description": "A readable code surface that can reveal work progressively and copy the finished result.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+  ],
+  "files": [
+    {
+      "path": "registry/elements/beautiful-ui/code-block.tsx",
+      "content": "\"use client\"\nimport { BeautifulUIElement } from \"./beautiful-ui-elements\"\nexport function CodeBlock() { return <BeautifulUIElement kind=\"code-block\" /> }\n",
+      "type": "registry:ui",
+      "target": "components/ui/code-block.tsx"
+    }
+  ],
+  "docs": "Import Progressive Code Block from the generated code-block file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support.",
+  "categories": [
+    "Developer Tools",
+    "Interactive",
+    "Beautiful UI"
+  ],
+  "type": "registry:ui"
+}

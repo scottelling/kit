@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "context-cards",
+  "title": "Context Cards",
+  "author": "Shane Levine; adapted by Scott E. Telling",
+  "description": "Source cards that reveal the evidence behind an answer without losing provenance.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+  ],
+  "files": [
+    {
+      "path": "registry/elements/beautiful-ui/context-cards.tsx",
+      "content": "\"use client\"\nimport { BeautifulUIElement } from \"./beautiful-ui-elements\"\nexport function ContextCards() { return <BeautifulUIElement kind=\"context-cards\" /> }\n",
+      "type": "registry:ui",
+      "target": "components/ui/context-cards.tsx"
+    }
+  ],
+  "docs": "Import Retrieved Source Cards from the generated context-cards file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support.",
+  "categories": [
+    "Knowledge",
+    "Interactive",
+    "Beautiful UI"
+  ],
+  "type": "registry:ui"
+}

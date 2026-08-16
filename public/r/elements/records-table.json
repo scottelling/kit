@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "records-table",
+  "title": "Records Table",
+  "author": "Shane Levine; adapted by Scott E. Telling",
+  "description": "A tactile records grid with sorting, selection, owners, stages, and value.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+  ],
+  "files": [
+    {
+      "path": "registry/elements/beautiful-ui/records-table.tsx",
+      "content": "\"use client\"\nimport { BeautifulUIElement } from \"./beautiful-ui-elements\"\nexport function RecordsTable() { return <BeautifulUIElement kind=\"records-table\" /> }\n",
+      "type": "registry:ui",
+      "target": "components/ui/records-table.tsx"
+    }
+  ],
+  "docs": "Import Relationship Records Grid from the generated records-table file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support.",
+  "categories": [
+    "Data",
+    "Interactive",
+    "Beautiful UI"
+  ],
+  "type": "registry:ui"
+}

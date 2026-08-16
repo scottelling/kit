@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "task-rows",
+  "title": "Task Rows",
+  "author": "Shane Levine; adapted by Scott E. Telling",
+  "description": "Live task states that separate completed work, current work, and attention needed.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+  ],
+  "files": [
+    {
+      "path": "registry/elements/beautiful-ui/task-rows.tsx",
+      "content": "\"use client\"\nimport { BeautifulUIElement } from \"./beautiful-ui-elements\"\nexport function TaskRows() { return <BeautifulUIElement kind=\"task-rows\" /> }\n",
+      "type": "registry:ui",
+      "target": "components/ui/task-rows.tsx"
+    }
+  ],
+  "docs": "Import Agent Task Status Rows from the generated task-rows file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support.",
+  "categories": [
+    "Agent Interfaces",
+    "Interactive",
+    "Beautiful UI"
+  ],
+  "type": "registry:ui"
+}

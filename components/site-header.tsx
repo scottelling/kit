@@ -6,6 +6,7 @@ import { usePathname, useRouter } from "next/navigation"
 import { KeyboardEvent, useEffect, useMemo, useRef, useState } from "react"
 
 import animationLibrary from "@/lib/animation-library.json"
+import elementsLibrary from "@/lib/elements-library.json"
 import library from "@/lib/purple-rain-library.json"
 import osLibrary from "@/lib/os-library.json"
 import { studioAssets, studioCategories } from "@/lib/studio-library"
@@ -49,6 +50,12 @@ const places = [
     hint: item.summary,
     href: `/build#library`,
     words: `${item.category} ${item.bestFor} ${item.detail}`.toLowerCase(),
+  })),
+  ...elementsLibrary.map((item) => ({
+    label: item.title,
+    hint: item.description,
+    href: `/elements#${item.id}`,
+    words: `${item.category} ${item.technicalName}`.toLowerCase(),
   })),
   ...familyPlaces,
   { label: "Compare styles", hint: "Try Purple Rain beside Origin", href: "/demo", words: "origin side by side" },

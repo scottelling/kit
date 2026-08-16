@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tool-chips",
+  "title": "Tool Chips",
+  "author": "Shane Levine; adapted by Scott E. Telling",
+  "description": "Compact, inspectable summaries of files read, changes made, and checks completed.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+  ],
+  "files": [
+    {
+      "path": "registry/elements/beautiful-ui/tool-chips.tsx",
+      "content": "\"use client\"\nimport { BeautifulUIElement } from \"./beautiful-ui-elements\"\nexport function ToolChips() { return <BeautifulUIElement kind=\"tool-chips\" /> }\n",
+      "type": "registry:ui",
+      "target": "components/ui/tool-chips.tsx"
+    }
+  ],
+  "docs": "Import Work Activity Chips from the generated tool-chips file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support.",
+  "categories": [
+    "Agent Interfaces",
+    "Interactive",
+    "Beautiful UI"
+  ],
+  "type": "registry:ui"
+}

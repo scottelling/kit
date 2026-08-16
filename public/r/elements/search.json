@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "search",
+  "title": "Search",
+  "author": "Shane Levine; adapted by Scott E. Telling",
+  "description": "Fast live filtering across actions and workspace destinations, including a useful empty state.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+  ],
+  "files": [
+    {
+      "path": "registry/elements/beautiful-ui/search.tsx",
+      "content": "\"use client\"\nimport { BeautifulUIElement } from \"./beautiful-ui-elements\"\nexport function Search() { return <BeautifulUIElement kind=\"search\" /> }\n",
+      "type": "registry:ui",
+      "target": "components/ui/search.tsx"
+    }
+  ],
+  "docs": "Import Command Search from the generated search file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support.",
+  "categories": [
+    "Navigation",
+    "Interactive",
+    "Beautiful UI"
+  ],
+  "type": "registry:ui"
+}

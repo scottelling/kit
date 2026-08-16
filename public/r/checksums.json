@@ -1,7 +1,7 @@
 {
   "format": "kit-checksums/1",
-  "registryVersion": "597fec708cad",
-  "artifactCount": 746,
+  "registryVersion": "de58e6b782d3",
+  "artifactCount": 766,
   "artifacts": {
     "r/accordion.json": {
       "sha256": "2a9e0cfea649710182fa95f101f3e3a6aad4eb66fa78ac14c80761987de21a9b",
@@ -963,13 +963,93 @@
       "sha256": "54aa703115e35ddf4a1a71e5f060843344baa66999c74347b54c3acdcb849e3e",
       "bytes": 1754
     },
+    "r/elements/approval-card.json": {
+      "sha256": "636723de9512cbb6b34ce2b3daa37239a29cf307f8d14f0b49daafc130e23773",
+      "bytes": 1092
+    },
+    "r/elements/beautiful-ui-foundation.json": {
+      "sha256": "a6e5bb8510b850f41f86a164b8ec8b75a5a34028ccbcb7318ed4071f132a72d6",
+      "bytes": 44453
+    },
+    "r/elements/chat.json": {
+      "sha256": "2819ccfcc6dd14c70382a2d079bb81fc782cb9bdd98b383370f261e4ebaee4df",
+      "bytes": 1013
+    },
+    "r/elements/code-block.json": {
+      "sha256": "5cd1601839efeb267119dd671ac6d9459b58bf552e18b30e21595aee7d6a07e7",
+      "bytes": 1073
+    },
+    "r/elements/context-cards.json": {
+      "sha256": "f2040d612c07680570f1820bf8f0c34f75f98ef48908a88447c81e99c293cb1d",
+      "bytes": 1081
+    },
+    "r/elements/diff-table.json": {
+      "sha256": "f43edf4c30573d407107ca9a2c85534c8c80b77979366119a4500d0dd711ac53",
+      "bytes": 1054
+    },
+    "r/elements/filter-table.json": {
+      "sha256": "2b79ae50a8b69c0df4ca8979ba7c9c42df496fa88c43b2285b5e560d477700da",
+      "bytes": 1070
+    },
+    "r/elements/fine-tune-card.json": {
+      "sha256": "d78582d4d30662fffc4a4f72646c7dd3dda4bfb7797ae3f30bae3bdf564adaa6",
+      "bytes": 1103
+    },
+    "r/elements/insight-cards.json": {
+      "sha256": "184300f5a67f41738d8f57c0e36f322aea0d20f4bbffbe40dc2c197a9be6a91e",
+      "bytes": 1066
+    },
     "r/elements/larson-scanner.json": {
-      "sha256": "71aaa137e515505036c6518cf71829511359bac98ce566cdfb39bf35f674b238",
-      "bytes": 48140
+      "sha256": "b7495e4fadf35af57a7f204e7e9733674d87641c374362e05339aac95ceb3cb3",
+      "bytes": 48121
+    },
+    "r/elements/loading-state.json": {
+      "sha256": "02e608bb7649df1783f7ec874dccfb2de3b9e38b6f9f601f05dedc9c24574641",
+      "bytes": 1109
+    },
+    "r/elements/prompt-bar.json": {
+      "sha256": "6a0afcda750236916c5996cbd363e091994278afb05b79a03a4f8baebd742df2",
+      "bytes": 1058
+    },
+    "r/elements/recommendation-card.json": {
+      "sha256": "9cf6eb6f8c815558f6ffda5ab3063e1bf3a9cf8a0142b31ef08d4d61a2edb98e",
+      "bytes": 1122
+    },
+    "r/elements/records-table.json": {
+      "sha256": "d59ae2d036167c6f21c06c2cd56b47b3512c1f62c66d90c2824003344efe016d",
+      "bytes": 1072
     },
     "r/elements/registry.json": {
-      "sha256": "58cb9d2ba646854441585352a6fa31cb566d08023cdb357198b56e3c57a67995",
-      "bytes": 1273
+      "sha256": "f03e4e0f554ffc889ed36fb08a00b0ca08bac1e5ebc2fc77a56c92e90a421299",
+      "bytes": 19956
+    },
+    "r/elements/search.json": {
+      "sha256": "b8f592d3d9299ef73f02fd16ede13b2469dad172a26b7b4659b5a88d53233880",
+      "bytes": 1039
+    },
+    "r/elements/selection-actions.json": {
+      "sha256": "0de105cfb301bcdadc3cc329149288d656e50ea06a2f9f0a501c907e2c725e16",
+      "bytes": 1128
+    },
+    "r/elements/sidebar-nav.json": {
+      "sha256": "b5d4f26a6576002633b4761d8981f8b96485865afa101f53ecfdcdfc570909f5",
+      "bytes": 1073
+    },
+    "r/elements/streaming-text.json": {
+      "sha256": "998b68d88efbf0de5afc8a5b40c9351ab751c03045cf42b9e81104d4ec170281",
+      "bytes": 1081
+    },
+    "r/elements/task-rows.json": {
+      "sha256": "8d04f54388cc3607cd58977c6e359575aeb807cbbb16dfdb0c6d6ea2eef20d83",
+      "bytes": 1061
+    },
+    "r/elements/thinking.json": {
+      "sha256": "c659bf258710f89942566d528e0ffae76cc74c6e42dc16949de814ca866c6ee0",
+      "bytes": 1056
+    },
+    "r/elements/tool-chips.json": {
+      "sha256": "da9bcea918b84ff02d3f251776f24abde8a9b40dac8202b1802740ab5090ba88",
+      "bytes": 1064
     },
     "r/empty-state.json": {
       "sha256": "b59c446a01568e9f87e1c61649a31a7cf3d410440df2f04f5a9aadbc214e77c0",

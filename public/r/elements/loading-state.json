@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "loading-state",
+  "title": "Loading State",
+  "author": "Shane Levine; adapted by Scott E. Telling",
+  "description": "A calm, specific progress surface that shows what is happening and lets people pause or advance it.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+  ],
+  "files": [
+    {
+      "path": "registry/elements/beautiful-ui/loading-state.tsx",
+      "content": "\"use client\"\nimport { BeautifulUIElement } from \"./beautiful-ui-elements\"\nexport function LoadingState() { return <BeautifulUIElement kind=\"loading-state\" /> }\n",
+      "type": "registry:ui",
+      "target": "components/ui/loading-state.tsx"
+    }
+  ],
+  "docs": "Import Progressive Loading State from the generated loading-state file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support.",
+  "categories": [
+    "Agent Interfaces",
+    "Interactive",
+    "Beautiful UI"
+  ],
+  "type": "registry:ui"
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "insight-cards",
+  "title": "Insight Cards",
+  "author": "Shane Levine; adapted by Scott E. Telling",
+  "description": "A paged insight surface that joins a clear conclusion to a compact chart.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/elements/beautiful-ui-foundation.json"
+  ],
+  "files": [
+    {
+      "path": "registry/elements/beautiful-ui/insight-cards.tsx",
+      "content": "\"use client\"\nimport { BeautifulUIElement } from \"./beautiful-ui-elements\"\nexport function InsightCards() { return <BeautifulUIElement kind=\"insight-cards\" /> }\n",
+      "type": "registry:ui",
+      "target": "components/ui/insight-cards.tsx"
+    }
+  ],
+  "docs": "Import Paged Agent Insights from the generated insight-cards file. Adapt visual values to the target system, but preserve the working interaction, visible focus, responsive behavior, and reduced-motion support.",
+  "categories": [
+    "Data",
+    "Interactive",
+    "Beautiful UI"
+  ],
+  "type": "registry:ui"
+}

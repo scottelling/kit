@@ -69,6 +69,7 @@ When Scott says "make this standard" or "always do this from now on": append it 
 - Animation Studio is an honest dark-authority system. Default and dark installation contexts intentionally receive the same inspected source foundation; no light direction is invented.
 - Published Theme Workshop copies must install cleanly into an unrelated shadcn project and merge both light and dark foundations.
 - `/elements` keeps one counted inventory, a live tactile playground, exact visible source, an English project prompt, and a separate public registry in sync.
+- `/elements` currently contains Knight Rider plus nineteen Beautiful UI adaptations. Each adapted element must remain searchable, interactive, independently installable, credited to Shane Levine under MIT, and automatically carry the shared foundation and license from the public Kit URL.
 - A Signature Effect may use a purpose-bound local effect only inside its isolated frame. It must start sound muted, pause offscreen, become fully static for reduced motion, preserve 44px controls, and leave Purple Rain chrome untouched.
 
 ## Kit intake
