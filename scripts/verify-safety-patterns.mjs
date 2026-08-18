@@ -36,16 +36,17 @@ requireTerms("alert-dialog", alertDialog, ["AlertDialogPrimitive", "AlertDialogT
 if (alertDialog.includes("<details") || alertDialog.includes('ComponentPropsWithoutRef<"details">')) failures.push("alert-dialog still uses a details disclosure instead of a modal primitive")
 
 const visibility = sources.get("visibility-publication-control") ?? ""
-requireTerms("visibility-publication-control", visibility, ["private", "draft", "unlisted", "public", "inherited", "aria-live", "sensitive", "Preview", "min-h-11"])
+requireTerms("visibility-publication-control", visibility, ["private", "draft", "unlisted", "public", "inherited", "locallyOverridden", "data-inheritance", "showModal", "aria-live", "sensitive", "Preview", "min-h-11"])
 
 const evidence = sources.get("evidence-source-block") ?? ""
 requireTerms("evidence-source-block", evidence, ["self-reported", "conflicting", "under-review", "<time", "<details", "Sources", "limitations", "min-h-11"])
 
 const share = sources.get("share-qr-panel") ?? ""
-requireTerms("share-qr-panel", share, ["navigator.clipboard", "navigator.share", "Share link", "qrCode", "draft", "revoked", "offline", "aria-live", "min-h-11"])
+requireTerms("share-qr-panel", share, ["navigator.clipboard", "navigator.share", "Share link", "qrCode", "qrState", "data-qr-state", "onCopyLink", "onRetryQr", "draft", "revoked", "offline", "aria-live", "min-h-11"])
+if (share.includes("onCopy?:")) failures.push("share-qr-panel reintroduces the native onCopy callback collision")
 
 const destructive = sources.get("destructive-action") ?? ""
-requireTerms("destructive-action", destructive, ["AlertDialogPrimitive", "confirmationText", "autoFocus", "irreversible", "onUndo", "undo-error", "aria-live", "aria-live=\"assertive\"", "min-h-11"])
+requireTerms("destructive-action", destructive, ["AlertDialogPrimitive", "confirmationText", "autoFocus", "irreversible", "onUndo", "undo-error", "aria-live", "aria-live=\"assertive\"", "min-h-11", "h-dvh", "sm:h-auto"])
 if (destructive.includes("<AlertDialogPrimitive.Trigger asChild")) failures.push("destructive-action uses a trigger shape that shadcn can rewrite into nested buttons")
 
 for (const [name, source] of sources) {
@@ -53,6 +54,15 @@ for (const [name, source] of sources) {
     if (source.includes(productTerm)) failures.push(`${name} leaks product-owned language: ${productTerm}`)
   }
 }
+
+const consumerContract = await readFile(path.join(root, "scripts", "fixtures", "safety-consumer-contract.tsx"), "utf8")
+requireTerms("safety consumer type contract", consumerContract, ["locallyOverridden", "qrState=\"error\"", "onCopyLink", "onRetryQr"])
+
+const showroom = await readFile(path.join(root, "app", "kit", "component-preview.tsx"), "utf8")
+requireTerms("safety state explorer", showroom, ["Visibility state", "Evidence state", "Sharing state", "Destructive state", "Confirmation state", "QR failed", "Irreversible"])
+
+const showroomShell = await readFile(path.join(root, "app", "kit", "kit-experience.tsx"), "utf8")
+if (!showroomShell.includes("event.target === event.currentTarget) setSelected(null)")) failures.push("nested safety dialogs can close the showroom preview")
 
 for (const [system, registryPath, tokenUrl, publicDir] of registries) {
   const registry = JSON.parse(await readFile(path.join(root, registryPath), "utf8"))

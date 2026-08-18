@@ -41,6 +41,7 @@ curl -fsS https://kit.scottelling.com/r/animation/window-shell.json
 curl -fsS https://kit.scottelling.com/r/system-catalog.json
 curl -fsS https://kit.scottelling.com/r/icon-catalog.json
 curl -fsS https://kit.scottelling.com/r/adoption-contract.json
+curl -fsS https://kit.scottelling.com/r/adoption-assessment.json
 curl -fsS https://kit.scottelling.com/r/tokens.css
 curl -fsS https://kit.scottelling.com/r/design-tokens.json
 curl -fsS https://kit.scottelling.com/r/jade/tokens.css

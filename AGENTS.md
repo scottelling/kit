@@ -38,6 +38,7 @@ When Scott says "make this standard" or "always do this from now on": append it 
 - Kit-swap workspace: `https://kit.scottelling.com/studio/swap`
 - Shared system catalog: `https://kit.scottelling.com/r/system-catalog.json`
 - Public swap contract: `https://kit.scottelling.com/r/adoption-contract.json`
+- Public Kit-fit assessment: `https://kit.scottelling.com/r/adoption-assessment.json`
 - KIT format spec: `SPEC.md` (source of truth for tokens, pieces, manifest, drift)
 - Framework-free tokens: `https://kit.scottelling.com/r/tokens.css` (+ `/r/jade/`, `/r/os/`, `/r/animation/`, `/r/shadow/` tokens.css and design-tokens.json)
 - Vanilla dialect: `https://kit.scottelling.com/vanilla` (demo) + `https://kit.scottelling.com/r/vanilla/registry.json`

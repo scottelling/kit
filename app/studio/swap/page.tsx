@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 
 import contract from "@/lib/adoption-contract.json"
+import assessment from "@/lib/adoption-assessment.json"
 import catalog from "@/lib/system-catalog.json"
 
 import { SwapStudio } from "./swap-studio"
@@ -12,5 +13,5 @@ export const metadata: Metadata = {
 }
 
 export default function SwapStudioPage() {
-  return <SwapStudio contract={contract} systems={catalog.systems} layers={catalog.layers} />
+  return <SwapStudio contract={contract} assessment={assessment} systems={catalog.systems} layers={catalog.layers} />
 }

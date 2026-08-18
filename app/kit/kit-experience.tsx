@@ -217,7 +217,7 @@ export function KitExperience({ library, system = "purple-rain" }: KitExperience
       <dialog
         className="kit-preview-dialog"
         ref={dialogRef}
-        onClose={() => setSelected(null)}
+        onClose={(event) => { if (event.target === event.currentTarget) setSelected(null) }}
         onClick={(event) => { if (event.target === event.currentTarget) closePreview() }}
       >
         {selected ? (

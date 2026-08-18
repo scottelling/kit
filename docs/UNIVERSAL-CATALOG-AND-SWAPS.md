@@ -41,6 +41,11 @@ product supplies real permissions, policies, data, URLs, QR generation,
 destructive operations, and undo rules. A visual-system swap may restyle these
 patterns but may not rewrite those product decisions.
 
+Expanded showroom previews make the consequential states tactile instead of
+hiding them in documentation. On phones, visibility is one compact status row
+until someone chooses to edit it, destructive confirmation owns the full
+screen, and a broken QR is shown independently from a link that still works.
+
 ## Approved icons
 
 - Lucide is the primary interface family for familiar controls, actions, and navigation.
@@ -56,7 +61,9 @@ The font library keeps approved families and tested role pairings visible at `/s
 
 ## Swap contract
 
-Every kit swap follows the public contract at `/r/adoption-contract.json` and the visual workspace at `/studio/swap`:
+Every kit swap follows the public contract at `/r/adoption-contract.json`, the
+Kit fit classifications at `/r/adoption-assessment.json`, and the visual
+workspace at `/studio/swap`:
 
 1. Protect the current product and capture the same populated screens.
 2. Repair overlap, overflow, touch, keyboard, and scroll problems before appearance changes hide them.
@@ -64,5 +71,11 @@ Every kit swap follows the public contract at `/r/adoption-contract.json` and th
 4. Apply the selected kit's foundations and component expression without importing unrelated layouts.
 5. Prove the same screens, actions, states, and widths before and after.
 6. Keep one isolated appearance switch so the previous visual system can be restored without undoing product work.
+
+Before approval, each real product journey is classified as already covered,
+a composition of existing pieces, a reusable shared gap, or product-owned.
+Unclassified journeys and reusable gaps block adoption approval. This is only
+the design-system fit check; Checklist remains the full-project launch
+readiness authority.
 
 Cabinet remains outside this repository. No Cabinet source is changed while Kit prepares or proves this contract.

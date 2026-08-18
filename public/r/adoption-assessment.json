@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "purpose": "Decide how each real product journey relates to Kit before adopting or swapping a visual system.",
+  "boundary": "This assessment covers design-system fit only. Checklist remains the authority for full-project launch readiness.",
+  "classifications": [
+    {
+      "id": "existing",
+      "label": "Already covered",
+      "description": "Use an existing Kit piece without changing the product journey.",
+      "action": "Map the journey to the existing piece and prove the populated state."
+    },
+    {
+      "id": "composition",
+      "label": "Compose pieces",
+      "description": "Join existing pieces into this product's own screen or workflow.",
+      "action": "Keep the composition in the product and install only the pieces it uses."
+    },
+    {
+      "id": "shared-gap",
+      "label": "Add to Kit",
+      "description": "Promote a reusable cross-product need once so every complete kit gains it.",
+      "action": "Pause adoption, build the generic piece in Kit, prove every complete system, then resume."
+    },
+    {
+      "id": "product-owned",
+      "label": "Keep in product",
+      "description": "The route, data, policy, content, or business behavior belongs only to this product.",
+      "action": "Protect it from kit swaps and pass only visual roles into it."
+    }
+  ],
+  "approval": [
+    "Every important product journey is classified.",
+    "Every shared gap is resolved in all complete kits before adoption.",
+    "Product-owned rules and layouts remain outside Kit.",
+    "The same populated journeys are proved before and after adoption.",
+    "The previous appearance remains recoverable without undoing product work."
+  ]
+}

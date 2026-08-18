@@ -27,9 +27,9 @@ import { SettingsSheet } from "@/registry/os/patterns/settings-sheet"
 import { SplitInspector, SplitNavigation, SplitPrimary, SplitView } from "@/registry/os/patterns/split-view"
 import { WidgetShell } from "@/registry/os/patterns/widget-shell"
 import { WindowContent, WindowShell, WindowStatus, WindowTitleBar } from "@/registry/os/patterns/window-shell"
-import { EvidenceSourceBlock } from "@/registry/purple-rain/safety/evidence-source-block"
-import { ShareQrPanel } from "@/registry/purple-rain/safety/share-qr-panel"
-import { VisibilityPublicationControl, type VisibilityValue } from "@/registry/purple-rain/safety/visibility-publication-control"
+import { EvidenceSourceBlock, type EvidenceState, type EvidenceStatus } from "@/registry/purple-rain/safety/evidence-source-block"
+import { ShareQrPanel, type ShareQrCodeState, type ShareQrState } from "@/registry/purple-rain/safety/share-qr-panel"
+import { VisibilityPublicationControl, type VisibilitySaveState, type VisibilityValue } from "@/registry/purple-rain/safety/visibility-publication-control"
 
 import { AnimationPatternPreview } from "./animation/animation-pattern-preview"
 
@@ -53,8 +53,44 @@ const sampleRows = [
   ["Launch page", "Sam", "Review"],
   ["Email copy", "Elena", "Draft"],
 ]
-const visibilityValues: VisibilityValue[] = ["private", "draft", "unlisted", "public", "inherited"]
 const qrCells = [1,1,1,1,1,0,1,0,1,1,1,1,1,1,0,0,0,1,0,1,0,0,0,1,1,1,0,1,1,0,1,1,1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,1,1,0,1,0,0,0,1,0,1,1,1,1,1,0,1,1]
+const visibilityScenarios: Array<{ label: string; value: VisibilityValue; saveState: VisibilitySaveState; sensitive?: boolean; locallyOverridden?: boolean; disabled?: boolean }> = [
+  { label: "Private", value: "private", saveState: "saved" },
+  { label: "Inherited", value: "inherited", saveState: "idle" },
+  { label: "Override", value: "unlisted", saveState: "saved", locallyOverridden: true },
+  { label: "Saving", value: "public", saveState: "saving" },
+  { label: "Failed", value: "draft", saveState: "error" },
+  { label: "Sensitive", value: "private", saveState: "saved", sensitive: true },
+  { label: "Disabled", value: "private", saveState: "idle", disabled: true },
+]
+const evidenceScenarios: Array<{ label: string; status: EvidenceStatus; state: EvidenceState; sources: boolean }> = [
+  { label: "Verified", status: "verified", state: "ready", sources: true },
+  { label: "Self-reported", status: "self-reported", state: "ready", sources: true },
+  { label: "Conflict", status: "conflicting", state: "ready", sources: true },
+  { label: "Stale", status: "stale", state: "ready", sources: true },
+  { label: "Loading", status: "under-review", state: "loading", sources: false },
+  { label: "Failed", status: "unknown", state: "error", sources: false },
+  { label: "No sources", status: "unknown", state: "ready", sources: false },
+]
+const shareScenarios: Array<{ label: string; state: ShareQrState; qrState: ShareQrCodeState }> = [
+  { label: "Ready", state: "ready", qrState: "ready" },
+  { label: "Draft", state: "draft", qrState: "unavailable" },
+  { label: "Link loading", state: "loading", qrState: "loading" },
+  { label: "QR loading", state: "ready", qrState: "loading" },
+  { label: "QR failed", state: "ready", qrState: "error" },
+  { label: "Revoked", state: "revoked", qrState: "revoked" },
+  { label: "Offline", state: "offline", qrState: "offline" },
+]
+const destructiveScenarios = ["Ready", "Confirm", "Working", "Failed", "Completed", "Irreversible"]
+
+function PreviewStateRail({ label, options, active, onSelect }: { label: string; options: string[]; active: number; onSelect: (index: number) => void }) {
+  return (
+    <div className="mini-state-explorer">
+      <strong>{label}</strong>
+      <div role="group" aria-label={label}>{options.map((option, index) => <button key={option} type="button" aria-pressed={active === index} onClick={() => onSelect(index)}>{option}</button>)}</div>
+    </div>
+  )
+}
 
 function handlePreviewDialogKey(event: KeyboardEvent<HTMLElement>, close: () => void) {
   if (event.key === "Escape") {
@@ -81,6 +117,7 @@ export function ComponentPreview({ item, expanded = false, system = "purple-rain
   const [on, setOn] = useState(true)
   const [open, setOpen] = useState(false)
   const [copied, setCopied] = useState(false)
+  const [visibility, setVisibility] = useState<VisibilityValue>("private")
   const systemName = system === "jade" ? "JADE" : system === "os" ? "OS" : system === "animation" ? "Animation Studio" : system === "vanilla" ? "Vanilla" : "Purple Rain"
   const [text, setText] = useState(systemName)
   const [amount, setAmount] = useState(64)
@@ -102,6 +139,7 @@ export function ComponentPreview({ item, expanded = false, system = "purple-rain
   }
 
   let sample: ReactNode
+  let stateRail: ReactNode = null
 
   switch (preview) {
     case "color":
@@ -284,6 +322,7 @@ export function ComponentPreview({ item, expanded = false, system = "purple-rain
       break
     case "alert-dialog":
       sample = <div className="mini-overlay-demo is-alert-dialog">{open ? <div role="alertdialog" aria-modal="true" aria-labelledby={`alert-title-${name}`} aria-describedby={`alert-description-${name}`} onKeyDown={(event) => handlePreviewDialogKey(event, () => setOpen(false))}><strong id={`alert-title-${name}`}>Remove this item?</strong><p id={`alert-description-${name}`}>This cannot be undone. Cancel is the safe initial choice.</p><div className="mini-choice-row"><button type="button" autoFocus onClick={() => setOpen(false)}>Cancel</button><button type="button" onClick={() => { setOpen(false); setCopied(true) }}>Remove</button></div></div> : <button type="button" onClick={() => setOpen(true)}>{copied ? "Item removed" : "Remove item"}</button>}</div>
+      stateRail = expanded ? <PreviewStateRail label="Confirmation state" options={["Closed", "Open", "Completed"]} active={copied ? 2 : open ? 1 : 0} onSelect={(index) => { setOpen(index === 1); setCopied(index === 2) }} /> : null
       break
 
     case "badge":
@@ -431,16 +470,20 @@ export function ComponentPreview({ item, expanded = false, system = "purple-rain
       sample = <article className="mini-document-system"><header><span>DESIGN STANDARD</span><strong>Instant legibility</strong><p>The current object and next action remain obvious.</p></header><section><b>01</b><p>Use solid surfaces and clear hierarchy. Keep motion purposeful.</p></section></article>
       break
     case "visibility-control":
-      sample = <VisibilityPublicationControl value={visibilityValues[active % visibilityValues.length]} onValueChange={(value) => setActive(visibilityValues.indexOf(value))} saveState={on ? "saved" : "error"} sensitive destination="example.com/item" onPreview={() => setOn((value) => !value)} />
+      { const scenario = visibilityScenarios[active % visibilityScenarios.length]; sample = <VisibilityPublicationControl value={active === 0 ? visibility : scenario.value} onValueChange={setVisibility} saveState={scenario.saveState} sensitive={scenario.sensitive} locallyOverridden={scenario.locallyOverridden} disabled={scenario.disabled} destination="example.com/item" onPreview={() => setOn((value) => !value)} /> }
+      stateRail = expanded ? <PreviewStateRail label="Visibility state" options={visibilityScenarios.map((scenario) => scenario.label)} active={active % visibilityScenarios.length} onSelect={setActive} /> : null
       break
     case "evidence-source":
-      sample = <EvidenceSourceBlock status={on ? "verified" : "conflicting"} summary="The source supports the object identity. Personal outcomes remain separate." reviewedAt="2026-08-17" sources={[{ label: "Primary source", href: "#evidence", detail: "Reviewed by the product team." }]} limitations={["This does not establish personal suitability."]} onClick={() => setOn((value) => !value)} />
+      { const scenario = evidenceScenarios[active % evidenceScenarios.length]; sample = <EvidenceSourceBlock status={scenario.status} state={scenario.state} summary="The available evidence and its limits stay understandable together." reviewedAt="2026-08-17" sources={scenario.sources ? [{ label: "Primary source", href: "#evidence", detail: "Reviewed by the product team." }] : []} limitations={scenario.state === "ready" ? ["This does not establish personal suitability."] : []} /> }
+      stateRail = expanded ? <PreviewStateRail label="Evidence state" options={evidenceScenarios.map((scenario) => scenario.label)} active={active % evidenceScenarios.length} onSelect={setActive} /> : null
       break
     case "share-qr":
-      sample = <ShareQrPanel url="https://example.com/p/mara" title="Share this profile" onCopy={() => setCopied(true)} qrCode={<span className="grid aspect-square w-full grid-cols-8 gap-px bg-background p-1" aria-hidden="true">{qrCells.map((cell, index) => <i key={index} className={cell ? "bg-foreground" : "bg-background"} />)}</span>} />
+      { const scenario = shareScenarios[active % shareScenarios.length]; sample = <ShareQrPanel url="https://example.com/item" title="Share this item" state={scenario.state} qrState={scenario.qrState} onCopyLink={() => setCopied(true)} onRetry={() => setActive(0)} onRetryQr={() => setActive(0)} qrCode={<span className="grid aspect-square w-full grid-cols-8 gap-px bg-background p-1" aria-hidden="true">{qrCells.map((cell, index) => <i key={index} className={cell ? "bg-foreground" : "bg-background"} />)}</span>} /> }
+      stateRail = expanded ? <PreviewStateRail label="Sharing state" options={shareScenarios.map((scenario) => scenario.label)} active={active % shareScenarios.length} onSelect={setActive} /> : null
       break
     case "destructive-recovery":
-      sample = <div className="mini-card"><span>Recovery</span><strong>{copied ? "Item removed" : "Remove this item"}</strong><p>{copied ? "Undo remains available for this action." : "The consequence appears before confirmation."}</p>{copied ? <button type="button" onClick={() => setCopied(false)}>Undo</button> : <button type="button" onClick={() => setOpen(true)}>Review removal</button>}{open ? <div role="alertdialog" aria-modal="true" aria-label="Confirm removal" onKeyDown={(event) => handlePreviewDialogKey(event, () => setOpen(false))}><p>Type REMOVE before continuing.</p><input aria-label="Confirmation text" value={text} onChange={(event) => setText(event.target.value)} /><div className="mini-choice-row"><button type="button" autoFocus onClick={() => setOpen(false)}>Cancel</button><button type="button" disabled={text !== "REMOVE"} onClick={() => { setOpen(false); setCopied(true) }}>Remove</button></div></div> : null}</div>
+      sample = <div className="mini-card"><span>{active === 5 ? "Irreversible" : "Recovery"}</span><strong>{active === 4 ? "Item removed" : "Remove this item"}</strong><p>{active === 2 ? "Working… Do not close this window." : active === 3 ? "The action did not finish. Nothing else changed." : active === 4 ? "Undo remains available for this action." : active === 5 ? "This action cannot be undone." : "The consequence appears before confirmation."}</p>{active === 0 ? <button type="button" onClick={() => setActive(1)}>Review removal</button> : active === 4 ? <button type="button" onClick={() => setActive(0)}>Undo</button> : active === 3 ? <button type="button" onClick={() => setActive(1)}>Try again</button> : null}{active === 1 || active === 2 || active === 5 ? <div role="alertdialog" aria-modal="true" aria-label="Confirm removal" onKeyDown={(event) => handlePreviewDialogKey(event, () => setActive(0))}><p>{active === 5 ? "This action is irreversible." : "Type REMOVE before continuing."}</p>{active !== 5 ? <input aria-label="Confirmation text" value={text} onChange={(event) => setText(event.target.value)} disabled={active === 2} /> : null}<div className="mini-choice-row"><button type="button" autoFocus disabled={active === 2} onClick={() => setActive(0)}>Cancel</button><button type="button" disabled={active === 2 || (active !== 5 && text !== "REMOVE")} onClick={() => setActive(4)}>{active === 2 ? "Working…" : "Remove"}</button></div></div> : null}</div>
+      stateRail = expanded ? <PreviewStateRail label="Destructive state" options={destructiveScenarios} active={active % destructiveScenarios.length} onSelect={(index) => { setActive(index); setText(systemName) }} /> : null
       break
     case "desktop-shell":
       sample = <DesktopShell className="min-h-64"><DesktopMenuArea><strong>Workspace</strong><span className="text-xs text-muted-foreground">Saved</span></DesktopMenuArea><DesktopWorkspace><WindowShell className="min-h-44"><WindowTitleBar title="Launch room" /><WindowContent><strong>Current decision</strong><p className="mt-2 text-sm text-muted-foreground">Approve the release direction.</p></WindowContent><WindowStatus><span>Ready</span><span>3 online</span></WindowStatus></WindowShell></DesktopWorkspace><DesktopDockArea><Dock /></DesktopDockArea></DesktopShell>
@@ -473,5 +516,5 @@ export function ComponentPreview({ item, expanded = false, system = "purple-rain
       sample = <div className="mini-fallback">{title}</div>
   }
 
-  return <div className={`mini-preview${sizeClass}`}>{sample}</div>
+  return <div className={`mini-preview${sizeClass}`}>{stateRail}{sample}</div>
 }

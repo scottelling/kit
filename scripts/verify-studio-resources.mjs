@@ -6,6 +6,7 @@ const failures = []
 const icons = JSON.parse(await readFile(path.join(root, "lib", "icon-catalog.json"), "utf8"))
 const fonts = JSON.parse(await readFile(path.join(root, "lib", "font-library.json"), "utf8"))
 const adoption = JSON.parse(await readFile(path.join(root, "lib", "adoption-contract.json"), "utf8"))
+const assessment = JSON.parse(await readFile(path.join(root, "lib", "adoption-assessment.json"), "utf8"))
 const catalog = JSON.parse(await readFile(path.join(root, "lib", "system-catalog.json"), "utf8"))
 const universal = JSON.parse(await readFile(path.join(root, "lib", "universal-library.json"), "utf8"))
 const manifests = [
@@ -48,6 +49,10 @@ for (const requirement of ["preserve", "change", "repairBeforeSwap", "proof", "r
   if (!adoption[requirement] || Object.keys(adoption[requirement]).length === 0) failures.push(`adoption contract is missing ${requirement}`)
 }
 
+if (assessment.boundary?.includes("Checklist") !== true) failures.push("the Kit fit check does not preserve Checklist as the launch-readiness authority")
+if (JSON.stringify(assessment.classifications?.map((item) => item.id)) !== JSON.stringify(["existing", "composition", "shared-gap", "product-owned"])) failures.push("the Kit fit check does not expose the four adoption classifications")
+if (assessment.approval?.length < 5) failures.push("the Kit fit check approval contract is incomplete")
+
 if (catalog.items.length !== universal.length) failures.push("system catalog has drifted from the universal library")
 if (!catalog.layers.some((layer) => layer.id === "specialty" && layer.count > 0)) failures.push("system catalog does not preserve specialist patterns")
 
@@ -66,6 +71,7 @@ for (const [source, emitted] of [
   ["lib/icon-catalog.json", "public/r/icon-catalog.json"],
   ["lib/system-catalog.json", "public/r/system-catalog.json"],
   ["lib/adoption-contract.json", "public/r/adoption-contract.json"],
+  ["lib/adoption-assessment.json", "public/r/adoption-assessment.json"],
 ]) {
   if (await readFile(path.join(root, source), "utf8") !== await readFile(path.join(root, emitted), "utf8")) failures.push(`${emitted} is stale`)
 }
@@ -74,9 +80,12 @@ for (const page of ["app/studio/icons/page.tsx", "app/studio/fonts/page.tsx", "a
   try { await stat(path.join(root, page)) } catch { failures.push(`${page} is missing`) }
 }
 
+const swapStudio = await readFile(path.join(root, "app", "studio", "swap", "swap-studio.tsx"), "utf8")
+for (const term of ["Kit fit check", "Already covered", "Compose pieces", "Add to Kit", "Keep in product"]) if (!swapStudio.includes(term) && !JSON.stringify(assessment).includes(term)) failures.push(`Kit fit check is missing ${term}`)
+
 if (failures.length) {
   console.error(failures.map((failure) => `- ${failure}`).join("\n"))
   process.exit(1)
 }
 
-console.log(`Verified one ${universal.length}-piece catalog across every kit, ${icons.families.reduce((sum, family) => sum + family.count, 0)} browseable icons, ${fonts.families.length} approved font families, and one reversible swap contract.`)
+console.log(`Verified one ${universal.length}-piece catalog across every kit, ${icons.families.reduce((sum, family) => sum + family.count, 0)} browseable icons, ${fonts.families.length} approved font families, one Kit-fit assessment, and one reversible swap contract.`)

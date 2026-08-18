@@ -42,3 +42,26 @@ the shared library.
    phone, tablet, and desktop widths.
 5. Keep the kit choice isolated so Vanilla can later be replaced without
    rewriting the product.
+
+## Glohhh adoption finding — 2026-08-17
+
+The first real Glohhh TypeScript integration found a non-blocking shared type
+defect in `share-qr-panel`. `ShareQrPanelProps` extends the native section
+props while also defining a product callback named `onCopy`. That name
+collides with the native clipboard-event handler, so a consumer-supplied
+`(url: string) => void` callback is inferred as also needing to accept a
+`ClipboardEvent`.
+
+The shared component's built-in `navigator.clipboard.writeText` path remains
+usable, so Glohhh does not need a local substitute and can continue adopting
+the published piece without changing it. Kit should rename the product
+callback (for example, `onCopyLink`) or omit native `onCopy` from the inherited
+section props, then re-run the downstream TypeScript install proof.
+
+### Kit resolution
+
+Kit now uses the unambiguous `onCopyLink` callback and explicitly excludes the
+browser's native `onCopy` event from the component contract. A compile-only
+consumer fixture permanently checks that an ordinary `(url: string) => void`
+callback is accepted. Final adoption approval still depends on the live
+downstream installation proof recorded with this release.

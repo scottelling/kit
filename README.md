@@ -31,7 +31,7 @@ kit: showroom at `/kit/space`, installable from `/r/space/registry.json`.
 
 Vanilla, Purple Rain, JADE, OS, and Animation Studio each expose the same 179-piece catalog. The 142 everyday pieces and 37 specialist patterns are all available, but each is installed individually so unrelated layouts never arrive by accident.
 
-The everyday catalog includes shared safety patterns for visibility and publication, evidence and sources, share and QR handoff, destructive actions with recovery, and true modal confirmation. Kit owns their interaction quality and accessibility. Each product still owns its permissions, publishing rules, evidence policy, QR generation, deletion behavior, and recovery window.
+The everyday catalog includes shared safety patterns for visibility and publication, evidence and sources, share and QR handoff, destructive actions with recovery, and true modal confirmation. Kit owns their interaction quality and accessibility, including focused phone behavior and tactile state explorers. Each product still owns its permissions, publishing rules, evidence policy, QR generation, deletion behavior, and recovery window.
 
 Vanilla is the neutral starting system for a new project. It includes a complete app, landing, shop, and content foundation, then swaps to any other complete kit by changing only the shared visual roles. The product's pages, content, data, and behavior remain intact.
 
@@ -41,7 +41,7 @@ OS adds the full shared component contract plus the desktop, window, menu bar, d
 
 Animation Studio adds the full shared component contract plus 28 creative-workspace structures for storyboards, canvas work, inspectors, motion, timelines, code, templates, delivery, and recovery. It preserves the source product's canonical dark foundation without inventing a light theme under `https://kit.scottelling.com/r/animation/`.
 
-The Studio includes a searchable icon library at `https://kit.scottelling.com/studio/icons`, a tactile font library at `https://kit.scottelling.com/studio/fonts`, and a plain-language kit-swap workspace at `https://kit.scottelling.com/studio/swap`.
+The Studio includes a searchable icon library at `https://kit.scottelling.com/studio/icons`, a tactile font library at `https://kit.scottelling.com/studio/fonts`, and a plain-language kit-swap workspace at `https://kit.scottelling.com/studio/swap`. The swap workspace checks every real product journey before approval and separates reusable Kit gaps from compositions and product-owned work.
 
 Shadow adds six exact stacked depths, integrated hairline edges, independent tinting, and an agent rule for elevated surfaces under `https://kit.scottelling.com/r/shadow/`. It is a foundation kit that strengthens Purple Rain or JADE without replacing either system.
 

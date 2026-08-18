@@ -93,7 +93,7 @@ export function DestructiveAction({
           data-action-state={state}
           onEscapeKeyDown={(event) => { if (busy) event.preventDefault() }}
           className={cn(
-            "fixed inset-x-0 bottom-0 z-50 grid max-h-[calc(100dvh-1rem)] gap-5 overflow-y-auto rounded-t-[var(--radius-sheet)] bg-card p-6 text-card-foreground shadow-[var(--shadow-panel)] outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:slide-out-to-bottom-4 data-[state=open]:slide-in-from-bottom-4 [animation-duration:var(--dur-long)] motion-reduce:animate-none sm:bottom-auto sm:left-1/2 sm:top-1/2 sm:w-[calc(100%-2rem)] sm:max-w-lg sm:-translate-x-1/2 sm:-translate-y-1/2 sm:rounded-[var(--radius-sheet)] sm:data-[state=closed]:fade-out-0 sm:data-[state=closed]:zoom-out-95 sm:data-[state=open]:fade-in-0 sm:data-[state=open]:zoom-in-95",
+            "fixed inset-0 z-50 grid h-dvh max-h-dvh content-start gap-5 overflow-y-auto rounded-none bg-card p-5 text-card-foreground shadow-[var(--shadow-panel)] outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:slide-out-to-bottom-4 data-[state=open]:slide-in-from-bottom-4 [animation-duration:var(--dur-long)] motion-reduce:animate-none sm:inset-auto sm:left-1/2 sm:top-1/2 sm:h-auto sm:max-h-[calc(100dvh-2rem)] sm:w-[calc(100%-2rem)] sm:max-w-lg sm:-translate-x-1/2 sm:-translate-y-1/2 sm:rounded-[var(--radius-sheet)] sm:p-6 sm:data-[state=closed]:fade-out-0 sm:data-[state=closed]:zoom-out-95 sm:data-[state=open]:fade-in-0 sm:data-[state=open]:zoom-in-95",
             className,
           )}
         >

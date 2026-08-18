@@ -29,6 +29,7 @@ export type VisibilityPublicationControlProps = Omit<React.ComponentPropsWithout
   saveState?: VisibilitySaveState
   destination?: string
   sensitive?: boolean
+  locallyOverridden?: boolean
   disabled?: boolean
   onPreview?: () => void
 }
@@ -48,12 +49,15 @@ export function VisibilityPublicationControl({
   saveState = "idle",
   destination,
   sensitive = false,
+  locallyOverridden = false,
   disabled = false,
   onPreview,
   className,
   ...props
 }: VisibilityPublicationControlProps) {
   const [localValue, setLocalValue] = React.useState<VisibilityValue>(defaultValue)
+  const [mobileOpen, setMobileOpen] = React.useState(false)
+  const dialogRef = React.useRef<HTMLDialogElement>(null)
   const groupName = React.useId()
   const selected = value ?? localValue
   const selectedOption = options.find((option) => option.value === selected)
@@ -63,29 +67,19 @@ export function VisibilityPublicationControl({
     onValueChange?.(next)
   }
 
-  return (
-    <section
-      data-slot="visibility-publication-control"
-      data-state={saveState}
-      className={cn("grid gap-4 rounded-[var(--radius-card)] border border-border bg-card p-4 text-card-foreground", className)}
-      {...props}
-    >
-      <header className="flex flex-wrap items-start justify-between gap-3">
-        <div className="grid gap-1">
-          <strong className="text-base">Visibility</strong>
-          <span className="text-sm text-muted-foreground">{selectedOption?.description}</span>
-        </div>
-        <span className="rounded-full bg-secondary px-3 py-1 text-xs font-semibold text-secondary-foreground">
-          {selectedOption?.label ?? "Choose"}
-        </span>
-      </header>
+  function openChoices() {
+    dialogRef.current?.showModal()
+    setMobileOpen(true)
+    window.requestAnimationFrame(() => dialogRef.current?.querySelector<HTMLInputElement>("input:checked")?.focus())
+  }
 
-      {sensitive ? (
-        <p role="note" className="m-0 rounded-[var(--radius-control)] border border-border bg-muted p-3 text-sm text-muted-foreground">
-          This item may contain sensitive information. Review the public preview before sharing it.
-        </p>
-      ) : null}
+  function closeChoices() {
+    dialogRef.current?.close()
+    setMobileOpen(false)
+  }
 
+  function renderOptions(context: "phone" | "desktop") {
+    return (
       <fieldset disabled={disabled || saveState === "saving"} className="grid gap-2 sm:grid-cols-2">
         <legend className="sr-only">Choose visibility</legend>
         {options.map((option) => (
@@ -95,7 +89,7 @@ export function VisibilityPublicationControl({
           >
             <input
               type="radio"
-              name={groupName}
+              name={`${groupName}-${context}`}
               value={option.value}
               checked={selected === option.value}
               onChange={() => choose(option.value)}
@@ -108,25 +102,64 @@ export function VisibilityPublicationControl({
           </label>
         ))}
       </fieldset>
+    )
+  }
 
-      <footer className="flex flex-col gap-3 border-t border-border pt-3 sm:flex-row sm:items-center sm:justify-between">
-        <div className="grid gap-1 text-sm">
-          <span aria-live="polite" className={cn(saveState === "error" ? "text-destructive" : "text-muted-foreground")}>
-            {saveMessages[saveState]}
-          </span>
-          {destination ? <span className="break-all text-xs text-muted-foreground">Destination: {destination}</span> : null}
+  function renderStatus() {
+    return (
+      <div className="grid gap-1 text-sm">
+        <span aria-live="polite" className={cn(saveState === "error" ? "text-destructive" : "text-muted-foreground")}>
+          {saveMessages[saveState]}
+        </span>
+        {destination ? <span className="break-all text-xs text-muted-foreground">Destination: {destination}</span> : null}
+      </div>
+    )
+  }
+
+  return (
+    <section
+      data-slot="visibility-publication-control"
+      data-state={saveState}
+      data-inheritance={selected === "inherited" ? "inherited" : locallyOverridden ? "overridden" : "local"}
+      className={cn("grid gap-3 text-card-foreground", className)}
+      {...props}
+    >
+      <button
+        type="button"
+        onClick={openChoices}
+        disabled={disabled}
+        aria-haspopup="dialog"
+        aria-expanded={mobileOpen}
+        className="grid min-h-14 w-full grid-cols-[minmax(0,1fr)_auto] items-center gap-3 rounded-[var(--radius-card)] border border-border bg-card p-4 text-left shadow-[var(--shadow-control)] outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:opacity-50 sm:hidden"
+      >
+        <span className="grid gap-1"><strong>Visibility</strong><span className="text-sm text-muted-foreground">{selectedOption?.description}</span></span>
+        <span className="rounded-full bg-secondary px-3 py-1 text-xs font-semibold text-secondary-foreground">{locallyOverridden ? "Local override" : selectedOption?.label ?? "Choose"}</span>
+      </button>
+
+      <dialog
+        ref={dialogRef}
+        aria-labelledby={`${groupName}-title`}
+        onClose={() => setMobileOpen(false)}
+        onCancel={() => setMobileOpen(false)}
+        onClick={(event) => { if (event.target === event.currentTarget) closeChoices() }}
+        className="fixed inset-x-0 bottom-0 top-auto m-0 max-h-[calc(100dvh-1rem)] w-full max-w-none overflow-y-auto rounded-t-[var(--radius-sheet)] border border-border bg-card p-5 text-card-foreground shadow-[var(--shadow-panel)] backdrop:bg-overlay sm:hidden"
+      >
+        <div className="grid gap-4">
+          <header className="flex items-start justify-between gap-3"><div className="grid gap-1"><strong id={`${groupName}-title`} className="text-xl">Choose visibility</strong><span className="text-sm text-muted-foreground">Understand the consequence before changing access.</span></div><button type="button" onClick={closeChoices} className="min-h-11 rounded-[var(--radius-control)] border border-border px-4 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-ring">Done</button></header>
+          {sensitive ? <p role="note" className="m-0 rounded-[var(--radius-control)] border border-border bg-muted p-3 text-sm text-muted-foreground">This item may contain sensitive information. Review the public preview before sharing it.</p> : null}
+          {locallyOverridden ? <p role="status" className="m-0 rounded-[var(--radius-control)] border border-primary p-3 text-sm">This item overrides its parent visibility setting.</p> : null}
+          {renderOptions("phone")}
+          <footer className="grid gap-3 border-t border-border pt-3">{renderStatus()}{onPreview ? <button type="button" onClick={onPreview} disabled={disabled || saveState === "saving"} className="min-h-11 rounded-[var(--radius-control)] border border-border bg-background px-4 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50">Preview</button> : null}</footer>
         </div>
-        {onPreview ? (
-          <button
-            type="button"
-            onClick={onPreview}
-            disabled={disabled || saveState === "saving"}
-            className="min-h-11 rounded-[var(--radius-control)] border border-border bg-background px-4 text-sm font-semibold outline-none hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-card active:translate-y-px disabled:pointer-events-none disabled:opacity-50 motion-reduce:active:translate-y-0"
-          >
-            Preview
-          </button>
-        ) : null}
-      </footer>
+      </dialog>
+
+      <div className="hidden gap-4 rounded-[var(--radius-card)] border border-border bg-card p-4 sm:grid">
+        <header className="flex flex-wrap items-start justify-between gap-3"><div className="grid gap-1"><strong className="text-base">Visibility</strong><span className="text-sm text-muted-foreground">{selectedOption?.description}</span></div><span className="rounded-full bg-secondary px-3 py-1 text-xs font-semibold text-secondary-foreground">{locallyOverridden ? "Local override" : selectedOption?.label ?? "Choose"}</span></header>
+        {sensitive ? <p role="note" className="m-0 rounded-[var(--radius-control)] border border-border bg-muted p-3 text-sm text-muted-foreground">This item may contain sensitive information. Review the public preview before sharing it.</p> : null}
+        {locallyOverridden ? <p role="status" className="m-0 rounded-[var(--radius-control)] border border-primary p-3 text-sm">This item overrides its parent visibility setting.</p> : null}
+        {renderOptions("desktop")}
+        <footer className="flex flex-col gap-3 border-t border-border pt-3 sm:flex-row sm:items-center sm:justify-between">{renderStatus()}{onPreview ? <button type="button" onClick={onPreview} disabled={disabled || saveState === "saving"} className="min-h-11 rounded-[var(--radius-control)] border border-border bg-background px-4 text-sm font-semibold outline-none hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-card active:translate-y-px disabled:pointer-events-none disabled:opacity-50 motion-reduce:active:translate-y-0">Preview</button> : null}</footer>
+      </div>
     </section>
   )
 }

@@ -132,13 +132,19 @@ The complete systems expose the same five safety-critical pieces:
 - `alert-dialog` is a real focus-contained modal confirmation, never a
   disclosure disguised as one. The safe action receives first focus.
 - `visibility-publication-control` expresses private, draft, unlisted, public,
-  and inherited states plus save progress, failure, warnings, and preview.
+  inherited, and explicit local-override states plus save progress, failure,
+  warnings, and preview. On phones it reduces to a status row that opens a
+  focused native choice sheet; the full choices remain inline on larger views.
 - `evidence-source-block` expresses provenance, confidence, freshness,
   limitations, loading, failure, conflict, and missing-source states.
 - `share-qr-panel` expresses a visible link, copy, native share, a product-owned
-  QR slot, and draft, loading, failed, revoked, and offline states.
+  QR slot, and draft, loading, failed, revoked, and offline states. Link and QR
+  readiness are separate: a failed or loading QR must not disable a ready text
+  link. The product callback is named `onCopyLink` so it cannot collide with
+  the browser's native clipboard event.
 - `destructive-action` expresses explicit confirmation, pending work, failure,
-  completion, optional undo, undo progress, and undo failure.
+  completion, optional undo, undo progress, and undo failure. Confirmation is
+  a full-screen task on phones and a contained modal on larger views.
 
 Kit owns these pieces' semantics, interaction states, responsive behavior,
 keyboard and touch behavior, focus handling, and visual expression. Consumers
@@ -173,8 +179,9 @@ Starter ownership is non-negotiable:
 law, minimums, bans, motion, plain-language rules, reversibility, required
 states, and proof widths. Agents styling any consumer read it before writing
 interface code. The plain-language contracts stay alongside it:
-`/r/adoption-contract.json` (swap protection) and `/r/system-catalog.json`
-(shared vs specialist vs product-owned layers).
+`/r/adoption-contract.json` (swap protection),
+`/r/adoption-assessment.json` (journey-by-journey Kit fit), and
+`/r/system-catalog.json` (shared vs specialist vs product-owned layers).
 
 ## 6. Consumer manifest
 

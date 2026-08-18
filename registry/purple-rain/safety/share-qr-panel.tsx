@@ -5,16 +5,19 @@ import * as React from "react"
 import { cn } from "@/lib/utils"
 
 export type ShareQrState = "draft" | "ready" | "loading" | "error" | "revoked" | "offline"
+export type ShareQrCodeState = "loading" | "ready" | "error" | "revoked" | "offline" | "unavailable"
 
-export type ShareQrPanelProps = React.ComponentPropsWithoutRef<"section"> & {
+export type ShareQrPanelProps = Omit<React.ComponentPropsWithoutRef<"section">, "onCopy"> & {
   url: string
   title?: string
   qrCode?: React.ReactNode
   qrLabel?: string
   state?: ShareQrState
-  onCopy?: (url: string) => void | Promise<void>
+  qrState?: ShareQrCodeState
+  onCopyLink?: (url: string) => void | Promise<void>
   onNativeShare?: (data: ShareData) => void | Promise<void>
   onRetry?: () => void
+  onRetryQr?: () => void
 }
 
 const stateMessages: Record<ShareQrState, string> = {
@@ -32,20 +35,23 @@ export function ShareQrPanel({
   qrCode,
   qrLabel = "QR code for this link",
   state = "ready",
-  onCopy,
+  qrState,
+  onCopyLink,
   onNativeShare,
   onRetry,
+  onRetryQr,
   className,
   ...props
 }: ShareQrPanelProps) {
   const [copyState, setCopyState] = React.useState<"idle" | "copying" | "copied" | "error">("idle")
   const available = state === "ready"
+  const activeQrState = qrState ?? (state === "ready" ? (qrCode ? "ready" : "unavailable") : state === "draft" ? "unavailable" : state)
 
   async function copyLink() {
     if (!available) return
     setCopyState("copying")
     try {
-      if (onCopy) await onCopy(url)
+      if (onCopyLink) await onCopyLink(url)
       else await navigator.clipboard.writeText(url)
       setCopyState("copied")
     } catch {
@@ -75,7 +81,8 @@ export function ShareQrPanel({
     <section
       data-slot="share-qr-panel"
       data-state={state}
-      aria-busy={state === "loading" || copyState === "copying"}
+      data-qr-state={activeQrState}
+      aria-busy={state === "loading" || activeQrState === "loading" || copyState === "copying"}
       className={cn("grid gap-5 rounded-[var(--radius-sheet)] border border-border bg-card p-5 text-card-foreground sm:grid-cols-[minmax(0,1fr)_14rem]", className)}
       {...props}
     >
@@ -125,9 +132,10 @@ export function ShareQrPanel({
           aria-label={qrLabel}
           className="grid aspect-square w-full max-w-56 place-items-center overflow-hidden rounded-[var(--radius-control)] border border-border bg-background p-3 text-center text-sm text-muted-foreground"
         >
-          {state === "draft" ? "Publish to create a QR code" : state === "loading" ? "Preparing QR code…" : state === "error" ? "QR code unavailable" : state === "revoked" ? "Link revoked" : qrCode ?? "Your product supplies the QR code"}
+          {activeQrState === "loading" ? "Preparing QR code…" : activeQrState === "error" ? "QR code unavailable" : activeQrState === "revoked" ? "Link revoked" : activeQrState === "offline" ? "QR code unavailable offline" : activeQrState === "unavailable" ? (state === "draft" ? "Publish to create a QR code" : "Your product supplies the QR code") : qrCode}
         </div>
-        <span className="text-center text-xs text-muted-foreground">The text link always remains available.</span>
+        <span className="text-center text-xs text-muted-foreground">The text link always remains visible.</span>
+        {onRetryQr && (activeQrState === "error" || activeQrState === "offline") ? <button type="button" onClick={onRetryQr} className="min-h-11 rounded-[var(--radius-control)] border border-border px-4 text-sm font-semibold outline-none hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring">Retry QR code</button> : null}
       </div>
     </section>
   )
