@@ -109,6 +109,10 @@ export function SiteHeader() {
 
   function visit(href: string) {
     closeFinder()
+    if (href === "/vanilla") {
+      window.location.assign(href)
+      return
+    }
     if (pathname === "/kit" && href.startsWith("/kit#")) {
       const hash = href.slice(4)
       window.history.pushState(null, "", hash)

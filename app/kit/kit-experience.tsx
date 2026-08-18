@@ -139,7 +139,7 @@ export function KitExperience({ library, system = "purple-rain" }: KitExperience
             <h1 id="kit-title">The whole {systemName} kit.</h1>
             <p>{isJade ? "Raised, seated, and sunken surfaces now cover the complete catalog. OS and creative-workspace patterns are available when a product needs them, never forced." : isOs ? "The useful OS identity now covers the complete catalog: everyday product pieces, desktop and mobile structures, and optional creative-workspace patterns." : isAnimation ? "A complete dark system for every product surface: everyday interface pieces plus optional desktop, storyboard, canvas, inspector, motion, timeline, code, and delivery structures." : isVanilla ? "The neutral starting system for new products. Every piece uses the shared Kit language, so another visual system can replace the appearance later without rebuilding the product." : "Every shared and specialist piece is here. Find one by name, choose a family, then touch it before you use it. Specialist layouts stay optional."}</p>
             {isJade ? <Link className="kit-compare-link" href="/kit/jade/compare">See JADE beside Purple Rain</Link> : null}
-            {isVanilla ? <Link className="kit-compare-link" href="/vanilla">Open the working project starter</Link> : null}
+            {isVanilla ? <a className="kit-compare-link" href="/vanilla">Open the working project starter</a> : null}
           </div>
           <div className="kit-count" aria-label={`${library.length} pieces in ${familyCount} families`}>
             <strong>{library.length}</strong>
