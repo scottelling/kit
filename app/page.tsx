@@ -49,7 +49,7 @@ export default function Home() {
               <ArrowRight aria-hidden="true" />
             </Link>
             <Link href="/kit">
-              <span className="home-choice-list__number">175 live pieces</span>
+              <span className="home-choice-list__number">179 live pieces</span>
               <strong>Touch the interface kit</strong>
               <span>Every foundation, control, state, data view, and product pattern.</span>
               <ArrowRight aria-hidden="true" />

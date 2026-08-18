@@ -1215,13 +1215,16 @@
       "name": "alert-dialog",
       "type": "registry:ui",
       "title": "JADE Alert Dialog",
-      "description": "Alert Dialog brings a focused task forward without losing context.",
+      "description": "A real focus-contained confirmation surface with a safe initial action and complete keyboard behavior.",
       "registryDependencies": [
         "https://kit.scottelling.com/r/jade/tokens.json"
       ],
+      "dependencies": [
+        "radix-ui"
+      ],
       "files": [
         {
-          "path": "registry/purple-rain/library/alert-dialog.tsx",
+          "path": "registry/purple-rain/safety/alert-dialog.tsx",
           "type": "registry:ui"
         }
       ]
@@ -2305,6 +2308,69 @@
       "files": [
         {
           "path": "registry/purple-rain/application/document-surface.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "visibility-publication-control",
+      "type": "registry:ui",
+      "title": "JADE Visibility Publication Control",
+      "description": "One clear place to understand and change who can open an object before publishing it.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/safety/visibility-publication-control.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "evidence-source-block",
+      "type": "registry:ui",
+      "title": "JADE Evidence Source Block",
+      "description": "Verification, uncertainty, sources, limitations, and review dates kept together.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/safety/evidence-source-block.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "share-qr-panel",
+      "type": "registry:ui",
+      "title": "JADE Share Qr Panel",
+      "description": "A complete sharing surface with the text link, copy, native sharing, QR display, and recovery.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/safety/share-qr-panel.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "destructive-action",
+      "type": "registry:ui",
+      "title": "JADE Destructive Action",
+      "description": "Consequences, strong confirmation, progress, failure, undo, recovery, and irreversible states in one safe flow.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/jade/tokens.json"
+      ],
+      "dependencies": [
+        "radix-ui"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/safety/destructive-action.tsx",
           "type": "registry:ui"
         }
       ]

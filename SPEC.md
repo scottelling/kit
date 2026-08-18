@@ -20,7 +20,7 @@ amendable; silent deviation is not.
 
 ## 2. Systems
 
-Complete systems (each styles the entire 175-piece catalog):
+Complete systems (each styles the entire 179-piece catalog):
 
 | id | tokens root |
 | --- | --- |
@@ -124,6 +124,28 @@ Piece rules (enforced by doctrine, verified before release):
 - No glass, glow, translucent decoration, hover lift, or resting loops.
 - Vanilla JS is declarative (data attributes), delegated, and each file is a
   self-terminated IIFE safe to concatenate.
+
+### Shared safety patterns
+
+The complete systems expose the same five safety-critical pieces:
+
+- `alert-dialog` is a real focus-contained modal confirmation, never a
+  disclosure disguised as one. The safe action receives first focus.
+- `visibility-publication-control` expresses private, draft, unlisted, public,
+  and inherited states plus save progress, failure, warnings, and preview.
+- `evidence-source-block` expresses provenance, confidence, freshness,
+  limitations, loading, failure, conflict, and missing-source states.
+- `share-qr-panel` expresses a visible link, copy, native share, a product-owned
+  QR slot, and draft, loading, failed, revoked, and offline states.
+- `destructive-action` expresses explicit confirmation, pending work, failure,
+  completion, optional undo, undo progress, and undo failure.
+
+Kit owns these pieces' semantics, interaction states, responsive behavior,
+keyboard and touch behavior, focus handling, and visual expression. Consumers
+own authorization, publishing policy, source trust policy, QR generation,
+destructive side effects, retention, and the duration or availability of undo.
+Product names, routes, data, and policy copy may not be embedded in the shared
+piece source.
 
 ## 4a. Vanilla Project Starter
 

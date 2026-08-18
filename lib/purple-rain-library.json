@@ -458,7 +458,7 @@
     "name": "alert-dialog",
     "title": "Alert Dialog",
     "category": "Overlays",
-    "description": "Alert Dialog brings a focused task forward without losing context.",
+    "description": "A real focus-contained confirmation surface with a safe initial action and complete keyboard behavior.",
     "preview": "alert-dialog"
   },
   {
@@ -964,5 +964,33 @@
     "category": "Patterns",
     "description": "Document Surface assembles related pieces into a complete task.",
     "preview": "document-surface"
+  },
+  {
+    "name": "visibility-publication-control",
+    "title": "Visibility Publication Control",
+    "category": "Patterns",
+    "description": "One clear place to understand and change who can open an object before publishing it.",
+    "preview": "visibility-control"
+  },
+  {
+    "name": "evidence-source-block",
+    "title": "Evidence Source Block",
+    "category": "Patterns",
+    "description": "Verification, uncertainty, sources, limitations, and review dates kept together.",
+    "preview": "evidence-source"
+  },
+  {
+    "name": "share-qr-panel",
+    "title": "Share Qr Panel",
+    "category": "Patterns",
+    "description": "A complete sharing surface with the text link, copy, native sharing, QR display, and recovery.",
+    "preview": "share-qr"
+  },
+  {
+    "name": "destructive-action",
+    "title": "Destructive Action",
+    "category": "Patterns",
+    "description": "Consequences, strong confirmation, progress, failure, undo, recovery, and irreversible states in one safe flow.",
+    "preview": "destructive-recovery"
   }
 ]

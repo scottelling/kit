@@ -15,7 +15,7 @@ import {
   Upload,
   X,
 } from "lucide-react"
-import type { ReactNode } from "react"
+import type { KeyboardEvent, ReactNode } from "react"
 import { useState } from "react"
 
 import { CommandBar } from "@/registry/os/patterns/command-bar"
@@ -27,6 +27,9 @@ import { SettingsSheet } from "@/registry/os/patterns/settings-sheet"
 import { SplitInspector, SplitNavigation, SplitPrimary, SplitView } from "@/registry/os/patterns/split-view"
 import { WidgetShell } from "@/registry/os/patterns/widget-shell"
 import { WindowContent, WindowShell, WindowStatus, WindowTitleBar } from "@/registry/os/patterns/window-shell"
+import { EvidenceSourceBlock } from "@/registry/purple-rain/safety/evidence-source-block"
+import { ShareQrPanel } from "@/registry/purple-rain/safety/share-qr-panel"
+import { VisibilityPublicationControl, type VisibilityValue } from "@/registry/purple-rain/safety/visibility-publication-control"
 
 import { AnimationPatternPreview } from "./animation/animation-pattern-preview"
 
@@ -50,6 +53,28 @@ const sampleRows = [
   ["Launch page", "Sam", "Review"],
   ["Email copy", "Elena", "Draft"],
 ]
+const visibilityValues: VisibilityValue[] = ["private", "draft", "unlisted", "public", "inherited"]
+const qrCells = [1,1,1,1,1,0,1,0,1,1,1,1,1,1,0,0,0,1,0,1,0,0,0,1,1,1,0,1,1,0,1,1,1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,1,1,0,1,0,0,0,1,0,1,1,1,1,1,0,1,1]
+
+function handlePreviewDialogKey(event: KeyboardEvent<HTMLElement>, close: () => void) {
+  if (event.key === "Escape") {
+    event.stopPropagation()
+    close()
+    return
+  }
+  if (event.key !== "Tab") return
+  const controls = [...event.currentTarget.querySelectorAll<HTMLElement>("button:not(:disabled), input:not(:disabled)")]
+  const first = controls[0]
+  const last = controls.at(-1)
+  if (!first || !last) return
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault()
+    last.focus()
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault()
+    first.focus()
+  }
+}
 
 export function ComponentPreview({ item, expanded = false, system = "purple-rain" }: ComponentPreviewProps) {
   const [active, setActive] = useState(0)
@@ -246,7 +271,6 @@ export function ComponentPreview({ item, expanded = false, system = "purple-rain
       break
 
     case "dialog":
-    case "alert-dialog":
     case "sheet":
     case "drawer":
     case "popover":
@@ -257,6 +281,9 @@ export function ComponentPreview({ item, expanded = false, system = "purple-rain
     case "lightbox":
     case "action-menu":
       sample = <div className={`mini-overlay-demo is-${preview}`}><button type="button" onClick={() => setOpen((value) => !value)}>{open ? "Close" : `Open ${title}`}</button>{open ? <div role="status"><strong>{title}</strong><p>{preview === "tooltip" ? "A short, useful hint." : "Keep the current choice in view."}</p></div> : null}</div>
+      break
+    case "alert-dialog":
+      sample = <div className="mini-overlay-demo is-alert-dialog">{open ? <div role="alertdialog" aria-modal="true" aria-labelledby={`alert-title-${name}`} aria-describedby={`alert-description-${name}`} onKeyDown={(event) => handlePreviewDialogKey(event, () => setOpen(false))}><strong id={`alert-title-${name}`}>Remove this item?</strong><p id={`alert-description-${name}`}>This cannot be undone. Cancel is the safe initial choice.</p><div className="mini-choice-row"><button type="button" autoFocus onClick={() => setOpen(false)}>Cancel</button><button type="button" onClick={() => { setOpen(false); setCopied(true) }}>Remove</button></div></div> : <button type="button" onClick={() => setOpen(true)}>{copied ? "Item removed" : "Remove item"}</button>}</div>
       break
 
     case "badge":
@@ -402,6 +429,18 @@ export function ComponentPreview({ item, expanded = false, system = "purple-rain
       break
     case "document-surface":
       sample = <article className="mini-document-system"><header><span>DESIGN STANDARD</span><strong>Instant legibility</strong><p>The current object and next action remain obvious.</p></header><section><b>01</b><p>Use solid surfaces and clear hierarchy. Keep motion purposeful.</p></section></article>
+      break
+    case "visibility-control":
+      sample = <VisibilityPublicationControl value={visibilityValues[active % visibilityValues.length]} onValueChange={(value) => setActive(visibilityValues.indexOf(value))} saveState={on ? "saved" : "error"} sensitive destination="example.com/item" onPreview={() => setOn((value) => !value)} />
+      break
+    case "evidence-source":
+      sample = <EvidenceSourceBlock status={on ? "verified" : "conflicting"} summary="The source supports the object identity. Personal outcomes remain separate." reviewedAt="2026-08-17" sources={[{ label: "Primary source", href: "#evidence", detail: "Reviewed by the product team." }]} limitations={["This does not establish personal suitability."]} onClick={() => setOn((value) => !value)} />
+      break
+    case "share-qr":
+      sample = <ShareQrPanel url="https://example.com/p/mara" title="Share this profile" onCopy={() => setCopied(true)} qrCode={<span className="grid aspect-square w-full grid-cols-8 gap-px bg-background p-1" aria-hidden="true">{qrCells.map((cell, index) => <i key={index} className={cell ? "bg-foreground" : "bg-background"} />)}</span>} />
+      break
+    case "destructive-recovery":
+      sample = <div className="mini-card"><span>Recovery</span><strong>{copied ? "Item removed" : "Remove this item"}</strong><p>{copied ? "Undo remains available for this action." : "The consequence appears before confirmation."}</p>{copied ? <button type="button" onClick={() => setCopied(false)}>Undo</button> : <button type="button" onClick={() => setOpen(true)}>Review removal</button>}{open ? <div role="alertdialog" aria-modal="true" aria-label="Confirm removal" onKeyDown={(event) => handlePreviewDialogKey(event, () => setOpen(false))}><p>Type REMOVE before continuing.</p><input aria-label="Confirmation text" value={text} onChange={(event) => setText(event.target.value)} /><div className="mini-choice-row"><button type="button" autoFocus onClick={() => setOpen(false)}>Cancel</button><button type="button" disabled={text !== "REMOVE"} onClick={() => { setOpen(false); setCopied(true) }}>Remove</button></div></div> : null}</div>
       break
     case "desktop-shell":
       sample = <DesktopShell className="min-h-64"><DesktopMenuArea><strong>Workspace</strong><span className="text-xs text-muted-foreground">Saved</span></DesktopMenuArea><DesktopWorkspace><WindowShell className="min-h-44"><WindowTitleBar title="Launch room" /><WindowContent><strong>Current decision</strong><p className="mt-2 text-sm text-muted-foreground">Approve the release direction.</p></WindowContent><WindowStatus><span>Ready</span><span>3 online</span></WindowStatus></WindowShell></DesktopWorkspace><DesktopDockArea><Dock /></DesktopDockArea></DesktopShell>

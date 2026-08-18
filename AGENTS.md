@@ -55,7 +55,7 @@ When Scott says "make this standard" or "always do this from now on": append it 
 - `registry/elements/` owns independently installable behaviors that do not inherit Purple Rain or JADE tokens.
 - `registry/os/` owns the rebuilt OS visual system and its OS-native desktop, window, widget, phone, command, and settings structures.
 - `registry/animation/` owns the rebuilt Animation Studio visual system and its storyboard, canvas, inspector, motion, timeline, code, template, delivery, and recovery structures.
-- Vanilla, Purple Rain, JADE, OS, and Animation Studio each expose the same 175 individually installable interface pieces: 138 everyday pieces plus 37 opt-in specialist patterns. Installing one piece never pulls unrelated specialist layouts into a project.
+- Vanilla, Purple Rain, JADE, OS, and Animation Studio each expose the same 179 individually installable interface pieces: 142 everyday pieces plus 37 opt-in specialist patterns. Installing one piece never pulls unrelated specialist layouts into a project.
 - Vanilla is the neutral complete visual system for new work. The Vanilla Project Starter is the framework-free project foundation. Do not confuse either with the lowercase vanilla delivery dialect: the system determines appearance; the dialect determines file format.
 - `registry/vanilla/starter/` is the source for the public starter. It must preserve the ownership boundary in its manifest: the product owns routes, data, behavior, content, journeys, and permissions; the kit owns visual and interaction expression.
 - Product screens, routes, data, and behavior stay owned by the target product during a kit swap. The kit changes foundations and component expression; it does not silently replace the product.
@@ -63,7 +63,7 @@ When Scott says "make this standard" or "always do this from now on": append it 
 - Every component item depends on the local `tokens` registry item.
 - Purple Rain uses tonal depth, directional dark shadows, restrained orchid, and visible focus. No glass, translucency, glow, ambient blobs, or decorative looping motion.
 - `/demo` compares the same task interface in Purple Rain and Origin UI.
-- `/kit/shadow` is the tactile elevation showroom. Shadow supplements complete visual systems; it does not claim 138-component parity.
+- `/kit/shadow` is the tactile elevation showroom. Shadow supplements complete visual systems; it does not claim 142-component parity.
 - `/labs` creates immutable-source theme copies. Apply and publish the copy, or restore the exact Purple Rain/JADE source without losing the work.
 - `/kit/os` is the complete OS showroom. It preserves theme-wide identity and desktop/phone/widget composition while replacing glass, glow, raw colors, and small controls with Kit's solid, OKLCH, 44-pixel production rules.
 - Every shared OS component and OS-native pattern depends on the public OS tokens item under `/r/os/`.

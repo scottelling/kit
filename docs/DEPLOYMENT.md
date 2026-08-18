@@ -53,6 +53,11 @@ curl -fsS https://kit.scottelling.com/r/vanilla/registry.json
 curl -fsS https://kit.scottelling.com/r/vanilla/kit.css
 curl -fsS https://kit.scottelling.com/r/vanilla/kit.js
 curl -fsS https://kit.scottelling.com/r/vanilla/button.json
+curl -fsS https://kit.scottelling.com/r/vanilla-kit/alert-dialog.json
+curl -fsS https://kit.scottelling.com/r/vanilla-kit/visibility-publication-control.json
+curl -fsS https://kit.scottelling.com/r/vanilla-kit/evidence-source-block.json
+curl -fsS https://kit.scottelling.com/r/vanilla-kit/share-qr-panel.json
+curl -fsS https://kit.scottelling.com/r/vanilla-kit/destructive-action.json
 curl -fsS https://kit.scottelling.com/vanilla
 curl -fsS https://kit.scottelling.com/r/space/registry.json
 curl -fsS https://kit.scottelling.com/r/space/tokens.css

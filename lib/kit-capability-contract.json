@@ -37,6 +37,13 @@
     "terminal-surface",
     "document-surface"
   ],
+  "safety_patterns": [
+    "alert-dialog",
+    "visibility-publication-control",
+    "evidence-source-block",
+    "share-qr-panel",
+    "destructive-action"
+  ],
   "os_patterns": [
     "desktop-shell",
     "window-shell",

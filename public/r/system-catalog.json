@@ -12,42 +12,42 @@
       "label": "Purple Rain",
       "homepage": "https://kit.scottelling.com/kit",
       "tokenUrl": "https://kit.scottelling.com/r/tokens.json",
-      "componentCount": 175
+      "componentCount": 179
     },
     {
       "id": "jade",
       "label": "JADE",
       "homepage": "https://kit.scottelling.com/kit/jade",
       "tokenUrl": "https://kit.scottelling.com/r/jade/tokens.json",
-      "componentCount": 175
+      "componentCount": 179
     },
     {
       "id": "os-kit",
       "label": "OS",
       "homepage": "https://kit.scottelling.com/kit/os",
       "tokenUrl": "https://kit.scottelling.com/r/os/tokens.json",
-      "componentCount": 175
+      "componentCount": 179
     },
     {
       "id": "animation-studio",
       "label": "Animation Studio",
       "homepage": "https://kit.scottelling.com/kit/animation",
       "tokenUrl": "https://kit.scottelling.com/r/animation/tokens.json",
-      "componentCount": 175
+      "componentCount": 179
     },
     {
       "id": "vanilla-kit",
       "label": "Vanilla",
       "homepage": "https://kit.scottelling.com/kit/vanilla",
       "tokenUrl": "https://kit.scottelling.com/r/vanilla-kit/tokens.json",
-      "componentCount": 175
+      "componentCount": 179
     }
   ],
   "layers": [
     {
       "id": "shared",
       "label": "Everyday interface pieces",
-      "count": 138,
+      "count": 142,
       "categories": [
         "Foundations",
         "Actions",
@@ -196,7 +196,11 @@
         "status-bar",
         "mobile-app-nav",
         "terminal-surface",
-        "document-surface"
+        "document-surface",
+        "visibility-publication-control",
+        "evidence-source-block",
+        "share-qr-panel",
+        "destructive-action"
       ]
     },
     {
@@ -1250,7 +1254,7 @@
       "name": "alert-dialog",
       "title": "Alert Dialog",
       "category": "Overlays",
-      "description": "Alert Dialog brings a focused task forward without losing context.",
+      "description": "A real focus-contained confirmation surface with a safe initial action and complete keyboard behavior.",
       "preview": "alert-dialog",
       "scope": "shared",
       "availableIn": [
@@ -2332,6 +2336,66 @@
       "category": "Patterns",
       "description": "Document Surface assembles related pieces into a complete task.",
       "preview": "document-surface",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio",
+        "vanilla-kit"
+      ]
+    },
+    {
+      "name": "visibility-publication-control",
+      "title": "Visibility Publication Control",
+      "category": "Patterns",
+      "description": "One clear place to understand and change who can open an object before publishing it.",
+      "preview": "visibility-control",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio",
+        "vanilla-kit"
+      ]
+    },
+    {
+      "name": "evidence-source-block",
+      "title": "Evidence Source Block",
+      "category": "Patterns",
+      "description": "Verification, uncertainty, sources, limitations, and review dates kept together.",
+      "preview": "evidence-source",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio",
+        "vanilla-kit"
+      ]
+    },
+    {
+      "name": "share-qr-panel",
+      "title": "Share Qr Panel",
+      "category": "Patterns",
+      "description": "A complete sharing surface with the text link, copy, native sharing, QR display, and recovery.",
+      "preview": "share-qr",
+      "scope": "shared",
+      "availableIn": [
+        "purple-rain",
+        "jade",
+        "os-kit",
+        "animation-studio",
+        "vanilla-kit"
+      ]
+    },
+    {
+      "name": "destructive-action",
+      "title": "Destructive Action",
+      "category": "Patterns",
+      "description": "Consequences, strong confirmation, progress, failure, undo, recovery, and irreversible states in one safe flow.",
+      "preview": "destructive-recovery",
       "scope": "shared",
       "availableIn": [
         "purple-rain",

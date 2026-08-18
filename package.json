@@ -16,12 +16,13 @@
     "verify:elements": "node scripts/verify-elements.mjs",
     "verify:os": "node scripts/verify-os.mjs",
     "verify:animation": "node scripts/verify-animation.mjs",
+    "verify:safety": "node scripts/verify-safety-patterns.mjs",
     "verify:resources": "node scripts/verify-studio-resources.mjs",
     "verify:dialects": "node scripts/verify-dialects.mjs",
     "doctor": "node scripts/kit-doctor.mjs",
     "systems:validate": "node scripts/verify-system-contract.mjs",
     "studio:validate": "node scripts/verify-studio.mjs",
-    "check": "npm run registry:validate && npm run registry:build && npm run verify:registry && npm run verify:shadow && npm run verify:workshop && npm run verify:elements && npm run verify:os && npm run verify:animation && npm run verify:resources && npm run verify:dialects && npm run systems:validate && npm run studio:validate && npm run lint && next build"
+    "check": "npm run registry:validate && npm run registry:build && npm run verify:registry && npm run verify:shadow && npm run verify:workshop && npm run verify:elements && npm run verify:os && npm run verify:animation && npm run verify:safety && npm run verify:resources && npm run verify:dialects && npm run systems:validate && npm run studio:validate && npm run lint && next build"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",

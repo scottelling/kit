@@ -4,6 +4,7 @@ import path from "node:path"
 const root = process.cwd()
 const registry = JSON.parse(await readFile(path.join(root, "registry", "os", "registry.json"), "utf8"))
 const library = JSON.parse(await readFile(path.join(root, "lib", "os-library.json"), "utf8"))
+const shared = JSON.parse(await readFile(path.join(root, "lib", "purple-rain-library.json"), "utf8"))
 const universal = JSON.parse(await readFile(path.join(root, "lib", "universal-library.json"), "utf8"))
 const tokens = JSON.parse(await readFile(path.join(root, "lib", "os-tokens.json"), "utf8"))
 const failures = []
@@ -42,7 +43,7 @@ function contrast(first, second) {
   return (Math.max(firstLuminance, secondLuminance) + 0.05) / (Math.min(firstLuminance, secondLuminance) + 0.05)
 }
 
-if (library.length !== 147) failures.push(`OS library has ${library.length} pieces instead of 147`)
+if (library.length !== shared.length + nativeNames.length) failures.push(`OS library has ${library.length} pieces instead of ${shared.length + nativeNames.length}`)
 if (new Set(library.map((item) => item.name)).size !== library.length) failures.push("OS library names are not unique")
 if (new Set(library.map((item) => item.category)).size !== 9) failures.push("OS library does not contain exactly nine families")
 if (uiItems.length !== universal.length) failures.push(`OS registry has ${uiItems.length} UI items; expected ${universal.length}`)

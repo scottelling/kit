@@ -29,7 +29,9 @@ doctrine deltas declared, bridged to the universal roles instead of converted
 (`docs/KIT-INTAKE.md`). The first is **Space**, a Finder-adjacent filesystem
 kit: showroom at `/kit/space`, installable from `/r/space/registry.json`.
 
-Vanilla, Purple Rain, JADE, OS, and Animation Studio each expose the same 175-piece catalog. The 138 everyday pieces and 37 specialist patterns are all available, but each is installed individually so unrelated layouts never arrive by accident.
+Vanilla, Purple Rain, JADE, OS, and Animation Studio each expose the same 179-piece catalog. The 142 everyday pieces and 37 specialist patterns are all available, but each is installed individually so unrelated layouts never arrive by accident.
+
+The everyday catalog includes shared safety patterns for visibility and publication, evidence and sources, share and QR handoff, destructive actions with recovery, and true modal confirmation. Kit owns their interaction quality and accessibility. Each product still owns its permissions, publishing rules, evidence policy, QR generation, deletion behavior, and recovery window.
 
 Vanilla is the neutral starting system for a new project. It includes a complete app, landing, shop, and content foundation, then swaps to any other complete kit by changing only the shared visual roles. The product's pages, content, data, and behavior remain intact.
 
@@ -94,4 +96,4 @@ Open `http://localhost:3000/kit/vanilla` for Vanilla, `http://localhost:3000/van
 npm run check
 ```
 
-The counted inventories and shared capability contract keep all five visual systems aligned around the same 175-piece catalog while their palettes, shapes, depth, declared color modes, and motion remain distinct. Specialist patterns remain opt-in, and product-owned layouts never travel during a swap.
+The counted inventories and shared capability contract keep all five visual systems aligned around the same 179-piece catalog while their palettes, shapes, depth, declared color modes, and motion remain distinct. Specialist patterns remain opt-in, and product-owned layouts never travel during a swap.

@@ -51,7 +51,7 @@ The installable registry translates these roles to OKLCH. It does not create a s
 
 ## Complete kit boundary
 
-Animation Studio owns all 138 everyday production pieces plus 28 studio-native pieces. The universal registry also makes the nine OS specialist patterns available in Animation styling, bringing the public system to 175 individually installable pieces without forcing any specialist layout into a project:
+Animation Studio owns all 142 everyday production pieces plus 28 studio-native pieces. The universal registry also makes the nine OS specialist patterns available in Animation styling, bringing the public system to 179 individually installable pieces without forcing any specialist layout into a project:
 
 1. Studio Shell
 2. Studio Header

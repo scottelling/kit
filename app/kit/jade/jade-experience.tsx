@@ -319,11 +319,11 @@ export function JadeExperience() {
         <nav className="kit-worlds jade-worlds" aria-label="Choose a kit">
           <span>Kits</span>
           <div>
-            <Link href="/kit">Purple Rain <small>175 pieces</small></Link>
-            <Link href="/kit/vanilla">Vanilla <small>175 pieces</small></Link>
-            <Link href="/kit/jade">JADE <small>175 pieces</small></Link>
-            <Link href="/kit/os">OS <small>175 pieces</small></Link>
-            <Link href="/kit/animation">Animation <small>175 pieces</small></Link>
+            <Link href="/kit">Purple Rain <small>179 pieces</small></Link>
+            <Link href="/kit/vanilla">Vanilla <small>179 pieces</small></Link>
+            <Link href="/kit/jade">JADE <small>179 pieces</small></Link>
+            <Link href="/kit/os">OS <small>179 pieces</small></Link>
+            <Link href="/kit/animation">Animation <small>179 pieces</small></Link>
             <Link href="/kit/shadow">Shadow <small>12 elevations</small></Link>
             <Link aria-current="page" href="/kit/jade/compare">Comparison <small>Live</small></Link>
           </div>

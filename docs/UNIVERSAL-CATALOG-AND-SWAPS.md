@@ -8,7 +8,7 @@ Kit separates three things that must never be confused:
 2. Specialist patterns are useful structures such as a timeline, canvas inspector, desktop window, dock, or command bar. Every visual kit can style them, but none is installed unless the product asks for it.
 3. Product-owned work is the target product's pages, routes, data, content, workflows, and business behavior. A kit swap does not replace any of it.
 
-The current universal catalog contains 175 individually installable interface pieces: 138 everyday pieces and 37 specialist patterns. Vanilla, Purple Rain, JADE, OS, and Animation Studio expose the same names and behavior. Their foundations change how those pieces look and feel.
+The current universal catalog contains 179 individually installable interface pieces: 142 everyday pieces and 37 specialist patterns. Vanilla, Purple Rain, JADE, OS, and Animation Studio expose the same names and behavior. Their foundations change how those pieces look and feel.
 
 Vanilla is the neutral default for a brand-new product. `/vanilla` proves the
 ownership boundary with four working starting shapes. The product owns its
@@ -26,6 +26,20 @@ A new component is accepted into the universal catalog only when:
 - it installs with only the chosen visual system's foundations.
 
 If those conditions are not true, the work stays in the product. This prevents Cabinet, Animation Studio, or any future product from becoming the accidental template for everything else.
+
+## Shared safety patterns
+
+Visibility and publication, evidence and sources, share and QR handoff,
+destructive actions with recovery, and modal confirmation are reusable product
+needs rather than Glohhh-specific screens. They therefore live once in the
+universal catalog and are styled by all five complete systems.
+
+Their boundary is strict. Kit supplies the understandable controls, full state
+coverage, safe focus order, keyboard and touch behavior, responsive layout,
+clear warnings, retry, progress, and recovery presentation. The adopting
+product supplies real permissions, policies, data, URLs, QR generation,
+destructive operations, and undo rules. A visual-system swap may restyle these
+patterns but may not rewrite those product decisions.
 
 ## Approved icons
 

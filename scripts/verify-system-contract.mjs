@@ -26,6 +26,13 @@ for (const name of contract.application_patterns) {
   }
 }
 
+for (const name of contract.safety_patterns) {
+  if (!library.some((item) => item.name === name)) failures.push(`${name} is missing from the shared safety inventory`)
+  for (const { registry } of registries) {
+    if (!registry.items.some((item) => item.name === name)) failures.push(`${name} is missing from ${registry.name}`)
+  }
+}
+
 for (const { registry, expected } of registries) {
   const tokenItem = registry.items.find((item) => item.name === "tokens")
   const componentItems = registry.items.filter((item) => item.type === "registry:ui")

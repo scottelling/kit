@@ -14,8 +14,8 @@ const libraryNames = new Set(library.map((item) => item.name))
 const universalNames = new Set(universal.map((item) => item.name))
 const registryNames = new Set(registryItems.map((item) => item.name))
 
-if (library.length !== 138) failures.push(`library contains ${library.length} components instead of 138`)
-if (libraryNames.size !== 138) failures.push("library component names are not unique")
+if (library.length !== 142) failures.push(`library contains ${library.length} components instead of 142`)
+if (libraryNames.size !== 142) failures.push("library component names are not unique")
 if (new Set(library.map((item) => item.category)).size !== 8) failures.push("library does not contain exactly 8 families")
 if (universalNames.size !== universal.length) failures.push("universal component names are not unique")
 if (registryItems.length !== universal.length) failures.push(`registry contains ${registryItems.length} UI items instead of ${universal.length}`)
@@ -97,7 +97,7 @@ if (!jadeTokenItem) {
 }
 
 const sourcePaths = new Set()
-const handOwnedNames = new Set(["button", "card", "input", "badge", "dialog", "application-shell", "workspace-tree", "viewer-shell", "editor-toolbar", "task-board", "task-rail", "status-bar", "mobile-app-nav", "terminal-surface", "document-surface"])
+const handOwnedNames = new Set(["button", "card", "input", "badge", "dialog", "alert-dialog", "application-shell", "workspace-tree", "viewer-shell", "editor-toolbar", "task-board", "task-rail", "status-bar", "mobile-app-nav", "terminal-surface", "document-surface", "visibility-publication-control", "evidence-source-block", "share-qr-panel", "destructive-action"])
 for (const item of registryItems) {
   if (!item.registryDependencies?.includes(tokenUrl)) failures.push(`${item.name} does not depend on the live tokens item`)
   if (!item.files?.length) failures.push(`${item.name} has no source file`)

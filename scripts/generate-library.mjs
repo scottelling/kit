@@ -16,7 +16,14 @@ const applicationItems = new Map([
   ["terminal-surface", "registry/purple-rain/application/terminal-surface.tsx"],
   ["document-surface", "registry/purple-rain/application/document-surface.tsx"],
 ])
-const coreNames = new Set(["button", "card", "input", "badge", "dialog", ...applicationItems.keys()])
+const safetyItems = new Map([
+  ["alert-dialog", "registry/purple-rain/safety/alert-dialog.tsx"],
+  ["visibility-publication-control", "registry/purple-rain/safety/visibility-publication-control.tsx"],
+  ["evidence-source-block", "registry/purple-rain/safety/evidence-source-block.tsx"],
+  ["share-qr-panel", "registry/purple-rain/safety/share-qr-panel.tsx"],
+  ["destructive-action", "registry/purple-rain/safety/destructive-action.tsx"],
+])
+const coreNames = new Set(["button", "card", "input", "badge", "dialog", ...applicationItems.keys(), ...safetyItems.keys()])
 
 const families = [
   {
@@ -111,11 +118,21 @@ const families = [
       ["task-board", "task-board"], ["task-rail", "task-rail"],
       ["status-bar", "status-bar"], ["mobile-app-nav", "mobile-app-nav"],
       ["terminal-surface", "terminal-surface"], ["document-surface", "document-surface"],
+      ["visibility-publication-control", "visibility-control"],
+      ["evidence-source-block", "evidence-source"],
+      ["share-qr-panel", "share-qr"], ["destructive-action", "destructive-recovery"],
     ],
   },
 ]
 
 const initialisms = new Map([["otp", "OTP"], ["ui", "UI"]])
+const descriptionOverrides = new Map([
+  ["alert-dialog", "A real focus-contained confirmation surface with a safe initial action and complete keyboard behavior."],
+  ["visibility-publication-control", "One clear place to understand and change who can open an object before publishing it."],
+  ["evidence-source-block", "Verification, uncertainty, sources, limitations, and review dates kept together."],
+  ["share-qr-panel", "A complete sharing surface with the text link, copy, native sharing, QR display, and recovery."],
+  ["destructive-action", "Consequences, strong confirmation, progress, failure, undo, recovery, and irreversible states in one safe flow."],
+])
 
 function titleize(name) {
   return name.split("-").map((word) => initialisms.get(word) ?? `${word[0].toUpperCase()}${word.slice(1)}`).join(" ")
@@ -131,10 +148,10 @@ function descriptionFor(family, title) {
 
 const library = families.flatMap((family) => family.items.map(([name, preview]) => {
   const title = titleize(name)
-  return { name, title, category: family.name, description: descriptionFor(family, title), preview }
+  return { name, title, category: family.name, description: descriptionOverrides.get(name) ?? descriptionFor(family, title), preview }
 }))
 
-if (library.length !== 138) throw new Error(`Expected 138 components, found ${library.length}.`)
+if (library.length !== 142) throw new Error(`Expected 142 components, found ${library.length}.`)
 if (new Set(library.map((item) => item.name)).size !== library.length) throw new Error("Component names must be unique.")
 
 const base = "rounded-[var(--radius-control)] border border-border bg-card text-card-foreground shadow-[var(--shadow-control)]"
@@ -278,19 +295,20 @@ const tokenItem = registry.items.find((item) => item.name === "tokens")
 const coreItems = new Map(registry.items.filter((item) => coreNames.has(item.name)).map((item) => [item.name, item]))
 
 registry.items = [tokenItem, ...library.map((item) => {
-  const existing = coreItems.get(item.name)
-  if (existing) return { ...existing, title: `Purple Rain ${item.title}` }
-  const applicationPath = applicationItems.get(item.name)
-  if (applicationPath) {
+  const ownedPath = applicationItems.get(item.name) ?? safetyItems.get(item.name)
+  if (ownedPath) {
     return {
       name: item.name,
       type: "registry:ui",
       title: `Purple Rain ${item.title}`,
       description: item.description,
       registryDependencies: [tokenUrl],
-      files: [{ path: applicationPath, type: "registry:ui" }],
+      dependencies: ["alert-dialog", "destructive-action"].includes(item.name) ? ["radix-ui"] : undefined,
+      files: [{ path: ownedPath, type: "registry:ui" }],
     }
   }
+  const existing = coreItems.get(item.name)
+  if (existing) return { ...existing, title: `Purple Rain ${item.title}` }
   return {
     name: item.name,
     type: "registry:ui",
