@@ -30,6 +30,8 @@ const places = [
   { label: "Explore Animation Studio", hint: "Shape scenes, motion, timelines, code, and delivery in one complete creative workspace", href: "/kit/animation", words: "animation studio cue storyboard canvas inspector motion timeline code delivery components kit" },
   { label: "Explore Shadow", hint: "Test smooth depth and one continuous edge on real surfaces", href: "/kit/shadow", words: "shadow elevation depth ring cards dialogs menus smooth" },
   { label: "Explore OS", hint: "Use the complete solid-surface system for desktop, phone, and widget products", href: "/kit/os", words: "os complete kit desktop phone widget window dock command themes components" },
+  { label: "Explore Vanilla", hint: "Start a new product on the neutral system and keep every future kit swap clean", href: "/kit/vanilla", words: "vanilla neutral starter new project swap ready complete kit components" },
+  { label: "Open the Vanilla starter", hint: "Try the same app, landing page, shop, and publication in every complete kit", href: "/vanilla", words: "vanilla project starter app landing shop content swap new project" },
   { label: "Explore JADE", hint: "Touch every raised, seated, and sunken JADE piece", href: "/kit/jade", words: "jade complete kit tactile mint components" },
   { label: "Compare the systems", hint: "Use the same working interface in JADE and Purple Rain", href: "/kit/jade/compare", words: "jade purple rain comparison live working interface" },
   { label: "Build a project", hint: "Shape a brief into a complete system, then build the working screens", href: "/build", words: "make create start execute project plain english shape studio system" },

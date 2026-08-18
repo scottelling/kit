@@ -320,6 +320,7 @@ export function JadeExperience() {
           <span>Kits</span>
           <div>
             <Link href="/kit">Purple Rain <small>175 pieces</small></Link>
+            <Link href="/kit/vanilla">Vanilla <small>175 pieces</small></Link>
             <Link href="/kit/jade">JADE <small>175 pieces</small></Link>
             <Link href="/kit/os">OS <small>175 pieces</small></Link>
             <Link href="/kit/animation">Animation <small>175 pieces</small></Link>

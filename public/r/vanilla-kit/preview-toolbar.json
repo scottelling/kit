@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "preview-toolbar",
+  "title": "Vanilla Preview Toolbar",
+  "description": "A close-at-hand view, scale, and fit control for the stage.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/animation/patterns/preview-toolbar.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type PreviewToolbarProps = React.ComponentPropsWithoutRef<\"div\">\n\nexport function PreviewToolbar({ children, className, ...props }: PreviewToolbarProps) {\n  return (\n    <div data-slot=\"preview-toolbar\" className={cn(\"flex min-h-11 flex-wrap items-center justify-between gap-2 border-b border-border bg-sidebar px-2\", className)} {...props}>\n      {children ?? (<><div className=\"flex gap-1\" role=\"group\" aria-label=\"Preview mode\"><button type=\"button\" className=\"min-h-11 rounded-[var(--radius-control)] bg-secondary px-3 text-xs font-bold\">Preview</button><button type=\"button\" className=\"min-h-11 rounded-[var(--radius-control)] px-3 text-xs text-muted-foreground\">Code</button></div><div className=\"flex gap-1\"><button type=\"button\" className=\"size-11 rounded-[var(--radius-control)]\" aria-label=\"Fit canvas\">Fit</button><button type=\"button\" className=\"min-h-11 rounded-[var(--radius-control)] px-3 font-mono text-[10px]\">100%</button></div></>)}\n    </div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

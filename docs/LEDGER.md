@@ -1,5 +1,21 @@
 # Agent Ledger
 
+## 2026-08-17 — Vanilla swap-ready project foundation
+
+- Agent: Codex
+- Scope: give every new product a neutral starting system that can accept a future visual-kit swap without rebuilding product structure or behavior
+- Complete system: Vanilla now exposes the same 175 individually installable pieces as Purple Rain, JADE, OS, and Animation, with neutral OKLCH light/dark foundations, system fonts, solid surfaces, restrained depth, visible focus, and 44-pixel controls
+- Working starter: `/vanilla` now presents four real starting shapes—app, landing page, shop, and publication—with working navigation, form success, native dialog, light/dark, and a visible five-kit selector
+- Ownership boundary: the starter manifest makes the product responsible for pages, content, data, journeys, behavior, and permissions; the kit owns visual and interaction expression, so a token-source change restyles the same populated interface without changing its markup or behavior
+- Agent handoff: the public `kit-project-starter/1` handoff includes the working files plus truthful `AGENTS.md`, `CLAUDE.md`, `docs/BRAIN.md`, `docs/START_HERE.md`, and `docs/LEDGER.md` so a new English-prompted project begins with shared memory instead of private-chat assumptions
+- Public delivery: the complete visual registry is under `/r/vanilla-kit/`; the framework-free starter is `/r/vanilla/starter.json`; the existing twelve-piece framework-free dialect remains intact and can pair with any complete system
+- Automated proof: all five complete systems pass the same 175-piece capability contract; the starter validator rejects non-universal visual roles, unresolved placeholders, missing handoff files, broken JavaScript, or unchecksummed output
+- Responsive proof: the working starter and complete showroom passed 320, 375, 414, 768, 1280, and 1440-pixel checks with no page-level overflow and no visible interactive target below 44 pixels
+- Interaction proof: changing Vanilla to JADE changed the visual foundation while the product markup stayed byte-identical; project-type navigation, light/dark, form success, and dialog open/close passed
+- Build proof: every registry schema, generated artifact, design-system verifier, lint rule, TypeScript check, and production build passed; the registry publishes 948 checksummed artifacts
+- Deployment: pending production release proof
+- Open loops: live endpoint and clean downstream installation proof remain before this release is closed
+
 ## 2026-08-16 — Complete Beautiful UI Elements collection
 
 - Agent: Codex

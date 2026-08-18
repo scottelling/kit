@@ -34,6 +34,13 @@
       "homepage": "https://kit.scottelling.com/kit/animation",
       "tokenUrl": "https://kit.scottelling.com/r/animation/tokens.json",
       "componentCount": 175
+    },
+    {
+      "id": "vanilla-kit",
+      "label": "Vanilla",
+      "homepage": "https://kit.scottelling.com/kit/vanilla",
+      "tokenUrl": "https://kit.scottelling.com/r/vanilla-kit/tokens.json",
+      "componentCount": 175
     }
   ],
   "layers": [
@@ -275,7 +282,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -289,7 +297,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -303,7 +312,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -317,7 +327,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -331,7 +342,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -345,7 +357,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -359,7 +372,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -373,7 +387,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -387,7 +402,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -401,7 +417,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -415,7 +432,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -429,7 +447,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -443,7 +462,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -457,7 +477,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -471,7 +492,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -485,7 +507,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -499,7 +522,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -513,7 +537,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -527,7 +552,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -541,7 +567,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -555,7 +582,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -569,7 +597,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -583,7 +612,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -597,7 +627,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -611,7 +642,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -625,7 +657,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -639,7 +672,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -653,7 +687,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -667,7 +702,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -681,7 +717,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -695,7 +732,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -709,7 +747,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -723,7 +762,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -737,7 +777,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -751,7 +792,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -765,7 +807,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -779,7 +822,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -793,7 +837,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -807,7 +852,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -821,7 +867,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -835,7 +882,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -849,7 +897,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -863,7 +912,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -877,7 +927,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -891,7 +942,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -905,7 +957,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -919,7 +972,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -933,7 +987,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -947,7 +1002,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -961,7 +1017,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -975,7 +1032,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -989,7 +1047,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1003,7 +1062,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1017,7 +1077,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1031,7 +1092,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1045,7 +1107,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1059,7 +1122,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1073,7 +1137,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1087,7 +1152,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1101,7 +1167,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1115,7 +1182,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1129,7 +1197,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1143,7 +1212,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1157,7 +1227,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1171,7 +1242,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1185,7 +1257,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1199,7 +1272,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1213,7 +1287,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1227,7 +1302,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1241,7 +1317,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1255,7 +1332,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1269,7 +1347,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1283,7 +1362,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1297,7 +1377,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1311,7 +1392,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1325,7 +1407,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1339,7 +1422,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1353,7 +1437,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1367,7 +1452,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1381,7 +1467,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1395,7 +1482,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1409,7 +1497,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1423,7 +1512,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1437,7 +1527,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1451,7 +1542,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1465,7 +1557,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1479,7 +1572,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1493,7 +1587,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1507,7 +1602,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1521,7 +1617,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1535,7 +1632,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1549,7 +1647,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1563,7 +1662,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1577,7 +1677,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1591,7 +1692,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1605,7 +1707,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1619,7 +1722,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1633,7 +1737,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1647,7 +1752,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1661,7 +1767,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1675,7 +1782,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1689,7 +1797,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1703,7 +1812,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1717,7 +1827,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1731,7 +1842,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1745,7 +1857,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1759,7 +1872,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1773,7 +1887,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1787,7 +1902,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1801,7 +1917,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1815,7 +1932,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1829,7 +1947,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1843,7 +1962,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1857,7 +1977,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1871,7 +1992,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1885,7 +2007,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1899,7 +2022,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1913,7 +2037,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1927,7 +2052,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1941,7 +2067,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1955,7 +2082,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1969,7 +2097,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1983,7 +2112,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -1997,7 +2127,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2011,7 +2142,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2025,7 +2157,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2039,7 +2172,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2053,7 +2187,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2067,7 +2202,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2081,7 +2217,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2095,7 +2232,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2109,7 +2247,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2123,7 +2262,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2137,7 +2277,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2151,7 +2292,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2165,7 +2307,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2179,7 +2322,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2193,7 +2337,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2207,7 +2352,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2221,7 +2367,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2235,7 +2382,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2249,7 +2397,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2263,7 +2412,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2277,7 +2427,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2291,7 +2442,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2305,7 +2457,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2319,7 +2472,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2333,7 +2487,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2347,7 +2502,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2361,7 +2517,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2375,7 +2532,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2389,7 +2547,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2403,7 +2562,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2417,7 +2577,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2431,7 +2592,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2445,7 +2607,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2459,7 +2622,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2473,7 +2637,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2487,7 +2652,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2501,7 +2667,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2515,7 +2682,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2529,7 +2697,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2543,7 +2712,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2557,7 +2727,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2571,7 +2742,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2585,7 +2757,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2599,7 +2772,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2613,7 +2787,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2627,7 +2802,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2641,7 +2817,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2655,7 +2832,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2669,7 +2847,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2683,7 +2862,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2697,7 +2877,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     },
     {
@@ -2711,7 +2892,8 @@
         "purple-rain",
         "jade",
         "os-kit",
-        "animation-studio"
+        "animation-studio",
+        "vanilla-kit"
       ]
     }
   ]

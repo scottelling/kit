@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "playhead",
+  "title": "Vanilla Playhead",
+  "description": "A keyboard-operable current-time control that stays visible across timeline lanes.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/animation/patterns/playhead.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type PlayheadProps = React.ComponentPropsWithoutRef<\"label\">\n\nexport function Playhead({ children, className, ...props }: PlayheadProps) {\n  return (\n    <label data-slot=\"playhead\" className={cn(\"grid gap-2 text-xs font-bold\", className)} {...props}>\n      {children ?? (<>Current time · <output>0.86s</output><input aria-label=\"Current time\" type=\"range\" min=\"0\" max=\"272\" defaultValue=\"86\" className=\"min-h-11 w-full accent-primary\" /></>)}\n    </label>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

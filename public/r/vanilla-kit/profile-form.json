@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "profile-form",
+  "title": "Vanilla Profile Form",
+  "description": "Profile Form assembles related pieces into a complete task.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/profile-form.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type ProfileFormProps = React.ComponentPropsWithoutRef<\"section\">\n\nexport function ProfileForm({ children, className, ...props }: ProfileFormProps) {\n  if (children !== undefined) {\n    return (<section data-slot=\"profile-form\" className={cn(\"min-w-0 rounded-[var(--radius-card)] bg-card text-card-foreground\", className)} {...props}>{children}</section>)\n  }\n\n  return (\n    <section data-slot=\"profile-form\" className={cn(\"rounded-[var(--radius-control)] border border-border bg-card text-card-foreground shadow-[var(--shadow-control)] grid gap-4 p-5\", className)} {...props}><header><strong className=\"text-lg\">Profile Form</strong><p className=\"mt-1 text-sm text-muted-foreground\">A complete Purple Rain task, assembled and ready.</p></header><label className=\"grid gap-2 text-sm font-semibold\">Email address<input type=\"email\" placeholder=\"you@example.com\" className=\"rounded-[var(--radius-control)] border border-border bg-card text-card-foreground shadow-[var(--shadow-control)] outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background h-11 px-3 font-normal\" /></label><button type=\"button\" className=\"rounded-[var(--radius-control)] border border-border bg-card text-card-foreground shadow-[var(--shadow-control)] min-h-11 px-4 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background bg-primary text-primary-foreground\">Save changes</button></section>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

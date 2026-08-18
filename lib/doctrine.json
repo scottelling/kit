@@ -3,11 +3,11 @@
   "purpose": "The machine-readable rules every KIT consumer follows, whatever its framework. Agents styling any project against KIT read this file before writing interface code.",
   "tokenLaw": {
     "rule": "Token values are literal and never re-derived, approximated, or renamed. A color, size, or duration must be byte-identical to the published token.",
-    "universalVariables": "Pieces intended to work under every complete system may reference only variables present in all four systems' tokens.css.",
+    "universalVariables": "Pieces intended to work under every complete system may reference only variables present in all five systems' tokens.css.",
     "neverInvent": "Never invent a color, shadow, radius, or duration when a token exists for the role. If no token fits, raise it to the kit instead of hardcoding."
   },
   "systems": {
-    "complete": ["purple-rain", "jade", "os", "animation"],
+    "complete": ["purple-rain", "jade", "os", "animation", "vanilla-kit"],
     "foundations": ["shadow"],
     "note": "Complete systems style the full catalog. Foundation kits supplement a system without replacing its identity."
   },

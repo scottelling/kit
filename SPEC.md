@@ -1,7 +1,7 @@
 # KIT Format — SPEC
 
-Version: 1.1.0 (2026-08-11) — adds sourced kits (§2a), `kit-provenance/1`,
-`kit-bridge/1`, and the intake process pointer (`docs/KIT-INTAKE.md`).
+Version: 1.2.0 (2026-08-17) — adds Vanilla as the neutral complete system and
+the `kit-project-starter/1` swap-ready project foundation.
 
 This file is the source of truth for the KIT format: how visual systems, tokens,
 pieces, doctrine, and consumers speak one language. The shadcn registry is one
@@ -28,6 +28,7 @@ Complete systems (each styles the entire 175-piece catalog):
 | `jade` | `/r/jade/` |
 | `os` | `/r/os/` |
 | `animation` | `/r/animation/` |
+| `vanilla-kit` | `/r/vanilla-kit/` |
 
 Foundation kits supplement a system without replacing its identity: `shadow`
 (`/r/shadow/`). Animation is a dark-authority system: both appearance contexts
@@ -83,7 +84,7 @@ Rules:
   shadow utilities-as-classes) follow verbatim. Tailwind-only value-
   parameterized utilities are omitted and documented in a trailing comment.
 - Fonts are referenced by the tokens but loaded by the consuming project.
-- The **universal set** is the intersection of variables present in all four
+- The **universal set** is the intersection of variables present in all five
   complete systems' `tokens.css` `:root` scope (53 variables today, including
   the `--kit-*` foundation namespace, semantic colors, planes, radius roles,
   and shadow roles). Anything portable must restrict itself to this set.
@@ -123,6 +124,26 @@ Piece rules (enforced by doctrine, verified before release):
 - No glass, glow, translucent decoration, hover lift, or resting loops.
 - Vanilla JS is declarative (data attributes), delegated, and each file is a
   self-terminated IIFE safe to concatenate.
+
+## 4a. Vanilla Project Starter
+
+Vanilla is also the neutral complete visual system under `/r/vanilla-kit/`.
+The name describes appearance; the lowercase vanilla dialect above describes
+framework-free delivery. They are separate layers and can be combined or used
+independently.
+
+`/r/vanilla/starter.json` (`kit-project-starter/1`) publishes a complete,
+framework-free starting foundation with app, landing, shop, and content shapes,
+the shared component bundle, durable agent context, and a `kit-manifest.json`.
+Its live proof is `/vanilla`.
+
+Starter ownership is non-negotiable:
+
+- The product owns routes, data, behavior, content, journeys, and permissions.
+- The selected kit owns tokens, typography, component expression, states,
+  responsive rules, motion, and density.
+- Changing the system token source must restyle the same populated interface
+  without changing product-owned markup or behavior.
 
 ## 5. Doctrine
 

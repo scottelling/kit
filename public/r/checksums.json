@@ -1,7 +1,7 @@
 {
   "format": "kit-checksums/1",
-  "registryVersion": "de58e6b782d3",
-  "artifactCount": 766,
+  "registryVersion": "368aef39e62f",
+  "artifactCount": 948,
   "artifacts": {
     "r/accordion.json": {
       "sha256": "2a9e0cfea649710182fa95f101f3e3a6aad4eb66fa78ac14c80761987de21a9b",
@@ -936,8 +936,8 @@
       "bytes": 2408
     },
     "r/doctrine.json": {
-      "sha256": "26cdd178414408234dc605c3c72a871454f8203042f2b78057fc609c99f30e9c",
-      "bytes": 3074
+      "sha256": "27365b8c6386be7e289ee29a3ad6b487f322cd094e6bc49232e7865df98b4974",
+      "bytes": 3089
     },
     "r/document-surface.json": {
       "sha256": "cefdd4e410d04e6fc2338b0942870a339d9d5e857f962dc8e1d6f00c9e85be57",
@@ -2888,8 +2888,8 @@
       "bytes": 1259
     },
     "r/system-catalog.json": {
-      "sha256": "a6f4fc9fbb8ef77c46cc50167bda64c470e745d49b3a0f0f85c44e149d014ecc",
-      "bytes": 69797
+      "sha256": "fa30d3253620db924ce3623a1e7435cc2814bbafcc3c7b6761f6b9ec2f6f816d",
+      "bytes": 74052
     },
     "r/table-of-contents.json": {
       "sha256": "654623097d3db238a795b87bafa02330190c3909e309d2bbc5fc5dbfdfad9b52",
@@ -2979,33 +2979,749 @@
       "sha256": "2af5d7e11c1853dd38329ad1db1ecdb96c21bf136abe94526624480735e88a7a",
       "bytes": 1110
     },
-    "r/vanilla/badge.json": {
-      "sha256": "8c2fb910f878d4ff45092addf80bf95d088a9411cd3a81dc5877bbbaa86e4ef9",
+    "r/vanilla-kit/accordion.json": {
+      "sha256": "d58998279c858f258bbf0a6264d38f2721ce5f2b949cd4e3db165f0b89ef26ae",
+      "bytes": 1184
+    },
+    "r/vanilla-kit/action-menu.json": {
+      "sha256": "4da1c48ebbfa7da1112647e644994b88209636502f7ede41e0cbafce2e9fc8bd",
+      "bytes": 1752
+    },
+    "r/vanilla-kit/activity-feed.json": {
+      "sha256": "8009d10ba6104476593c49154755bd81b99c2cb121b5c68d9a7e5f3b48d40311",
+      "bytes": 1214
+    },
+    "r/vanilla-kit/agenda.json": {
+      "sha256": "0c396e092473950b3592e67d71a953aed52ea555c294572d8fe8a4caf79cd386",
+      "bytes": 1154
+    },
+    "r/vanilla-kit/ai-director.json": {
+      "sha256": "2d9d90f8340e4988267ca09c03cd32fd92f75ccef0f1e56bbc94f3b72833eea3",
+      "bytes": 1926
+    },
+    "r/vanilla-kit/alert-dialog.json": {
+      "sha256": "a2a5da351168369e64b010832e98268d8a5699dd872bb543c4e287afa0d4b76d",
+      "bytes": 1763
+    },
+    "r/vanilla-kit/alert.json": {
+      "sha256": "a7074127a2a5ee0a235ae4b30f7f0ef94c31cd3bbaf28bdb6a7ea74f54171c42",
+      "bytes": 1341
+    },
+    "r/vanilla-kit/anchor-nav.json": {
+      "sha256": "7a286150542e6a4c561b2da2472238da40c10d63eba274845585c88d416f6013",
+      "bytes": 1391
+    },
+    "r/vanilla-kit/app-shell.json": {
+      "sha256": "1fbe259f29d671dc77cc52119d65b1f78a7db1fa0f927a160fbccc9bd4ebe1fb",
+      "bytes": 1537
+    },
+    "r/vanilla-kit/app-switcher.json": {
+      "sha256": "2ebaaa83df0079a9fa6aa59874bd32c4ec4f4ea1992261c7527ef98b02cbb094",
+      "bytes": 1413
+    },
+    "r/vanilla-kit/application-shell.json": {
+      "sha256": "e1def2b6bae2a1225068f0b4b0cdd82a6c50ab6b74e81773860949f119a5cfef",
+      "bytes": 2347
+    },
+    "r/vanilla-kit/auth-card.json": {
+      "sha256": "f460ef9cac67fdb8e74649fa5abb32c4d5f892e1bc3fe95d85657c46da189f9e",
+      "bytes": 2076
+    },
+    "r/vanilla-kit/avatar-group.json": {
+      "sha256": "a247758544927ee04775f48058350db134176dcaf7fd7290696b03c8e98f9b9b",
+      "bytes": 1206
+    },
+    "r/vanilla-kit/avatar.json": {
+      "sha256": "80028d0217551560a13e80863ff87122896ed73dd51f25a5f5b671a039d030d0",
+      "bytes": 1155
+    },
+    "r/vanilla-kit/back-link.json": {
+      "sha256": "ea150a410afa69355c7eb697a35f00dc526559248b242d39aca92fdef14902e3",
+      "bytes": 1380
+    },
+    "r/vanilla-kit/badge.json": {
+      "sha256": "9b4a2a3f2f238084a619f14538025e804dc1e5dd930d897e55bd731ed178018c",
+      "bytes": 1604
+    },
+    "r/vanilla-kit/banner.json": {
+      "sha256": "6598da258fd04b5b3ffe92e43b2502944376d0807347c681911eca14603b0db8",
+      "bytes": 1351
+    },
+    "r/vanilla-kit/bar-chart.json": {
+      "sha256": "67dae8217a745706c553eb0057b16093a4ee3e6c6aface2b4a19edf10eb8bab0",
+      "bytes": 1210
+    },
+    "r/vanilla-kit/bottom-nav.json": {
+      "sha256": "b027f7d66e5fce10df849f76f23abeb76359ce866ff2e67a1e43f0e8d7f0c9a4",
+      "bytes": 1391
+    },
+    "r/vanilla-kit/breadcrumb.json": {
+      "sha256": "2a4c182e6019eef22e593f10b8469606c58e08135416d202be915db89b434ed6",
+      "bytes": 1394
+    },
+    "r/vanilla-kit/bulk-action-bar.json": {
+      "sha256": "801317c91bca70232de6119f5c50bce969a194576b62f6bc32b229126e79c7ba",
+      "bytes": 1636
+    },
+    "r/vanilla-kit/button-group.json": {
+      "sha256": "8a3dbd99ae42fc0c51321ffae8036c38cade4f35f1789c0dfb899ecb045f0b4f",
+      "bytes": 1609
+    },
+    "r/vanilla-kit/button.json": {
+      "sha256": "f959c7967bad0bd9e133c5bec3807fa422d9971a0b7954be6ee42a3392d19ef4",
+      "bytes": 3298
+    },
+    "r/vanilla-kit/calendar.json": {
+      "sha256": "ce8f60bc0db63d2d2e5359e292b7a38fbe7f75869860ba9c9a3c1aa195ffcff7",
+      "bytes": 1362
+    },
+    "r/vanilla-kit/card.json": {
+      "sha256": "250a3548f7347abe22605405b4d8263d68be1a7a2fa8cabbca2d3081e8eddc2f",
+      "bytes": 1994
+    },
+    "r/vanilla-kit/carousel.json": {
+      "sha256": "1cd08ae3955e9f26fc654bfdaa3b1322c8555f49b75a914bb8f0f8aafa583dd6",
+      "bytes": 1393
+    },
+    "r/vanilla-kit/cart-summary.json": {
+      "sha256": "fa630ab66a60b16dc9bb36bd393ffd9f4aabb328f5c4f1efb9d93a6e84f47728",
+      "bytes": 1819
+    },
+    "r/vanilla-kit/checkbox-group.json": {
+      "sha256": "cb3e18d2e8bcb38806fd9948d3d9307c1066f02f35be83cca6debf7b7c8074dd",
+      "bytes": 1352
+    },
+    "r/vanilla-kit/checkbox.json": {
+      "sha256": "3d045ea482b8d16c1faa20d069a03aa4802d30068d4721bf1818ba79c74122d5",
+      "bytes": 1289
+    },
+    "r/vanilla-kit/checkout-form.json": {
+      "sha256": "f35641ea61a2d26d5710f6df5750cb4a8b872cb9b9c97af565443a7bdefcbb5a",
+      "bytes": 2116
+    },
+    "r/vanilla-kit/code-panel.json": {
+      "sha256": "0d90c7bf9ba21ae735b847c242697e8557d7ae5125ca0a791bbffd1e51fa6170",
+      "bytes": 1429
+    },
+    "r/vanilla-kit/collapsible.json": {
+      "sha256": "e2a75d3b2dd67ab964aabc04be1ff41485be27d7165697ecab7156f2f15bb397",
+      "bytes": 1204
+    },
+    "r/vanilla-kit/color-input.json": {
+      "sha256": "876f84421d23e58ed7e451ad1a18ada41a69b054db4d6114f2b669f95956a852",
+      "bytes": 1358
+    },
+    "r/vanilla-kit/color-swatch.json": {
+      "sha256": "dfa509a3bf8dfc111bb31c8412f4a9b97d920850d33201e6f3cd707e5a5c3afb",
+      "bytes": 1152
+    },
+    "r/vanilla-kit/combobox.json": {
+      "sha256": "385cfa9bd825f129c7f70dcc5ea27fa3c1c1c285af7fab0732b71759e0024753",
+      "bytes": 1336
+    },
+    "r/vanilla-kit/command-bar.json": {
+      "sha256": "d0c9c8f7912d2256bb28e9b83bec1154a31146c8d0d4b4d6749d656fd3bfe7bd",
+      "bytes": 3853
+    },
+    "r/vanilla-kit/command-menu.json": {
+      "sha256": "d269244ad5e17f098b8dae3ffdce83ba3ada95306f42f8b27c7caa0496300acb",
+      "bytes": 1413
+    },
+    "r/vanilla-kit/command-palette.json": {
+      "sha256": "e76a8de5dfec438c5edbda7f41692117556411b9f8984294065244ee05289a06",
+      "bytes": 1796
+    },
+    "r/vanilla-kit/command-suggestion-list.json": {
+      "sha256": "4148fe083c650799a4f075c0bef8c9b9b66610393864bfa9aa7d02521fafb972",
+      "bytes": 1373
+    },
+    "r/vanilla-kit/contact-form.json": {
+      "sha256": "fc8d92a4e4ab665a92187c09d79bdd6faebd7f620d8ac038ed59ed7a48fc5ae2",
+      "bytes": 2106
+    },
+    "r/vanilla-kit/container.json": {
+      "sha256": "833a2eed160e914236f7b42ee662c202fb0ab0014c49d101f989bb6cd005778b",
+      "bytes": 1026
+    },
+    "r/vanilla-kit/context-menu.json": {
+      "sha256": "31994dc1a2e714ae753c43b5215c8c44112f9e3226965ace9938ad12b9c95cbc",
+      "bytes": 1763
+    },
+    "r/vanilla-kit/copy-button.json": {
+      "sha256": "d73140d9a1276d7155562f6376d650dedfcb670e071638c587a1b518a14ed430",
+      "bytes": 1601
+    },
+    "r/vanilla-kit/data-table.json": {
+      "sha256": "d8be6aaa0ac20269ca11d4cd499b94f94c494537d8632c0586798bc130bec428",
+      "bytes": 1305
+    },
+    "r/vanilla-kit/date-picker.json": {
+      "sha256": "ad4be414a42a6fbd0635cc648d446d7849f3d2e960f9f9fa27fb00d122a665f1",
+      "bytes": 1357
+    },
+    "r/vanilla-kit/delivery-action.json": {
+      "sha256": "3eae9b74d53d983a19924eaf4a61a16c1e0374ba50c32ca2d49686b248088559",
+      "bytes": 1240
+    },
+    "r/vanilla-kit/delivery-workspace.json": {
+      "sha256": "763821bc0636aac57f4961c5212abf12ed3ca1d4d1daa2e150577ae6ea7e45ba",
+      "bytes": 2115
+    },
+    "r/vanilla-kit/description-list.json": {
+      "sha256": "1130942c0d762ab4643d134ac97750cdce97c64d6228428d4825050960dc8ba2",
+      "bytes": 1288
+    },
+    "r/vanilla-kit/design-tokens.json": {
+      "sha256": "5759edeca1cb21648b17256464f4d83ab3cbdf8e712a6ee9f8048ec9114ca0d2",
+      "bytes": 12373
+    },
+    "r/vanilla-kit/desktop-shell.json": {
+      "sha256": "079d8213e4987e40942ffca51fbb2efbc5dfc559b334df78c4a75dd7c788763d",
+      "bytes": 1862
+    },
+    "r/vanilla-kit/device-frame.json": {
+      "sha256": "7bcd4e6ce58fa828d0b78132066f62a5bc15ea330cd9a8245a5e861133b0f849",
+      "bytes": 1297
+    },
+    "r/vanilla-kit/dialog.json": {
+      "sha256": "1d8655be6c46cd01b0b61c719c6126ae84e4ee0686910ff3715a5d0b96822175",
+      "bytes": 4557
+    },
+    "r/vanilla-kit/dock.json": {
+      "sha256": "5bfd247fbbc45e139024eff5ef6b782f4f659408b9754bbf08bc5fcbfed4ce35",
+      "bytes": 2416
+    },
+    "r/vanilla-kit/document-surface.json": {
+      "sha256": "8e5134ef8e9e2a43010886a38e1b6c09bd7cfaf1ae599c29bf2ad3abe0fc9830",
+      "bytes": 1440
+    },
+    "r/vanilla-kit/donut-chart.json": {
+      "sha256": "3ae14a6334f7991973cdbafbe387613d5e81d401a5bb017b7757233b1265a20e",
+      "bytes": 1230
+    },
+    "r/vanilla-kit/drawer.json": {
+      "sha256": "9d861228a19ed8ae3dedc9a3f0eff363029ec018f009f8df54d2e94d2566bd57",
+      "bytes": 1700
+    },
+    "r/vanilla-kit/dropdown-menu.json": {
+      "sha256": "813346aabf8580eb295225d363c11946a0a73cb91f8f00664d3f2e993b958f23",
+      "bytes": 1774
+    },
+    "r/vanilla-kit/dropzone.json": {
+      "sha256": "d92dc7ac1bd3555ba929b5cdfec11363bfb8b21cde2a7008c90aa2414ae1e642",
+      "bytes": 1227
+    },
+    "r/vanilla-kit/editor-toolbar.json": {
+      "sha256": "e0c85c211fb4cc08e5803b6e52a1a6ee4962aa89579a86bb9f4718c478f1851c",
+      "bytes": 1762
+    },
+    "r/vanilla-kit/empty-state.json": {
+      "sha256": "6f2f24bc24db8af57b7f2013f7b865e8e584f15d3fc328369bf1b1c98fad8a32",
+      "bytes": 1599
+    },
+    "r/vanilla-kit/error-state.json": {
+      "sha256": "c6f6a4763cf337dd441707fcc440ddc1e0d595ba39562443dcb6c907b307a769",
+      "bytes": 1185
+    },
+    "r/vanilla-kit/favorite-button.json": {
+      "sha256": "63fc8710fb5280a96489036d27ab45e1fe095f2da232614a8f08509a41221707",
+      "bytes": 1695
+    },
+    "r/vanilla-kit/feedback-form.json": {
+      "sha256": "ad3d94548302d128adb0f0f76a7750ac6cc67a4e25f606b1142a575c6d286637",
+      "bytes": 2116
+    },
+    "r/vanilla-kit/field.json": {
+      "sha256": "a91aa2410c94e1eb7afbf92ea85a2456c18369d3ccb73aebf9570c1cc3cfc67d",
+      "bytes": 1306
+    },
+    "r/vanilla-kit/file-upload.json": {
+      "sha256": "036431799daa6cc04b8b2fdf24a3e4ba62fea177c4bae49f24842f007e2736a5",
+      "bytes": 1251
+    },
+    "r/vanilla-kit/filter-bar.json": {
+      "sha256": "dba82e9ae7ab7a83cb9f9dce98a3796e10b4b173379ca27248138da32c5f3366",
+      "bytes": 1765
+    },
+    "r/vanilla-kit/filter-tabs.json": {
+      "sha256": "0c5889474a208287846f1f0b7be9e76264d52e9264446bf34ab7c884af880ee7",
+      "bytes": 1456
+    },
+    "r/vanilla-kit/floating-action-button.json": {
+      "sha256": "b561fb915a35fbd127424e673f83849579e843d322ec7fa104b8eec6ec963bde",
+      "bytes": 1709
+    },
+    "r/vanilla-kit/focus-ring.json": {
+      "sha256": "f7b457c77a3204ac5d84bf800f13657ecd6a70b97082371fd97e11c98db97a3b",
+      "bytes": 1285
+    },
+    "r/vanilla-kit/forgot-password-form.json": {
+      "sha256": "bbff21d0b47b5bfb2ac7d1ebdc4e6d625ffcc97162458ab5f0988390d6874df1",
+      "bytes": 2183
+    },
+    "r/vanilla-kit/guided-tour.json": {
+      "sha256": "455dd692736212c3aea04131e992632ba0229680db96a271764262f23c42f533",
+      "bytes": 1561
+    },
+    "r/vanilla-kit/hover-card.json": {
+      "sha256": "94009629674698b7a6aa73dc1fe19f6d4a8214d4c4bc0eb1868ee5430935521a",
+      "bytes": 1741
+    },
+    "r/vanilla-kit/icon-button.json": {
+      "sha256": "674476cd774db86f1aa57bb29fd2b5cdd27dad6df82d5c70a196c80efe1cc57e",
+      "bytes": 1602
+    },
+    "r/vanilla-kit/inline-edit.json": {
+      "sha256": "2a876ba49f0dc3d5de2e79ad98511902fac288537f32940798319d969e52826c",
+      "bytes": 1363
+    },
+    "r/vanilla-kit/input.json": {
+      "sha256": "78bfecdb6ea5dc181f3b6287da5a74006934463bdde3722e306a796c941bcaa6",
+      "bytes": 1750
+    },
+    "r/vanilla-kit/inspector-panel.json": {
+      "sha256": "aec2bc5910df0764f810ee086c2cf0f7f328efe007ae5b77bf1bdcf83aa76e2e",
+      "bytes": 2078
+    },
+    "r/vanilla-kit/invite-form.json": {
+      "sha256": "d922403796009b21aa4a5ae60fc8a748b74a208963c94a89fd31500ac9f6e821",
+      "bytes": 2096
+    },
+    "r/vanilla-kit/layer-list.json": {
+      "sha256": "37f8b31173d2e83dbe606f9700952fc4ecf006d1f45b70ad6f0733210a87a654",
+      "bytes": 1681
+    },
+    "r/vanilla-kit/lightbox.json": {
+      "sha256": "747815c4c2820677d885eb3bc0e40a157a3331e6ed6410480366483c1671e1ab",
+      "bytes": 1722
+    },
+    "r/vanilla-kit/link-button.json": {
+      "sha256": "461f1dbfa3cf3e42f9d320967719454337b2ec87b7574988720a510ac089d0c9",
+      "bytes": 1602
+    },
+    "r/vanilla-kit/list-item.json": {
+      "sha256": "08be5fb81cdb5e2d6ee4efc018194531d6a5699d545709e47f6bf7df7893c78c",
+      "bytes": 1200
+    },
+    "r/vanilla-kit/list.json": {
+      "sha256": "6968fde2e678e5e794e4b5f916c2e8327904cf81cf766971a3b69cdebb2f328e",
+      "bytes": 1158
+    },
+    "r/vanilla-kit/loading-dots.json": {
+      "sha256": "a58e59b9bd28cee7ce3ba3a643783751284c425f01c9450e4773c95ddf8b4267",
+      "bytes": 1220
+    },
+    "r/vanilla-kit/master-detail.json": {
+      "sha256": "e4367baed3708a994ec66bf2108867743f4c0893e000e2ecc33c550d822d109d",
+      "bytes": 4169
+    },
+    "r/vanilla-kit/menu-bar.json": {
+      "sha256": "6b749eddfb6e3e1cb0e8ffbd58cf685a372043d29b79207802ed57bdf6380e76",
+      "bytes": 2032
+    },
+    "r/vanilla-kit/menu-button.json": {
+      "sha256": "a6342db21126cff9c730080470c8a1a0146131bec8be1bd0329f0f19b35428ff",
+      "bytes": 1976
+    },
+    "r/vanilla-kit/meter.json": {
+      "sha256": "00af3fc01b5f0555ad9cb86f27d7d8254b53c3ba5ba8d09ff91f767c29011f5f",
+      "bytes": 1131
+    },
+    "r/vanilla-kit/mobile-app-nav.json": {
+      "sha256": "f81b00052f53bba7aff98da448221265720b58bba4ecc13a00778a3c16743c2c",
+      "bytes": 1432
+    },
+    "r/vanilla-kit/motion-check.json": {
+      "sha256": "8b8309690bddb57d554225b1d74cb4147d12383cd8b0d9bcf1c3c606bd887852",
+      "bytes": 1184
+    },
+    "r/vanilla-kit/motion-inspector.json": {
+      "sha256": "49f9ff81304911129023ea874b95b8ec92347063f4654794fe1426beab6c6117",
+      "bytes": 2019
+    },
+    "r/vanilla-kit/motion-preset-picker.json": {
+      "sha256": "b251958e71a3eaadd3267118b957b22cf84dabc73380c0f3fbca189981049b6a",
+      "bytes": 1333
+    },
+    "r/vanilla-kit/motion-timeline.json": {
+      "sha256": "dd726666e66a7ae9608c8e905b4522e949290029af92b4809f2eeeae76a52c5d",
+      "bytes": 2056
+    },
+    "r/vanilla-kit/navigation-menu.json": {
+      "sha256": "5e89e2194df9986d7d4483ad87325c5ac2d3e3d47ba4bf57fef1e7c65932e322",
+      "bytes": 1446
+    },
+    "r/vanilla-kit/notification-center.json": {
+      "sha256": "8133f01605bb928d20be9c160cf854546acf3a4d48ffa89db351dad7a30a45db",
+      "bytes": 1577
+    },
+    "r/vanilla-kit/number-input.json": {
+      "sha256": "d66b032b96c2e6bc67b8e832c037638e88f7580d76fa76feec94dbd83dea80a9",
+      "bytes": 1366
+    },
+    "r/vanilla-kit/offline-state.json": {
+      "sha256": "8fe05d01bfec17f1165ed4783a745ca9cdf46407e41168a2f7166961a89e8cf3",
+      "bytes": 1208
+    },
+    "r/vanilla-kit/order-summary.json": {
+      "sha256": "40d0d5aeb805906b2d8996ef9bdcfbb90d85b80cd1e9ab6ab6ea78f410bff681",
+      "bytes": 1829
+    },
+    "r/vanilla-kit/otp-input.json": {
+      "sha256": "01d4fc611eab6c8ad79fdb8a83396c3dace1883185e2bd38d459e4f73c982a46",
+      "bytes": 1343
+    },
+    "r/vanilla-kit/page-header.json": {
+      "sha256": "05147adeaf5ed2fc5d00eba0d7d78c7d1473ba095a491b6b789e01b948539b66",
+      "bytes": 1402
+    },
+    "r/vanilla-kit/pagination.json": {
+      "sha256": "471eeb86866fdb72c031672643510ec8706b5ed2a05109623dffb0736674f614",
+      "bytes": 1449
+    },
+    "r/vanilla-kit/password-input.json": {
+      "sha256": "9f661c470514a9283b0d8747229f2362b6f01bba9115d25504ef2eb4fba6ef16",
+      "bytes": 1391
+    },
+    "r/vanilla-kit/playhead.json": {
+      "sha256": "0444973697f4841236f3821efe5884da0e7f7490e618d4e98d04aa4d2e704497",
+      "bytes": 1049
+    },
+    "r/vanilla-kit/popover.json": {
+      "sha256": "c2fffb29b0fa3787b9ecad679c7f85cf63a198e32cefde5f649eae68956e014b",
+      "bytes": 1711
+    },
+    "r/vanilla-kit/preview-toolbar.json": {
+      "sha256": "8c3095982995ffe8b217baa00727cf708f51c62cdc54e9c1b9880d193c2f4212",
+      "bytes": 1566
+    },
+    "r/vanilla-kit/pricing-card.json": {
+      "sha256": "8a0360948d05f998d2455e0d7fa4fb954845e9243c1f51b0ce6cc2783f5edb36",
+      "bytes": 1722
+    },
+    "r/vanilla-kit/pricing-table.json": {
+      "sha256": "aaf4efebe2d0ed054edd479896b42ffa0781dec05af4096a5acf281d65e3e3a2",
+      "bytes": 1731
+    },
+    "r/vanilla-kit/profile-form.json": {
+      "sha256": "d3e1cde40e4e26d25f489626e50d8aa9e59f47bdd149c94691cfe1a0c76c4a58",
+      "bytes": 2106
+    },
+    "r/vanilla-kit/progress-card.json": {
+      "sha256": "b50f0e2afb3875661b0d1cb0a0741c21347f91b8668341910443be7f29d8ea93",
+      "bytes": 1418
+    },
+    "r/vanilla-kit/progress.json": {
+      "sha256": "c6075e68603acc38ebdc72f75029d2234982060cc5448f9f54b84afb2fa8df80",
+      "bytes": 1161
+    },
+    "r/vanilla-kit/project-switcher.json": {
+      "sha256": "11fe8faa0a3285171fa3367aa52771f7c834b53c85cadcf5c4d24199271d337b",
+      "bytes": 1649
+    },
+    "r/vanilla-kit/radio-group.json": {
+      "sha256": "3d5523221129713732bead8e77028c6d9f7713d2f224d391865a1a4dd64629f3",
+      "bytes": 1316
+    },
+    "r/vanilla-kit/radius-guide.json": {
+      "sha256": "22eeb2548913f2ba6fefb3269dd5cf48e860b762c5b6d4838884be063503f002",
+      "bytes": 1169
+    },
+    "r/vanilla-kit/range-slider.json": {
+      "sha256": "d46917ec5102efaeab1fdae722b11e91b418f43ff52ae9fb54da91e7fde40540",
+      "bytes": 1198
+    },
+    "r/vanilla-kit/rating.json": {
+      "sha256": "17751ab9fbe459bbdc808597d591c3dc7162809566ef9adf3ad40cea68663360",
+      "bytes": 1309
+    },
+    "r/vanilla-kit/registry.json": {
+      "sha256": "ba374222ce5cbe7a67a317aad25044a5c885899fdf40881543ade8fb00464eab",
+      "bytes": 89506
+    },
+    "r/vanilla-kit/render-status.json": {
+      "sha256": "da6eb8499a74c763f1bd89d3f4b8aade26bbbfc7fd17388c30ffb7e023e95709",
+      "bytes": 1388
+    },
+    "r/vanilla-kit/scene-list-item.json": {
+      "sha256": "f18b25c2384d4b218f7bd29af15a959189d255d94d672f22324501f440a91504",
+      "bytes": 1779
+    },
+    "r/vanilla-kit/search-field.json": {
+      "sha256": "b578e9f3d468ef1d2047685acf84fe4e7c1d901df1908bf6e85e989a8d6de0ac",
+      "bytes": 1373
+    },
+    "r/vanilla-kit/search-results.json": {
+      "sha256": "c75d5a511aa37534bc8dc55fc011353fe21e34bdc4a511f5b4d3337fd500ae06",
+      "bytes": 1801
+    },
+    "r/vanilla-kit/segmented-control.json": {
+      "sha256": "9a42a0c25f780a9ea78f49ebfb5b6075feb0058854beec2b8308caf8cd9d5cd7",
+      "bytes": 1659
+    },
+    "r/vanilla-kit/select.json": {
+      "sha256": "8f53c53c8d573321fe9e262af675c4f5e66d36a8e9d83ecd9216cb74e1fd4a04",
+      "bytes": 1323
+    },
+    "r/vanilla-kit/separator.json": {
+      "sha256": "c2327cc1f8d0984ea0986cb46f9a6a3818934829137bdac9dfb29204590cdfcb",
+      "bytes": 1028
+    },
+    "r/vanilla-kit/settings-panel.json": {
+      "sha256": "a54a676971d8eaad498faed03b4fcbd4882cfb72236c6d4fe1e0afd5d1bfa0be",
       "bytes": 2126
     },
+    "r/vanilla-kit/settings-sheet.json": {
+      "sha256": "1f0e1de49a0e0dedb962124e490ddc5ae0676391295498f776c8c5c2b53a7b9a",
+      "bytes": 4718
+    },
+    "r/vanilla-kit/shadow-guide.json": {
+      "sha256": "e9afb88377616bf23a16f93a2ddfcc6a49e8e6e430c07746f2a47d18cad23e3a",
+      "bytes": 1155
+    },
+    "r/vanilla-kit/sheet.json": {
+      "sha256": "70881ba5dd4ca457645b90b01c54d0649dabc660373d50520c120ec473532ff7",
+      "bytes": 1689
+    },
+    "r/vanilla-kit/sidebar.json": {
+      "sha256": "a207010d10389fe6ef379745b078919ad5e055eb2b8a8b2779e3686eaf4badbc",
+      "bytes": 1361
+    },
+    "r/vanilla-kit/sign-in-form.json": {
+      "sha256": "96b8afd15cdf8a172d4d233bcff67e2d61bead6e13fcaeab3fe9a947f14e3b7f",
+      "bytes": 2103
+    },
+    "r/vanilla-kit/sign-up-form.json": {
+      "sha256": "2eb7f602521011bd37bcc04e1f7a66b8a76b2185578ee0c2b079e70ff4a036a6",
+      "bytes": 2103
+    },
+    "r/vanilla-kit/skeleton.json": {
+      "sha256": "ec3be99d35ac53d0f4eda36508ba6c4e94d201e3649252bd8cda6fed4940e8b5",
+      "bytes": 1187
+    },
+    "r/vanilla-kit/slider.json": {
+      "sha256": "f79ca065e49e93d607ef890649e6a4b98c2248844f82b886a3ece6de8d17e9ea",
+      "bytes": 1141
+    },
+    "r/vanilla-kit/snackbar.json": {
+      "sha256": "594d6c2134a0c41b227c7f011b01e0e5bd61516f3a5c05e2e0f8485049345f4b",
+      "bytes": 1371
+    },
+    "r/vanilla-kit/spacing-guide.json": {
+      "sha256": "8d491eb9c1fdcc5ec92eff8326e75609a6f0fc7e6a8e5c7e23440ca862334f54",
+      "bytes": 1099
+    },
+    "r/vanilla-kit/spinner.json": {
+      "sha256": "0c5290c21c45209c5feb531d76a70b1b731f295b1258debe6eacfc5f372a1ac7",
+      "bytes": 1178
+    },
+    "r/vanilla-kit/split-button.json": {
+      "sha256": "8599283a6ca8cf57a465d79484633017d9f6187ceeb5c953468717e73b619d19",
+      "bytes": 1986
+    },
+    "r/vanilla-kit/split-view.json": {
+      "sha256": "818d229d813534fa14031e2dbfde8db6270ef974f4339861bab60af7f0a9bc69",
+      "bytes": 1766
+    },
+    "r/vanilla-kit/stack.json": {
+      "sha256": "71b66a3df267376bcb4afcef45f500762e8019c8316b12a6c98684aef4d64ff5",
+      "bytes": 993
+    },
+    "r/vanilla-kit/stage-viewport.json": {
+      "sha256": "ff1fd85227b170d479ccd350c9a472b4fe02ddd7868ea35667371cef990b3b6b",
+      "bytes": 1404
+    },
+    "r/vanilla-kit/stat-group.json": {
+      "sha256": "dcd969be3f56138cec8a5846635b5711ce278c6a1d8f8315d41d95ff8ef879a2",
+      "bytes": 1366
+    },
+    "r/vanilla-kit/stat.json": {
+      "sha256": "d6197a0b2f3b33e54f8c97c9cdf96b5a5cbe36c2b26d43b4878bf1e3f1684766",
+      "bytes": 1315
+    },
+    "r/vanilla-kit/status-bar.json": {
+      "sha256": "9c097ca4f07173512b378737bf0ade28a35afccc509c22deb6c8c1f28c25fb18",
+      "bytes": 1105
+    },
+    "r/vanilla-kit/status-dot.json": {
+      "sha256": "e465c2991803766aa2e22e5e8d4130798fa7cfcf6766b2569b1b877fbbc2d1c8",
+      "bytes": 1388
+    },
+    "r/vanilla-kit/stepper.json": {
+      "sha256": "9731851564295719261881f9c2a5dac6e36472899b2c55b1e1c72300e8400dc9",
+      "bytes": 1419
+    },
+    "r/vanilla-kit/storyboard-rail.json": {
+      "sha256": "bfec96aff9940457cc55a370d7394637f07b821e2e08abece293097ab3403840",
+      "bytes": 1905
+    },
+    "r/vanilla-kit/studio-header.json": {
+      "sha256": "77c695f203180201e71908e1bb0018e1ad35b4992b35ac8dad2cf370c26d8948",
+      "bytes": 1831
+    },
+    "r/vanilla-kit/studio-shell.json": {
+      "sha256": "7e235f8b629f014ddbf75e3ceae4286d400552e1ebcc09751ee5a8bc13354d94",
+      "bytes": 1608
+    },
+    "r/vanilla-kit/style-inspector.json": {
+      "sha256": "eefc35884aa79c8143cde63c4c1f4a03f1934fbc2659e05f91a6918b253aa425",
+      "bytes": 1407
+    },
+    "r/vanilla-kit/success-state.json": {
+      "sha256": "b4f5e90a2212f69f868d9d3fe74c30aa1896d6000405a7d2febcb96a77619906",
+      "bytes": 1196
+    },
+    "r/vanilla-kit/surface.json": {
+      "sha256": "33bc137cae30fe5a1c3c8b2a78e885a7c102a8546b19bab9fd28314803abf731",
+      "bytes": 1258
+    },
+    "r/vanilla-kit/switch.json": {
+      "sha256": "a190ef414dc4723709415bbddda411d8ff78ed36f0d3a1a4b7c40f2863331659",
+      "bytes": 1267
+    },
+    "r/vanilla-kit/table-of-contents.json": {
+      "sha256": "802eebd4023f3d03ee959181d2bbb6ffaa2aceed4a12d56a1fd4abd19f68bd57",
+      "bytes": 1465
+    },
+    "r/vanilla-kit/table.json": {
+      "sha256": "fc63d190828993cd2c4acc29004e57309b3f0da58586c70b3a82ff4b3b149959",
+      "bytes": 1263
+    },
+    "r/vanilla-kit/tabs.json": {
+      "sha256": "9604bd5937d38a03b6fc50d34338fb4cdd1e0ced06708b4581418e8c8c715bad",
+      "bytes": 1389
+    },
+    "r/vanilla-kit/task-board.json": {
+      "sha256": "3a606de7478182b286541e0a14f1b6e37dc82175c2f6f634fe7a439863639228",
+      "bytes": 1666
+    },
+    "r/vanilla-kit/task-rail.json": {
+      "sha256": "2fa6f775ff6a564bd4c7e7bbe07e9df6372b8aa57895be9b30ff476bbd1793d2",
+      "bytes": 1355
+    },
+    "r/vanilla-kit/template-gallery.json": {
+      "sha256": "81e03a2b9b22a78523c6e7b6c3f1554c6a4b202c134574568ccfae03a6d4d873",
+      "bytes": 1462
+    },
+    "r/vanilla-kit/terminal-surface.json": {
+      "sha256": "e777c68b97c7bfb210098056dfdbac91f70ea0c4628b1c5a17bdd52a8e19bedd",
+      "bytes": 1167
+    },
+    "r/vanilla-kit/textarea.json": {
+      "sha256": "413e7e8fb26675e3b17eabd6b759e0b726a0af2431a9d6900a1cf8c68ffb14bd",
+      "bytes": 1321
+    },
+    "r/vanilla-kit/time-input.json": {
+      "sha256": "057f5551fb7aa878102418e2d7ee74594a987bc09f6b8ab5a928b24e8ba3a47c",
+      "bytes": 1347
+    },
+    "r/vanilla-kit/timeline-segment.json": {
+      "sha256": "49996c35af208d24ec725ce8836ad73eed4eaa477df6d7aac22663cdb15ca32c",
+      "bytes": 1253
+    },
+    "r/vanilla-kit/timeline.json": {
+      "sha256": "4ec0261bd4433890883f613335136b6f465013218e528cab1278ebe09fdd6142",
+      "bytes": 1172
+    },
+    "r/vanilla-kit/toast.json": {
+      "sha256": "012153f9bd29f122afd8a79cce996ee44da10a071ffe9b6224e4e2f08b33fa29",
+      "bytes": 1341
+    },
+    "r/vanilla-kit/toggle-button.json": {
+      "sha256": "0c6cbffb1a638108fd6a1ead6cca4e5b5e620e29b7f97b9a03f826373f86243f",
+      "bytes": 1675
+    },
+    "r/vanilla-kit/toggle-group.json": {
+      "sha256": "32554d86beca0ff91927529ee469f14d38f09f38fb74e9db791d947ce8b5293e",
+      "bytes": 1609
+    },
+    "r/vanilla-kit/tokens.css": {
+      "sha256": "fbd4c44eee50060f092cf7c3104d7be016d718c77e65475e1c8bb782c4946c68",
+      "bytes": 5266
+    },
+    "r/vanilla-kit/tokens.json": {
+      "sha256": "257c24c48b897a2b15eff7b560a6b973e9e479dedcad5f7eb7a26d095508b3f1",
+      "bytes": 10976
+    },
+    "r/vanilla-kit/toolbar.json": {
+      "sha256": "628267ef296dd25e5bb1f0fcf592f6686bca320cc0d145dad9475e5ec4e11a30",
+      "bytes": 1562
+    },
+    "r/vanilla-kit/tooltip.json": {
+      "sha256": "2a6f77b2be2eadd9c3685e3636679a1b8ba14b7fafe51339d18862a960ef4fe4",
+      "bytes": 1711
+    },
+    "r/vanilla-kit/topbar.json": {
+      "sha256": "0d47f47333a2b9b173e152672c6592124665266cdb3d117b649ff82e47ae4f59",
+      "bytes": 1350
+    },
+    "r/vanilla-kit/transport.json": {
+      "sha256": "8a2d1eb853e1b8675a4fda5b99ae5ac76b2919640a8d3a3dd3b0b2c039b0a2c1",
+      "bytes": 1845
+    },
+    "r/vanilla-kit/tree-view.json": {
+      "sha256": "bef58424ffc8abf97a2471adcfd9049581bda075d4e79c692fbbd1b9c5b07733",
+      "bytes": 1181
+    },
+    "r/vanilla-kit/type-specimen.json": {
+      "sha256": "58deca9552d96af162612d0796a602083643f4a941d4980cacfdba3e2c957a0e",
+      "bytes": 1118
+    },
+    "r/vanilla-kit/view-switcher.json": {
+      "sha256": "8b6ef647d87619cfc30f70fc140edec8c803d0e0f4d9f8a07a8e136650aa0f59",
+      "bytes": 1476
+    },
+    "r/vanilla-kit/viewer-shell.json": {
+      "sha256": "cd20372b21821aa5d4fa96905f77dd2044eb0554a4a8ddfec832ee7d108d9d1e",
+      "bytes": 1378
+    },
+    "r/vanilla-kit/widget-shell.json": {
+      "sha256": "8f939487afc0ac74f19287bbffb513863c2395ceb612fa4b02465cb289f3f0ac",
+      "bytes": 1455
+    },
+    "r/vanilla-kit/window-shell.json": {
+      "sha256": "e6392468e57f74cc444abf9ee2737dd644b1926097eff69ecfa30d8cc84dee79",
+      "bytes": 2029
+    },
+    "r/vanilla-kit/workspace-error-boundary.json": {
+      "sha256": "4e3940f5ae5d763ce0b51e394b62a6b8c66f080eec7b12be685991562c7a395e",
+      "bytes": 1618
+    },
+    "r/vanilla-kit/workspace-switcher.json": {
+      "sha256": "afecd97bcb693a7a46c168fe729a0a7006c31c017b8542db1c330fb374eac7fb",
+      "bytes": 1618
+    },
+    "r/vanilla-kit/workspace-tree.json": {
+      "sha256": "faeeac1d67237e30fdfd89dfb08034bf4f95deb8a1ceba0fc60d93857e90e2af",
+      "bytes": 3874
+    },
+    "r/vanilla/badge.json": {
+      "sha256": "4aabec262737fda149ff0a9eab6f22fb7d2a41ffd92007df79405f4b43a11b2d",
+      "bytes": 2137
+    },
     "r/vanilla/button.json": {
-      "sha256": "57b3877055db1d47670cf615f9d050c04221c5810511b1211b513759b34cf4c9",
-      "bytes": 2616
+      "sha256": "774958a460bdfb617bd64f9b0a685fcba9b3c0c83d93aecd46b4f54a67c94453",
+      "bytes": 2627
     },
     "r/vanilla/card.json": {
-      "sha256": "e2d1995cc4104376a84d2378231fa0d8c74801eeb9c1e3f3e57265651b532aa3",
-      "bytes": 1824
+      "sha256": "a8b0dc20908b6c0cfc4144980f89310521183f52a6ae84b2d304cc66c56ab139",
+      "bytes": 1835
     },
     "r/vanilla/checkbox.json": {
-      "sha256": "654e039675d130a8552a24fa67d62c502c5dad98d9dd67a74b41c8b35009541e",
-      "bytes": 2474
+      "sha256": "2cdf9f8f171cc124e0dbb2c572304b8da69177c7287ef4eb3c0698282cfd87b0",
+      "bytes": 2485
     },
     "r/vanilla/dialog.json": {
-      "sha256": "b3b30601dcd976338b7daba21717e8a569ab69bea6aae7854733aabed5fd37d3",
-      "bytes": 2731
+      "sha256": "2b96e22f83c0d7d77149fe961ba8ef99a219bcc2cb971f6f8c2268c49601b8c9",
+      "bytes": 2742
     },
     "r/vanilla/empty-state.json": {
-      "sha256": "3d541fe3ae1b89e27157bf4c46292cb7c02d043206de7c9b7183e154de0e1f6d",
-      "bytes": 1585
+      "sha256": "3d681aacb40ad5d8223bff34be874a7cfe14d96d2b9bf4dc90bf4deba3662aea",
+      "bytes": 1596
     },
     "r/vanilla/field.json": {
-      "sha256": "5c0ccd95d8b7c44cc5045b658bbbb9cc5ab8760078afabfef25c523c5ec48093",
-      "bytes": 2608
+      "sha256": "71793745aeb3dab182e1075731834fe1734b4c9d12fdf3355416b7c9b6646d89",
+      "bytes": 2619
     },
     "r/vanilla/kit.css": {
       "sha256": "a6e4c0c51cb5d2960bb85f6d94f8d4d1c887d4733255b2b92c01768f071f1991",
@@ -3016,28 +3732,40 @@
       "bytes": 2359
     },
     "r/vanilla/notice.json": {
-      "sha256": "23e419f9c23064d3a169501b481cd6aecaaca4aae19e31efa31f63e62824dcc5",
-      "bytes": 3284
+      "sha256": "33969dba72901b3fd0f15ffc29978adeed35bcb0ff5d13bc5dc6ecedda83b692",
+      "bytes": 3295
     },
     "r/vanilla/registry.json": {
-      "sha256": "da3364f2b632446780e246d8830b87549e5795a3d9e11a5aa2af6af4d19d5ba3",
-      "bytes": 2888
+      "sha256": "9d95d37585fcb9d3e50ff5a2cf0ae0a79435fe26cea6abbb43d1e760682d29e0",
+      "bytes": 3026
     },
     "r/vanilla/select.json": {
-      "sha256": "5a5064450e086807ef85f34d5df452ab6ca74932beb9ca198a76aba5ef00e49f",
-      "bytes": 1834
+      "sha256": "ef6cc38ba4643d3a16483ef5d4017e5c86a2979b0717439a849648fdf13dbaf0",
+      "bytes": 1845
+    },
+    "r/vanilla/starter.css": {
+      "sha256": "a260d1f3cff1603d5d5b59c41913342415242cfdaf8bcab3367403107139953b",
+      "bytes": 10522
+    },
+    "r/vanilla/starter.js": {
+      "sha256": "2919c10c2d09f8f95a1b2c30272ec79858e9e008abe5474af1db03a78ff69c26",
+      "bytes": 1452
+    },
+    "r/vanilla/starter.json": {
+      "sha256": "5d76d2075fe8df4d81fb4cfee2a6ccc161b4a81ea1341291bfccd384cd644611",
+      "bytes": 30721
     },
     "r/vanilla/switch.json": {
-      "sha256": "1034c0f0e7d9d0e41c37196d0354f2a72aa1936aca00a1be9239eb6b493849ac",
-      "bytes": 2229
+      "sha256": "dfe8c37d5f67c1fa258b41d662243ef51b45fd669ac9292a034760da623b1039",
+      "bytes": 2240
     },
     "r/vanilla/table.json": {
-      "sha256": "7fd571add0328ab04b7d7648d58b570a9e9619838aa3355142587040bc2a0b2f",
-      "bytes": 2235
+      "sha256": "31727cd760d8e714541ac7255a2d43114e9d400f1cf200fb8d375e8ebde65e1b",
+      "bytes": 2246
     },
     "r/vanilla/tabs.json": {
-      "sha256": "221c528423da85759f7e87ecb29fd7b0be7f722517d04aa2d63a9ade096575df",
-      "bytes": 4242
+      "sha256": "3c89f4bc6d0ce73a9321bb705b4612172b6f33a1e655e22b7238c4fe15fb3542",
+      "bytes": 4253
     },
     "r/view-switcher.json": {
       "sha256": "78de521c9d8e148bc1623e176a76c714f1d611a2afa22917c73282cd89b322fd",

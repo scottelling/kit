@@ -12,7 +12,7 @@ Master standards: `/Users/scott/ScottAI/01_Active_Projects/oracle/canon/`
 Read before working: `PLAIN_ENGLISH.md` (how to talk to Scott), `MD_TAXONOMY.md` (file names and jobs), `PROJECT_STANDARD.md` (what this project must have).
 When Scott says "make this standard" or "always do this from now on": append it to `/Users/scott/ScottAI/01_Active_Projects/oracle/inbox/INBOX.md` with the date, this project's name, and Scott's exact words. Do not edit canon directly from this project.
 
-`kit` is the public design-engineering registry for Purple Rain, JADE, OS, Animation Studio, focused foundations, and isolated interface behaviors.
+`kit` is the public design-engineering registry for Vanilla, Purple Rain, JADE, OS, Animation Studio, focused foundations, and isolated interface behaviors.
 
 ## Canonical
 
@@ -30,6 +30,9 @@ When Scott says "make this standard" or "always do this from now on": append it 
 - OS registry: `https://kit.scottelling.com/r/os/registry.json`
 - Animation Studio showroom: `https://kit.scottelling.com/kit/animation`
 - Animation Studio registry: `https://kit.scottelling.com/r/animation/registry.json`
+- Vanilla showroom: `https://kit.scottelling.com/kit/vanilla`
+- Vanilla complete registry: `https://kit.scottelling.com/r/vanilla-kit/registry.json`
+- Swap-ready project starter: `https://kit.scottelling.com/vanilla` + `https://kit.scottelling.com/r/vanilla/starter.json`
 - Icon library: `https://kit.scottelling.com/studio/icons`
 - Font library: `https://kit.scottelling.com/studio/fonts`
 - Kit-swap workspace: `https://kit.scottelling.com/studio/swap`
@@ -52,7 +55,9 @@ When Scott says "make this standard" or "always do this from now on": append it 
 - `registry/elements/` owns independently installable behaviors that do not inherit Purple Rain or JADE tokens.
 - `registry/os/` owns the rebuilt OS visual system and its OS-native desktop, window, widget, phone, command, and settings structures.
 - `registry/animation/` owns the rebuilt Animation Studio visual system and its storyboard, canvas, inspector, motion, timeline, code, template, delivery, and recovery structures.
-- Purple Rain, JADE, OS, and Animation Studio each expose the same 175 individually installable interface pieces: 138 everyday pieces plus 37 opt-in specialist patterns. Installing one piece never pulls unrelated specialist layouts into a project.
+- Vanilla, Purple Rain, JADE, OS, and Animation Studio each expose the same 175 individually installable interface pieces: 138 everyday pieces plus 37 opt-in specialist patterns. Installing one piece never pulls unrelated specialist layouts into a project.
+- Vanilla is the neutral complete visual system for new work. The Vanilla Project Starter is the framework-free project foundation. Do not confuse either with the lowercase vanilla delivery dialect: the system determines appearance; the dialect determines file format.
+- `registry/vanilla/starter/` is the source for the public starter. It must preserve the ownership boundary in its manifest: the product owns routes, data, behavior, content, journeys, and permissions; the kit owns visual and interaction expression.
 - Product screens, routes, data, and behavior stay owned by the target product during a kit swap. The kit changes foundations and component expression; it does not silently replace the product.
 - `npm run registry:build` must emit installable JSON into `public/r/`.
 - Every component item depends on the local `tokens` registry item.
@@ -87,8 +92,8 @@ Space (`/kit/space`, `/r/space/`) is the reference example.
   emits every dialect from them (shadcn items, `tokens.css`,
   `design-tokens.json`, the vanilla pieces, `doctrine.json`, `checksums.json`).
   Never hand-edit emitted files under `public/r/`.
-- Vanilla pieces live in `registry/vanilla/` and may reference only variables
-  present in all four complete systems (`npm run verify:dialects` enforces this).
+- Vanilla pieces and starter sources live in `registry/vanilla/` and may reference only variables
+  present in all five complete systems (`npm run verify:dialects` enforces this).
 - Consumers declare installs in `kit-manifest.json`; `npm run doctor --
   <project-dir>` reports drift against `/r/checksums.json`.
 

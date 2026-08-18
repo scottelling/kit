@@ -6,7 +6,7 @@
   "dialect": "vanilla",
   "systems": "universal",
   "requires": {
-    "tokens": "https://kit.scottelling.com/r/tokens.css (or the jade/os/animation tokens.css)"
+    "tokens": "https://kit.scottelling.com/r/vanilla-kit/tokens.css (or another complete KIT tokens.css)"
   },
   "files": [
     {

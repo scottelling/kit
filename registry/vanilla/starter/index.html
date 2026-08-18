@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vanilla Project Starter</title>
+  <meta name="description" content="A neutral, swap-ready starting point for a new product." />
+  <link rel="stylesheet" href="https://kit.scottelling.com/r/vanilla-kit/tokens.css" id="kit-tokens" />
+  <link rel="stylesheet" href="https://kit.scottelling.com/r/vanilla/kit.css" />
+  <link rel="stylesheet" href="./starter.css" />
+</head>
+<body>
+  <header class="starter-topbar">
+    <a class="starter-brand" href="#home" aria-label="Project home">New Project</a>
+    <nav aria-label="Project types">
+      <button type="button" data-starter-view="app" aria-pressed="true">App</button>
+      <button type="button" data-starter-view="landing" aria-pressed="false">Landing</button>
+      <button type="button" data-starter-view="shop" aria-pressed="false">Shop</button>
+      <button type="button" data-starter-view="content" aria-pressed="false">Content</button>
+    </nav>
+    <div class="starter-settings">
+      <label>
+        <span class="sr-only">Visual kit</span>
+        <select id="system-picker">
+          <option value="https://kit.scottelling.com/r/vanilla-kit/tokens.css">Vanilla</option>
+          <option value="https://kit.scottelling.com/r/tokens.css">Purple Rain</option>
+          <option value="https://kit.scottelling.com/r/jade/tokens.css">JADE</option>
+          <option value="https://kit.scottelling.com/r/os/tokens.css">OS</option>
+          <option value="https://kit.scottelling.com/r/animation/tokens.css">Animation</option>
+        </select>
+      </label>
+      <button class="kit-button" data-variant="secondary" id="appearance-toggle" type="button" aria-pressed="false">Dark</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="starter-view" data-view="app">
+      <div class="starter-app-shell">
+        <aside class="starter-sidebar" aria-label="Workspace">
+          <strong>Workspace</strong>
+          <nav>
+            <button type="button" aria-current="page">Overview</button>
+            <button type="button">Projects <span>4</span></button>
+            <button type="button">Activity</button>
+            <button type="button">Settings</button>
+          </nav>
+          <div class="starter-sidebar__status"><span class="kit-badge" data-tone="positive">All systems ready</span></div>
+        </aside>
+        <div class="starter-workspace">
+          <header class="starter-page-heading">
+            <div><span>Overview</span><h1>Build the useful thing first.</h1><p>The product owns its jobs, data, and journeys. The kit owns how those things look and feel.</p></div>
+            <button class="kit-button" type="button" data-kit-dialog-open="new-project-dialog">Create project</button>
+          </header>
+          <div class="starter-stat-grid">
+            <article class="kit-card"><span>Active work</span><strong>12</strong><p>Three decisions need review.</p></article>
+            <article class="kit-card"><span>Completion</span><strong>84%</strong><p>Up six points this week.</p></article>
+            <article class="kit-card"><span>Team</span><strong>8</strong><p>Everyone has a clear next action.</p></article>
+          </div>
+          <section class="starter-work-grid">
+            <div class="starter-panel">
+              <header><div><span>Current work</span><h2>Launch checklist</h2></div><button class="kit-button" data-variant="ghost" type="button">View all</button></header>
+              <div class="starter-task"><label class="kit-choice"><input type="checkbox" checked /><span>Confirm the product story</span></label><span class="kit-badge" data-tone="positive">Done</span></div>
+              <div class="starter-task"><label class="kit-choice"><input type="checkbox" /><span>Review the mobile flow</span></label><span class="kit-badge" data-tone="primary">Today</span></div>
+              <div class="starter-task"><label class="kit-choice"><input type="checkbox" /><span>Publish the release notes</span></label><span class="kit-badge">Next</span></div>
+            </div>
+            <form class="starter-panel" id="starter-form">
+              <header><div><span>Quick capture</span><h2>Add a decision</h2></div></header>
+              <label class="kit-field"><span>Decision</span><input class="kit-input" name="decision" placeholder="What did the team decide?" required /><small class="kit-help">Use one clear sentence.</small></label>
+              <div class="kit-field"><label for="starter-owner">Owner</label><span class="kit-select"><select id="starter-owner" name="owner"><option>Maya Chen</option><option>Eli Brooks</option><option>Noor Patel</option></select></span></div>
+              <button class="kit-button" type="submit">Save decision</button>
+              <div class="kit-notice" data-tone="positive" id="starter-success" hidden><strong>Decision saved.</strong><span>The team can see it now.</span></div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="starter-view" data-view="landing" hidden>
+      <div class="starter-marketing">
+        <section class="starter-hero">
+          <span class="kit-badge" data-tone="primary">Now available</span>
+          <h1>A clear promise, backed by a real product.</h1>
+          <p>Use the landing starter for the story, proof, commitment, questions, and one unmistakable next step.</p>
+          <div><button class="kit-button" type="button">Start the main action</button><button class="kit-button" data-variant="secondary" type="button">See how it works</button></div>
+        </section>
+        <section class="starter-proof" aria-label="Product proof"><div><strong>2.4×</strong><span>faster completion</span></div><div><strong>94%</strong><span>know the next step</span></div><div><strong>4.8/5</strong><span>customer confidence</span></div></section>
+        <section class="starter-feature-grid"><article class="kit-card"><span>01</span><h3>Make the value obvious</h3><p>Lead with the job people need completed, not a category slogan.</p></article><article class="kit-card"><span>02</span><h3>Show believable proof</h3><p>Put evidence beside the claim it supports.</p></article><article class="kit-card"><span>03</span><h3>End in a decision</h3><p>Every section should help the visitor move forward.</p></article></section>
+        <section class="starter-commitment"><div><span>Ready when you are</span><h2>Give the next project a clean beginning.</h2></div><button class="kit-button" type="button">Create the project</button></section>
+      </div>
+    </section>
+
+    <section class="starter-view" data-view="shop" hidden>
+      <div class="starter-shop">
+        <header class="starter-page-heading"><div><span>New collection</span><h1>Useful objects, clearly presented.</h1><p>Discovery, product choice, cart, checkout, and receipt keep the same stable product structure.</p></div><button class="kit-button" data-variant="secondary" type="button">Cart · 2</button></header>
+        <div class="starter-shop-layout">
+          <aside class="starter-filter"><strong>Shop</strong><label class="kit-field"><span>Find a product</span><input class="kit-input" type="search" placeholder="Search" /></label><fieldset><legend>Category</legend><label class="kit-choice"><input type="checkbox" checked />Everything</label><label class="kit-choice"><input type="checkbox" />Workspace</label><label class="kit-choice"><input type="checkbox" />Home</label></fieldset></aside>
+          <section class="starter-products" aria-label="Products">
+            <article class="kit-card"><div class="starter-product-art" aria-hidden="true">A1</div><span class="kit-badge">Workspace</span><h3>Daily Planner</h3><p>A calm place for the few things that matter today.</p><footer><strong>$28</strong><button class="kit-button" type="button">Add</button></footer></article>
+            <article class="kit-card"><div class="starter-product-art" aria-hidden="true">B2</div><span class="kit-badge">Home</span><h3>Object Tray</h3><p>A defined landing place for the everyday carry.</p><footer><strong>$42</strong><button class="kit-button" type="button">Add</button></footer></article>
+            <article class="kit-card"><div class="starter-product-art" aria-hidden="true">C3</div><span class="kit-badge">Workspace</span><h3>Focus Cards</h3><p>Fifty prompts for making the next decision smaller.</p><footer><strong>$18</strong><button class="kit-button" type="button">Add</button></footer></article>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="starter-view" data-view="content" hidden>
+      <div class="starter-publication">
+        <header class="starter-page-heading"><div><span>Issue 01</span><h1>Ideas worth keeping.</h1><p>A reading system for editions, stories, archives, search, and subscription.</p></div><button class="kit-button" type="button">Subscribe</button></header>
+        <article class="starter-lead-story"><div class="starter-story-art" aria-hidden="true">01</div><div><span>Design practice · 8 min</span><h2>Build systems that leave room for the product.</h2><p>A visual language should make the work easier to understand. It should never become the work.</p><button class="kit-button" data-variant="secondary" type="button">Read the story</button></div></article>
+        <section class="starter-story-list"><article><span>02</span><div><small>Field note</small><h3>The usefulness of boring foundations</h3><p>Neutral structure gives distinctive ideas somewhere solid to land.</p></div></article><article><span>03</span><div><small>Interview</small><h3>Why clear products earn trust</h3><p>People feel quality when every state answers the next question.</p></div></article><article><span>04</span><div><small>Reference</small><h3>A practical guide to interface swaps</h3><p>Separate product ownership from presentation before either begins to drift.</p></div></article></section>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="kit-dialog" id="new-project-dialog" aria-labelledby="new-project-title">
+    <h2 id="new-project-title">Create a project</h2>
+    <p>Name the work. The product structure stays yours; the visual kit can change whenever the project needs it.</p>
+    <label class="kit-field"><span>Project name</span><input class="kit-input" value="New Project" /></label>
+    <footer><button class="kit-button" data-variant="ghost" type="button" data-kit-dialog-close>Cancel</button><button class="kit-button" type="button" data-kit-dialog-close>Create project</button></footer>
+  </dialog>
+
+  <script src="https://kit.scottelling.com/r/vanilla/kit.js" defer></script>
+  <script src="./starter.js" defer></script>
+</body>
+</html>

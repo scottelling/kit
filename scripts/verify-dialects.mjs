@@ -27,6 +27,7 @@ const systems = [
   { id: "jade", item: "public/r/jade/tokens.json", dir: "public/r/jade" },
   { id: "os", item: "public/r/os/tokens.json", dir: "public/r/os" },
   { id: "animation", item: "public/r/animation/tokens.json", dir: "public/r/animation" },
+  { id: "vanilla-kit", item: "public/r/vanilla-kit/tokens.json", dir: "public/r/vanilla-kit" },
   { id: "shadow", item: "public/r/shadow/smooth-shadow.json", dir: "public/r/shadow" },
 ]
 
@@ -93,7 +94,7 @@ for (const system of systems) {
 }
 
 // 2. Vanilla dialect: only universal variables, complete registry, parseable JS.
-const complete = ["purple-rain", "jade", "os", "animation"]
+const complete = ["purple-rain", "jade", "os", "animation", "vanilla-kit"]
 const universal = complete
   .map((id) => rootScopes[id])
   .filter(Boolean)
@@ -103,7 +104,7 @@ const vanillaManifest = await readJson("registry/vanilla/manifest.json")
 const vanillaCss = await readText("public/r/vanilla/kit.css")
 for (const reference of new Set([...vanillaCss.matchAll(/var\((--[\w-]+)/g)].map((match) => match[1]))) {
   if (universal && !universal.has(reference)) {
-    fail(`vanilla: ${reference} is not universal across the four complete systems`)
+    fail(`vanilla: ${reference} is not universal across the five complete systems`)
   }
 }
 if (!/--kit-control-height/.test(vanillaCss)) fail("vanilla: kit.css lost the 44px control-height token usage")
@@ -131,10 +132,37 @@ try {
   fail("vanilla: kit.js does not parse")
 }
 
+const starter = await readJson("public/r/vanilla/starter.json")
+const starterCss = await readText("public/r/vanilla/starter.css")
+const starterJs = await readText("public/r/vanilla/starter.js")
+if (starter.format !== "kit-project-starter/1") fail("vanilla starter: starter.json is not kit-project-starter/1")
+for (const expected of ["index.html", "starter.css", "starter.js", "kit-manifest.json", "README.md", "AGENTS.md", "CLAUDE.md", "docs/BRAIN.md", "docs/START_HERE.md", "docs/LEDGER.md"]) {
+  if (!starter.files?.some((file) => file.path === expected && file.content)) {
+    fail(`vanilla starter: ${expected} is missing from starter.json`)
+  }
+}
+for (const reference of new Set([...starterCss.matchAll(/var\((--[\w-]+)/g)].map((match) => match[1]))) {
+  if (universal && !universal.has(reference)) {
+    fail(`vanilla starter: ${reference} is not universal across the five complete systems`)
+  }
+}
+if (/\{\{[^}]+\}\}/.test(JSON.stringify(starter))) fail("vanilla starter: unresolved placeholder remains")
+try {
+  execFileSync(process.execPath, ["--check", path.join(root, "public/r/vanilla/starter.js")], { stdio: "pipe" })
+} catch {
+  fail("vanilla starter: starter.js does not parse")
+}
+if (starterJs !== starter.files.find((file) => file.path === "starter.js")?.content) {
+  fail("vanilla starter: emitted starter.js drifted from starter.json")
+}
+
 // 3. Demo page pairs the bundle with every complete system's tokens.css.
 const demo = await readText("public/vanilla.html")
-for (const href of ["/r/tokens.css", "/r/jade/tokens.css", "/r/os/tokens.css", "/r/animation/tokens.css", "/r/vanilla/kit.css", "/r/vanilla/kit.js"]) {
+for (const href of ["/r/tokens.css", "/r/jade/tokens.css", "/r/os/tokens.css", "/r/animation/tokens.css", "/r/vanilla-kit/tokens.css", "/r/vanilla/kit.css", "/r/vanilla/kit.js"]) {
   if (!demo.includes(href)) fail(`demo: /vanilla page does not reference ${href}`)
+}
+for (const asset of ["/r/vanilla/starter.css", "/r/vanilla/starter.js"]) {
+  if (!demo.includes(asset)) fail(`demo: /vanilla page does not reference ${asset}`)
 }
 
 // 4. Doctrine is published and well-formed.
@@ -149,12 +177,16 @@ const mustCover = [
   "r/jade/tokens.css",
   "r/os/tokens.css",
   "r/animation/tokens.css",
+  "r/vanilla-kit/tokens.css",
   "r/shadow/tokens.css",
   "r/design-tokens.json",
   "r/doctrine.json",
   "r/vanilla/kit.css",
   "r/vanilla/kit.js",
   "r/vanilla/registry.json",
+  "r/vanilla/starter.json",
+  "r/vanilla/starter.css",
+  "r/vanilla/starter.js",
 ]
 for (const artifact of mustCover) {
   if (!checksums.artifacts?.[artifact]) fail(`checksums.json does not cover ${artifact}`)

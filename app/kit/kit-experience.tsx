@@ -9,6 +9,7 @@ import { SiteHeader } from "@/components/site-header"
 import animationTokens from "@/lib/animation-tokens.json"
 import osTokens from "@/lib/os-tokens.json"
 import sourcedKits from "@/lib/sourced-kits.generated.json"
+import vanillaTokens from "@/lib/vanilla-kit-tokens.json"
 
 import { AnimationWorkbench } from "./animation/animation-workbench"
 import { ComponentPreview, type LibraryItem } from "./component-preview"
@@ -16,7 +17,7 @@ import { OsWorkbench } from "./os/os-workbench"
 
 type KitExperienceProps = {
   library: LibraryItem[]
-  system?: "purple-rain" | "jade" | "os" | "animation"
+  system?: "purple-rain" | "jade" | "os" | "animation" | "vanilla"
 }
 
 const familyOrder = ["Foundations", "Actions", "Forms", "Navigation", "Overlays", "Feedback", "Data", "Patterns", "OS Patterns", "Animation Patterns"]
@@ -39,7 +40,8 @@ export function KitExperience({ library, system = "purple-rain" }: KitExperience
   const isJade = system === "jade"
   const isOs = system === "os"
   const isAnimation = system === "animation"
-  const systemName = isJade ? "JADE" : isOs ? "OS" : isAnimation ? "Animation Studio" : "Purple Rain"
+  const isVanilla = system === "vanilla"
+  const systemName = isJade ? "JADE" : isOs ? "OS" : isAnimation ? "Animation Studio" : isVanilla ? "Vanilla" : "Purple Rain"
   const familyCount = new Set(library.map((item) => item.category)).size
   const selectedOsTheme = osThemes.find((theme) => theme.id === osTheme) ?? osThemes[0]
   const osThemeValues = selectedOsTheme.source === "light"
@@ -52,6 +54,9 @@ export function KitExperience({ library, system = "purple-rain" }: KitExperience
     : undefined
   const animationStyle = isAnimation
     ? Object.fromEntries(Object.entries({ ...animationTokens.theme, ...animationTokens.source }).map(([name, value]) => [`--${name}`, value])) as CSSProperties
+    : undefined
+  const vanillaStyle = isVanilla
+    ? Object.fromEntries(Object.entries({ ...vanillaTokens.theme, ...(dark ? vanillaTokens.dark : vanillaTokens.light) }).map(([name, value]) => [`--${name}`, value])) as CSSProperties
     : undefined
   const availableFamilies = familyOrder.filter((name) => library.some((item) => item.category === name))
 
@@ -112,13 +117,14 @@ export function KitExperience({ library, system = "purple-rain" }: KitExperience
   }, [])
 
   return (
-    <div style={osStyle ?? animationStyle} className={`kit-shell${isJade ? " jade-library" : ""}${isOs ? ` os-library os-theme-${osTheme}` : ""}${isAnimation ? " animation-library" : ""}${dark || isAnimation || (isOs && selectedOsTheme.source !== "light" && selectedOsTheme.source !== "paper") ? " dark" : ""}`}>
+    <div style={osStyle ?? animationStyle ?? vanillaStyle} className={`kit-shell${isJade ? " jade-library" : ""}${isOs ? ` os-library os-theme-${osTheme}` : ""}${isAnimation ? " animation-library" : ""}${isVanilla ? " vanilla-library" : ""}${dark || isAnimation || (isOs && selectedOsTheme.source !== "light" && selectedOsTheme.source !== "paper") ? " dark" : ""}`}>
       <SiteHeader />
       <main className="kit-main">
         <nav className="kit-worlds" aria-label="Choose a kit">
           <span>Kits</span>
           <div>
-            <Link ref={!isJade && !isOs && !isAnimation ? activeKitRef : undefined} aria-current={!isJade && !isOs && !isAnimation ? "page" : undefined} href="/kit">Purple Rain <small>{library.length} pieces</small></Link>
+            <Link ref={!isJade && !isOs && !isAnimation && !isVanilla ? activeKitRef : undefined} aria-current={!isJade && !isOs && !isAnimation && !isVanilla ? "page" : undefined} href="/kit">Purple Rain <small>{library.length} pieces</small></Link>
+            <Link ref={isVanilla ? activeKitRef : undefined} aria-current={isVanilla ? "page" : undefined} href="/kit/vanilla">Vanilla <small>{library.length} pieces</small></Link>
             <Link ref={isJade ? activeKitRef : undefined} aria-current={isJade ? "page" : undefined} href="/kit/jade">JADE <small>{library.length} pieces</small></Link>
             <Link ref={isOs ? activeKitRef : undefined} aria-current={isOs ? "page" : undefined} href="/kit/os">OS <small>{library.length} pieces</small></Link>
             <Link ref={isAnimation ? activeKitRef : undefined} aria-current={isAnimation ? "page" : undefined} href="/kit/animation">Animation <small>{library.length} pieces</small></Link>
@@ -131,8 +137,9 @@ export function KitExperience({ library, system = "purple-rain" }: KitExperience
         <section className="kit-index-intro" aria-labelledby="kit-title">
           <div className="kit-index-intro__copy">
             <h1 id="kit-title">The whole {systemName} kit.</h1>
-            <p>{isJade ? "Raised, seated, and sunken surfaces now cover the complete catalog. OS and creative-workspace patterns are available when a product needs them, never forced." : isOs ? "The useful OS identity now covers the complete catalog: everyday product pieces, desktop and mobile structures, and optional creative-workspace patterns." : isAnimation ? "A complete dark system for every product surface: everyday interface pieces plus optional desktop, storyboard, canvas, inspector, motion, timeline, code, and delivery structures." : "Every shared and specialist piece is here. Find one by name, choose a family, then touch it before you use it. Specialist layouts stay optional."}</p>
+            <p>{isJade ? "Raised, seated, and sunken surfaces now cover the complete catalog. OS and creative-workspace patterns are available when a product needs them, never forced." : isOs ? "The useful OS identity now covers the complete catalog: everyday product pieces, desktop and mobile structures, and optional creative-workspace patterns." : isAnimation ? "A complete dark system for every product surface: everyday interface pieces plus optional desktop, storyboard, canvas, inspector, motion, timeline, code, and delivery structures." : isVanilla ? "The neutral starting system for new products. Every piece uses the shared Kit language, so another visual system can replace the appearance later without rebuilding the product." : "Every shared and specialist piece is here. Find one by name, choose a family, then touch it before you use it. Specialist layouts stay optional."}</p>
             {isJade ? <Link className="kit-compare-link" href="/kit/jade/compare">See JADE beside Purple Rain</Link> : null}
+            {isVanilla ? <Link className="kit-compare-link" href="/vanilla">Open the working project starter</Link> : null}
           </div>
           <div className="kit-count" aria-label={`${library.length} pieces in ${familyCount} families`}>
             <strong>{library.length}</strong>

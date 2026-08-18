@@ -13,7 +13,7 @@ that file, you are already bound by this one.
 
 | Class | Contract | Precedents |
 | --- | --- | --- |
-| **Complete system** | Rebuilt to kit's production rules; styles the full universal catalog (175 pieces); OKLCH; 44px; universal variable names | Purple Rain, JADE, OS, Animation |
+| **Complete system** | Rebuilt to kit's production rules; styles the full universal catalog (175 pieces); OKLCH; 44px; universal variable names | Vanilla, Purple Rain, JADE, OS, Animation |
 | **Foundation kit** | Supplements a system without replacing its identity | Shadow |
 | **Sourced kit** | Preserved as-authored: native token format, native names, native density and rules; bridged to the system, never converted | Space |
 

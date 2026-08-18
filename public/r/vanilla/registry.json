@@ -5,6 +5,10 @@
     "css": "https://kit.scottelling.com/r/vanilla/kit.css",
     "js": "https://kit.scottelling.com/r/vanilla/kit.js"
   },
+  "starter": {
+    "url": "https://kit.scottelling.com/r/vanilla/starter.json",
+    "preview": "https://kit.scottelling.com/vanilla"
+  },
   "pieces": [
     {
       "name": "button",

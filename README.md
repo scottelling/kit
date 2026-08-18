@@ -1,6 +1,6 @@
 # kit
 
-The public design-engineering registry for Purple Rain, JADE, OS, Animation Studio, and focused foundation kits.
+The public design-engineering registry for Vanilla, Purple Rain, JADE, OS, Animation Studio, and focused foundation kits.
 
 ```bash
 npx shadcn add https://kit.scottelling.com/r/button.json
@@ -19,7 +19,8 @@ no React, Tailwind, or build step adopts the same language directly:
 ```
 
 - Framework-free tokens: `/r/tokens.css` + `/r/design-tokens.json` per system
-- Vanilla pieces (zero-dependency HTML/CSS/JS): `/r/vanilla/registry.json`, live at `/vanilla`
+- Swap-ready Vanilla project starter: `/r/vanilla/starter.json`, live at `/vanilla`
+- Framework-free pieces (zero-dependency HTML/CSS/JS): `/r/vanilla/registry.json`
 - Machine-readable doctrine for agents: `/r/doctrine.json`
 - Drift detection: `/r/checksums.json` + a consumer `kit-manifest.json` + `npm run doctor -- <project-dir>`
 
@@ -28,7 +29,9 @@ doctrine deltas declared, bridged to the universal roles instead of converted
 (`docs/KIT-INTAKE.md`). The first is **Space**, a Finder-adjacent filesystem
 kit: showroom at `/kit/space`, installable from `/r/space/registry.json`.
 
-Purple Rain, JADE, OS, and Animation Studio each expose the same 175-piece catalog. The 138 everyday pieces and 37 specialist patterns are all available, but each is installed individually so unrelated layouts never arrive by accident.
+Vanilla, Purple Rain, JADE, OS, and Animation Studio each expose the same 175-piece catalog. The 138 everyday pieces and 37 specialist patterns are all available, but each is installed individually so unrelated layouts never arrive by accident.
+
+Vanilla is the neutral starting system for a new project. It includes a complete app, landing, shop, and content foundation, then swaps to any other complete kit by changing only the shared visual roles. The product's pages, content, data, and behavior remain intact.
 
 JADE exposes the same production component contract with its own tactile light and dark foundations under `https://kit.scottelling.com/r/jade/`.
 
@@ -57,10 +60,11 @@ npm run check
 - JADE registry manifest: `registry/jade/registry.json`
 - OS registry manifest: `registry/os/registry.json`
 - Animation Studio registry manifest: `registry/animation/registry.json`
+- Vanilla registry manifest: `registry/vanilla-kit/registry.json`
 - Shadow registry manifest: `registry/shadow/registry.json`
 - Elements registry manifest: `registry/elements/registry.json`
-- Built JSON: `public/r/`, `public/r/jade/`, `public/r/os/`, `public/r/animation/`, `public/r/shadow/`, and `public/r/elements/`
-- Complete showrooms: `/kit`, `/kit/jade`, `/kit/os`, `/kit/animation`, and `/kit/shadow`
+- Built JSON: `public/r/`, `public/r/jade/`, `public/r/os/`, `public/r/animation/`, `public/r/vanilla-kit/`, `public/r/shadow/`, and `public/r/elements/`
+- Complete showrooms: `/kit`, `/kit/jade`, `/kit/os`, `/kit/animation`, `/kit/vanilla`, and `/kit/shadow`
 - Same-product comparison: `/kit/jade/compare`
 - Side-by-side demo: `/demo`
 - Theme Workshop: `/labs`
@@ -82,7 +86,7 @@ npm run registry:build
 npm run dev
 ```
 
-Open `http://localhost:3000/kit` for Purple Rain, `http://localhost:3000/kit/jade` for JADE, `http://localhost:3000/kit/os` for OS, `http://localhost:3000/kit/animation` for Animation Studio, `http://localhost:3000/kit/shadow` for Shadow, and `http://localhost:3000/kit/jade/compare` for the matched-product comparison.
+Open `http://localhost:3000/kit/vanilla` for Vanilla, `http://localhost:3000/vanilla` for the swap-ready starter, and the other `/kit/*` routes for the complete visual systems.
 
 ## Verify
 
@@ -90,4 +94,4 @@ Open `http://localhost:3000/kit` for Purple Rain, `http://localhost:3000/kit/jad
 npm run check
 ```
 
-The counted inventories and shared capability contract keep all four visual systems aligned around the same 175-piece catalog while their palettes, shapes, depth, declared color modes, and motion remain distinct. Specialist patterns remain opt-in, and product-owned layouts never travel during a swap.
+The counted inventories and shared capability contract keep all five visual systems aligned around the same 175-piece catalog while their palettes, shapes, depth, declared color modes, and motion remain distinct. Specialist patterns remain opt-in, and product-owned layouts never travel during a swap.

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-button",
+  "title": "Vanilla Toggle Button",
+  "description": "Toggle Button keeps the next move clear and touchable.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/toggle-button.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type ToggleButtonProps = React.ComponentPropsWithoutRef<\"button\">\n\nexport function ToggleButton({ children, className, ...props }: ToggleButtonProps) {\n  const [pressed, setPressed] = React.useState(false)\n  if (children !== undefined) {\n    return (<button type=\"button\" data-slot=\"toggle-button\" className={cn(\"inline-flex min-h-11 items-center justify-center rounded-[var(--radius-control)] px-4 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-ring\", className)} {...props}>{children}</button>)\n  }\n\n  return (\n    <button data-slot=\"toggle-button\" type=\"button\" aria-pressed={pressed} onClick={() => setPressed((value) => !value)} className={cn(\"rounded-[var(--radius-control)] border border-border bg-card text-card-foreground shadow-[var(--shadow-control)] min-h-11 px-4 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background\", pressed && \"bg-primary text-primary-foreground\", className)} {...props}>{pressed ? \"Selected\" : \"Toggle Button\"}</button>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

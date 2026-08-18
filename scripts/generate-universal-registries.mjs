@@ -32,6 +32,13 @@ const systems = [
     homepage: "https://kit.scottelling.com/kit/animation",
     tokenUrl: "https://kit.scottelling.com/r/animation/tokens.json",
   },
+  {
+    id: "vanilla-kit",
+    label: "Vanilla",
+    manifest: "registry/vanilla-kit/registry.json",
+    homepage: "https://kit.scottelling.com/kit/vanilla",
+    tokenUrl: "https://kit.scottelling.com/r/vanilla-kit/tokens.json",
+  },
 ]
 
 const manifests = new Map()

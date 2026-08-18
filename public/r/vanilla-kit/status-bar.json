@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "status-bar",
+  "title": "Vanilla Status Bar",
+  "description": "Status Bar assembles related pieces into a complete task.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/application/status-bar.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction StatusBar({ className, ...props }: React.ComponentProps<\"footer\">) {\n  return <footer data-slot=\"status-bar\" role=\"status\" className={cn(\"flex min-h-11 min-w-0 flex-wrap items-center justify-between gap-x-4 gap-y-1 bg-[var(--plane-1)] px-3 text-xs text-muted-foreground\", className)} {...props} />\n}\n\nfunction StatusItem({ className, ...props }: React.ComponentProps<\"span\">) {\n  return <span data-slot=\"status-item\" className={cn(\"inline-flex min-h-11 items-center gap-2\", className)} {...props} />\n}\n\nexport { StatusBar, StatusItem }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

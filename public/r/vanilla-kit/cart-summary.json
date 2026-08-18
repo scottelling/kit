@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cart-summary",
+  "title": "Vanilla Cart Summary",
+  "description": "Cart Summary assembles related pieces into a complete task.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/cart-summary.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type CartSummaryProps = React.ComponentPropsWithoutRef<\"section\">\n\nexport function CartSummary({ children, className, ...props }: CartSummaryProps) {\n  if (children !== undefined) {\n    return (<section data-slot=\"cart-summary\" className={cn(\"min-w-0 rounded-[var(--radius-card)] bg-card text-card-foreground\", className)} {...props}>{children}</section>)\n  }\n\n  return (\n    <section data-slot=\"cart-summary\" className={cn(\"rounded-[var(--radius-control)] border border-border bg-card text-card-foreground shadow-[var(--shadow-control)] grid gap-3 p-5\", className)} {...props}><strong className=\"text-lg\">Cart Summary</strong>{[[\"Workshop seat\", \"$48\"], [\"Delivery\", \"$0\"], [\"Total\", \"$48\"]].map(([label, value]) => <div key={label} className=\"flex justify-between gap-4 border-b border-border py-2 text-sm\"><span>{label}</span><b>{value}</b></div>)}<button type=\"button\" className=\"rounded-[var(--radius-control)] border border-border bg-card text-card-foreground shadow-[var(--shadow-control)] min-h-11 px-4 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background bg-primary text-primary-foreground\">Review order</button></section>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -1,0 +1,2886 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "vanilla-kit",
+  "homepage": "https://kit.scottelling.com/kit/vanilla",
+  "items": [
+    {
+      "name": "tokens",
+      "type": "registry:theme",
+      "title": "Vanilla Tokens",
+      "description": "A deliberately neutral light and dark foundation for new products that need to remain ready for any future Kit swap.",
+      "cssVars": {
+        "theme": {
+          "font-sans": "var(--font-vanilla-ui)",
+          "font-heading": "var(--font-vanilla-ui)",
+          "font-mono": "var(--font-vanilla-mono)",
+          "font-vanilla-ui": "ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+          "font-vanilla-mono": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
+          "kit-control-height": "44px",
+          "kit-compact-size": "12px",
+          "kit-body-size": "15px",
+          "kit-heading-size": "38px",
+          "kit-reading-measure": "68ch",
+          "kit-leading": "1.5",
+          "kit-space-base": "12px",
+          "kit-space-section": "32px",
+          "kit-fast": "120ms",
+          "kit-standard": "180ms",
+          "kit-ease": "cubic-bezier(0.2, 0, 0, 1)",
+          "color-positive": "var(--positive)",
+          "color-positive-foreground": "var(--positive-foreground)",
+          "radius-control": "var(--radius-control)",
+          "radius-card": "var(--radius-card)",
+          "radius-sheet": "var(--radius-sheet)"
+        },
+        "light": {
+          "background": "oklch(0.985 0.002 255)",
+          "foreground": "oklch(0.205 0.008 255)",
+          "card": "oklch(1 0 0)",
+          "card-foreground": "oklch(0.205 0.008 255)",
+          "popover": "oklch(1 0 0)",
+          "popover-foreground": "oklch(0.205 0.008 255)",
+          "primary": "oklch(0.235 0.01 255)",
+          "primary-foreground": "oklch(0.985 0.002 255)",
+          "secondary": "oklch(0.955 0.004 255)",
+          "secondary-foreground": "oklch(0.285 0.009 255)",
+          "muted": "oklch(0.945 0.004 255)",
+          "muted-foreground": "oklch(0.47 0.01 255)",
+          "accent": "oklch(0.925 0.012 255)",
+          "accent-foreground": "oklch(0.235 0.01 255)",
+          "destructive": "oklch(0.56 0.19 26)",
+          "destructive-foreground": "oklch(0.985 0.002 255)",
+          "positive": "oklch(0.53 0.13 151)",
+          "positive-foreground": "oklch(0.985 0.002 255)",
+          "border": "oklch(0.84 0.008 255)",
+          "input": "oklch(0.91 0.006 255)",
+          "ring": "oklch(0.54 0.18 255)",
+          "overlay": "oklch(0.18 0.01 255 / 0.72)",
+          "plane-1": "oklch(0.985 0.002 255)",
+          "plane-2": "oklch(0.955 0.004 255)",
+          "plane-3": "oklch(0.925 0.006 255)",
+          "plane-pressed": "oklch(0.895 0.008 255)",
+          "ink-faint": "oklch(0.61 0.01 255)",
+          "chart-1": "oklch(0.54 0.18 255)",
+          "chart-2": "oklch(0.53 0.13 151)",
+          "chart-3": "oklch(0.68 0.14 85)",
+          "chart-4": "oklch(0.56 0.19 26)",
+          "chart-5": "oklch(0.55 0.13 310)",
+          "sidebar": "oklch(0.955 0.004 255)",
+          "sidebar-foreground": "oklch(0.205 0.008 255)",
+          "sidebar-primary": "oklch(0.235 0.01 255)",
+          "sidebar-primary-foreground": "oklch(0.985 0.002 255)",
+          "sidebar-accent": "oklch(0.925 0.012 255)",
+          "sidebar-accent-foreground": "oklch(0.235 0.01 255)",
+          "sidebar-border": "oklch(0.84 0.008 255)",
+          "sidebar-ring": "oklch(0.54 0.18 255)",
+          "radius": "0.75rem",
+          "radius-control": "0.5rem",
+          "radius-card": "0.75rem",
+          "radius-sheet": "1rem",
+          "dur-micro": "120ms",
+          "dur-short": "180ms",
+          "dur-long": "240ms",
+          "ease-standard": "cubic-bezier(0.2, 0, 0, 1)",
+          "shadow-control": "0 1px 2px oklch(0.205 0.008 255 / 0.10)",
+          "shadow-panel": "0 12px 32px oklch(0.205 0.008 255 / 0.12), 0 2px 6px oklch(0.205 0.008 255 / 0.08)",
+          "shadow-inset": "inset 0 1px 2px oklch(0.205 0.008 255 / 0.12)"
+        },
+        "dark": {
+          "background": "oklch(0.145 0.006 255)",
+          "foreground": "oklch(0.94 0.004 255)",
+          "card": "oklch(0.19 0.008 255)",
+          "card-foreground": "oklch(0.94 0.004 255)",
+          "popover": "oklch(0.22 0.009 255)",
+          "popover-foreground": "oklch(0.94 0.004 255)",
+          "primary": "oklch(0.94 0.004 255)",
+          "primary-foreground": "oklch(0.145 0.006 255)",
+          "secondary": "oklch(0.235 0.009 255)",
+          "secondary-foreground": "oklch(0.88 0.005 255)",
+          "muted": "oklch(0.205 0.008 255)",
+          "muted-foreground": "oklch(0.69 0.008 255)",
+          "accent": "oklch(0.275 0.012 255)",
+          "accent-foreground": "oklch(0.94 0.004 255)",
+          "destructive": "oklch(0.68 0.18 26)",
+          "destructive-foreground": "oklch(0.16 0.015 26)",
+          "positive": "oklch(0.7 0.14 151)",
+          "positive-foreground": "oklch(0.145 0.02 151)",
+          "border": "oklch(0.34 0.01 255)",
+          "input": "oklch(0.19 0.008 255)",
+          "ring": "oklch(0.7 0.15 255)",
+          "overlay": "oklch(0.08 0.004 255 / 0.78)",
+          "plane-1": "oklch(0.17 0.007 255)",
+          "plane-2": "oklch(0.205 0.008 255)",
+          "plane-3": "oklch(0.245 0.01 255)",
+          "plane-pressed": "oklch(0.285 0.012 255)",
+          "ink-faint": "oklch(0.55 0.009 255)",
+          "chart-1": "oklch(0.7 0.15 255)",
+          "chart-2": "oklch(0.7 0.14 151)",
+          "chart-3": "oklch(0.78 0.14 85)",
+          "chart-4": "oklch(0.68 0.18 26)",
+          "chart-5": "oklch(0.72 0.13 310)",
+          "sidebar": "oklch(0.17 0.007 255)",
+          "sidebar-foreground": "oklch(0.94 0.004 255)",
+          "sidebar-primary": "oklch(0.94 0.004 255)",
+          "sidebar-primary-foreground": "oklch(0.145 0.006 255)",
+          "sidebar-accent": "oklch(0.275 0.012 255)",
+          "sidebar-accent-foreground": "oklch(0.94 0.004 255)",
+          "sidebar-border": "oklch(0.34 0.01 255)",
+          "sidebar-ring": "oklch(0.7 0.15 255)",
+          "radius": "0.75rem",
+          "radius-control": "0.5rem",
+          "radius-card": "0.75rem",
+          "radius-sheet": "1rem",
+          "dur-micro": "120ms",
+          "dur-short": "180ms",
+          "dur-long": "240ms",
+          "ease-standard": "cubic-bezier(0.2, 0, 0, 1)",
+          "shadow-control": "0 1px 2px oklch(0.06 0.004 255 / 0.38)",
+          "shadow-panel": "0 14px 38px oklch(0.06 0.004 255 / 0.52), 0 2px 8px oklch(0.06 0.004 255 / 0.34)",
+          "shadow-inset": "inset 0 1px 2px oklch(0.06 0.004 255 / 0.46)"
+        }
+      },
+      "css": {
+        ":root": {
+          "--background": "oklch(0.985 0.002 255)",
+          "--foreground": "oklch(0.205 0.008 255)",
+          "--card": "oklch(1 0 0)",
+          "--card-foreground": "oklch(0.205 0.008 255)",
+          "--popover": "oklch(1 0 0)",
+          "--popover-foreground": "oklch(0.205 0.008 255)",
+          "--primary": "oklch(0.235 0.01 255)",
+          "--primary-foreground": "oklch(0.985 0.002 255)",
+          "--secondary": "oklch(0.955 0.004 255)",
+          "--secondary-foreground": "oklch(0.285 0.009 255)",
+          "--muted": "oklch(0.945 0.004 255)",
+          "--muted-foreground": "oklch(0.47 0.01 255)",
+          "--accent": "oklch(0.925 0.012 255)",
+          "--accent-foreground": "oklch(0.235 0.01 255)",
+          "--destructive": "oklch(0.56 0.19 26)",
+          "--destructive-foreground": "oklch(0.985 0.002 255)",
+          "--positive": "oklch(0.53 0.13 151)",
+          "--positive-foreground": "oklch(0.985 0.002 255)",
+          "--border": "oklch(0.84 0.008 255)",
+          "--input": "oklch(0.91 0.006 255)",
+          "--ring": "oklch(0.54 0.18 255)",
+          "--overlay": "oklch(0.18 0.01 255 / 0.72)",
+          "--plane-1": "oklch(0.985 0.002 255)",
+          "--plane-2": "oklch(0.955 0.004 255)",
+          "--plane-3": "oklch(0.925 0.006 255)",
+          "--plane-pressed": "oklch(0.895 0.008 255)",
+          "--ink-faint": "oklch(0.61 0.01 255)",
+          "--chart-1": "oklch(0.54 0.18 255)",
+          "--chart-2": "oklch(0.53 0.13 151)",
+          "--chart-3": "oklch(0.68 0.14 85)",
+          "--chart-4": "oklch(0.56 0.19 26)",
+          "--chart-5": "oklch(0.55 0.13 310)",
+          "--sidebar": "oklch(0.955 0.004 255)",
+          "--sidebar-foreground": "oklch(0.205 0.008 255)",
+          "--sidebar-primary": "oklch(0.235 0.01 255)",
+          "--sidebar-primary-foreground": "oklch(0.985 0.002 255)",
+          "--sidebar-accent": "oklch(0.925 0.012 255)",
+          "--sidebar-accent-foreground": "oklch(0.235 0.01 255)",
+          "--sidebar-border": "oklch(0.84 0.008 255)",
+          "--sidebar-ring": "oklch(0.54 0.18 255)",
+          "--radius": "0.75rem",
+          "--radius-control": "0.5rem",
+          "--radius-card": "0.75rem",
+          "--radius-sheet": "1rem",
+          "--dur-micro": "120ms",
+          "--dur-short": "180ms",
+          "--dur-long": "240ms",
+          "--ease-standard": "cubic-bezier(0.2, 0, 0, 1)",
+          "--shadow-control": "0 1px 2px oklch(0.205 0.008 255 / 0.10)",
+          "--shadow-panel": "0 12px 32px oklch(0.205 0.008 255 / 0.12), 0 2px 6px oklch(0.205 0.008 255 / 0.08)",
+          "--shadow-inset": "inset 0 1px 2px oklch(0.205 0.008 255 / 0.12)"
+        },
+        ".dark": {
+          "--background": "oklch(0.145 0.006 255)",
+          "--foreground": "oklch(0.94 0.004 255)",
+          "--card": "oklch(0.19 0.008 255)",
+          "--card-foreground": "oklch(0.94 0.004 255)",
+          "--popover": "oklch(0.22 0.009 255)",
+          "--popover-foreground": "oklch(0.94 0.004 255)",
+          "--primary": "oklch(0.94 0.004 255)",
+          "--primary-foreground": "oklch(0.145 0.006 255)",
+          "--secondary": "oklch(0.235 0.009 255)",
+          "--secondary-foreground": "oklch(0.88 0.005 255)",
+          "--muted": "oklch(0.205 0.008 255)",
+          "--muted-foreground": "oklch(0.69 0.008 255)",
+          "--accent": "oklch(0.275 0.012 255)",
+          "--accent-foreground": "oklch(0.94 0.004 255)",
+          "--destructive": "oklch(0.68 0.18 26)",
+          "--destructive-foreground": "oklch(0.16 0.015 26)",
+          "--positive": "oklch(0.7 0.14 151)",
+          "--positive-foreground": "oklch(0.145 0.02 151)",
+          "--border": "oklch(0.34 0.01 255)",
+          "--input": "oklch(0.19 0.008 255)",
+          "--ring": "oklch(0.7 0.15 255)",
+          "--overlay": "oklch(0.08 0.004 255 / 0.78)",
+          "--plane-1": "oklch(0.17 0.007 255)",
+          "--plane-2": "oklch(0.205 0.008 255)",
+          "--plane-3": "oklch(0.245 0.01 255)",
+          "--plane-pressed": "oklch(0.285 0.012 255)",
+          "--ink-faint": "oklch(0.55 0.009 255)",
+          "--chart-1": "oklch(0.7 0.15 255)",
+          "--chart-2": "oklch(0.7 0.14 151)",
+          "--chart-3": "oklch(0.78 0.14 85)",
+          "--chart-4": "oklch(0.68 0.18 26)",
+          "--chart-5": "oklch(0.72 0.13 310)",
+          "--sidebar": "oklch(0.17 0.007 255)",
+          "--sidebar-foreground": "oklch(0.94 0.004 255)",
+          "--sidebar-primary": "oklch(0.94 0.004 255)",
+          "--sidebar-primary-foreground": "oklch(0.145 0.006 255)",
+          "--sidebar-accent": "oklch(0.275 0.012 255)",
+          "--sidebar-accent-foreground": "oklch(0.94 0.004 255)",
+          "--sidebar-border": "oklch(0.34 0.01 255)",
+          "--sidebar-ring": "oklch(0.7 0.15 255)",
+          "--radius": "0.75rem",
+          "--radius-control": "0.5rem",
+          "--radius-card": "0.75rem",
+          "--radius-sheet": "1rem",
+          "--dur-micro": "120ms",
+          "--dur-short": "180ms",
+          "--dur-long": "240ms",
+          "--ease-standard": "cubic-bezier(0.2, 0, 0, 1)",
+          "--shadow-control": "0 1px 2px oklch(0.06 0.004 255 / 0.38)",
+          "--shadow-panel": "0 14px 38px oklch(0.06 0.004 255 / 0.52), 0 2px 8px oklch(0.06 0.004 255 / 0.34)",
+          "--shadow-inset": "inset 0 1px 2px oklch(0.06 0.004 255 / 0.46)"
+        }
+      }
+    },
+    {
+      "name": "color-swatch",
+      "type": "registry:ui",
+      "title": "Vanilla Color Swatch",
+      "description": "See how Color Swatch shapes every screen.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/color-swatch.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "type-specimen",
+      "type": "registry:ui",
+      "title": "Vanilla Type Specimen",
+      "description": "See how Type Specimen shapes every screen.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/type-specimen.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "spacing-guide",
+      "type": "registry:ui",
+      "title": "Vanilla Spacing Guide",
+      "description": "See how Spacing Guide shapes every screen.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/spacing-guide.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "radius-guide",
+      "type": "registry:ui",
+      "title": "Vanilla Radius Guide",
+      "description": "See how Radius Guide shapes every screen.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/radius-guide.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "shadow-guide",
+      "type": "registry:ui",
+      "title": "Vanilla Shadow Guide",
+      "description": "See how Shadow Guide shapes every screen.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/shadow-guide.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "focus-ring",
+      "type": "registry:ui",
+      "title": "Vanilla Focus Ring",
+      "description": "See how Focus Ring shapes every screen.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/focus-ring.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Vanilla Separator",
+      "description": "See how Separator shapes every screen.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/separator.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "surface",
+      "type": "registry:ui",
+      "title": "Vanilla Surface",
+      "description": "See how Surface shapes every screen.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/surface.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "container",
+      "type": "registry:ui",
+      "title": "Vanilla Container",
+      "description": "See how Container shapes every screen.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/container.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stack",
+      "type": "registry:ui",
+      "title": "Vanilla Stack",
+      "description": "See how Stack shapes every screen.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/stack.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Vanilla Button",
+      "description": "Button keeps the next move clear and touchable.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-group",
+      "type": "registry:ui",
+      "title": "Vanilla Button Group",
+      "description": "Button Group keeps the next move clear and touchable.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/button-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "icon-button",
+      "type": "registry:ui",
+      "title": "Vanilla Icon Button",
+      "description": "Icon Button keeps the next move clear and touchable.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/icon-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "split-button",
+      "type": "registry:ui",
+      "title": "Vanilla Split Button",
+      "description": "Split Button keeps the next move clear and touchable.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/split-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "menu-button",
+      "type": "registry:ui",
+      "title": "Vanilla Menu Button",
+      "description": "Menu Button keeps the next move clear and touchable.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/menu-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toggle-button",
+      "type": "registry:ui",
+      "title": "Vanilla Toggle Button",
+      "description": "Toggle Button keeps the next move clear and touchable.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/toggle-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toggle-group",
+      "type": "registry:ui",
+      "title": "Vanilla Toggle Group",
+      "description": "Toggle Group keeps the next move clear and touchable.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/toggle-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "segmented-control",
+      "type": "registry:ui",
+      "title": "Vanilla Segmented Control",
+      "description": "Segmented Control keeps the next move clear and touchable.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/segmented-control.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "floating-action-button",
+      "type": "registry:ui",
+      "title": "Vanilla Floating Action Button",
+      "description": "Floating Action Button keeps the next move clear and touchable.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/floating-action-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "link-button",
+      "type": "registry:ui",
+      "title": "Vanilla Link Button",
+      "description": "Link Button keeps the next move clear and touchable.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/link-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "copy-button",
+      "type": "registry:ui",
+      "title": "Vanilla Copy Button",
+      "description": "Copy Button keeps the next move clear and touchable.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/copy-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "favorite-button",
+      "type": "registry:ui",
+      "title": "Vanilla Favorite Button",
+      "description": "Favorite Button keeps the next move clear and touchable.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/favorite-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toolbar",
+      "type": "registry:ui",
+      "title": "Vanilla Toolbar",
+      "description": "Toolbar keeps the next move clear and touchable.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/toolbar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bulk-action-bar",
+      "type": "registry:ui",
+      "title": "Vanilla Bulk Action Bar",
+      "description": "Bulk Action Bar keeps the next move clear and touchable.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/bulk-action-bar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Vanilla Input",
+      "description": "Input collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Vanilla Textarea",
+      "description": "Textarea collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/textarea.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Vanilla Select",
+      "description": "Select collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Vanilla Checkbox",
+      "description": "Checkbox collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/checkbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-group",
+      "type": "registry:ui",
+      "title": "Vanilla Checkbox Group",
+      "description": "Checkbox Group collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/checkbox-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "title": "Vanilla Radio Group",
+      "description": "Radio Group collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/radio-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Vanilla Switch",
+      "description": "Switch collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/switch.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "title": "Vanilla Slider",
+      "description": "Slider collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/slider.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "range-slider",
+      "type": "registry:ui",
+      "title": "Vanilla Range Slider",
+      "description": "Range Slider collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/range-slider.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "progress",
+      "type": "registry:ui",
+      "title": "Vanilla Progress",
+      "description": "Progress collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/progress.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "meter",
+      "type": "registry:ui",
+      "title": "Vanilla Meter",
+      "description": "Meter collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/meter.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "file-upload",
+      "type": "registry:ui",
+      "title": "Vanilla File Upload",
+      "description": "File Upload collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/file-upload.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropzone",
+      "type": "registry:ui",
+      "title": "Vanilla Dropzone",
+      "description": "Dropzone collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/dropzone.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "otp-input",
+      "type": "registry:ui",
+      "title": "Vanilla OTP Input",
+      "description": "OTP Input collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/otp-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "search-field",
+      "type": "registry:ui",
+      "title": "Vanilla Search Field",
+      "description": "Search Field collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/search-field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "combobox",
+      "type": "registry:ui",
+      "title": "Vanilla Combobox",
+      "description": "Combobox collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/combobox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "date-picker",
+      "type": "registry:ui",
+      "title": "Vanilla Date Picker",
+      "description": "Date Picker collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/date-picker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "time-input",
+      "type": "registry:ui",
+      "title": "Vanilla Time Input",
+      "description": "Time Input collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/time-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "number-input",
+      "type": "registry:ui",
+      "title": "Vanilla Number Input",
+      "description": "Number Input collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/number-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "password-input",
+      "type": "registry:ui",
+      "title": "Vanilla Password Input",
+      "description": "Password Input collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/password-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "color-input",
+      "type": "registry:ui",
+      "title": "Vanilla Color Input",
+      "description": "Color Input collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/color-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rating",
+      "type": "registry:ui",
+      "title": "Vanilla Rating",
+      "description": "Rating collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/rating.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "field",
+      "type": "registry:ui",
+      "title": "Vanilla Field",
+      "description": "Field collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "inline-edit",
+      "type": "registry:ui",
+      "title": "Vanilla Inline Edit",
+      "description": "Inline Edit collects a choice without hiding its state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/inline-edit.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Vanilla Tabs",
+      "description": "Tabs keeps place and direction easy to scan.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:ui",
+      "title": "Vanilla Breadcrumb",
+      "description": "Breadcrumb keeps place and direction easy to scan.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/breadcrumb.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:ui",
+      "title": "Vanilla Pagination",
+      "description": "Pagination keeps place and direction easy to scan.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/pagination.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stepper",
+      "type": "registry:ui",
+      "title": "Vanilla Stepper",
+      "description": "Stepper keeps place and direction easy to scan.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/stepper.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sidebar",
+      "type": "registry:ui",
+      "title": "Vanilla Sidebar",
+      "description": "Sidebar keeps place and direction easy to scan.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/sidebar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "topbar",
+      "type": "registry:ui",
+      "title": "Vanilla Topbar",
+      "description": "Topbar keeps place and direction easy to scan.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/topbar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bottom-nav",
+      "type": "registry:ui",
+      "title": "Vanilla Bottom Nav",
+      "description": "Bottom Nav keeps place and direction easy to scan.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/bottom-nav.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "navigation-menu",
+      "type": "registry:ui",
+      "title": "Vanilla Navigation Menu",
+      "description": "Navigation Menu keeps place and direction easy to scan.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/navigation-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "command-menu",
+      "type": "registry:ui",
+      "title": "Vanilla Command Menu",
+      "description": "Command Menu keeps place and direction easy to scan.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/command-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "filter-tabs",
+      "type": "registry:ui",
+      "title": "Vanilla Filter Tabs",
+      "description": "Filter Tabs keeps place and direction easy to scan.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/filter-tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "view-switcher",
+      "type": "registry:ui",
+      "title": "Vanilla View Switcher",
+      "description": "View Switcher keeps place and direction easy to scan.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/view-switcher.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "page-header",
+      "type": "registry:ui",
+      "title": "Vanilla Page Header",
+      "description": "Page Header keeps place and direction easy to scan.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/page-header.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "back-link",
+      "type": "registry:ui",
+      "title": "Vanilla Back Link",
+      "description": "Back Link keeps place and direction easy to scan.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/back-link.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "anchor-nav",
+      "type": "registry:ui",
+      "title": "Vanilla Anchor Nav",
+      "description": "Anchor Nav keeps place and direction easy to scan.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/anchor-nav.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "table-of-contents",
+      "type": "registry:ui",
+      "title": "Vanilla Table Of Contents",
+      "description": "Table Of Contents keeps place and direction easy to scan.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/table-of-contents.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "app-switcher",
+      "type": "registry:ui",
+      "title": "Vanilla App Switcher",
+      "description": "App Switcher keeps place and direction easy to scan.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/app-switcher.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Vanilla Dialog",
+      "description": "Dialog brings a focused task forward without losing context.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "dependencies": [
+        "radix-ui"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog",
+      "type": "registry:ui",
+      "title": "Vanilla Alert Dialog",
+      "description": "Alert Dialog brings a focused task forward without losing context.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/alert-dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sheet",
+      "type": "registry:ui",
+      "title": "Vanilla Sheet",
+      "description": "Sheet brings a focused task forward without losing context.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/sheet.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "drawer",
+      "type": "registry:ui",
+      "title": "Vanilla Drawer",
+      "description": "Drawer brings a focused task forward without losing context.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/drawer.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Vanilla Popover",
+      "description": "Popover brings a focused task forward without losing context.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/popover.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Vanilla Tooltip",
+      "description": "Tooltip brings a focused task forward without losing context.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/tooltip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "title": "Vanilla Dropdown Menu",
+      "description": "Dropdown Menu brings a focused task forward without losing context.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/dropdown-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "context-menu",
+      "type": "registry:ui",
+      "title": "Vanilla Context Menu",
+      "description": "Context Menu brings a focused task forward without losing context.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/context-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hover-card",
+      "type": "registry:ui",
+      "title": "Vanilla Hover Card",
+      "description": "Hover Card brings a focused task forward without losing context.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/hover-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "command-palette",
+      "type": "registry:ui",
+      "title": "Vanilla Command Palette",
+      "description": "Command Palette brings a focused task forward without losing context.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/command-palette.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "lightbox",
+      "type": "registry:ui",
+      "title": "Vanilla Lightbox",
+      "description": "Lightbox brings a focused task forward without losing context.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/lightbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "action-menu",
+      "type": "registry:ui",
+      "title": "Vanilla Action Menu",
+      "description": "Action Menu brings a focused task forward without losing context.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/action-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Vanilla Badge",
+      "description": "Badge makes the current state visible at a glance.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "title": "Vanilla Alert",
+      "description": "Alert makes the current state visible at a glance.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/alert.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "banner",
+      "type": "registry:ui",
+      "title": "Vanilla Banner",
+      "description": "Banner makes the current state visible at a glance.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/banner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toast",
+      "type": "registry:ui",
+      "title": "Vanilla Toast",
+      "description": "Toast makes the current state visible at a glance.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/toast.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "snackbar",
+      "type": "registry:ui",
+      "title": "Vanilla Snackbar",
+      "description": "Snackbar makes the current state visible at a glance.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/snackbar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "empty-state",
+      "type": "registry:ui",
+      "title": "Vanilla Empty State",
+      "description": "Empty State makes the current state visible at a glance.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/empty-state.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Vanilla Skeleton",
+      "description": "Skeleton makes the current state visible at a glance.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/skeleton.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "loading-dots",
+      "type": "registry:ui",
+      "title": "Vanilla Loading Dots",
+      "description": "Loading Dots makes the current state visible at a glance.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/loading-dots.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "spinner",
+      "type": "registry:ui",
+      "title": "Vanilla Spinner",
+      "description": "Spinner makes the current state visible at a glance.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/spinner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "status-dot",
+      "type": "registry:ui",
+      "title": "Vanilla Status Dot",
+      "description": "Status Dot makes the current state visible at a glance.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/status-dot.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "progress-card",
+      "type": "registry:ui",
+      "title": "Vanilla Progress Card",
+      "description": "Progress Card makes the current state visible at a glance.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/progress-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "error-state",
+      "type": "registry:ui",
+      "title": "Vanilla Error State",
+      "description": "Error State makes the current state visible at a glance.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/error-state.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "success-state",
+      "type": "registry:ui",
+      "title": "Vanilla Success State",
+      "description": "Success State makes the current state visible at a glance.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/success-state.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "offline-state",
+      "type": "registry:ui",
+      "title": "Vanilla Offline State",
+      "description": "Offline State makes the current state visible at a glance.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/offline-state.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Vanilla Card",
+      "description": "Card turns information into a readable, useful object.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Vanilla Avatar",
+      "description": "Avatar turns information into a readable, useful object.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/avatar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "avatar-group",
+      "type": "registry:ui",
+      "title": "Vanilla Avatar Group",
+      "description": "Avatar Group turns information into a readable, useful object.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/avatar-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "title": "Vanilla Table",
+      "description": "Table turns information into a readable, useful object.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "data-table",
+      "type": "registry:ui",
+      "title": "Vanilla Data Table",
+      "description": "Data Table turns information into a readable, useful object.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/data-table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "description-list",
+      "type": "registry:ui",
+      "title": "Vanilla Description List",
+      "description": "Description List turns information into a readable, useful object.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/description-list.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "list",
+      "type": "registry:ui",
+      "title": "Vanilla List",
+      "description": "List turns information into a readable, useful object.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/list.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "list-item",
+      "type": "registry:ui",
+      "title": "Vanilla List Item",
+      "description": "List Item turns information into a readable, useful object.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/list-item.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stat",
+      "type": "registry:ui",
+      "title": "Vanilla Stat",
+      "description": "Stat turns information into a readable, useful object.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/stat.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stat-group",
+      "type": "registry:ui",
+      "title": "Vanilla Stat Group",
+      "description": "Stat Group turns information into a readable, useful object.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/stat-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "timeline",
+      "type": "registry:ui",
+      "title": "Vanilla Timeline",
+      "description": "Timeline turns information into a readable, useful object.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/timeline.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "activity-feed",
+      "type": "registry:ui",
+      "title": "Vanilla Activity Feed",
+      "description": "Activity Feed turns information into a readable, useful object.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/activity-feed.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "title": "Vanilla Calendar",
+      "description": "Calendar turns information into a readable, useful object.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/calendar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "agenda",
+      "type": "registry:ui",
+      "title": "Vanilla Agenda",
+      "description": "Agenda turns information into a readable, useful object.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/agenda.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "Vanilla Accordion",
+      "description": "Accordion turns information into a readable, useful object.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/accordion.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "collapsible",
+      "type": "registry:ui",
+      "title": "Vanilla Collapsible",
+      "description": "Collapsible turns information into a readable, useful object.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/collapsible.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "carousel",
+      "type": "registry:ui",
+      "title": "Vanilla Carousel",
+      "description": "Carousel turns information into a readable, useful object.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/carousel.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bar-chart",
+      "type": "registry:ui",
+      "title": "Vanilla Bar Chart",
+      "description": "Bar Chart turns information into a readable, useful object.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/bar-chart.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "donut-chart",
+      "type": "registry:ui",
+      "title": "Vanilla Donut Chart",
+      "description": "Donut Chart turns information into a readable, useful object.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/donut-chart.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tree-view",
+      "type": "registry:ui",
+      "title": "Vanilla Tree View",
+      "description": "Tree View turns information into a readable, useful object.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/tree-view.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "app-shell",
+      "type": "registry:ui",
+      "title": "Vanilla App Shell",
+      "description": "App Shell assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/app-shell.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "auth-card",
+      "type": "registry:ui",
+      "title": "Vanilla Auth Card",
+      "description": "Auth Card assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/auth-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sign-in-form",
+      "type": "registry:ui",
+      "title": "Vanilla Sign In Form",
+      "description": "Sign In Form assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/sign-in-form.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sign-up-form",
+      "type": "registry:ui",
+      "title": "Vanilla Sign Up Form",
+      "description": "Sign Up Form assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/sign-up-form.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "forgot-password-form",
+      "type": "registry:ui",
+      "title": "Vanilla Forgot Password Form",
+      "description": "Forgot Password Form assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/forgot-password-form.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "profile-form",
+      "type": "registry:ui",
+      "title": "Vanilla Profile Form",
+      "description": "Profile Form assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/profile-form.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "settings-panel",
+      "type": "registry:ui",
+      "title": "Vanilla Settings Panel",
+      "description": "Settings Panel assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/settings-panel.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "invite-form",
+      "type": "registry:ui",
+      "title": "Vanilla Invite Form",
+      "description": "Invite Form assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/invite-form.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "contact-form",
+      "type": "registry:ui",
+      "title": "Vanilla Contact Form",
+      "description": "Contact Form assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/contact-form.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "feedback-form",
+      "type": "registry:ui",
+      "title": "Vanilla Feedback Form",
+      "description": "Feedback Form assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/feedback-form.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "checkout-form",
+      "type": "registry:ui",
+      "title": "Vanilla Checkout Form",
+      "description": "Checkout Form assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/checkout-form.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cart-summary",
+      "type": "registry:ui",
+      "title": "Vanilla Cart Summary",
+      "description": "Cart Summary assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/cart-summary.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "order-summary",
+      "type": "registry:ui",
+      "title": "Vanilla Order Summary",
+      "description": "Order Summary assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/order-summary.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pricing-card",
+      "type": "registry:ui",
+      "title": "Vanilla Pricing Card",
+      "description": "Pricing Card assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/pricing-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pricing-table",
+      "type": "registry:ui",
+      "title": "Vanilla Pricing Table",
+      "description": "Pricing Table assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/pricing-table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "filter-bar",
+      "type": "registry:ui",
+      "title": "Vanilla Filter Bar",
+      "description": "Filter Bar assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/filter-bar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "search-results",
+      "type": "registry:ui",
+      "title": "Vanilla Search Results",
+      "description": "Search Results assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/search-results.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "notification-center",
+      "type": "registry:ui",
+      "title": "Vanilla Notification Center",
+      "description": "Notification Center assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/library/notification-center.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "application-shell",
+      "type": "registry:ui",
+      "title": "Vanilla Application Shell",
+      "description": "Application Shell assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/application/application-shell.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "workspace-tree",
+      "type": "registry:ui",
+      "title": "Vanilla Workspace Tree",
+      "description": "Workspace Tree assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/application/workspace-tree.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "viewer-shell",
+      "type": "registry:ui",
+      "title": "Vanilla Viewer Shell",
+      "description": "Viewer Shell assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/application/viewer-shell.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "editor-toolbar",
+      "type": "registry:ui",
+      "title": "Vanilla Editor Toolbar",
+      "description": "Editor Toolbar assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/application/editor-toolbar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "task-board",
+      "type": "registry:ui",
+      "title": "Vanilla Task Board",
+      "description": "Task Board assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/application/task-board.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "task-rail",
+      "type": "registry:ui",
+      "title": "Vanilla Task Rail",
+      "description": "Task Rail assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/application/task-rail.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "status-bar",
+      "type": "registry:ui",
+      "title": "Vanilla Status Bar",
+      "description": "Status Bar assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/application/status-bar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "mobile-app-nav",
+      "type": "registry:ui",
+      "title": "Vanilla Mobile App Nav",
+      "description": "Mobile App Nav assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/application/mobile-app-nav.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "terminal-surface",
+      "type": "registry:ui",
+      "title": "Vanilla Terminal Surface",
+      "description": "Terminal Surface assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/application/terminal-surface.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "document-surface",
+      "type": "registry:ui",
+      "title": "Vanilla Document Surface",
+      "description": "Document Surface assembles related pieces into a complete task.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/purple-rain/application/document-surface.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "desktop-shell",
+      "type": "registry:ui",
+      "title": "Vanilla Desktop Shell",
+      "description": "A complete desktop work surface with regions for the menu bar, working windows, widgets, and dock.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/os/patterns/desktop-shell.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "window-shell",
+      "type": "registry:ui",
+      "title": "Vanilla Window Shell",
+      "description": "A solid, resizable-window frame with clear title, actions, content, and status regions.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/os/patterns/window-shell.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "menu-bar",
+      "type": "registry:ui",
+      "title": "Vanilla Menu Bar",
+      "description": "A calm global bar that keeps the current place and useful system status visible.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/os/patterns/menu-bar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dock",
+      "type": "registry:ui",
+      "title": "Vanilla Dock",
+      "description": "A reachable app launcher with an unmistakable current destination and 44-pixel targets.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/os/patterns/dock.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "widget-shell",
+      "type": "registry:ui",
+      "title": "Vanilla Widget Shell",
+      "description": "A measured small surface that shows the most useful state without clipping or decorative motion.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/os/patterns/widget-shell.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "master-detail",
+      "type": "registry:ui",
+      "title": "Vanilla Master Detail",
+      "description": "A shared-state list and detail pattern that becomes a real back-driven phone flow.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/os/patterns/master-detail.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "split-view",
+      "type": "registry:ui",
+      "title": "Vanilla Split View",
+      "description": "A sturdy multi-panel workspace that collapses by priority instead of squeezing content.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/os/patterns/split-view.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "command-bar",
+      "type": "registry:ui",
+      "title": "Vanilla Command Bar",
+      "description": "A plain-language action entry with honest results, keyboard control, and recovery.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/os/patterns/command-bar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "settings-sheet",
+      "type": "registry:ui",
+      "title": "Vanilla Settings Sheet",
+      "description": "A focused settings surface with tabs, stable fields, visible state, and a full-screen phone form.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/os/patterns/settings-sheet.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "studio-shell",
+      "type": "registry:ui",
+      "title": "Vanilla Studio Shell",
+      "description": "A complete creative workspace with one clear canvas, supporting rails, and an anchored timeline.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/studio-shell.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "studio-header",
+      "type": "registry:ui",
+      "title": "Vanilla Studio Header",
+      "description": "A compact global bar for project identity, mode, device, and high-value actions.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/studio-header.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "workspace-switcher",
+      "type": "registry:ui",
+      "title": "Vanilla Workspace Switcher",
+      "description": "A touch-safe Story, Preview, Code, and Inspect switcher for narrow workspaces.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/workspace-switcher.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "project-switcher",
+      "type": "registry:ui",
+      "title": "Vanilla Project Switcher",
+      "description": "A focused project chooser with honest saved and local states.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/project-switcher.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "storyboard-rail",
+      "type": "registry:ui",
+      "title": "Vanilla Storyboard Rail",
+      "description": "A scroll-owned scene sequence that keeps order, timing, and selection obvious.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/storyboard-rail.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scene-list-item",
+      "type": "registry:ui",
+      "title": "Vanilla Scene List Item",
+      "description": "A scene row with thumbnail, name, timing, purpose, and unmistakable selection.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/scene-list-item.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stage-viewport",
+      "type": "registry:ui",
+      "title": "Vanilla Stage Viewport",
+      "description": "A quiet work surface that gives the current composition visual priority.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/stage-viewport.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "device-frame",
+      "type": "registry:ui",
+      "title": "Vanilla Device Frame",
+      "description": "A solid phone, desktop, browser, or canvas frame that does not compete with authored work.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/device-frame.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "preview-toolbar",
+      "type": "registry:ui",
+      "title": "Vanilla Preview Toolbar",
+      "description": "A close-at-hand view, scale, and fit control for the stage.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/preview-toolbar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ai-director",
+      "type": "registry:ui",
+      "title": "Vanilla AI Director",
+      "description": "A plain-language motion command that applies changes with visible, recoverable feedback.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/ai-director.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "command-suggestion-list",
+      "type": "registry:ui",
+      "title": "Vanilla Command Suggestions",
+      "description": "Keyboard-ready example directions and recent commands without hidden magic.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/command-suggestion-list.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "inspector-panel",
+      "type": "registry:ui",
+      "title": "Vanilla Inspector Panel",
+      "description": "A single scroll-owned place for scene, layer, and motion properties.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/inspector-panel.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "layer-list",
+      "type": "registry:ui",
+      "title": "Vanilla Layer List",
+      "description": "A readable layer stack with visibility, type, and current selection.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/layer-list.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "style-inspector",
+      "type": "registry:ui",
+      "title": "Vanilla Style Inspector",
+      "description": "Direct position, size, scale, radius, and content controls for one layer.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/style-inspector.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "motion-inspector",
+      "type": "registry:ui",
+      "title": "Vanilla Motion Inspector",
+      "description": "Purpose, easing, duration, and transition controls with safe defaults.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/motion-inspector.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "motion-preset-picker",
+      "type": "registry:ui",
+      "title": "Vanilla Motion Preset Picker",
+      "description": "Purposeful Rise, Pop, Fade, directional, and Exit choices with exact timing.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/motion-preset-picker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "transport",
+      "type": "registry:ui",
+      "title": "Vanilla Transport",
+      "description": "Reachable start, previous, play, next, and end controls with visible time.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/transport.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "motion-timeline",
+      "type": "registry:ui",
+      "title": "Vanilla Motion Timeline",
+      "description": "A horizontally scrollable time ruler with separate scene, motion, and layer lanes.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/motion-timeline.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "timeline-segment",
+      "type": "registry:ui",
+      "title": "Vanilla Timeline Segment",
+      "description": "A selectable time block that exposes name, duration, and current state.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/timeline-segment.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "playhead",
+      "type": "registry:ui",
+      "title": "Vanilla Playhead",
+      "description": "A keyboard-operable current-time control that stays visible across timeline lanes.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/playhead.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "delivery-workspace",
+      "type": "registry:ui",
+      "title": "Vanilla Delivery Workspace",
+      "description": "A final work surface for output choice, checks, rendering, and handoff.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/delivery-workspace.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "delivery-action",
+      "type": "registry:ui",
+      "title": "Vanilla Delivery Action",
+      "description": "An output action with idle, working, complete, and failed states.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/delivery-action.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "render-status",
+      "type": "registry:ui",
+      "title": "Vanilla Render Status",
+      "description": "Honest queued, rendering, complete, and failed progress with useful next actions.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/render-status.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "motion-check",
+      "type": "registry:ui",
+      "title": "Vanilla Motion Check",
+      "description": "A review list for purpose, easing, duration, travel, scale, and reduced motion.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/motion-check.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "code-panel",
+      "type": "registry:ui",
+      "title": "Vanilla Code Panel",
+      "description": "A readable, selectable source surface with copy and export actions.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/code-panel.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "template-gallery",
+      "type": "registry:ui",
+      "title": "Vanilla Template Gallery",
+      "description": "A responsive set of starting compositions with clear device and duration context.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/template-gallery.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "guided-tour",
+      "type": "registry:ui",
+      "title": "Vanilla Guided Tour",
+      "description": "A solid, focusable callout that explains one useful region at a time.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/guided-tour.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "workspace-error-boundary",
+      "type": "registry:ui",
+      "title": "Vanilla Workspace Error Boundary",
+      "description": "A real recovery boundary that protects the rest of the creative workspace.",
+      "registryDependencies": [
+        "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+      ],
+      "files": [
+        {
+          "path": "registry/animation/patterns/workspace-error-boundary.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    }
+  ]
+}

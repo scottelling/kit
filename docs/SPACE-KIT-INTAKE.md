@@ -55,8 +55,8 @@ destroyed exactly what Scott asked to keep.
 `/r/space/bridge.json` maps 26 tokens; 9 map to universal roles cleanly, the
 rest are partial or `null` (warning, surface, border-strong, mono font, and
 the pill vocabulary have no universal counterpart). Notable: the bridge
-exposed a real gap on the universal side — no `--font-mono` role exists in the
-four complete systems.
+exposed a real gap on the universal side — no `--font-mono` role exists across
+the complete systems.
 
 ## Published
 

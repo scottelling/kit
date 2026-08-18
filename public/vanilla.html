@@ -1,242 +1,125 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>KIT vanilla dialect — one page, every system</title>
-<meta name="description" content="The same plain HTML rendered by each complete KIT system. No React, no Tailwind, no build step." />
-<link rel="stylesheet" href="/r/tokens.css" id="kit-tokens" />
-<link rel="stylesheet" href="/r/vanilla/kit.css" />
-<style>
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--background);
-    color: var(--foreground);
-    font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif);
-    line-height: var(--kit-leading, 1.5);
-    transition: background-color 180ms ease-out, color 180ms ease-out;
-  }
-  .demo-shell { max-width: 880px; margin: 0 auto; padding: 24px 16px 64px; }
-  .demo-header { display: flex; flex-direction: column; gap: 12px; padding: 8px 0 24px; }
-  .demo-header h1 { margin: 0; font-family: var(--font-heading, inherit); font-size: clamp(26px, 5vw, 38px); line-height: 1.1; }
-  .demo-header > p { margin: 0; color: var(--muted-foreground); max-width: 60ch; font-size: var(--kit-body-size, 15px); }
-  .demo-controls { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-  .demo-piece { padding: 28px 0; border-top: 1px solid var(--border); }
-  .demo-piece h2 { margin: 0 0 4px; font-family: var(--font-heading, inherit); font-size: 20px; }
-  .demo-piece > p { margin: 0 0 16px; color: var(--muted-foreground); font-size: var(--kit-body-size, 15px); }
-  .demo-stage { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
-  .demo-stage:has(.kit-badge) { flex-direction: row; flex-wrap: wrap; align-items: center; }
-  .demo-note { font-size: var(--kit-compact-size, 12px); color: var(--muted-foreground); }
-  @media (prefers-reduced-motion: reduce) { body { transition: none; } }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vanilla Project Starter</title>
+  <meta name="description" content="A neutral, swap-ready starting point for a new product." />
+  <link rel="stylesheet" href="/r/vanilla-kit/tokens.css" id="kit-tokens" />
+  <link rel="stylesheet" href="/r/vanilla/kit.css" />
+  <link rel="stylesheet" href="/r/vanilla/starter.css" />
 </head>
 <body>
-  <div class="demo-shell">
-    <header class="demo-header">
-      <h1>One page. Every system. No framework.</h1>
-      <p>This is plain HTML with the KIT vanilla pieces and one tokens.css link. Switch the system below — only the stylesheet changes. That is the whole idea: the tokens are the shared language.</p>
-      <div class="demo-controls" role="group" aria-label="Visual system">
-        <button class="kit-button" data-variant="secondary" type="button" data-kit-system="/r/tokens.css" aria-pressed="true">Purple Rain</button>
-        <button class="kit-button" data-variant="secondary" type="button" data-kit-system="/r/jade/tokens.css" aria-pressed="false">JADE</button>
-        <button class="kit-button" data-variant="secondary" type="button" data-kit-system="/r/os/tokens.css" aria-pressed="false">OS</button>
-        <button class="kit-button" data-variant="secondary" type="button" data-kit-system="/r/animation/tokens.css" aria-pressed="false">Animation</button>
-        <button class="kit-button" data-variant="ghost" type="button" id="appearance-toggle" aria-pressed="false">Dark</button>
-      </div>
-      <p class="demo-note">This plain page keeps your system font; finished products load each system's real families. Get the pieces at <a href="/r/vanilla/registry.json">/r/vanilla/registry.json</a>.</p>
-    </header>
-      <section class="demo-piece" id="button">
-        <h2>Button</h2>
-        <p>Primary, secondary, ghost, and destructive actions with hover, pressed, focus, and disabled states.</p>
-        <div class="demo-stage">
-          <button class="kit-button" type="button">Save changes</button>
-          <button class="kit-button" type="button" data-variant="secondary">Preview</button>
-          <button class="kit-button" type="button" data-variant="ghost">Cancel</button>
-          <button class="kit-button" type="button" data-variant="destructive">Delete draft</button>
-          <button class="kit-button" type="button" disabled>Unavailable</button>
-        </div>
-      </section>
-      <section class="demo-piece" id="field">
-        <h2>Field</h2>
-        <p>Label, text input, help line, and error/success states.</p>
-        <div class="demo-stage">
-          <div class="kit-field">
-            <label for="field-email">Email address</label>
-            <input class="kit-input" id="field-email" type="email" placeholder="you@example.com" autocomplete="email" />
-            <p class="kit-help">We only use this to send your receipt.</p>
+  <header class="starter-topbar">
+    <a class="starter-brand" href="#home" aria-label="Project home">New Project</a>
+    <nav aria-label="Project types">
+      <button type="button" data-starter-view="app" aria-pressed="true">App</button>
+      <button type="button" data-starter-view="landing" aria-pressed="false">Landing</button>
+      <button type="button" data-starter-view="shop" aria-pressed="false">Shop</button>
+      <button type="button" data-starter-view="content" aria-pressed="false">Content</button>
+    </nav>
+    <div class="starter-settings">
+      <label>
+        <span class="sr-only">Visual kit</span>
+        <select id="system-picker">
+          <option value="/r/vanilla-kit/tokens.css">Vanilla</option>
+          <option value="/r/tokens.css">Purple Rain</option>
+          <option value="/r/jade/tokens.css">JADE</option>
+          <option value="/r/os/tokens.css">OS</option>
+          <option value="/r/animation/tokens.css">Animation</option>
+        </select>
+      </label>
+      <button class="kit-button" data-variant="secondary" id="appearance-toggle" type="button" aria-pressed="false">Dark</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="starter-view" data-view="app">
+      <div class="starter-app-shell">
+        <aside class="starter-sidebar" aria-label="Workspace">
+          <strong>Workspace</strong>
+          <nav>
+            <button type="button" aria-current="page">Overview</button>
+            <button type="button">Projects <span>4</span></button>
+            <button type="button">Activity</button>
+            <button type="button">Settings</button>
+          </nav>
+          <div class="starter-sidebar__status"><span class="kit-badge" data-tone="positive">All systems ready</span></div>
+        </aside>
+        <div class="starter-workspace">
+          <header class="starter-page-heading">
+            <div><span>Overview</span><h1>Build the useful thing first.</h1><p>The product owns its jobs, data, and journeys. The kit owns how those things look and feel.</p></div>
+            <button class="kit-button" type="button" data-kit-dialog-open="new-project-dialog">Create project</button>
+          </header>
+          <div class="starter-stat-grid">
+            <article class="kit-card"><span>Active work</span><strong>12</strong><p>Three decisions need review.</p></article>
+            <article class="kit-card"><span>Completion</span><strong>84%</strong><p>Up six points this week.</p></article>
+            <article class="kit-card"><span>Team</span><strong>8</strong><p>Everyone has a clear next action.</p></article>
           </div>
-          <div class="kit-field" data-state="error">
-            <label for="field-name">Full name</label>
-            <input class="kit-input" id="field-name" type="text" aria-invalid="true" aria-describedby="field-name-error" />
-            <p class="kit-help" id="field-name-error">Enter your name to continue.</p>
-          </div>
-        </div>
-      </section>
-      <section class="demo-piece" id="select">
-        <h2>Select</h2>
-        <p>Styled native select with full keyboard support.</p>
-        <div class="demo-stage">
-          <div class="kit-select">
-            <select aria-label="Project">
-              <option>Reader</option>
-              <option>Breath</option>
-              <option>Threads</option>
-              <option>Legend</option>
-            </select>
-          </div>
-        </div>
-      </section>
-      <section class="demo-piece" id="checkbox">
-        <h2>Checkbox</h2>
-        <p>A 20px mark inside a 44px touch row.</p>
-        <div class="demo-stage">
-          <label class="kit-choice">
-            <input type="checkbox" checked />
-            Email me when a build finishes
-          </label>
-          <label class="kit-choice">
-            <input type="checkbox" />
-            Include preview deployments
-          </label>
-          <label class="kit-choice">
-            <input type="checkbox" disabled />
-            Weekly summary (coming soon)
-          </label>
-        </div>
-      </section>
-      <section class="demo-piece" id="switch">
-        <h2>Switch</h2>
-        <p>CSS-only toggle on a real checkbox.</p>
-        <div class="demo-stage">
-          <label class="kit-switch-row">
-            Desktop alerts
-            <input class="kit-switch" type="checkbox" role="switch" checked />
-          </label>
-          <label class="kit-switch-row">
-            Auto-deploy on push
-            <input class="kit-switch" type="checkbox" role="switch" />
-          </label>
-        </div>
-      </section>
-      <section class="demo-piece" id="card">
-        <h2>Card</h2>
-        <p>Seated content surface with heading, body, and actions.</p>
-        <div class="demo-stage">
-          <article class="kit-card">
-            <h3>Weekly report</h3>
-            <p>Your deploys finished cleanly. Two projects picked up new kit tokens this week.</p>
-            <footer>
-              <button class="kit-button" type="button">Open report</button>
-              <button class="kit-button" type="button" data-variant="ghost">Dismiss</button>
-            </footer>
-          </article>
-        </div>
-      </section>
-      <section class="demo-piece" id="badge">
-        <h2>Badge</h2>
-        <p>Compact status label in neutral, primary, positive, and destructive tones.</p>
-        <div class="demo-stage">
-          <span class="kit-badge">Draft</span>
-          <span class="kit-badge" data-tone="primary">Building</span>
-          <span class="kit-badge" data-tone="positive">Live</span>
-          <span class="kit-badge" data-tone="destructive">Failed</span>
-        </div>
-      </section>
-      <section class="demo-piece" id="tabs">
-        <h2>Tabs</h2>
-        <p>Accessible tabs with click and arrow-key switching.</p>
-        <div class="demo-stage">
-          <div class="kit-tabs" data-kit-tabs>
-            <div role="tablist" aria-label="Report sections">
-              <button role="tab" id="tab-summary" aria-controls="panel-summary" aria-selected="true" type="button">Summary</button>
-              <button role="tab" id="tab-activity" aria-controls="panel-activity" aria-selected="false" type="button">Activity</button>
-              <button role="tab" id="tab-settings" aria-controls="panel-settings" aria-selected="false" type="button">Settings</button>
+          <section class="starter-work-grid">
+            <div class="starter-panel">
+              <header><div><span>Current work</span><h2>Launch checklist</h2></div><button class="kit-button" data-variant="ghost" type="button">View all</button></header>
+              <div class="starter-task"><label class="kit-choice"><input type="checkbox" checked /><span>Confirm the product story</span></label><span class="kit-badge" data-tone="positive">Done</span></div>
+              <div class="starter-task"><label class="kit-choice"><input type="checkbox" /><span>Review the mobile flow</span></label><span class="kit-badge" data-tone="primary">Today</span></div>
+              <div class="starter-task"><label class="kit-choice"><input type="checkbox" /><span>Publish the release notes</span></label><span class="kit-badge">Next</span></div>
             </div>
-            <div role="tabpanel" id="panel-summary" aria-labelledby="tab-summary">Everything shipped cleanly this week.</div>
-            <div role="tabpanel" id="panel-activity" aria-labelledby="tab-activity" hidden>Three deploys, two token updates.</div>
-            <div role="tabpanel" id="panel-settings" aria-labelledby="tab-settings" hidden>Alerts are on. Auto-deploy is off.</div>
-          </div>
+            <form class="starter-panel" id="starter-form">
+              <header><div><span>Quick capture</span><h2>Add a decision</h2></div></header>
+              <label class="kit-field"><span>Decision</span><input class="kit-input" name="decision" placeholder="What did the team decide?" required /><small class="kit-help">Use one clear sentence.</small></label>
+              <div class="kit-field"><label for="starter-owner">Owner</label><span class="kit-select"><select id="starter-owner" name="owner"><option>Maya Chen</option><option>Eli Brooks</option><option>Noor Patel</option></select></span></div>
+              <button class="kit-button" type="submit">Save decision</button>
+              <div class="kit-notice" data-tone="positive" id="starter-success" hidden><strong>Decision saved.</strong><span>The team can see it now.</span></div>
+            </form>
+          </section>
         </div>
-      </section>
-      <section class="demo-piece" id="dialog">
-        <h2>Dialog</h2>
-        <p>Native modal dialog on a solid surface with backdrop.</p>
-        <div class="demo-stage">
-          <button class="kit-button" type="button" data-kit-dialog-open="demo-dialog">Publish theme</button>
-          <dialog class="kit-dialog" id="demo-dialog" aria-labelledby="demo-dialog-title">
-            <h2 id="demo-dialog-title">Publish this theme?</h2>
-            <p>The current copy becomes the public handoff. The original kit is never changed, and you can restore it any time.</p>
-            <footer>
-              <button class="kit-button" type="button" data-variant="ghost" data-kit-dialog-close>Cancel</button>
-              <button class="kit-button" type="button" data-kit-dialog-close>Publish</button>
-            </footer>
-          </dialog>
+      </div>
+    </section>
+
+    <section class="starter-view" data-view="landing" hidden>
+      <div class="starter-marketing">
+        <section class="starter-hero">
+          <span class="kit-badge" data-tone="primary">Now available</span>
+          <h1>A clear promise, backed by a real product.</h1>
+          <p>Use the landing starter for the story, proof, commitment, questions, and one unmistakable next step.</p>
+          <div><button class="kit-button" type="button">Start the main action</button><button class="kit-button" data-variant="secondary" type="button">See how it works</button></div>
+        </section>
+        <section class="starter-proof" aria-label="Product proof"><div><strong>2.4×</strong><span>faster completion</span></div><div><strong>94%</strong><span>know the next step</span></div><div><strong>4.8/5</strong><span>customer confidence</span></div></section>
+        <section class="starter-feature-grid"><article class="kit-card"><span>01</span><h3>Make the value obvious</h3><p>Lead with the job people need completed, not a category slogan.</p></article><article class="kit-card"><span>02</span><h3>Show believable proof</h3><p>Put evidence beside the claim it supports.</p></article><article class="kit-card"><span>03</span><h3>End in a decision</h3><p>Every section should help the visitor move forward.</p></article></section>
+        <section class="starter-commitment"><div><span>Ready when you are</span><h2>Give the next project a clean beginning.</h2></div><button class="kit-button" type="button">Create the project</button></section>
+      </div>
+    </section>
+
+    <section class="starter-view" data-view="shop" hidden>
+      <div class="starter-shop">
+        <header class="starter-page-heading"><div><span>New collection</span><h1>Useful objects, clearly presented.</h1><p>Discovery, product choice, cart, checkout, and receipt keep the same stable product structure.</p></div><button class="kit-button" data-variant="secondary" type="button">Cart · 2</button></header>
+        <div class="starter-shop-layout">
+          <aside class="starter-filter"><strong>Shop</strong><label class="kit-field"><span>Find a product</span><input class="kit-input" type="search" placeholder="Search" /></label><fieldset><legend>Category</legend><label class="kit-choice"><input type="checkbox" checked />Everything</label><label class="kit-choice"><input type="checkbox" />Workspace</label><label class="kit-choice"><input type="checkbox" />Home</label></fieldset></aside>
+          <section class="starter-products" aria-label="Products">
+            <article class="kit-card"><div class="starter-product-art" aria-hidden="true">A1</div><span class="kit-badge">Workspace</span><h3>Daily Planner</h3><p>A calm place for the few things that matter today.</p><footer><strong>$28</strong><button class="kit-button" type="button">Add</button></footer></article>
+            <article class="kit-card"><div class="starter-product-art" aria-hidden="true">B2</div><span class="kit-badge">Home</span><h3>Object Tray</h3><p>A defined landing place for the everyday carry.</p><footer><strong>$42</strong><button class="kit-button" type="button">Add</button></footer></article>
+            <article class="kit-card"><div class="starter-product-art" aria-hidden="true">C3</div><span class="kit-badge">Workspace</span><h3>Focus Cards</h3><p>Fifty prompts for making the next decision smaller.</p><footer><strong>$18</strong><button class="kit-button" type="button">Add</button></footer></article>
+          </section>
         </div>
-      </section>
-      <section class="demo-piece" id="notice">
-        <h2>Notice</h2>
-        <p>Inline status message with tones and optional dismiss.</p>
-        <div class="demo-stage">
-          <div class="kit-notice" data-tone="positive" role="status">
-            <div><strong>Theme published</strong> Any project can now install this copy.</div>
-            <button type="button" data-kit-dismiss aria-label="Dismiss">Dismiss</button>
-          </div>
-          <div class="kit-notice" data-tone="destructive" role="alert">
-            <div><strong>Deploy failed</strong> The build stopped on a missing token. Nothing changed on the live site.</div>
-            <button type="button" data-kit-dismiss aria-label="Dismiss">Dismiss</button>
-          </div>
-          <div class="kit-notice" role="status">
-            <div><strong>Heads up</strong> Two projects are one token release behind.</div>
-          </div>
-        </div>
-      </section>
-      <section class="demo-piece" id="table">
-        <h2>Table</h2>
-        <p>Readable data rows that scroll inside their own frame.</p>
-        <div class="demo-stage">
-          <div class="kit-table-frame">
-            <table class="kit-table">
-              <thead>
-                <tr><th>Project</th><th>System</th><th>Status</th><th data-align="right">Updated</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>Threads</td><td>Purple Rain</td><td><span class="kit-badge" data-tone="positive">Live</span></td><td data-align="right">Today</td></tr>
-                <tr><td>Breath</td><td>JADE</td><td><span class="kit-badge" data-tone="primary">Building</span></td><td data-align="right">Yesterday</td></tr>
-                <tr><td>Legend</td><td>OS</td><td><span class="kit-badge">Draft</span></td><td data-align="right">Aug 4</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-      <section class="demo-piece" id="empty-state">
-        <h2>Empty state</h2>
-        <p>Plain-language empty screen with one clear next action.</p>
-        <div class="demo-stage">
-          <div class="kit-empty">
-            <h3>No projects yet</h3>
-            <p>When you connect a project, its status and history show up here.</p>
-            <button class="kit-button" type="button">Connect a project</button>
-          </div>
-        </div>
-      </section>
-  </div>
+      </div>
+    </section>
+
+    <section class="starter-view" data-view="content" hidden>
+      <div class="starter-publication">
+        <header class="starter-page-heading"><div><span>Issue 01</span><h1>Ideas worth keeping.</h1><p>A reading system for editions, stories, archives, search, and subscription.</p></div><button class="kit-button" type="button">Subscribe</button></header>
+        <article class="starter-lead-story"><div class="starter-story-art" aria-hidden="true">01</div><div><span>Design practice · 8 min</span><h2>Build systems that leave room for the product.</h2><p>A visual language should make the work easier to understand. It should never become the work.</p><button class="kit-button" data-variant="secondary" type="button">Read the story</button></div></article>
+        <section class="starter-story-list"><article><span>02</span><div><small>Field note</small><h3>The usefulness of boring foundations</h3><p>Neutral structure gives distinctive ideas somewhere solid to land.</p></div></article><article><span>03</span><div><small>Interview</small><h3>Why clear products earn trust</h3><p>People feel quality when every state answers the next question.</p></div></article><article><span>04</span><div><small>Reference</small><h3>A practical guide to interface swaps</h3><p>Separate product ownership from presentation before either begins to drift.</p></div></article></section>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="kit-dialog" id="new-project-dialog" aria-labelledby="new-project-title">
+    <h2 id="new-project-title">Create a project</h2>
+    <p>Name the work. The product structure stays yours; the visual kit can change whenever the project needs it.</p>
+    <label class="kit-field"><span>Project name</span><input class="kit-input" value="New Project" /></label>
+    <footer><button class="kit-button" data-variant="ghost" type="button" data-kit-dialog-close>Cancel</button><button class="kit-button" type="button" data-kit-dialog-close>Create project</button></footer>
+  </dialog>
+
   <script src="/r/vanilla/kit.js" defer></script>
-  <script>
-    document.addEventListener("click", function (event) {
-      var systemButton = event.target.closest("[data-kit-system]")
-      if (systemButton) {
-        document.getElementById("kit-tokens").setAttribute("href", systemButton.getAttribute("data-kit-system"))
-        document.querySelectorAll("[data-kit-system]").forEach(function (b) {
-          b.setAttribute("aria-pressed", b === systemButton ? "true" : "false")
-        })
-      }
-    })
-    var appearance = document.getElementById("appearance-toggle")
-    appearance.addEventListener("click", function () {
-      var dark = document.documentElement.classList.toggle("dark")
-      appearance.setAttribute("aria-pressed", dark ? "true" : "false")
-      appearance.textContent = dark ? "Light" : "Dark"
-    })
-  </script>
+  <script src="/r/vanilla/starter.js" defer></script>
 </body>
 </html>

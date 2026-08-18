@@ -1,0 +1,12 @@
+{
+  "format": "kit-manifest/1",
+  "system": "vanilla-kit",
+  "tokens": "https://kit.scottelling.com/r/vanilla-kit/tokens.css",
+  "pieces": "https://kit.scottelling.com/r/vanilla/registry.json",
+  "doctrine": "https://kit.scottelling.com/r/doctrine.json",
+  "adoptionContract": "https://kit.scottelling.com/r/adoption-contract.json",
+  "appearance": ["light", "dark"],
+  "productOwned": ["routes", "data", "behavior", "content", "journeys", "permissions"],
+  "kitOwned": ["tokens", "typography", "component expression", "states", "responsive rules", "motion", "density"],
+  "swapRule": "Change the system token source and preserve product-owned behavior and structure. Repair drift before judging the new kit."
+}

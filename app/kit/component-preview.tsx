@@ -41,7 +41,7 @@ export type LibraryItem = {
 type ComponentPreviewProps = {
   item: LibraryItem
   expanded?: boolean
-  system?: "purple-rain" | "jade" | "os" | "animation"
+  system?: "purple-rain" | "jade" | "os" | "animation" | "vanilla"
 }
 
 const samplePeople = ["MR", "ST", "EO"]
@@ -56,7 +56,7 @@ export function ComponentPreview({ item, expanded = false, system = "purple-rain
   const [on, setOn] = useState(true)
   const [open, setOpen] = useState(false)
   const [copied, setCopied] = useState(false)
-  const systemName = system === "jade" ? "JADE" : system === "os" ? "OS" : system === "animation" ? "Animation Studio" : "Purple Rain"
+  const systemName = system === "jade" ? "JADE" : system === "os" ? "OS" : system === "animation" ? "Animation Studio" : system === "vanilla" ? "Vanilla" : "Purple Rain"
   const [text, setText] = useState(systemName)
   const [amount, setAmount] = useState(64)
   const { name, preview, title } = item
@@ -340,7 +340,7 @@ export function ComponentPreview({ item, expanded = false, system = "purple-rain
       break
 
     case "app-shell":
-      sample = <div className="mini-app-shell"><aside>{system === "jade" ? "J" : system === "os" ? "OS" : system === "animation" ? "A" : "PR"}</aside><header>Release</header><main><strong>Today</strong><span>Three things need you.</span></main></div>
+      sample = <div className="mini-app-shell"><aside>{system === "jade" ? "J" : system === "os" ? "OS" : system === "animation" ? "A" : system === "vanilla" ? "V" : "PR"}</aside><header>Release</header><main><strong>Today</strong><span>Three things need you.</span></main></div>
       break
     case "auth":
     case "sign-in":
@@ -374,7 +374,7 @@ export function ComponentPreview({ item, expanded = false, system = "purple-rain
       sample = <div className="mini-notifications"><header><strong>Notifications</strong><span>3 new</span></header>{["Mara approved the page", "Sam left a note", "Elena shared a file"].map((label, index) => <button type="button" key={label} onClick={() => setActive(index)} aria-current={active === index ? "true" : undefined}><i aria-hidden="true" />{label}</button>)}</div>
       break
     case "application-shell":
-      sample = <div className="mini-application-system"><aside><b>{system === "jade" ? "J" : system === "os" ? "OS" : system === "animation" ? "A" : "PR"}</b>{["Home", "Work", "People"].map((label, index) => <button key={label} type="button" aria-current={active === index ? "page" : undefined} onClick={() => setActive(index)}>{label}</button>)}</aside><section><header><strong>Launch room</strong><button type="button">Share</button></header><main><span>Current decision</span><strong>{["Home direction", "Release checklist", "Review team"][active]}</strong><p>The same product structure stays clear in every visual system.</p></main><footer><span>All changes saved</span><b>3 online</b></footer></section></div>
+      sample = <div className="mini-application-system"><aside><b>{system === "jade" ? "J" : system === "os" ? "OS" : system === "animation" ? "A" : system === "vanilla" ? "V" : "PR"}</b>{["Home", "Work", "People"].map((label, index) => <button key={label} type="button" aria-current={active === index ? "page" : undefined} onClick={() => setActive(index)}>{label}</button>)}</aside><section><header><strong>Launch room</strong><button type="button">Share</button></header><main><span>Current decision</span><strong>{["Home direction", "Release checklist", "Review team"][active]}</strong><p>The same product structure stays clear in every visual system.</p></main><footer><span>All changes saved</span><b>3 online</b></footer></section></div>
       break
     case "workspace-tree":
       sample = <div className="mini-workspace-tree"><button type="button" onClick={() => setOpen((value) => !value)} aria-expanded={open}><ChevronDown />Product</button>{open ? <div>{["Brief", "Research", "Release"].map((label, index) => <button key={label} type="button" aria-current={active === index ? "true" : undefined} onClick={() => setActive(index)}>{label}</button>)}</div> : null}</div>

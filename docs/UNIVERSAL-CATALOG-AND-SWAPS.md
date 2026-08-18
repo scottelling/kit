@@ -8,7 +8,11 @@ Kit separates three things that must never be confused:
 2. Specialist patterns are useful structures such as a timeline, canvas inspector, desktop window, dock, or command bar. Every visual kit can style them, but none is installed unless the product asks for it.
 3. Product-owned work is the target product's pages, routes, data, content, workflows, and business behavior. A kit swap does not replace any of it.
 
-The current universal catalog contains 175 individually installable interface pieces: 138 everyday pieces and 37 specialist patterns. Purple Rain, JADE, OS, and Animation Studio expose the same names and behavior. Their foundations change how those pieces look and feel.
+The current universal catalog contains 175 individually installable interface pieces: 138 everyday pieces and 37 specialist patterns. Vanilla, Purple Rain, JADE, OS, and Animation Studio expose the same names and behavior. Their foundations change how those pieces look and feel.
+
+Vanilla is the neutral default for a brand-new product. `/vanilla` proves the
+ownership boundary with four working starting shapes. The product owns its
+pages and behavior; changing one system token source changes the visual kit.
 
 ## Adding a new reusable piece
 

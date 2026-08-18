@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "task-rail",
+  "title": "Vanilla Task Rail",
+  "description": "Task Rail assembles related pieces into a complete task.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/application/task-rail.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction TaskRail({ className, ...props }: React.ComponentProps<\"aside\">) {\n  return <aside data-slot=\"task-rail\" className={cn(\"grid w-full max-w-sm content-start gap-2 bg-[var(--plane-1)] p-3\", className)} {...props} />\n}\n\nfunction TaskRailItem({ active = false, className, ...props }: React.ComponentProps<\"button\"> & { active?: boolean }) {\n  return <button type=\"button\" data-slot=\"task-rail-item\" aria-current={active ? \"true\" : undefined} className={cn(\"min-h-11 rounded-[var(--radius-control)] px-3 text-start text-sm font-semibold text-muted-foreground outline-none hover:bg-muted hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring aria-[current=true]:bg-primary aria-[current=true]:text-primary-foreground\", className)} {...props} />\n}\n\nexport { TaskRail, TaskRailItem }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

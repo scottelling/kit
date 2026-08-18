@@ -14,6 +14,7 @@ const systems = [
   { id: "jade", title: "JADE", item: "public/r/jade/tokens.json", outDir: "public/r/jade", sourceUrl: `${site}/r/jade/tokens.json` },
   { id: "os", title: "OS", item: "public/r/os/tokens.json", outDir: "public/r/os", sourceUrl: `${site}/r/os/tokens.json` },
   { id: "animation", title: "Animation Studio", item: "public/r/animation/tokens.json", outDir: "public/r/animation", sourceUrl: `${site}/r/animation/tokens.json` },
+  { id: "vanilla-kit", title: "Vanilla", item: "public/r/vanilla-kit/tokens.json", outDir: "public/r/vanilla-kit", sourceUrl: `${site}/r/vanilla-kit/tokens.json` },
   { id: "shadow", title: "Shadow", item: "public/r/shadow/smooth-shadow.json", outDir: "public/r/shadow", sourceUrl: `${site}/r/shadow/smooth-shadow.json` },
 ]
 

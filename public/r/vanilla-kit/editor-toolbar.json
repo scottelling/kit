@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "editor-toolbar",
+  "title": "Vanilla Editor Toolbar",
+  "description": "Editor Toolbar assembles related pieces into a complete task.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/application/editor-toolbar.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction EditorToolbar({ className, ...props }: React.ComponentProps<\"div\">) {\n  return <div data-slot=\"editor-toolbar\" role=\"toolbar\" className={cn(\"flex min-h-11 flex-wrap items-center gap-1 rounded-[var(--radius-card)] bg-[var(--plane-2)] p-1\", className)} {...props} />\n}\n\ntype EditorToolbarButtonProps = React.ComponentProps<\"button\"> & { active?: boolean }\n\nfunction EditorToolbarButton({ active = false, className, ...props }: EditorToolbarButtonProps) {\n  return (\n    <button\n      type=\"button\"\n      data-slot=\"editor-toolbar-button\"\n      aria-pressed={active}\n      className={cn(\n        \"inline-flex min-h-11 min-w-11 items-center justify-center rounded-[var(--radius-control)] px-3 text-sm font-semibold text-muted-foreground outline-none transition-[background-color,color,transform] duration-[var(--dur-micro)] hover:bg-background hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring active:translate-y-px aria-pressed:bg-primary aria-pressed:text-primary-foreground motion-reduce:transition-none motion-reduce:active:translate-y-0\",\n        className,\n      )}\n      {...props}\n    />\n  )\n}\n\nexport { EditorToolbar, EditorToolbarButton }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

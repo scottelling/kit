@@ -22,11 +22,14 @@ visible and tactile in public, reusable by agents, and installable behind the sc
 - `/kit/jade/compare` preserves the original synchronized JADE and Purple Rain launch-review test.
 - `/kit/os` is the complete rebuilt OS inventory: all 175 pieces, including the OS-native desktop, window, menu bar, dock, widget, master-detail, split-view, command bar, and settings structures and the optional Animation specialist patterns. Its five source theme moods are maintained as solid OKLCH systems with 44px controls; glass, aura, glow, raw colors, and source application governance do not travel.
 - `/kit/animation` is the complete rebuilt Animation Studio inventory: all 175 pieces, including the studio-native storyboard, canvas, inspector, motion, timeline, code, template, delivery, and recovery structures and the optional OS specialist patterns. It preserves the inspected CUE dark source authority, semantic motion purposes, dense geometry, and canvas-first product hierarchy while excluding CUE data, AI, persistence, rendering, Remotion, legacy Operations, undersized controls, and unsupported effects.
+- `/kit/vanilla` is the complete neutral inventory: the same 175 pieces in a restrained, accessible light/dark foundation with system fonts, solid surfaces, 44-pixel controls, and no borrowed brand personality. It is the default visual starting point for new products that need future kit swaps.
+- `/vanilla` is the working Vanilla Project Starter. The same app, landing, shop, and content structures can switch among Vanilla, Purple Rain, JADE, OS, and Animation by changing only the system token source. Its public handoff is `/r/vanilla/starter.json` (`kit-project-starter/1`).
+- Vanilla is a complete visual system; the lowercase vanilla dialect is the framework-free HTML/CSS/JS delivery format. These are separate layers. The starter uses both by default.
 - `/kit/shadow` is the focused Shadow elevation kit: six inspected stacked depths, ringless and integrated-hairline treatments, independent shadow and edge tinting, automatic light/dark hairlines, real-surface touch tests, and an MIT-carrying public registry item under `/r/shadow/`.
 - Shadow is a foundation kit, not a third visual identity. It may strengthen Purple Rain, JADE, or another compatible system without replacing that system's palette, type, spacing, shape, or interaction rules.
-- `lib/kit-capability-contract.json` is the shared release contract. Purple Rain, JADE, OS, and Animation Studio must carry the same state coverage, responsive range, accessibility requirements, and production application patterns before any can claim broader capability.
-- `registry.json` publishes Purple Rain under `/r/`; `registry/jade/registry.json` publishes JADE under `/r/jade/`; `registry/os/registry.json` publishes OS under `/r/os/`; `registry/animation/registry.json` publishes Animation Studio under `/r/animation/`. Every installed piece carries only its chosen system tokens automatically.
-- `lib/purple-rain-library.json` is the 138-piece everyday inventory; `lib/os-library.json` and `lib/animation-library.json` preserve the specialist source ownership; `lib/universal-library.json` is the 175-piece catalog exposed through all four systems. Specialist pieces are individually available but never pulled into a project unless requested.
+- `lib/kit-capability-contract.json` is the shared release contract. Vanilla, Purple Rain, JADE, OS, and Animation Studio must carry the same state coverage, responsive range, accessibility requirements, and production application patterns before any can claim broader capability.
+- `registry.json` publishes Purple Rain under `/r/`; `registry/jade/registry.json` publishes JADE under `/r/jade/`; `registry/os/registry.json` publishes OS under `/r/os/`; `registry/animation/registry.json` publishes Animation Studio under `/r/animation/`; `registry/vanilla-kit/registry.json` publishes Vanilla under `/r/vanilla-kit/`. Every installed piece carries only its chosen system tokens automatically.
+- `lib/purple-rain-library.json` is the 138-piece everyday inventory; `lib/os-library.json` and `lib/animation-library.json` preserve the specialist source ownership; `lib/universal-library.json` is the 175-piece catalog exposed through all five systems. Specialist pieces are individually available but never pulled into a project unless requested.
 - `lib/system-catalog.json` records the shared, specialist, and product-owned layers. New reusable components are promoted once into this catalog; product routes, data, and business behavior never travel with them.
 - The global finder accepts ordinary phrases and takes visitors directly to any matching family or individual piece.
 - `/demo` keeps Purple Rain and Origin on the same task, but asks visitors to judge the felt decision path rather than implementation details.
@@ -52,11 +55,10 @@ visible and tactile in public, reusable by agents, and installable behind the sc
   `tokens.css`, and `design-tokens.json`. shadcn is a dialect, not the
   foundation; a project with no React or Tailwind adopts the same language
   through `tokens.css` and the vanilla pieces.
-- The universal variable set (the intersection of all four complete systems'
+- The universal variable set (the intersection of all five complete systems'
   root scopes, 53 variables including the `--kit-*` foundations) is the only
   vocabulary allowed in cross-system pieces; `verify:dialects` enforces it.
-- `/vanilla` is the living proof: one plain HTML page whose entire visual
-  system swaps by changing a single stylesheet link.
+- `/vanilla` is the living proof and usable neutral project foundation: one plain HTML project whose entire visual system swaps by changing a single stylesheet link while its product-owned markup and behavior remain unchanged.
 - `/r/doctrine.json` is the machine-readable rulebook agents load before
   styling any consumer; `/r/checksums.json` + `kit-manifest.json` +
   `scripts/kit-doctor.mjs` make consumer drift visible instead of silent.

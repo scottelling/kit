@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "layer-list",
+  "title": "Vanilla Layer List",
+  "description": "A readable layer stack with visibility, type, and current selection.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/vanilla-kit/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/animation/patterns/layer-list.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst sampleLayers = [\"Headline\", \"Supporting copy\", \"Background\"]\n\nexport function LayerList({ className, ...props }: React.ComponentPropsWithoutRef<\"div\">) {\n  const [active, setActive] = React.useState(0)\n  const [hidden, setHidden] = React.useState<number[]>([])\n  return <div data-slot=\"layer-list\" className={cn(\"grid gap-1\", className)} {...props}>{sampleLayers.map((layer, index) => <div key={layer} className=\"grid grid-cols-[2.75rem_1fr] gap-1\"><button type=\"button\" aria-label={(hidden.includes(index) ? \"Show \" : \"Hide \") + layer} onClick={() => setHidden((current) => current.includes(index) ? current.filter((item) => item !== index) : [...current, index])} className=\"size-11 rounded-[var(--radius-control)] border border-border text-xs\">{hidden.includes(index) ? \"Off\" : \"On\"}</button><button type=\"button\" aria-current={active === index ? \"true\" : undefined} onClick={() => setActive(index)} className=\"min-h-11 rounded-[var(--radius-control)] px-3 text-left text-sm aria-[current=true]:bg-secondary aria-[current=true]:font-bold\">{layer}</button></div>)}</div>\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

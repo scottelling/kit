@@ -13,6 +13,7 @@ const manifests = [
   ["jade", "registry/jade/registry.json", "https://kit.scottelling.com/r/jade/tokens.json"],
   ["os-kit", "registry/os/registry.json", "https://kit.scottelling.com/r/os/tokens.json"],
   ["animation-studio", "registry/animation/registry.json", "https://kit.scottelling.com/r/animation/tokens.json"],
+  ["vanilla-kit", "registry/vanilla-kit/registry.json", "https://kit.scottelling.com/r/vanilla-kit/tokens.json"],
 ]
 
 if (icons.families.length !== 2) failures.push("icon library does not contain exactly two approved interface families")
