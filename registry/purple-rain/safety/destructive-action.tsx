@@ -80,12 +80,11 @@ export function DestructiveAction({
 
   return (
     <AlertDialogPrimitive.Root open={open} onOpenChange={changeOpen}>
-      <AlertDialogPrimitive.Trigger asChild disabled={disabled}>
-        {trigger ?? (
-          <button type="button" className="min-h-11 rounded-[var(--radius-control)] bg-destructive px-4 text-sm font-semibold text-destructive-foreground shadow-[var(--shadow-control)] outline-none hover:opacity-90 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background active:translate-y-px disabled:pointer-events-none disabled:opacity-50 motion-reduce:active:translate-y-0">
-            {triggerLabel}
-          </button>
-        )}
+      <AlertDialogPrimitive.Trigger
+        disabled={disabled}
+        className="min-h-11 rounded-[var(--radius-control)] bg-destructive px-4 text-sm font-semibold text-destructive-foreground shadow-[var(--shadow-control)] outline-none hover:opacity-90 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background active:translate-y-px disabled:pointer-events-none disabled:opacity-50 motion-reduce:active:translate-y-0"
+      >
+        {trigger ?? triggerLabel}
       </AlertDialogPrimitive.Trigger>
       <AlertDialogPrimitive.Portal>
         <AlertDialogPrimitive.Overlay className="fixed inset-0 z-50 bg-overlay data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 motion-reduce:animate-none" />

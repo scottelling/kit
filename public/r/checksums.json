@@ -1,6 +1,6 @@
 {
   "format": "kit-checksums/1",
-  "registryVersion": "8624ebc68ddc",
+  "registryVersion": "8f4ff0751f4d",
   "artifactCount": 968,
   "artifacts": {
     "r/accordion.json": {
@@ -240,8 +240,8 @@
       "bytes": 1869
     },
     "r/animation/destructive-action.json": {
-      "sha256": "ccc362e61e0c466c91ebe932e551c07f86e8b5d9b132f6cd20738208757b299a",
-      "bytes": 9588
+      "sha256": "f923bf3837c40590ccc81fcb66b8d8e0819a1bfd03218c4d4c90889a7c35f21b",
+      "bytes": 9521
     },
     "r/animation/device-frame.json": {
       "sha256": "ab18740fa084567a768d27e1416045cac019e939c854eb472879799c55082df1",
@@ -940,8 +940,8 @@
       "bytes": 1854
     },
     "r/destructive-action.json": {
-      "sha256": "74c7b70f27e5602636fd15ba6b114ec763b703a9a86f720283133d493e12f8f6",
-      "bytes": 9573
+      "sha256": "2b48c4e8bc09f7d0832a05c571ef58e062e4c87ba59b6cba15c3e268d2d8f2f3",
+      "bytes": 9506
     },
     "r/device-frame.json": {
       "sha256": "ce4e75cf106cd03a59437366907be906346851b79221db83ee3de7e56a08968f",
@@ -1352,8 +1352,8 @@
       "bytes": 1852
     },
     "r/jade/destructive-action.json": {
-      "sha256": "2fdf21c677673a2a24dde228928ae8bce660fe146f42ea7291d6b28b09a17c10",
-      "bytes": 9571
+      "sha256": "661c4ca27e7a3995b84dd6dac352a993998f9832746bc39b31362abf14516375",
+      "bytes": 9504
     },
     "r/jade/device-frame.json": {
       "sha256": "d27d7915870343b2b0a015a90c463ac9302247d65ce4416e8b8e903b2ed6395a",
@@ -2164,8 +2164,8 @@
       "bytes": 1848
     },
     "r/os/destructive-action.json": {
-      "sha256": "94cbb12d9092bfb7e84ec61b88a9b03920315d4ed71afdddf697711c6deece7a",
-      "bytes": 9567
+      "sha256": "dacdc4b79d937b9d295abc7bdfb2bb766d11fc74c72f1dbdfa102e8244161864",
+      "bytes": 9500
     },
     "r/os/device-frame.json": {
       "sha256": "1b82445d53d018ce188613c55203b97fcff86512b71423197550aefdb2e908af",
@@ -3240,8 +3240,8 @@
       "bytes": 1862
     },
     "r/vanilla-kit/destructive-action.json": {
-      "sha256": "548f0c885ae9ed4e8e698b2ce89935482f9c18f21bb1fe0eaac2ec916fac26ae",
-      "bytes": 9581
+      "sha256": "b77e5a21aad5fe42c98251ba0a4d7363dafce916bb09bb1718f5ac03565bc595",
+      "bytes": 9514
     },
     "r/vanilla-kit/device-frame.json": {
       "sha256": "7bcd4e6ce58fa828d0b78132066f62a5bc15ea330cd9a8245a5e861133b0f849",

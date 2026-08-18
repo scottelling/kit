@@ -46,6 +46,7 @@ requireTerms("share-qr-panel", share, ["navigator.clipboard", "navigator.share",
 
 const destructive = sources.get("destructive-action") ?? ""
 requireTerms("destructive-action", destructive, ["AlertDialogPrimitive", "confirmationText", "autoFocus", "irreversible", "onUndo", "undo-error", "aria-live", "aria-live=\"assertive\"", "min-h-11"])
+if (destructive.includes("<AlertDialogPrimitive.Trigger asChild")) failures.push("destructive-action uses a trigger shape that shadcn can rewrite into nested buttons")
 
 for (const [name, source] of sources) {
   for (const productTerm of ["Glohhh", "GlowProfile", "peptide", "affiliate", "/profile"]) {
