@@ -1,5 +1,24 @@
 # Agent Ledger
 
+## 2026-08-17 — Kit refinement and final Glohhh adoption approval
+
+- Agent: Codex
+- Scope: complete the refinement batch requested by Glohhh, prove it in Kit and in a clean outside product, publish it, and issue adoption approval without changing Glohhh
+- Phone behavior: visibility now presents one clear status row that opens a focused native choice sheet on phones while keeping the full options inline on larger views; destructive confirmation now owns the whole phone viewport and returns to a contained desktop modal
+- State precision: inherited and explicit local-override visibility are distinct; text-link readiness and QR readiness are independent, so QR loading or failure does not disable a valid link; the copy callback is now the collision-free `onCopyLink`
+- Tactile proof: expanded showroom previews now expose working state rails for modal confirmation, visibility, evidence, sharing, and destructive recovery, including inherited, override, loading, failed, empty, revoked, offline, completed, and irreversible cases where applicable
+- Adoption gate: `/studio/swap` now classifies real product journeys as already covered, a composition of existing pieces, a reusable Kit gap, or product-owned work; unclassified journeys and shared gaps block the ready state; `/r/adoption-assessment.json` publishes the same rules while preserving Checklist as the full-project launch-readiness authority
+- Defects caught by real interaction: closing the phone visibility sheet originally also closed its parent showroom preview; nested close events are now isolated and permanently checked. The first downstream recovery run also found that a destructive control remained busy after Undo; successful recovery now resets the control before closing and a permanent source check rejects regression
+- Automated proof: every registry schema, all five complete-system contracts, all 969 generated artifact checks, safety and Studio resource contracts, lint, TypeScript, and the Next production build pass under registry version `c95b4c391404`
+- Responsive proof: the refined showroom and adoption workspace passed 320, 375, 414, 768, 1280, and 1440-pixel checks with no horizontal overflow and no undersized new controls; light and dark safety previews remained legible and tactile
+- Interaction proof: phone visibility opens with the selected choice focused and closes without dismissing its parent preview; a failed QR leaves link copy enabled; reusable gaps change the adoption result to “Kit upgrade required” and resolving the classification changes it to “Ready to adopt”; browser consoles remain clean
+- Live downstream proof: `/tmp/kit-glohhh-refinement-proof` began as a clean Next App Router, TypeScript, Tailwind v4, and shadcn app, then installed the live Vanilla visibility, share/QR, and destructive pieces. The install created three component files, merged the complete Vanilla light/dark foundation into `app/globals.css`, and added the existing `radix-ui` modal dependency to `package.json` and `package-lock.json`. A typed `(url: string) => void` copy callback compiled, all three installed files matched their live payloads exactly, and the outside production build passed
+- Downstream browser proof: at 375 pixels the visibility sheet focused the current radio choice, QR failure and text-link copy worked together, destructive confirmation measured exactly the full 375×812 viewport, Cancel received first focus, typed confirmation completed, Undo restored the item, and the same action reopened correctly after recovery with zero nested buttons; at 768 pixels the confirmation returned to a centered 512-pixel modal
+- Live proof: `/kit/vanilla`, `/studio/swap`, `/r/adoption-assessment.json`, and the live Vanilla visibility, share/QR, and destructive files return `200`; the assessment artifact matches local source exactly; live phone journeys have no overflow or console warnings
+- Deployment: Vercel production `dpl_659QMTbMt6g1THozcSqgPiTadFjK`, aliased to `kit.scottelling.com`; product commits `b9c0097` and `8da55cc` pushed to `scottelling/kit`
+- Glohhh handoff: final Vanilla adoption approval is recorded in `docs/GLOHHH-KIT-READINESS.md`; no Glohhh file was touched
+- Open loops: none in Kit for Glohhh adoption
+
 ## 2026-08-17 — Shared safety patterns and Glohhh readiness
 
 - Agent: Codex

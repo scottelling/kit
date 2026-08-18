@@ -63,5 +63,16 @@ section props, then re-run the downstream TypeScript install proof.
 Kit now uses the unambiguous `onCopyLink` callback and explicitly excludes the
 browser's native `onCopy` event from the component contract. A compile-only
 consumer fixture permanently checks that an ordinary `(url: string) => void`
-callback is accepted. Final adoption approval still depends on the live
-downstream installation proof recorded with this release.
+callback is accepted. A fresh outside Next/shadcn product then installed the
+three refined safety pieces from the live Vanilla registry, compiled that
+callback, exercised the phone and desktop behavior, and passed its production
+build.
+
+## Final adoption approval — 2026-08-17
+
+Glohhh is approved to adopt Vanilla from the live Kit registry. Kit has no
+remaining shared blocker from the submitted review. Glohhh still owns its
+medical language, evidence policy, permissions, publishing rules, real QR
+generation, destructive side effects, and recovery policy; those product
+decisions must be made during its own adoption work rather than copied into
+the shared kit.
