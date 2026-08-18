@@ -71,6 +71,7 @@ export function DestructiveAction({
     setState("undoing")
     try {
       await onUndo()
+      setState("idle")
       setOpen(false)
     } catch (caught) {
       setError(caught instanceof Error ? caught.message : "Recovery did not finish. Try again.")

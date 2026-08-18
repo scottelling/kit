@@ -48,6 +48,7 @@ if (share.includes("onCopy?:")) failures.push("share-qr-panel reintroduces the n
 const destructive = sources.get("destructive-action") ?? ""
 requireTerms("destructive-action", destructive, ["AlertDialogPrimitive", "confirmationText", "autoFocus", "irreversible", "onUndo", "undo-error", "aria-live", "aria-live=\"assertive\"", "min-h-11", "h-dvh", "sm:h-auto"])
 if (destructive.includes("<AlertDialogPrimitive.Trigger asChild")) failures.push("destructive-action uses a trigger shape that shadcn can rewrite into nested buttons")
+if (!/await onUndo\(\)\s+setState\("idle"\)\s+setOpen\(false\)/u.test(destructive)) failures.push("destructive-action remains busy after successful recovery")
 
 for (const [name, source] of sources) {
   for (const productTerm of ["Glohhh", "GlowProfile", "peptide", "affiliate", "/profile"]) {
