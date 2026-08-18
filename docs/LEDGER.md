@@ -13,8 +13,10 @@
 - Responsive proof: the working starter and complete showroom passed 320, 375, 414, 768, 1280, and 1440-pixel checks with no page-level overflow and no visible interactive target below 44 pixels
 - Interaction proof: changing Vanilla to JADE changed the visual foundation while the product markup stayed byte-identical; project-type navigation, light/dark, form success, and dialog open/close passed
 - Build proof: every registry schema, generated artifact, design-system verifier, lint rule, TypeScript check, and production build passed; the registry publishes 948 checksummed artifacts
-- Deployment: pending production release proof
-- Open loops: live endpoint and clean downstream installation proof remain before this release is closed
+- Live proof: `/kit/vanilla`, `/vanilla`, `/r/vanilla-kit/registry.json`, `/r/vanilla-kit/button.json`, `/r/vanilla/starter.json`, `/r/vanilla/starter.css`, and `/r/vanilla/starter.js` all return `200`; the live working starter and showroom are clean at every proof width, and direct navigation into the standalone starter produces no console or network errors
+- Live downstream proof: a fresh outside Next/shadcn project installed the Vanilla button from the public Kit URL; exactly `components/ui/button.tsx` and `app/globals.css` changed, the full Vanilla light/dark foundation merged automatically, no extra package or configuration change was introduced by the component install, and the consumer production build passed
+- Deployment: Vercel production `dpl_4Lqd5hneLfXNbkdgjDqtetHwAjmP`, aliased to `kit.scottelling.com`; product commits `91b2e65` and `104841f` pushed to `scottelling/kit`
+- Open loops: none
 
 ## 2026-08-16 — Complete Beautiful UI Elements collection
 
