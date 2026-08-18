@@ -1,5 +1,22 @@
 # Agent Ledger
 
+## 2026-08-17 — Shared safety patterns and Glohhh readiness
+
+- Agent: Codex
+- Scope: close the reusable gaps found by Glohhh before it adopts Vanilla, without moving Glohhh's medical, privacy, publishing, or commercial policy into Kit and without changing Glohhh itself
+- Universal catalog: every complete visual system now exposes 179 individually installable pieces—142 everyday pieces plus 37 opt-in specialist patterns—with the same new visibility/publication, evidence/source, share/QR, destructive/recovery, and real modal-confirmation behavior
+- Product boundary: Kit owns understandable controls, complete interaction states, keyboard and touch behavior, responsive layout, focus safety, warnings, progress, failure, retry, and recovery presentation; consumers own permissions, publishing rules, source trust, QR generation, destructive side effects, and undo policy
+- Alert-dialog repair: replaced the disclosure-shaped confirmation with a real labelled, focus-contained modal; the safe action receives first focus, Escape closes when work is not pending, phone presentation becomes a reachable bottom sheet, and reduced motion removes the transition
+- State proof: visibility covers private, draft, unlisted, public, inherited, saving, saved, failed, sensitive, destination, and preview; evidence covers provenance, confidence, freshness, limitations, loading, failure, conflict, stale, and missing sources; sharing covers text link, copy, native share, product-supplied QR, draft, loading, failure, revoked, and offline; destructive work covers typed confirmation, progress, failure, completion, optional undo, undo progress, undo failure, and irreversible actions
+- Automated proof: all registry schemas, all five complete-system contracts, generated public artifacts, safety-specific source checks, token delivery, specialist opt-in rules, resource checks, lint, TypeScript, and the production build pass; the release publishes 968 checksummed artifacts under registry version `8f4ff0751f4d`
+- Responsive and interaction proof: the showroom passed 320, 375, 414, 768, 1280, and 1440-pixel checks; live phone proof exercised public visibility selection, source disclosure, copy feedback, typed confirmation, completion, undo, light/dark, safe initial focus, and Escape close with no page overflow or console warnings
+- Downstream proof: a clean outside Next/shadcn app installed all five safety pieces from the live Vanilla URLs; the installer added five component files, merged Vanilla light and dark foundations into `app/globals.css`, and added the existing registry modal dependency to `package.json` and `package-lock.json`; the consumer production build passed
+- Downstream defect caught and fixed: the first real install exposed a shadcn trigger rewrite that created nested buttons in the destructive action; the trigger was simplified, a permanent rejection check was added, the corrected live item was reinstalled, and browser proof confirmed one trigger, zero nested buttons, safe cancel focus, typed confirmation, completion, undo, and a clean console
+- Live proof: `/kit/vanilla` and all five `/r/vanilla-kit/` safety files return `200`; representative Purple Rain, JADE, OS, and Animation safety files also return `200`; the live Vanilla showroom completes the safety journeys in dark and light
+- Deployment: Vercel production `dpl_Ckd5kpxtEN8LZjatGJY2PASTMdmH`, aliased to `kit.scottelling.com`; product commits `9a6a371` and `f46ee26` pushed to `scottelling/kit`
+- Glohhh handoff: `docs/GLOHHH-KIT-READINESS.md` records what Kit now supplies, what Glohhh must still decide, and the safe adoption order; no Glohhh file was touched
+- Open loops: none in Kit; Glohhh can now perform its product-specific review and adoption
+
 ## 2026-08-17 — Vanilla swap-ready project foundation
 
 - Agent: Codex
