@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tree-view",
+  "title": "Voltage Tree View",
+  "description": "Tree View turns information into a readable, useful object.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/voltage/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/tree-view.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type TreeViewProps = React.ComponentPropsWithoutRef<\"details\">\n\nexport function TreeView({ children, className, ...props }: TreeViewProps) {\n  if (children !== undefined) {\n    return (<details data-slot=\"tree-view\" className={cn(\"min-w-0\", className)} {...props}>{children}</details>)\n  }\n\n  return (\n    <details data-slot=\"tree-view\" className={cn(\"border-b border-border py-2\", className)} open {...props}><summary className=\"min-h-11 cursor-pointer py-3 font-semibold\">Tree View</summary><p className=\"pb-3 text-sm text-muted-foreground\">The useful detail appears exactly where it is needed.</p></details>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

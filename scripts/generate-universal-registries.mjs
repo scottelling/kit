@@ -39,6 +39,13 @@ const systems = [
     homepage: "https://kit.scottelling.com/kit/vanilla",
     tokenUrl: "https://kit.scottelling.com/r/vanilla-kit/tokens.json",
   },
+  {
+    id: "voltage",
+    label: "Voltage",
+    manifest: "registry/voltage/registry.json",
+    homepage: "https://kit.scottelling.com/kit/voltage",
+    tokenUrl: "https://kit.scottelling.com/r/voltage/tokens.json",
+  },
 ]
 
 const manifests = new Map()

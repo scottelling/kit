@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "workspace-switcher",
+  "title": "Voltage Workspace Switcher",
+  "description": "A touch-safe Story, Preview, Code, and Inspect switcher for narrow workspaces.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/voltage/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/animation/patterns/workspace-switcher.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst views = [\"Story\", \"Preview\", \"Code\", \"Inspect\"] as const\n\nexport type WorkspaceSwitcherProps = Omit<React.ComponentPropsWithoutRef<\"nav\">, \"onChange\"> & { value?: typeof views[number]; onChange?: (value: typeof views[number]) => void }\n\nexport function WorkspaceSwitcher({ value, onChange, className, ...props }: WorkspaceSwitcherProps) {\n  const [local, setLocal] = React.useState<typeof views[number]>(value ?? \"Preview\")\n  const active = value ?? local\n  return <nav data-slot=\"workspace-switcher\" aria-label=\"Workspace view\" className={cn(\"grid grid-cols-4 gap-1 border-b border-border bg-sidebar p-1\", className)} {...props}>{views.map((view) => <button key={view} type=\"button\" aria-current={active === view ? \"page\" : undefined} onClick={() => { setLocal(view); onChange?.(view) }} className=\"min-h-11 rounded-[var(--radius-control)] px-2 text-xs font-bold text-muted-foreground aria-[current=page]:bg-secondary aria-[current=page]:text-foreground\">{view}</button>)}</nav>\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

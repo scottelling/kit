@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "bar-chart",
+  "title": "Voltage Bar Chart",
+  "description": "Bar Chart turns information into a readable, useful object.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/voltage/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/bar-chart.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type BarChartProps = React.ComponentPropsWithoutRef<\"figure\">\n\nexport function BarChart({ children, className, ...props }: BarChartProps) {\n  if (children !== undefined) {\n    return (<figure data-slot=\"bar-chart\" className={cn(\"min-w-0\", className)} {...props}>{children}</figure>)\n  }\n\n  return (\n    <figure data-slot=\"bar-chart\" className={cn(\"flex h-40 items-end justify-center gap-3\", className)} {...props}>{[\"h-1/3\", \"h-3/4\", \"h-1/2\", \"h-full\"].map((height) => <span key={height} className={cn(\"w-10 rounded-t-[var(--radius-control)] bg-primary\", height)} />)}<figcaption className=\"sr-only\">Bar Chart</figcaption></figure>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

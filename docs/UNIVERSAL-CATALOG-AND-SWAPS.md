@@ -32,7 +32,7 @@ If those conditions are not true, the work stays in the product. This prevents C
 Visibility and publication, evidence and sources, share and QR handoff,
 destructive actions with recovery, and modal confirmation are reusable product
 needs rather than Glohhh-specific screens. They therefore live once in the
-universal catalog and are styled by all five complete systems.
+universal catalog and are styled by all six complete systems.
 
 Their boundary is strict. Kit supplies the understandable controls, full state
 coverage, safe focus order, keyboard and touch behavior, responsive layout,

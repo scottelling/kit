@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "focus-ring",
+  "title": "Voltage Focus Ring",
+  "description": "See how Focus Ring shapes every screen.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/voltage/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/focus-ring.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type FocusRingProps = React.ComponentPropsWithoutRef<\"div\">\n\nexport function FocusRing({ children, className, ...props }: FocusRingProps) {\n  if (children !== undefined) {\n    return (<div data-slot=\"focus-ring\" className={cn(\"min-w-0\", className)} {...props}>{children}</div>)\n  }\n\n  return (\n    <div data-slot=\"focus-ring\" className={cn(\"grid place-items-center\", className)} {...props}><button type=\"button\" className=\"rounded-[var(--radius-control)] border border-border bg-card text-card-foreground shadow-[var(--shadow-control)] min-h-11 px-4 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background\">Press Tab to find me</button></div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -1,7 +1,7 @@
 # KIT Format — SPEC
 
-Version: 1.2.0 (2026-08-17) — adds Vanilla as the neutral complete system and
-the `kit-project-starter/1` swap-ready project foundation.
+Version: 1.3.0 (2026-08-20) — adds Voltage as a sixth complete system while
+preserving one universal 179-piece catalog and swap-ready project foundation.
 
 This file is the source of truth for the KIT format: how visual systems, tokens,
 pieces, doctrine, and consumers speak one language. The shadcn registry is one
@@ -29,6 +29,7 @@ Complete systems (each styles the entire 179-piece catalog):
 | `os` | `/r/os/` |
 | `animation` | `/r/animation/` |
 | `vanilla-kit` | `/r/vanilla-kit/` |
+| `voltage` | `/r/voltage/` |
 
 Foundation kits supplement a system without replacing its identity: `shadow`
 (`/r/shadow/`). Animation is a dark-authority system: both appearance contexts
@@ -84,7 +85,7 @@ Rules:
   shadow utilities-as-classes) follow verbatim. Tailwind-only value-
   parameterized utilities are omitted and documented in a trailing comment.
 - Fonts are referenced by the tokens but loaded by the consuming project.
-- The **universal set** is the intersection of variables present in all five
+- The **universal set** is the intersection of variables present in all six
   complete systems' `tokens.css` `:root` scope (53 variables today, including
   the `--kit-*` foundation namespace, semantic colors, planes, radius roles,
   and shadow roles). Anything portable must restrict itself to this set.

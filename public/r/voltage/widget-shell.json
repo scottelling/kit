@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "widget-shell",
+  "title": "Voltage Widget Shell",
+  "description": "A measured small surface that shows the most useful state without clipping or decorative motion.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/voltage/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/os/patterns/widget-shell.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\ntype WidgetShellProps = React.ComponentProps<\"article\"> & {\n  title: string\n  meta?: string\n  action?: React.ReactNode\n}\n\nfunction WidgetShell({ title, meta, action, className, children, ...props }: WidgetShellProps) {\n  return (\n    <article data-slot=\"widget-shell\" className={cn(\"grid min-h-40 min-w-0 content-start gap-3 overflow-hidden rounded-[var(--radius-card)] border border-border bg-card p-3 text-card-foreground\", className)} {...props}>\n      <header className=\"flex min-h-11 min-w-0 items-center gap-2\">\n        <div className=\"min-w-0 flex-1\"><strong className=\"block truncate text-sm\">{title}</strong>{meta ? <span className=\"block truncate text-xs text-muted-foreground\">{meta}</span> : null}</div>\n        {action}\n      </header>\n      <div className=\"min-h-0 min-w-0\">{children}</div>\n    </article>\n  )\n}\n\nexport { WidgetShell }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

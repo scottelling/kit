@@ -61,6 +61,10 @@ curl -fsS https://kit.scottelling.com/r/vanilla-kit/visibility-publication-contr
 curl -fsS https://kit.scottelling.com/r/vanilla-kit/evidence-source-block.json
 curl -fsS https://kit.scottelling.com/r/vanilla-kit/share-qr-panel.json
 curl -fsS https://kit.scottelling.com/r/vanilla-kit/destructive-action.json
+curl -fsS https://kit.scottelling.com/r/voltage/registry.json
+curl -fsS https://kit.scottelling.com/r/voltage/tokens.json
+curl -fsS https://kit.scottelling.com/r/voltage/tokens.css
+curl -fsS https://kit.scottelling.com/r/voltage/button.json
 curl -fsS https://kit.scottelling.com/vanilla
 curl -fsS https://kit.scottelling.com/r/space/registry.json
 curl -fsS https://kit.scottelling.com/r/space/tokens.css
@@ -73,6 +77,7 @@ curl -fsS https://kit.scottelling.com/labs
 curl -fsS https://kit.scottelling.com/elements
 curl -fsS https://kit.scottelling.com/kit/os
 curl -fsS https://kit.scottelling.com/kit/animation
+curl -fsS https://kit.scottelling.com/kit/voltage
 curl -fsS https://kit.scottelling.com/studio
 curl -fsS https://kit.scottelling.com/studio/icons
 curl -fsS https://kit.scottelling.com/studio/fonts

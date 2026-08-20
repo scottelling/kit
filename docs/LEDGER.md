@@ -1,5 +1,21 @@
 # Agent Ledger
 
+## 2026-08-20 — Complete Voltage visual system
+
+- Agent: Codex
+- Scope: turn one user-supplied visual reference into a complete Kit-owned interface system without copying the source product, its wording, proprietary artwork, feature model, or exact layout
+- Source boundary: the original image is preserved verbatim at `sources/voltage/reference.png` with SHA-256 `c53431ad1ca10dd5d0c89391b968afe2831752102e046ec9f75f42a30ec33a50`; `docs/VOLTAGE-KIT-INTAKE.md` records what the reference contributed, what was rejected, and what Kit added
+- Visual system: Voltage uses a deep violet chassis, solid violet/blue/cyan/green/amber/pink status blocks, rounded object geometry, seated directional depth, rounded system type, bright functional signals, and maintained light and dark OKLCH foundations; glass, translucency, glow, decorative gradients, resting loops, and proprietary source imagery are absent
+- Complete catalog: Voltage exposes the same 179 individually installable pieces as every complete system—142 everyday pieces plus 37 opt-in OS and Animation specialist patterns—and every piece automatically carries only the Voltage foundation
+- Signature proof: `/kit/voltage` adds a working desktop instrument panel with a five-choice workspace rail, three solid status objects, system-health summary, reversible task states, Start over recovery, and phone recomposition; the composition demonstrates the language but is never forced into adopting products
+- Platform integration: Voltage appears in the kit switcher, global finder, neutral project starter, Motion Studio, swap workspace, sourced-kit navigation, Shadow navigation, public system catalog, capability contract, doctrine, framework-free token dialects, design-token output, checksums, and deployment checks
+- Accessibility and resilience: every maintained semantic color pair meets at least 4.5:1 contrast; controls are at least 44 pixels; the phone rail shows all five choices without scrolling; visible focus, keyboard operation, reduced motion, explicit Escape close, and exact focus return are present
+- Responsive proof: the real showroom passed 320, 375, 414, 768, 1280, and 1440-pixel browser checks with zero page overflow, zero rail overflow, zero undersized Voltage controls, and all five workspace choices visible at every width
+- Interaction proof: workspace changes, reversible task completion, Start over recovery, light/dark switching, component search, preview open, Escape close, focus return, Motion Studio Voltage selection, and Vanilla starter Voltage selection all passed with a clean browser console
+- Defects caught during tactile proof: the first phone rail hid later choices behind a scrollbar, so it became one visible five-icon row; the shared component preview could ignore Escape in this browser, so every kit now closes explicitly and restores focus to the exact opening tile
+- Automated proof: every registry schema, all six complete-system contracts, the dedicated Voltage contract, generated-output parity, safety pieces, framework-free dialects, Studio resources, lint, TypeScript, and the Next production build pass under registry version `ed61777f2e6b`, covering 1,158 public artifacts
+- Release state: product is complete locally; production deployment and live outside-project installation proof are the remaining release actions
+
 ## 2026-08-20 — Shared Motion Studio and Transitions.dev source integration
 
 - Agent: Codex

@@ -28,6 +28,7 @@ const systems = [
   { id: "os", item: "public/r/os/tokens.json", dir: "public/r/os" },
   { id: "animation", item: "public/r/animation/tokens.json", dir: "public/r/animation" },
   { id: "vanilla-kit", item: "public/r/vanilla-kit/tokens.json", dir: "public/r/vanilla-kit" },
+  { id: "voltage", item: "public/r/voltage/tokens.json", dir: "public/r/voltage" },
   { id: "shadow", item: "public/r/shadow/smooth-shadow.json", dir: "public/r/shadow" },
 ]
 
@@ -94,7 +95,7 @@ for (const system of systems) {
 }
 
 // 2. Vanilla dialect: only universal variables, complete registry, parseable JS.
-const complete = ["purple-rain", "jade", "os", "animation", "vanilla-kit"]
+const complete = ["purple-rain", "jade", "os", "animation", "vanilla-kit", "voltage"]
 const universal = complete
   .map((id) => rootScopes[id])
   .filter(Boolean)
@@ -104,7 +105,7 @@ const vanillaManifest = await readJson("registry/vanilla/manifest.json")
 const vanillaCss = await readText("public/r/vanilla/kit.css")
 for (const reference of new Set([...vanillaCss.matchAll(/var\((--[\w-]+)/g)].map((match) => match[1]))) {
   if (universal && !universal.has(reference)) {
-    fail(`vanilla: ${reference} is not universal across the five complete systems`)
+    fail(`vanilla: ${reference} is not universal across the complete systems`)
   }
 }
 if (!/--kit-control-height/.test(vanillaCss)) fail("vanilla: kit.css lost the 44px control-height token usage")
@@ -143,7 +144,7 @@ for (const expected of ["index.html", "starter.css", "starter.js", "kit-manifest
 }
 for (const reference of new Set([...starterCss.matchAll(/var\((--[\w-]+)/g)].map((match) => match[1]))) {
   if (universal && !universal.has(reference)) {
-    fail(`vanilla starter: ${reference} is not universal across the five complete systems`)
+    fail(`vanilla starter: ${reference} is not universal across the complete systems`)
   }
 }
 if (/\{\{[^}]+\}\}/.test(JSON.stringify(starter))) fail("vanilla starter: unresolved placeholder remains")
@@ -158,7 +159,7 @@ if (starterJs !== starter.files.find((file) => file.path === "starter.js")?.cont
 
 // 3. Demo page pairs the bundle with every complete system's tokens.css.
 const demo = await readText("public/vanilla.html")
-for (const href of ["/r/tokens.css", "/r/jade/tokens.css", "/r/os/tokens.css", "/r/animation/tokens.css", "/r/vanilla-kit/tokens.css", "/r/vanilla/kit.css", "/r/vanilla/kit.js"]) {
+for (const href of ["/r/tokens.css", "/r/jade/tokens.css", "/r/os/tokens.css", "/r/animation/tokens.css", "/r/vanilla-kit/tokens.css", "/r/voltage/tokens.css", "/r/vanilla/kit.css", "/r/vanilla/kit.js"]) {
   if (!demo.includes(href)) fail(`demo: /vanilla page does not reference ${href}`)
 }
 for (const asset of ["/r/vanilla/starter.css", "/r/vanilla/starter.js"]) {
@@ -178,6 +179,7 @@ const mustCover = [
   "r/os/tokens.css",
   "r/animation/tokens.css",
   "r/vanilla-kit/tokens.css",
+  "r/voltage/tokens.css",
   "r/shadow/tokens.css",
   "r/design-tokens.json",
   "r/doctrine.json",

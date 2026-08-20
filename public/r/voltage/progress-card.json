@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-card",
+  "title": "Voltage Progress Card",
+  "description": "Progress Card makes the current state visible at a glance.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/voltage/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/progress-card.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type ProgressCardProps = React.ComponentPropsWithoutRef<\"div\">\n\nexport function ProgressCard({ children, className, ...props }: ProgressCardProps) {\n  if (children !== undefined) {\n    return (<div data-slot=\"progress-card\" className={cn(\"min-w-0 rounded-[var(--radius-card)] bg-card text-card-foreground\", className)} {...props}>{children}</div>)\n  }\n\n  return (\n    <div data-slot=\"progress-card\" role=\"status\" className={cn(\"rounded-[var(--radius-control)] border border-border bg-card text-card-foreground shadow-[var(--shadow-control)] flex min-h-16 items-center gap-3 p-4 text-sm\", className)} {...props}><span className=\"size-3 shrink-0 rounded-full bg-primary\" aria-hidden=\"true\" /><div><strong>Progress Card</strong><p className=\"mt-1 text-muted-foreground\">The current state is visible and ready to act on.</p></div></div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

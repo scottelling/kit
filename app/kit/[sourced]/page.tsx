@@ -38,6 +38,7 @@ export default async function SourcedKitPage({ params }: { params: Promise<{ sou
             <Link href="/kit/jade">JADE <small>179 pieces</small></Link>
             <Link href="/kit/os">OS <small>179 pieces</small></Link>
             <Link href="/kit/animation">Animation <small>179 pieces</small></Link>
+            <Link href="/kit/voltage">Voltage <small>179 pieces</small></Link>
             <Link href="/kit/shadow">Shadow <small>12 elevations</small></Link>
             {sourcedKits.map((entry) => (
               <Link key={entry.id} aria-current={entry.id === kit.id ? "page" : undefined} href={entry.route}>

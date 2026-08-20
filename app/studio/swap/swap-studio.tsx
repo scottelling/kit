@@ -60,6 +60,8 @@ const systemNotes: Record<string, string> = {
   jade: "Raised, seated, and sunken surfaces with a disciplined mint signal.",
   "os-kit": "Solid desktop and mobile materials with theme-wide identity.",
   "animation-studio": "A focused dark workspace with compact controls and purposeful motion.",
+  "vanilla-kit": "A neutral starting point built for clean future swaps.",
+  voltage: "A vivid desktop system with solid color blocks, rounded objects, and bright status signals.",
 }
 
 export function SwapStudio({ contract, assessment, systems, layers }: { contract: Contract; assessment: Assessment; systems: System[]; layers: Layer[] }) {

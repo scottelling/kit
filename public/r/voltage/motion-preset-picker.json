@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "motion-preset-picker",
+  "title": "Voltage Motion Preset Picker",
+  "description": "Purposeful Rise, Pop, Fade, directional, and Exit choices with exact timing.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/voltage/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/animation/patterns/motion-preset-picker.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst presets = [\"Rise\", \"Top\", \"Left\", \"Right\", \"Pop\", \"Fade\", \"Exit\"]\n\nexport function MotionPresetPicker({ className, ...props }: React.ComponentPropsWithoutRef<\"div\">) {\n  const [active, setActive] = React.useState(\"Rise\")\n  return <div data-slot=\"motion-preset-picker\" role=\"group\" aria-label=\"Motion preset\" className={cn(\"grid grid-cols-2 gap-1 sm:grid-cols-4\", className)} {...props}>{presets.map((preset) => <button key={preset} type=\"button\" aria-pressed={active === preset} onClick={() => setActive(preset)} className=\"min-h-11 rounded-[var(--radius-control)] border border-border px-3 text-xs font-bold aria-pressed:border-primary aria-pressed:bg-secondary\">{preset}</button>)}</div>\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

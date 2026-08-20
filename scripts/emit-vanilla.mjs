@@ -82,7 +82,7 @@ const starter = {
   title: "Vanilla Project Starter",
   description: "A neutral, swap-ready foundation for apps, landing pages, shops, and content products.",
   defaultSystem: "vanilla-kit",
-  systems: ["vanilla-kit", "purple-rain", "jade", "os", "animation"],
+  systems: ["vanilla-kit", "purple-rain", "jade", "os", "animation", "voltage"],
   files: starterFiles.map(([file, type]) => ({ path: file, type, content: starterContents[file] })),
 }
 await writeFile(path.join(outDir, "starter.json"), `${JSON.stringify(starter, null, 2)}\n`)

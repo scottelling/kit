@@ -20,7 +20,7 @@ this work.
 - A repaired alert dialog that behaves as a true modal, contains focus, labels
   itself correctly, and places first focus on the safe action.
 
-All five complete visual systems expose the same pieces. Installing one brings
+All six complete visual systems expose the same pieces. Installing one brings
 only that piece and the selected visual system's foundations.
 
 ## What Glohhh must still decide

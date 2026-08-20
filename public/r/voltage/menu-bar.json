@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "menu-bar",
+  "title": "Voltage Menu Bar",
+  "description": "A calm global bar that keeps the current place and useful system status visible.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/voltage/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/os/patterns/menu-bar.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\ntype MenuBarProps = React.ComponentProps<\"nav\"> & {\n  current?: string\n  items?: string[]\n  status?: React.ReactNode\n  onItemSelect?: (item: string) => void\n}\n\nfunction MenuBar({ current = \"Workspace\", items = [\"File\", \"Edit\", \"View\"], status, onItemSelect, className, ...props }: MenuBarProps) {\n  const [active, setActive] = React.useState(\"\")\n\n  function select(item: string) {\n    setActive(item)\n    onItemSelect?.(item)\n  }\n\n  return (\n    <nav data-slot=\"menu-bar\" aria-label=\"Application menu\" className={cn(\"flex min-h-11 min-w-0 items-center gap-2 border-b border-border bg-[var(--plane-2)] px-2 text-sm\", className)} {...props}>\n      <strong className=\"min-h-11 shrink-0 content-center px-2\">{current}</strong>\n      <div className=\"flex min-w-0 items-center gap-2 overflow-x-auto\">\n        {items.map((item) => <button key={item} type=\"button\" aria-pressed={active === item} onClick={() => select(item)} className=\"min-h-11 shrink-0 rounded-[var(--radius-control)] px-3 text-muted-foreground hover:bg-muted hover:text-foreground aria-pressed:bg-muted aria-pressed:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring\">{item}</button>)}\n      </div>\n      <span aria-live=\"polite\" className=\"ml-auto hidden shrink-0 text-xs text-muted-foreground sm:block\">{status ?? (active ? `${active} selected` : \"All changes saved\")}</span>\n    </nav>\n  )\n}\n\nexport { MenuBar }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

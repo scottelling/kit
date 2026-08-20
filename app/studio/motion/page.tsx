@@ -5,6 +5,7 @@ import jadeTokens from "@/lib/jade-tokens.json"
 import motionLibrary from "@/lib/motion-library.json"
 import osTokens from "@/lib/os-tokens.json"
 import vanillaTokens from "@/lib/vanilla-kit-tokens.json"
+import voltageTokens from "@/lib/voltage-tokens.json"
 import purpleRainRegistry from "@/registry.json"
 
 import { MotionStudio, type MotionTheme } from "./motion-studio"
@@ -35,6 +36,7 @@ const themes: MotionTheme[] = [
   theme("JADE", "jade", jadeTokens.light, jadeTokens.dark, jadeTokens.theme),
   theme("OS", "os", osTokens.light, osTokens.dark, osTokens.theme),
   theme("Animation", "animation", animationTokens.source, animationTokens.source, animationTokens.theme, true),
+  theme("Voltage", "voltage", voltageTokens.light, voltageTokens.dark, voltageTokens.theme),
 ]
 
 export default function MotionStudioPage() {

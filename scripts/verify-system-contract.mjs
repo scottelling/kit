@@ -12,6 +12,7 @@ const registries = await Promise.all([
   readFile(path.join(root, "registry", "os", "registry.json"), "utf8").then(JSON.parse).then((registry) => ({ registry, expected: universalLibrary.length })),
   readFile(path.join(root, "registry", "animation", "registry.json"), "utf8").then(JSON.parse).then((registry) => ({ registry, expected: universalLibrary.length })),
   readFile(path.join(root, "registry", "vanilla-kit", "registry.json"), "utf8").then(JSON.parse).then((registry) => ({ registry, expected: universalLibrary.length })),
+  readFile(path.join(root, "registry", "voltage", "registry.json"), "utf8").then(JSON.parse).then((registry) => ({ registry, expected: universalLibrary.length })),
 ])
 const failures = []
 const universalNames = new Set(universalLibrary.map((item) => item.name))

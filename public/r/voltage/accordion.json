@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion",
+  "title": "Voltage Accordion",
+  "description": "Accordion turns information into a readable, useful object.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/voltage/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/accordion.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type AccordionProps = React.ComponentPropsWithoutRef<\"details\">\n\nexport function Accordion({ children, className, ...props }: AccordionProps) {\n  if (children !== undefined) {\n    return (<details data-slot=\"accordion\" className={cn(\"min-w-0\", className)} {...props}>{children}</details>)\n  }\n\n  return (\n    <details data-slot=\"accordion\" className={cn(\"border-b border-border py-2\", className)} open {...props}><summary className=\"min-h-11 cursor-pointer py-3 font-semibold\">Accordion</summary><p className=\"pb-3 text-sm text-muted-foreground\">The useful detail appears exactly where it is needed.</p></details>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "device-frame",
+  "title": "Voltage Device Frame",
+  "description": "A solid phone, desktop, browser, or canvas frame that does not compete with authored work.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/voltage/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/animation/patterns/device-frame.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type DeviceFrameProps = React.ComponentPropsWithoutRef<\"div\"> & { device?: \"phone\" | \"desktop\" | \"browser\" | \"canvas\" }\n\nexport function DeviceFrame({ device = \"desktop\", children, className, ...props }: DeviceFrameProps) {\n  return <div data-slot=\"device-frame\" data-device={device} className={cn(\"mx-auto grid aspect-video w-full max-w-2xl place-items-center overflow-hidden rounded-[var(--radius-card)] border-[8px] border-card bg-plane-pressed data-[device=phone]:aspect-[9/16] data-[device=phone]:max-w-48 data-[device=canvas]:rounded-none data-[device=canvas]:border-0\", className)} {...props}>{children ?? <span className=\"font-mono text-xs text-muted-foreground\">{device}</span>}</div>\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

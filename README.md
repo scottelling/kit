@@ -1,6 +1,6 @@
 # kit
 
-The public design-engineering registry for Vanilla, Purple Rain, JADE, OS, Animation Studio, and focused foundation kits.
+The public design-engineering registry for Vanilla, Purple Rain, JADE, OS, Animation Studio, Voltage, and focused foundation kits.
 
 ```bash
 npx shadcn add https://kit.scottelling.com/r/button.json
@@ -29,7 +29,7 @@ doctrine deltas declared, bridged to the universal roles instead of converted
 (`docs/KIT-INTAKE.md`). The first is **Space**, a Finder-adjacent filesystem
 kit: showroom at `/kit/space`, installable from `/r/space/registry.json`.
 
-Vanilla, Purple Rain, JADE, OS, and Animation Studio each expose the same 179-piece catalog. The 142 everyday pieces and 37 specialist patterns are all available, but each is installed individually so unrelated layouts never arrive by accident.
+Vanilla, Purple Rain, JADE, OS, Animation Studio, and Voltage each expose the same 179-piece catalog. The 142 everyday pieces and 37 specialist patterns are all available, but each is installed individually so unrelated layouts never arrive by accident.
 
 The everyday catalog includes shared safety patterns for visibility and publication, evidence and sources, share and QR handoff, destructive actions with recovery, and true modal confirmation. Kit owns their interaction quality and accessibility, including focused phone behavior and tactile state explorers. Each product still owns its permissions, publishing rules, evidence policy, QR generation, deletion behavior, and recovery window.
 
@@ -40,6 +40,8 @@ JADE exposes the same production component contract with its own tactile light a
 OS adds the full shared component contract plus the desktop, window, menu bar, dock, widget, master-detail, split-view, command bar, and settings patterns that make its product language distinct. Its five theme moods are rebuilt with solid OKLCH surfaces and 44-pixel controls under `https://kit.scottelling.com/r/os/`.
 
 Animation Studio adds the full shared component contract plus 28 creative-workspace structures for storyboards, canvas work, inspectors, motion, timelines, code, templates, delivery, and recovery. It preserves the source product's canonical dark foundation without inventing a light theme under `https://kit.scottelling.com/r/animation/`.
+
+Voltage carries the same complete catalog through a vivid desktop language: deep violet structure, solid multi-color status blocks, generous object-like corners, seated depth, and maintained light and dark appearances under `https://kit.scottelling.com/r/voltage/`.
 
 The Studio includes a searchable icon library at `https://kit.scottelling.com/studio/icons`, a tactile font library at `https://kit.scottelling.com/studio/fonts`, a shared Motion Studio at `https://kit.scottelling.com/studio/motion`, and a plain-language kit-swap workspace at `https://kit.scottelling.com/studio/swap`. Motion Studio provides five interactive, independently installable behaviors that inherit any active visual kit without forcing its colors, type, shape, or layout. The swap workspace checks every real product journey before approval and separates reusable Kit gaps from compositions and product-owned work.
 
@@ -63,11 +65,12 @@ npm run check
 - OS registry manifest: `registry/os/registry.json`
 - Animation Studio registry manifest: `registry/animation/registry.json`
 - Vanilla registry manifest: `registry/vanilla-kit/registry.json`
+- Voltage registry manifest: `registry/voltage/registry.json`
 - Shadow registry manifest: `registry/shadow/registry.json`
 - Elements registry manifest: `registry/elements/registry.json`
 - Motion registry manifest: `registry/motion/registry.json`
-- Built JSON: `public/r/`, `public/r/jade/`, `public/r/os/`, `public/r/animation/`, `public/r/vanilla-kit/`, `public/r/shadow/`, `public/r/elements/`, and `public/r/motion/`
-- Complete showrooms: `/kit`, `/kit/jade`, `/kit/os`, `/kit/animation`, `/kit/vanilla`, and `/kit/shadow`
+- Built JSON: `public/r/`, `public/r/jade/`, `public/r/os/`, `public/r/animation/`, `public/r/vanilla-kit/`, `public/r/voltage/`, `public/r/shadow/`, `public/r/elements/`, and `public/r/motion/`
+- Complete showrooms: `/kit`, `/kit/jade`, `/kit/os`, `/kit/animation`, `/kit/vanilla`, `/kit/voltage`, and `/kit/shadow`
 - Same-product comparison: `/kit/jade/compare`
 - Side-by-side demo: `/demo`
 - Theme Workshop: `/labs`
@@ -99,4 +102,4 @@ Open `http://localhost:3000/kit/vanilla` for Vanilla, `http://localhost:3000/van
 npm run check
 ```
 
-The counted inventories and shared capability contract keep all five visual systems aligned around the same 179-piece catalog while their palettes, shapes, depth, declared color modes, and motion remain distinct. Specialist patterns remain opt-in, and product-owned layouts never travel during a swap.
+The counted inventories and shared capability contract keep all six visual systems aligned around the same 179-piece catalog while their palettes, shapes, depth, declared color modes, and motion remain distinct. Specialist patterns remain opt-in, and product-owned layouts never travel during a swap.

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "agenda",
+  "title": "Voltage Agenda",
+  "description": "Agenda turns information into a readable, useful object.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/voltage/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/agenda.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type AgendaProps = React.ComponentPropsWithoutRef<\"ol\">\n\nexport function Agenda({ children, className, ...props }: AgendaProps) {\n  if (children !== undefined) {\n    return (<ol data-slot=\"agenda\" className={cn(\"min-w-0\", className)} {...props}>{children}</ol>)\n  }\n\n  return (\n    <ol data-slot=\"agenda\" className={cn(\"grid gap-3\", className)} {...props}>{[\"09:00 Review copy\", \"11:30 Approve page\", \"14:00 Share notes\"].map((label) => <li key={label} className=\"flex min-h-11 items-center gap-3 text-sm\"><span className=\"size-3 rounded-full bg-primary\" /><span>{label}</span></li>)}</ol>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

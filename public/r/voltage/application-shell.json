@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "application-shell",
+  "title": "Voltage Application Shell",
+  "description": "Application Shell assembles related pieces into a complete task.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/voltage/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/application/application-shell.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction ApplicationShell({ className, ...props }: React.ComponentProps<\"section\">) {\n  return (\n    <section\n      data-slot=\"application-shell\"\n      className={cn(\n        \"grid min-h-96 grid-cols-1 overflow-hidden rounded-[var(--radius-sheet)] bg-[var(--plane-1)] text-foreground shadow-[var(--shadow-panel)] md:grid-cols-[minmax(14rem,18rem)_minmax(0,1fr)] md:grid-rows-[auto_minmax(0,1fr)_auto]\",\n        className,\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction ApplicationSidebar({ className, ...props }: React.ComponentProps<\"aside\">) {\n  return (\n    <aside\n      data-slot=\"application-sidebar\"\n      className={cn(\"min-w-0 bg-[var(--plane-2)] p-3 md:row-span-3\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction ApplicationHeader({ className, ...props }: React.ComponentProps<\"header\">) {\n  return (\n    <header\n      data-slot=\"application-header\"\n      className={cn(\"flex min-h-14 min-w-0 items-center justify-between gap-3 px-4\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction ApplicationMain({ className, ...props }: React.ComponentProps<\"main\">) {\n  return (\n    <main\n      data-slot=\"application-main\"\n      className={cn(\"min-h-0 min-w-0 overflow-auto rounded-[var(--radius-card)] bg-background p-4 text-foreground\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction ApplicationStatus({ className, ...props }: React.ComponentProps<\"footer\">) {\n  return (\n    <footer\n      data-slot=\"application-status\"\n      className={cn(\"flex min-h-11 min-w-0 items-center justify-between gap-3 px-4 text-xs text-muted-foreground\", className)}\n      {...props}\n    />\n  )\n}\n\nexport { ApplicationHeader, ApplicationMain, ApplicationShell, ApplicationSidebar, ApplicationStatus }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

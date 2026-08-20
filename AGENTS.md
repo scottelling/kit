@@ -32,6 +32,8 @@ When Scott says "make this standard" or "always do this from now on": append it 
 - Animation Studio registry: `https://kit.scottelling.com/r/animation/registry.json`
 - Vanilla showroom: `https://kit.scottelling.com/kit/vanilla`
 - Vanilla complete registry: `https://kit.scottelling.com/r/vanilla-kit/registry.json`
+- Voltage showroom: `https://kit.scottelling.com/kit/voltage`
+- Voltage registry: `https://kit.scottelling.com/r/voltage/registry.json`
 - Swap-ready project starter: `https://kit.scottelling.com/vanilla` + `https://kit.scottelling.com/r/vanilla/starter.json`
 - Icon library: `https://kit.scottelling.com/studio/icons`
 - Font library: `https://kit.scottelling.com/studio/fonts`
@@ -59,7 +61,7 @@ When Scott says "make this standard" or "always do this from now on": append it 
 - `registry/motion/` owns shared interface movement that inherits the active visual system without installing or duplicating one.
 - `registry/os/` owns the rebuilt OS visual system and its OS-native desktop, window, widget, phone, command, and settings structures.
 - `registry/animation/` owns the rebuilt Animation Studio visual system and its storyboard, canvas, inspector, motion, timeline, code, template, delivery, and recovery structures.
-- Vanilla, Purple Rain, JADE, OS, and Animation Studio each expose the same 179 individually installable interface pieces: 142 everyday pieces plus 37 opt-in specialist patterns. Installing one piece never pulls unrelated specialist layouts into a project.
+- Vanilla, Purple Rain, JADE, OS, Animation Studio, and Voltage each expose the same 179 individually installable interface pieces: 142 everyday pieces plus 37 opt-in specialist patterns. Installing one piece never pulls unrelated specialist layouts into a project.
 - Vanilla is the neutral complete visual system for new work. The Vanilla Project Starter is the framework-free project foundation. Do not confuse either with the lowercase vanilla delivery dialect: the system determines appearance; the dialect determines file format.
 - `registry/vanilla/starter/` is the source for the public starter. It must preserve the ownership boundary in its manifest: the product owns routes, data, behavior, content, journeys, and permissions; the kit owns visual and interaction expression.
 - Product screens, routes, data, and behavior stay owned by the target product during a kit swap. The kit changes foundations and component expression; it does not silently replace the product.
@@ -72,6 +74,7 @@ When Scott says "make this standard" or "always do this from now on": append it 
 - `/kit/os` is the complete OS showroom. It preserves theme-wide identity and desktop/phone/widget composition while replacing glass, glow, raw colors, and small controls with Kit's solid, OKLCH, 44-pixel production rules.
 - Every shared OS component and OS-native pattern depends on the public OS tokens item under `/r/os/`.
 - Every shared Animation Studio component and studio-native pattern depends on the public Animation tokens item under `/r/animation/`.
+- Every shared Voltage component and optional specialist pattern depends on the public Voltage tokens item under `/r/voltage/`.
 - `/studio/icons` is the visual source of truth for the approved Lucide and Material Symbols Rounded families. New custom interface icons are a last resort; verified brand marks remain separate.
 - `/studio/fonts` is the visual source of truth for approved font families and pairings. Finished products load only the chosen families and weights.
 - `/studio/motion` is the tactile source of truth for shared interface movement. Its five pilot patterns—anchored menu, focused dialog, state swap, disclosure reveal, and important notice—remain separate from visual-kit identity, use transform and opacity for movement, preserve 44-pixel controls and visible focus, and keep a gentler reduced-motion path.
@@ -98,7 +101,7 @@ Space (`/kit/space`, `/r/space/`) is the reference example.
   `design-tokens.json`, the vanilla pieces, `doctrine.json`, `checksums.json`).
   Never hand-edit emitted files under `public/r/`.
 - Vanilla pieces and starter sources live in `registry/vanilla/` and may reference only variables
-  present in all five complete systems (`npm run verify:dialects` enforces this).
+  present in every complete system (`npm run verify:dialects` enforces this).
 - Consumers declare installs in `kit-manifest.json`; `npm run doctor --
   <project-dir>` reports drift against `/r/checksums.json`.
 

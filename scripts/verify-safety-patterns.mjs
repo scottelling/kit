@@ -16,6 +16,7 @@ const registries = [
   ["os", "registry/os/registry.json", "https://kit.scottelling.com/r/os/tokens.json", "public/r/os"],
   ["animation", "registry/animation/registry.json", "https://kit.scottelling.com/r/animation/tokens.json", "public/r/animation"],
   ["vanilla", "registry/vanilla-kit/registry.json", "https://kit.scottelling.com/r/vanilla-kit/tokens.json", "public/r/vanilla-kit"],
+  ["voltage", "registry/voltage/registry.json", "https://kit.scottelling.com/r/voltage/tokens.json", "public/r/voltage"],
 ]
 
 function requireTerms(label, source, terms) {

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "document-surface",
+  "title": "Voltage Document Surface",
+  "description": "Document Surface assembles related pieces into a complete task.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/voltage/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/application/document-surface.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction DocumentSurface({ className, ...props }: React.ComponentProps<\"article\">) {\n  return <article data-slot=\"document-surface\" className={cn(\"mx-auto w-full max-w-[var(--kit-reading-measure,72ch)] rounded-[var(--radius-card)] bg-background p-5 text-foreground shadow-[var(--shadow-panel)] sm:p-8\", className)} {...props} />\n}\n\nfunction DocumentHeader({ className, ...props }: React.ComponentProps<\"header\">) {\n  return <header data-slot=\"document-header\" className={cn(\"mb-8 grid gap-3 border-b border-border pb-6\", className)} {...props} />\n}\n\nfunction DocumentBody({ className, ...props }: React.ComponentProps<\"div\">) {\n  return <div data-slot=\"document-body\" className={cn(\"grid gap-5 text-[var(--kit-body-size,1rem)] leading-[var(--kit-leading,1.6)]\", className)} {...props} />\n}\n\nexport { DocumentBody, DocumentHeader, DocumentSurface }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

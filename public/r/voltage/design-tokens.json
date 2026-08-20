@@ -1,0 +1,551 @@
+{
+  "format": "kit-design-tokens/1",
+  "system": "voltage",
+  "title": "Voltage",
+  "source": "https://kit.scottelling.com/r/voltage/tokens.json",
+  "groups": {
+    "theme": {
+      "font-sans": {
+        "$value": "var(--font-voltage-ui)",
+        "$type": "fontFamily"
+      },
+      "font-heading": {
+        "$value": "var(--font-voltage-ui)",
+        "$type": "fontFamily"
+      },
+      "font-mono": {
+        "$value": "var(--font-voltage-mono)",
+        "$type": "fontFamily"
+      },
+      "font-voltage-ui": {
+        "$value": "ui-rounded, SF Pro Rounded, Arial Rounded MT Bold, ui-sans-serif, system-ui, sans-serif",
+        "$type": "fontFamily"
+      },
+      "font-voltage-mono": {
+        "$value": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
+        "$type": "fontFamily"
+      },
+      "kit-control-height": {
+        "$value": "44px",
+        "$type": "dimension"
+      },
+      "kit-compact-size": {
+        "$value": "12px",
+        "$type": "dimension"
+      },
+      "kit-body-size": {
+        "$value": "16px",
+        "$type": "dimension"
+      },
+      "kit-heading-size": {
+        "$value": "42px",
+        "$type": "dimension"
+      },
+      "kit-reading-measure": {
+        "$value": "66ch",
+        "$type": "dimension"
+      },
+      "kit-leading": {
+        "$value": "1.5",
+        "$type": "number"
+      },
+      "kit-space-base": {
+        "$value": "12px",
+        "$type": "dimension"
+      },
+      "kit-space-section": {
+        "$value": "36px",
+        "$type": "dimension"
+      },
+      "kit-fast": {
+        "$value": "120ms",
+        "$type": "duration"
+      },
+      "kit-standard": {
+        "$value": "200ms",
+        "$type": "duration"
+      },
+      "kit-ease": {
+        "$value": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+        "$type": "cubicBezier"
+      },
+      "color-positive": {
+        "$value": "var(--positive)"
+      },
+      "color-positive-foreground": {
+        "$value": "var(--positive-foreground)"
+      },
+      "radius-control": {
+        "$value": "var(--radius-control)"
+      },
+      "radius-card": {
+        "$value": "var(--radius-card)"
+      },
+      "radius-sheet": {
+        "$value": "var(--radius-sheet)"
+      }
+    },
+    "light": {
+      "background": {
+        "$value": "oklch(0.955 0.035 292)",
+        "$type": "color"
+      },
+      "foreground": {
+        "$value": "oklch(0.225 0.075 292)",
+        "$type": "color"
+      },
+      "card": {
+        "$value": "oklch(0.99 0.012 300)",
+        "$type": "color"
+      },
+      "card-foreground": {
+        "$value": "oklch(0.225 0.075 292)",
+        "$type": "color"
+      },
+      "popover": {
+        "$value": "oklch(0.985 0.018 300)",
+        "$type": "color"
+      },
+      "popover-foreground": {
+        "$value": "oklch(0.225 0.075 292)",
+        "$type": "color"
+      },
+      "primary": {
+        "$value": "oklch(0.515 0.235 304)",
+        "$type": "color"
+      },
+      "primary-foreground": {
+        "$value": "oklch(0.985 0.008 300)",
+        "$type": "color"
+      },
+      "secondary": {
+        "$value": "oklch(0.89 0.075 298)",
+        "$type": "color"
+      },
+      "secondary-foreground": {
+        "$value": "oklch(0.285 0.105 296)",
+        "$type": "color"
+      },
+      "muted": {
+        "$value": "oklch(0.915 0.045 294)",
+        "$type": "color"
+      },
+      "muted-foreground": {
+        "$value": "oklch(0.455 0.075 292)",
+        "$type": "color"
+      },
+      "accent": {
+        "$value": "oklch(0.86 0.105 195)",
+        "$type": "color"
+      },
+      "accent-foreground": {
+        "$value": "oklch(0.22 0.065 232)",
+        "$type": "color"
+      },
+      "destructive": {
+        "$value": "oklch(0.58 0.205 25)",
+        "$type": "color"
+      },
+      "destructive-foreground": {
+        "$value": "oklch(0.985 0.008 25)",
+        "$type": "color"
+      },
+      "positive": {
+        "$value": "oklch(0.61 0.185 145)",
+        "$type": "color"
+      },
+      "positive-foreground": {
+        "$value": "oklch(0.19 0.055 145)",
+        "$type": "color"
+      },
+      "border": {
+        "$value": "oklch(0.76 0.075 296)",
+        "$type": "color"
+      },
+      "input": {
+        "$value": "oklch(0.875 0.055 296)",
+        "$type": "color"
+      },
+      "ring": {
+        "$value": "oklch(0.55 0.22 304)",
+        "$type": "color"
+      },
+      "overlay": {
+        "$value": "oklch(0.145 0.075 292 / 0.78)",
+        "$type": "color"
+      },
+      "plane-1": {
+        "$value": "oklch(0.955 0.035 292)",
+        "$type": "color"
+      },
+      "plane-2": {
+        "$value": "oklch(0.915 0.05 294)",
+        "$type": "color"
+      },
+      "plane-3": {
+        "$value": "oklch(0.875 0.065 296)",
+        "$type": "color"
+      },
+      "plane-pressed": {
+        "$value": "oklch(0.825 0.085 298)",
+        "$type": "color"
+      },
+      "ink-faint": {
+        "$value": "oklch(0.59 0.07 292)",
+        "$type": "color"
+      },
+      "chart-1": {
+        "$value": "oklch(0.515 0.235 304)",
+        "$type": "color"
+      },
+      "chart-2": {
+        "$value": "oklch(0.62 0.16 220)",
+        "$type": "color"
+      },
+      "chart-3": {
+        "$value": "oklch(0.61 0.185 145)",
+        "$type": "color"
+      },
+      "chart-4": {
+        "$value": "oklch(0.72 0.165 78)",
+        "$type": "color"
+      },
+      "chart-5": {
+        "$value": "oklch(0.64 0.205 340)",
+        "$type": "color"
+      },
+      "sidebar": {
+        "$value": "oklch(0.86 0.095 300)",
+        "$type": "color"
+      },
+      "sidebar-foreground": {
+        "$value": "oklch(0.225 0.075 292)",
+        "$type": "color"
+      },
+      "sidebar-primary": {
+        "$value": "oklch(0.515 0.235 304)",
+        "$type": "color"
+      },
+      "sidebar-primary-foreground": {
+        "$value": "oklch(0.985 0.008 300)",
+        "$type": "color"
+      },
+      "sidebar-accent": {
+        "$value": "oklch(0.805 0.12 302)",
+        "$type": "color"
+      },
+      "sidebar-accent-foreground": {
+        "$value": "oklch(0.225 0.075 292)",
+        "$type": "color"
+      },
+      "sidebar-border": {
+        "$value": "oklch(0.69 0.105 300)",
+        "$type": "color"
+      },
+      "sidebar-ring": {
+        "$value": "oklch(0.55 0.22 304)",
+        "$type": "color"
+      },
+      "radius": {
+        "$value": "1.25rem",
+        "$type": "dimension"
+      },
+      "radius-control": {
+        "$value": "1rem",
+        "$type": "dimension"
+      },
+      "radius-card": {
+        "$value": "1.5rem",
+        "$type": "dimension"
+      },
+      "radius-sheet": {
+        "$value": "2rem",
+        "$type": "dimension"
+      },
+      "dur-micro": {
+        "$value": "120ms",
+        "$type": "duration"
+      },
+      "dur-short": {
+        "$value": "200ms",
+        "$type": "duration"
+      },
+      "dur-long": {
+        "$value": "300ms",
+        "$type": "duration"
+      },
+      "ease-standard": {
+        "$value": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+        "$type": "cubicBezier"
+      },
+      "shadow-control": {
+        "$value": "inset 0 1px 0 oklch(1 0 0 / 0.82), inset 0 -1px 0 oklch(0.3 0.12 296 / 0.12), 0 2px 3px oklch(0.25 0.1 296 / 0.12)"
+      },
+      "shadow-panel": {
+        "$value": "inset 0 1px 0 oklch(1 0 0 / 0.78), inset 0 -1px 0 oklch(0.3 0.12 296 / 0.14), 0 5px 0 oklch(0.39 0.15 299 / 0.16), 0 14px 30px oklch(0.25 0.1 296 / 0.16)"
+      },
+      "shadow-inset": {
+        "$value": "inset 0 3px 6px oklch(0.25 0.1 296 / 0.18), inset 0 -1px 0 oklch(1 0 0 / 0.65)"
+      },
+      "voltage-violet": {
+        "$value": "oklch(0.54 0.235 304)",
+        "$type": "color"
+      },
+      "voltage-blue": {
+        "$value": "oklch(0.58 0.19 255)",
+        "$type": "color"
+      },
+      "voltage-cyan": {
+        "$value": "oklch(0.74 0.135 204)",
+        "$type": "color"
+      },
+      "voltage-green": {
+        "$value": "oklch(0.69 0.19 145)",
+        "$type": "color"
+      },
+      "voltage-amber": {
+        "$value": "oklch(0.74 0.16 72)",
+        "$type": "color"
+      },
+      "voltage-pink": {
+        "$value": "oklch(0.67 0.21 340)",
+        "$type": "color"
+      },
+      "voltage-on-color": {
+        "$value": "oklch(0.985 0.008 300)",
+        "$type": "color"
+      }
+    },
+    "dark": {
+      "background": {
+        "$value": "oklch(0.165 0.085 292)",
+        "$type": "color"
+      },
+      "foreground": {
+        "$value": "oklch(0.965 0.012 300)",
+        "$type": "color"
+      },
+      "card": {
+        "$value": "oklch(0.235 0.105 296)",
+        "$type": "color"
+      },
+      "card-foreground": {
+        "$value": "oklch(0.965 0.012 300)",
+        "$type": "color"
+      },
+      "popover": {
+        "$value": "oklch(0.27 0.115 298)",
+        "$type": "color"
+      },
+      "popover-foreground": {
+        "$value": "oklch(0.965 0.012 300)",
+        "$type": "color"
+      },
+      "primary": {
+        "$value": "oklch(0.72 0.215 322)",
+        "$type": "color"
+      },
+      "primary-foreground": {
+        "$value": "oklch(0.17 0.085 294)",
+        "$type": "color"
+      },
+      "secondary": {
+        "$value": "oklch(0.31 0.13 298)",
+        "$type": "color"
+      },
+      "secondary-foreground": {
+        "$value": "oklch(0.92 0.025 300)",
+        "$type": "color"
+      },
+      "muted": {
+        "$value": "oklch(0.205 0.09 294)",
+        "$type": "color"
+      },
+      "muted-foreground": {
+        "$value": "oklch(0.75 0.045 300)",
+        "$type": "color"
+      },
+      "accent": {
+        "$value": "oklch(0.36 0.145 252)",
+        "$type": "color"
+      },
+      "accent-foreground": {
+        "$value": "oklch(0.95 0.02 210)",
+        "$type": "color"
+      },
+      "destructive": {
+        "$value": "oklch(0.71 0.205 25)",
+        "$type": "color"
+      },
+      "destructive-foreground": {
+        "$value": "oklch(0.17 0.075 25)",
+        "$type": "color"
+      },
+      "positive": {
+        "$value": "oklch(0.82 0.225 143)",
+        "$type": "color"
+      },
+      "positive-foreground": {
+        "$value": "oklch(0.18 0.07 145)",
+        "$type": "color"
+      },
+      "border": {
+        "$value": "oklch(0.43 0.125 300)",
+        "$type": "color"
+      },
+      "input": {
+        "$value": "oklch(0.205 0.09 294)",
+        "$type": "color"
+      },
+      "ring": {
+        "$value": "oklch(0.77 0.19 195)",
+        "$type": "color"
+      },
+      "overlay": {
+        "$value": "oklch(0.08 0.06 292 / 0.84)",
+        "$type": "color"
+      },
+      "plane-1": {
+        "$value": "oklch(0.185 0.09 293)",
+        "$type": "color"
+      },
+      "plane-2": {
+        "$value": "oklch(0.225 0.105 295)",
+        "$type": "color"
+      },
+      "plane-3": {
+        "$value": "oklch(0.27 0.12 297)",
+        "$type": "color"
+      },
+      "plane-pressed": {
+        "$value": "oklch(0.315 0.135 299)",
+        "$type": "color"
+      },
+      "ink-faint": {
+        "$value": "oklch(0.59 0.065 300)",
+        "$type": "color"
+      },
+      "chart-1": {
+        "$value": "oklch(0.72 0.215 322)",
+        "$type": "color"
+      },
+      "chart-2": {
+        "$value": "oklch(0.74 0.155 220)",
+        "$type": "color"
+      },
+      "chart-3": {
+        "$value": "oklch(0.82 0.225 143)",
+        "$type": "color"
+      },
+      "chart-4": {
+        "$value": "oklch(0.8 0.17 78)",
+        "$type": "color"
+      },
+      "chart-5": {
+        "$value": "oklch(0.75 0.21 340)",
+        "$type": "color"
+      },
+      "sidebar": {
+        "$value": "oklch(0.225 0.115 298)",
+        "$type": "color"
+      },
+      "sidebar-foreground": {
+        "$value": "oklch(0.965 0.012 300)",
+        "$type": "color"
+      },
+      "sidebar-primary": {
+        "$value": "oklch(0.72 0.215 322)",
+        "$type": "color"
+      },
+      "sidebar-primary-foreground": {
+        "$value": "oklch(0.17 0.085 294)",
+        "$type": "color"
+      },
+      "sidebar-accent": {
+        "$value": "oklch(0.31 0.13 298)",
+        "$type": "color"
+      },
+      "sidebar-accent-foreground": {
+        "$value": "oklch(0.965 0.012 300)",
+        "$type": "color"
+      },
+      "sidebar-border": {
+        "$value": "oklch(0.43 0.125 300)",
+        "$type": "color"
+      },
+      "sidebar-ring": {
+        "$value": "oklch(0.77 0.19 195)",
+        "$type": "color"
+      },
+      "radius": {
+        "$value": "1.25rem",
+        "$type": "dimension"
+      },
+      "radius-control": {
+        "$value": "1rem",
+        "$type": "dimension"
+      },
+      "radius-card": {
+        "$value": "1.5rem",
+        "$type": "dimension"
+      },
+      "radius-sheet": {
+        "$value": "2rem",
+        "$type": "dimension"
+      },
+      "dur-micro": {
+        "$value": "120ms",
+        "$type": "duration"
+      },
+      "dur-short": {
+        "$value": "200ms",
+        "$type": "duration"
+      },
+      "dur-long": {
+        "$value": "300ms",
+        "$type": "duration"
+      },
+      "ease-standard": {
+        "$value": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+        "$type": "cubicBezier"
+      },
+      "shadow-control": {
+        "$value": "inset 0 1px 0 oklch(0.98 0.02 300 / 0.16), inset 0 -1px 0 oklch(0.08 0.06 292 / 0.55), 0 3px 4px oklch(0.08 0.06 292 / 0.44)"
+      },
+      "shadow-panel": {
+        "$value": "inset 0 1px 0 oklch(0.98 0.02 300 / 0.13), inset 0 -1px 0 oklch(0.08 0.06 292 / 0.58), 0 5px 0 oklch(0.08 0.06 292 / 0.52), 0 16px 34px oklch(0.08 0.06 292 / 0.58)"
+      },
+      "shadow-inset": {
+        "$value": "inset 0 4px 8px oklch(0.08 0.06 292 / 0.7), inset 0 -1px 0 oklch(0.98 0.02 300 / 0.1)"
+      },
+      "voltage-violet": {
+        "$value": "oklch(0.56 0.235 304)",
+        "$type": "color"
+      },
+      "voltage-blue": {
+        "$value": "oklch(0.58 0.205 255)",
+        "$type": "color"
+      },
+      "voltage-cyan": {
+        "$value": "oklch(0.72 0.145 204)",
+        "$type": "color"
+      },
+      "voltage-green": {
+        "$value": "oklch(0.77 0.21 145)",
+        "$type": "color"
+      },
+      "voltage-amber": {
+        "$value": "oklch(0.75 0.18 72)",
+        "$type": "color"
+      },
+      "voltage-pink": {
+        "$value": "oklch(0.68 0.225 340)",
+        "$type": "color"
+      },
+      "voltage-on-color": {
+        "$value": "oklch(0.985 0.008 300)",
+        "$type": "color"
+      }
+    }
+  }
+}

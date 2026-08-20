@@ -29,6 +29,7 @@ const places = [
   { label: "Prepare a kit swap", hint: "Keep the product, repair the experience, and change the visual system", href: "/studio/swap", words: "swap adopt migrate theme product repair rollback cabinet" },
   { label: "Open Elements", hint: "Touch complete behaviors and carry them into a project", href: "/elements", words: "elements knight rider larson scanner signature effects motion code interactive" },
   { label: "Explore Animation Studio", hint: "Shape scenes, motion, timelines, code, and delivery in one complete creative workspace", href: "/kit/animation", words: "animation studio cue storyboard canvas inspector motion timeline code delivery components kit" },
+  { label: "Explore Voltage", hint: "Touch the vivid desktop system with solid color blocks and object-like controls", href: "/kit/voltage", words: "voltage vivid violet colorful desktop tactile complete kit components" },
   { label: "Explore Shadow", hint: "Test smooth depth and one continuous edge on real surfaces", href: "/kit/shadow", words: "shadow elevation depth ring cards dialogs menus smooth" },
   { label: "Explore OS", hint: "Use the complete solid-surface system for desktop, phone, and widget products", href: "/kit/os", words: "os complete kit desktop phone widget window dock command themes components" },
   { label: "Explore Vanilla", hint: "Start a new product on the neutral system and keep every future kit swap clean", href: "/kit/vanilla", words: "vanilla neutral starter new project swap ready complete kit components" },
