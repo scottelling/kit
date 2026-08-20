@@ -35,6 +35,8 @@ When Scott says "make this standard" or "always do this from now on": append it 
 - Swap-ready project starter: `https://kit.scottelling.com/vanilla` + `https://kit.scottelling.com/r/vanilla/starter.json`
 - Icon library: `https://kit.scottelling.com/studio/icons`
 - Font library: `https://kit.scottelling.com/studio/fonts`
+- Motion Studio: `https://kit.scottelling.com/studio/motion`
+- Shared motion registry: `https://kit.scottelling.com/r/motion/registry.json`
 - Kit-swap workspace: `https://kit.scottelling.com/studio/swap`
 - Shared system catalog: `https://kit.scottelling.com/r/system-catalog.json`
 - Public swap contract: `https://kit.scottelling.com/r/adoption-contract.json`
@@ -54,6 +56,7 @@ When Scott says "make this standard" or "always do this from now on": append it 
 - `registry/purple-rain/` owns the distributable source.
 - `registry/shadow/` owns the cleanly separated Shadow foundation registry and its MIT notice.
 - `registry/elements/` owns independently installable behaviors that do not inherit Purple Rain or JADE tokens.
+- `registry/motion/` owns shared interface movement that inherits the active visual system without installing or duplicating one.
 - `registry/os/` owns the rebuilt OS visual system and its OS-native desktop, window, widget, phone, command, and settings structures.
 - `registry/animation/` owns the rebuilt Animation Studio visual system and its storyboard, canvas, inspector, motion, timeline, code, template, delivery, and recovery structures.
 - Vanilla, Purple Rain, JADE, OS, and Animation Studio each expose the same 179 individually installable interface pieces: 142 everyday pieces plus 37 opt-in specialist patterns. Installing one piece never pulls unrelated specialist layouts into a project.
@@ -71,6 +74,7 @@ When Scott says "make this standard" or "always do this from now on": append it 
 - Every shared Animation Studio component and studio-native pattern depends on the public Animation tokens item under `/r/animation/`.
 - `/studio/icons` is the visual source of truth for the approved Lucide and Material Symbols Rounded families. New custom interface icons are a last resort; verified brand marks remain separate.
 - `/studio/fonts` is the visual source of truth for approved font families and pairings. Finished products load only the chosen families and weights.
+- `/studio/motion` is the tactile source of truth for shared interface movement. Its five pilot patterns—anchored menu, focused dialog, state swap, disclosure reveal, and important notice—remain separate from visual-kit identity, use transform and opacity for movement, preserve 44-pixel controls and visible focus, and keep a gentler reduced-motion path.
 - `/studio/swap` creates the plain-language preserve, repair, change, proof, and rollback brief used before work begins in a target product.
 - Animation Studio is an honest dark-authority system. Default and dark installation contexts intentionally receive the same inspected source foundation; no light direction is invented.
 - Published Theme Workshop copies must install cleanly into an unrelated shadcn project and merge both light and dark foundations.

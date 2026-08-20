@@ -23,6 +23,7 @@ const familyPlaces = [
 ].map(([label, hint]) => ({ label, hint, href: `/kit#family-${label.toLowerCase()}`, words: label.toLowerCase() }))
 
 const places = [
+  { label: "Open Motion Studio", hint: "Touch, compare, refine, and carry purposeful movement into any visual kit", href: "/studio/motion", words: "motion transitions animation refine easing duration reduced movement gallery" },
   { label: "Browse icons", hint: "Search every approved Lucide and Material Symbols Rounded icon", href: "/studio/icons", words: "icons symbols lucide material rounded search gallery" },
   { label: "Browse fonts", hint: "Test approved fonts in headings, reading, controls, and pairings", href: "/studio/fonts", words: "fonts typography type pairings outfit jetbrains inter serif" },
   { label: "Prepare a kit swap", hint: "Keep the product, repair the experience, and change the visual system", href: "/studio/swap", words: "swap adopt migrate theme product repair rollback cabinet" },

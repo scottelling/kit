@@ -1,7 +1,7 @@
 {
   "format": "kit-checksums/1",
-  "registryVersion": "c95b4c391404",
-  "artifactCount": 969,
+  "registryVersion": "c027605a2bca",
+  "artifactCount": 975,
   "artifacts": {
     "r/accordion.json": {
       "sha256": "2a9e0cfea649710182fa95f101f3e3a6aad4eb66fa78ac14c80761987de21a9b",
@@ -1946,6 +1946,30 @@
     "r/motion-timeline.json": {
       "sha256": "da5d48b3c112119053a9ade20eb4e3a0e9c6d3773c6c24674950fda7bbcf4671",
       "bytes": 2048
+    },
+    "r/motion/motion-accordion.json": {
+      "sha256": "9903198c3d6638a3be4b76ed70358ddae29b409a15adf9ee29725b3120864cff",
+      "bytes": 3963
+    },
+    "r/motion/motion-dialog.json": {
+      "sha256": "5ee038a0bf74fa5a4ad6e0a71839873af6f42a2ed03053f80b0f41500ee9cbe4",
+      "bytes": 7982
+    },
+    "r/motion/motion-menu.json": {
+      "sha256": "4ab0a2a1c36b4ef5ba5b39f73f0e073a1e921fb86d8d9d3d24fe30055d9859d5",
+      "bytes": 8124
+    },
+    "r/motion/motion-notice.json": {
+      "sha256": "8b99911e32e2664de4f1fb08daeadcdce5530809922fe50c8232eedb10d9dd92",
+      "bytes": 5458
+    },
+    "r/motion/motion-state-swap.json": {
+      "sha256": "58fbedc2e03e6f64adb7f41d759122d985346f1d03f5d10f5283694a023b2522",
+      "bytes": 4644
+    },
+    "r/motion/registry.json": {
+      "sha256": "255b7008962d5121fd748ce15d85fdb7d0e70e77b4c4f30e3ce7aa62ee3ef5b2",
+      "bytes": 5465
     },
     "r/navigation-menu.json": {
       "sha256": "1bcecca8a79d58720735b14e49414d04c87d9e3cd1eed38e2e9e384154152f03",

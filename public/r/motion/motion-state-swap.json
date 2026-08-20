@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "motion-state-swap",
+  "title": "State swap",
+  "author": "Scott E. Telling; source study credited to Transitions.dev by Jakub Antalik",
+  "description": "Old information yields while the new state takes its exact place.",
+  "files": [
+    {
+      "path": "registry/motion/motion-state-swap.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport \"./motion-state-swap.css\"\n\nexport type MotionStateSwapProps = {\n  firstLabel?: string\n  secondLabel?: string\n  className?: string\n}\n\nexport function MotionStateSwap({ firstLabel = \"Ready to review\", secondLabel = \"Review complete\", className }: MotionStateSwapProps) {\n  const [complete, setComplete] = React.useState(false)\n\n  return (\n    <div className={[\"kit-motion-swap\", className].filter(Boolean).join(\" \")} data-state={complete ? \"complete\" : \"ready\"}>\n      <div className=\"kit-motion-swap__status\" aria-hidden=\"true\">\n        <span data-label=\"ready\">{firstLabel}</span>\n        <span data-label=\"complete\">{secondLabel}</span>\n      </div>\n      <span className=\"kit-motion-swap__announcement\" aria-live=\"polite\">{complete ? secondLabel : firstLabel}</span>\n      <button type=\"button\" onClick={() => setComplete((value) => !value)}>{complete ? \"Return to review\" : \"Complete review\"}</button>\n    </div>\n  )\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/motion-state-swap.tsx"
+    },
+    {
+      "path": "registry/motion/motion-state-swap.css",
+      "content": ".kit-motion-swap {\n  display: grid;\n  justify-items: start;\n  gap: 14px;\n  color: var(--foreground);\n  font-family: var(--font-sans, ui-sans-serif, system-ui, sans-serif);\n}\n\n.kit-motion-swap__status {\n  display: inline-grid;\n  min-height: 28px;\n  align-items: center;\n  font-size: 18px;\n  font-weight: 800;\n  letter-spacing: -0.025em;\n}\n\n.kit-motion-swap__status span {\n  grid-area: 1 / 1;\n  opacity: 0;\n  transform: translateY(var(--kit-motion-distance-small, 4px));\n  transition: opacity var(--kit-motion-duration, 180ms) var(--kit-motion-ease, cubic-bezier(0.23, 1, 0.32, 1)), transform var(--kit-motion-duration, 180ms) var(--kit-motion-ease, cubic-bezier(0.23, 1, 0.32, 1));\n}\n\n.kit-motion-swap[data-state=\"ready\"] [data-label=\"ready\"],\n.kit-motion-swap[data-state=\"complete\"] [data-label=\"complete\"] {\n  opacity: 1;\n  transform: translateY(0);\n}\n\n.kit-motion-swap[data-state=\"complete\"] [data-label=\"ready\"],\n.kit-motion-swap[data-state=\"ready\"] [data-label=\"complete\"] {\n  transform: translateY(calc(var(--kit-motion-distance-small, 4px) * -1));\n}\n\n.kit-motion-swap[data-state=\"complete\"] [data-label=\"complete\"] {\n  color: var(--positive, var(--primary));\n}\n\n.kit-motion-swap__announcement {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  white-space: nowrap;\n  border: 0;\n}\n\n.kit-motion-swap button {\n  min-height: 44px;\n  padding-inline: 16px;\n  border: 1px solid var(--primary);\n  border-radius: var(--radius-control, 10px);\n  background: var(--primary);\n  color: var(--primary-foreground);\n  font: inherit;\n  font-weight: 700;\n  cursor: pointer;\n  box-shadow: var(--shadow-control, 0 1px 2px oklch(0 0 0 / 0.12));\n  transition: transform var(--kit-motion-fast, 120ms) var(--kit-motion-ease, cubic-bezier(0.23, 1, 0.32, 1));\n}\n\n.kit-motion-swap button:active {\n  transform: translateY(1px);\n}\n\n.kit-motion-swap button:focus-visible {\n  outline: 2px solid var(--ring);\n  outline-offset: 2px;\n}\n\n.kit-motion-reduced .kit-motion-swap[data-state] .kit-motion-swap__status span {\n  transform: none;\n  transition: opacity 120ms linear;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .kit-motion-swap[data-state] .kit-motion-swap__status span {\n    transform: none;\n    transition: opacity 120ms linear;\n  }\n\n  .kit-motion-swap button {\n    transition: none;\n  }\n\n  .kit-motion-swap button:active {\n    transform: none;\n  }\n}\n",
+      "type": "registry:file",
+      "target": "components/ui/motion-state-swap.css"
+    }
+  ],
+  "docs": "This Kit-owned implementation inherits the active visual system through semantic variables. It adds no visual kit and no package dependency. Keep visible focus, 44-pixel controls, asymmetric timing, and the reduced-motion behavior. Source study: Transitions.dev text and icon swaps at https://transitions.dev/.",
+  "categories": [
+    "Motion",
+    "Feedback",
+    "Kit shared"
+  ],
+  "type": "registry:ui"
+}

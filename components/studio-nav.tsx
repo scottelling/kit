@@ -8,6 +8,7 @@ const rooms = [
   ["/projects", "Projects"],
   ["/templates", "Templates"],
   ["/labs", "Labs"],
+  ["/studio/motion", "Motion"],
   ["/quality", "Quality"],
 ]
 
@@ -22,4 +23,3 @@ export function StudioNav() {
     </nav>
   )
 }
-

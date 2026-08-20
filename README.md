@@ -41,7 +41,7 @@ OS adds the full shared component contract plus the desktop, window, menu bar, d
 
 Animation Studio adds the full shared component contract plus 28 creative-workspace structures for storyboards, canvas work, inspectors, motion, timelines, code, templates, delivery, and recovery. It preserves the source product's canonical dark foundation without inventing a light theme under `https://kit.scottelling.com/r/animation/`.
 
-The Studio includes a searchable icon library at `https://kit.scottelling.com/studio/icons`, a tactile font library at `https://kit.scottelling.com/studio/fonts`, and a plain-language kit-swap workspace at `https://kit.scottelling.com/studio/swap`. The swap workspace checks every real product journey before approval and separates reusable Kit gaps from compositions and product-owned work.
+The Studio includes a searchable icon library at `https://kit.scottelling.com/studio/icons`, a tactile font library at `https://kit.scottelling.com/studio/fonts`, a shared Motion Studio at `https://kit.scottelling.com/studio/motion`, and a plain-language kit-swap workspace at `https://kit.scottelling.com/studio/swap`. Motion Studio provides five interactive, independently installable behaviors that inherit any active visual kit without forcing its colors, type, shape, or layout. The swap workspace checks every real product journey before approval and separates reusable Kit gaps from compositions and product-owned work.
 
 Shadow adds six exact stacked depths, integrated hairline edges, independent tinting, and an agent rule for elevated surfaces under `https://kit.scottelling.com/r/shadow/`. It is a foundation kit that strengthens Purple Rain or JADE without replacing either system.
 
@@ -65,7 +65,8 @@ npm run check
 - Vanilla registry manifest: `registry/vanilla-kit/registry.json`
 - Shadow registry manifest: `registry/shadow/registry.json`
 - Elements registry manifest: `registry/elements/registry.json`
-- Built JSON: `public/r/`, `public/r/jade/`, `public/r/os/`, `public/r/animation/`, `public/r/vanilla-kit/`, `public/r/shadow/`, and `public/r/elements/`
+- Motion registry manifest: `registry/motion/registry.json`
+- Built JSON: `public/r/`, `public/r/jade/`, `public/r/os/`, `public/r/animation/`, `public/r/vanilla-kit/`, `public/r/shadow/`, `public/r/elements/`, and `public/r/motion/`
 - Complete showrooms: `/kit`, `/kit/jade`, `/kit/os`, `/kit/animation`, `/kit/vanilla`, and `/kit/shadow`
 - Same-product comparison: `/kit/jade/compare`
 - Side-by-side demo: `/demo`
@@ -74,10 +75,12 @@ npm run check
 - Elements Library: `/elements`
 - Icon Library: `/studio/icons`
 - Font Library: `/studio/fonts`
+- Motion Studio: `/studio/motion`
 - Kit Swap Studio: `/studio/swap`
 - Public system catalog: `/r/system-catalog.json`
 - Public adoption contract: `/r/adoption-contract.json`
 - Knight Rider handoff: `/r/elements/larson-scanner.json`
+- Shared motion handoff: `/r/motion/registry.json`
 - Production: `https://kit.scottelling.com`
 
 ## Develop

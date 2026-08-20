@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "motion-accordion",
+  "title": "Disclosure reveal",
+  "author": "Scott E. Telling; source study credited to Transitions.dev by Jakub Antalik",
+  "description": "Supporting information appears directly beneath the choice that revealed it.",
+  "files": [
+    {
+      "path": "registry/motion/motion-accordion.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport \"./motion-accordion.css\"\n\nexport type MotionAccordionProps = {\n  title?: string\n  children?: React.ReactNode\n  className?: string\n}\n\nexport function MotionAccordion({ title = \"What changes when I swap kits?\", children, className }: MotionAccordionProps) {\n  const [open, setOpen] = React.useState(false)\n  const panelId = React.useId()\n\n  return (\n    <div className={[\"kit-motion-accordion\", className].filter(Boolean).join(\" \")} data-open={open}>\n      <button type=\"button\" aria-expanded={open} aria-controls={panelId} onClick={() => setOpen((value) => !value)}>\n        <span>{title}</span>\n        <span aria-hidden=\"true\">{open ? \"−\" : \"+\"}</span>\n      </button>\n      <div id={panelId} className=\"kit-motion-accordion__panel\" hidden={!open}>\n        <div className=\"kit-motion-accordion__content\">\n          {children ?? <p>Your product keeps its pages, content, and behavior. The selected kit changes the visual and interaction expression.</p>}\n        </div>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/motion-accordion.tsx"
+    },
+    {
+      "path": "registry/motion/motion-accordion.css",
+      "content": ".kit-motion-accordion {\n  width: min(100%, 520px);\n  border: 1px solid var(--border);\n  border-radius: var(--radius-card, 12px);\n  background: var(--card);\n  color: var(--card-foreground);\n  box-shadow: var(--shadow-control, 0 1px 2px oklch(0 0 0 / 0.12));\n  font-family: var(--font-sans, ui-sans-serif, system-ui, sans-serif);\n}\n\n.kit-motion-accordion > button {\n  width: 100%;\n  min-height: 52px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 16px;\n  padding: 12px 16px;\n  border: 0;\n  border-radius: inherit;\n  background: transparent;\n  color: inherit;\n  font: inherit;\n  font-weight: 750;\n  text-align: left;\n  cursor: pointer;\n}\n\n.kit-motion-accordion > button:focus-visible {\n  outline: 2px solid var(--ring);\n  outline-offset: 2px;\n}\n\n.kit-motion-accordion__panel {\n  border-top: 1px solid var(--border);\n}\n\n.kit-motion-accordion__content {\n  padding: 14px 16px 16px;\n  opacity: 1;\n  transform: translateY(0);\n  transition: opacity var(--kit-motion-duration, 180ms) var(--kit-motion-ease, cubic-bezier(0.23, 1, 0.32, 1)), transform var(--kit-motion-duration, 180ms) var(--kit-motion-ease, cubic-bezier(0.23, 1, 0.32, 1));\n}\n\n@starting-style {\n  .kit-motion-accordion__content {\n    opacity: 0;\n    transform: translateY(calc(var(--kit-motion-distance-small, 4px) * -1));\n  }\n}\n\n.kit-motion-accordion__content p {\n  max-width: 52ch;\n  margin: 0;\n  color: var(--muted-foreground);\n  line-height: 1.55;\n}\n\n.kit-motion-reduced .kit-motion-accordion__content {\n  transform: none;\n  transition: opacity 120ms linear;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .kit-motion-accordion__content {\n    transform: none;\n    transition: opacity 120ms linear;\n  }\n}\n",
+      "type": "registry:file",
+      "target": "components/ui/motion-accordion.css"
+    }
+  ],
+  "docs": "This Kit-owned implementation inherits the active visual system through semantic variables. It adds no visual kit and no package dependency. Keep visible focus, 44-pixel controls, asymmetric timing, and the reduced-motion behavior. Source study: Transitions.dev accordion at https://transitions.dev/.",
+  "categories": [
+    "Motion",
+    "Information",
+    "Kit shared"
+  ],
+  "type": "registry:ui"
+}

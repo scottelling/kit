@@ -1,0 +1,47 @@
+[
+  {
+    "id": "motion-menu",
+    "title": "Anchored menu",
+    "plain": "A menu opens from the button that caused it.",
+    "purpose": "Keeps the relationship between a choice and its trigger obvious.",
+    "trigger": "Open the menu",
+    "category": "Navigation",
+    "source": "Transitions.dev menu dropdown"
+  },
+  {
+    "id": "motion-dialog",
+    "title": "Focused dialog",
+    "plain": "A focused task settles into the center, then leaves faster than it arrived.",
+    "purpose": "Explains the change in focus without slowing down the decision.",
+    "trigger": "Open the dialog",
+    "category": "Overlays",
+    "source": "Transitions.dev modal"
+  },
+  {
+    "id": "motion-state-swap",
+    "title": "State swap",
+    "plain": "Old information yields while the new state takes its exact place.",
+    "purpose": "Makes status changes readable without moving the surrounding interface.",
+    "trigger": "Change the state",
+    "category": "Feedback",
+    "source": "Transitions.dev text and icon swaps"
+  },
+  {
+    "id": "motion-accordion",
+    "title": "Disclosure reveal",
+    "plain": "Supporting information appears directly beneath the choice that revealed it.",
+    "purpose": "Shows where additional detail came from without animating page layout.",
+    "trigger": "Reveal the details",
+    "category": "Information",
+    "source": "Transitions.dev accordion"
+  },
+  {
+    "id": "motion-notice",
+    "title": "Important notice",
+    "plain": "A hidden result arrives at the edge and leaves without interrupting the task.",
+    "purpose": "Reserved for outcomes the user could not otherwise see.",
+    "trigger": "Show the notice",
+    "category": "Feedback",
+    "source": "Transitions.dev toast"
+  }
+]

@@ -1,0 +1,132 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "kit-motion",
+  "homepage": "https://kit.scottelling.com/studio/motion",
+  "items": [
+    {
+      "name": "motion-menu",
+      "type": "registry:ui",
+      "title": "Anchored menu",
+      "description": "A menu opens from the button that caused it.",
+      "author": "Scott E. Telling; source study credited to Transitions.dev by Jakub Antalik",
+      "categories": [
+        "Motion",
+        "Navigation",
+        "Kit shared"
+      ],
+      "files": [
+        {
+          "path": "registry/motion/motion-menu.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/motion-menu.tsx"
+        },
+        {
+          "path": "registry/motion/motion-menu.css",
+          "type": "registry:file",
+          "target": "components/ui/motion-menu.css"
+        }
+      ],
+      "docs": "This Kit-owned implementation inherits the active visual system through semantic variables. It adds no visual kit and no package dependency. Keep visible focus, 44-pixel controls, asymmetric timing, and the reduced-motion behavior. Source study: Transitions.dev menu dropdown at https://transitions.dev/."
+    },
+    {
+      "name": "motion-dialog",
+      "type": "registry:ui",
+      "title": "Focused dialog",
+      "description": "A focused task settles into the center, then leaves faster than it arrived.",
+      "author": "Scott E. Telling; source study credited to Transitions.dev by Jakub Antalik",
+      "categories": [
+        "Motion",
+        "Overlays",
+        "Kit shared"
+      ],
+      "files": [
+        {
+          "path": "registry/motion/motion-dialog.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/motion-dialog.tsx"
+        },
+        {
+          "path": "registry/motion/motion-dialog.css",
+          "type": "registry:file",
+          "target": "components/ui/motion-dialog.css"
+        }
+      ],
+      "docs": "This Kit-owned implementation inherits the active visual system through semantic variables. It adds no visual kit and no package dependency. Keep visible focus, 44-pixel controls, asymmetric timing, and the reduced-motion behavior. Source study: Transitions.dev modal at https://transitions.dev/."
+    },
+    {
+      "name": "motion-state-swap",
+      "type": "registry:ui",
+      "title": "State swap",
+      "description": "Old information yields while the new state takes its exact place.",
+      "author": "Scott E. Telling; source study credited to Transitions.dev by Jakub Antalik",
+      "categories": [
+        "Motion",
+        "Feedback",
+        "Kit shared"
+      ],
+      "files": [
+        {
+          "path": "registry/motion/motion-state-swap.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/motion-state-swap.tsx"
+        },
+        {
+          "path": "registry/motion/motion-state-swap.css",
+          "type": "registry:file",
+          "target": "components/ui/motion-state-swap.css"
+        }
+      ],
+      "docs": "This Kit-owned implementation inherits the active visual system through semantic variables. It adds no visual kit and no package dependency. Keep visible focus, 44-pixel controls, asymmetric timing, and the reduced-motion behavior. Source study: Transitions.dev text and icon swaps at https://transitions.dev/."
+    },
+    {
+      "name": "motion-accordion",
+      "type": "registry:ui",
+      "title": "Disclosure reveal",
+      "description": "Supporting information appears directly beneath the choice that revealed it.",
+      "author": "Scott E. Telling; source study credited to Transitions.dev by Jakub Antalik",
+      "categories": [
+        "Motion",
+        "Information",
+        "Kit shared"
+      ],
+      "files": [
+        {
+          "path": "registry/motion/motion-accordion.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/motion-accordion.tsx"
+        },
+        {
+          "path": "registry/motion/motion-accordion.css",
+          "type": "registry:file",
+          "target": "components/ui/motion-accordion.css"
+        }
+      ],
+      "docs": "This Kit-owned implementation inherits the active visual system through semantic variables. It adds no visual kit and no package dependency. Keep visible focus, 44-pixel controls, asymmetric timing, and the reduced-motion behavior. Source study: Transitions.dev accordion at https://transitions.dev/."
+    },
+    {
+      "name": "motion-notice",
+      "type": "registry:ui",
+      "title": "Important notice",
+      "description": "A hidden result arrives at the edge and leaves without interrupting the task.",
+      "author": "Scott E. Telling; source study credited to Transitions.dev by Jakub Antalik",
+      "categories": [
+        "Motion",
+        "Feedback",
+        "Kit shared"
+      ],
+      "files": [
+        {
+          "path": "registry/motion/motion-notice.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/motion-notice.tsx"
+        },
+        {
+          "path": "registry/motion/motion-notice.css",
+          "type": "registry:file",
+          "target": "components/ui/motion-notice.css"
+        }
+      ],
+      "docs": "This Kit-owned implementation inherits the active visual system through semantic variables. It adds no visual kit and no package dependency. Keep visible focus, 44-pixel controls, asymmetric timing, and the reduced-motion behavior. Source study: Transitions.dev toast at https://transitions.dev/."
+    }
+  ]
+}

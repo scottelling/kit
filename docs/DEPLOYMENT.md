@@ -30,6 +30,8 @@ curl -fsS https://kit.scottelling.com/r/shadow/smooth-shadow.json
 curl -fsS https://kit.scottelling.com/r/workshop/theme.json
 curl -fsS https://kit.scottelling.com/r/elements/registry.json
 curl -fsS https://kit.scottelling.com/r/elements/larson-scanner.json
+curl -fsS https://kit.scottelling.com/r/motion/registry.json
+curl -fsS https://kit.scottelling.com/r/motion/motion-menu.json
 curl -fsS https://kit.scottelling.com/r/os/registry.json
 curl -fsS https://kit.scottelling.com/r/os/tokens.json
 curl -fsS https://kit.scottelling.com/r/os/window-shell.json
@@ -74,6 +76,7 @@ curl -fsS https://kit.scottelling.com/kit/animation
 curl -fsS https://kit.scottelling.com/studio
 curl -fsS https://kit.scottelling.com/studio/icons
 curl -fsS https://kit.scottelling.com/studio/fonts
+curl -fsS https://kit.scottelling.com/studio/motion
 curl -fsS https://kit.scottelling.com/studio/swap
 curl -fsS https://kit.scottelling.com/kit/shadow
 ```

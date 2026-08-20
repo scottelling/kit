@@ -1,0 +1,115 @@
+.kit-motion-menu {
+  position: relative;
+  display: inline-block;
+  color: var(--foreground);
+  font-family: var(--font-sans, ui-sans-serif, system-ui, sans-serif);
+}
+
+.kit-motion-menu__trigger,
+.kit-motion-menu__surface button {
+  min-height: 44px;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.kit-motion-menu__trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-inline: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control, 10px);
+  background: var(--card);
+  box-shadow: var(--shadow-control, 0 1px 2px oklch(0 0 0 / 0.12));
+  font-weight: 700;
+  transition: background-color var(--kit-motion-fast, 120ms) var(--kit-motion-ease, cubic-bezier(0.23, 1, 0.32, 1)), transform var(--kit-motion-fast, 120ms) var(--kit-motion-ease, cubic-bezier(0.23, 1, 0.32, 1));
+}
+
+.kit-motion-menu__trigger:active {
+  transform: translateY(1px);
+}
+
+.kit-motion-menu__trigger:focus-visible,
+.kit-motion-menu__surface button:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.kit-motion-menu__surface {
+  position: absolute;
+  z-index: 30;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 210px;
+  display: grid;
+  gap: 2px;
+  padding: 6px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card, 12px);
+  background: var(--popover);
+  color: var(--popover-foreground);
+  box-shadow: var(--shadow-panel, 0 12px 30px oklch(0 0 0 / 0.18));
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(calc(var(--kit-motion-distance, 8px) * -1)) scale(var(--kit-motion-scale, 0.97));
+  transform-origin: top left;
+  visibility: hidden;
+  transition: opacity var(--kit-motion-exit, 140ms) var(--kit-motion-ease, cubic-bezier(0.23, 1, 0.32, 1)), transform var(--kit-motion-exit, 140ms) var(--kit-motion-ease, cubic-bezier(0.23, 1, 0.32, 1)), visibility 0s linear var(--kit-motion-exit, 140ms);
+}
+
+.kit-motion-menu[data-align="right"] .kit-motion-menu__surface {
+  right: 0;
+  left: auto;
+  transform-origin: top right;
+}
+
+.kit-motion-menu[data-open="true"] .kit-motion-menu__surface {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+  visibility: visible;
+  transition-duration: var(--kit-motion-duration, 180ms), var(--kit-motion-duration, 180ms), 0s;
+  transition-delay: 0s;
+}
+
+.kit-motion-menu__surface button {
+  width: 100%;
+  padding-inline: 12px;
+  border-radius: var(--radius-control, 10px);
+  background: transparent;
+  text-align: left;
+}
+
+.kit-motion-menu__surface button:hover,
+.kit-motion-menu__surface button:focus-visible {
+  background: var(--muted);
+}
+
+.kit-motion-reduced .kit-motion-menu__surface,
+.kit-motion-reduced .kit-motion-menu[data-open="true"] .kit-motion-menu__surface {
+  transform: none;
+  transition-duration: 120ms, 0s, 120ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kit-motion-menu__trigger {
+    transition: background-color 120ms linear;
+  }
+
+  .kit-motion-menu__trigger:active,
+  .kit-motion-menu__surface,
+  .kit-motion-menu[data-open="true"] .kit-motion-menu__surface {
+    transform: none;
+  }
+
+  .kit-motion-menu__surface {
+    transition: opacity 120ms linear, visibility 0s linear 120ms;
+  }
+
+  .kit-motion-menu[data-open="true"] .kit-motion-menu__surface {
+    transition: opacity 120ms linear, visibility 0s;
+  }
+}

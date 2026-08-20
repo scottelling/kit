@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "motion-notice",
+  "title": "Important notice",
+  "author": "Scott E. Telling; source study credited to Transitions.dev by Jakub Antalik",
+  "description": "A hidden result arrives at the edge and leaves without interrupting the task.",
+  "files": [
+    {
+      "path": "registry/motion/motion-notice.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport \"./motion-notice.css\"\n\nexport type MotionNoticeProps = {\n  triggerLabel?: string\n  title?: string\n  message?: string\n  className?: string\n}\n\nexport function MotionNotice({ triggerLabel = \"Save changes\", title = \"Changes saved\", message = \"Your latest decisions are now part of the project.\", className }: MotionNoticeProps) {\n  const [open, setOpen] = React.useState(false)\n  const timer = React.useRef<number | null>(null)\n\n  React.useEffect(() => () => {\n    if (timer.current) window.clearTimeout(timer.current)\n  }, [])\n\n  function showNotice() {\n    if (timer.current) window.clearTimeout(timer.current)\n    setOpen(true)\n    timer.current = window.setTimeout(() => setOpen(false), 3200)\n  }\n\n  return (\n    <div className={[\"kit-motion-notice\", className].filter(Boolean).join(\" \")}>\n      <button className=\"kit-motion-notice__trigger\" type=\"button\" onClick={showNotice}>{triggerLabel}</button>\n      <div className=\"kit-motion-notice__surface\" data-open={open} role=\"status\" aria-live=\"polite\" aria-hidden={!open}>\n        <span aria-hidden=\"true\">✓</span>\n        <div><strong>{title}</strong><p>{message}</p></div>\n        <button type=\"button\" aria-label=\"Dismiss notice\" tabIndex={open ? 0 : -1} onClick={() => setOpen(false)}>×</button>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/motion-notice.tsx"
+    },
+    {
+      "path": "registry/motion/motion-notice.css",
+      "content": ".kit-motion-notice {\n  width: min(100%, 520px);\n  display: grid;\n  justify-items: start;\n  gap: 16px;\n  color: var(--foreground);\n  font-family: var(--font-sans, ui-sans-serif, system-ui, sans-serif);\n}\n\n.kit-motion-notice button {\n  min-width: 44px;\n  min-height: 44px;\n  border: 1px solid var(--border);\n  border-radius: var(--radius-control, 10px);\n  color: inherit;\n  font: inherit;\n  cursor: pointer;\n}\n\n.kit-motion-notice button:focus-visible {\n  outline: 2px solid var(--ring);\n  outline-offset: 2px;\n}\n\n.kit-motion-notice__trigger {\n  padding-inline: 16px;\n  background: var(--primary);\n  color: var(--primary-foreground) !important;\n  font-weight: 700 !important;\n  box-shadow: var(--shadow-control, 0 1px 2px oklch(0 0 0 / 0.12));\n}\n\n.kit-motion-notice__surface {\n  width: 100%;\n  display: grid;\n  grid-template-columns: auto minmax(0, 1fr) auto;\n  align-items: start;\n  gap: 12px;\n  padding: 12px;\n  border: 1px solid var(--border);\n  border-radius: var(--radius-card, 12px);\n  background: var(--popover);\n  color: var(--popover-foreground);\n  box-shadow: var(--shadow-panel, 0 12px 30px oklch(0 0 0 / 0.18));\n  opacity: 0;\n  pointer-events: none;\n  transform: translateY(var(--kit-motion-distance, 8px)) scale(var(--kit-motion-scale, 0.97));\n  visibility: hidden;\n  transition: opacity var(--kit-motion-exit, 140ms) var(--kit-motion-ease, cubic-bezier(0.23, 1, 0.32, 1)), transform var(--kit-motion-exit, 140ms) var(--kit-motion-ease, cubic-bezier(0.23, 1, 0.32, 1)), visibility 0s linear var(--kit-motion-exit, 140ms);\n}\n\n.kit-motion-notice__surface[data-open=\"true\"] {\n  opacity: 1;\n  pointer-events: auto;\n  transform: translateY(0) scale(1);\n  visibility: visible;\n  transition-duration: var(--kit-motion-duration, 200ms), var(--kit-motion-duration, 200ms), 0s;\n  transition-delay: 0s;\n}\n\n.kit-motion-notice__surface > span {\n  width: 28px;\n  height: 28px;\n  display: grid;\n  place-items: center;\n  border-radius: 999px;\n  background: var(--positive, var(--primary));\n  color: var(--positive-foreground, var(--primary-foreground));\n  font-weight: 900;\n}\n\n.kit-motion-notice__surface strong,\n.kit-motion-notice__surface p {\n  margin: 0;\n}\n\n.kit-motion-notice__surface p {\n  margin-top: 4px;\n  color: var(--muted-foreground);\n  font-size: 14px;\n  line-height: 1.45;\n}\n\n.kit-motion-notice__surface > button {\n  border-color: transparent;\n  background: transparent;\n  font-size: 22px;\n}\n\n.kit-motion-reduced .kit-motion-notice__surface,\n.kit-motion-reduced .kit-motion-notice__surface[data-open] {\n  transform: none;\n  transition-duration: 120ms, 0s, 120ms;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .kit-motion-notice .kit-motion-notice__surface[data-open] {\n    transform: none;\n    transition: opacity 120ms linear, visibility 0s linear 120ms;\n  }\n\n  .kit-motion-notice__surface[data-open=\"true\"] {\n    transition: opacity 120ms linear, visibility 0s;\n  }\n}\n",
+      "type": "registry:file",
+      "target": "components/ui/motion-notice.css"
+    }
+  ],
+  "docs": "This Kit-owned implementation inherits the active visual system through semantic variables. It adds no visual kit and no package dependency. Keep visible focus, 44-pixel controls, asymmetric timing, and the reduced-motion behavior. Source study: Transitions.dev toast at https://transitions.dev/.",
+  "categories": [
+    "Motion",
+    "Feedback",
+    "Kit shared"
+  ],
+  "type": "registry:ui"
+}

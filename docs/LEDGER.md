@@ -1,5 +1,21 @@
 # Agent Ledger
 
+## 2026-08-20 — Shared Motion Studio and Transitions.dev source integration
+
+- Agent: Codex
+- Scope: integrate the useful parts of Transitions.dev into Kit without copying its visual product, redistributing its recipe collection, or turning motion into another visual kit
+- Product: `/studio/motion` now provides five real interactions—anchored menu, focused dialog, state swap, disclosure reveal, and important notice—with direct kit switching, light/dark proof where the kit owns both modes, live pace/travel/scale/easing controls, Replay, Undo, Reset, a side-by-side Less movement comparison, saved direction, and a plain-English project request
+- Ownership boundary: Transitions.dev is visibly credited as the source study; its original library, paid collection, installer, and identity stay at the official source. Kit publishes its own stricter implementations and does not mirror the source collection
+- Shared architecture: `registry/motion/` is one neutral behavior layer outside the 179-piece visual-system catalog. Each pattern installs independently, adds no package or visual-kit dependency, and inherits the target project's existing semantic colors, type, shape, borders, and depth
+- Motion quality: all five patterns use purposeful transform/opacity movement only, custom responsive easing, sub-300ms interface timing, faster departure than arrival, correct trigger or center origin, 44-pixel controls, visible focus, keyboard behavior, and a gentler reduced-motion path that keeps opacity while removing travel and scale
+- Defects caught during tactile proof: Undo and Reset were visible but unpressable on phones because a fieldset's hidden minimum width stretched their panel beyond the viewport; the panel is now genuinely contained. The first behavior chooser hid three choices behind horizontal scrolling; all five are now visible. Reduced-motion selectors initially lost to open-state specificity; the gentler path now wins in every state
+- Automated proof: the motion registry validates and builds five public items; the dedicated verifier rejects added dependencies, layout animation, scale-from-zero, decorative effects, missing focus, undersized targets, or missing reduced motion; the complete Kit check passes all existing registries, five visual-system contracts, elements, safety patterns, token dialects, Studio validation, lint, TypeScript, and the production build under registry version `c027605a2bca`
+- Responsive proof: `/studio/motion` passed 320, 375, 414, 768, 1280, and 1440-pixel browser checks with zero page overflow, zero clipped refinement actions, zero undersized visible controls, and all five behavior choices visible
+- Interaction proof: all five visual kits apply their exact inspected foundations; Animation correctly keeps its dark-only authority. Menu open/Escape/focus return and arrow movement, dialog open/safe close/focus return, state swap, disclosure, notice, refinement selection, Undo, and the full-versus-gentler motion comparison pass with a clean browser console
+- Downstream proof: a blank outside Next App Router, TypeScript, Tailwind v4, and shadcn project installed `motion-menu` as exactly two files, `components/ui/motion-menu.tsx` and `components/ui/motion-menu.css`; both match the built public payload, no dependency or token item traveled, its production build passes, and the working menu opens without overflow or console errors
+- Deployment: pending production release
+- Open loop: deploy, repeat the downstream installation from the live URL, verify the public page and all six motion endpoints, then record the production receipt
+
 ## 2026-08-17 — Kit refinement and final Glohhh adoption approval
 
 - Agent: Codex
