@@ -13,8 +13,10 @@
 - Responsive proof: `/studio/motion` passed 320, 375, 414, 768, 1280, and 1440-pixel browser checks with zero page overflow, zero clipped refinement actions, zero undersized visible controls, and all five behavior choices visible
 - Interaction proof: all five visual kits apply their exact inspected foundations; Animation correctly keeps its dark-only authority. Menu open/Escape/focus return and arrow movement, dialog open/safe close/focus return, state swap, disclosure, notice, refinement selection, Undo, and the full-versus-gentler motion comparison pass with a clean browser console
 - Downstream proof: a blank outside Next App Router, TypeScript, Tailwind v4, and shadcn project installed `motion-menu` as exactly two files, `components/ui/motion-menu.tsx` and `components/ui/motion-menu.css`; both match the built public payload, no dependency or token item traveled, its production build passes, and the working menu opens without overflow or console errors
-- Deployment: pending production release
-- Open loop: deploy, repeat the downstream installation from the live URL, verify the public page and all six motion endpoints, then record the production receipt
+- Live downstream proof: a second blank project installed the same menu from `https://kit.scottelling.com/r/motion/motion-menu.json`; only `components/ui/motion-menu.tsx` and `components/ui/motion-menu.css` changed, package files, global CSS, and shadcn configuration remained byte-for-byte unchanged, both installed files matched the live payload, and the outside production build passed
+- Live proof: `/studio/motion`, `/r/motion/registry.json`, and all five motion item URLs return `200` and match local output exactly; the live phone view switches to JADE, opens and closes the menu, restores the approved easing through Undo, keeps zero overflow and zero undersized controls, and reports a clean browser console
+- Deployment: Vercel production `dpl_9GnxaKSz21zoHsWtVCeuEgCJVhB8`, aliased to `kit.scottelling.com`; product commit `3f6d833` pushed to `scottelling/kit`; the production error scan returned no runtime errors
+- Open loops: none for this release
 
 ## 2026-08-17 — Kit refinement and final Glohhh adoption approval
 
