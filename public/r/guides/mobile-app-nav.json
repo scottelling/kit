@@ -103,6 +103,13 @@
       "showroom": "https://kit.scottelling.com/kit/voltage",
       "itemBase": "https://kit.scottelling.com/r/voltage",
       "component": "https://kit.scottelling.com/r/voltage/mobile-app-nav.json"
+    },
+    {
+      "id": "calm",
+      "label": "Calm Desktop",
+      "showroom": "https://kit.scottelling.com/kit/calm",
+      "itemBase": "https://kit.scottelling.com/r/calm",
+      "component": "https://kit.scottelling.com/r/calm/mobile-app-nav.json"
     }
   ],
   "prompt": "Use Kit's Mobile App Nav for this product. Several related pieces must complete one recognizable product task. Preserve the active visual kit and the product's routes, content, data, permissions, and business rules. Model START, CHANGE, SUBMIT, SUCCEED, FAIL, RETRY, RESET as named events; render ready, editing, working, success, failed, recovery as workflow states and default, hover, focus, disabled as separate interaction conditions where they apply. Keep 44-pixel controls, visible focus, phone containment, honest loading and failure, and reduced-motion behavior. Do not add glass, glow, decorative gradients, resting loops, or a new dependency."

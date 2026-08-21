@@ -72,3 +72,4 @@ Stepper keeps place and direction easy to scan.
 - [OS](https://kit.scottelling.com/kit/os#stepper)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#stepper)
 - [Voltage](https://kit.scottelling.com/kit/voltage#stepper)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#stepper)

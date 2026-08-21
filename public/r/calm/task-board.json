@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "task-board",
+  "title": "Calm Desktop Task Board",
+  "description": "Task Board assembles related pieces into a complete task.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/calm/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/application/task-board.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction TaskBoard({ className, ...props }: React.ComponentProps<\"section\">) {\n  return <section data-slot=\"task-board\" className={cn(\"grid min-w-0 auto-cols-[minmax(17rem,1fr)] grid-flow-col gap-3 overflow-x-auto pb-2\", className)} {...props} />\n}\n\nfunction TaskColumn({ className, ...props }: React.ComponentProps<\"section\">) {\n  return <section data-slot=\"task-column\" className={cn(\"grid min-w-0 content-start gap-2 rounded-[var(--radius-card)] bg-[var(--plane-2)] p-2\", className)} {...props} />\n}\n\nfunction TaskColumnHeader({ className, ...props }: React.ComponentProps<\"header\">) {\n  return <header data-slot=\"task-column-header\" className={cn(\"flex min-h-11 items-center justify-between gap-3 px-2 text-sm font-semibold\", className)} {...props} />\n}\n\nfunction TaskCard({ className, ...props }: React.ComponentProps<\"article\">) {\n  return <article data-slot=\"task-card\" className={cn(\"grid gap-2 rounded-[var(--radius-card)] bg-card p-3 text-card-foreground shadow-[var(--shadow-control)]\", className)} {...props} />\n}\n\nexport { TaskBoard, TaskCard, TaskColumn, TaskColumnHeader }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

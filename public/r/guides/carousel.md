@@ -76,3 +76,4 @@ Carousel turns information into a readable, useful object.
 - [OS](https://kit.scottelling.com/kit/os#carousel)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#carousel)
 - [Voltage](https://kit.scottelling.com/kit/voltage#carousel)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#carousel)

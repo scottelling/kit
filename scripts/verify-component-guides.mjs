@@ -31,7 +31,7 @@ for (const guide of catalog.items) {
     const value = guide[field]
     if (value === undefined || value === null || (Array.isArray(value) && !value.length) || value === "") failures.push(`${guide.name} is missing ${field}.`)
   }
-  if (guide.systems?.length !== 6) failures.push(`${guide.name} is not connected to all six complete systems.`)
+  if (guide.systems?.length !== catalog.systems.length) failures.push(`${guide.name} is not connected to every complete system.`)
   if (!guide.events?.every((event) => /^[A-Z][A-Z_]*$/u.test(event))) failures.push(`${guide.name} has an event that is not a named verb.`)
   if (!guide.prompt?.includes("44-pixel controls") || !guide.prompt.includes("visible focus") || !guide.prompt.includes("reduced-motion")) failures.push(`${guide.name} has an incomplete project request.`)
   if (!guide.proof?.some((item) => item.includes("320")) || !guide.proof.some((item) => item.includes("failure"))) failures.push(`${guide.name} has incomplete release proof.`)
@@ -102,4 +102,4 @@ if (failures.length) {
   process.exit(1)
 }
 
-console.log(`Verified ${catalog.items.length} component guides: exact universal coverage, named events, visible states, ownership boundaries, six-kit handoffs, public JSON and plain-language files, installable guide, reusable agent skill, tactile Studio room, and oa-design source boundary.`)
+console.log(`Verified ${catalog.items.length} component guides: exact universal coverage, named events, visible states, ownership boundaries, complete-system handoffs, public JSON and plain-language files, installable guide, reusable agent skill, tactile Studio room, and oa-design source boundary.`)

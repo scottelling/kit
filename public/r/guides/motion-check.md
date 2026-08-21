@@ -78,3 +78,4 @@ A review list for purpose, easing, duration, travel, scale, and reduced motion.
 - [OS](https://kit.scottelling.com/kit/os#motion-check)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#motion-check)
 - [Voltage](https://kit.scottelling.com/kit/voltage#motion-check)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#motion-check)

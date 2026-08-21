@@ -76,3 +76,4 @@ A shared-state list and detail pattern that becomes a real back-driven phone flo
 - [OS](https://kit.scottelling.com/kit/os#master-detail)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#master-detail)
 - [Voltage](https://kit.scottelling.com/kit/voltage#master-detail)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#master-detail)

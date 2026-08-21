@@ -76,3 +76,4 @@ Notification Center assembles related pieces into a complete task.
 - [OS](https://kit.scottelling.com/kit/os#notification-center)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#notification-center)
 - [Voltage](https://kit.scottelling.com/kit/voltage#notification-center)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#notification-center)

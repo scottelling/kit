@@ -66,3 +66,4 @@ See how Focus Ring shapes every screen.
 - [OS](https://kit.scottelling.com/kit/os#focus-ring)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#focus-ring)
 - [Voltage](https://kit.scottelling.com/kit/voltage#focus-ring)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#focus-ring)

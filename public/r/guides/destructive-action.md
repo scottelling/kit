@@ -78,3 +78,4 @@ Consequences, strong confirmation, progress, failure, undo, recovery, and irreve
 - [OS](https://kit.scottelling.com/kit/os#destructive-action)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#destructive-action)
 - [Voltage](https://kit.scottelling.com/kit/voltage#destructive-action)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#destructive-action)

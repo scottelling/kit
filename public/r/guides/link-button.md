@@ -74,3 +74,4 @@ Link Button keeps the next move clear and touchable.
 - [OS](https://kit.scottelling.com/kit/os#link-button)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#link-button)
 - [Voltage](https://kit.scottelling.com/kit/voltage#link-button)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#link-button)

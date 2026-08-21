@@ -76,3 +76,4 @@ Stat Group turns information into a readable, useful object.
 - [OS](https://kit.scottelling.com/kit/os#stat-group)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#stat-group)
 - [Voltage](https://kit.scottelling.com/kit/voltage#stat-group)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#stat-group)

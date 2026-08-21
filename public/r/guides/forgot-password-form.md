@@ -76,3 +76,4 @@ Forgot Password Form assembles related pieces into a complete task.
 - [OS](https://kit.scottelling.com/kit/os#forgot-password-form)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#forgot-password-form)
 - [Voltage](https://kit.scottelling.com/kit/voltage#forgot-password-form)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#forgot-password-form)

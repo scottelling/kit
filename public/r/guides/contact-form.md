@@ -76,3 +76,4 @@ Contact Form assembles related pieces into a complete task.
 - [OS](https://kit.scottelling.com/kit/os#contact-form)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#contact-form)
 - [Voltage](https://kit.scottelling.com/kit/voltage#contact-form)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#contact-form)

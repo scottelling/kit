@@ -78,3 +78,4 @@ Purposeful Rise, Pop, Fade, directional, and Exit choices with exact timing.
 - [OS](https://kit.scottelling.com/kit/os#motion-preset-picker)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#motion-preset-picker)
 - [Voltage](https://kit.scottelling.com/kit/voltage#motion-preset-picker)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#motion-preset-picker)

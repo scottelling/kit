@@ -77,3 +77,4 @@ Combobox collects a choice without hiding its state.
 - [OS](https://kit.scottelling.com/kit/os#combobox)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#combobox)
 - [Voltage](https://kit.scottelling.com/kit/voltage#combobox)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#combobox)

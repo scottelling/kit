@@ -74,3 +74,4 @@ Command Palette brings a focused task forward without losing context.
 - [OS](https://kit.scottelling.com/kit/os#command-palette)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#command-palette)
 - [Voltage](https://kit.scottelling.com/kit/voltage#command-palette)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#command-palette)

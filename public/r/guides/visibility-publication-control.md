@@ -76,3 +76,4 @@ One clear place to understand and change who can open an object before publishin
 - [OS](https://kit.scottelling.com/kit/os#visibility-publication-control)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#visibility-publication-control)
 - [Voltage](https://kit.scottelling.com/kit/voltage#visibility-publication-control)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#visibility-publication-control)

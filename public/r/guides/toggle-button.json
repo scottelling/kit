@@ -101,6 +101,13 @@
       "showroom": "https://kit.scottelling.com/kit/voltage",
       "itemBase": "https://kit.scottelling.com/r/voltage",
       "component": "https://kit.scottelling.com/r/voltage/toggle-button.json"
+    },
+    {
+      "id": "calm",
+      "label": "Calm Desktop",
+      "showroom": "https://kit.scottelling.com/kit/calm",
+      "itemBase": "https://kit.scottelling.com/r/calm",
+      "component": "https://kit.scottelling.com/r/calm/toggle-button.json"
     }
   ],
   "prompt": "Use Kit's Toggle Button for this product. A person needs to trigger or choose a clear next action. Preserve the active visual kit and the product's routes, content, data, permissions, and business rules. Model ACTIVATE, START, SUCCEED, FAIL, RETRY, RESET as named events; render ready, working, success, failed as workflow states and default, hover, focus, pressed, disabled as separate interaction conditions where they apply. Keep 44-pixel controls, visible focus, phone containment, honest loading and failure, and reduced-motion behavior. Do not add glass, glow, decorative gradients, resting loops, or a new dependency."

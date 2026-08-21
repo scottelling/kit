@@ -1,5 +1,20 @@
 # Agent Ledger
 
+## 2026-08-20 — Complete Calm Desktop visual system
+
+- Agent: Codex
+- Scope: turn Scott's binding Calm Desktop UI/UX handoff into a complete, swappable Kit visual system without importing product nouns, data, routes, workflows, permissions, or business behavior
+- Source authority: the exact 630-line handoff is preserved verbatim at `sources/calm/calm-desktop-kit.md` with SHA-256 `3c75e3210cc5e9a4e5fdfd9c01cc17538dd4bcfc4d152aa23cda70d18db28eca`; `docs/CALM-KIT-INTAKE.md` records the complete-system decision, exact source colors, derived compatibility choices, and ownership boundary
+- Visual system: exact supplied graphite, warm off-white, periwinkle, accent-surface, and danger values are converted to OKLCH; stable surfaces stay flat, shadow is restricted to menus, command surfaces, and notices, Inter remains system-first, controls are 44 pixels, and the source's 4-pixel rhythm, compact type, restrained radii, crisp borders, and short interruptible motion are maintained
+- Honest mode authority: the handoff defines dark mode only, so Calm repeats the exact dark source at the installation root and dark selector for reliable delivery but declares only dark and invents no light direction
+- Complete catalog: Calm exposes the same 179 individually installable pieces as every complete system—142 everyday pieces plus 37 opt-in OS and Animation specialist patterns—and every piece automatically carries only Calm foundations
+- Signature proof: `/kit/calm` adds a real three-area desktop workbench with search and clear, selection, inline title editing, Enter commit, Escape cancel, Undo, ready-state action, menus, contextual tabs, new-note creation, collapsible and pointer/keyboard-resizable panels, a `Command-K` command surface with preview and Apply/Cancel, and narrow-screen drawers; the composition demonstrates Calm without forcing the layout into adopting products
+- Platform integration: Calm appears in every kit switcher, the global finder, component guides, Motion Studio, the swap workspace, the Vanilla starter's appearance selector, the public system catalog, framework-free token delivery, doctrine, checksums, and complete-system verification
+- Automated proof: all registry schemas, generated public output, exact-source and color checks, seven-system contracts, safety patterns, component guides, framework-free dialects, Studio resources, lint, TypeScript, and the production build pass under registry version `d33ae9ae62fb`, covering 1,703 public artifacts
+- Responsive proof: the real showroom passed 320, 375, 414, 768, 1280, and 1440-pixel checks with zero page overflow, zero unreachable visible controls, main-workspace-only narrow composition, in-viewport drawers, and open desktop panels; hidden off-canvas drawers remain clipped inside the workspace and do not create page scrolling
+- Interaction proof: search and selection, search clearing after selection, inline rename, Undo, state change, all three utility tabs, phone navigation and utility drawers, command preview/apply, and the real `Command-K` shortcut passed; the shortcut was repaired to win over Kit's global finder on this page without changing the finder elsewhere
+- Release state: complete locally; production deployment, live endpoint parity, and clean outside-project installation proof remain
+
 ## 2026-08-20 — Complete component guides and agent-readable UI architecture
 
 - Agent: Codex

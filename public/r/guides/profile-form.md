@@ -76,3 +76,4 @@ Profile Form assembles related pieces into a complete task.
 - [OS](https://kit.scottelling.com/kit/os#profile-form)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#profile-form)
 - [Voltage](https://kit.scottelling.com/kit/voltage#profile-form)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#profile-form)

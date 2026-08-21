@@ -77,3 +77,4 @@ Time Input collects a choice without hiding its state.
 - [OS](https://kit.scottelling.com/kit/os#time-input)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#time-input)
 - [Voltage](https://kit.scottelling.com/kit/voltage#time-input)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#time-input)

@@ -105,6 +105,13 @@
       "showroom": "https://kit.scottelling.com/kit/voltage",
       "itemBase": "https://kit.scottelling.com/r/voltage",
       "component": "https://kit.scottelling.com/r/voltage/workspace-switcher.json"
+    },
+    {
+      "id": "calm",
+      "label": "Calm Desktop",
+      "showroom": "https://kit.scottelling.com/kit/calm",
+      "itemBase": "https://kit.scottelling.com/r/calm",
+      "component": "https://kit.scottelling.com/r/calm/workspace-switcher.json"
     }
   ],
   "prompt": "Use Kit's Workspace Switcher for this product. A creative workflow needs visible scenes, layers, timing, preview, inspection, or delivery. Preserve the active visual kit and the product's routes, content, data, permissions, and business rules. Model SELECT, CHANGE, PLAY, PAUSE, SUBMIT, COMPLETE, FAIL, RETRY as named events; render ready, selected, editing, playing, working, complete, failed as workflow states and default, hover, focus, disabled as separate interaction conditions where they apply. Keep 44-pixel controls, visible focus, phone containment, honest loading and failure, and reduced-motion behavior. Do not add glass, glow, decorative gradients, resting loops, or a new dependency."

@@ -78,3 +78,4 @@ A focused project chooser with honest saved and local states.
 - [OS](https://kit.scottelling.com/kit/os#project-switcher)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#project-switcher)
 - [Voltage](https://kit.scottelling.com/kit/voltage#project-switcher)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#project-switcher)

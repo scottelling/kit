@@ -74,3 +74,4 @@ Icon Button keeps the next move clear and touchable.
 - [OS](https://kit.scottelling.com/kit/os#icon-button)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#icon-button)
 - [Voltage](https://kit.scottelling.com/kit/voltage#icon-button)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#icon-button)

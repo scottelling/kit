@@ -74,3 +74,4 @@ Copy Button keeps the next move clear and touchable.
 - [OS](https://kit.scottelling.com/kit/os#copy-button)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#copy-button)
 - [Voltage](https://kit.scottelling.com/kit/voltage#copy-button)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#copy-button)

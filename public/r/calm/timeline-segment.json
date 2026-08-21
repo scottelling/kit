@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "timeline-segment",
+  "title": "Calm Desktop Timeline Segment",
+  "description": "A selectable time block that exposes name, duration, and current state.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/calm/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/animation/patterns/timeline-segment.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type TimelineSegmentProps = React.ComponentPropsWithoutRef<\"button\"> & { label?: string; duration?: string; active?: boolean }\n\nexport function TimelineSegment({ label = \"Reveal\", duration = \"1.2s\", active = false, className, ...props }: TimelineSegmentProps) {\n  return <button data-slot=\"timeline-segment\" type=\"button\" aria-pressed={active} className={cn(\"flex min-h-11 min-w-32 items-center justify-between gap-3 border border-border bg-card px-3 text-left text-xs aria-pressed:border-primary aria-pressed:bg-secondary\", className)} {...props}><strong>{label}</strong><span className=\"font-mono text-[10px] text-muted-foreground\">{duration}</span></button>\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -74,3 +74,4 @@ Hover Card brings a focused task forward without losing context.
 - [OS](https://kit.scottelling.com/kit/os#hover-card)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#hover-card)
 - [Voltage](https://kit.scottelling.com/kit/voltage#hover-card)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#hover-card)

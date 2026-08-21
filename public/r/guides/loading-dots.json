@@ -102,6 +102,13 @@
       "showroom": "https://kit.scottelling.com/kit/voltage",
       "itemBase": "https://kit.scottelling.com/r/voltage",
       "component": "https://kit.scottelling.com/r/voltage/loading-dots.json"
+    },
+    {
+      "id": "calm",
+      "label": "Calm Desktop",
+      "showroom": "https://kit.scottelling.com/kit/calm",
+      "itemBase": "https://kit.scottelling.com/r/calm",
+      "component": "https://kit.scottelling.com/r/calm/loading-dots.json"
     }
   ],
   "prompt": "Use Kit's Loading Dots for this product. The interface must make progress, status, success, failure, or recovery obvious. Preserve the active visual kit and the product's routes, content, data, permissions, and business rules. Model START, UPDATE, SUCCEED, WARN, FAIL, DISMISS, RETRY as named events; render idle, working, success, warning, failed, dismissed as workflow states and default, focus, disabled as separate interaction conditions where they apply. Keep 44-pixel controls, visible focus, phone containment, honest loading and failure, and reduced-motion behavior. Do not add glass, glow, decorative gradients, resting loops, or a new dependency."

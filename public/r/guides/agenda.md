@@ -76,3 +76,4 @@ Agenda turns information into a readable, useful object.
 - [OS](https://kit.scottelling.com/kit/os#agenda)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#agenda)
 - [Voltage](https://kit.scottelling.com/kit/voltage#agenda)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#agenda)

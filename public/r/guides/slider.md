@@ -77,3 +77,4 @@ Slider collects a choice without hiding its state.
 - [OS](https://kit.scottelling.com/kit/os#slider)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#slider)
 - [Voltage](https://kit.scottelling.com/kit/voltage#slider)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#slider)

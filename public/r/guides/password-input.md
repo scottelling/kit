@@ -77,3 +77,4 @@ Password Input collects a choice without hiding its state.
 - [OS](https://kit.scottelling.com/kit/os#password-input)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#password-input)
 - [Voltage](https://kit.scottelling.com/kit/voltage#password-input)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#password-input)

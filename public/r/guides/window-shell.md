@@ -76,3 +76,4 @@ A solid, resizable-window frame with clear title, actions, content, and status r
 - [OS](https://kit.scottelling.com/kit/os#window-shell)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#window-shell)
 - [Voltage](https://kit.scottelling.com/kit/voltage#window-shell)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#window-shell)

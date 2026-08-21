@@ -76,3 +76,4 @@ List turns information into a readable, useful object.
 - [OS](https://kit.scottelling.com/kit/os#list)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#list)
 - [Voltage](https://kit.scottelling.com/kit/voltage#list)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#list)

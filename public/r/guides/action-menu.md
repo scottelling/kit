@@ -74,3 +74,4 @@ Action Menu brings a focused task forward without losing context.
 - [OS](https://kit.scottelling.com/kit/os#action-menu)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#action-menu)
 - [Voltage](https://kit.scottelling.com/kit/voltage#action-menu)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#action-menu)

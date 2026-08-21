@@ -74,3 +74,4 @@ Sheet brings a focused task forward without losing context.
 - [OS](https://kit.scottelling.com/kit/os#sheet)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#sheet)
 - [Voltage](https://kit.scottelling.com/kit/voltage#sheet)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#sheet)

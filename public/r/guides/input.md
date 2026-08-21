@@ -77,3 +77,4 @@ Input collects a choice without hiding its state.
 - [OS](https://kit.scottelling.com/kit/os#input)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#input)
 - [Voltage](https://kit.scottelling.com/kit/voltage#input)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#input)

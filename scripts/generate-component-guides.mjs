@@ -13,6 +13,7 @@ const systems = [
   { id: "os", label: "OS", showroom: "https://kit.scottelling.com/kit/os", itemBase: "https://kit.scottelling.com/r/os" },
   { id: "animation", label: "Animation Studio", showroom: "https://kit.scottelling.com/kit/animation", itemBase: "https://kit.scottelling.com/r/animation" },
   { id: "voltage", label: "Voltage", showroom: "https://kit.scottelling.com/kit/voltage", itemBase: "https://kit.scottelling.com/r/voltage" },
+  { id: "calm", label: "Calm Desktop", showroom: "https://kit.scottelling.com/kit/calm", itemBase: "https://kit.scottelling.com/r/calm" },
 ]
 
 const policies = {

@@ -66,3 +66,4 @@ See how Spacing Guide shapes every screen.
 - [OS](https://kit.scottelling.com/kit/os#spacing-guide)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#spacing-guide)
 - [Voltage](https://kit.scottelling.com/kit/voltage#spacing-guide)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#spacing-guide)

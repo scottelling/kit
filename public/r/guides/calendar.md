@@ -76,3 +76,4 @@ Calendar turns information into a readable, useful object.
 - [OS](https://kit.scottelling.com/kit/os#calendar)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#calendar)
 - [Voltage](https://kit.scottelling.com/kit/voltage#calendar)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#calendar)

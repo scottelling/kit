@@ -78,3 +78,4 @@ A readable layer stack with visibility, type, and current selection.
 - [OS](https://kit.scottelling.com/kit/os#layer-list)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#layer-list)
 - [Voltage](https://kit.scottelling.com/kit/voltage#layer-list)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#layer-list)

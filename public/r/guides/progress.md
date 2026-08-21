@@ -71,3 +71,4 @@ Show determinate progress for work whose completion can be measured.
 - [OS](https://kit.scottelling.com/kit/os#progress)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#progress)
 - [Voltage](https://kit.scottelling.com/kit/voltage#progress)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#progress)

@@ -66,3 +66,4 @@ See how Type Specimen shapes every screen.
 - [OS](https://kit.scottelling.com/kit/os#type-specimen)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#type-specimen)
 - [Voltage](https://kit.scottelling.com/kit/voltage#type-specimen)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#type-specimen)

@@ -13,6 +13,7 @@ const registries = await Promise.all([
   readFile(path.join(root, "registry", "animation", "registry.json"), "utf8").then(JSON.parse).then((registry) => ({ registry, expected: universalLibrary.length })),
   readFile(path.join(root, "registry", "vanilla-kit", "registry.json"), "utf8").then(JSON.parse).then((registry) => ({ registry, expected: universalLibrary.length })),
   readFile(path.join(root, "registry", "voltage", "registry.json"), "utf8").then(JSON.parse).then((registry) => ({ registry, expected: universalLibrary.length })),
+  readFile(path.join(root, "registry", "calm", "registry.json"), "utf8").then(JSON.parse).then((registry) => ({ registry, expected: universalLibrary.length })),
 ])
 const failures = []
 const universalNames = new Set(universalLibrary.map((item) => item.name))
@@ -49,6 +50,9 @@ for (const { registry, expected } of registries) {
   }
   if (registry.name === "animation-studio" && JSON.stringify(tokenItem?.cssVars?.light) !== JSON.stringify(tokenItem?.cssVars?.dark)) {
     failures.push("animation-studio invents a light direction outside its declared source modes")
+  }
+  if (registry.name === "calm" && JSON.stringify(tokenItem?.cssVars?.light) !== JSON.stringify(tokenItem?.cssVars?.dark)) {
+    failures.push("calm invents a light direction outside its declared source modes")
   }
   if (tokenItem?.cssVars?.theme?.["kit-control-height"] !== contract.requirements.minimum_control_height) {
     failures.push(`${registry.name} does not enforce the shared control height`)

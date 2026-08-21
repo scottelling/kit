@@ -72,3 +72,4 @@ Filter Tabs keeps place and direction easy to scan.
 - [OS](https://kit.scottelling.com/kit/os#filter-tabs)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#filter-tabs)
 - [Voltage](https://kit.scottelling.com/kit/voltage#filter-tabs)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#filter-tabs)

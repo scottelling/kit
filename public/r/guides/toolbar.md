@@ -74,3 +74,4 @@ Toolbar keeps the next move clear and touchable.
 - [OS](https://kit.scottelling.com/kit/os#toolbar)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#toolbar)
 - [Voltage](https://kit.scottelling.com/kit/voltage#toolbar)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#toolbar)

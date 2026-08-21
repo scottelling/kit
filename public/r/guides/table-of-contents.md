@@ -72,3 +72,4 @@ Table Of Contents keeps place and direction easy to scan.
 - [OS](https://kit.scottelling.com/kit/os#table-of-contents)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#table-of-contents)
 - [Voltage](https://kit.scottelling.com/kit/voltage#table-of-contents)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#table-of-contents)

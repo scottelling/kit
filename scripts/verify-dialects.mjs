@@ -29,6 +29,7 @@ const systems = [
   { id: "animation", item: "public/r/animation/tokens.json", dir: "public/r/animation" },
   { id: "vanilla-kit", item: "public/r/vanilla-kit/tokens.json", dir: "public/r/vanilla-kit" },
   { id: "voltage", item: "public/r/voltage/tokens.json", dir: "public/r/voltage" },
+  { id: "calm", item: "public/r/calm/tokens.json", dir: "public/r/calm" },
   { id: "shadow", item: "public/r/shadow/smooth-shadow.json", dir: "public/r/shadow" },
 ]
 
@@ -95,7 +96,7 @@ for (const system of systems) {
 }
 
 // 2. Vanilla dialect: only universal variables, complete registry, parseable JS.
-const complete = ["purple-rain", "jade", "os", "animation", "vanilla-kit", "voltage"]
+const complete = ["purple-rain", "jade", "os", "animation", "vanilla-kit", "voltage", "calm"]
 const universal = complete
   .map((id) => rootScopes[id])
   .filter(Boolean)
@@ -159,7 +160,7 @@ if (starterJs !== starter.files.find((file) => file.path === "starter.js")?.cont
 
 // 3. Demo page pairs the bundle with every complete system's tokens.css.
 const demo = await readText("public/vanilla.html")
-for (const href of ["/r/tokens.css", "/r/jade/tokens.css", "/r/os/tokens.css", "/r/animation/tokens.css", "/r/vanilla-kit/tokens.css", "/r/voltage/tokens.css", "/r/vanilla/kit.css", "/r/vanilla/kit.js"]) {
+for (const href of ["/r/tokens.css", "/r/jade/tokens.css", "/r/os/tokens.css", "/r/animation/tokens.css", "/r/vanilla-kit/tokens.css", "/r/voltage/tokens.css", "/r/calm/tokens.css", "/r/vanilla/kit.css", "/r/vanilla/kit.js"]) {
   if (!demo.includes(href)) fail(`demo: /vanilla page does not reference ${href}`)
 }
 for (const asset of ["/r/vanilla/starter.css", "/r/vanilla/starter.js"]) {
@@ -180,6 +181,7 @@ const mustCover = [
   "r/animation/tokens.css",
   "r/vanilla-kit/tokens.css",
   "r/voltage/tokens.css",
+  "r/calm/tokens.css",
   "r/shadow/tokens.css",
   "r/design-tokens.json",
   "r/doctrine.json",

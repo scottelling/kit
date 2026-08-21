@@ -74,3 +74,4 @@ A real recovery boundary that protects the rest of the creative workspace.
 - [OS](https://kit.scottelling.com/kit/os#workspace-error-boundary)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#workspace-error-boundary)
 - [Voltage](https://kit.scottelling.com/kit/voltage#workspace-error-boundary)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#workspace-error-boundary)

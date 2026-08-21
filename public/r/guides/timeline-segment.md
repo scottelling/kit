@@ -78,3 +78,4 @@ A selectable time block that exposes name, duration, and current state.
 - [OS](https://kit.scottelling.com/kit/os#timeline-segment)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#timeline-segment)
 - [Voltage](https://kit.scottelling.com/kit/voltage#timeline-segment)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#timeline-segment)

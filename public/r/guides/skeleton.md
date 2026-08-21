@@ -72,3 +72,4 @@ Skeleton makes the current state visible at a glance.
 - [OS](https://kit.scottelling.com/kit/os#skeleton)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#skeleton)
 - [Voltage](https://kit.scottelling.com/kit/voltage#skeleton)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#skeleton)

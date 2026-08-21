@@ -325,6 +325,7 @@ export function JadeExperience() {
             <Link href="/kit/os">OS <small>179 pieces</small></Link>
             <Link href="/kit/animation">Animation <small>179 pieces</small></Link>
             <Link href="/kit/voltage">Voltage <small>179 pieces</small></Link>
+            <Link href="/kit/calm">Calm <small>179 pieces</small></Link>
             <Link href="/kit/shadow">Shadow <small>12 elevations</small></Link>
             <Link aria-current="page" href="/kit/jade/compare">Comparison <small>Live</small></Link>
           </div>

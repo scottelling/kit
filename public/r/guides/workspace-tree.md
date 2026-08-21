@@ -76,3 +76,4 @@ Workspace Tree assembles related pieces into a complete task.
 - [OS](https://kit.scottelling.com/kit/os#workspace-tree)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#workspace-tree)
 - [Voltage](https://kit.scottelling.com/kit/voltage#workspace-tree)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#workspace-tree)

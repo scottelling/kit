@@ -72,3 +72,4 @@ Bottom Nav keeps place and direction easy to scan.
 - [OS](https://kit.scottelling.com/kit/os#bottom-nav)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#bottom-nav)
 - [Voltage](https://kit.scottelling.com/kit/voltage#bottom-nav)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#bottom-nav)

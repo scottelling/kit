@@ -78,3 +78,4 @@ Honest queued, rendering, complete, and failed progress with useful next actions
 - [OS](https://kit.scottelling.com/kit/os#render-status)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#render-status)
 - [Voltage](https://kit.scottelling.com/kit/voltage#render-status)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#render-status)

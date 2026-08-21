@@ -72,3 +72,4 @@ Navigation Menu keeps place and direction easy to scan.
 - [OS](https://kit.scottelling.com/kit/os#navigation-menu)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#navigation-menu)
 - [Voltage](https://kit.scottelling.com/kit/voltage#navigation-menu)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#navigation-menu)

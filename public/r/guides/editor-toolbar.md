@@ -76,3 +76,4 @@ Editor Toolbar assembles related pieces into a complete task.
 - [OS](https://kit.scottelling.com/kit/os#editor-toolbar)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#editor-toolbar)
 - [Voltage](https://kit.scottelling.com/kit/voltage#editor-toolbar)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#editor-toolbar)

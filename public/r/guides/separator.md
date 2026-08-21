@@ -66,3 +66,4 @@ See how Separator shapes every screen.
 - [OS](https://kit.scottelling.com/kit/os#separator)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#separator)
 - [Voltage](https://kit.scottelling.com/kit/voltage#separator)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#separator)

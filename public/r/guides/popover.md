@@ -74,3 +74,4 @@ Popover brings a focused task forward without losing context.
 - [OS](https://kit.scottelling.com/kit/os#popover)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#popover)
 - [Voltage](https://kit.scottelling.com/kit/voltage#popover)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#popover)

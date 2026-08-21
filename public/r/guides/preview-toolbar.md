@@ -78,3 +78,4 @@ A close-at-hand view, scale, and fit control for the stage.
 - [OS](https://kit.scottelling.com/kit/os#preview-toolbar)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#preview-toolbar)
 - [Voltage](https://kit.scottelling.com/kit/voltage#preview-toolbar)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#preview-toolbar)

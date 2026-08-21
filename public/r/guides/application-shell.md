@@ -76,3 +76,4 @@ Application Shell assembles related pieces into a complete task.
 - [OS](https://kit.scottelling.com/kit/os#application-shell)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#application-shell)
 - [Voltage](https://kit.scottelling.com/kit/voltage#application-shell)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#application-shell)

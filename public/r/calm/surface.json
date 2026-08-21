@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "surface",
+  "title": "Calm Desktop Surface",
+  "description": "See how Surface shapes every screen.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/calm/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/surface.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type SurfaceProps = React.ComponentPropsWithoutRef<\"div\">\n\nexport function Surface({ children, className, ...props }: SurfaceProps) {\n  if (children !== undefined) {\n    return (<div data-slot=\"surface\" className={cn(\"min-w-0\", className)} {...props}>{children}</div>)\n  }\n\n  return (\n    <div data-slot=\"surface\" className={cn(\"flex items-end gap-3\", className)} {...props}><span className=\"grid size-20 place-items-center rounded-[var(--radius-control)] bg-plane-1\">1</span><span className=\"grid size-20 -translate-y-2 place-items-center rounded-[var(--radius-control)] bg-plane-2\">2</span><span className=\"grid size-20 -translate-y-4 place-items-center rounded-[var(--radius-control)] bg-plane-3\">3</span></div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

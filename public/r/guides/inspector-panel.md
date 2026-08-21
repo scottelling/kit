@@ -78,3 +78,4 @@ A single scroll-owned place for scene, layer, and motion properties.
 - [OS](https://kit.scottelling.com/kit/os#inspector-panel)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#inspector-panel)
 - [Voltage](https://kit.scottelling.com/kit/voltage#inspector-panel)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#inspector-panel)

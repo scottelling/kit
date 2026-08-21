@@ -78,3 +78,4 @@ A touch-safe Story, Preview, Code, and Inspect switcher for narrow workspaces.
 - [OS](https://kit.scottelling.com/kit/os#workspace-switcher)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#workspace-switcher)
 - [Voltage](https://kit.scottelling.com/kit/voltage#workspace-switcher)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#workspace-switcher)

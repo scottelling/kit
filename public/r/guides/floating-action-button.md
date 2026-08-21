@@ -74,3 +74,4 @@ Floating Action Button keeps the next move clear and touchable.
 - [OS](https://kit.scottelling.com/kit/os#floating-action-button)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#floating-action-button)
 - [Voltage](https://kit.scottelling.com/kit/voltage#floating-action-button)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#floating-action-button)

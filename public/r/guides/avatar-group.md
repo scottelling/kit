@@ -76,3 +76,4 @@ Avatar Group turns information into a readable, useful object.
 - [OS](https://kit.scottelling.com/kit/os#avatar-group)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#avatar-group)
 - [Voltage](https://kit.scottelling.com/kit/voltage#avatar-group)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#avatar-group)

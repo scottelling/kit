@@ -76,3 +76,4 @@ Data Table turns information into a readable, useful object.
 - [OS](https://kit.scottelling.com/kit/os#data-table)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#data-table)
 - [Voltage](https://kit.scottelling.com/kit/voltage#data-table)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#data-table)

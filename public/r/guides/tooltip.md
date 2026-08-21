@@ -74,3 +74,4 @@ Tooltip brings a focused task forward without losing context.
 - [OS](https://kit.scottelling.com/kit/os#tooltip)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#tooltip)
 - [Voltage](https://kit.scottelling.com/kit/voltage#tooltip)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#tooltip)

@@ -76,3 +76,4 @@ Status Bar assembles related pieces into a complete task.
 - [OS](https://kit.scottelling.com/kit/os#status-bar)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#status-bar)
 - [Voltage](https://kit.scottelling.com/kit/voltage#status-bar)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#status-bar)

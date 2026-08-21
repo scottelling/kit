@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "delivery-workspace",
+  "title": "Calm Desktop Delivery Workspace",
+  "description": "A final work surface for output choice, checks, rendering, and handoff.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/calm/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/animation/patterns/delivery-workspace.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type DeliveryWorkspaceProps = React.ComponentPropsWithoutRef<\"section\">\n\nexport function DeliveryWorkspace({ children, className, ...props }: DeliveryWorkspaceProps) {\n  return (\n    <section data-slot=\"delivery-workspace\" className={cn(\"grid grid-cols-[repeat(auto-fit,minmax(min(18rem,100%),1fr))] gap-4 rounded-[var(--radius-sheet)] border border-border bg-card p-4\", className)} {...props}>\n      {children ?? (<><div><span className=\"font-mono text-[10px] uppercase text-muted-foreground\">Delivery</span><h3 className=\"mt-2 text-2xl font-extrabold\">Ready to make the final file.</h3><p className=\"max-w-xl text-sm text-muted-foreground\">Choose an honest output, run the motion check, then render from the same scene contract used in preview.</p><div className=\"mt-4 grid grid-cols-[repeat(auto-fit,minmax(5rem,1fr))] gap-2\">{[\"MP4\", \"GIF\", \"Source\"].map((format, index) => <button key={format} type=\"button\" aria-pressed={index === 0} className=\"min-h-11 min-w-11 rounded-[var(--radius-control)] border border-border px-3 text-sm font-bold aria-pressed:border-primary aria-pressed:bg-secondary\">{format}</button>)}</div></div><aside className=\"grid content-start gap-2 rounded-[var(--radius-card)] bg-sidebar p-3\"><strong>Motion check</strong><span className=\"text-sm text-muted-foreground\">7 checks passed</span><button type=\"button\" className=\"min-h-11 rounded-[var(--radius-control)] bg-primary px-4 font-bold text-primary-foreground\">Render MP4</button></aside></>)}\n    </section>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

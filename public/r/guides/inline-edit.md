@@ -76,3 +76,4 @@ Inline Edit collects a choice without hiding its state.
 - [OS](https://kit.scottelling.com/kit/os#inline-edit)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#inline-edit)
 - [Voltage](https://kit.scottelling.com/kit/voltage#inline-edit)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#inline-edit)

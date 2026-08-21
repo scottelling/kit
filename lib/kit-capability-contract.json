@@ -1,14 +1,15 @@
 {
   "version": "2.0.0",
   "purpose": "One production contract for every visual system distributed by Kit.",
-  "systems": ["purple-rain", "jade", "os-kit", "animation-studio", "vanilla-kit", "voltage"],
+  "systems": ["purple-rain", "jade", "os-kit", "animation-studio", "vanilla-kit", "voltage", "calm"],
   "system_modes": {
     "purple-rain": ["light", "dark"],
     "jade": ["light", "dark"],
     "os-kit": ["light", "dark", "hacker", "ethereal", "paper"],
     "animation-studio": ["dark"],
     "vanilla-kit": ["light", "dark"],
-    "voltage": ["light", "dark"]
+    "voltage": ["light", "dark"],
+    "calm": ["dark"]
   },
   "foundation_kits": ["shadow"],
   "catalog_layers": {

@@ -70,3 +70,4 @@ Tabs keeps place and direction easy to scan.
 - [OS](https://kit.scottelling.com/kit/os#tabs)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#tabs)
 - [Voltage](https://kit.scottelling.com/kit/voltage#tabs)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#tabs)

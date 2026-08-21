@@ -76,3 +76,4 @@ Stat turns information into a readable, useful object.
 - [OS](https://kit.scottelling.com/kit/os#stat)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#stat)
 - [Voltage](https://kit.scottelling.com/kit/voltage#stat)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#stat)

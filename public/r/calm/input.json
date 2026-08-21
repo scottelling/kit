@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input",
+  "title": "Calm Desktop Input",
+  "description": "Input collects a choice without hiding its state.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/calm/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/input.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\ntype InputProps = React.ComponentProps<\"input\"> & {\n  status?: \"idle\" | \"error\" | \"success\" | \"loading\"\n}\n\nfunction Input({ className, type, status = \"idle\", ...props }: InputProps) {\n  return (\n    <input\n      type={type}\n      data-slot=\"input\"\n      data-status={status}\n      aria-invalid={status === \"error\" || props[\"aria-invalid\"]}\n      aria-busy={status === \"loading\"}\n      className={cn(\n        \"flex h-11 w-full min-w-0 rounded-[var(--radius-control)] border border-input bg-background px-3.5 text-sm text-foreground shadow-[var(--shadow-control)] outline-2 outline-offset-1 outline-transparent placeholder:text-muted-foreground transition-[background-color,border-color] [transition-duration:var(--dur-micro)] [transition-timing-function:var(--ease-standard)] hover:bg-muted focus-visible:border-ring focus-visible:outline-ring disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:outline-destructive data-[status=success]:border-positive data-[status=success]:outline-positive data-[status=loading]:cursor-wait motion-reduce:transition-none\",\n        className,\n      )}\n      {...props}\n    />\n  )\n}\n\nexport { Input }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

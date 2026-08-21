@@ -76,3 +76,4 @@ Sign In Form assembles related pieces into a complete task.
 - [OS](https://kit.scottelling.com/kit/os#sign-in-form)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#sign-in-form)
 - [Voltage](https://kit.scottelling.com/kit/voltage#sign-in-form)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#sign-in-form)

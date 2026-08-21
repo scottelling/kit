@@ -12,7 +12,7 @@ Master standards: `/Users/scott/ScottAI/01_Active_Projects/oracle/canon/`
 Read before working: `PLAIN_ENGLISH.md` (how to talk to Scott), `MD_TAXONOMY.md` (file names and jobs), `PROJECT_STANDARD.md` (what this project must have).
 When Scott says "make this standard" or "always do this from now on": append it to `/Users/scott/ScottAI/01_Active_Projects/oracle/inbox/INBOX.md` with the date, this project's name, and Scott's exact words. Do not edit canon directly from this project.
 
-`kit` is the public design-engineering registry for Vanilla, Purple Rain, JADE, OS, Animation Studio, focused foundations, and isolated interface behaviors.
+`kit` is the public design-engineering registry for Vanilla, Purple Rain, JADE, OS, Animation Studio, Voltage, Calm Desktop, focused foundations, and isolated interface behaviors.
 
 ## Canonical
 
@@ -34,6 +34,8 @@ When Scott says "make this standard" or "always do this from now on": append it 
 - Vanilla complete registry: `https://kit.scottelling.com/r/vanilla-kit/registry.json`
 - Voltage showroom: `https://kit.scottelling.com/kit/voltage`
 - Voltage registry: `https://kit.scottelling.com/r/voltage/registry.json`
+- Calm Desktop showroom: `https://kit.scottelling.com/kit/calm`
+- Calm Desktop registry: `https://kit.scottelling.com/r/calm/registry.json`
 - Swap-ready project starter: `https://kit.scottelling.com/vanilla` + `https://kit.scottelling.com/r/vanilla/starter.json`
 - Icon library: `https://kit.scottelling.com/studio/icons`
 - Font library: `https://kit.scottelling.com/studio/fonts`
@@ -64,7 +66,7 @@ When Scott says "make this standard" or "always do this from now on": append it 
 - `registry/motion/` owns shared interface movement that inherits the active visual system without installing or duplicating one.
 - `registry/os/` owns the rebuilt OS visual system and its OS-native desktop, window, widget, phone, command, and settings structures.
 - `registry/animation/` owns the rebuilt Animation Studio visual system and its storyboard, canvas, inspector, motion, timeline, code, template, delivery, and recovery structures.
-- Vanilla, Purple Rain, JADE, OS, Animation Studio, and Voltage each expose the same 179 individually installable interface pieces: 142 everyday pieces plus 37 opt-in specialist patterns. Installing one piece never pulls unrelated specialist layouts into a project.
+- Vanilla, Purple Rain, JADE, OS, Animation Studio, Voltage, and Calm Desktop each expose the same 179 individually installable interface pieces: 142 everyday pieces plus 37 opt-in specialist patterns. Installing one piece never pulls unrelated specialist layouts into a project.
 - Vanilla is the neutral complete visual system for new work. The Vanilla Project Starter is the framework-free project foundation. Do not confuse either with the lowercase vanilla delivery dialect: the system determines appearance; the dialect determines file format.
 - `registry/vanilla/starter/` is the source for the public starter. It must preserve the ownership boundary in its manifest: the product owns routes, data, behavior, content, journeys, and permissions; the kit owns visual and interaction expression.
 - Product screens, routes, data, and behavior stay owned by the target product during a kit swap. The kit changes foundations and component expression; it does not silently replace the product.
@@ -78,13 +80,15 @@ When Scott says "make this standard" or "always do this from now on": append it 
 - Every shared OS component and OS-native pattern depends on the public OS tokens item under `/r/os/`.
 - Every shared Animation Studio component and studio-native pattern depends on the public Animation tokens item under `/r/animation/`.
 - Every shared Voltage component and optional specialist pattern depends on the public Voltage tokens item under `/r/voltage/`.
+- Every shared Calm Desktop component and optional specialist pattern depends on the public Calm tokens item under `/r/calm/`.
 - `/studio/icons` is the visual source of truth for the approved Lucide and Material Symbols Rounded families. New custom interface icons are a last resort; verified brand marks remain separate.
 - `/studio/fonts` is the visual source of truth for approved font families and pairings. Finished products load only the chosen families and weights.
 - `/studio/motion` is the tactile source of truth for shared interface movement. Its five pilot patterns—anchored menu, focused dialog, state swap, disclosure reveal, and important notice—remain separate from visual-kit identity, use transform and opacity for movement, preserve 44-pixel controls and visible focus, and keep a gentler reduced-motion path.
-- `/studio/guides` is the human-facing operating manual for all 179 reusable pieces. Every guide is generated from the universal catalog and carries purpose, named events, visible states, Kit/product ownership, accessibility, phone behavior, release proof, six-kit links, and one plain-English project request.
+- `/studio/guides` is the human-facing operating manual for all 179 reusable pieces. Every guide is generated from the universal catalog and carries purpose, named events, visible states, Kit/product ownership, accessibility, phone behavior, release proof, seven-kit links, and one plain-English project request.
 - `/r/guides/catalog.json`, the individual `/r/guides/<piece>.json` and `.md` files, the installable complete guide, and the `apply-kit-component-guides` Studio skill must remain generated from the same catalog and are checked for drift.
 - `/studio/swap` creates the plain-language preserve, repair, change, proof, and rollback brief used before work begins in a target product.
 - Animation Studio is an honest dark-authority system. Default and dark installation contexts intentionally receive the same inspected source foundation; no light direction is invented.
+- Calm Desktop is an honest dark-authority system. It preserves the supplied graphite and periwinkle source values, flat structural planes, dense editable desktop behavior, and transient-only shadow; no light direction is invented.
 - Published Theme Workshop copies must install cleanly into an unrelated shadcn project and merge both light and dark foundations.
 - `/elements` keeps one counted inventory, a live tactile playground, exact visible source, an English project prompt, and a separate public registry in sync.
 - `/elements` currently contains Knight Rider plus nineteen Beautiful UI adaptations. Each adapted element must remain searchable, interactive, independently installable, credited to Shane Levine under MIT, and automatically carry the shared foundation and license from the public Kit URL.

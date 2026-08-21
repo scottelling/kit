@@ -76,3 +76,4 @@ A plain-language action entry with honest results, keyboard control, and recover
 - [OS](https://kit.scottelling.com/kit/os#command-bar)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#command-bar)
 - [Voltage](https://kit.scottelling.com/kit/voltage#command-bar)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#command-bar)

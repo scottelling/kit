@@ -74,3 +74,4 @@ Dialog brings a focused task forward without losing context.
 - [OS](https://kit.scottelling.com/kit/os#dialog)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#dialog)
 - [Voltage](https://kit.scottelling.com/kit/voltage#dialog)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#dialog)

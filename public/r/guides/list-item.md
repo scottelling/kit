@@ -76,3 +76,4 @@ List Item turns information into a readable, useful object.
 - [OS](https://kit.scottelling.com/kit/os#list-item)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#list-item)
 - [Voltage](https://kit.scottelling.com/kit/voltage#list-item)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#list-item)

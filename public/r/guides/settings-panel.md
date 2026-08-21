@@ -76,3 +76,4 @@ Settings Panel assembles related pieces into a complete task.
 - [OS](https://kit.scottelling.com/kit/os#settings-panel)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#settings-panel)
 - [Voltage](https://kit.scottelling.com/kit/voltage#settings-panel)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#settings-panel)

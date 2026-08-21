@@ -77,3 +77,4 @@ Date Picker collects a choice without hiding its state.
 - [OS](https://kit.scottelling.com/kit/os#date-picker)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#date-picker)
 - [Voltage](https://kit.scottelling.com/kit/voltage#date-picker)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#date-picker)

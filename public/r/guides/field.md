@@ -77,3 +77,4 @@ Field collects a choice without hiding its state.
 - [OS](https://kit.scottelling.com/kit/os#field)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#field)
 - [Voltage](https://kit.scottelling.com/kit/voltage#field)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#field)

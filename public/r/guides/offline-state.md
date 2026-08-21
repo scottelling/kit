@@ -75,3 +75,4 @@ Offline State makes the current state visible at a glance.
 - [OS](https://kit.scottelling.com/kit/os#offline-state)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#offline-state)
 - [Voltage](https://kit.scottelling.com/kit/voltage#offline-state)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#offline-state)

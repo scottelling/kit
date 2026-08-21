@@ -75,3 +75,4 @@ Loading Dots makes the current state visible at a glance.
 - [OS](https://kit.scottelling.com/kit/os#loading-dots)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#loading-dots)
 - [Voltage](https://kit.scottelling.com/kit/voltage#loading-dots)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#loading-dots)

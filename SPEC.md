@@ -30,6 +30,7 @@ Complete systems (each styles the entire 179-piece catalog):
 | `animation` | `/r/animation/` |
 | `vanilla-kit` | `/r/vanilla-kit/` |
 | `voltage` | `/r/voltage/` |
+| `calm` | `/r/calm/` |
 
 Foundation kits supplement a system without replacing its identity: `shadow`
 (`/r/shadow/`). Animation is a dark-authority system: both appearance contexts
@@ -85,7 +86,7 @@ Rules:
   shadow utilities-as-classes) follow verbatim. Tailwind-only value-
   parameterized utilities are omitted and documented in a trailing comment.
 - Fonts are referenced by the tokens but loaded by the consuming project.
-- The **universal set** is the intersection of variables present in all six
+- The **universal set** is the intersection of variables present in all seven
   complete systems' `tokens.css` `:root` scope (53 variables today, including
   the `--kit-*` foundation namespace, semantic colors, planes, radius roles,
   and shadow roles). Anything portable must restrict itself to this set.

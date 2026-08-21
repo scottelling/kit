@@ -76,3 +76,4 @@ Accordion turns information into a readable, useful object.
 - [OS](https://kit.scottelling.com/kit/os#accordion)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#accordion)
 - [Voltage](https://kit.scottelling.com/kit/voltage#accordion)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#accordion)

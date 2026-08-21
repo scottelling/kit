@@ -77,3 +77,4 @@ Checkbox collects a choice without hiding its state.
 - [OS](https://kit.scottelling.com/kit/os#checkbox)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#checkbox)
 - [Voltage](https://kit.scottelling.com/kit/voltage#checkbox)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#checkbox)

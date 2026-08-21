@@ -104,6 +104,13 @@
       "showroom": "https://kit.scottelling.com/kit/voltage",
       "itemBase": "https://kit.scottelling.com/r/voltage",
       "component": "https://kit.scottelling.com/r/voltage/textarea.json"
+    },
+    {
+      "id": "calm",
+      "label": "Calm Desktop",
+      "showroom": "https://kit.scottelling.com/kit/calm",
+      "itemBase": "https://kit.scottelling.com/r/calm",
+      "component": "https://kit.scottelling.com/r/calm/textarea.json"
     }
   ],
   "prompt": "Use Kit's Textarea for this product. A person must enter, select, validate, or submit information. Preserve the active visual kit and the product's routes, content, data, permissions, and business rules. Model CHANGE, VALIDATE, SUBMIT, SUCCEED, FAIL, RETRY, RESET as named events; render empty, filled, invalid, working, success, failed as workflow states and default, hover, focus, disabled, read-only as separate interaction conditions where they apply. Keep 44-pixel controls, visible focus, phone containment, honest loading and failure, and reduced-motion behavior. Do not add glass, glow, decorative gradients, resting loops, or a new dependency."

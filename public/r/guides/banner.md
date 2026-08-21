@@ -75,3 +75,4 @@ Banner makes the current state visible at a glance.
 - [OS](https://kit.scottelling.com/kit/os#banner)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#banner)
 - [Voltage](https://kit.scottelling.com/kit/voltage#banner)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#banner)

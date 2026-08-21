@@ -78,3 +78,4 @@ A responsive set of starting compositions with clear device and duration context
 - [OS](https://kit.scottelling.com/kit/os#template-gallery)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#template-gallery)
 - [Voltage](https://kit.scottelling.com/kit/voltage#template-gallery)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#template-gallery)

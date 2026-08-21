@@ -75,3 +75,4 @@ Spinner makes the current state visible at a glance.
 - [OS](https://kit.scottelling.com/kit/os#spinner)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#spinner)
 - [Voltage](https://kit.scottelling.com/kit/voltage#spinner)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#spinner)

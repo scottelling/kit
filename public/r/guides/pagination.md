@@ -72,3 +72,4 @@ Pagination keeps place and direction easy to scan.
 - [OS](https://kit.scottelling.com/kit/os#pagination)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#pagination)
 - [Voltage](https://kit.scottelling.com/kit/voltage#pagination)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#pagination)

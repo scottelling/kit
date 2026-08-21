@@ -77,3 +77,4 @@ Range Slider collects a choice without hiding its state.
 - [OS](https://kit.scottelling.com/kit/os#range-slider)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#range-slider)
 - [Voltage](https://kit.scottelling.com/kit/voltage#range-slider)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#range-slider)

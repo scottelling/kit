@@ -76,3 +76,4 @@ Viewer Shell assembles related pieces into a complete task.
 - [OS](https://kit.scottelling.com/kit/os#viewer-shell)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#viewer-shell)
 - [Voltage](https://kit.scottelling.com/kit/voltage#viewer-shell)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#viewer-shell)

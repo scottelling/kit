@@ -78,3 +78,4 @@ A horizontally scrollable time ruler with separate scene, motion, and layer lane
 - [OS](https://kit.scottelling.com/kit/os#motion-timeline)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#motion-timeline)
 - [Voltage](https://kit.scottelling.com/kit/voltage#motion-timeline)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#motion-timeline)

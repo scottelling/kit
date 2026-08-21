@@ -78,3 +78,4 @@ A final work surface for output choice, checks, rendering, and handoff.
 - [OS](https://kit.scottelling.com/kit/os#delivery-workspace)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#delivery-workspace)
 - [Voltage](https://kit.scottelling.com/kit/voltage#delivery-workspace)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#delivery-workspace)

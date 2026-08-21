@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "rating",
+  "title": "Calm Desktop Rating",
+  "description": "Rating collects a choice without hiding its state.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/calm/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/rating.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type RatingProps = React.ComponentPropsWithoutRef<\"fieldset\">\n\nexport function Rating({ children, className, ...props }: RatingProps) {\n  const [value, setValue] = React.useState(\"3\")\n  if (children !== undefined) {\n    return (<fieldset data-slot=\"rating\" className={cn(\"grid min-w-0 gap-2\", className)} {...props}>{children}</fieldset>)\n  }\n\n  return (\n    <fieldset data-slot=\"rating\" className={cn(\"flex gap-1\", className)} {...props}><legend className=\"sr-only\">Rating</legend>{[1,2,3,4,5].map((number) => <button key={number} type=\"button\" onClick={() => setValue(String(number))} aria-label={number + \" stars\"} className=\"size-11 text-xl text-primary\">{number <= Number(value || 3) ? \"★\" : \"☆\"}</button>)}</fieldset>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

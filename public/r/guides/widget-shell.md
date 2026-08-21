@@ -76,3 +76,4 @@ A measured small surface that shows the most useful state without clipping or de
 - [OS](https://kit.scottelling.com/kit/os#widget-shell)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#widget-shell)
 - [Voltage](https://kit.scottelling.com/kit/voltage#widget-shell)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#widget-shell)

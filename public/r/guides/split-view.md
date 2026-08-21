@@ -76,3 +76,4 @@ A sturdy multi-panel workspace that collapses by priority instead of squeezing c
 - [OS](https://kit.scottelling.com/kit/os#split-view)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#split-view)
 - [Voltage](https://kit.scottelling.com/kit/voltage#split-view)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#split-view)

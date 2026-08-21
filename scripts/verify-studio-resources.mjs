@@ -16,6 +16,7 @@ const manifests = [
   ["animation-studio", "registry/animation/registry.json", "https://kit.scottelling.com/r/animation/tokens.json"],
   ["vanilla-kit", "registry/vanilla-kit/registry.json", "https://kit.scottelling.com/r/vanilla-kit/tokens.json"],
   ["voltage", "registry/voltage/registry.json", "https://kit.scottelling.com/r/voltage/tokens.json"],
+  ["calm", "registry/calm/registry.json", "https://kit.scottelling.com/r/calm/tokens.json"],
 ]
 
 if (icons.families.length !== 2) failures.push("icon library does not contain exactly two approved interface families")

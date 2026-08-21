@@ -76,3 +76,4 @@ A complete sharing surface with the text link, copy, native sharing, QR display,
 - [OS](https://kit.scottelling.com/kit/os#share-qr-panel)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#share-qr-panel)
 - [Voltage](https://kit.scottelling.com/kit/voltage#share-qr-panel)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#share-qr-panel)

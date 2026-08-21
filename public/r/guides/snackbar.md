@@ -75,3 +75,4 @@ Snackbar makes the current state visible at a glance.
 - [OS](https://kit.scottelling.com/kit/os#snackbar)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#snackbar)
 - [Voltage](https://kit.scottelling.com/kit/voltage#snackbar)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#snackbar)

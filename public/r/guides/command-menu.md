@@ -72,3 +72,4 @@ Command Menu keeps place and direction easy to scan.
 - [OS](https://kit.scottelling.com/kit/os#command-menu)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#command-menu)
 - [Voltage](https://kit.scottelling.com/kit/voltage#command-menu)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#command-menu)

@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 
 import animationTokens from "@/lib/animation-tokens.json"
+import calmTokens from "@/lib/calm-tokens.json"
 import jadeTokens from "@/lib/jade-tokens.json"
 import motionLibrary from "@/lib/motion-library.json"
 import osTokens from "@/lib/os-tokens.json"
@@ -37,6 +38,7 @@ const themes: MotionTheme[] = [
   theme("OS", "os", osTokens.light, osTokens.dark, osTokens.theme),
   theme("Animation", "animation", animationTokens.source, animationTokens.source, animationTokens.theme, true),
   theme("Voltage", "voltage", voltageTokens.light, voltageTokens.dark, voltageTokens.theme),
+  theme("Calm Desktop", "calm", calmTokens.dark, calmTokens.dark, calmTokens.theme, true),
 ]
 
 export default function MotionStudioPage() {

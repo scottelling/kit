@@ -72,3 +72,4 @@ Anchor Nav keeps place and direction easy to scan.
 - [OS](https://kit.scottelling.com/kit/os#anchor-nav)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#anchor-nav)
 - [Voltage](https://kit.scottelling.com/kit/voltage#anchor-nav)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#anchor-nav)

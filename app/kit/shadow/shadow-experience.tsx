@@ -85,6 +85,7 @@ export function ShadowExperience() {
             <Link href="/kit/os">OS <small>179 pieces</small></Link>
             <Link href="/kit/animation">Animation <small>179 pieces</small></Link>
             <Link href="/kit/voltage">Voltage <small>179 pieces</small></Link>
+            <Link href="/kit/calm">Calm <small>179 pieces</small></Link>
             <Link aria-current="page" href="/kit/shadow">Shadow <small>{shadowRecipeCount} elevations</small></Link>
             {sourcedKits.map((kit) => (
               <Link key={kit.id} href={kit.route}>{kit.title} <small>{kit.pieceCount} pieces</small></Link>

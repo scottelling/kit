@@ -76,3 +76,4 @@ Task Board assembles related pieces into a complete task.
 - [OS](https://kit.scottelling.com/kit/os#task-board)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#task-board)
 - [Voltage](https://kit.scottelling.com/kit/voltage#task-board)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#task-board)

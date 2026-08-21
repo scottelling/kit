@@ -69,6 +69,10 @@ curl -fsS https://kit.scottelling.com/r/voltage/registry.json
 curl -fsS https://kit.scottelling.com/r/voltage/tokens.json
 curl -fsS https://kit.scottelling.com/r/voltage/tokens.css
 curl -fsS https://kit.scottelling.com/r/voltage/button.json
+curl -fsS https://kit.scottelling.com/r/calm/registry.json
+curl -fsS https://kit.scottelling.com/r/calm/tokens.json
+curl -fsS https://kit.scottelling.com/r/calm/tokens.css
+curl -fsS https://kit.scottelling.com/r/calm/button.json
 curl -fsS https://kit.scottelling.com/vanilla
 curl -fsS https://kit.scottelling.com/r/space/registry.json
 curl -fsS https://kit.scottelling.com/r/space/tokens.css
@@ -82,6 +86,7 @@ curl -fsS https://kit.scottelling.com/elements
 curl -fsS https://kit.scottelling.com/kit/os
 curl -fsS https://kit.scottelling.com/kit/animation
 curl -fsS https://kit.scottelling.com/kit/voltage
+curl -fsS https://kit.scottelling.com/kit/calm
 curl -fsS https://kit.scottelling.com/studio
 curl -fsS https://kit.scottelling.com/studio/icons
 curl -fsS https://kit.scottelling.com/studio/fonts

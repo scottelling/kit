@@ -88,3 +88,4 @@ Select files and make upload progress, cancellation, failure, retry, and complet
 - [OS](https://kit.scottelling.com/kit/os#file-upload)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#file-upload)
 - [Voltage](https://kit.scottelling.com/kit/voltage#file-upload)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#file-upload)

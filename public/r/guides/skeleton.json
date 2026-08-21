@@ -99,6 +99,13 @@
       "showroom": "https://kit.scottelling.com/kit/voltage",
       "itemBase": "https://kit.scottelling.com/r/voltage",
       "component": "https://kit.scottelling.com/r/voltage/skeleton.json"
+    },
+    {
+      "id": "calm",
+      "label": "Calm Desktop",
+      "showroom": "https://kit.scottelling.com/kit/calm",
+      "itemBase": "https://kit.scottelling.com/r/calm",
+      "component": "https://kit.scottelling.com/r/calm/skeleton.json"
     }
   ],
   "prompt": "Use Kit's Skeleton for this product. Real data is loading and its final geometry is known well enough to prevent layout shift. Preserve the active visual kit and the product's routes, content, data, permissions, and business rules. Model LOAD, RESOLVE, FAIL, RETRY as named events; render idle, working, success, warning, failed, dismissed as workflow states and default, focus, disabled as separate interaction conditions where they apply. Keep 44-pixel controls, visible focus, phone containment, honest loading and failure, and reduced-motion behavior. Do not add glass, glow, decorative gradients, resting loops, or a new dependency."

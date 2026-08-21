@@ -76,3 +76,4 @@ Collapsible turns information into a readable, useful object.
 - [OS](https://kit.scottelling.com/kit/os#collapsible)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#collapsible)
 - [Voltage](https://kit.scottelling.com/kit/voltage#collapsible)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#collapsible)

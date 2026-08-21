@@ -66,3 +66,4 @@ See how Surface shapes every screen.
 - [OS](https://kit.scottelling.com/kit/os#surface)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#surface)
 - [Voltage](https://kit.scottelling.com/kit/voltage#surface)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#surface)

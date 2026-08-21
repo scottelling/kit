@@ -66,3 +66,4 @@ See how Stack shapes every screen.
 - [OS](https://kit.scottelling.com/kit/os#stack)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#stack)
 - [Voltage](https://kit.scottelling.com/kit/voltage#stack)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#stack)

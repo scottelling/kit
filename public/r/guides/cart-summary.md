@@ -76,3 +76,4 @@ Cart Summary assembles related pieces into a complete task.
 - [OS](https://kit.scottelling.com/kit/os#cart-summary)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#cart-summary)
 - [Voltage](https://kit.scottelling.com/kit/voltage#cart-summary)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#cart-summary)

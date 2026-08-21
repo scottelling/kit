@@ -76,3 +76,4 @@ Verification, uncertainty, sources, limitations, and review dates kept together.
 - [OS](https://kit.scottelling.com/kit/os#evidence-source-block)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#evidence-source-block)
 - [Voltage](https://kit.scottelling.com/kit/voltage#evidence-source-block)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#evidence-source-block)

@@ -115,6 +115,13 @@
       "showroom": "https://kit.scottelling.com/kit/voltage",
       "itemBase": "https://kit.scottelling.com/r/voltage",
       "component": "https://kit.scottelling.com/r/voltage/file-upload.json"
+    },
+    {
+      "id": "calm",
+      "label": "Calm Desktop",
+      "showroom": "https://kit.scottelling.com/kit/calm",
+      "itemBase": "https://kit.scottelling.com/r/calm",
+      "component": "https://kit.scottelling.com/r/calm/file-upload.json"
     }
   ],
   "prompt": "Use Kit's File Upload for this product. A product must accept one or more files and own a real upload, cancel, retry, and storage flow. Preserve the active visual kit and the product's routes, content, data, permissions, and business rules. Model SELECT_FILES, VALIDATE, START_UPLOAD, UPDATE_PROGRESS, CANCEL, CANCELLED, SUCCEED, FAIL, RETRY, REMOVE_FILE, RESET as named events; render empty, selected, invalid, uploading, cancelled, failed, success as workflow states and default, hover, focus, disabled, read-only as separate interaction conditions where they apply. Keep 44-pixel controls, visible focus, phone containment, honest loading and failure, and reduced-motion behavior. Do not add glass, glow, decorative gradients, resting loops, or a new dependency."

@@ -78,3 +78,4 @@ A readable, selectable source surface with copy and export actions.
 - [OS](https://kit.scottelling.com/kit/os#code-panel)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#code-panel)
 - [Voltage](https://kit.scottelling.com/kit/voltage#code-panel)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#code-panel)

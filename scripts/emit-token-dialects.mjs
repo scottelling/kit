@@ -16,6 +16,7 @@ const systems = [
   { id: "animation", title: "Animation Studio", item: "public/r/animation/tokens.json", outDir: "public/r/animation", sourceUrl: `${site}/r/animation/tokens.json` },
   { id: "vanilla-kit", title: "Vanilla", item: "public/r/vanilla-kit/tokens.json", outDir: "public/r/vanilla-kit", sourceUrl: `${site}/r/vanilla-kit/tokens.json` },
   { id: "voltage", title: "Voltage", item: "public/r/voltage/tokens.json", outDir: "public/r/voltage", sourceUrl: `${site}/r/voltage/tokens.json` },
+  { id: "calm", title: "Calm Desktop", item: "public/r/calm/tokens.json", outDir: "public/r/calm", sourceUrl: `${site}/r/calm/tokens.json` },
   { id: "shadow", title: "Shadow", item: "public/r/shadow/smooth-shadow.json", outDir: "public/r/shadow", sourceUrl: `${site}/r/shadow/smooth-shadow.json` },
 ]
 

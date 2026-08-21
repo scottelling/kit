@@ -46,6 +46,13 @@ const systems = [
     homepage: "https://kit.scottelling.com/kit/voltage",
     tokenUrl: "https://kit.scottelling.com/r/voltage/tokens.json",
   },
+  {
+    id: "calm",
+    label: "Calm Desktop",
+    manifest: "registry/calm/registry.json",
+    homepage: "https://kit.scottelling.com/kit/calm",
+    tokenUrl: "https://kit.scottelling.com/r/calm/tokens.json",
+  },
 ]
 
 const manifests = new Map()

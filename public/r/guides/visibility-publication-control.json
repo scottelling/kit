@@ -103,6 +103,13 @@
       "showroom": "https://kit.scottelling.com/kit/voltage",
       "itemBase": "https://kit.scottelling.com/r/voltage",
       "component": "https://kit.scottelling.com/r/voltage/visibility-publication-control.json"
+    },
+    {
+      "id": "calm",
+      "label": "Calm Desktop",
+      "showroom": "https://kit.scottelling.com/kit/calm",
+      "itemBase": "https://kit.scottelling.com/r/calm",
+      "component": "https://kit.scottelling.com/r/calm/visibility-publication-control.json"
     }
   ],
   "prompt": "Use Kit's Visibility Publication Control for this product. People must understand who can access an object before publishing it. Preserve the active visual kit and the product's routes, content, data, permissions, and business rules. Model OPEN, SELECT_VISIBILITY, SAVE, SUCCEED, FAIL, RETRY, CLOSE as named events; render ready, editing, working, success, failed, recovery as workflow states and default, hover, focus, disabled as separate interaction conditions where they apply. Keep 44-pixel controls, visible focus, phone containment, honest loading and failure, and reduced-motion behavior. Do not add glass, glow, decorative gradients, resting loops, or a new dependency."

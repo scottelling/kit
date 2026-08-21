@@ -75,3 +75,4 @@ Empty State makes the current state visible at a glance.
 - [OS](https://kit.scottelling.com/kit/os#empty-state)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#empty-state)
 - [Voltage](https://kit.scottelling.com/kit/voltage#empty-state)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#empty-state)

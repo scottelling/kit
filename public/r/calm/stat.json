@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "stat",
+  "title": "Calm Desktop Stat",
+  "description": "Stat turns information into a readable, useful object.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/calm/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/purple-rain/library/stat.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type StatProps = React.ComponentPropsWithoutRef<\"div\">\n\nexport function Stat({ children, className, ...props }: StatProps) {\n  if (children !== undefined) {\n    return (<div data-slot=\"stat\" className={cn(\"min-w-0\", className)} {...props}>{children}</div>)\n  }\n\n  return (\n    <div data-slot=\"stat\" className={cn(\"flex flex-wrap gap-3\", className)} {...props}>{[[\"24\", \"Ready\"], [\"8\", \"Review\"], [\"3\", \"Blocked\"]].slice(0, 1).map(([value, label]) => <div key={label} className=\"rounded-[var(--radius-control)] border border-border bg-card text-card-foreground shadow-[var(--shadow-control)] grid min-w-28 gap-1 p-4\"><strong className=\"text-3xl tabular-nums\">{value}</strong><span className=\"text-sm text-muted-foreground\">{label}</span></div>)}</div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

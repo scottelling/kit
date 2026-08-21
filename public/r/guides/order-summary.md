@@ -76,3 +76,4 @@ Order Summary assembles related pieces into a complete task.
 - [OS](https://kit.scottelling.com/kit/os#order-summary)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#order-summary)
 - [Voltage](https://kit.scottelling.com/kit/voltage#order-summary)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#order-summary)

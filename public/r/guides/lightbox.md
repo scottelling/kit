@@ -74,3 +74,4 @@ Lightbox brings a focused task forward without losing context.
 - [OS](https://kit.scottelling.com/kit/os#lightbox)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#lightbox)
 - [Voltage](https://kit.scottelling.com/kit/voltage#lightbox)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#lightbox)

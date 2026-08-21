@@ -76,3 +76,4 @@ A calm global bar that keeps the current place and useful system status visible.
 - [OS](https://kit.scottelling.com/kit/os#menu-bar)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#menu-bar)
 - [Voltage](https://kit.scottelling.com/kit/voltage#menu-bar)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#menu-bar)

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "stage-viewport",
+  "title": "Calm Desktop Stage Viewport",
+  "description": "A quiet work surface that gives the current composition visual priority.",
+  "registryDependencies": [
+    "https://kit.scottelling.com/r/calm/tokens.json"
+  ],
+  "files": [
+    {
+      "path": "registry/animation/patterns/stage-viewport.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type StageViewportProps = React.ComponentPropsWithoutRef<\"section\">\n\nexport function StageViewport({ children, className, ...props }: StageViewportProps) {\n  return (\n    <section data-slot=\"stage-viewport\" className={cn(\"grid min-h-72 place-items-center overflow-hidden rounded-[var(--radius-card)] border border-border bg-background p-4\", className)} {...props}>\n      {children ?? (<div className=\"grid aspect-video w-full max-w-xl place-items-center rounded-[var(--radius-card)] border border-border bg-plane-pressed\"><div className=\"grid max-w-md grid-cols-2 gap-8 px-8\"><strong className=\"text-2xl leading-tight\">Make the next idea visible.</strong><p className=\"m-0 text-sm text-muted-foreground\">The canvas stays in front while every supporting control remains quiet.</p></div></div>)}\n    </section>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

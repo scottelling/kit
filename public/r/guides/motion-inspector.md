@@ -78,3 +78,4 @@ Purpose, easing, duration, and transition controls with safe defaults.
 - [OS](https://kit.scottelling.com/kit/os#motion-inspector)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#motion-inspector)
 - [Voltage](https://kit.scottelling.com/kit/voltage#motion-inspector)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#motion-inspector)

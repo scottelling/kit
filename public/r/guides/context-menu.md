@@ -74,3 +74,4 @@ Context Menu brings a focused task forward without losing context.
 - [OS](https://kit.scottelling.com/kit/os#context-menu)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#context-menu)
 - [Voltage](https://kit.scottelling.com/kit/voltage#context-menu)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#context-menu)

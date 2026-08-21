@@ -75,3 +75,4 @@ Badge makes the current state visible at a glance.
 - [OS](https://kit.scottelling.com/kit/os#badge)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#badge)
 - [Voltage](https://kit.scottelling.com/kit/voltage#badge)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#badge)

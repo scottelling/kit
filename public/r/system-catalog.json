@@ -48,6 +48,13 @@
       "homepage": "https://kit.scottelling.com/kit/voltage",
       "tokenUrl": "https://kit.scottelling.com/r/voltage/tokens.json",
       "componentCount": 179
+    },
+    {
+      "id": "calm",
+      "label": "Calm Desktop",
+      "homepage": "https://kit.scottelling.com/kit/calm",
+      "tokenUrl": "https://kit.scottelling.com/r/calm/tokens.json",
+      "componentCount": 179
     }
   ],
   "layers": [
@@ -295,7 +302,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/color-swatch.json"
     },
@@ -312,7 +320,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/type-specimen.json"
     },
@@ -329,7 +338,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/spacing-guide.json"
     },
@@ -346,7 +356,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/radius-guide.json"
     },
@@ -363,7 +374,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/shadow-guide.json"
     },
@@ -380,7 +392,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/focus-ring.json"
     },
@@ -397,7 +410,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/separator.json"
     },
@@ -414,7 +428,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/surface.json"
     },
@@ -431,7 +446,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/container.json"
     },
@@ -448,7 +464,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/stack.json"
     },
@@ -465,7 +482,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/button.json"
     },
@@ -482,7 +500,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/button-group.json"
     },
@@ -499,7 +518,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/icon-button.json"
     },
@@ -516,7 +536,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/split-button.json"
     },
@@ -533,7 +554,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/menu-button.json"
     },
@@ -550,7 +572,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/toggle-button.json"
     },
@@ -567,7 +590,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/toggle-group.json"
     },
@@ -584,7 +608,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/segmented-control.json"
     },
@@ -601,7 +626,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/floating-action-button.json"
     },
@@ -618,7 +644,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/link-button.json"
     },
@@ -635,7 +662,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/copy-button.json"
     },
@@ -652,7 +680,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/favorite-button.json"
     },
@@ -669,7 +698,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/toolbar.json"
     },
@@ -686,7 +716,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/bulk-action-bar.json"
     },
@@ -703,7 +734,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/input.json"
     },
@@ -720,7 +752,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/textarea.json"
     },
@@ -737,7 +770,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/select.json"
     },
@@ -754,7 +788,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/checkbox.json"
     },
@@ -771,7 +806,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/checkbox-group.json"
     },
@@ -788,7 +824,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/radio-group.json"
     },
@@ -805,7 +842,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/switch.json"
     },
@@ -822,7 +860,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/slider.json"
     },
@@ -839,7 +878,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/range-slider.json"
     },
@@ -856,7 +896,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/progress.json"
     },
@@ -873,7 +914,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/meter.json"
     },
@@ -890,7 +932,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/file-upload.json"
     },
@@ -907,7 +950,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/dropzone.json"
     },
@@ -924,7 +968,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/otp-input.json"
     },
@@ -941,7 +986,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/search-field.json"
     },
@@ -958,7 +1004,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/combobox.json"
     },
@@ -975,7 +1022,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/date-picker.json"
     },
@@ -992,7 +1040,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/time-input.json"
     },
@@ -1009,7 +1058,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/number-input.json"
     },
@@ -1026,7 +1076,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/password-input.json"
     },
@@ -1043,7 +1094,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/color-input.json"
     },
@@ -1060,7 +1112,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/rating.json"
     },
@@ -1077,7 +1130,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/field.json"
     },
@@ -1094,7 +1148,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/inline-edit.json"
     },
@@ -1111,7 +1166,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/tabs.json"
     },
@@ -1128,7 +1184,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/breadcrumb.json"
     },
@@ -1145,7 +1202,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/pagination.json"
     },
@@ -1162,7 +1220,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/stepper.json"
     },
@@ -1179,7 +1238,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/sidebar.json"
     },
@@ -1196,7 +1256,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/topbar.json"
     },
@@ -1213,7 +1274,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/bottom-nav.json"
     },
@@ -1230,7 +1292,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/navigation-menu.json"
     },
@@ -1247,7 +1310,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/command-menu.json"
     },
@@ -1264,7 +1328,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/filter-tabs.json"
     },
@@ -1281,7 +1346,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/view-switcher.json"
     },
@@ -1298,7 +1364,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/page-header.json"
     },
@@ -1315,7 +1382,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/back-link.json"
     },
@@ -1332,7 +1400,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/anchor-nav.json"
     },
@@ -1349,7 +1418,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/table-of-contents.json"
     },
@@ -1366,7 +1436,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/app-switcher.json"
     },
@@ -1383,7 +1454,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/dialog.json"
     },
@@ -1400,7 +1472,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/alert-dialog.json"
     },
@@ -1417,7 +1490,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/sheet.json"
     },
@@ -1434,7 +1508,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/drawer.json"
     },
@@ -1451,7 +1526,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/popover.json"
     },
@@ -1468,7 +1544,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/tooltip.json"
     },
@@ -1485,7 +1562,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/dropdown-menu.json"
     },
@@ -1502,7 +1580,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/context-menu.json"
     },
@@ -1519,7 +1598,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/hover-card.json"
     },
@@ -1536,7 +1616,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/command-palette.json"
     },
@@ -1553,7 +1634,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/lightbox.json"
     },
@@ -1570,7 +1652,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/action-menu.json"
     },
@@ -1587,7 +1670,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/badge.json"
     },
@@ -1604,7 +1688,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/alert.json"
     },
@@ -1621,7 +1706,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/banner.json"
     },
@@ -1638,7 +1724,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/toast.json"
     },
@@ -1655,7 +1742,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/snackbar.json"
     },
@@ -1672,7 +1760,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/empty-state.json"
     },
@@ -1689,7 +1778,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/skeleton.json"
     },
@@ -1706,7 +1796,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/loading-dots.json"
     },
@@ -1723,7 +1814,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/spinner.json"
     },
@@ -1740,7 +1832,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/status-dot.json"
     },
@@ -1757,7 +1850,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/progress-card.json"
     },
@@ -1774,7 +1868,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/error-state.json"
     },
@@ -1791,7 +1886,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/success-state.json"
     },
@@ -1808,7 +1904,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/offline-state.json"
     },
@@ -1825,7 +1922,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/card.json"
     },
@@ -1842,7 +1940,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/avatar.json"
     },
@@ -1859,7 +1958,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/avatar-group.json"
     },
@@ -1876,7 +1976,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/table.json"
     },
@@ -1893,7 +1994,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/data-table.json"
     },
@@ -1910,7 +2012,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/description-list.json"
     },
@@ -1927,7 +2030,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/list.json"
     },
@@ -1944,7 +2048,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/list-item.json"
     },
@@ -1961,7 +2066,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/stat.json"
     },
@@ -1978,7 +2084,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/stat-group.json"
     },
@@ -1995,7 +2102,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/timeline.json"
     },
@@ -2012,7 +2120,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/activity-feed.json"
     },
@@ -2029,7 +2138,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/calendar.json"
     },
@@ -2046,7 +2156,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/agenda.json"
     },
@@ -2063,7 +2174,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/accordion.json"
     },
@@ -2080,7 +2192,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/collapsible.json"
     },
@@ -2097,7 +2210,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/carousel.json"
     },
@@ -2114,7 +2228,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/bar-chart.json"
     },
@@ -2131,7 +2246,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/donut-chart.json"
     },
@@ -2148,7 +2264,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/tree-view.json"
     },
@@ -2165,7 +2282,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/app-shell.json"
     },
@@ -2182,7 +2300,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/auth-card.json"
     },
@@ -2199,7 +2318,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/sign-in-form.json"
     },
@@ -2216,7 +2336,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/sign-up-form.json"
     },
@@ -2233,7 +2354,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/forgot-password-form.json"
     },
@@ -2250,7 +2372,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/profile-form.json"
     },
@@ -2267,7 +2390,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/settings-panel.json"
     },
@@ -2284,7 +2408,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/invite-form.json"
     },
@@ -2301,7 +2426,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/contact-form.json"
     },
@@ -2318,7 +2444,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/feedback-form.json"
     },
@@ -2335,7 +2462,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/checkout-form.json"
     },
@@ -2352,7 +2480,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/cart-summary.json"
     },
@@ -2369,7 +2498,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/order-summary.json"
     },
@@ -2386,7 +2516,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/pricing-card.json"
     },
@@ -2403,7 +2534,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/pricing-table.json"
     },
@@ -2420,7 +2552,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/filter-bar.json"
     },
@@ -2437,7 +2570,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/search-results.json"
     },
@@ -2454,7 +2588,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/notification-center.json"
     },
@@ -2471,7 +2606,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/application-shell.json"
     },
@@ -2488,7 +2624,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/workspace-tree.json"
     },
@@ -2505,7 +2642,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/viewer-shell.json"
     },
@@ -2522,7 +2660,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/editor-toolbar.json"
     },
@@ -2539,7 +2678,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/task-board.json"
     },
@@ -2556,7 +2696,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/task-rail.json"
     },
@@ -2573,7 +2714,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/status-bar.json"
     },
@@ -2590,7 +2732,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/mobile-app-nav.json"
     },
@@ -2607,7 +2750,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/terminal-surface.json"
     },
@@ -2624,7 +2768,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/document-surface.json"
     },
@@ -2641,7 +2786,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/visibility-publication-control.json"
     },
@@ -2658,7 +2804,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/evidence-source-block.json"
     },
@@ -2675,7 +2822,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/share-qr-panel.json"
     },
@@ -2692,7 +2840,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/destructive-action.json"
     },
@@ -2709,7 +2858,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/desktop-shell.json"
     },
@@ -2726,7 +2876,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/window-shell.json"
     },
@@ -2743,7 +2894,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/menu-bar.json"
     },
@@ -2760,7 +2912,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/dock.json"
     },
@@ -2777,7 +2930,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/widget-shell.json"
     },
@@ -2794,7 +2948,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/master-detail.json"
     },
@@ -2811,7 +2966,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/split-view.json"
     },
@@ -2828,7 +2984,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/command-bar.json"
     },
@@ -2845,7 +3002,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/settings-sheet.json"
     },
@@ -2862,7 +3020,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/studio-shell.json"
     },
@@ -2879,7 +3038,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/studio-header.json"
     },
@@ -2896,7 +3056,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/workspace-switcher.json"
     },
@@ -2913,7 +3074,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/project-switcher.json"
     },
@@ -2930,7 +3092,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/storyboard-rail.json"
     },
@@ -2947,7 +3110,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/scene-list-item.json"
     },
@@ -2964,7 +3128,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/stage-viewport.json"
     },
@@ -2981,7 +3146,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/device-frame.json"
     },
@@ -2998,7 +3164,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/preview-toolbar.json"
     },
@@ -3015,7 +3182,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/ai-director.json"
     },
@@ -3032,7 +3200,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/command-suggestion-list.json"
     },
@@ -3049,7 +3218,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/inspector-panel.json"
     },
@@ -3066,7 +3236,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/layer-list.json"
     },
@@ -3083,7 +3254,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/style-inspector.json"
     },
@@ -3100,7 +3272,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/motion-inspector.json"
     },
@@ -3117,7 +3290,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/motion-preset-picker.json"
     },
@@ -3134,7 +3308,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/transport.json"
     },
@@ -3151,7 +3326,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/motion-timeline.json"
     },
@@ -3168,7 +3344,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/timeline-segment.json"
     },
@@ -3185,7 +3362,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/playhead.json"
     },
@@ -3202,7 +3380,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/delivery-workspace.json"
     },
@@ -3219,7 +3398,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/delivery-action.json"
     },
@@ -3236,7 +3416,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/render-status.json"
     },
@@ -3253,7 +3434,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/motion-check.json"
     },
@@ -3270,7 +3452,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/code-panel.json"
     },
@@ -3287,7 +3470,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/template-gallery.json"
     },
@@ -3304,7 +3488,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/guided-tour.json"
     },
@@ -3321,7 +3506,8 @@
         "os-kit",
         "animation-studio",
         "vanilla-kit",
-        "voltage"
+        "voltage",
+        "calm"
       ],
       "guide": "https://kit.scottelling.com/r/guides/workspace-error-boundary.json"
     }

@@ -72,3 +72,4 @@ Topbar keeps place and direction easy to scan.
 - [OS](https://kit.scottelling.com/kit/os#topbar)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#topbar)
 - [Voltage](https://kit.scottelling.com/kit/voltage#topbar)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#topbar)

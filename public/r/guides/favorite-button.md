@@ -74,3 +74,4 @@ Favorite Button keeps the next move clear and touchable.
 - [OS](https://kit.scottelling.com/kit/os#favorite-button)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#favorite-button)
 - [Voltage](https://kit.scottelling.com/kit/voltage#favorite-button)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#favorite-button)

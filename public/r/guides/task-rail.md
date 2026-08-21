@@ -76,3 +76,4 @@ Task Rail assembles related pieces into a complete task.
 - [OS](https://kit.scottelling.com/kit/os#task-rail)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#task-rail)
 - [Voltage](https://kit.scottelling.com/kit/voltage#task-rail)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#task-rail)

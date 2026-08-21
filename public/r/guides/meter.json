@@ -94,6 +94,13 @@
       "showroom": "https://kit.scottelling.com/kit/voltage",
       "itemBase": "https://kit.scottelling.com/r/voltage",
       "component": "https://kit.scottelling.com/r/voltage/meter.json"
+    },
+    {
+      "id": "calm",
+      "label": "Calm Desktop",
+      "showroom": "https://kit.scottelling.com/kit/calm",
+      "itemBase": "https://kit.scottelling.com/r/calm",
+      "component": "https://kit.scottelling.com/r/calm/meter.json"
     }
   ],
   "prompt": "Use Kit's Meter for this product. A current bounded measurement should be compared with its minimum, maximum, or optimum. Preserve the active visual kit and the product's routes, content, data, permissions, and business rules. Model UPDATE_VALUE, RESET as named events; render empty, measured, low, high, critical as workflow states and default as separate interaction conditions where they apply. Keep 44-pixel controls, visible focus, phone containment, honest loading and failure, and reduced-motion behavior. Do not add glass, glow, decorative gradients, resting loops, or a new dependency."

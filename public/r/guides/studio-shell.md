@@ -78,3 +78,4 @@ A complete creative workspace with one clear canvas, supporting rails, and an an
 - [OS](https://kit.scottelling.com/kit/os#studio-shell)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#studio-shell)
 - [Voltage](https://kit.scottelling.com/kit/voltage#studio-shell)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#studio-shell)

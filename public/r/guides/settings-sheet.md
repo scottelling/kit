@@ -76,3 +76,4 @@ A focused settings surface with tabs, stable fields, visible state, and a full-s
 - [OS](https://kit.scottelling.com/kit/os#settings-sheet)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#settings-sheet)
 - [Voltage](https://kit.scottelling.com/kit/voltage#settings-sheet)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#settings-sheet)

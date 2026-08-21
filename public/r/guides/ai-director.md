@@ -78,3 +78,4 @@ A plain-language motion command that applies changes with visible, recoverable f
 - [OS](https://kit.scottelling.com/kit/os#ai-director)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#ai-director)
 - [Voltage](https://kit.scottelling.com/kit/voltage#ai-director)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#ai-director)

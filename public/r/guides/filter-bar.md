@@ -76,3 +76,4 @@ Filter Bar assembles related pieces into a complete task.
 - [OS](https://kit.scottelling.com/kit/os#filter-bar)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#filter-bar)
 - [Voltage](https://kit.scottelling.com/kit/voltage#filter-bar)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#filter-bar)

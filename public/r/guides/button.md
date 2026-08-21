@@ -74,3 +74,4 @@ Button keeps the next move clear and touchable.
 - [OS](https://kit.scottelling.com/kit/os#button)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#button)
 - [Voltage](https://kit.scottelling.com/kit/voltage#button)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#button)

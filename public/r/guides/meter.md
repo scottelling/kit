@@ -67,3 +67,4 @@ Show a measured value inside a known range, such as storage or score.
 - [OS](https://kit.scottelling.com/kit/os#meter)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#meter)
 - [Voltage](https://kit.scottelling.com/kit/voltage#meter)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#meter)

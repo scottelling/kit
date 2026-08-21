@@ -77,3 +77,4 @@ Checkbox Group collects a choice without hiding its state.
 - [OS](https://kit.scottelling.com/kit/os#checkbox-group)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#checkbox-group)
 - [Voltage](https://kit.scottelling.com/kit/voltage#checkbox-group)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#checkbox-group)

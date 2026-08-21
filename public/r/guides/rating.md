@@ -77,3 +77,4 @@ Rating collects a choice without hiding its state.
 - [OS](https://kit.scottelling.com/kit/os#rating)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#rating)
 - [Voltage](https://kit.scottelling.com/kit/voltage#rating)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#rating)

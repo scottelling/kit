@@ -78,3 +78,4 @@ A solid phone, desktop, browser, or canvas frame that does not compete with auth
 - [OS](https://kit.scottelling.com/kit/os#device-frame)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#device-frame)
 - [Voltage](https://kit.scottelling.com/kit/voltage#device-frame)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#device-frame)

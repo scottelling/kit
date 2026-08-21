@@ -78,3 +78,4 @@ An output action with idle, working, complete, and failed states.
 - [OS](https://kit.scottelling.com/kit/os#delivery-action)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#delivery-action)
 - [Voltage](https://kit.scottelling.com/kit/voltage#delivery-action)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#delivery-action)

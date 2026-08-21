@@ -78,3 +78,4 @@ A scroll-owned scene sequence that keeps order, timing, and selection obvious.
 - [OS](https://kit.scottelling.com/kit/os#storyboard-rail)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#storyboard-rail)
 - [Voltage](https://kit.scottelling.com/kit/voltage#storyboard-rail)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#storyboard-rail)

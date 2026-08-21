@@ -66,3 +66,4 @@ See how Color Swatch shapes every screen.
 - [OS](https://kit.scottelling.com/kit/os#color-swatch)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#color-swatch)
 - [Voltage](https://kit.scottelling.com/kit/voltage#color-swatch)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#color-swatch)

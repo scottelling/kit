@@ -71,3 +71,4 @@ Toast makes the current state visible at a glance.
 - [OS](https://kit.scottelling.com/kit/os#toast)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#toast)
 - [Voltage](https://kit.scottelling.com/kit/voltage#toast)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#toast)

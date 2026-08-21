@@ -77,3 +77,4 @@ Radio Group collects a choice without hiding its state.
 - [OS](https://kit.scottelling.com/kit/os#radio-group)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#radio-group)
 - [Voltage](https://kit.scottelling.com/kit/voltage#radio-group)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#radio-group)

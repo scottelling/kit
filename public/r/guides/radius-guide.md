@@ -66,3 +66,4 @@ See how Radius Guide shapes every screen.
 - [OS](https://kit.scottelling.com/kit/os#radius-guide)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#radius-guide)
 - [Voltage](https://kit.scottelling.com/kit/voltage#radius-guide)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#radius-guide)

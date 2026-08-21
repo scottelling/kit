@@ -75,3 +75,4 @@ Alert makes the current state visible at a glance.
 - [OS](https://kit.scottelling.com/kit/os#alert)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#alert)
 - [Voltage](https://kit.scottelling.com/kit/voltage#alert)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#alert)

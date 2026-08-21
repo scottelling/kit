@@ -78,3 +78,4 @@ A quiet work surface that gives the current composition visual priority.
 - [OS](https://kit.scottelling.com/kit/os#stage-viewport)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#stage-viewport)
 - [Voltage](https://kit.scottelling.com/kit/voltage#stage-viewport)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#stage-viewport)

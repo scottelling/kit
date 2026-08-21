@@ -76,3 +76,4 @@ A complete desktop work surface with regions for the menu bar, working windows, 
 - [OS](https://kit.scottelling.com/kit/os#desktop-shell)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#desktop-shell)
 - [Voltage](https://kit.scottelling.com/kit/voltage#desktop-shell)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#desktop-shell)

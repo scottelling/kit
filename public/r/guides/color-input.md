@@ -77,3 +77,4 @@ Color Input collects a choice without hiding its state.
 - [OS](https://kit.scottelling.com/kit/os#color-input)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#color-input)
 - [Voltage](https://kit.scottelling.com/kit/voltage#color-input)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#color-input)

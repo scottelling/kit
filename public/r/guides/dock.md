@@ -76,3 +76,4 @@ A reachable app launcher with an unmistakable current destination and 44-pixel t
 - [OS](https://kit.scottelling.com/kit/os#dock)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#dock)
 - [Voltage](https://kit.scottelling.com/kit/voltage#dock)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#dock)

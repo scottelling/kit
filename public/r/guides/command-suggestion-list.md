@@ -78,3 +78,4 @@ Keyboard-ready example directions and recent commands without hidden magic.
 - [OS](https://kit.scottelling.com/kit/os#command-suggestion-list)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#command-suggestion-list)
 - [Voltage](https://kit.scottelling.com/kit/voltage#command-suggestion-list)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#command-suggestion-list)

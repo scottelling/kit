@@ -99,6 +99,13 @@
       "showroom": "https://kit.scottelling.com/kit/voltage",
       "itemBase": "https://kit.scottelling.com/r/voltage",
       "component": "https://kit.scottelling.com/r/voltage/bottom-nav.json"
+    },
+    {
+      "id": "calm",
+      "label": "Calm Desktop",
+      "showroom": "https://kit.scottelling.com/kit/calm",
+      "itemBase": "https://kit.scottelling.com/r/calm",
+      "component": "https://kit.scottelling.com/r/calm/bottom-nav.json"
     }
   ],
   "prompt": "Use Kit's Bottom Nav for this product. A person must move, filter, change view, or understand their current place. Preserve the active visual kit and the product's routes, content, data, permissions, and business rules. Model SELECT, NEXT, PREVIOUS, EXPAND, COLLAPSE as named events; render ready, current, collapsed, expanded as workflow states and default, hover, focus, disabled as separate interaction conditions where they apply. Keep 44-pixel controls, visible focus, phone containment, honest loading and failure, and reduced-motion behavior. Do not add glass, glow, decorative gradients, resting loops, or a new dependency."

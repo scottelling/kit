@@ -74,3 +74,4 @@ Add drag-and-drop file selection without removing the native file picker.
 - [OS](https://kit.scottelling.com/kit/os#dropzone)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#dropzone)
 - [Voltage](https://kit.scottelling.com/kit/voltage#dropzone)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#dropzone)

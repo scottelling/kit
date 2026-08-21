@@ -76,3 +76,4 @@ Avatar turns information into a readable, useful object.
 - [OS](https://kit.scottelling.com/kit/os#avatar)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#avatar)
 - [Voltage](https://kit.scottelling.com/kit/voltage#avatar)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#avatar)

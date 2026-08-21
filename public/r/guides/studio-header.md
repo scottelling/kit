@@ -78,3 +78,4 @@ A compact global bar for project identity, mode, device, and high-value actions.
 - [OS](https://kit.scottelling.com/kit/os#studio-header)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#studio-header)
 - [Voltage](https://kit.scottelling.com/kit/voltage#studio-header)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#studio-header)

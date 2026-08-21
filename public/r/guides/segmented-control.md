@@ -74,3 +74,4 @@ Segmented Control keeps the next move clear and touchable.
 - [OS](https://kit.scottelling.com/kit/os#segmented-control)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#segmented-control)
 - [Voltage](https://kit.scottelling.com/kit/voltage#segmented-control)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#segmented-control)

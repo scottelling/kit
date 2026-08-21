@@ -72,3 +72,4 @@ App Switcher keeps place and direction easy to scan.
 - [OS](https://kit.scottelling.com/kit/os#app-switcher)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#app-switcher)
 - [Voltage](https://kit.scottelling.com/kit/voltage#app-switcher)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#app-switcher)

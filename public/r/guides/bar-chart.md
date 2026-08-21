@@ -76,3 +76,4 @@ Bar Chart turns information into a readable, useful object.
 - [OS](https://kit.scottelling.com/kit/os#bar-chart)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#bar-chart)
 - [Voltage](https://kit.scottelling.com/kit/voltage#bar-chart)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#bar-chart)

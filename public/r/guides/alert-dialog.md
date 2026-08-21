@@ -76,3 +76,4 @@ A real focus-contained confirmation surface with a safe initial action and compl
 - [OS](https://kit.scottelling.com/kit/os#alert-dialog)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#alert-dialog)
 - [Voltage](https://kit.scottelling.com/kit/voltage#alert-dialog)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#alert-dialog)

@@ -72,3 +72,4 @@ View Switcher keeps place and direction easy to scan.
 - [OS](https://kit.scottelling.com/kit/os#view-switcher)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#view-switcher)
 - [Voltage](https://kit.scottelling.com/kit/voltage#view-switcher)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#view-switcher)

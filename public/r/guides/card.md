@@ -76,3 +76,4 @@ Card turns information into a readable, useful object.
 - [OS](https://kit.scottelling.com/kit/os#card)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#card)
 - [Voltage](https://kit.scottelling.com/kit/voltage#card)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#card)

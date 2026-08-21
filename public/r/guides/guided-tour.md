@@ -78,3 +78,4 @@ A solid, focusable callout that explains one useful region at a time.
 - [OS](https://kit.scottelling.com/kit/os#guided-tour)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#guided-tour)
 - [Voltage](https://kit.scottelling.com/kit/voltage#guided-tour)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#guided-tour)

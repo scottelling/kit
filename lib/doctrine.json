@@ -7,7 +7,7 @@
     "neverInvent": "Never invent a color, shadow, radius, or duration when a token exists for the role. If no token fits, raise it to the kit instead of hardcoding."
   },
   "systems": {
-    "complete": ["purple-rain", "jade", "os", "animation", "vanilla-kit", "voltage"],
+    "complete": ["purple-rain", "jade", "os", "animation", "vanilla-kit", "voltage", "calm"],
     "foundations": ["shadow"],
     "note": "Complete systems style the full catalog. Foundation kits supplement a system without replacing its identity."
   },

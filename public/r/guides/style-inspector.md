@@ -78,3 +78,4 @@ Direct position, size, scale, radius, and content controls for one layer.
 - [OS](https://kit.scottelling.com/kit/os#style-inspector)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#style-inspector)
 - [Voltage](https://kit.scottelling.com/kit/voltage#style-inspector)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#style-inspector)

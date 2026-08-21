@@ -75,3 +75,4 @@ Error State makes the current state visible at a glance.
 - [OS](https://kit.scottelling.com/kit/os#error-state)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#error-state)
 - [Voltage](https://kit.scottelling.com/kit/voltage#error-state)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#error-state)

@@ -76,3 +76,4 @@ Checkout Form assembles related pieces into a complete task.
 - [OS](https://kit.scottelling.com/kit/os#checkout-form)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#checkout-form)
 - [Voltage](https://kit.scottelling.com/kit/voltage#checkout-form)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#checkout-form)

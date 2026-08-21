@@ -74,3 +74,4 @@ Toggle Group keeps the next move clear and touchable.
 - [OS](https://kit.scottelling.com/kit/os#toggle-group)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#toggle-group)
 - [Voltage](https://kit.scottelling.com/kit/voltage#toggle-group)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#toggle-group)

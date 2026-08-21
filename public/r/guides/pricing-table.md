@@ -76,3 +76,4 @@ Pricing Table assembles related pieces into a complete task.
 - [OS](https://kit.scottelling.com/kit/os#pricing-table)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#pricing-table)
 - [Voltage](https://kit.scottelling.com/kit/voltage#pricing-table)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#pricing-table)

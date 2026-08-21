@@ -72,3 +72,4 @@ Breadcrumb keeps place and direction easy to scan.
 - [OS](https://kit.scottelling.com/kit/os#breadcrumb)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#breadcrumb)
 - [Voltage](https://kit.scottelling.com/kit/voltage#breadcrumb)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#breadcrumb)

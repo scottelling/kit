@@ -74,3 +74,4 @@ Drawer brings a focused task forward without losing context.
 - [OS](https://kit.scottelling.com/kit/os#drawer)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#drawer)
 - [Voltage](https://kit.scottelling.com/kit/voltage#drawer)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#drawer)

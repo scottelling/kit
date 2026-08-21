@@ -77,3 +77,4 @@ Switch collects a choice without hiding its state.
 - [OS](https://kit.scottelling.com/kit/os#switch)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#switch)
 - [Voltage](https://kit.scottelling.com/kit/voltage#switch)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#switch)

@@ -76,3 +76,4 @@ Sign Up Form assembles related pieces into a complete task.
 - [OS](https://kit.scottelling.com/kit/os#sign-up-form)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#sign-up-form)
 - [Voltage](https://kit.scottelling.com/kit/voltage#sign-up-form)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#sign-up-form)

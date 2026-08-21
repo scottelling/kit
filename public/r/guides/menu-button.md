@@ -74,3 +74,4 @@ Menu Button keeps the next move clear and touchable.
 - [OS](https://kit.scottelling.com/kit/os#menu-button)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#menu-button)
 - [Voltage](https://kit.scottelling.com/kit/voltage#menu-button)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#menu-button)

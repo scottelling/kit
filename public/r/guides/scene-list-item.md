@@ -78,3 +78,4 @@ A scene row with thumbnail, name, timing, purpose, and unmistakable selection.
 - [OS](https://kit.scottelling.com/kit/os#scene-list-item)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#scene-list-item)
 - [Voltage](https://kit.scottelling.com/kit/voltage#scene-list-item)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#scene-list-item)

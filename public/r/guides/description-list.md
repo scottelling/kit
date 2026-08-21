@@ -76,3 +76,4 @@ Description List turns information into a readable, useful object.
 - [OS](https://kit.scottelling.com/kit/os#description-list)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#description-list)
 - [Voltage](https://kit.scottelling.com/kit/voltage#description-list)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#description-list)

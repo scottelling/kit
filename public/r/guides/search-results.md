@@ -76,3 +76,4 @@ Search Results assembles related pieces into a complete task.
 - [OS](https://kit.scottelling.com/kit/os#search-results)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#search-results)
 - [Voltage](https://kit.scottelling.com/kit/voltage#search-results)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#search-results)

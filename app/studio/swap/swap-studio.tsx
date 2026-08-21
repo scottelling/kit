@@ -62,6 +62,7 @@ const systemNotes: Record<string, string> = {
   "animation-studio": "A focused dark workspace with compact controls and purposeful motion.",
   "vanilla-kit": "A neutral starting point built for clean future swaps.",
   voltage: "A vivid desktop system with solid color blocks, rounded objects, and bright status signals.",
+  calm: "A quiet dark desktop system with graphite structure, inline editing, and restrained periwinkle decisions.",
 }
 
 export function SwapStudio({ contract, assessment, systems, layers }: { contract: Contract; assessment: Assessment; systems: System[]; layers: Layer[] }) {

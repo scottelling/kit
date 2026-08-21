@@ -77,3 +77,4 @@ Search Field collects a choice without hiding its state.
 - [OS](https://kit.scottelling.com/kit/os#search-field)
 - [Animation Studio](https://kit.scottelling.com/kit/animation#search-field)
 - [Voltage](https://kit.scottelling.com/kit/voltage#search-field)
+- [Calm Desktop](https://kit.scottelling.com/kit/calm#search-field)
