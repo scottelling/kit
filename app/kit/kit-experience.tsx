@@ -240,7 +240,7 @@ export function KitExperience({ library, system = "purple-rain" }: KitExperience
               <button type="button" onClick={closePreview}>Close</button>
             </header>
             <div className="kit-preview-stage"><ComponentPreview item={selected} expanded system={system} /></div>
-            <footer><span>{isOs ? "Five solid theme moods ready" : isAnimation ? "Canonical dark foundation ready" : "Light and dark ready"}</span><button type="button" onClick={() => isOs ? setOsTheme(osThemes[(osThemes.findIndex((theme) => theme.id === osTheme) + 1) % osThemes.length].id) : isAnimation ? closePreview() : setDark((value) => !value)}>{isOs ? "Try the next theme" : isAnimation ? "Done" : `Switch to ${dark ? "light" : "dark"}`}</button></footer>
+            <footer><span>{isOs ? "Five solid theme moods ready" : isAnimation ? "Canonical dark foundation ready" : "Light and dark ready"}</span><div><Link href={`/studio/guides#${selected.name}`}>How to use this</Link><button type="button" onClick={() => isOs ? setOsTheme(osThemes[(osThemes.findIndex((theme) => theme.id === osTheme) + 1) % osThemes.length].id) : isAnimation ? closePreview() : setDark((value) => !value)}>{isOs ? "Try the next theme" : isAnimation ? "Done" : `Switch to ${dark ? "light" : "dark"}`}</button></div></footer>
           </div>
         ) : null}
       </dialog>

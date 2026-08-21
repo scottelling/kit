@@ -43,7 +43,7 @@ Animation Studio adds the full shared component contract plus 28 creative-worksp
 
 Voltage carries the same complete catalog through a vivid desktop language: deep violet structure, solid multi-color status blocks, generous object-like corners, seated depth, and maintained light and dark appearances under `https://kit.scottelling.com/r/voltage/`.
 
-The Studio includes a searchable icon library at `https://kit.scottelling.com/studio/icons`, a tactile font library at `https://kit.scottelling.com/studio/fonts`, a shared Motion Studio at `https://kit.scottelling.com/studio/motion`, and a plain-language kit-swap workspace at `https://kit.scottelling.com/studio/swap`. Motion Studio provides five interactive, independently installable behaviors that inherit any active visual kit without forcing its colors, type, shape, or layout. The swap workspace checks every real product journey before approval and separates reusable Kit gaps from compositions and product-owned work.
+The Studio includes complete Component Guides at `https://kit.scottelling.com/studio/guides`, a searchable icon library at `https://kit.scottelling.com/studio/icons`, a tactile font library at `https://kit.scottelling.com/studio/fonts`, a shared Motion Studio at `https://kit.scottelling.com/studio/motion`, and a plain-language kit-swap workspace at `https://kit.scottelling.com/studio/swap`. The 179 component guides make purpose, named events, visible states, ownership, accessibility, phone behavior, and release proof reusable by people and agents from one source. Motion Studio provides five interactive, independently installable behaviors that inherit any active visual kit without forcing its colors, type, shape, or layout. The swap workspace checks every real product journey before approval and separates reusable Kit gaps from compositions and product-owned work.
 
 Shadow adds six exact stacked depths, integrated hairline edges, independent tinting, and an agent rule for elevated surfaces under `https://kit.scottelling.com/r/shadow/`. It is a foundation kit that strengthens Purple Rain or JADE without replacing either system.
 
@@ -69,6 +69,7 @@ npm run check
 - Shadow registry manifest: `registry/shadow/registry.json`
 - Elements registry manifest: `registry/elements/registry.json`
 - Motion registry manifest: `registry/motion/registry.json`
+- Component guide registry manifest: `registry/guides/registry.json`
 - Built JSON: `public/r/`, `public/r/jade/`, `public/r/os/`, `public/r/animation/`, `public/r/vanilla-kit/`, `public/r/voltage/`, `public/r/shadow/`, `public/r/elements/`, and `public/r/motion/`
 - Complete showrooms: `/kit`, `/kit/jade`, `/kit/os`, `/kit/animation`, `/kit/vanilla`, `/kit/voltage`, and `/kit/shadow`
 - Same-product comparison: `/kit/jade/compare`
@@ -79,6 +80,9 @@ npm run check
 - Icon Library: `/studio/icons`
 - Font Library: `/studio/fonts`
 - Motion Studio: `/studio/motion`
+- Component Guides: `/studio/guides`
+- Public component guides: `/r/guides/catalog.json`
+- Installable complete guide: `/r/guides/install/kit-component-guides.json`
 - Kit Swap Studio: `/studio/swap`
 - Public system catalog: `/r/system-catalog.json`
 - Public adoption contract: `/r/adoption-contract.json`

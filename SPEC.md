@@ -1,7 +1,7 @@
 # KIT Format — SPEC
 
-Version: 1.3.0 (2026-08-20) — adds Voltage as a sixth complete system while
-preserving one universal 179-piece catalog and swap-ready project foundation.
+Version: 1.4.0 (2026-08-20) — adds one generated operating guide for every
+universal piece, shared by people, agents, installers, and release checks.
 
 This file is the source of truth for the KIT format: how visual systems, tokens,
 pieces, doctrine, and consumers speak one language. The shadcn registry is one
@@ -153,6 +153,30 @@ own authorization, publishing policy, source trust policy, QR generation,
 destructive side effects, retention, and the duration or availability of undo.
 Product names, routes, data, and policy copy may not be embedded in the shared
 piece source.
+
+## 4b. Component guides
+
+Every universal piece has one guide under `/r/guides/` in both machine-readable
+JSON and plain-language Markdown. `/r/guides/catalog.json`
+(`kit-component-guides/1`) is the complete source-derived catalog;
+`/studio/guides` is its tactile human view. The complete Markdown guide is also
+an optional registry install under
+`/r/guides/install/kit-component-guides.json`.
+
+Each guide must define:
+
+- purpose, when to use it, and when to choose something else;
+- named events and visible states, with a reducer-versus-machine threshold;
+- the boundary between Kit-owned expression and product-owned behavior;
+- keyboard, focus, touch, phone, reduced-motion, failure, recovery, and release proof;
+- a link to the exact component in every complete visual system; and
+- one ordinary-English project request.
+
+The universal system catalog links every piece to its guide. The Studio skill,
+public JSON, public Markdown, installable bundle, visual room, and verifier are
+generated from the same catalog. A guide never requires a state-machine package
+and never replaces product routes, content, data, permissions, or business
+rules.
 
 ## 4a. Vanilla Project Starter
 

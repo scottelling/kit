@@ -1,0 +1,107 @@
+{
+  "name": "dropzone",
+  "title": "Dropzone",
+  "category": "Forms",
+  "scope": "shared",
+  "purpose": "Add drag-and-drop file selection without removing the native file picker.",
+  "useWhen": [
+    "Drag-and-drop materially helps repeated desktop file selection and a normal picker remains available."
+  ],
+  "avoidWhen": [
+    "A standard file chooser is enough or the product has no upload policy."
+  ],
+  "states": [
+    "empty",
+    "dragging",
+    "selected",
+    "invalid",
+    "disabled"
+  ],
+  "interactionStates": [
+    "default",
+    "hover",
+    "focus",
+    "disabled"
+  ],
+  "events": [
+    "DRAG_ENTER",
+    "DRAG_LEAVE",
+    "DROP_FILES",
+    "OPEN_PICKER",
+    "VALIDATE",
+    "CLEAR"
+  ],
+  "flow": {
+    "mode": "event-driven",
+    "rule": "Send named events into one flow owner; render the interface from its current state and durable data.",
+    "machineThreshold": "Use a reducer for a tiny local interaction. Use a state machine when four or more states, delayed transitions, invalid moves, or retry paths overlap."
+  },
+  "kitOwns": [
+    "Semantic visual roles, component anatomy, interaction expression, and complete visible states.",
+    "At least 44-pixel controls, visible focus, keyboard and touch behavior, phone containment, and reduced motion.",
+    "Solid surfaces, legible hierarchy, and compatibility with every complete Kit visual system."
+  ],
+  "productOwns": [
+    "Field meaning, validation rules, privacy, persistence, and submission side effects.",
+    "Which states and events are actually legal for this product and user."
+  ],
+  "accessibility": [
+    "Use native semantics first and expose the current state without relying on color alone.",
+    "Keep every action reachable by keyboard with a visible focus indicator and an understandable name.",
+    "Announce asynchronous success or failure when the changed object does not make the outcome obvious."
+  ],
+  "responsive": [
+    "Contain the complete task at 320 pixels without hiding the primary action behind sideways scrolling.",
+    "Recompose dense layouts for touch instead of shrinking controls or text."
+  ],
+  "proof": [
+    "Exercise every declared state and every legal event, including failure and recovery.",
+    "Verify keyboard order, focus return where focus moves, touch targets, and reduced motion.",
+    "Check 320, 375, 414, 768, and desktop widths with no page overflow or unreachable action."
+  ],
+  "systems": [
+    {
+      "id": "vanilla",
+      "label": "Vanilla",
+      "showroom": "https://kit.scottelling.com/kit/vanilla",
+      "itemBase": "https://kit.scottelling.com/r/vanilla-kit",
+      "component": "https://kit.scottelling.com/r/vanilla-kit/dropzone.json"
+    },
+    {
+      "id": "purple-rain",
+      "label": "Purple Rain",
+      "showroom": "https://kit.scottelling.com/kit",
+      "itemBase": "https://kit.scottelling.com/r",
+      "component": "https://kit.scottelling.com/r/dropzone.json"
+    },
+    {
+      "id": "jade",
+      "label": "JADE",
+      "showroom": "https://kit.scottelling.com/kit/jade",
+      "itemBase": "https://kit.scottelling.com/r/jade",
+      "component": "https://kit.scottelling.com/r/jade/dropzone.json"
+    },
+    {
+      "id": "os",
+      "label": "OS",
+      "showroom": "https://kit.scottelling.com/kit/os",
+      "itemBase": "https://kit.scottelling.com/r/os",
+      "component": "https://kit.scottelling.com/r/os/dropzone.json"
+    },
+    {
+      "id": "animation",
+      "label": "Animation Studio",
+      "showroom": "https://kit.scottelling.com/kit/animation",
+      "itemBase": "https://kit.scottelling.com/r/animation",
+      "component": "https://kit.scottelling.com/r/animation/dropzone.json"
+    },
+    {
+      "id": "voltage",
+      "label": "Voltage",
+      "showroom": "https://kit.scottelling.com/kit/voltage",
+      "itemBase": "https://kit.scottelling.com/r/voltage",
+      "component": "https://kit.scottelling.com/r/voltage/dropzone.json"
+    }
+  ],
+  "prompt": "Use Kit's Dropzone for this product. Drag-and-drop materially helps repeated desktop file selection and a normal picker remains available. Preserve the active visual kit and the product's routes, content, data, permissions, and business rules. Model DRAG_ENTER, DRAG_LEAVE, DROP_FILES, OPEN_PICKER, VALIDATE, CLEAR as named events; render empty, dragging, selected, invalid, disabled as workflow states and default, hover, focus, disabled as separate interaction conditions where they apply. Keep 44-pixel controls, visible focus, phone containment, honest loading and failure, and reduced-motion behavior. Do not add glass, glow, decorative gradients, resting loops, or a new dependency."
+}

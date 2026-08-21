@@ -1,0 +1,78 @@
+# Carousel
+
+Carousel turns information into a readable, useful object.
+
+## Use it when
+
+- People need to scan, compare, select, or understand structured information.
+
+## Do not use it when
+
+- A short sentence communicates the information more clearly.
+
+## Workflow states
+
+- loading
+- empty
+- populated
+- selected
+- filtered
+- failed
+
+## Interaction conditions
+
+- default
+- hover
+- focus
+- disabled
+
+## Named events
+
+- `LOAD`
+- `SELECT`
+- `FILTER`
+- `SORT`
+- `FAIL`
+- `RETRY`
+- `CLEAR`
+
+## What Kit owns
+
+- Semantic visual roles, component anatomy, interaction expression, and complete visible states.
+- At least 44-pixel controls, visible focus, keyboard and touch behavior, phone containment, and reduced motion.
+- Solid surfaces, legible hierarchy, and compatibility with every complete Kit visual system.
+
+## What the product owns
+
+- The records, calculations, sorting rules, filters, actions, and source freshness.
+- Which states and events are actually legal for this product and user.
+
+## Accessibility
+
+- Use native semantics first and expose the current state without relying on color alone.
+- Keep every action reachable by keyboard with a visible focus indicator and an understandable name.
+- Announce asynchronous success or failure when the changed object does not make the outcome obvious.
+
+## Phone behavior
+
+- Contain the complete task at 320 pixels without hiding the primary action behind sideways scrolling.
+- Recompose dense layouts for touch instead of shrinking controls or text.
+
+## Proof before release
+
+- Exercise every declared state and every legal event, including failure and recovery.
+- Verify keyboard order, focus return where focus moves, touch targets, and reduced motion.
+- Check 320, 375, 414, 768, and desktop widths with no page overflow or unreachable action.
+
+## Plain-English project request
+
+> Use Kit's Carousel for this product. People need to scan, compare, select, or understand structured information. Preserve the active visual kit and the product's routes, content, data, permissions, and business rules. Model LOAD, SELECT, FILTER, SORT, FAIL, RETRY, CLEAR as named events; render loading, empty, populated, selected, filtered, failed as workflow states and default, hover, focus, disabled as separate interaction conditions where they apply. Keep 44-pixel controls, visible focus, phone containment, honest loading and failure, and reduced-motion behavior. Do not add glass, glow, decorative gradients, resting loops, or a new dependency.
+
+## Live component
+
+- [Vanilla](https://kit.scottelling.com/kit/vanilla#carousel)
+- [Purple Rain](https://kit.scottelling.com/kit#carousel)
+- [JADE](https://kit.scottelling.com/kit/jade#carousel)
+- [OS](https://kit.scottelling.com/kit/os#carousel)
+- [Animation Studio](https://kit.scottelling.com/kit/animation#carousel)
+- [Voltage](https://kit.scottelling.com/kit/voltage#carousel)

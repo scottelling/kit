@@ -7,9 +7,9 @@
     "build": "npm run registry:build && next build",
     "start": "next start",
     "lint": "eslint",
-    "library:generate": "node scripts/generate-library.mjs && node scripts/generate-jade-registry.mjs && node scripts/generate-os-registry.mjs && node scripts/generate-animation-registry.mjs && node scripts/generate-vanilla-kit-registry.mjs && node scripts/generate-voltage-registry.mjs && node scripts/generate-universal-registries.mjs && node scripts/generate-icon-catalog.mjs && node scripts/generate-elements-registry.mjs && node scripts/generate-motion-registry.mjs",
-    "registry:build": "npm run library:generate && shadcn build && shadcn build registry/jade/registry.json -o public/r/jade && shadcn build registry/os/registry.json -o public/r/os && shadcn build registry/animation/registry.json -o public/r/animation && shadcn build registry/vanilla-kit/registry.json -o public/r/vanilla-kit && shadcn build registry/voltage/registry.json -o public/r/voltage && shadcn build registry/shadow/registry.json -o public/r/shadow && shadcn build registry/elements/registry.json -o public/r/elements && shadcn build registry/motion/registry.json -o public/r/motion && node scripts/emit-public-catalogs.mjs && node scripts/emit-token-dialects.mjs && node scripts/emit-vanilla.mjs && node scripts/emit-sourced-kits.mjs && node scripts/emit-checksums.mjs",
-    "registry:validate": "shadcn registry validate && shadcn registry validate registry/jade/registry.json && shadcn registry validate registry/os/registry.json && shadcn registry validate registry/animation/registry.json && shadcn registry validate registry/vanilla-kit/registry.json && shadcn registry validate registry/voltage/registry.json && shadcn registry validate registry/shadow/registry.json && shadcn registry validate registry/elements/registry.json && shadcn registry validate registry/motion/registry.json",
+    "library:generate": "node scripts/generate-library.mjs && node scripts/generate-jade-registry.mjs && node scripts/generate-os-registry.mjs && node scripts/generate-animation-registry.mjs && node scripts/generate-vanilla-kit-registry.mjs && node scripts/generate-voltage-registry.mjs && node scripts/generate-universal-registries.mjs && node scripts/generate-component-guides.mjs && node scripts/generate-icon-catalog.mjs && node scripts/generate-elements-registry.mjs && node scripts/generate-motion-registry.mjs",
+    "registry:build": "npm run library:generate && shadcn build && shadcn build registry/jade/registry.json -o public/r/jade && shadcn build registry/os/registry.json -o public/r/os && shadcn build registry/animation/registry.json -o public/r/animation && shadcn build registry/vanilla-kit/registry.json -o public/r/vanilla-kit && shadcn build registry/voltage/registry.json -o public/r/voltage && shadcn build registry/shadow/registry.json -o public/r/shadow && shadcn build registry/elements/registry.json -o public/r/elements && shadcn build registry/motion/registry.json -o public/r/motion && shadcn build registry/guides/registry.json -o public/r/guides/install && node scripts/emit-public-catalogs.mjs && node scripts/emit-token-dialects.mjs && node scripts/emit-vanilla.mjs && node scripts/emit-sourced-kits.mjs && node scripts/emit-component-guides.mjs && node scripts/emit-checksums.mjs",
+    "registry:validate": "shadcn registry validate && shadcn registry validate registry/jade/registry.json && shadcn registry validate registry/os/registry.json && shadcn registry validate registry/animation/registry.json && shadcn registry validate registry/vanilla-kit/registry.json && shadcn registry validate registry/voltage/registry.json && shadcn registry validate registry/shadow/registry.json && shadcn registry validate registry/elements/registry.json && shadcn registry validate registry/motion/registry.json && shadcn registry validate registry/guides/registry.json",
     "verify:registry": "node scripts/verify-registry.mjs",
     "verify:shadow": "node scripts/verify-shadow.mjs",
     "verify:workshop": "node scripts/verify-theme-workshop.mjs",
@@ -18,13 +18,14 @@
     "verify:os": "node scripts/verify-os.mjs",
     "verify:animation": "node scripts/verify-animation.mjs",
     "verify:voltage": "node scripts/verify-voltage.mjs",
+    "verify:guides": "node scripts/verify-component-guides.mjs",
     "verify:safety": "node scripts/verify-safety-patterns.mjs",
     "verify:resources": "node scripts/verify-studio-resources.mjs",
     "verify:dialects": "node scripts/verify-dialects.mjs",
     "doctor": "node scripts/kit-doctor.mjs",
     "systems:validate": "node scripts/verify-system-contract.mjs",
     "studio:validate": "node scripts/verify-studio.mjs",
-    "check": "npm run registry:validate && npm run registry:build && npm run verify:registry && npm run verify:shadow && npm run verify:workshop && npm run verify:elements && npm run verify:motion && npm run verify:os && npm run verify:animation && npm run verify:voltage && npm run verify:safety && npm run verify:resources && npm run verify:dialects && npm run systems:validate && npm run studio:validate && npm run lint && next build"
+    "check": "npm run registry:validate && npm run registry:build && npm run verify:registry && npm run verify:shadow && npm run verify:workshop && npm run verify:elements && npm run verify:motion && npm run verify:os && npm run verify:animation && npm run verify:voltage && npm run verify:guides && npm run verify:safety && npm run verify:resources && npm run verify:dialects && npm run systems:validate && npm run studio:validate && npm run lint && next build"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",

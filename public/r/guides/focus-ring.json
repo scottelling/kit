@@ -1,0 +1,99 @@
+{
+  "name": "focus-ring",
+  "title": "Focus Ring",
+  "category": "Foundations",
+  "scope": "shared",
+  "purpose": "See how Focus Ring shapes every screen.",
+  "useWhen": [
+    "You need one shared rule to shape many screens consistently."
+  ],
+  "avoidWhen": [
+    "The value is local content or a one-off product decision."
+  ],
+  "states": [
+    "documented",
+    "applied",
+    "reviewed"
+  ],
+  "interactionStates": [
+    "default"
+  ],
+  "events": [
+    "APPLY",
+    "REVIEW",
+    "RESET"
+  ],
+  "flow": {
+    "mode": "stateless",
+    "rule": "Render directly from the active system tokens.",
+    "machineThreshold": "Use a reducer for a tiny local interaction. Use a state machine when four or more states, delayed transitions, invalid moves, or retry paths overlap."
+  },
+  "kitOwns": [
+    "Semantic visual roles, component anatomy, interaction expression, and complete visible states.",
+    "At least 44-pixel controls, visible focus, keyboard and touch behavior, phone containment, and reduced motion.",
+    "Solid surfaces, legible hierarchy, and compatibility with every complete Kit visual system."
+  ],
+  "productOwns": [
+    "The product's content hierarchy and exceptional constraints.",
+    "Which states and events are actually legal for this product and user."
+  ],
+  "accessibility": [
+    "Use native semantics first and expose the current state without relying on color alone.",
+    "Keep every action reachable by keyboard with a visible focus indicator and an understandable name.",
+    "Announce asynchronous success or failure when the changed object does not make the outcome obvious."
+  ],
+  "responsive": [
+    "Contain the complete task at 320 pixels without hiding the primary action behind sideways scrolling.",
+    "Recompose dense layouts for touch instead of shrinking controls or text."
+  ],
+  "proof": [
+    "Exercise every declared state and every legal event, including failure and recovery.",
+    "Verify keyboard order, focus return where focus moves, touch targets, and reduced motion.",
+    "Check 320, 375, 414, 768, and desktop widths with no page overflow or unreachable action."
+  ],
+  "systems": [
+    {
+      "id": "vanilla",
+      "label": "Vanilla",
+      "showroom": "https://kit.scottelling.com/kit/vanilla",
+      "itemBase": "https://kit.scottelling.com/r/vanilla-kit",
+      "component": "https://kit.scottelling.com/r/vanilla-kit/focus-ring.json"
+    },
+    {
+      "id": "purple-rain",
+      "label": "Purple Rain",
+      "showroom": "https://kit.scottelling.com/kit",
+      "itemBase": "https://kit.scottelling.com/r",
+      "component": "https://kit.scottelling.com/r/focus-ring.json"
+    },
+    {
+      "id": "jade",
+      "label": "JADE",
+      "showroom": "https://kit.scottelling.com/kit/jade",
+      "itemBase": "https://kit.scottelling.com/r/jade",
+      "component": "https://kit.scottelling.com/r/jade/focus-ring.json"
+    },
+    {
+      "id": "os",
+      "label": "OS",
+      "showroom": "https://kit.scottelling.com/kit/os",
+      "itemBase": "https://kit.scottelling.com/r/os",
+      "component": "https://kit.scottelling.com/r/os/focus-ring.json"
+    },
+    {
+      "id": "animation",
+      "label": "Animation Studio",
+      "showroom": "https://kit.scottelling.com/kit/animation",
+      "itemBase": "https://kit.scottelling.com/r/animation",
+      "component": "https://kit.scottelling.com/r/animation/focus-ring.json"
+    },
+    {
+      "id": "voltage",
+      "label": "Voltage",
+      "showroom": "https://kit.scottelling.com/kit/voltage",
+      "itemBase": "https://kit.scottelling.com/r/voltage",
+      "component": "https://kit.scottelling.com/r/voltage/focus-ring.json"
+    }
+  ],
+  "prompt": "Use Kit's Focus Ring for this product. You need one shared rule to shape many screens consistently. Preserve the active visual kit and the product's routes, content, data, permissions, and business rules. Model APPLY, REVIEW, RESET as named events; render documented, applied, reviewed as workflow states and default as separate interaction conditions where they apply. Keep 44-pixel controls, visible focus, phone containment, honest loading and failure, and reduced-motion behavior. Do not add glass, glow, decorative gradients, resting loops, or a new dependency."
+}

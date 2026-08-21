@@ -38,6 +38,9 @@ When Scott says "make this standard" or "always do this from now on": append it 
 - Icon library: `https://kit.scottelling.com/studio/icons`
 - Font library: `https://kit.scottelling.com/studio/fonts`
 - Motion Studio: `https://kit.scottelling.com/studio/motion`
+- Component Guides: `https://kit.scottelling.com/studio/guides`
+- Public guide catalog: `https://kit.scottelling.com/r/guides/catalog.json`
+- Installable complete guide: `https://kit.scottelling.com/r/guides/install/kit-component-guides.json`
 - Shared motion registry: `https://kit.scottelling.com/r/motion/registry.json`
 - Kit-swap workspace: `https://kit.scottelling.com/studio/swap`
 - Shared system catalog: `https://kit.scottelling.com/r/system-catalog.json`
@@ -78,6 +81,8 @@ When Scott says "make this standard" or "always do this from now on": append it 
 - `/studio/icons` is the visual source of truth for the approved Lucide and Material Symbols Rounded families. New custom interface icons are a last resort; verified brand marks remain separate.
 - `/studio/fonts` is the visual source of truth for approved font families and pairings. Finished products load only the chosen families and weights.
 - `/studio/motion` is the tactile source of truth for shared interface movement. Its five pilot patterns—anchored menu, focused dialog, state swap, disclosure reveal, and important notice—remain separate from visual-kit identity, use transform and opacity for movement, preserve 44-pixel controls and visible focus, and keep a gentler reduced-motion path.
+- `/studio/guides` is the human-facing operating manual for all 179 reusable pieces. Every guide is generated from the universal catalog and carries purpose, named events, visible states, Kit/product ownership, accessibility, phone behavior, release proof, six-kit links, and one plain-English project request.
+- `/r/guides/catalog.json`, the individual `/r/guides/<piece>.json` and `.md` files, the installable complete guide, and the `apply-kit-component-guides` Studio skill must remain generated from the same catalog and are checked for drift.
 - `/studio/swap` creates the plain-language preserve, repair, change, proof, and rollback brief used before work begins in a target product.
 - Animation Studio is an honest dark-authority system. Default and dark installation contexts intentionally receive the same inspected source foundation; no light direction is invented.
 - Published Theme Workshop copies must install cleanly into an unrelated shadcn project and merge both light and dark foundations.

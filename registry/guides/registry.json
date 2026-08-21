@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "kit-guides",
+  "homepage": "https://kit.scottelling.com/studio/guides",
+  "items": [
+    {
+      "name": "kit-component-guides",
+      "type": "registry:file",
+      "title": "Kit Component Guides",
+      "description": "One agent-readable operating guide for all 179 reusable Kit components.",
+      "author": "Scott E. Telling",
+      "categories": [
+        "Agent Guides",
+        "Design Engineering"
+      ],
+      "files": [
+        {
+          "path": "registry/guides/KIT-COMPONENT-GUIDES.md",
+          "type": "registry:file",
+          "target": "KIT-COMPONENT-GUIDES.md"
+        }
+      ],
+      "docs": "Use the guide for the component being built. Preserve product ownership, model named events and visible states, and verify the listed accessibility and responsive behavior."
+    }
+  ]
+}

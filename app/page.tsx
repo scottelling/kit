@@ -43,7 +43,7 @@ export default function Home() {
               <ArrowRight aria-hidden="true" />
             </Link>
             <Link href="/build#library">
-              <span className="home-choice-list__number">113 design tools</span>
+              <span className="home-choice-list__number">114 design tools</span>
               <strong>Shape the design system</strong>
               <span>Brand, type, color, motion, templates, prompts, skills, and team.</span>
               <ArrowRight aria-hidden="true" />
@@ -52,6 +52,12 @@ export default function Home() {
               <span className="home-choice-list__number">179 live pieces</span>
               <strong>Touch the interface kit</strong>
               <span>Every foundation, control, state, data view, and product pattern.</span>
+              <ArrowRight aria-hidden="true" />
+            </Link>
+            <Link href="/studio/guides">
+              <span className="home-choice-list__number">179 complete guides</span>
+              <strong>Understand every component</strong>
+              <span>Know when it belongs, what can happen, what people see, and what must work.</span>
               <ArrowRight aria-hidden="true" />
             </Link>
             <Link href="/kit/os">

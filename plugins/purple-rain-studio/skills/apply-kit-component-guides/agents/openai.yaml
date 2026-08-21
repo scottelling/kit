@@ -1,0 +1,7 @@
+interface:
+  display_name: "Kit Component Guides"
+  short_description: "Build every component from its complete operating guide"
+  default_prompt: "Use $apply-kit-component-guides to choose the right Kit component, model its named events and visible states, preserve product ownership, and prove the result."
+  brand_color: "#6B3FA0"
+policy:
+  allow_implicit_invocation: true

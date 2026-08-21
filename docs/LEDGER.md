@@ -1,5 +1,21 @@
 # Agent Ledger
 
+## 2026-08-20 — Complete component guides and agent-readable UI architecture
+
+- Agent: Codex
+- Scope: integrate the useful publishing architecture from oa-design into Kit without importing its visual identity, incomplete twelve-component scope, glass header, undersized controls, or Motion dependency
+- Shared source: `lib/component-guides.json` is generated from the exact 179-piece universal catalog; each guide defines purpose, use/avoid decisions, named events, workflow states, separate interaction conditions, reducer-versus-machine guidance, Kit/product ownership, accessibility, phone behavior, release proof, six-system component links, and one English project request
+- Visible product: `/studio/guides` is a tactile field manual with ordinary-English search, ten family filters, a selectable guide index, events and states, ownership and proof panels, six-kit switching, direct live-component links, downloadable guides, and one-button project requests
+- Component connection: every component preview in all six complete showrooms now opens its exact guide; `/r/system-catalog.json` connects every universal piece to the matching public guide so agents do not need to know a second doorway
+- Distribution: every guide publishes as JSON and Markdown under `/r/guides/`; the complete agent reference is optionally installable from `/r/guides/install/kit-component-guides.json` with no runtime dependency; checksums cover the entire output
+- Reusable agent: Purple Rain Studio 2.2 adds the validated `apply-kit-component-guides` skill, bringing the Studio to nine reusable abilities and 114 visible tools; the skill preserves product routes, content, data, permissions, privacy, persistence, logging, and side effects while using named events and explicit states for one coherent flow
+- Source boundary: oa-design is credited under MIT as the source study for agent-readable recipes, one generated source feeding multiple handoffs, named motion/state guidance, and copy quality; Open Analytics styling and product rules do not travel
+- Independent forward proof: a separate agent applied the skill to a medical file-upload request; its first pass exposed missing progress, cancellation, abort-race, retry-deduplication, file-input accessibility, privacy/storage evidence, and workflow-versus-interaction separation. The model and generated reference were repaired, and the final repeat passed with no adoption blocker
+- Automated proof: the guide verifier rejects missing universal coverage, broken six-kit links, unnamed events, incomplete prompts, source drift, public JSON/Markdown drift, missing source boundaries, missing phone/reduced-motion rules, and incomplete File Upload progress/cancel/privacy proof; all registries, systems, Studio skills, lint, TypeScript, and production build pass
+- Responsive proof: the real Guides room passed 320, 375, 414, 768, 1280, and 1440-pixel browser checks with zero page overflow and zero visible controls below 44 pixels
+- Interaction proof: search to one File Upload guide, exact selection and deep link, all eleven upload events, all seven workflow states, six-kit switching, copied project request, downloadable guide, and showroom preview → exact guide navigation passed; browser logs contain no warnings or errors
+- Release state: complete locally; production deployment and live outside-project installation proof are the remaining release actions
+
 ## 2026-08-20 — Complete Voltage visual system
 
 - Agent: Codex
@@ -14,7 +30,7 @@
 - Interaction proof: workspace changes, reversible task completion, Start over recovery, light/dark switching, component search, preview open, Escape close, focus return, Motion Studio Voltage selection, and Vanilla starter Voltage selection all passed with a clean browser console
 - Defects caught during tactile proof: the first phone rail hid later choices behind a scrollbar, so it became one visible five-icon row; the shared component preview could ignore Escape in this browser, so every kit now closes explicitly and restores focus to the exact opening tile
 - Automated proof: every registry schema, all six complete-system contracts, the dedicated Voltage contract, generated-output parity, safety pieces, framework-free dialects, Studio resources, lint, TypeScript, and the Next production build pass under registry version `ed61777f2e6b`, covering 1,158 public artifacts
-- Release state: product is complete locally; production deployment and live outside-project installation proof are the remaining release actions
+- Release state: live at `kit.scottelling.com`; Vercel production `dpl_2Yre18anfKGvMQe8ZFFk5rGXoG1X`, product commits `3021836` and `9fa5d8c`; a clean outside Next project installed the live Voltage card as one component file plus merged light/dark foundations, preserved package and configuration files, matched the public payload, activated the rounded interface typeface, and passed its production build
 
 ## 2026-08-20 — Shared Motion Studio and Transitions.dev source integration
 

@@ -1608,14 +1608,17 @@
 .kit-preview-panel > header h2 { margin: var(--space-xs) 0 0; font-size: clamp(var(--text-xl), 4vw, var(--text-2xl)); letter-spacing: -0.04em; }
 .kit-preview-panel > header p { max-width: 42rem; margin: var(--space-xs) 0 0; color: var(--muted-foreground); line-height: 1.5; }
 .kit-preview-panel > header button,
-.kit-preview-panel > footer button { padding-inline: var(--space-md); border: var(--rule-hair) solid var(--border); background: var(--card); color: var(--card-foreground); box-shadow: var(--shadow-control); }
+.kit-preview-panel > footer button,
+.kit-preview-panel > footer a { min-height: 2.75rem; display: inline-flex; align-items: center; justify-content: center; padding-inline: var(--space-md); border: var(--rule-hair) solid var(--border); border-radius: var(--radius-control); background: var(--card); color: var(--card-foreground); box-shadow: var(--shadow-control); font-size: var(--text-sm); font-weight: 700; text-decoration: none; }
 .kit-preview-stage { background: var(--plane-1); }
 .kit-preview-panel > footer { align-items: center; border-top: var(--rule-hair) solid var(--border); color: var(--muted-foreground); font-size: var(--text-sm); }
+.kit-preview-panel > footer > div { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: var(--space-xs); }
 
 @media (hover: hover) and (pointer: fine) {
   .kit-tile__caption button:hover,
   .kit-preview-panel > header button:hover,
   .kit-preview-panel > footer button:hover,
+  .kit-preview-panel > footer a:hover,
   .family-rail button:hover,
   .mood-picker button:hover {
     background: var(--plane-2);
@@ -1674,7 +1677,8 @@
   .kit-tile__caption button,
   .mini-preview button,
   .mini-preview a,
-  .kit-preview-dialog button { min-height: 48px; }
+  .kit-preview-dialog button,
+  .kit-preview-dialog a { min-height: 48px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

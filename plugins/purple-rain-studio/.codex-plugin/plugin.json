@@ -1,6 +1,6 @@
 {
   "name": "purple-rain-studio",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "End-to-end brand, product, interface, and release design engineering.",
   "author": {
     "name": "Scott E. Telling",
@@ -17,7 +17,7 @@
     "longDescription": "A complete design engineering studio for English briefs, brand systems, creative direction, connected templates, product interfaces, reusable components, automatic visual quality, and deployment proof.",
     "developerName": "Scott E. Telling",
     "category": "Developer Tools",
-    "capabilities": ["Direct", "Brand", "Template", "Design", "Build", "Audit", "Deploy"],
+    "capabilities": ["Direct", "Brand", "Template", "Design", "Build", "Guide", "Audit", "Deploy"],
     "websiteURL": "https://kit.scottelling.com/studio",
     "defaultPrompt": [
       "Turn my idea into a complete live product.",

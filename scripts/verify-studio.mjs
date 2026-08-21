@@ -14,7 +14,7 @@ if (!/^\d+\.\d+\.\d+$/.test(plugin.version)) throw new Error("Studio plugin vers
 
 const skillsDirectory = new URL("skills/", root)
 const skillDirectories = readdirSync(skillsDirectory, { withFileTypes: true }).filter((entry) => entry.isDirectory())
-if (skillDirectories.length !== 8) throw new Error(`Expected 8 Studio skills, found ${skillDirectories.length}.`)
+if (skillDirectories.length !== 9) throw new Error(`Expected 9 Studio skills, found ${skillDirectories.length}.`)
 
 for (const entry of skillDirectories) {
   const directory = join(skillsDirectory.pathname, entry.name)

@@ -41,6 +41,10 @@ curl -fsS https://kit.scottelling.com/r/animation/studio-shell.json
 curl -fsS https://kit.scottelling.com/r/jade/motion-timeline.json
 curl -fsS https://kit.scottelling.com/r/animation/window-shell.json
 curl -fsS https://kit.scottelling.com/r/system-catalog.json
+curl -fsS https://kit.scottelling.com/r/guides/catalog.json
+curl -fsS https://kit.scottelling.com/r/guides/button.json
+curl -fsS https://kit.scottelling.com/r/guides/button.md
+curl -fsS https://kit.scottelling.com/r/guides/install/kit-component-guides.json
 curl -fsS https://kit.scottelling.com/r/icon-catalog.json
 curl -fsS https://kit.scottelling.com/r/adoption-contract.json
 curl -fsS https://kit.scottelling.com/r/adoption-assessment.json
@@ -82,6 +86,7 @@ curl -fsS https://kit.scottelling.com/studio
 curl -fsS https://kit.scottelling.com/studio/icons
 curl -fsS https://kit.scottelling.com/studio/fonts
 curl -fsS https://kit.scottelling.com/studio/motion
+curl -fsS https://kit.scottelling.com/studio/guides
 curl -fsS https://kit.scottelling.com/studio/swap
 curl -fsS https://kit.scottelling.com/kit/shadow
 ```

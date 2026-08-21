@@ -2,6 +2,7 @@
 
 import {
   ArrowRight,
+  BookOpen,
   Check,
   ChevronRight,
   Combine,
@@ -348,6 +349,7 @@ export function StudioExperience({ assets, categories, counts }: StudioExperienc
             </label>
           </header>
           <div className="studio-resource-shelf" aria-label="Open the complete visual libraries">
+            <Link href="/studio/guides"><BookOpen aria-hidden="true" /><span><strong>Understand every component</strong><small>See purpose, states, events, ownership, and proof for every piece.</small></span><ChevronRight aria-hidden="true" /></Link>
             <Link href="/studio/motion"><Play aria-hidden="true" /><span><strong>Shape the motion</strong><small>Touch, compare, and refine purposeful movement for every kit.</small></span><ChevronRight aria-hidden="true" /></Link>
             <Link href="/studio/icons"><Shapes aria-hidden="true" /><span><strong>Browse every icon</strong><small>Search Lucide and Material Symbols Rounded together.</small></span><ChevronRight aria-hidden="true" /></Link>
             <Link href="/studio/fonts"><Type aria-hidden="true" /><span><strong>Test every font</strong><small>Judge real headings, reading, controls, and pairings.</small></span><ChevronRight aria-hidden="true" /></Link>
