@@ -14,7 +14,10 @@
 - Automated proof: the guide verifier rejects missing universal coverage, broken six-kit links, unnamed events, incomplete prompts, source drift, public JSON/Markdown drift, missing source boundaries, missing phone/reduced-motion rules, and incomplete File Upload progress/cancel/privacy proof; all registries, systems, Studio skills, lint, TypeScript, and production build pass
 - Responsive proof: the real Guides room passed 320, 375, 414, 768, 1280, and 1440-pixel browser checks with zero page overflow and zero visible controls below 44 pixels
 - Interaction proof: search to one File Upload guide, exact selection and deep link, all eleven upload events, all seven workflow states, six-kit switching, copied project request, downloadable guide, and showroom preview → exact guide navigation passed; browser logs contain no warnings or errors
-- Release state: complete locally; production deployment and live outside-project installation proof are the remaining release actions
+- Live proof: `/studio/guides`, the public catalog, exact File Upload JSON and Markdown, installable complete guide, system catalog, and Voltage File Upload preview all return `200`; live search reduces the room to one exact File Upload guide, the project request copies, all six visual-kit choices work, and the 320-pixel view has zero page overflow and zero visible controls below 44 pixels
+- Live outside-project proof: a clean Next project installed the complete guide from the production URL as exactly one new `KIT-COMPONENT-GUIDES.md` file; package files, configuration, global styles, and component code stayed untouched; the installed guide contains the corrected upload cancellation, privacy, accessibility, abort-race, and retry-deduplication rules, and the outside production build passes
+- Deployment: Vercel production `dpl_5HN8Dgbg73AmqLktLTW3JYdVFHAT`, aliased to `kit.scottelling.com`; product commit `8245bd1` pushed to `scottelling/kit`; registry version `68f7b0ec93ef` covers 1,520 public artifacts
+- Open loops: none
 
 ## 2026-08-20 — Complete Voltage visual system
 
