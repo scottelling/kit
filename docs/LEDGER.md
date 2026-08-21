@@ -13,7 +13,11 @@
 - Automated proof: all registry schemas, generated public output, exact-source and color checks, seven-system contracts, safety patterns, component guides, framework-free dialects, Studio resources, lint, TypeScript, and the production build pass under registry version `d33ae9ae62fb`, covering 1,703 public artifacts
 - Responsive proof: the real showroom passed 320, 375, 414, 768, 1280, and 1440-pixel checks with zero page overflow, zero unreachable visible controls, main-workspace-only narrow composition, in-viewport drawers, and open desktop panels; hidden off-canvas drawers remain clipped inside the workspace and do not create page scrolling
 - Interaction proof: search and selection, search clearing after selection, inline rename, Undo, state change, all three utility tabs, phone navigation and utility drawers, command preview/apply, and the real `Command-K` shortcut passed; the shortcut was repaired to win over Kit's global finder on this page without changing the finder elsewhere
-- Release state: complete locally; production deployment, live endpoint parity, and clean outside-project installation proof remain
+- Live proof: `/kit/calm`, the complete registry, theme item, framework-free tokens, design-token output, representative component, system catalog, component guide, Motion Studio, and swap workspace all return `200`; the registry, tokens, framework-free tokens, card, and system catalog match the checked-in release exactly
+- Live interaction proof: desktop search/selection, inline rename/Undo, ready-state change, utility tabs, and the real `Command-K` shortcut pass on production; at 390 pixels the navigation and utility drawers open fully inside the viewport, Preview remains usable, page overflow is zero, and no visible interactive target is below 44 pixels
+- Live downstream proof: a clean outside Next/shadcn project installed the Calm Card from the production URL; exactly `components/ui/card.tsx` was created and `app/globals.css` received the exact Calm dark foundations, while `package.json`, `package-lock.json`, and `components.json` stayed byte-for-byte unchanged; the installed component matches the live payload and the outside production build passes
+- Deployment: Vercel production `dpl_CAxaHgQybQPvsaMMGUD2WFeJmA3m`, aliased to `kit.scottelling.com`; product commit `d1b17f6` pushed to `scottelling/kit`; registry version `d33ae9ae62fb`
+- Open loops: none
 
 ## 2026-08-20 — Complete component guides and agent-readable UI architecture
 
