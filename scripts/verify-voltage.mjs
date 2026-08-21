@@ -8,6 +8,7 @@ const tokens = JSON.parse(await readFile(path.join(root, "lib", "voltage-tokens.
 const universal = JSON.parse(await readFile(path.join(root, "lib", "universal-library.json"), "utf8"))
 const css = await readFile(path.join(root, "app", "kit", "voltage", "voltage.css"), "utf8")
 const workbench = await readFile(path.join(root, "app", "kit", "voltage", "voltage-workbench.tsx"), "utf8")
+const publicTokens = JSON.parse(await readFile(path.join(root, "public", "r", "voltage", "tokens.json"), "utf8"))
 const tokenUrl = "https://kit.scottelling.com/r/voltage/tokens.json"
 
 function relativeLuminance(value) {
@@ -41,6 +42,14 @@ if (registry.name !== "voltage") failures.push("Voltage registry has the wrong i
 if (registry.homepage !== "https://kit.scottelling.com/kit/voltage") failures.push("Voltage registry has the wrong showroom")
 if (tokens.theme["kit-control-height"] !== "44px") failures.push("Voltage lost the 44-pixel control contract")
 if (tokens.theme["kit-standard"] !== "200ms") failures.push("Voltage motion no longer uses its maintained short timing")
+for (const role of ["font-sans", "font-heading", "font-mono"]) {
+  if (tokens.light[role] !== tokens.theme[role] || tokens.dark[role] !== tokens.theme[role]) {
+    failures.push(`Voltage ${role} will not survive installation in a clean project`)
+  }
+  if (publicTokens.css?.[":root"]?.[`--${role}`] !== tokens.theme[role]) {
+    failures.push(`Voltage public tokens do not install an actual --${role} value`)
+  }
+}
 
 for (const mode of ["light", "dark"]) {
   if (!tokens[mode]?.background || !tokens[mode]?.foreground) failures.push(`Voltage is missing ${mode} foundations`)

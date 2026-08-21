@@ -87,6 +87,9 @@
 
 .dark,
 [data-kit-appearance="dark"] {
+  --font-sans: var(--font-voltage-ui);
+  --font-heading: var(--font-voltage-ui);
+  --font-mono: var(--font-voltage-mono);
   --background: oklch(0.165 0.085 292);
   --foreground: oklch(0.965 0.012 300);
   --card: oklch(0.235 0.105 296);

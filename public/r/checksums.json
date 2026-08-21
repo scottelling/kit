@@ -1,6 +1,6 @@
 {
   "format": "kit-checksums/1",
-  "registryVersion": "ed61777f2e6b",
+  "registryVersion": "5762952b06b6",
   "artifactCount": 1158,
   "artifacts": {
     "r/accordion.json": {
@@ -4076,8 +4076,8 @@
       "bytes": 1284
     },
     "r/voltage/design-tokens.json": {
-      "sha256": "9cdedecf4a9d1aa6bbcc2922dae178bb7f72baf5f7abcf9c4b59295c0422d915",
-      "bytes": 14236
+      "sha256": "583a08f7630778784a060189e5fe6213667e14e96a1f2d7f462b166410cfef0a",
+      "bytes": 14870
     },
     "r/voltage/desktop-shell.json": {
       "sha256": "616151b4f6693ff21d9f9da0c6d42f43e9d80b5ca811722c546d4124ccc7c726",
@@ -4348,8 +4348,8 @@
       "bytes": 1305
     },
     "r/voltage/registry.json": {
-      "sha256": "5b315902026e5be22a9de18a0605c27696ee6741166d52a3d899b182e7983ae4",
-      "bytes": 93333
+      "sha256": "fd16f0f4940ea05d7b928df929646138c76ee3d1ea3110f740e59a8065f9504c",
+      "bytes": 93953
     },
     "r/voltage/render-status.json": {
       "sha256": "241ba467434074d408db80110ee057e1f93636494495aa25536609c7e4cb9de0",
@@ -4552,12 +4552,12 @@
       "bytes": 1605
     },
     "r/voltage/tokens.css": {
-      "sha256": "cb293d6a89902eb5591b2f4be6cc082aa3c36bb1df5a7c8bab6091cb55e2dfa5",
-      "bytes": 6293
+      "sha256": "d9f569618dfff9bef0d6d8b0b7eebdf048bdcd18cbda0bc66d80e0beb553f0d8",
+      "bytes": 6415
     },
     "r/voltage/tokens.json": {
-      "sha256": "23618f599bf829a8e0c825f13c5d04ed75f6346b2239206a08cb12e266aba240",
-      "bytes": 13261
+      "sha256": "225c97c92ac660565b2f3e78c6e53ededa4878c758c73cf42b1af77ffd9857d3",
+      "bytes": 13833
     },
     "r/voltage/toolbar.json": {
       "sha256": "a5bcb928278392bcb008cb3a6b10999774322a7de69e4ec88718cd705b460355",

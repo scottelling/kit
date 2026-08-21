@@ -33,6 +33,9 @@
           "radius-sheet": "var(--radius-sheet)"
         },
         "light": {
+          "font-sans": "var(--font-voltage-ui)",
+          "font-heading": "var(--font-voltage-ui)",
+          "font-mono": "var(--font-voltage-mono)",
           "background": "oklch(0.955 0.035 292)",
           "foreground": "oklch(0.225 0.075 292)",
           "card": "oklch(0.99 0.012 300)",
@@ -93,6 +96,9 @@
           "voltage-on-color": "oklch(0.985 0.008 300)"
         },
         "dark": {
+          "font-sans": "var(--font-voltage-ui)",
+          "font-heading": "var(--font-voltage-ui)",
+          "font-mono": "var(--font-voltage-mono)",
           "background": "oklch(0.165 0.085 292)",
           "foreground": "oklch(0.965 0.012 300)",
           "card": "oklch(0.235 0.105 296)",
@@ -155,6 +161,9 @@
       },
       "css": {
         ":root": {
+          "--font-sans": "var(--font-voltage-ui)",
+          "--font-heading": "var(--font-voltage-ui)",
+          "--font-mono": "var(--font-voltage-mono)",
           "--background": "oklch(0.955 0.035 292)",
           "--foreground": "oklch(0.225 0.075 292)",
           "--card": "oklch(0.99 0.012 300)",
@@ -215,6 +224,9 @@
           "--voltage-on-color": "oklch(0.985 0.008 300)"
         },
         ".dark": {
+          "--font-sans": "var(--font-voltage-ui)",
+          "--font-heading": "var(--font-voltage-ui)",
+          "--font-mono": "var(--font-voltage-mono)",
           "--background": "oklch(0.165 0.085 292)",
           "--foreground": "oklch(0.965 0.012 300)",
           "--card": "oklch(0.235 0.105 296)",
